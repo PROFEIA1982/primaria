@@ -4,9 +4,13 @@
 
 // La llave anon es publica a proposito: viaja al navegador en cualquier
 // app de Supabase. Lo que protege los datos es el RLS, no esconderla.
+const env = import.meta.env as Record<string, string | undefined>;
 export const SUPABASE_URL =
-  (import.meta.env.VITE_SUPABASE_URL as string) ?? "https://mvgivfexfeukdznzjsxx.supabase.co";
-export const SUPABASE_ANON_KEY = (import.meta.env.VITE_SUPABASE_ANON_KEY as string) ?? "";
+  env.VITE_SUPABASE_URL ||
+  env.NEXT_PUBLIC_SUPABASE_URL ||
+  "https://mvgivfexfeukdznzjsxx.supabase.co";
+export const SUPABASE_ANON_KEY =
+  env.VITE_SUPABASE_ANON_KEY || env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 
 export const NOMBRE_SITIO = "Práctica Estandarizada Primaria";
 export const EMPRESA = "Educación Virtual Integral EVI S.A.";

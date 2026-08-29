@@ -88,3 +88,26 @@ export async function leerVisitas(): Promise<number | null> {
   if (error) return null;
   return (data?.valor as number) ?? null;
 }
+
+// Cuantas preguntas publicadas tiene cada materia. Sale de la base,
+// no escrito a mano: si todavia no hay items, devuelve cero y la
+// pantalla lo dice en vez de inventar un numero.
+export type ConteoMateria = {
+  id: number;
+  slug: string;
+  nombre: string;
+  color: string;
+  color_suave: string;
+  emoji: string | null;
+  orden: number;
+  items: number;
+};
+
+export async function traerConteos(): Promise<ConteoMateria[]> {
+  const { data, error } = await supabase
+    .from("v_conteo_materias")
+    .select("id, slug, nombre, color, color_suave, emoji, orden, items")
+    .order("orden");
+  if (error) throw error;
+  return (data ?? []) as ConteoMateria[];
+}

@@ -1,0 +1,182 @@
+/* ============================================================
+   Pagina de inicio. Cada seccion con su id y todo prefijado.
+   ============================================================ */
+
+/* --- 1. Hero --- */
+#inicio-hero {
+  background: linear-gradient(160deg, #1d4ed8 0%, #163fae 100%);
+  color: #fff;
+  padding: clamp(40px, 8vw, 76px) 0 clamp(44px, 8vw, 80px);
+  text-align: center;
+}
+#inicio-hero .hero-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  /* blanco al 18% sobre el azul: sigue siendo decorativo, no texto */
+  background: rgba(255, 255, 255, 0.18);
+}
+#inicio-hero h1 {
+  color: #fff;                       /* blanco sobre #1d4ed8 = 6.70 · AA */
+  margin-bottom: 12px;
+}
+#inicio-hero .hero-bajada {
+  max-width: 46ch;
+  margin: 0 auto 28px;
+  font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
+  color: #eef3ff;                    /* 6.16 sobre #1d4ed8 · AA */
+}
+#inicio-hero .hero-boton {
+  background: var(--accent);         /* tinta encima: 12.07 · AAA */
+  color: var(--accent-foreground);
+  font-size: 1.1rem;
+  padding: 16px 30px;
+}
+#inicio-hero .hero-boton:hover { filter: brightness(0.94); }
+#inicio-hero .hero-nota {
+  margin: 18px 0 0;
+  font-size: 0.95rem;
+  color: #eef3ff;
+}
+#inicio-hero :focus-visible { outline-color: #fff; }
+
+/* --- 2. Como funciona --- */
+#inicio-pasos { padding: clamp(40px, 7vw, 64px) 0; }
+#inicio-pasos h2 { text-align: center; }
+#inicio-pasos .pasos-rejilla {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  counter-reset: paso;
+}
+@media (min-width: 620px)  { #inicio-pasos .pasos-rejilla { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { #inicio-pasos .pasos-rejilla { grid-template-columns: repeat(4, 1fr); } }
+#inicio-pasos .paso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 26px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--secondary);
+  text-align: center;
+}
+#inicio-pasos .paso-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 700;
+}
+#inicio-pasos .paso-titulo { font-weight: 700; color: var(--titulo); }
+#inicio-pasos .paso p { margin: 0; font-size: 0.98rem; }
+
+/* --- 3. Materias --- */
+#inicio-materias {
+  scroll-margin-top: 84px;           /* el menu es fijo */
+  padding: clamp(40px, 7vw, 64px) 0;
+  background: var(--secondary);
+}
+#inicio-materias h2 { text-align: center; }
+#inicio-materias .materias-rejilla {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+}
+@media (min-width: 620px)  { #inicio-materias .materias-rejilla { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { #inicio-materias .materias-rejilla { grid-template-columns: repeat(4, 1fr); } }
+
+/* Toda la tarjeta es el enlace, no solo el boton de adentro. */
+#inicio-materias .materia-tarjeta {
+  --acento: var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding: 26px 22px;
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--acento);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+  color: var(--foreground);
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+@media (hover: hover) {
+  #inicio-materias .materia-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgba(26,26,26,.08), 0 14px 34px rgba(26,26,26,.12);
+  }
+}
+#inicio-materias .materia-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  background: var(--suave);
+  color: var(--acento);
+}
+#inicio-materias .materia-nombre {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--titulo);
+}
+#inicio-materias .materia-cuenta { color: var(--muted); font-size: 0.98rem; }
+#inicio-materias .materia-cta {
+  margin-top: auto;
+  padding-top: 12px;
+  font-weight: 700;
+  color: var(--acento);
+}
+
+/* --- 4. Que son las pruebas --- */
+#inicio-info { padding: clamp(40px, 7vw, 64px) 0; }
+#inicio-info .info-texto { max-width: 66ch; }
+#inicio-info .info-texto p { margin: 0 0 1em; }
+
+/* --- 5. Recurso sin internet --- */
+#inicio-offline { padding: 0 0 clamp(20px, 5vw, 48px); }
+#inicio-offline .offline-caja {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent-fuerte);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+}
+#inicio-offline .offline-texto { flex: 1 1 300px; }
+#inicio-offline .offline-texto h2 { font-size: 1.25rem; margin-bottom: 6px; }
+#inicio-offline .offline-texto p { margin: 0; color: var(--muted); }
+#inicio-offline .offline-boton {
+  background: var(--background);
+  color: var(--enlace);
+  border: 2px solid var(--enlace);
+}
+#inicio-offline .offline-boton:hover { background: var(--primary-suave); filter: none; }
+
+@media (forced-colors: active) {
+  #inicio-materias .materia-tarjeta { border: 2px solid ButtonText; }
+  #inicio-offline .offline-boton { border: 2px solid ButtonText; }
+}
