@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { MATERIAS } from "../config";
+import { IMG_LOGO_EVI, MATERIAS } from "../config";
 import "./Nav.css";
 
 // Navegacion. En celular se abre con la hamburguesa; en pantalla grande
@@ -13,7 +13,14 @@ export default function Nav() {
     <header id="nav-principal">
       <div className="ps-contenedor nav-caja">
         <Link to="/" className="nav-marca" onClick={() => setAbierto(false)}>
-          <span aria-hidden="true">✏️</span> Practicá
+          <img
+            src={IMG_LOGO_EVI}
+            alt="EVI · Accesible para todos. Ir al inicio"
+            width={300}
+            height={118}
+            fetchPriority="high"
+            decoding="async"
+          />
         </Link>
 
         <button

@@ -87,7 +87,6 @@ img { max-width: 100%; height: auto; }
 :focus-visible {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
-  border-radius: 4px;
 }
 
 .ps-saltar {

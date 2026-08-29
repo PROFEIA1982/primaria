@@ -17,12 +17,18 @@
 #nav-principal .nav-marca {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   min-height: var(--toque-min);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--titulo);
+  padding: 4px 2px;
   text-decoration: none;
+}
+/* Alto fijo y ancho automatico: el logo no se deforma ni empuja el menu. */
+#nav-principal .nav-marca img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+@media (min-width: 860px) {
+  #nav-principal .nav-marca img { height: 44px; }
 }
 #nav-principal .nav-hamburguesa {
   display: inline-flex;

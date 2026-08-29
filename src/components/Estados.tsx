@@ -24,7 +24,7 @@ export function ErrorCarga({
       <p><strong>Uy. </strong>{mensaje} Revisá tu conexión y probá de nuevo.</p>
       {alReintentar && (
         <button type="button" className="ps-boton" onClick={alReintentar}>
-          Probar otra vez
+          Probá otra vez
         </button>
       )}
     </div>

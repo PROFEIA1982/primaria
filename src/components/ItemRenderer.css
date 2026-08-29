@@ -1,35 +1,35 @@
-/* Un item en pantalla. Todo prefijado con #item-renderer. */
-#item-renderer {
+/* Un item en pantalla. Todo prefijado con .ps-item. */
+.ps-item {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
   padding: clamp(16px, 4vw, 28px);
 }
-#item-renderer .item-enunciado {
+.ps-item .item-enunciado {
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
-#item-renderer .item-enunciado p { margin: 0 0 0.8em; }
-#item-renderer .item-enunciado img {
+.ps-item .item-enunciado p { margin: 0 0 0.8em; }
+.ps-item .item-enunciado img {
   display: block;
   margin: 16px auto;
   border-radius: var(--radius-sm);
 }
 /* Una formula larga no debe romper la pagina en un celular. */
-#item-renderer .katex-display {
+.ps-item .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 4px 0;
 }
-#item-renderer .item-opciones {
+.ps-item .item-opciones {
   display: grid;
   gap: 12px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#item-renderer .item-opcion {
+.ps-item .item-opcion {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -44,9 +44,14 @@
   text-align: left;
   cursor: pointer;
 }
-#item-renderer .item-opcion:hover:not(:disabled) { background: var(--secondary); }
-#item-renderer .item-opcion:disabled { cursor: default; }
-#item-renderer .item-letra {
+.ps-item .item-opcion:hover:not(:disabled) { background: var(--secondary); }
+.ps-item .item-opcion:disabled { cursor: default; }
+.ps-item .item-texto {
+  /* sin esto, una formula larga desborda el boton en un celular de 320px */
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.ps-item .item-letra {
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
@@ -59,18 +64,24 @@
 }
 /* Correcta e incorrecta se marcan con color, borde, icono Y palabra.
    Nunca solo con color: hay ninos que no lo distinguen. */
-#item-renderer .item-opcion[data-estado="correcta"] {
+.ps-item .item-opcion[data-estado="correcta"] {
   border-color: var(--success);
   background: var(--success-suave);
   color: var(--success);
 }
-#item-renderer .item-opcion[data-estado="incorrecta"] {
+.ps-item .item-opcion[data-estado="incorrecta"] {
   border-color: var(--error);
   background: var(--error-suave);
   color: var(--error);
 }
-#item-renderer .item-marca {
+.ps-item .item-marca {
   margin-left: auto;
   font-weight: 700;
   white-space: nowrap;
+}
+
+@media (forced-colors: active) {
+  .ps-item .item-opcion { border: 2px solid ButtonText; }
+  .ps-item .item-opcion[data-estado="correcta"],
+  .ps-item .item-opcion[data-estado="incorrecta"] { border: 3px solid ButtonText; }
 }

@@ -4,9 +4,18 @@
 
 /* --- 1. Hero --- */
 #inicio-hero {
-  background: linear-gradient(160deg, #1d4ed8 0%, #163fae 100%);
+  /* El azul plano es el mismo del fondo de la ilustracion, medido del
+     archivo: asi no se ve la costura entre el color y la imagen. */
+  background-color: #0c3f98;
+  background-image: var(--hero);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
   color: #fff;
-  padding: clamp(40px, 8vw, 76px) 0 clamp(44px, 8vw, 80px);
+  /* El texto vive arriba, sobre el azul plano; la ilustracion queda
+     abajo y no se le mete debajo a ninguna letra. */
+  /* el relleno de abajo deja libre toda la franja de la ilustracion */
+  padding: clamp(36px, 7vw, 72px) 0 clamp(130px, 34vw, 400px);
   text-align: center;
 }
 #inicio-hero .hero-icono {
@@ -21,14 +30,14 @@
   background: rgba(255, 255, 255, 0.18);
 }
 #inicio-hero h1 {
-  color: #fff;                       /* blanco sobre #1d4ed8 = 6.70 · AA */
+  color: #fff;                       /* 9.63 sobre el azul del fondo · AAA */
   margin-bottom: 12px;
 }
 #inicio-hero .hero-bajada {
   max-width: 46ch;
   margin: 0 auto 28px;
   font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
-  color: #eef3ff;                    /* 6.16 sobre #1d4ed8 · AA */
+  color: #eef3ff;                    /* 8.67 sobre el azul del fondo · AAA */
 }
 #inicio-hero .hero-boton {
   background: var(--accent);         /* tinta encima: 12.07 · AAA */
@@ -152,31 +161,111 @@
 #inicio-info .info-texto { max-width: 66ch; }
 #inicio-info .info-texto p { margin: 0 0 1em; }
 
-/* --- 5. Recurso sin internet --- */
-#inicio-offline { padding: 0 0 clamp(20px, 5vw, 48px); }
-#inicio-offline .offline-caja {
-  display: flex;
-  flex-wrap: wrap;
+@media (forced-colors: active) {
+  #inicio-materias .materia-tarjeta { border: 2px solid ButtonText; }
+}
+
+/* --- 5. Practica sin internet --- */
+#inicio-sin-internet {
+  padding: clamp(40px, 7vw, 64px) 0;
+  background: var(--secondary);
+  border-top: 1px solid var(--border);
+}
+#inicio-sin-internet .sin-net-icono {
+  display: inline-flex;
   align-items: center;
-  gap: 16px 24px;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-suave);
+  color: var(--primary);
+}
+#inicio-sin-internet .sin-net-bajada { max-width: 62ch; }
+
+#inicio-sin-internet .sin-net-tarjetas {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 28px 0;
+  padding: 0;
+}
+@media (min-width: 700px) {
+  #inicio-sin-internet .sin-net-tarjetas { grid-template-columns: repeat(3, 1fr); }
+}
+#inicio-sin-internet .sin-net-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+}
+#inicio-sin-internet .sin-net-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+#inicio-sin-internet .sin-net-icono-chico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-suave);
+  color: var(--primary);
+}
+#inicio-sin-internet .sin-net-titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--titulo);
+}
+#inicio-sin-internet .sin-net-tarjeta p { margin: 0; }
+
+#inicio-sin-internet .sin-net-pasos {
+  max-width: 68ch;
+  margin: 0 0 26px;
   padding: 22px 24px;
   border: 1px solid var(--border);
   border-left: 5px solid var(--accent-fuerte);
   border-radius: var(--radius);
   background: var(--background);
-  box-shadow: var(--sombra);
 }
-#inicio-offline .offline-texto { flex: 1 1 300px; }
-#inicio-offline .offline-texto h2 { font-size: 1.25rem; margin-bottom: 6px; }
-#inicio-offline .offline-texto p { margin: 0; color: var(--muted); }
-#inicio-offline .offline-boton {
+#inicio-sin-internet .sin-net-pasos h3 { font-size: 1.15rem; margin-bottom: 10px; }
+#inicio-sin-internet .sin-net-pasos ol { margin: 0; padding-left: 1.2em; }
+#inicio-sin-internet .sin-net-pasos li { margin-bottom: 8px; }
+#inicio-sin-internet .sin-net-pasos code {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--secondary);
+  font-size: 0.95em;
+}
+
+#inicio-sin-internet .sin-net-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+#inicio-sin-internet .sin-net-boton { font-size: 1.05rem; padding: 14px 26px; }
+#inicio-sin-internet .sin-net-enlace {
   background: var(--background);
   color: var(--enlace);
   border: 2px solid var(--enlace);
 }
-#inicio-offline .offline-boton:hover { background: var(--primary-suave); filter: none; }
+#inicio-sin-internet .sin-net-enlace:hover { background: var(--primary-suave); filter: none; }
 
 @media (forced-colors: active) {
-  #inicio-materias .materia-tarjeta { border: 2px solid ButtonText; }
-  #inicio-offline .offline-boton { border: 2px solid ButtonText; }
+  #inicio-sin-internet .sin-net-enlace { border: 2px solid ButtonText; }
 }

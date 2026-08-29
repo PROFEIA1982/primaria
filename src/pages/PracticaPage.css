@@ -1,0 +1,575 @@
+/* ============================================================
+   La practica, en tres pantallas: seleccion, examen y resultados.
+   Todo prefijado con #practica-seleccion, #practica-examen y
+   #practica-resultados. Ni un selector suelto: esta hoja la carga
+   la app entera y no debe tocar nada de afuera.
+
+   Contrastes calculados con la formula WCAG 2.1, no a ojo:
+   - --titulo #1b3a5b sobre --secondary #f2f6fa .... 10.73 · AAA
+   - --error #b3261e sobre --secondary ............. 6.02 · AA
+   - --accent-fuerte #b45309 sobre --secondary ..... 4.62 · AA
+   - --success #1e7a46 sobre --secondary ........... 4.93 · AA
+   - --muted #5c6b66 sobre blanco .................. 5.60 · AA
+   ============================================================ */
+
+/* ============================================================
+   PANTALLA 1 · Seleccion
+   ============================================================ */
+#practica-seleccion {
+  scroll-margin-top: 90px;
+}
+#practica-seleccion h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#practica-seleccion .sel-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: var(--suave, var(--primary-suave));
+  color: var(--acento, var(--primary));
+}
+#practica-seleccion .sel-bajada {
+  max-width: 60ch;
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+/* --- Grupos de opciones --- */
+#practica-seleccion .sel-grupo {
+  margin: 0 0 28px;
+  padding: 0;
+  border: 0;
+}
+#practica-seleccion .sel-grupo legend {
+  padding: 0;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--titulo);
+}
+#practica-seleccion .sel-pista {
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* El radio de verdad se esconde pero sigue recibiendo el foco y las
+   flechas del teclado. La etiqueta es la que se ve y la que se toca. */
+#practica-seleccion .sel-chip input,
+#practica-seleccion .sel-cantidad input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Chips de tema --- */
+#practica-seleccion .sel-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#practica-seleccion .sel-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--toque-min);
+  padding: 10px 18px;
+  border: 2px solid var(--border-fuerte);
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--foreground);
+  font-weight: 700;
+  cursor: pointer;
+}
+/* Elegido = color + borde grueso + palomita. Nunca solo el color. */
+#practica-seleccion .sel-chip .sel-marca {
+  display: none;
+  font-weight: 900;
+}
+#practica-seleccion .sel-chip:has(input:checked) {
+  border-color: var(--acento, var(--primary));
+  background: var(--suave, var(--primary-suave));
+  color: var(--acento, var(--primary));
+}
+#practica-seleccion .sel-chip:has(input:checked) .sel-marca { display: inline; }
+#practica-seleccion .sel-chip:has(input:focus-visible) {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+@media (hover: hover) {
+  #practica-seleccion .sel-chip:hover { background: var(--secondary); }
+  #practica-seleccion .sel-chip:has(input:checked):hover { background: var(--suave, var(--primary-suave)); }
+}
+
+/* --- Botones de cantidad --- */
+#practica-seleccion .sel-rejilla {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 620px) {
+  #practica-seleccion .sel-rejilla { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+#practica-seleccion .sel-cantidad {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 96px;
+  padding: 16px 10px;
+  border: 2px solid var(--border-fuerte);
+  border-radius: var(--radius);
+  background: var(--background);
+  cursor: pointer;
+  text-align: center;
+}
+#practica-seleccion .sel-cantidad .sel-marca {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: none;
+  font-weight: 900;
+  color: var(--acento, var(--primary));
+}
+#practica-seleccion .sel-num {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--titulo);
+}
+#practica-seleccion .sel-tiempo {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+#practica-seleccion .sel-cantidad:has(input:checked) {
+  border-color: var(--acento, var(--primary));
+  border-width: 3px;
+  background: var(--suave, var(--primary-suave));
+}
+#practica-seleccion .sel-cantidad:has(input:checked) .sel-marca { display: block; }
+#practica-seleccion .sel-cantidad:has(input:checked) .sel-num { color: var(--acento, var(--primary)); }
+#practica-seleccion .sel-cantidad:has(input:focus-visible) {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+@media (hover: hover) {
+  #practica-seleccion .sel-cantidad:hover { background: var(--secondary); }
+  #practica-seleccion .sel-cantidad:has(input:checked):hover { background: var(--suave, var(--primary-suave)); }
+}
+
+/* --- Arranque --- */
+#practica-seleccion .sel-arranque {
+  margin: 32px 0 8px;
+  text-align: center;
+}
+#practica-seleccion .sel-empezar {
+  min-height: 60px;
+  padding: 16px 44px;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+#practica-seleccion .sel-empezar[disabled] {
+  opacity: 0.7;
+  cursor: progress;
+}
+#practica-seleccion .sel-nota {
+  margin: 14px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* --- Avisos --- */
+#practica-seleccion .sel-aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--secondary);
+  color: var(--accent-fuerte);  /* 4.62 sobre --secondary · AA */
+}
+#practica-seleccion .sel-aviso svg { flex: 0 0 auto; margin-top: 3px; }
+#practica-seleccion .sel-pocas {
+  margin: 24px 0 0;
+  padding: 20px;
+  border: 2px solid var(--accent-fuerte);
+  border-radius: var(--radius);
+  background: var(--secondary);
+  text-align: center;
+}
+#practica-seleccion .sel-pocas p { margin: 0 0 14px; }
+
+/* --- Esqueleto de carga --- */
+#practica-seleccion .practica-esqueleto {
+  margin: 24px 0 0;
+  padding: clamp(16px, 4vw, 28px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+}
+#practica-seleccion .esq-enunciado {
+  height: 22px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  background: var(--secondary);
+  animation: practica-latido 1.4s ease-in-out infinite;
+}
+#practica-seleccion .esq-enunciado + .esq-opciones { margin-top: 24px; }
+#practica-seleccion .esq-opciones { display: grid; gap: 12px; }
+#practica-seleccion .esq-opcion {
+  height: var(--toque-min);
+  border-radius: var(--radius-sm);
+  background: var(--secondary);
+  animation: practica-latido 1.4s ease-in-out infinite;
+}
+#practica-seleccion .esq-opcion:nth-child(2) { animation-delay: 0.12s; }
+#practica-seleccion .esq-opcion:nth-child(3) { animation-delay: 0.24s; }
+#practica-seleccion .esq-opcion:nth-child(4) { animation-delay: 0.36s; }
+@keyframes practica-latido {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+
+/* ============================================================
+   PANTALLA 2 · Examen
+   ============================================================ */
+#practica-examen {
+  scroll-margin-top: 90px;
+  padding-bottom: 48px;
+}
+
+/* La barra se pega debajo del menu. El top lo pone React midiendo el
+   menu, porque este crece cuando los enlaces se acomodan en dos filas. */
+#practica-examen .examen-barra {
+  position: sticky;
+  z-index: 10;               /* el menu va en 20 y manda */
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+#practica-examen .examen-barra-caja {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#practica-examen .examen-materia {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--titulo);
+}
+#practica-examen .examen-progreso {
+  margin: 0;
+  color: var(--muted);
+  white-space: nowrap;
+}
+#practica-examen .examen-progreso strong { color: var(--foreground); }
+#practica-examen .examen-reloj {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 0 auto;
+  padding: 8px 14px;
+  min-height: var(--toque-min);
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  background: var(--secondary);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+#practica-examen .examen-reloj svg { flex: 0 0 auto; }
+#practica-examen .examen-tiempo { font-size: 1.15rem; font-weight: 900; }
+#practica-examen .examen-palabra { font-size: 0.9rem; font-weight: 700; }
+/* Tres niveles: color + icono + palabra. El color nunca va solo. */
+#practica-examen .examen-reloj[data-nivel="normal"]  { color: var(--titulo); }
+#practica-examen .examen-reloj[data-nivel="poco"]    { color: var(--accent-fuerte); }
+#practica-examen .examen-reloj[data-nivel="critico"] { color: var(--error); }
+
+#practica-examen .examen-barrita {
+  height: 5px;
+  background: var(--border);
+}
+#practica-examen .examen-barrita span {
+  display: block;
+  height: 100%;
+  background: var(--acento, var(--primary));
+  transition: width 0.25s ease;
+}
+
+#practica-examen .examen-cuerpo {
+  padding-top: 28px;
+  padding-bottom: 8px;
+}
+#practica-examen .examen-cuerpo:focus { outline: none; }
+#practica-examen .examen-cuerpo:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 6px;
+  border-radius: var(--radius);
+}
+#practica-examen .examen-pie {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+#practica-examen .examen-siguiente {
+  min-height: 56px;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+@media (max-width: 479px) {
+  #practica-examen .examen-pie { justify-content: stretch; }
+  #practica-examen .examen-siguiente { width: 100%; }
+}
+
+/* ============================================================
+   PANTALLA 3 · Resultados
+   ============================================================ */
+#practica-resultados {
+  scroll-margin-top: 90px;
+}
+#practica-resultados h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#practica-resultados .res-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: var(--suave, var(--primary-suave));
+  color: var(--acento, var(--primary));
+}
+
+/* --- La nota --- */
+#practica-resultados .res-tarjeta {
+  --nivel: var(--titulo);
+  margin: 8px 0 24px;
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  border-top: 8px solid var(--nivel);
+  border-radius: var(--radius);
+  background: var(--secondary);
+  box-shadow: var(--sombra);
+  text-align: center;
+}
+#practica-resultados .res-tarjeta[data-nivel="bien"]  { --nivel: var(--success); }
+#practica-resultados .res-tarjeta[data-nivel="medio"] { --nivel: var(--accent-fuerte); }
+#practica-resultados .res-tarjeta[data-nivel="bajo"]  { --nivel: var(--error); }
+#practica-resultados .res-etiqueta-nota {
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+#practica-resultados .res-nota {
+  margin: 4px 0 0;
+  line-height: 1;
+  color: var(--nivel);
+}
+#practica-resultados .res-numero {
+  font-size: clamp(3.5rem, 2.5rem + 8vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+#practica-resultados .res-sobre { font-size: 1.1rem; font-weight: 700; }
+/* La palabra va siempre junto al numero: el color solo no comunica. */
+#practica-resultados .res-palabra {
+  margin: 8px 0 0;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--nivel);
+}
+#practica-resultados .res-cuenta { margin: 10px 0 0; color: var(--foreground); }
+
+#practica-resultados .res-aviso,
+#practica-resultados .res-felicita {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--secondary);
+}
+#practica-resultados .res-aviso {
+  border-left: 5px solid var(--accent-fuerte);
+  color: var(--accent-fuerte);   /* 4.62 sobre --secondary · AA */
+}
+#practica-resultados .res-felicita {
+  border-left: 5px solid var(--success);
+  color: var(--success);         /* 4.93 sobre --secondary · AA */
+}
+#practica-resultados .res-aviso svg,
+#practica-resultados .res-felicita svg { flex: 0 0 auto; margin-top: 3px; }
+
+/* --- Bloques --- */
+#practica-resultados .res-bloque { margin: 0 0 36px; }
+#practica-resultados .res-bloque h2 { margin-bottom: 4px; }
+#practica-resultados .res-bajada { margin: 0 0 16px; color: var(--muted); }
+
+/* --- Desglose por tema --- */
+#practica-resultados .res-temas {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#practica-resultados .res-tema {
+  --nivel: var(--muted);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--nivel);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+}
+#practica-resultados .res-tema[data-nivel="bien"]  { --nivel: var(--success); }
+#practica-resultados .res-tema[data-nivel="medio"] { --nivel: var(--accent-fuerte); }
+#practica-resultados .res-tema[data-nivel="bajo"]  { --nivel: var(--error); }
+#practica-resultados .res-tema-nombre {
+  font-weight: 700;
+  color: var(--titulo);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+#practica-resultados .res-tema-dato {
+  font-weight: 700;
+  color: var(--nivel);
+  white-space: nowrap;
+}
+#practica-resultados .res-tema-barra {
+  grid-column: 1 / -1;
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+#practica-resultados .res-tema-barra span {
+  display: block;
+  height: 100%;
+  background: var(--nivel);
+}
+
+/* --- Las falladas --- */
+#practica-resultados .res-falladas {
+  display: grid;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: fallada;
+}
+#practica-resultados .res-fallada {
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+}
+#practica-resultados .res-fallada-enunciado { font-weight: 700; color: var(--titulo); }
+#practica-resultados .res-fallada-enunciado p { margin: 0 0 0.6em; }
+#practica-resultados .res-fallada-enunciado .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#practica-resultados .res-marcaste,
+#practica-resultados .res-correcta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: 10px 0 0;
+}
+#practica-resultados .res-mini {
+  flex: 0 0 auto;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+#practica-resultados .res-valor {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+#practica-resultados .res-valor[data-tipo="mala"]  { color: var(--error); }
+#practica-resultados .res-valor[data-tipo="buena"] { color: var(--success); }
+#practica-resultados .res-valor[data-tipo="vacia"] { color: var(--muted); font-style: italic; }
+
+/* --- Acciones --- */
+#practica-resultados .res-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+#practica-resultados .res-boton-secundario {
+  background: var(--background);
+  color: var(--enlace);
+  border: 2px solid var(--enlace);
+}
+@media (hover: hover) {
+  #practica-resultados .res-boton-secundario:hover {
+    background: var(--primary-suave);
+    filter: none;
+  }
+}
+#practica-resultados .res-nota-pie {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   Movimiento y alto contraste
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  #practica-seleccion .esq-enunciado,
+  #practica-seleccion .esq-opcion { animation: none; opacity: 0.7; }
+  #practica-examen .examen-barrita span { transition: none; }
+}
+
+@media (forced-colors: active) {
+  #practica-seleccion .sel-chip,
+  #practica-seleccion .sel-cantidad { border: 2px solid ButtonText; }
+  #practica-seleccion .sel-chip:has(input:checked),
+  #practica-seleccion .sel-cantidad:has(input:checked) { border: 3px solid Highlight; }
+  #practica-examen .examen-reloj { border: 2px solid ButtonText; }
+  #practica-examen .examen-barrita span { background: Highlight; }
+  #practica-resultados .res-tarjeta,
+  #practica-resultados .res-tema,
+  #practica-resultados .res-fallada { border: 1px solid ButtonText; }
+  #practica-resultados .res-tema-barra span { background: Highlight; }
+  #practica-resultados .res-boton-secundario { border: 2px solid ButtonText; }
+}

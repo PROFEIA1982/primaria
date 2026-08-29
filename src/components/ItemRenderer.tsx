@@ -38,8 +38,12 @@ export default function ItemRenderer({
     return undefined;
   }
 
+  // Cual era la correcta, para poder anunciarla al lector de pantalla.
+  const iCorrecta = opciones.findIndex((o) => o.es_correcta);
+  const acerto = respondido && opciones.find((o) => o.id === elegida)?.es_correcta;
+
   return (
-    <article id="item-renderer">
+    <article className="ps-item">
       <div className="item-enunciado">
         <Markdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
           {enunciado}
@@ -63,11 +67,13 @@ export default function ItemRenderer({
                 type="button"
                 className="item-opcion"
                 data-estado={estado}
-                disabled={respondido}
-                onClick={() => alElegir(op.id)}
+                // aria-disabled y no disabled: un boton deshabilitado pierde el
+                // foco del teclado y quien navega asi queda tirado al inicio.
+                aria-disabled={respondido}
+                onClick={() => { if (!respondido) alElegir(op.id); }}
               >
                 <span className="item-letra" aria-hidden="true">{LETRAS[i] ?? i + 1}</span>
-                <span>{op.texto}</span>
+                <span className="item-texto">{op.texto}</span>
                 {estado === "correcta" && <span className="item-marca">✓ Correcta</span>}
                 {estado === "incorrecta" && <span className="item-marca">✗ Incorrecta</span>}
               </button>
@@ -75,6 +81,15 @@ export default function ItemRenderer({
           );
         })}
       </ul>
+
+      {/* El resultado tiene que llegarle tambien a quien usa lector de pantalla. */}
+      {respondido && (
+        <p role="status" className="ps-solo-lectores">
+          {acerto
+            ? "Correcta."
+            : `Incorrecta. La correcta era la opción ${LETRAS[iCorrecta] ?? iCorrecta + 1}.`}
+        </p>
+      )}
     </article>
   );
 }

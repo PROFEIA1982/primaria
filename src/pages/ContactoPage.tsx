@@ -38,11 +38,11 @@ export default function ContactoPage() {
 
   return (
     <section id="contacto-principal" className="ps-contenedor ps-seccion">
-      <p className="contacto-kicker">Estamos para ayudarle</p>
-      <h1>Contáctenos</h1>
+      <p className="contacto-kicker">Con gusto le ayudamos</p>
+      <h1>Escríbanos</h1>
       <p className="contacto-intro">
-        Elija el canal que le quede mejor. Por WhatsApp le contestamos rápido; si
-        prefiere el correo, también le escribimos. Usted decide.
+        Escoja por dónde le queda más cómodo. Por WhatsApp contestamos rápido;
+        por correo también, aunque tardamos un poco más.
       </p>
 
       <p className="contacto-aviso">
@@ -90,10 +90,11 @@ export default function ContactoPage() {
         </li>
       </ul>
 
-      <h2>Escríbanos desde aquí</h2>
+      <h2>Mándenos un mensaje</h2>
       <p className="contacto-intro">
-        Con el nombre y el mensaje alcanza. El correo lo pedimos solo si quiere que
-        le respondamos por ahí. No pedimos cédula ni teléfono, y menos a un menor.
+        Con el nombre y el mensaje alcanza. El correo lo pedimos solo si quiere
+        que le respondamos por ahí. No pedimos cédula ni teléfono. A un menor de
+        edad no le pedimos ningún dato.
       </p>
 
       <form className="contacto-forma" onSubmit={alEnviar}>
@@ -120,9 +121,10 @@ export default function ContactoPage() {
           <label htmlFor="c-mensaje">Mensaje</label>
           <textarea
             id="c-mensaje" name="mensaje" required minLength={5} maxLength={2000}
+            aria-describedby="c-mensaje-cuenta"
             value={mensaje} onChange={(e) => setMensaje(e.target.value)}
           />
-          <span className="campo-nota">{mensaje.length} / 2000</span>
+          <span className="campo-nota" id="c-mensaje-cuenta">{mensaje.length} / 2000</span>
         </div>
 
         <button type="submit" className="ps-boton" disabled={estado === "enviando"}>
@@ -136,7 +138,7 @@ export default function ContactoPage() {
         )}
         {estado === "error" && (
           <p className="ps-estado ps-estado--error" role="alert">
-            <strong>✗ Uy. </strong>No se pudo enviar. Revise su conexión y pruebe de
+            <strong>✗ </strong>No se pudo enviar. Revise su conexión y pruebe de
             nuevo, o escríbanos por WhatsApp.
           </p>
         )}
@@ -144,7 +146,7 @@ export default function ContactoPage() {
 
       {visitas !== null && (
         <p className="contacto-visitas">
-          Esta práctica se ha abierto {visitas.toLocaleString("es-CR")} veces.
+          {visitas.toLocaleString("es-CR")} personas han entrado a practicar.
         </p>
       )}
     </section>

@@ -1,30 +1,36 @@
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import InicioPage from "./pages/InicioPage";
-import PracticaPage from "./pages/PracticaPage";
-import ContactoPage from "./pages/ContactoPage";
-import AnunciosPage from "./pages/AnunciosPage";
-import NoEncontradaPage from "./pages/NoEncontradaPage";
+import { Cargando } from "./components/Estados";
 
-// Las siete rutas. Las cuatro materias comparten PracticaPage,
-// parametrizada por el slug, para no duplicar codigo.
+// El inicio va directo porque es la primera pantalla. Lo demas se carga
+// cuando hace falta: asi un celular con datos lentos no baja el motor de
+// formulas ni la practica completa solo para ver la portada.
+const PracticaPage = lazy(() => import("./pages/PracticaPage"));
+const ContactoPage = lazy(() => import("./pages/ContactoPage"));
+const AnunciosPage = lazy(() => import("./pages/AnunciosPage"));
+const NoEncontradaPage = lazy(() => import("./pages/NoEncontradaPage"));
+
 export default function App() {
   return (
     <BrowserRouter>
       <a className="ps-saltar" href="#contenido">Saltar al contenido</a>
       <Nav />
-      <main id="contenido">
-        <Routes>
-          <Route path="/" element={<InicioPage />} />
-          <Route path="/espanol" element={<PracticaPage materia="espanol" />} />
-          <Route path="/estudios-sociales" element={<PracticaPage materia="estudios-sociales" />} />
-          <Route path="/ciencias" element={<PracticaPage materia="ciencias" />} />
-          <Route path="/matematicas" element={<PracticaPage materia="matematicas" />} />
-          <Route path="/contacto" element={<ContactoPage />} />
-          <Route path="/anuncios" element={<AnunciosPage />} />
-          <Route path="*" element={<NoEncontradaPage />} />
-        </Routes>
+      <main id="contenido" tabIndex={-1}>
+        <Suspense fallback={<div className="ps-contenedor ps-seccion"><Cargando /></div>}>
+          <Routes>
+            <Route path="/" element={<InicioPage />} />
+            <Route path="/espanol" element={<PracticaPage materia="espanol" />} />
+            <Route path="/estudios-sociales" element={<PracticaPage materia="estudios-sociales" />} />
+            <Route path="/ciencias" element={<PracticaPage materia="ciencias" />} />
+            <Route path="/matematicas" element={<PracticaPage materia="matematicas" />} />
+            <Route path="/contacto" element={<ContactoPage />} />
+            <Route path="/anuncios" element={<AnunciosPage />} />
+            <Route path="*" element={<NoEncontradaPage />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
     </BrowserRouter>

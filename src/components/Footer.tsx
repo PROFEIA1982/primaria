@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import {
   CORREO,
   EMPRESA,
+  IMG_LOGO_CONCURSO,
   SOPORTE_VISIBLE,
   TELEFONO_VISIBLE,
   URL_FACEBOOK,
@@ -21,18 +22,22 @@ export default function Footer() {
       <div className="ps-contenedor footer-rejilla">
         <img
           className="footer-logo"
-          src="/logo-concurso-docente.png"
-          alt="Concurso Docente. Educar, inspirar, transformar."
+          src={IMG_LOGO_CONCURSO}
+          alt="Logo de Concurso Docente"
           width={260}
           height={337}
           loading="lazy"
           decoding="async"
+          // si la imagen no esta, se esconde en vez de dejar el icono roto
           onError={(e) => { e.currentTarget.style.display = "none"; }}
         />
 
         <div>
           <p className="footer-titulo">Práctica gratuita para sexto grado</p>
-          <p>Ítems de pruebas estandarizadas de Costa Rica. Sin cuentas y sin costo.</p>
+          <p>
+            Preguntas de práctica al estilo de las pruebas estandarizadas de Costa
+            Rica. Sin cuentas y sin costo.
+          </p>
 
           <ul className="footer-enlaces">
             <li><Link to="/contacto">Contacto</Link></li>
@@ -40,14 +45,14 @@ export default function Footer() {
           </ul>
 
           <p className="footer-docentes">
-            <strong>¿Es usted docente?</strong> Hay un simulacro gratis de idoneidad
-            esperándolo.{" "}
+            <strong>¿Es usted docente?</strong> Hay un simulacro de idoneidad para
+            probar.{" "}
             <a href={URL_IDONEA} target="_blank" rel="noopener noreferrer">
               Probarlo en idonea.profeseguro.com →
             </a>
           </p>
 
-          <ul className="footer-canales">
+          <ul className="footer-canales" aria-label="Canales de contacto">
             <li>
               <a href={waLink("Hola, le escribo por la práctica de sexto grado.")} target="_blank" rel="noopener noreferrer">
                 <span aria-hidden="true">💬</span> WhatsApp {TELEFONO_VISIBLE}

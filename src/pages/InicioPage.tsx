@@ -8,11 +8,13 @@ import {
   GraduationCap,
   ListOrdered,
   Microscope,
+  Download,
   MousePointerClick,
+  Smartphone,
   Timer,
   WifiOff,
 } from "lucide-react";
-import { MATERIAS, URL_OFFLINE, type SlugMateria } from "../config";
+import { IMG_HERO, MATERIAS, URL_DESCARGA_OFFLINE, URL_OFFLINE, type SlugMateria } from "../config";
 import { traerConteos, type ConteoMateria } from "../lib/api";
 import { Cargando, ErrorCarga } from "../components/Estados";
 import "./InicioPage.css";
@@ -26,10 +28,10 @@ const ICONOS: Record<SlugMateria, typeof BookOpen> = {
 };
 
 const PASOS = [
-  { icono: MousePointerClick, titulo: "Elegí la materia", texto: "Español, Estudios Sociales, Ciencias o Matemáticas. La que querás." },
-  { icono: ListOrdered, titulo: "Escogé cuántas preguntas", texto: "Diez para un ratito, sesenta si querés entrenar en serio." },
-  { icono: Timer, titulo: "Respondé a tu ritmo", texto: "Hay reloj, pero es para acostumbrarte. Nadie te está calificando." },
-  { icono: CircleCheckBig, titulo: "Mirá tus resultados", texto: "Al final ves tu nota y cuáles fallaste, con la respuesta correcta." },
+  { icono: MousePointerClick, titulo: "Elegí la materia", texto: "Vos escogés." },
+  { icono: ListOrdered, titulo: "Escogé cuántas preguntas", texto: "Diez si andás con poco tiempo. Sesenta si querés entrenar en serio, como el día de la prueba." },
+  { icono: Timer, titulo: "Respondé a tu ritmo", texto: "Hay reloj, pero solo para que te acostumbrés. Esta nota no va al cuaderno." },
+  { icono: CircleCheckBig, titulo: "Mirá tus resultados", texto: "Vas a ver en cuáles te equivocaste, con la respuesta buena al lado." },
 ];
 
 export default function InicioPage() {
@@ -48,33 +50,29 @@ export default function InicioPage() {
 
   useEffect(() => { void cargar(); }, []);
 
-  function irAMaterias() {
-    document.getElementById("inicio-materias")?.scrollIntoView({ behavior: "smooth" });
-  }
-
   return (
     <>
       {/* 1 · Hero */}
-      <section id="inicio-hero">
+      <section id="inicio-hero" style={{ ["--hero" as string]: `url(${IMG_HERO})` }}>
         <div className="ps-contenedor">
           <span className="hero-icono" aria-hidden="true">
             <GraduationCap size={48} strokeWidth={1.8} />
           </span>
           <h1>Practicá para tu prueba de sexto</h1>
           <p className="hero-bajada">
-            Preguntas de las cuatro materias para que llegués tranquilo el día de
+            Preguntas de las cuatro materias para que llegués con calma el día de
             la prueba. Es gratis y no hay que hacer ninguna cuenta.
           </p>
-          <button type="button" className="ps-boton hero-boton" onClick={irAMaterias}>
+          <a className="ps-boton hero-boton" href="#inicio-materias">
             Elegí tu materia →
-          </button>
+          </a>
           <p className="hero-nota">Entrás y practicás. Así de simple.</p>
         </div>
       </section>
 
       {/* 2 · Como funciona */}
       <section id="inicio-pasos" className="ps-contenedor">
-        <h2>Así de fácil</h2>
+        <h2>¿Cómo funciona?</h2>
         <ol className="pasos-rejilla">
           {PASOS.map((p, i) => {
             const Icono = p.icono;
@@ -93,12 +91,12 @@ export default function InicioPage() {
       {/* 3 · Materias */}
       <section id="inicio-materias">
         <div className="ps-contenedor">
-          <h2>Elegí tu materia</h2>
+          <h2>Las cuatro materias</h2>
 
           {conteos === null && !fallo && <Cargando texto="Buscando las preguntas…" />}
           {fallo && (
             <ErrorCarga
-              mensaje="No pudimos traer las materias."
+              mensaje="No se cargaron las materias."
               alReintentar={() => void cargar()}
             />
           )}
@@ -126,9 +124,9 @@ export default function InicioPage() {
                       <span className="materia-cuenta">
                         {cuantas > 0
                           ? `${cuantas} ${cuantas === 1 ? "pregunta" : "preguntas"} para practicar`
-                          : "Preguntas en camino"}
+                          : "Todavía no hay preguntas acá"}
                       </span>
-                      <span className="materia-cta">Practicar →</span>
+                      <span className="materia-cta">Practicá →</span>
                     </Link>
                   </li>
                 );
@@ -144,8 +142,8 @@ export default function InicioPage() {
         <div className="info-texto">
           <p>
             En sexto grado, al terminar el año, se aplican pruebas estandarizadas
-            en todo el país. Son de selección: te dan una pregunta y cuatro
-            opciones, y vos escogés la que creés correcta. Nada más.
+            en todo el país. Son de escoger: te dan una pregunta y cuatro opciones,
+            y vos marcás la que creés correcta. Nada más.
           </p>
           <p>
             Acá vas a encontrar preguntas del mismo tipo, para que cuando llegue el
@@ -153,32 +151,81 @@ export default function InicioPage() {
             batalla ganada. La otra media la ganás en clase, con tu maestra.
           </p>
           <p>
-            Esto no es un examen de verdad y nadie ve tu nota. Es para que practiqués
-            sin presión, las veces que querrás. No pedimos tu nombre, no guardamos
-            nada y no cuesta un cinco.
+            Esto no es un examen. Nadie ve tu nota, nadie te la pide y no queda
+            guardada en ningún lado. Practicá las veces que querás. No cuesta un
+            cinco.
           </p>
         </div>
       </section>
 
-      {/* 5 · Recurso sin internet */}
-      <section id="inicio-offline" className="ps-contenedor">
-        <div className="offline-caja">
-          <span aria-hidden="true"><WifiOff size={34} strokeWidth={1.7} /></span>
-          <div className="offline-texto">
-            <h2>¿En la escuela no hay internet?</h2>
-            <p>
-              Hay otra versión que se abre una vez y después funciona sin conexión.
-              Sirve para practicar en el aula o en la casa.
-            </p>
+      {/* 5 · Practica sin internet */}
+      <section id="inicio-sin-internet">
+        <div className="ps-contenedor">
+          <span className="sin-net-icono" aria-hidden="true">
+            <WifiOff size={34} strokeWidth={1.7} />
+          </span>
+          <h2>Práctica sin internet</h2>
+          <p className="sin-net-bajada">
+            En muchas escuelas la señal va y viene. Por eso hay un archivo que se
+            descarga una sola vez y después funciona solo, sin conexión. Se lo
+            pasás a los estudiantes en una llave maya y listo.
+          </p>
+
+          <ul className="sin-net-tarjetas">
+            <li className="sin-net-tarjeta">
+              <span className="sin-net-num" aria-hidden="true">50</span>
+              <span className="sin-net-titulo">Cincuenta preguntas por materia</span>
+              <p>
+                Doscientas en total, de las cuatro materias, con la respuesta
+                correcta y una explicación en palabras sencillas.
+              </p>
+            </li>
+            <li className="sin-net-tarjeta">
+              <span className="sin-net-icono-chico" aria-hidden="true">
+                <Smartphone size={30} strokeWidth={1.7} />
+              </span>
+              <span className="sin-net-titulo">Se abre en compu o celular</span>
+              <p>
+                Es un solo archivo. Se toca dos veces y se abre en el navegador
+                que ya tenga el aparato. No hay que instalar nada.
+              </p>
+            </li>
+            <li className="sin-net-tarjeta">
+              <span className="sin-net-icono-chico" aria-hidden="true">
+                <WifiOff size={30} strokeWidth={1.7} />
+              </span>
+              <span className="sin-net-titulo">No gasta datos</span>
+              <p>
+                Una vez guardado en el aparato, ya no vuelve a pedir internet.
+                Sirve igual en el aula, en la casa o en el bus.
+              </p>
+            </li>
+          </ul>
+
+          <div className="sin-net-pasos">
+            <h3>Cómo se usa</h3>
+            <ol>
+              <li>Tocá el botón de descarga. Se guarda un archivo que termina en <code>.html</code>.</li>
+              <li>Buscalo en la carpeta de descargas y abrilo con doble clic. Si es celular, tocalo una vez.</li>
+              <li>Se abre como una página normal. Elegí la materia y practicá.</li>
+              <li>Para compartirlo, pasalo por WhatsApp, correo o llave maya. Funciona igual en la otra máquina.</li>
+            </ol>
           </div>
-          <a
-            className="ps-boton offline-boton"
-            href={URL_OFFLINE}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ir a la versión sin internet →
-          </a>
+
+          <div className="sin-net-acciones">
+            <a className="ps-boton sin-net-boton" href={URL_DESCARGA_OFFLINE} download>
+              <Download size={20} strokeWidth={2} aria-hidden="true" />
+              Descargar la práctica (5 MB)
+            </a>
+            <a
+              className="ps-boton sin-net-enlace"
+              href={URL_OFFLINE}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrí la versión en línea →
+            </a>
+          </div>
         </div>
       </section>
     </>
