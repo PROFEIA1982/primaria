@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# El lockfile no esta en el repo remoto: el proxy de git de este entorno
+# no deja hacer push y subirlo por el formulario web no vale la pena.
+# package.json ya fija versiones exactas, asi que el build es reproducible.
+pnpm-lock.yaml
