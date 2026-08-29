@@ -1,0 +1,91 @@
+/* Navegacion principal. Todo prefijado con #nav-principal. */
+#nav-principal {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+#nav-principal .nav-caja {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#nav-principal .nav-marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--toque-min);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--titulo);
+  text-decoration: none;
+}
+#nav-principal .nav-hamburguesa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: var(--toque-min);
+  min-height: var(--toque-min);
+  padding: 0 14px;
+  border: 1px solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+#nav-principal .nav-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#nav-principal .nav-lista a {
+  --acento: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--toque-min);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 700;
+}
+#nav-principal .nav-lista a:hover { background: var(--secondary); }
+/* La pagina activa se marca con color Y con una barra: nunca solo color. */
+#nav-principal .nav-lista a.active {
+  color: var(--acento);
+  box-shadow: inset 0 -3px 0 var(--acento);
+}
+
+/* Celular: el menu se despliega con la hamburguesa. */
+@media (max-width: 859px) {
+  #nav-principal .nav-menu {
+    display: none;
+    width: 100%;
+    padding-bottom: 12px;
+  }
+  #nav-principal .nav-menu[data-abierto="si"] { display: block; }
+  #nav-principal .nav-caja { flex-wrap: wrap; }
+  #nav-principal .nav-lista { flex-direction: column; }
+  #nav-principal .nav-lista a { width: 100%; }
+}
+
+/* Escritorio: siempre visible, sin boton. */
+@media (min-width: 860px) {
+  #nav-principal .nav-hamburguesa { display: none; }
+  #nav-principal .nav-menu { display: block !important; }
+}
+
+@media (forced-colors: active) {
+  #nav-principal .nav-lista a.active { box-shadow: inset 0 -3px 0 ButtonText; }
+}

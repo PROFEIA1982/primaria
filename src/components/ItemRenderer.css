@@ -1,0 +1,76 @@
+/* Un item en pantalla. Todo prefijado con #item-renderer. */
+#item-renderer {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+  padding: clamp(16px, 4vw, 28px);
+}
+#item-renderer .item-enunciado {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+#item-renderer .item-enunciado p { margin: 0 0 0.8em; }
+#item-renderer .item-enunciado img {
+  display: block;
+  margin: 16px auto;
+  border-radius: var(--radius-sm);
+}
+/* Una formula larga no debe romper la pagina en un celular. */
+#item-renderer .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+#item-renderer .item-opciones {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#item-renderer .item-opcion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: var(--toque-min);
+  padding: 14px 16px;
+  border: 2px solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+#item-renderer .item-opcion:hover:not(:disabled) { background: var(--secondary); }
+#item-renderer .item-opcion:disabled { cursor: default; }
+#item-renderer .item-letra {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--secondary);
+  font-weight: 700;
+}
+/* Correcta e incorrecta se marcan con color, borde, icono Y palabra.
+   Nunca solo con color: hay ninos que no lo distinguen. */
+#item-renderer .item-opcion[data-estado="correcta"] {
+  border-color: var(--success);
+  background: var(--success-suave);
+  color: var(--success);
+}
+#item-renderer .item-opcion[data-estado="incorrecta"] {
+  border-color: var(--error);
+  background: var(--error-suave);
+  color: var(--error);
+}
+#item-renderer .item-marca {
+  margin-left: auto;
+  font-weight: 700;
+  white-space: nowrap;
+}

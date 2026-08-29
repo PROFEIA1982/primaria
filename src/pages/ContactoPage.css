@@ -1,0 +1,96 @@
+/* Pagina de contacto. Todo prefijado con #contacto-principal. */
+#contacto-principal .contacto-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-fuerte);
+  margin-bottom: 8px;
+}
+#contacto-principal .contacto-kicker::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-fuerte);
+  box-shadow: 0 0 0 4px rgba(180, 83, 9, 0.15);
+}
+
+#contacto-principal .contacto-intro { max-width: 60ch; }
+
+#contacto-principal .contacto-aviso {
+  margin: 20px 0 28px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  background: var(--primary-suave);
+  max-width: 60ch;
+}
+
+/* Tarjetas de canal: toda la tarjeta es el enlace, no solo el texto. */
+#contacto-principal .contacto-canales {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+}
+@media (min-width: 620px) {
+  #contacto-principal .contacto-canales { grid-template-columns: repeat(2, 1fr); }
+}
+#contacto-principal .contacto-canal {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 76px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+  text-decoration: none;
+  color: var(--foreground);
+}
+#contacto-principal .contacto-canal:hover { background: var(--secondary); }
+#contacto-principal .contacto-canal .canal-icono { font-size: 1.6rem; }
+#contacto-principal .contacto-canal .canal-nombre { font-weight: 700; display: block; }
+#contacto-principal .contacto-canal .canal-dato {
+  color: var(--enlace);
+  text-decoration: underline;
+}
+
+/* Formulario */
+#contacto-principal .contacto-forma {
+  display: grid;
+  gap: 18px;
+  max-width: 560px;
+  padding: clamp(18px, 4vw, 28px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--secondary);
+}
+#contacto-principal .campo { display: grid; gap: 6px; }
+#contacto-principal .campo label { font-weight: 700; }
+#contacto-principal .campo .campo-nota { font-size: 0.9rem; color: var(--muted); font-weight: 400; }
+#contacto-principal .campo input,
+#contacto-principal .campo textarea {
+  min-height: var(--toque-min);
+  padding: 12px 14px;
+  border: 2px solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+}
+#contacto-principal .campo textarea { min-height: 140px; resize: vertical; }
+
+#contacto-principal .contacto-visitas {
+  margin-top: 36px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

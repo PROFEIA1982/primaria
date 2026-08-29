@@ -1,0 +1,177 @@
+/* ============================================================
+   Tokens y base de la app Primaria.
+   Los contrastes anotados NO son estimados: se calcularon con la
+   formula WCAG 2.1. Si alguien cambia un color, hay que recalcular.
+   Sin modo oscuro por ahora, por decision del cliente.
+   ============================================================ */
+
+:root {
+  /* --- Base --- */
+  --background: #ffffff;
+  --foreground: #1a1a1a;          /* 17.40 sobre blanco · AAA */
+  --secondary: #f2f6fa;           /* superficie de tarjetas */
+  --muted: #5c6b66;               /*  5.60 sobre blanco · AA  */
+  --titulo: #1b3a5b;              /* 11.65 sobre blanco · AAA */
+  --enlace: #0b5fa5;              /*  6.57 sobre blanco · AA  */
+
+  /* --- Accion --- */
+  --primary: #1d4ed8;             /* blanco encima: 6.70 · AA */
+  --primary-foreground: #ffffff;
+  --primary-suave: #e8f1fb;
+
+  /* --- Acento (avisos, tips, destacados) --- */
+  --accent: #ffd166;              /* tinta encima: 12.07 · AAA */
+  --accent-foreground: #1a1a1a;
+  --accent-fuerte: #b45309;       /* blanco encima: 5.02 · AA  */
+
+  /* --- Respuesta --- */
+  --success: #1e7a46;             /* blanco encima: 5.35 · AA  */
+  --success-suave: #e8f6ee;       /* verde sobre el: 4.80 · AA */
+  --error: #b3261e;               /* blanco encima: 6.54 · AA  */
+  --error-suave: #fdf2f1;         /* rojo sobre el:  5.96 · AA */
+
+  /* --- Bordes --- */
+  --border: #dde5ec;              /* solo separacion decorativa */
+  --border-fuerte: #7c8b98;       /* 3.50 sobre blanco, sirve para controles */
+
+  /* --- Materias --- */
+  --espanol: #b4470f;             /* blanco encima: 5.46 · AA  */
+  --espanol-suave: #fdede3;
+  --sociales: #6d28d9;            /* blanco encima: 7.10 · AAA */
+  --sociales-suave: #f1eafb;
+  --ciencias: #0f766e;            /* blanco encima: 5.47 · AA  */
+  --ciencias-suave: #e8f6ee;
+  --mate: #1d4ed8;                /* blanco encima: 6.70 · AA  */
+  --mate-suave: #e8f1fb;
+
+  /* --- Medidas --- */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --toque-min: 48px;              /* dedos de nino, no de adulto */
+  --ancho-max: 1120px;
+  --sombra: 0 1px 2px rgba(26, 26, 26, 0.06), 0 8px 24px rgba(26, 26, 26, 0.08);
+  --fuente: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  /* el maximo pasa del doble del minimo, para que aguante zoom al 200% */
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+h1, h2, h3 {
+  color: var(--titulo);
+  line-height: 1.2;
+  text-wrap: balance;
+  margin: 0 0 0.5em;
+  font-weight: 700;
+}
+h1 { font-size: clamp(1.75rem, 1.4rem + 1.8vw, 3rem); }
+h2 { font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem); }
+
+a { color: var(--enlace); }
+
+img { max-width: 100%; height: auto; }
+
+/* El foco tiene que verse. Nadie navega con teclado a ciegas. */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.ps-saltar {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--background);
+  color: var(--enlace);
+  padding: 12px 16px;
+  z-index: 100;
+}
+.ps-saltar:focus { left: 8px; top: 8px; }
+
+.ps-contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ps-seccion { padding: 40px 0 8px; }
+
+.ps-solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.ps-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--toque-min);
+  padding: 12px 22px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ps-boton:hover { filter: brightness(0.92); }
+
+/* Estados de carga, error y vacio. Todo componente que carga datos
+   tiene los tres, sin excepcion. */
+.ps-estado {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--secondary);
+  text-align: center;
+}
+.ps-estado--error {
+  border-color: var(--error);
+  background: var(--error-suave);
+  color: var(--error);
+}
+.ps-estado-punto {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: ps-latir 1s ease-in-out infinite;
+}
+@keyframes ps-latir {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50%      { opacity: 1;    transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .ps-boton { border: 2px solid ButtonText; }
+}
