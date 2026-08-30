@@ -1,0 +1,125 @@
+/* Un item en pantalla. Todo prefijado con .ps-item. */
+.ps-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+  padding: clamp(16px, 4vw, 28px);
+}
+.ps-item .item-enunciado {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.ps-item .item-enunciado p { margin: 0 0 0.8em; }
+.ps-item .item-enunciado img {
+  display: block;
+  margin: 16px auto;
+  border-radius: var(--radius-sm);
+}
+/* La tabla se desliza dentro de su caja: a 320px una de seis columnas
+   no cabe de ninguna otra forma, y la pagina no debe correrse entera. */
+.ps-item .item-tabla-caja {
+  overflow-x: auto;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.ps-item .item-tabla-caja table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: max-content;
+  font-size: 0.98rem;
+}
+.ps-item .item-tabla-caja th,
+.ps-item .item-tabla-caja td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+.ps-item .item-tabla-caja thead th {
+  background: var(--secondary);
+  color: var(--titulo);
+  font-weight: 700;
+}
+.ps-item .item-tabla-caja tbody tr:last-child td { border-bottom: 0; }
+
+/* La cita del texto de lectura, para que se vea que es una cita. */
+.ps-item .item-enunciado blockquote {
+  margin: 0 0 1em;
+  padding: 12px 18px;
+  border-left: 4px solid var(--border-fuerte);
+  background: var(--secondary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.ps-item .item-enunciado blockquote p:last-child { margin-bottom: 0; }
+
+/* Una formula larga no debe romper la pagina en un celular. */
+.ps-item .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+.ps-item .item-opciones {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ps-item .item-opcion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: var(--toque-min);
+  padding: 14px 16px;
+  border: 2px solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ps-item .item-opcion:hover:not(:disabled) { background: var(--secondary); }
+.ps-item .item-opcion:disabled { cursor: default; }
+.ps-item .item-texto {
+  /* sin esto, una formula larga desborda el boton en un celular de 320px */
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.ps-item .item-letra {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--secondary);
+  font-weight: 700;
+}
+/* Correcta e incorrecta se marcan con color, borde, icono Y palabra.
+   Nunca solo con color: hay ninos que no lo distinguen. */
+.ps-item .item-opcion[data-estado="correcta"] {
+  border-color: var(--success);
+  background: var(--success-suave);
+  color: var(--success);
+}
+.ps-item .item-opcion[data-estado="incorrecta"] {
+  border-color: var(--error);
+  background: var(--error-suave);
+  color: var(--error);
+}
+.ps-item .item-marca {
+  margin-left: auto;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (forced-colors: active) {
+  .ps-item .item-opcion { border: 2px solid ButtonText; }
+  .ps-item .item-opcion[data-estado="correcta"],
+  .ps-item .item-opcion[data-estado="incorrecta"] { border: 3px solid ButtonText; }
+}
