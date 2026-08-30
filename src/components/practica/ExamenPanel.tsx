@@ -12,12 +12,11 @@ const ICONO_RELOJ: Record<NivelReloj, typeof Clock> = {
 
 type Props = {
   nombreMateria: string;
-  emoji: string;
   practica: Practica;
 };
 
 // Pantalla 2: una pregunta a la vez, con la barra del reloj arriba.
-export default function ExamenPanel({ nombreMateria, emoji, practica }: Props) {
+export default function ExamenPanel({ nombreMateria, practica }: Props) {
   const { items, indice, respuestas, responder, siguiente, restante, nivel, aviso } = practica;
 
   const item = items[indice];
@@ -62,9 +61,9 @@ export default function ExamenPanel({ nombreMateria, emoji, practica }: Props) {
     <>
       <div className="examen-barra" ref={barraRef} style={{ top: `${altoMenu}px` }}>
         <div className="ps-contenedor examen-barra-caja">
-          <p className="examen-materia">
-            <span aria-hidden="true">{emoji}</span> {nombreMateria}
-          </p>
+          {/* El nombre de la materia es el h1 de esta pantalla: antes la
+              pagina del examen no tenia ni un encabezado. */}
+          <h1 className="examen-materia">{nombreMateria}</h1>
           <p className="examen-progreso">
             Pregunta <strong>{indice + 1}</strong> de {items.length}
           </p>
