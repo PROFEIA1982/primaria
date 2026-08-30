@@ -1,28 +1,118 @@
-/* Pagina de contacto. Todo prefijado con #contacto-principal. */
-#contacto-principal .contacto-kicker {
-  display: inline-flex;
+/* ============================================================
+   Pagina de contacto. Dos ids: #contacto-hero y #contacto-principal.
+   Ni un selector suelto: todo cuelga de uno de los dos.
+
+   CONTRASTES (calculados con la formula WCAG 2.1, no a ojo).
+   El hero es un degradado, asi que cada numero se saco contra el
+   punto MAS CLARO del degradado, que es el peor caso:
+     · degradado: var(--primary) #1D4ED8 -> #143797 (negro al 30%)
+     · trama de puntos: blanco al 8% sobre #1D4ED8 = #2F5CDB (el pixel
+       mas claro de todo el hero; ahi es donde se mide)
+       blanco     sobre #2F5CDB ....  5.71  AA   (h1, grande: AAA)
+       #E8F1FB    sobre #2F5CDB ....  5.01  AA   (bajada)
+       tinta      sobre #FFD166 .... 12.07  AAA  (pildora del kicker)
+     Al otro extremo del degradado todo sube: blanco sobre #143797 = 10.38.
+
+   Tarjetas de canal, sobre blanco #FFFFFF:
+       --titulo  #1B3A5B .......... 11.65  AAA  (nombre del canal)
+       --muted   #5C6B66 ..........  5.60  AA   (dato)
+       --enlace  #0B5FA5 ..........  6.57  AA   (llamado "Escribir →")
+   Iconos dentro de su pastilla (grafico: minimo 3.0, todos pasan):
+       --success  sobre --success-suave  ....  4.80
+       --sociales sobre --sociales-suave ....  6.06
+       --primary  sobre --primary-suave  ....  5.87
+       --accent-fuerte sobre --secondary ....  4.62
+
+   Formulario, sobre --secondary #F2F6FA:
+       --foreground #1A1A1A ....... 16.03  AAA
+       --muted      #5C6B66 .......  5.16  AA   (notas)
+       --enlace     #0B5FA5 .......  6.05  AA
+   Boton: blanco sobre --primary ...  6.70  AA
+
+   Tarjeta de "¿Se le ocurre algo para mejorar?", sobre blanco:
+       --accent-fuerte (iconos) ...  5.02  AA
+   Confirmacion, sobre --success-suave #E8F6EE:
+       --foreground #1A1A1A ....... 15.62  AAA
+       --enlace     #0B5FA5 .......  5.90  AA
+   ============================================================ */
+
+/* --- 1. Hero --- */
+#contacto-hero {
+  position: relative;
+  overflow: hidden;                  /* contiene el resplandor de la esquina */
+  padding: clamp(40px, 7vw, 76px) 0 clamp(44px, 7vw, 80px);
+  /* La trama va de primera para que quede ENCIMA del degradado; el
+     degradado solo oscurece, nunca aclara, asi el peor caso de contraste
+     es el punto de la trama y ya esta medido arriba. */
+  background-color: var(--primary);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.08) 1.3px, transparent 1.4px),
+    linear-gradient(155deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.30) 100%);
+  background-size: 26px 26px, auto;
+  color: var(--primary-foreground);
+  text-align: center;
+}
+/* Resplandor de esquina. Decorativo puro: no lleva texto encima. */
+#contacto-hero::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: -12%;
+  width: min(46vw, 460px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+#contacto-hero .hero-caja { position: relative; z-index: 1; }
+/* flex y no inline-flex: como bloque queda solo en su renglon. Con
+   inline-flex la pildora del kicker se le pegaba al lado. */
+#contacto-hero .hero-icono {
+  display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 18px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+/* El kicker va sobre pildora solida y no suelto sobre el azul: el ambar
+   sobre el degradado se quedaba en 4.11 y no llegaba a AA. */
+#contacto-hero .hero-kicker {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-foreground);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent-fuerte);
-  margin-bottom: 8px;
 }
-#contacto-principal .contacto-kicker::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent-fuerte);
-  box-shadow: 0 0 0 4px rgba(180, 83, 9, 0.15);
+#contacto-hero h1 {
+  margin: 0 0 12px;
+  color: var(--primary-foreground);
+  /* "Escríbanos" es una sola palabra larga: con el texto al 200% en un
+     celular de 320px no cabe en una linea y sacaba la pagina de cuadro.
+     Se le permite partir con guion antes que desbordar. */
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
+#contacto-hero .hero-bajada {
+  overflow-wrap: break-word;
+  max-width: 44ch;
+  margin: 0 auto;
+  color: var(--primary-suave);
+  font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
+}
+#contacto-hero :focus-visible { outline-color: var(--primary-foreground); }
 
-#contacto-principal .contacto-intro { max-width: 60ch; }
-
+/* --- 2. Aviso para estudiantes --- */
 #contacto-principal .contacto-aviso {
-  margin: 20px 0 28px;
+  margin: 0 0 32px;
   padding: 14px 16px;
   border: 1px solid var(--border);
   border-left: 4px solid var(--primary);
@@ -30,63 +120,154 @@
   background: var(--primary-suave);
   max-width: 60ch;
 }
+#contacto-principal .contacto-intro { max-width: 62ch; }
 
-/* Tarjetas de canal: toda la tarjeta es el enlace, no solo el texto. */
+/* --- 3. Tarjetas de canal: toda la tarjeta es el enlace --- */
 #contacto-principal .contacto-canales {
   display: grid;
-  gap: 14px;
+  gap: 16px;
   grid-template-columns: 1fr;
   list-style: none;
-  margin: 0 0 40px;
+  margin: 0 0 48px;
   padding: 0;
 }
 /* En em y no en px: con el texto al 200% el viewport sigue midiendo lo
-   mismo, pero las dos columnas ya no caben. En em la rejilla se entera. */
-@media (min-width: 42em) {
-  #contacto-principal .contacto-canales { grid-template-columns: repeat(2, 1fr); }
+   mismo, pero las columnas ya no caben. En em la rejilla se entera.
+   Son cuatro tarjetas, asi que solo se usan 1, 2 y 4 columnas: con 3
+   quedaria una sola en la ultima fila y la rejilla no cerraria pareja. */
+@media (min-width: 34em) {
+  #contacto-principal .contacto-canales { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-#contacto-principal .contacto-canal {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-height: 76px;
-  padding: 16px 18px;
+@media (min-width: 68em) {
+  #contacto-principal .contacto-canales { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+#contacto-principal .contacto-canales li { display: grid; }
+
+#contacto-principal .canal {
+  position: relative;
+  overflow: hidden;                  /* recorta la barra de acento */
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  height: 100%;
+  padding: 22px 20px 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
   text-decoration: none;
   color: var(--foreground);
+  /* Solo transform: nada de animar sombras ni colores, que obligan a
+     repintar en cada cuadro. */
+  transition: transform 0.18s ease;
 }
-#contacto-principal .contacto-canal:hover { background: var(--secondary); }
-#contacto-principal .contacto-canal .canal-icono { flex: 0 0 auto; font-size: 1.6rem; }
-/* sin esto, un correo largo no parte y revienta la tarjeta al hacer zoom */
-#contacto-principal .contacto-canal > span:not(.canal-icono) {
+/* Barra de acento que se despliega. Cada canal trae su color en --canal. */
+#contacto-principal .canal::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--canal);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+}
+#contacto-principal .canal[data-canal="whatsapp"] { --canal: var(--success);       --canal-suave: var(--success-suave); }
+#contacto-principal .canal[data-canal="soporte"]  { --canal: var(--sociales);      --canal-suave: var(--sociales-suave); }
+#contacto-principal .canal[data-canal="telefono"] { --canal: var(--primary);       --canal-suave: var(--primary-suave); }
+#contacto-principal .canal[data-canal="correo"]   { --canal: var(--accent-fuerte); --canal-suave: var(--secondary); }
+
+#contacto-principal .canal-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  background: var(--canal-suave);
+  color: var(--canal);
+  transition: transform 0.18s ease;
+}
+#contacto-principal .canal-nombre {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--titulo);
+}
+/* Sin esto, un correo largo no parte y revienta la tarjeta al hacer zoom. */
+#contacto-principal .canal-dato {
+  color: var(--muted);
+  font-size: 0.95rem;
   min-width: 0;
   overflow-wrap: anywhere;
 }
-#contacto-principal .contacto-canal .canal-nombre { font-weight: 700; display: block; }
-#contacto-principal .contacto-canal .canal-dato {
+#contacto-principal .canal-accion {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
   color: var(--enlace);
+  font-weight: 700;
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
+#contacto-principal .canal-accion svg { transition: transform 0.18s ease; }
 
-/* Formulario */
+@media (hover: hover) {
+  #contacto-principal .canal:hover { transform: translateY(-5px); }
+  #contacto-principal .canal:hover::before { transform: scaleX(1); }
+  #contacto-principal .canal:hover .canal-chip { transform: scale(1.08); }
+  #contacto-principal .canal:hover .canal-accion svg { transform: translateX(4px); }
+}
+/* Con teclado pasa lo mismo que con el mouse: la barra sale y el foco se ve. */
+#contacto-principal .canal:focus-visible::before { transform: scaleX(1); }
+
+/* --- 4. Formulario + invitacion --- */
+#contacto-principal .contacto-doble {
+  display: grid;
+  gap: 20px;
+  /* minmax(0,...) y no 1fr a secas: un campo de formulario trae un ancho
+     minimo propio y, con el texto al 200%, empuja la columna y saca la
+     pagina de cuadro. El minmax le manda que se encoja. */
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  margin-top: 24px;
+}
+@media (min-width: 62em) {
+  #contacto-principal .contacto-doble {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+}
 #contacto-principal .contacto-forma {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
-  max-width: 560px;
   padding: clamp(18px, 4vw, 28px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--secondary);
 }
-#contacto-principal .campo { display: grid; gap: 6px; }
+#contacto-principal .campo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+  min-width: 0;
+}
 #contacto-principal .campo label { font-weight: 700; }
-#contacto-principal .campo .campo-nota { font-size: 0.9rem; color: var(--muted); font-weight: 400; }
+#contacto-principal .campo .campo-nota {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 400;
+}
 #contacto-principal .campo input,
+#contacto-principal .campo select,
 #contacto-principal .campo textarea {
   min-height: var(--toque-min);
+  /* el ancho intrinseco del control (unos 20 caracteres) es lo que
+     desbordaba a 320px; con width:100% manda la rejilla, no el control */
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   padding: 12px 14px;
   border: 2px solid var(--border-fuerte);
   border-radius: var(--radius-sm);
@@ -94,10 +275,80 @@
   color: var(--foreground);
   font: inherit;
 }
+/* El select se deja con la flecha del sistema a proposito: en celular
+   abre la rueda nativa y eso se toca mejor que cualquier lista propia. */
 #contacto-principal .campo textarea { min-height: 140px; resize: vertical; }
 
+#contacto-principal .forma-boton { width: 100%; }
+#contacto-principal .forma-nota {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+#contacto-principal .forma-listo {
+  margin: 0;
+  text-align: left;
+  background: var(--success-suave);
+  border-color: var(--success);
+}
+
+#contacto-principal .contacto-invita {
+  padding: clamp(18px, 4vw, 26px);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent-fuerte);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+}
+#contacto-principal .contacto-invita h3 { margin-top: 0; }
+#contacto-principal .contacto-invita ul {
+  display: grid;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#contacto-principal .contacto-invita li {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+#contacto-principal .contacto-invita svg {
+  color: var(--accent-fuerte);
+  margin-top: 3px;
+}
+
 #contacto-principal .contacto-visitas {
-  margin-top: 36px;
+  margin-top: 40px;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+/* Sin movimiento para quien lo pidio: el sistema global ya acorta las
+   transiciones, aca ademas se deja la barra de acento siempre visible
+   para no perder la senal de "esto se puede tocar". */
+@media (prefers-reduced-motion: reduce) {
+  #contacto-principal .canal,
+  #contacto-principal .canal::before,
+  #contacto-principal .canal-chip,
+  #contacto-principal .canal-accion svg {
+    transition: none;
+    transform: none;
+  }
+  #contacto-principal .canal:hover,
+  #contacto-principal .canal:hover .canal-chip,
+  #contacto-principal .canal:hover .canal-accion svg { transform: none; }
+}
+
+/* En alto contraste de Windows los fondos y las sombras desaparecen: si
+   la tarjeta no lleva borde propio, queda un texto flotando sin caja. */
+@media (forced-colors: active) {
+  #contacto-hero .hero-icono,
+  #contacto-principal .canal,
+  #contacto-principal .canal-chip,
+  #contacto-principal .contacto-forma,
+  #contacto-principal .contacto-invita,
+  #contacto-principal .contacto-aviso { border: 1px solid ButtonText; }
+  #contacto-principal .canal::before { forced-color-adjust: none; background: Highlight; }
 }

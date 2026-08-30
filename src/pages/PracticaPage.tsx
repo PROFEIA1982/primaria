@@ -117,10 +117,8 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
 
       {practica.estadoInicial === "listo" && practica.itemsEnLaMateria > 0 && (
         <>
-          <p className="sel-bajada">
-            Escogé el tema y cuántas preguntas querés. Después dale a
-            «¡Empezar!» y a trabajar.
-          </p>
+          {/* Las instrucciones ya no van en parrafo: viven en las tres
+              tarjetas que abre el panel. */}
           <SeleccionPanel nombreMateria={datos.nombre} practica={practica} />
           {/* Mientras el servidor arma las preguntas se muestra la forma que
               van a tener, no una rueda girando. */}

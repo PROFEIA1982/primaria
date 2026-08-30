@@ -1,5 +1,27 @@
 /* ============================================================
    Pagina de inicio. Cada seccion con su id y todo prefijado.
+
+   Contrastes calculados con la formula WCAG 2.1 (contraste_wcag.py),
+   no a ojo. Si alguien cambia un color, hay que recalcular:
+   - blanco #ffffff sobre el azul del hero .......... 9.63 · AAA
+   - #eef3ff sobre el azul del hero ................. 8.67 · AAA
+   - tinta #1a1a1a sobre --accent #ffd166 .......... 12.07 · AAA
+   - --titulo #1b3a5b sobre blanco ................. 11.65 · AAA
+   - --titulo #1b3a5b sobre --secondary #f2f6fa .... 10.73 · AAA
+   - --foreground #1a1a1a sobre blanco ............. 17.40 · AAA
+   - --foreground #1a1a1a sobre --secondary ........ 16.03 · AAA
+   - --muted #5c6b66 sobre blanco ................... 5.60 · AA
+   - --muted #5c6b66 sobre --secondary .............. 5.16 · AA
+   - --enlace #0b5fa5 sobre blanco .................. 6.57 · AA
+   - --enlace #0b5fa5 sobre --secondary ............. 6.05 · AA
+   - --enlace #0b5fa5 sobre --primary-suave ......... 5.76 · AA
+   - blanco sobre --primary #1d4ed8 ................. 6.70 · AA
+   - --primary #1d4ed8 sobre --primary-suave ........ 5.87 · AA
+   - --accent-fuerte #b45309 sobre blanco ........... 5.02 · AA
+   - --accent-fuerte #b45309 sobre --secondary ...... 4.62 · AA
+
+   Las rejillas cierran fila exacta a proposito: con tres tarjetas en
+   dos columnas, la tercera ocupa las dos y no queda hueco al lado.
    ============================================================ */
 
 /* --- 1. Hero --- */
@@ -56,30 +78,56 @@
 }
 #inicio-hero :focus-visible { outline-color: #fff; }
 
-/* --- 2. Como funciona --- */
-#inicio-pasos { padding: clamp(40px, 7vw, 64px) 0; }
-#inicio-pasos h2 { text-align: center; }
-#inicio-pasos .pasos-rejilla {
+/* --- Rejillas: la misma matematica en toda la pagina --- */
+/* Cuatro tarjetas: 1 · 2 · 4 columnas. Cualquier fila cierra exacta. */
+#inicio-pasos .pasos-rejilla,
+#inicio-materias .materias-rejilla,
+#inicio-info .info-rejilla {
   display: grid;
   gap: 18px;
-  grid-template-columns: 1fr;
+  /* minmax con 0 y no auto: sin esto una palabra larga estira la columna
+     y la rejilla se sale de la pantalla en celular. */
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
   list-style: none;
   margin: 28px 0 0;
   padding: 0;
-  counter-reset: paso;
 }
-@media (min-width: 620px)  { #inicio-pasos .pasos-rejilla { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { #inicio-pasos .pasos-rejilla { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 560px) {
+  #inicio-pasos .pasos-rejilla,
+  #inicio-materias .materias-rejilla,
+  #inicio-info .info-rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  #inicio-pasos .pasos-rejilla,
+  #inicio-materias .materias-rejilla,
+  #inicio-info .info-rejilla { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* --- 2. Como funciona --- */
+#inicio-pasos { padding: clamp(40px, 7vw, 64px) 0; }
+#inicio-pasos h2 { text-align: center; }
+#inicio-pasos .pasos-rejilla { counter-reset: paso; }
 #inicio-pasos .paso {
   display: flex;
+  min-width: 0;
+  overflow-wrap: anywhere;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  height: 100%;
   padding: 26px 18px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--secondary);
   text-align: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+@media (hover: hover) {
+  #inicio-pasos .paso:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.08), 0 14px 34px rgba(26, 26, 26, 0.12);
+  }
 }
 #inicio-pasos .paso-numero {
   display: inline-flex;
@@ -89,7 +137,7 @@
   height: 34px;
   border-radius: 50%;
   background: var(--primary);
-  color: var(--primary-foreground);
+  color: var(--primary-foreground);   /* 6.70 · AA */
   font-weight: 700;
 }
 #inicio-pasos .paso-titulo { font-weight: 700; color: var(--titulo); }
@@ -102,24 +150,18 @@
   background: var(--secondary);
 }
 #inicio-materias h2 { text-align: center; }
-#inicio-materias .materias-rejilla {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1fr;
-  list-style: none;
-  margin: 28px 0 0;
-  padding: 0;
-}
-@media (min-width: 620px)  { #inicio-materias .materias-rejilla { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { #inicio-materias .materias-rejilla { grid-template-columns: repeat(4, 1fr); } }
+/* El li estira para que las dos tarjetas de una fila midan igual de alto. */
+#inicio-materias .materias-rejilla > li { display: flex; }
 
 /* Toda la tarjeta es el enlace, no solo el boton de adentro. */
 #inicio-materias .materia-tarjeta {
   --acento: var(--primary);
   display: flex;
+  min-width: 0;
+  overflow-wrap: anywhere;
   flex-direction: column;
   gap: 10px;
-  height: 100%;
+  width: 100%;
   padding: 26px 22px;
   border: 1px solid var(--border);
   border-top: 5px solid var(--acento);
@@ -159,14 +201,84 @@
   color: var(--acento);
 }
 
-/* --- 4. Que son las pruebas --- */
-#inicio-info { padding: clamp(40px, 7vw, 64px) 0; }
-#inicio-info .info-texto { max-width: 66ch; }
-#inicio-info .info-texto p { margin: 0 0 1em; }
-
-@media (forced-colors: active) {
-  #inicio-materias .materia-tarjeta { border: 2px solid ButtonText; }
+/* --- Desplegable de tarjeta (details nativo, cero JavaScript) --- */
+#inicio-info .ps-mas,
+#inicio-sin-internet .ps-mas { margin-top: auto; }
+#inicio-info .ps-mas > summary,
+#inicio-sin-internet .ps-mas > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--toque-min);       /* 48px: dedo de nino */
+  padding-top: 8px;
+  color: var(--enlace);               /* 6.05 sobre --secondary · AA */
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;                   /* fuera el triangulito del navegador */
 }
+#inicio-info .ps-mas > summary::-webkit-details-marker,
+#inicio-sin-internet .ps-mas > summary::-webkit-details-marker { display: none; }
+#inicio-info .ps-mas-flecha,
+#inicio-sin-internet .ps-mas-flecha {
+  flex: 0 0 auto;
+  transition: transform 0.18s ease;
+}
+#inicio-info .ps-mas[open] .ps-mas-flecha,
+#inicio-sin-internet .ps-mas[open] .ps-mas-flecha { transform: rotate(180deg); }
+/* Un solo rotulo a la vez: cerrado invita, abierto ofrece cerrar. */
+#inicio-info .ps-mas-abierto,
+#inicio-sin-internet .ps-mas-abierto { display: none; }
+#inicio-info .ps-mas[open] .ps-mas-cerrado,
+#inicio-sin-internet .ps-mas[open] .ps-mas-cerrado { display: none; }
+#inicio-info .ps-mas[open] .ps-mas-abierto,
+#inicio-sin-internet .ps-mas[open] .ps-mas-abierto { display: inline; }
+#inicio-info .ps-mas > p,
+#inicio-sin-internet .ps-mas > p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);                /* 5.16 sobre --secondary · AA */
+}
+
+/* --- 4. Para que sirve --- */
+#inicio-info { padding: clamp(40px, 7vw, 64px) 0; }
+#inicio-info h2 { text-align: center; }
+/* anywhere y no break-word: solo "anywhere" achica el ancho minimo de la
+   caja, y sin eso una palabra larga revienta la columna al 200% de texto. */
+#inicio-info .info-tarjeta {
+  display: flex;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 24px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--secondary);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+@media (hover: hover) {
+  #inicio-info .info-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.08), 0 14px 34px rgba(26, 26, 26, 0.12);
+  }
+}
+#inicio-info .info-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-suave);
+  color: var(--primary);              /* 5.87 sobre --primary-suave · AA */
+}
+#inicio-info .info-titulo {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--titulo);               /* 10.73 sobre --secondary · AAA */
+}
+#inicio-info .info-corto { margin: 0; font-size: 1rem; }
 
 /* --- 5. Practica sin internet --- */
 #inicio-sin-internet {
@@ -174,6 +286,9 @@
   background: var(--secondary);
   border-top: 1px solid var(--border);
 }
+/* El encabezado va centrado igual que el de las otras secciones: alineado
+   a la izquierda dejaba media pantalla vacia a la derecha en escritorio. */
+#inicio-sin-internet .sin-net-encabezado { text-align: center; }
 #inicio-sin-internet .sin-net-icono {
   display: inline-flex;
   align-items: center;
@@ -185,38 +300,83 @@
   background: var(--primary-suave);
   color: var(--primary);
 }
-#inicio-sin-internet .sin-net-bajada { max-width: 62ch; }
+#inicio-sin-internet .sin-net-bajada {
+  margin: 0 auto;
+  max-width: 56ch;
+  font-size: 1.05rem;
+}
+#inicio-sin-internet .sin-net-rotulo {
+  margin: 32px 0 0;
+  font-size: 1rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent-fuerte);        /* 4.62 sobre --secondary · AA */
+}
 
-#inicio-sin-internet .sin-net-tarjetas {
+/* Tres tarjetas: 1 · 2 (la tercera ocupa las dos) · 3 columnas. */
+#inicio-sin-internet .sin-net-rejilla {
   display: grid;
   gap: 18px;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
   list-style: none;
-  margin: 28px 0;
+  margin: 14px 0 0;
   padding: 0;
 }
-@media (min-width: 700px) {
-  #inicio-sin-internet .sin-net-tarjetas { grid-template-columns: repeat(3, 1fr); }
+@media (min-width: 560px) {
+  #inicio-sin-internet .sin-net-rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #inicio-sin-internet .sin-net-rejilla > li:nth-child(3) { grid-column: span 2; }
 }
+@media (min-width: 900px) {
+  #inicio-sin-internet .sin-net-rejilla { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #inicio-sin-internet .sin-net-rejilla > li:nth-child(3) { grid-column: auto; }
+}
+
 #inicio-sin-internet .sin-net-tarjeta {
   display: flex;
+  min-width: 0;
+  overflow-wrap: anywhere;
   flex-direction: column;
   gap: 10px;
+  height: 100%;
   padding: 24px 22px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+@media (hover: hover) {
+  #inicio-sin-internet .sin-net-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.08), 0 14px 34px rgba(26, 26, 26, 0.12);
+  }
+}
+/* En "como se usa" el numero manda y el icono se va al otro extremo: asi
+   la fila de arriba de la tarjeta queda llena de lado a lado. */
+#inicio-sin-internet .sin-net-paso-cima {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+#inicio-sin-internet .sin-net-paso-num {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary);              /* 6.70 sobre blanco · AA */
 }
 #inicio-sin-internet .sin-net-num {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
+  align-self: flex-start;
+  min-width: 52px;
   height: 52px;
+  padding: 0 14px;
   border-radius: var(--radius-sm);
   background: var(--primary);
-  color: var(--primary-foreground);
+  color: var(--primary-foreground);   /* 6.70 · AA */
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -228,47 +388,62 @@
   height: 52px;
   border-radius: var(--radius-sm);
   background: var(--primary-suave);
-  color: var(--primary);
+  color: var(--primary);              /* 5.87 sobre --primary-suave · AA */
 }
 #inicio-sin-internet .sin-net-titulo {
+  margin: 0;
   font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--titulo);
+  color: var(--titulo);               /* 11.65 sobre blanco · AAA */
 }
-#inicio-sin-internet .sin-net-tarjeta p { margin: 0; }
+#inicio-sin-internet .sin-net-corto { margin: 0; }
+#inicio-sin-internet .ps-mas > summary { color: var(--enlace); } /* 6.57 sobre blanco · AA */
+#inicio-sin-internet .ps-mas > p { color: var(--muted); }        /* 5.60 sobre blanco · AA */
 
-#inicio-sin-internet .sin-net-pasos {
-  max-width: 68ch;
-  margin: 0 0 26px;
-  padding: 22px 24px;
-  border: 1px solid var(--border);
-  border-left: 5px solid var(--accent-fuerte);
-  border-radius: var(--radius);
-  background: var(--background);
-}
-#inicio-sin-internet .sin-net-pasos h3 { font-size: 1.15rem; margin-bottom: 10px; }
-#inicio-sin-internet .sin-net-pasos ol { margin: 0; padding-left: 1.2em; }
-#inicio-sin-internet .sin-net-pasos li { margin-bottom: 8px; }
-#inicio-sin-internet .sin-net-pasos code {
-  padding: 1px 6px;
-  border-radius: 4px;
-  background: var(--secondary);
-  font-size: 0.95em;
-}
-
+/* Los tres botones reparten el ancho completo: sin aire muerto al lado. */
 #inicio-sin-internet .sin-net-acciones {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  margin-top: 30px;
 }
-#inicio-sin-internet .sin-net-boton { font-size: 1.05rem; padding: 14px 26px; }
+#inicio-sin-internet .sin-net-acciones .ps-boton {
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+#inicio-sin-internet .sin-net-boton { font-size: 1.05rem; }
 #inicio-sin-internet .sin-net-enlace {
   background: var(--background);
-  color: var(--enlace);
+  color: var(--enlace);               /* 6.57 sobre blanco · AA */
   border: 2px solid var(--enlace);
 }
-#inicio-sin-internet .sin-net-enlace:hover { background: var(--primary-suave); filter: none; }
+#inicio-sin-internet .sin-net-compartir {
+  background: var(--background);
+  color: var(--accent-fuerte);        /* 5.02 sobre blanco · AA */
+  border: 2px solid var(--accent-fuerte);
+}
+@media (hover: hover) {
+  #inicio-sin-internet .sin-net-enlace:hover { background: var(--primary-suave); filter: none; }
+  #inicio-sin-internet .sin-net-compartir:hover { background: #fff6ec; filter: none; }
+}
 
 @media (forced-colors: active) {
-  #inicio-sin-internet .sin-net-enlace { border: 2px solid ButtonText; }
+  #inicio-pasos .paso,
+  #inicio-info .info-tarjeta,
+  #inicio-materias .materia-tarjeta,
+  #inicio-sin-internet .sin-net-tarjeta { border: 2px solid ButtonText; }
+  #inicio-sin-internet .sin-net-enlace,
+  #inicio-sin-internet .sin-net-compartir { border: 2px solid ButtonText; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #inicio-pasos .paso,
+  #inicio-materias .materia-tarjeta,
+  #inicio-info .info-tarjeta,
+  #inicio-sin-internet .sin-net-tarjeta,
+  #inicio-info .ps-mas-flecha,
+  #inicio-sin-internet .ps-mas-flecha { transition: none; }
+  #inicio-pasos .paso:hover,
+  #inicio-materias .materia-tarjeta:hover,
+  #inicio-info .info-tarjeta:hover,
+  #inicio-sin-internet .sin-net-tarjeta:hover { transform: none; }
 }

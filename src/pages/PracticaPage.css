@@ -10,6 +10,14 @@
    - --accent-fuerte #b45309 sobre --secondary ..... 4.62 · AA
    - --success #1e7a46 sobre --secondary ........... 4.93 · AA
    - --muted #5c6b66 sobre blanco .................. 5.60 · AA
+
+   Tarjetas de tema (pantalla 1), tonos #fdede3 / #f1eafb / #e8f6ee /
+   #e8f1fb, los mismos suaves de las materias:
+   - --titulo #1b3a5b sobre el tono mas oscuro .... 9.93 · AAA
+   - --muted  #5c6b66 sobre el tono mas oscuro .... 4.77 · AA
+   - blanco sobre el acento de materia ............ 5.46 · AA (el mas bajo)
+   - acento de materia sobre su propio suave ...... 4.78 · AA (el mas bajo)
+   - --border-fuerte #7c8b98 sobre blanco ......... 3.50 · borde visible
    ============================================================ */
 
 /* ============================================================
@@ -22,11 +30,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-}
-#practica-seleccion .sel-bajada {
-  max-width: 60ch;
-  margin: 0 0 28px;
-  color: var(--muted);
 }
 
 /* --- Grupos de opciones --- */
@@ -48,9 +51,57 @@
   color: var(--muted);
 }
 
+/* --- Instrucciones ---
+   Tres tarjetas y no un parrafo: lo que va en parrafo, a esta edad, se
+   salta. Una idea por tarjeta y una sola frase debajo del titulo. */
+#practica-seleccion .sel-instrucciones {
+  display: grid;
+  gap: 12px;
+  /* El minimo va en rem y no en px: con el texto al 200% la tarjeta
+     necesita el doble de ancho, y asi la rejilla se apila sola en vez de
+     dejar tres columnas apretadas. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+}
+#practica-seleccion .sel-instruccion {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+}
+#practica-seleccion .sel-instruccion-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--suave, var(--primary-suave));
+  color: var(--acento, var(--primary));   /* 4.78 el mas bajo sobre su suave */
+}
+#practica-seleccion .sel-instruccion-texto {
+  min-width: 0;
+  font-size: 0.97rem;
+  color: var(--foreground);
+}
+#practica-seleccion .sel-instruccion-texto strong {
+  display: block;
+  color: var(--titulo);
+  font-weight: 800;
+}
+
 /* El radio de verdad se esconde pero sigue recibiendo el foco y las
    flechas del teclado. La etiqueta es la que se ve y la que se toca. */
-#practica-seleccion .sel-chip input,
+#practica-seleccion .sel-todos input,
+#practica-seleccion .sel-tema input,
 #practica-seleccion .sel-cantidad input {
   position: absolute;
   width: 1px;
@@ -60,95 +111,234 @@
   pointer-events: none;
 }
 
-/* --- Chips de tema --- */
-#practica-seleccion .sel-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-#practica-seleccion .sel-chip {
+/* --- Tema: la banda y el enrejado ---
+   La banda de "Todos los temas" va aparte y las demas caen en una rejilla
+   de columnas iguales. Antes "todos" ocupaba toda la fila DENTRO de la
+   rejilla y dejaba una tarjeta estirada al lado de otras chiquitas: de ahi
+   venia lo descuadrado. Ahora cada tarjeta mide lo mismo de ancho y de
+   alto, le entre un nombre de una palabra o de cuatro.
+
+   Contrastes calculados con la formula WCAG 2.1:
+   - --titulo  #1b3a5b sobre los cuatro tonos ... 9.93 a 10.45 · AAA
+   - --muted   #5c6b66 sobre los cuatro tonos ... 4.77 a  5.03 · AA
+   - blanco sobre el acento de materia ..........  5.46 · AA (Espanol, el mas bajo)
+   - --border-fuerte #7c8b98 sobre blanco .......  3.50 · borde de control (3:1)
+*/
+#practica-seleccion .sel-todos,
+#practica-seleccion .sel-tema {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: var(--toque-min);
-  padding: 10px 18px;
-  border: 2px solid var(--border-fuerte);
-  border-radius: 999px;
-  background: var(--background);
-  color: var(--foreground);
-  font-weight: 700;
+  border: 2px solid var(--border-fuerte);   /* 3.50 contra el blanco de la pagina */
+  border-radius: var(--radius);
+  background: var(--tono, var(--secondary));
+  color: var(--titulo);
   cursor: pointer;
 }
-/* Elegido = color + borde grueso + palomita. Nunca solo el color. */
-#practica-seleccion .sel-chip .sel-marca {
-  display: none;
-  font-weight: 900;
+
+/* La banda de "todos": una fila ancha, distinta de las tarjetas, para que
+   se lea de primera y no se confunda con un tema mas. */
+#practica-seleccion .sel-todos {
+  --tono: var(--suave, var(--primary-suave));
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: var(--toque-min);
+  margin-bottom: 14px;
+  padding: 14px 16px;
 }
-#practica-seleccion .sel-chip:has(input:checked) {
-  border-color: var(--acento, var(--primary));
-  background: var(--suave, var(--primary-suave));
-  color: var(--acento, var(--primary));
+#practica-seleccion .sel-todos-cuerpo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
-#practica-seleccion .sel-chip:has(input:checked) .sel-marca { display: inline; }
-#practica-seleccion .sel-chip:has(input:focus-visible) {
-  outline: 3px solid var(--primary);
-  outline-offset: 2px;
+#practica-seleccion .sel-todos-nombre {
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.25;
 }
-@media (hover: hover) {
-  #practica-seleccion .sel-chip:hover { background: var(--secondary); }
-  #practica-seleccion .sel-chip:has(input:checked):hover { background: var(--suave, var(--primary-suave)); }
+#practica-seleccion .sel-todos-cuenta {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);          /* 4.77 el mas bajo sobre los tonos */
+  overflow-wrap: anywhere;
 }
 
-/* --- Botones de cantidad --- */
-#practica-seleccion .sel-rejilla {
+/* El enrejado: columnas iguales que se reparten todo el ancho del
+   contenedor (1120px), sin aire muerto a los lados ni en 1280 ni en 1440.
+   auto-fill y no auto-fit a proposito: con auto-fit, cuando la ultima fila
+   queda con una sola tarjeta, esa tarjeta se estira sola y se ve rara.
+   El minimo va en rem para que la rejilla se apile sola con el texto al
+   200%, y el min(100%, …) evita que una columna se salga en pantalla
+   angosta. */
+#practica-seleccion .sel-temas {
   display: grid;
   gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13.5rem), 1fr));
+  /* Todas las filas del alto de la mas alta: sin escalones aunque un
+     nombre ocupe tres lineas y el de al lado una sola. */
+  grid-auto-rows: 1fr;
+}
+#practica-seleccion .sel-tema {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  /* en rem: con el texto al 200% la tarjeta crece con la letra */
+  min-height: 6.5rem;
+  /* el espacio de la derecha es para la marca, que va en la esquina */
+  padding: 14px 52px 14px 16px;
+}
+#practica-seleccion .sel-tema-nombre {
+  font-size: 1.02rem;
+  font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;   /* "Comportamientos de los personajes" no revienta la tarjeta */
+}
+/* El conteo se pega al piso de la tarjeta: todas cierran parejo aunque el
+   nombre de arriba mida distinto. */
+#practica-seleccion .sel-tema-cuenta {
+  margin-top: auto;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--muted);       /* 4.77 el mas bajo sobre los tonos */
+  overflow-wrap: anywhere;   /* al 200% "preguntas" sola ya no cabe en la tarjeta */
+}
+
+/* En celular la lista va en una sola columna: si cada tarjeta guarda los
+   6.5rem de alto, ocho temas se vuelven una bajada eterna. */
+@media (max-width: 479px) {
+  #practica-seleccion .sel-tema {
+    min-height: 4.6rem;
+    gap: 4px;
+  }
+}
+
+#practica-seleccion .sel-tema[data-tono="0"] { --tono: #fdede3; }  /* durazno */
+#practica-seleccion .sel-tema[data-tono="1"] { --tono: #f1eafb; }  /* lila    */
+#practica-seleccion .sel-tema[data-tono="2"] { --tono: #e8f6ee; }  /* menta   */
+#practica-seleccion .sel-tema[data-tono="3"] { --tono: #e8f1fb; }  /* hielo   */
+
+/* La marca: un aro vacio que siempre esta ahi y se llena al elegir. Guarda
+   su lugar desde el principio para que la tarjeta no brinque al tocarla. */
+#practica-seleccion .sel-marca {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--border-fuerte);
+  border-radius: 50%;
+  background: var(--background);
+}
+#practica-seleccion .sel-tema .sel-marca {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+#practica-seleccion .sel-marca svg { visibility: hidden; }
+
+/* Elegido = fondo lleno del color de la materia + borde + palomita.
+   Nunca solo el color: la palomita y el borde grueso lo dicen tambien. */
+#practica-seleccion .sel-todos:has(input:checked),
+#practica-seleccion .sel-tema:has(input:checked) {
+  background: var(--acento, var(--primary));
+  border-color: var(--acento, var(--primary));
+  color: var(--primary-foreground);        /* 5.46 el mas bajo sobre los acentos */
+  box-shadow: var(--sombra);
+}
+#practica-seleccion .sel-todos:has(input:checked) .sel-todos-cuenta,
+#practica-seleccion .sel-tema:has(input:checked) .sel-tema-cuenta {
+  color: var(--primary-foreground);
+}
+#practica-seleccion .sel-todos:has(input:checked) .sel-marca,
+#practica-seleccion .sel-tema:has(input:checked) .sel-marca {
+  border-color: var(--primary-foreground);
+  background: var(--primary-foreground);
+  color: var(--acento, var(--primary));
+}
+#practica-seleccion .sel-todos:has(input:checked) .sel-marca svg,
+#practica-seleccion .sel-tema:has(input:checked) .sel-marca svg { visibility: visible; }
+#practica-seleccion .sel-todos:has(input:focus-visible),
+#practica-seleccion .sel-tema:has(input:focus-visible) {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+@media (hover: hover) {
+  #practica-seleccion .sel-todos,
+  #practica-seleccion .sel-tema {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  #practica-seleccion .sel-todos:hover,
+  #practica-seleccion .sel-tema:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra);
+  }
+}
+
+/* --- Cantidad ---
+   Panel compacto: ya decidio lo dificil (el tema), esto es un ajuste. */
+#practica-seleccion .sel-panel {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--secondary);
+}
+#practica-seleccion .sel-cantidades {
+  display: grid;
+  gap: 10px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Filas iguales: si una pastilla parte el texto en dos lineas y otra no,
+     el panel queda con escalones. */
+  grid-auto-rows: 1fr;
 }
 @media (min-width: 620px) {
-  #practica-seleccion .sel-rejilla { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #practica-seleccion .sel-cantidades { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 #practica-seleccion .sel-cantidad {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2px;
-  min-height: 96px;
-  padding: 16px 10px;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  min-width: 0;
+  min-height: var(--toque-min);
+  padding: 10px 14px;
   border: 2px solid var(--border-fuerte);
-  border-radius: var(--radius);
+  border-radius: 999px;
   background: var(--background);
   cursor: pointer;
   text-align: center;
 }
-#practica-seleccion .sel-cantidad .sel-marca {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  display: none;
-  font-weight: 900;
+/* La palomita guarda su lugar desde el principio: si apareciera de golpe,
+   el texto de la pastilla se reacomodaria al tocarla. */
+#practica-seleccion .sel-cantidad-marca {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  visibility: hidden;
   color: var(--acento, var(--primary));
 }
 #practica-seleccion .sel-num {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 900;
   line-height: 1.1;
   color: var(--titulo);
 }
 #practica-seleccion .sel-tiempo {
-  font-size: 0.92rem;
-  color: var(--muted);
+  font-size: 0.9rem;
+  color: var(--muted);        /* 5.60 sobre blanco */
 }
 #practica-seleccion .sel-cantidad:has(input:checked) {
   border-color: var(--acento, var(--primary));
   border-width: 3px;
   background: var(--suave, var(--primary-suave));
 }
-#practica-seleccion .sel-cantidad:has(input:checked) .sel-marca { display: block; }
-#practica-seleccion .sel-cantidad:has(input:checked) .sel-num { color: var(--acento, var(--primary)); }
+#practica-seleccion .sel-cantidad:has(input:checked) .sel-cantidad-marca { visibility: visible; }
+#practica-seleccion .sel-cantidad:has(input:checked) .sel-num {
+  color: var(--acento, var(--primary));   /* 4.78 el mas bajo sobre su suave */
+}
 #practica-seleccion .sel-cantidad:has(input:focus-visible) {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
@@ -163,20 +353,18 @@
   margin: 32px 0 8px;
   text-align: center;
 }
+/* El relleno y la letra ceden con el ancho: con el texto al 200% un boton
+   de 44px de relleno fijo se sale de la pantalla de un celular. */
 #practica-seleccion .sel-empezar {
+  max-width: 100%;
   min-height: 60px;
-  padding: 16px 44px;
-  font-size: 1.25rem;
+  padding: 16px clamp(18px, 4vw, 44px);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.25rem);
   font-weight: 900;
 }
 #practica-seleccion .sel-empezar[disabled] {
   opacity: 0.7;
   cursor: progress;
-}
-#practica-seleccion .sel-nota {
-  margin: 14px 0 0;
-  font-size: 0.95rem;
-  color: var(--muted);
 }
 
 /* --- Avisos --- */
@@ -261,6 +449,7 @@
 }
 #practica-examen .examen-materia {
   margin: 0;
+  /* es un h1 de verdad, pero en la barra tiene que verse como una etiqueta */
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--titulo);
@@ -307,6 +496,96 @@
   padding-top: 28px;
   padding-bottom: 8px;
 }
+
+/* --- Barra de apoyo ---
+   Escuchar la pregunta, agrandar la letra y subir el contraste. Va pegada
+   arriba del recuadro de la pregunta y no en la barra del reloj: ahi
+   quedaria apretada y en celular se comeria dos lineas de pantalla.
+
+   Contrastes calculados con la formula WCAG 2.1:
+   - --titulo #1b3a5b sobre blanco ............. 11.65 · AAA
+   - --muted  #5c6b66 sobre --secondary ........  5.16 · AA
+   - blanco sobre el acento de materia .........  5.46 · AA (Espanol, el mas bajo)
+   - --border-fuerte #7c8b98 sobre blanco ......  3.50 · borde de control (3:1)
+*/
+#practica-examen .examen-apoyo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--secondary);
+}
+#practica-examen .apoyo-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+#practica-examen .apoyo-rotulo {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);        /* 5.16 sobre --secondary · AA */
+}
+#practica-examen .apoyo-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* dedos de nino: el alto y el ancho minimos son de toque, no de adorno */
+  min-height: var(--toque-min);
+  min-width: var(--toque-min);
+  padding: 10px 14px;
+  border: 2px solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--titulo);       /* 11.65 sobre blanco · AAA */
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+#practica-examen .apoyo-boton svg { flex: 0 0 auto; }
+/* Encendido = fondo del color de la materia + borde + la palabra que ya
+   trae el boton. El color nunca va solo. */
+#practica-examen .apoyo-boton[aria-pressed="true"] {
+  background: var(--acento, var(--primary));
+  border-color: var(--acento, var(--primary));
+  color: var(--primary-foreground);   /* 5.46 el mas bajo sobre los acentos */
+}
+/* El foco se separa 3px para que el aro azul caiga sobre el fondo claro y
+   no encima del boton ya pintado del color de la materia. */
+#practica-examen .apoyo-boton:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+@media (hover: hover) {
+  #practica-examen .apoyo-boton { transition: transform 0.15s ease; }
+  #practica-examen .apoyo-boton:hover { transform: translateY(-2px); }
+}
+/* En celular la barra se comia media pantalla antes de la pregunta. Se
+   aprieta el relleno y se quita el rotulo "Texto", que es adorno: el grupo
+   ya se llama "Tamano del texto" para el lector de pantalla. El alto de
+   toque se queda en 48px, eso no se negocia. */
+@media (max-width: 479px) {
+  #practica-examen .examen-apoyo { gap: 8px; padding: 8px; }
+  #practica-examen .apoyo-rotulo { display: none; }
+  /* los botones se reparten el ancho de su fila: sin esto la barra queda
+     con el borde derecho dentado */
+  #practica-examen .apoyo-boton {
+    flex: 1 1 auto;
+    padding: 8px 10px;
+    font-size: 0.88rem;
+  }
+  #practica-examen .apoyo-grupo { flex: 1 1 100%; }
+}
+
 #practica-examen .examen-cuerpo:focus { outline: none; }
 #practica-examen .examen-cuerpo:focus-visible {
   outline: 3px solid var(--primary);
@@ -572,15 +851,29 @@
 @media (prefers-reduced-motion: reduce) {
   #practica-seleccion .esq-enunciado,
   #practica-seleccion .esq-opcion { animation: none; opacity: 0.7; }
+  #practica-seleccion .sel-todos,
+  #practica-seleccion .sel-tema { transition: none; }
+  #practica-seleccion .sel-todos:hover,
+  #practica-seleccion .sel-tema:hover { transform: none; }
   #practica-examen .examen-barrita span { transition: none; }
+  #practica-examen .apoyo-boton { transition: none; }
+  #practica-examen .apoyo-boton:hover { transform: none; }
 }
 
 @media (forced-colors: active) {
-  #practica-seleccion .sel-chip,
+  #practica-seleccion .sel-todos,
+  #practica-seleccion .sel-tema,
   #practica-seleccion .sel-cantidad { border: 2px solid ButtonText; }
-  #practica-seleccion .sel-chip:has(input:checked),
+  #practica-seleccion .sel-todos:has(input:checked),
+  #practica-seleccion .sel-tema:has(input:checked),
   #practica-seleccion .sel-cantidad:has(input:checked) { border: 3px solid Highlight; }
+  /* En alto contraste el relleno se pierde: la palomita queda de testigo. */
+  #practica-seleccion .sel-marca { border: 2px solid ButtonText; }
+  #practica-seleccion .sel-instruccion { border: 1px solid ButtonText; }
   #practica-examen .examen-reloj { border: 2px solid ButtonText; }
+  #practica-examen .examen-apoyo { border: 1px solid ButtonText; }
+  #practica-examen .apoyo-boton { border: 2px solid ButtonText; }
+  #practica-examen .apoyo-boton[aria-pressed="true"] { border: 3px solid Highlight; }
   #practica-examen .examen-barrita span { background: Highlight; }
   #practica-resultados .res-tarjeta,
   #practica-resultados .res-tema,
@@ -634,7 +927,9 @@
   font-size: 0.9rem;
   font-weight: 800;
 }
-#practica-hero h1 { margin: 0 0 8px; }
+/* "Matemáticas" al 200% no cabe de una sola pieza en un celular y el
+   overflow:hidden de la seccion se la comia. Que parta antes de perderse. */
+#practica-hero h1 { margin: 0 0 8px; overflow-wrap: anywhere; }
 #practica-hero .hero-gancho {
   margin: 0;
   max-width: 34ch;
