@@ -17,7 +17,7 @@ export const NOMBRE_SITIO = "Práctica Estandarizada Primaria";
 // Las imagenes del sitio viven en el CDN de Supabase, igual que las de los
 // items. Asi el repo no carga con binarios y cada despliegue pesa menos.
 const CDN = "https://mvgivfexfeukdznzjsxx.supabase.co/storage/v1/object/public/puente-repo/sitio/";
-export const IMG_HERO = CDN + "hero-fondo.webp";
+export const IMG_HERO = CDN + "hero-inicio.webp";
 export const IMG_LOGO_EVI = CDN + "logo-evi.webp";
 export const IMG_LOGO_CONCURSO = CDN + "logo-concurso-docente.png";
 export const EMPRESA = "Educación Virtual Integral EVI S.A.";
@@ -64,10 +64,18 @@ export const CANTIDADES = [10, 20, 30, 60] as const;
 // Los slugs calzan exacto con la columna slug de la tabla materias
 // y con la ruta de la app. Se usa guion, no guion bajo.
 export const MATERIAS = [
-  { slug: "espanol", nombre: "Español", corto: "Español", color: "var(--espanol)", suave: "var(--espanol-suave)", emoji: "📚" },
-  { slug: "estudios-sociales", nombre: "Estudios Sociales", corto: "Sociales", color: "var(--sociales)", suave: "var(--sociales-suave)", emoji: "🌎" },
-  { slug: "ciencias", nombre: "Ciencias", corto: "Ciencias", color: "var(--ciencias)", suave: "var(--ciencias-suave)", emoji: "🔬" },
-  { slug: "matematicas", nombre: "Matemáticas", corto: "Matemáticas", color: "var(--mate)", suave: "var(--mate-suave)", emoji: "🔢" },
+  { slug: "espanol", nombre: "Español", corto: "Español", color: "var(--espanol)", suave: "var(--espanol-suave)", emoji: "📚",
+    hero: CDN + "hero-espanol.webp",
+    gancho: "Leé, entendé y contestá con calma." },
+  { slug: "estudios-sociales", nombre: "Estudios Sociales", corto: "Sociales", color: "var(--sociales)", suave: "var(--sociales-suave)", emoji: "🌎",
+    hero: CDN + "hero-sociales.webp",
+    gancho: "Costa Rica, su gente y su historia." },
+  { slug: "ciencias", nombre: "Ciencias", corto: "Ciencias", color: "var(--ciencias)", suave: "var(--ciencias-suave)", emoji: "🔬",
+    hero: CDN + "hero-ciencias.webp",
+    gancho: "Del cuerpo humano al sistema solar." },
+  { slug: "matematicas", nombre: "Matemáticas", corto: "Matemáticas", color: "var(--mate)", suave: "var(--mate-suave)", emoji: "🔢",
+    hero: CDN + "hero-matematicas.webp",
+    gancho: "Números, figuras y datos, paso a paso." },
 ] as const;
 
 export type SlugMateria = (typeof MATERIAS)[number]["slug"];

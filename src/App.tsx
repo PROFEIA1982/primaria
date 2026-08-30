@@ -1,5 +1,5 @@
-import { Suspense, lazy } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Suspense, lazy, useEffect } from "react";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import InicioPage from "./pages/InicioPage";
@@ -10,8 +10,18 @@ import { Cargando } from "./components/Estados";
 // formulas ni la practica completa solo para ver la portada.
 const PracticaPage = lazy(() => import("./pages/PracticaPage"));
 const ContactoPage = lazy(() => import("./pages/ContactoPage"));
-const AnunciosPage = lazy(() => import("./pages/AnunciosPage"));
 const NoEncontradaPage = lazy(() => import("./pages/NoEncontradaPage"));
+
+// La ruta vieja /anuncios manda a contacto y le avisa a esa pagina que baje
+// hasta el aviso. No se hace el scroll aca: en cuanto se navega, este
+// componente se desmonta y cualquier temporizador suyo muere con el.
+function LlevarAlAviso() {
+  const navegar = useNavigate();
+  useEffect(() => {
+    navegar("/contacto", { replace: true, state: { irA: "docentes-contacto" } });
+  }, [navegar]);
+  return null;
+}
 
 export default function App() {
   return (
@@ -27,7 +37,9 @@ export default function App() {
             <Route path="/ciencias" element={<PracticaPage materia="ciencias" />} />
             <Route path="/matematicas" element={<PracticaPage materia="matematicas" />} />
             <Route path="/contacto" element={<ContactoPage />} />
-            <Route path="/anuncios" element={<AnunciosPage />} />
+            {/* El aviso para docentes ya vive dentro de inicio y contacto.
+                La ruta vieja se conserva para no romper enlaces ya repartidos. */}
+            <Route path="/anuncios" element={<LlevarAlAviso />} />
             <Route path="*" element={<NoEncontradaPage />} />
           </Routes>
         </Suspense>
