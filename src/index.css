@@ -1,48 +1,126 @@
 /* ============================================================
    Tokens y base de la app Primaria.
-   Los contrastes anotados NO son estimados: se calcularon con la
-   formula WCAG 2.1. Si alguien cambia un color, hay que recalcular.
-   Sin modo oscuro por ahora, por decision del cliente.
+
+   CUATRO ESTADOS, no dos: claro normal, claro con mejor vision, oscuro
+   normal y oscuro con mejor vision. El tema vive en data-tema del <html>
+   y la vision en data-vision; index.html los deja puestos antes de que
+   React pinte para que no haya fogonazo blanco.
+
+   Los contrastes anotados NO son estimados: se calcularon con la formula
+   WCAG 2.1 (contraste_wcag.py). Si alguien cambia un color, hay que
+   recalcular los CUATRO estados, no uno.
+
+   CLARO NORMAL (minimo AA 4.5)          OSCURO NORMAL (minimo AA 4.5)
+     texto sobre fondo ......... 17.40     texto sobre fondo ......... 16.44
+     texto sobre tarjeta ....... 16.03     texto sobre tarjeta ....... 14.21
+     gris apagado sobre fondo ... 5.60     gris apagado sobre fondo ... 9.04
+     gris apagado en tarjeta .... 5.16     gris apagado en tarjeta .... 7.82
+     titulo sobre fondo ........ 11.65     titulo sobre fondo ........ 10.30
+     enlace sobre fondo ......... 6.57     enlace sobre fondo ......... 9.33
+     texto del boton azul ....... 6.70     texto del boton azul ....... 7.69
+     aro de foco sobre fondo .... 6.70     aro de foco sobre fondo .... 7.44
+     verde sobre verde suave .... 4.80     verde sobre verde suave .... 8.53
+     rojo sobre rojo suave ...... 5.96     rojo sobre rojo suave ...... 7.84
+     borde fuerte sobre fondo ... 3.50     borde fuerte sobre fondo ... 6.09
+
+   CLARO MEJOR VISION (meta AAA 7)       OSCURO MEJOR VISION (meta AAA 7)
+     texto sobre fondo ......... 21.00     texto sobre fondo ......... 19.97
+     texto sobre tarjeta ....... 18.81     texto sobre tarjeta ....... 17.36
+     gris apagado sobre fondo .. 21.00     gris apagado sobre fondo .. 19.97
+     titulo sobre fondo ........ 16.50     titulo sobre fondo ........ 13.70
+     enlace sobre fondo ......... 8.99     enlace sobre fondo ........ 12.19
+     texto del boton azul ....... 9.86     texto del boton azul ....... 9.92
+     aro de foco sobre fondo .... 9.86     aro de foco sobre fondo ... 10.44
+     verde sobre verde suave .... 7.24     verde sobre verde suave ... 10.58
+     rojo sobre rojo suave ...... 8.42     rojo sobre rojo suave ...... 9.77
+     borde fuerte sobre fondo .. 12.30     borde fuerte sobre fondo ... 7.97
+
+   --border es separacion decorativa, no informacion: no le aplica el
+   minimo de 3:1 y por eso se queda bajo (1.27 en claro, 1.65 en oscuro).
+   En mejor vision sube a 9.08 y 3.84 para que la caja se vea de verdad.
    ============================================================ */
 
+/* ============================================================
+   1 · CLARO NORMAL
+   ============================================================ */
 :root {
+  color-scheme: light;
+
   /* --- Base --- */
   --background: #ffffff;
-  --foreground: #1a1a1a;          /* 17.40 sobre blanco · AAA */
+  --foreground: #1a1a1a;          /* 17.40 sobre el fondo · AAA */
   --secondary: #f2f6fa;           /* superficie de tarjetas */
-  --muted: #5c6b66;               /*  5.60 sobre blanco · AA  */
-  --titulo: #1b3a5b;              /* 11.65 sobre blanco · AAA */
-  --enlace: #0b5fa5;              /*  6.57 sobre blanco · AA  */
+  --muted: #5c6b66;               /*  5.60 sobre el fondo · AA  */
+  --titulo: #1b3a5b;              /* 11.65 sobre el fondo · AAA */
+  --enlace: #0b5fa5;              /*  6.57 sobre el fondo · AA  */
 
   /* --- Accion --- */
-  --primary: #1d4ed8;             /* blanco encima: 6.70 · AA */
+  --primary: #1d4ed8;             /* su texto encima: 6.70 · AA */
   --primary-foreground: #ffffff;
   --primary-suave: #e8f1fb;
 
   /* --- Acento (avisos, tips, destacados) --- */
   --accent: #ffd166;              /* tinta encima: 12.07 · AAA */
   --accent-foreground: #1a1a1a;
-  --accent-fuerte: #b45309;       /* blanco encima: 5.02 · AA  */
+  --accent-fuerte: #b45309;       /* sobre el fondo: 5.02 · AA  */
 
   /* --- Respuesta --- */
-  --success: #1e7a46;             /* blanco encima: 5.35 · AA  */
-  --success-suave: #e8f6ee;       /* verde sobre el: 4.80 · AA */
-  --error: #b3261e;               /* blanco encima: 6.54 · AA  */
-  --error-suave: #fdf2f1;         /* rojo sobre el:  5.96 · AA */
+  --success: #1e7a46;             /* sobre su suave: 4.80 · AA  */
+  --success-suave: #e8f6ee;
+  --error: #b3261e;               /* sobre su suave: 5.96 · AA  */
+  --error-suave: #fdf2f1;
 
   /* --- Bordes --- */
   --border: #dde5ec;              /* solo separacion decorativa */
-  --border-fuerte: #7c8b98;       /* 3.50 sobre blanco, sirve para controles */
+  --border-fuerte: #7c8b98;       /* 3.50 sobre el fondo, sirve para controles */
+  /* El grosor tambien es token: en mejor vision sube y con eso las cajas
+     se marcan sin tener que tocar cada hoja de estilo. */
+  --borde-ancho: 1px;
+  --borde-ancho-fuerte: 2px;
 
   /* --- Materias --- */
-  --espanol: #b4470f;             /* blanco encima: 5.46 · AA  */
+  --espanol: #b4470f;             /* su texto encima: 5.46 · AA  */
   --espanol-suave: #fdede3;
-  --sociales: #6d28d9;            /* blanco encima: 7.10 · AAA */
+  --sociales: #6d28d9;            /* su texto encima: 7.10 · AAA */
   --sociales-suave: #f1eafb;
-  --ciencias: #0f766e;            /* blanco encima: 5.47 · AA  */
+  --ciencias: #0f766e;            /* su texto encima: 5.47 · AA  */
   --ciencias-suave: #e8f6ee;
-  --mate: #1d4ed8;                /* blanco encima: 6.70 · AA  */
+  --mate: #1d4ed8;                /* su texto encima: 6.70 · AA  */
   --mate-suave: #e8f1fb;
+
+  /* Los cuatro tonos de las tarjetas de tema. Son los mismos suaves de
+     arriba, pero con nombre propio: ahi el tono es fondo de texto y no
+     el color de una materia. */
+  --tono-0: #fdede3;              /* durazno */
+  --tono-1: #f1eafb;              /* lila    */
+  --tono-2: #e8f6ee;              /* menta   */
+  --tono-3: #e8f1fb;              /* hielo   */
+
+  /* --- Pie del sitio --- */
+  --pie-fondo: #0f2740;
+  --pie-legal: #0a1c2e;
+  --pie-texto: #e8eef6;           /* 15.17 sobre el fondo del pie · AAA */
+  --pie-tenue: #c3d0de;           /*  9.68 sobre el fondo del pie · AAA */
+  --pie-enlace: #ffffff;          /* 15.17 · AAA */
+  --pie-realce: #ffd166;          /* 10.52 · AAA */
+
+  /* --- Banda azul de "para maestros y familias" --- */
+  --banda-fondo: #1b3a5b;
+  --banda-texto: #ffffff;         /* 11.65 sobre la banda · AAA */
+  --banda-bajada: #dbe7f5;        /*  9.30 sobre la banda · AAA */
+  --banda-fino: #cfe0f2;          /*  8.65 sobre la banda · AAA */
+
+  /* --- Hero del inicio (el azul plano calza con la ilustracion) --- */
+  --hero-fondo: #0c3f98;
+  --hero-texto: #ffffff;          /* 9.63 sobre el azul · AAA */
+  --hero-tenue: #eef3ff;          /* 8.67 sobre el azul · AAA */
+  /* --- Hero de contacto: azul de fondo del degradado --- */
+  --hero-azul: #1d4ed8;           /* punto mas claro medido: #2f5cdb */
+
+  /* Placa del logo del menu. El archivo del logo trae la letra en negro
+     (#0d0d0d) y el rotulo en gris (#b2b2b2): sobre fondo oscuro se
+     pierde. En claro la placa es transparente y no se nota. */
+  --marca-placa: transparent;
 
   /* --- Medidas --- */
   --radius: 16px;
@@ -50,7 +128,201 @@
   --toque-min: 48px;              /* dedos de nino, no de adulto */
   --ancho-max: 1120px;
   --sombra: 0 1px 2px rgba(26, 26, 26, 0.06), 0 8px 24px rgba(26, 26, 26, 0.08);
+  --sombra-alta: 0 2px 4px rgba(26, 26, 26, 0.08), 0 14px 34px rgba(26, 26, 26, 0.12);
   --fuente: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --peso-cuerpo: 400;
+  --cuerpo-fuente: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+}
+
+/* ============================================================
+   2 · OSCURO para quien no ha tocado el boton
+   El :not() deja pasar la eleccion explicita: si el visitante puso
+   claro a mano, este bloque no le gana.
+   La lista es la MISMA que la del bloque 3. Si cambia una, cambian las
+   dos: no hay preprocesador que las mantenga en linea.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    color-scheme: dark;
+    --background: #0f151c;
+    --foreground: #eef3f8;          /* 16.44 · AAA */
+    --secondary: #1a232e;
+    --muted: #a9b8c5;               /*  9.04 · AAA */
+    --titulo: #9ec6f0;              /* 10.30 · AAA */
+    --enlace: #8fbcf5;              /*  9.33 · AAA */
+    --primary: #6aa6ff;             /* su texto encima: 7.69 · AAA */
+    --primary-foreground: #0a1119;
+    --primary-suave: #18273c;
+    --accent: #ffd166;
+    --accent-foreground: #1a1a1a;
+    --accent-fuerte: #f2ad63;       /* 9.55 sobre el fondo · AAA */
+    --success: #5fd894;             /* 8.53 sobre su suave · AAA */
+    --success-suave: #122a1e;
+    --error: #ff9188;               /* 7.84 sobre su suave · AAA */
+    --error-suave: #2c1613;
+    --border: #2e3d4d;
+    --border-fuerte: #8497a8;       /* 6.09 sobre el fondo · borde de control */
+    --espanol: #f2a074;             --espanol-suave: #301f16;
+    --sociales: #c5a8f5;            --sociales-suave: #241b34;
+    --ciencias: #5cd2c1;            --ciencias-suave: #0f2a29;
+    --mate: #6aa6ff;                --mate-suave: #18273c;
+    --tono-0: #301f16;
+    --tono-1: #241b34;
+    --tono-2: #0f2a29;
+    --tono-3: #18273c;
+    --pie-fondo: #0a121b;
+    --pie-legal: #060c12;
+    --pie-texto: #e8eef6;           /* 16.13 · AAA */
+    --pie-tenue: #b9c8d6;           /* 11.02 · AAA */
+    --pie-enlace: #ffffff;
+    --pie-realce: #ffd166;          /* 13.06 · AAA */
+    --banda-fondo: #132a41;
+    --banda-texto: #ffffff;         /* 14.63 · AAA */
+    --banda-bajada: #cfe0f2;        /* 10.87 · AAA */
+    --banda-fino: #c3d6ea;          /*  9.84 · AAA */
+    --hero-fondo: #0c3f98;          /* el azul de la ilustracion no cambia */
+    --hero-texto: #ffffff;
+    --hero-tenue: #eef3ff;
+    --hero-azul: #123a86;           /* punto mas claro medido: #254a90 */
+    --marca-placa: #eef3f8;         /* el negro del logo encima: 17.41 · AAA */
+    /* Sobre fondo oscuro una sombra negra no se ve: se hace mas densa. */
+    --sombra: 0 1px 2px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.55);
+    --sombra-alta: 0 2px 4px rgba(0, 0, 0, 0.55), 0 16px 36px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* ============================================================
+   3 · OSCURO elegido a mano. Va DESPUES del bloque 2 y con la misma
+   especificidad, asi que gana por orden.
+   ============================================================ */
+:root[data-tema="oscuro"] {
+  color-scheme: dark;
+  --background: #0f151c;
+  --foreground: #eef3f8;          /* 16.44 · AAA */
+  --secondary: #1a232e;
+  --muted: #a9b8c5;               /*  9.04 · AAA */
+  --titulo: #9ec6f0;              /* 10.30 · AAA */
+  --enlace: #8fbcf5;              /*  9.33 · AAA */
+  --primary: #6aa6ff;             /* su texto encima: 7.69 · AAA */
+  --primary-foreground: #0a1119;
+  --primary-suave: #18273c;
+  --accent: #ffd166;
+  --accent-foreground: #1a1a1a;
+  --accent-fuerte: #f2ad63;       /* 9.55 sobre el fondo · AAA */
+  --success: #5fd894;             /* 8.53 sobre su suave · AAA */
+  --success-suave: #122a1e;
+  --error: #ff9188;               /* 7.84 sobre su suave · AAA */
+  --error-suave: #2c1613;
+  --border: #2e3d4d;
+  --border-fuerte: #8497a8;       /* 6.09 sobre el fondo · borde de control */
+  --espanol: #f2a074;             --espanol-suave: #301f16;
+  --sociales: #c5a8f5;            --sociales-suave: #241b34;
+  --ciencias: #5cd2c1;            --ciencias-suave: #0f2a29;
+  --mate: #6aa6ff;                --mate-suave: #18273c;
+  --tono-0: #301f16;
+  --tono-1: #241b34;
+  --tono-2: #0f2a29;
+  --tono-3: #18273c;
+  --pie-fondo: #0a121b;
+  --pie-legal: #060c12;
+  --pie-texto: #e8eef6;           /* 16.13 · AAA */
+  --pie-tenue: #b9c8d6;           /* 11.02 · AAA */
+  --pie-enlace: #ffffff;
+  --pie-realce: #ffd166;          /* 13.06 · AAA */
+  --banda-fondo: #132a41;
+  --banda-texto: #ffffff;         /* 14.63 · AAA */
+  --banda-bajada: #cfe0f2;        /* 10.87 · AAA */
+  --banda-fino: #c3d6ea;          /*  9.84 · AAA */
+  --hero-fondo: #0c3f98;          /* el azul de la ilustracion no cambia */
+  --hero-texto: #ffffff;
+  --hero-tenue: #eef3ff;
+  --hero-azul: #123a86;           /* punto mas claro medido: #254a90 */
+  --marca-placa: #eef3f8;         /* el negro del logo encima: 17.41 · AAA */
+  --sombra: 0 1px 2px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.55);
+  --sombra-alta: 0 2px 4px rgba(0, 0, 0, 0.55), 0 16px 36px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================
+   4 · MEJOR VISION sobre claro
+   El gris apagado deja de ser gris: se iguala al texto normal. Los
+   bordes engordan y se oscurecen, y el cuerpo va en semi negrita un
+   escalon mas grande.
+   ============================================================ */
+:root[data-vision="alto"] {
+  --foreground: #000000;          /* 21.00 sobre el fondo · AAA */
+  --muted: #000000;               /* 21.00 · el gris apagado se acaba */
+  --secondary: #eef3f8;
+  --titulo: #0a2036;              /* 16.50 · AAA */
+  --enlace: #0a4a86;              /*  8.99 · AAA */
+  --primary: #153a9e;             /* su texto encima: 9.86 · AAA */
+  --accent-fuerte: #7d3705;       /*  8.68 sobre el fondo · AAA */
+  --success: #125c33;             /*  7.24 sobre su suave · AAA */
+  --error: #8c1a14;               /*  8.42 sobre su suave · AAA */
+  --border: #3d4a56;              /*  9.08 · la caja se ve de verdad */
+  --border-fuerte: #2b3641;       /* 12.30 · AAA */
+  --borde-ancho: 2px;
+  --borde-ancho-fuerte: 3px;
+  --espanol: #8a3509;             /* su texto encima:  8.10 · AAA */
+  --sociales: #4f1aa3;            /* su texto encima: 10.45 · AAA */
+  --ciencias: #0a5651;            /* su texto encima:  8.53 · AAA */
+  --mate: #153a9e;                /* su texto encima:  9.86 · AAA */
+  --pie-tenue: #e8eef6;           /* 15.17 sobre el pie · AAA */
+  --banda-bajada: #ffffff;        /* 11.65 sobre la banda · AAA */
+  --banda-fino: #ffffff;
+  --hero-tenue: #ffffff;          /* 9.63 sobre el azul del hero · AAA */
+  --hero-azul: #0e2c66;           /* punto mas claro medido: #213d72 → 10.63 */
+  --peso-cuerpo: 600;
+  --cuerpo-fuente: clamp(1.125rem, 1.05rem + 0.3vw, 1.3rem);
+}
+
+/* ============================================================
+   5 · MEJOR VISION sobre oscuro, para quien no toco el boton
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"])[data-vision="alto"] {
+    --background: #05090d;
+    --foreground: #ffffff;        /* 19.97 · AAA */
+    --muted: #ffffff;             /* 19.97 · el gris apagado se acaba */
+    --secondary: #131b24;
+    --titulo: #bcd9f7;            /* 13.70 · AAA */
+    --enlace: #a9cdfb;            /* 12.19 · AAA */
+    --primary: #8fbeff;           /* su texto encima: 9.92 · AAA */
+    --accent-fuerte: #f8c48c;     /* 12.62 · AAA */
+    --success: #8ceab5;           /* 10.58 sobre su suave · AAA */
+    --error: #ffb0a8;             /*  9.77 sobre su suave · AAA */
+    --border: #5c6f80;            /*  3.84 · separacion visible */
+    --border-fuerte: #93a6b7;     /*  7.97 · AAA */
+    --espanol: #f7bb99;           /* su texto encima: 11.31 · AAA */
+    --sociales: #d6c1fa;          /* su texto encima: 11.62 · AAA */
+    --ciencias: #8fe2d5;          /* su texto encima: 12.65 · AAA */
+    --mate: #8fbeff;              /* su texto encima:  9.92 · AAA */
+    --hero-azul: #0e2c66;         /* punto mas claro medido: #213d72 → 10.63 */
+    --marca-placa: #ffffff;       /* el negro del logo encima: 19.44 · AAA */
+  }
+}
+
+/* ============================================================
+   6 · MEJOR VISION sobre oscuro elegido a mano
+   ============================================================ */
+:root[data-tema="oscuro"][data-vision="alto"] {
+  --background: #05090d;
+  --foreground: #ffffff;          /* 19.97 · AAA */
+  --muted: #ffffff;               /* 19.97 · el gris apagado se acaba */
+  --secondary: #131b24;
+  --titulo: #bcd9f7;              /* 13.70 · AAA */
+  --enlace: #a9cdfb;              /* 12.19 · AAA */
+  --primary: #8fbeff;             /* su texto encima: 9.92 · AAA */
+  --accent-fuerte: #f8c48c;       /* 12.62 · AAA */
+  --success: #8ceab5;             /* 10.58 sobre su suave · AAA */
+  --error: #ffb0a8;               /*  9.77 sobre su suave · AAA */
+  --border: #5c6f80;              /*  3.84 · separacion visible */
+  --border-fuerte: #93a6b7;       /*  7.97 · AAA */
+  --espanol: #f7bb99;             /* su texto encima: 11.31 · AAA */
+  --sociales: #d6c1fa;            /* su texto encima: 11.62 · AAA */
+  --ciencias: #8fe2d5;            /* su texto encima: 12.65 · AAA */
+  --mate: #8fbeff;                /* su texto encima:  9.92 · AAA */
+  --hero-azul: #0e2c66;           /* punto mas claro medido: #213d72 → 10.63 */
+  --marca-placa: #ffffff;         /* el negro del logo encima: 19.44 · AAA */
 }
 
 *,
@@ -63,7 +335,8 @@ body {
   margin: 0;
   font-family: var(--fuente);
   /* el maximo pasa del doble del minimo, para que aguante zoom al 200% */
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  font-size: var(--cuerpo-fuente);
+  font-weight: var(--peso-cuerpo);
   line-height: 1.6;
   color: var(--foreground);
   background: var(--background);
@@ -87,6 +360,22 @@ img { max-width: 100%; height: auto; }
 :focus-visible {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
+}
+
+/* En mejor vision el aro engorda: 3px sobre una letra de peso 600 se
+   pierde. */
+:root[data-vision="alto"] :focus-visible {
+  outline-width: 4px;
+}
+
+/* Los enlaces van subrayados siempre, no solo al pasar el mouse. Se
+   quedan fuera los que son boton y los que envuelven una tarjeta
+   entera (data-tarjeta): ahi el subrayado le caeria a todo el texto de
+   la tarjeta y ya se sabe que es clicable por la caja. */
+:root[data-vision="alto"] a:not(.ps-boton):not([data-tarjeta]) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
 
 .ps-saltar {
@@ -135,12 +424,18 @@ img { max-width: 100%; height: auto; }
   cursor: pointer;
 }
 .ps-boton:hover { filter: brightness(0.92); }
+/* En oscuro el boton ya es un azul claro: bajarle el brillo lo apaga en
+   vez de resaltarlo, asi que ahi se aclara. */
+:root[data-tema="oscuro"] .ps-boton:hover { filter: brightness(1.12); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .ps-boton:hover { filter: brightness(1.12); }
+}
 
 /* Estados de carga, error y vacio. Todo componente que carga datos
    tiene los tres, sin excepcion. */
 .ps-estado {
   padding: 24px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--secondary);
   text-align: center;

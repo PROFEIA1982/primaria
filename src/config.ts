@@ -63,17 +63,22 @@ export const CANTIDADES = [10, 20, 30, 60] as const;
 
 // Los slugs calzan exacto con la columna slug de la tabla materias
 // y con la ruta de la app. Se usa guion, no guion bajo.
+//
+// "arte" es el color de fondo que trae pintada la ilustracion del hero,
+// medido del archivo pixel a pixel. En claro calza con la banda y no se
+// ve; en oscuro le sirve de placa para que el dibujo no quede como un
+// parche blanco flotando sobre el fondo negro.
 export const MATERIAS = [
-  { slug: "espanol", nombre: "Español", corto: "Español", color: "var(--espanol)", suave: "var(--espanol-suave)", emoji: "📚",
+  { slug: "espanol", nombre: "Español", corto: "Español", color: "var(--espanol)", suave: "var(--espanol-suave)", arte: "#fdede3", emoji: "📚",
     hero: CDN + "hero-espanol.webp",
     gancho: "Leé, entendé y contestá con calma." },
-  { slug: "estudios-sociales", nombre: "Estudios Sociales", corto: "Sociales", color: "var(--sociales)", suave: "var(--sociales-suave)", emoji: "🌎",
+  { slug: "estudios-sociales", nombre: "Estudios Sociales", corto: "Sociales", color: "var(--sociales)", suave: "var(--sociales-suave)", arte: "#f2ebfb", emoji: "🌎",
     hero: CDN + "hero-sociales.webp",
     gancho: "Costa Rica, su gente y su historia." },
-  { slug: "ciencias", nombre: "Ciencias", corto: "Ciencias", color: "var(--ciencias)", suave: "var(--ciencias-suave)", emoji: "🔬",
+  { slug: "ciencias", nombre: "Ciencias", corto: "Ciencias", color: "var(--ciencias)", suave: "var(--ciencias-suave)", arte: "#e9f5ef", emoji: "🔬",
     hero: CDN + "hero-ciencias.webp",
     gancho: "Del cuerpo humano al sistema solar." },
-  { slug: "matematicas", nombre: "Matemáticas", corto: "Matemáticas", color: "var(--mate)", suave: "var(--mate-suave)", emoji: "🔢",
+  { slug: "matematicas", nombre: "Matemáticas", corto: "Matemáticas", color: "var(--mate)", suave: "var(--mate-suave)", arte: "#e8f2fa", emoji: "🔢",
     hero: CDN + "hero-matematicas.webp",
     gancho: "Números, figuras y datos, paso a paso." },
 ] as const;
