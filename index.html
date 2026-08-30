@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1D4ED8" />
+    <!-- La barra del navegador tambien sigue el tema. -->
+    <meta name="theme-color" content="#1D4ED8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F151C" media="(prefers-color-scheme: dark)" />
     <title>Practicá para tu prueba de sexto · Costa Rica</title>
     <meta
       name="description"
@@ -13,9 +15,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Antes de que React pinte. Sin esto la pagina arranca en claro y
+      // pega un fogonazo blanco al aplicar el tema guardado. Va inline y
+      // sin dependencias a proposito: cualquier archivo aparte llegaria
+      // tarde. Si no hay nada guardado NO se pone el atributo, y ahi
+      // manda el prefers-color-scheme del sistema desde el CSS.
+      (function () {
+        try {
+          var d = document.documentElement;
+          var leer = function (k) {
+            try { return window.localStorage.getItem(k); } catch (e) { return null; }
+          };
+          var t = leer("ps-tema");
+          if (t === "claro" || t === "oscuro") d.setAttribute("data-tema", t);
+          if (leer("ps-vision") === "alto") d.setAttribute("data-vision", "alto");
+        } catch (e) {
+          // Si algo falla, la pagina arranca en claro y no se rompe nada.
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
