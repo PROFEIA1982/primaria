@@ -1,11 +1,33 @@
 import Markdown from "react-markdown";
 import remarkMath from "remark-math";
+import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import "./ItemRenderer.css";
 import type { Opcion } from "../lib/tipos";
 
 const LETRAS = ["A", "B", "C", "D"];
+
+// Los enunciados traen tablas (remark-gfm), formulas ($...$) e imagenes.
+// Sin gfm, una tabla se ve como texto con barras: eso paso al principio.
+const REMARK = [remarkMath, remarkGfm];
+const REHYPE = [rehypeKatex];
+
+// La tabla va dentro de una caja que se desliza sola: en un celular de
+// 320px una tabla de seis columnas no cabe de otra forma.
+const BLOQUE = {
+  table: (props: { children?: React.ReactNode }) => (
+    <div className="item-tabla-caja">
+      <table>{props.children}</table>
+    </div>
+  ),
+};
+
+// En las opciones no queremos parrafos ni tablas: solo el texto, que a
+// veces trae una fraccion en LaTeX.
+const ENLINEA = {
+  p: (props: { children?: React.ReactNode }) => <>{props.children}</>,
+};
 
 type Props = {
   enunciado: string;
@@ -45,7 +67,7 @@ export default function ItemRenderer({
   return (
     <article className="ps-item">
       <div className="item-enunciado">
-        <Markdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+        <Markdown remarkPlugins={REMARK} rehypePlugins={REHYPE} components={BLOQUE}>
           {enunciado}
         </Markdown>
         {imagenUrl && (
@@ -73,7 +95,11 @@ export default function ItemRenderer({
                 onClick={() => { if (!respondido) alElegir(op.id); }}
               >
                 <span className="item-letra" aria-hidden="true">{LETRAS[i] ?? i + 1}</span>
-                <span className="item-texto">{op.texto}</span>
+                <span className="item-texto">
+                  <Markdown remarkPlugins={REMARK} rehypePlugins={REHYPE} components={ENLINEA}>
+                    {op.texto}
+                  </Markdown>
+                </span>
                 {estado === "correcta" && <span className="item-marca">✓ Correcta</span>}
                 {estado === "incorrecta" && <span className="item-marca">✗ Incorrecta</span>}
               </button>

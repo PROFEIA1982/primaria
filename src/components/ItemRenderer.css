@@ -16,6 +16,44 @@
   margin: 16px auto;
   border-radius: var(--radius-sm);
 }
+/* La tabla se desliza dentro de su caja: a 320px una de seis columnas
+   no cabe de ninguna otra forma, y la pagina no debe correrse entera. */
+.ps-item .item-tabla-caja {
+  overflow-x: auto;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.ps-item .item-tabla-caja table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: max-content;
+  font-size: 0.98rem;
+}
+.ps-item .item-tabla-caja th,
+.ps-item .item-tabla-caja td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+.ps-item .item-tabla-caja thead th {
+  background: var(--secondary);
+  color: var(--titulo);
+  font-weight: 700;
+}
+.ps-item .item-tabla-caja tbody tr:last-child td { border-bottom: 0; }
+
+/* La cita del texto de lectura, para que se vea que es una cita. */
+.ps-item .item-enunciado blockquote {
+  margin: 0 0 1em;
+  padding: 12px 18px;
+  border-left: 4px solid var(--border-fuerte);
+  background: var(--secondary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.ps-item .item-enunciado blockquote p:last-child { margin-bottom: 0; }
+
 /* Una formula larga no debe romper la pagina en un celular. */
 .ps-item .katex-display {
   overflow-x: auto;
