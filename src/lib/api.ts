@@ -111,3 +111,25 @@ export async function traerConteos(): Promise<ConteoMateria[]> {
   if (error) throw error;
   return (data ?? []) as ConteoMateria[];
 }
+
+// Cuantas preguntas publicadas tiene cada tema de una materia. Se pide el
+// arreglo de tema_id y se cuenta aca: son unas decenas de filas de un solo
+// campo, mucho menos que bajarse los enunciados solo para contarlos.
+// El filtro por estado va explicito ademas del RLS: si algun dia la politica
+// cambia, el numero que ve el estudiante no se desalinea con el sorteo.
+export async function traerConteosPorTema(
+  materiaId: number,
+): Promise<Record<number, number>> {
+  const { data, error } = await supabase
+    .from("items")
+    .select("tema_id")
+    .eq("materia_id", materiaId)
+    .eq("estado", "publicado");
+  if (error) throw error;
+  const cuenta: Record<number, number> = {};
+  for (const fila of (data ?? []) as { tema_id: number | null }[]) {
+    if (fila.tema_id === null) continue;
+    cuenta[fila.tema_id] = (cuenta[fila.tema_id] ?? 0) + 1;
+  }
+  return cuenta;
+}
