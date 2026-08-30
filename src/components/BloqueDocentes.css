@@ -1,0 +1,88 @@
+/* ============================================================
+   Aviso para maestros y familias. Vive en el inicio y en contacto.
+   Todo prefijado con .ps-docentes.
+
+   Contrastes calculados con la formula WCAG 2.1, no a ojo:
+   - --titulo #1b3a5b sobre --secondary #f2f6fa .... 10.73 · AAA
+   - --foreground #1a1a1a sobre --secondary ........ 16.03 · AAA
+   - --muted #5c6b66 sobre --secondary ............. 5.18 · AA
+   - blanco sobre --primary #1d4ed8 ................ 6.70 · AA
+   - --enlace #0b5fa5 sobre blanco ................. 6.57 · AA
+   ============================================================ */
+
+.ps-docentes {
+  scroll-margin-top: 90px;
+  padding: clamp(36px, 6vw, 60px) 0;
+  background: var(--secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+/* En el inicio va mas contenido: ahi el visitante es el estudiante. */
+.ps-docentes[data-variante="discreta"] {
+  padding: clamp(28px, 4.5vw, 44px) 0;
+}
+
+.ps-docentes .docentes-caja {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 720px) {
+  .ps-docentes .docentes-caja { grid-template-columns: auto 1fr; gap: 24px; }
+}
+
+.ps-docentes .docentes-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-suave);
+  color: var(--primary);
+}
+
+.ps-docentes .docentes-etiqueta {
+  margin: 0 0 4px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.ps-docentes h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.7rem);
+}
+.ps-docentes .docentes-texto p { margin: 0 0 12px; max-width: 62ch; }
+.ps-docentes .docentes-fino {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.ps-docentes .docentes-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+.ps-docentes .docentes-boton {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.ps-docentes .docentes-secundario {
+  background: var(--background);
+  color: var(--enlace);
+  border: 2px solid var(--enlace);
+}
+@media (hover: hover) {
+  .ps-docentes .docentes-boton:hover { filter: brightness(0.93); }
+  .ps-docentes .docentes-secundario:hover { background: var(--primary-suave); filter: none; }
+}
+
+@media (forced-colors: active) {
+  .ps-docentes { border: 1px solid ButtonText; }
+  .ps-docentes .docentes-secundario { border: 2px solid ButtonText; }
+}
