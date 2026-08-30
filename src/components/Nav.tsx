@@ -46,7 +46,7 @@ export default function Nav() {
                   style={{ ["--acento" as string]: m.color }}
                   onClick={() => setAbierto(false)}
                 >
-                  <span aria-hidden="true">{m.emoji}</span> {m.corto}
+                  {m.corto}
                 </NavLink>
               </li>
             ))}
