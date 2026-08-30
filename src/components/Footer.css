@@ -2,12 +2,11 @@
    Pie del sitio. Todo prefijado con #footer-principal.
 
    Contrastes calculados con la formula WCAG 2.1, no estimados:
-   - blanco   #ffffff sobre #0f2740 ... 15.17 · AAA  (titulos)
-   - claro    #e8eef6 sobre #0f2740 ... 12.99 · AAA  (texto)
-   - gris     #c3d0de sobre #0f2740 .... 9.68 · AAA  (secundario)
-   - ambar    #ffd166 sobre #0f2740 ... 10.52 · AAA  (enlaces)
-   - gris     #c3d0de sobre #0a1c2e ... 11.00 · AAA  (franja legal)
-   - gris     #9fb0c2 sobre #0a1c2e .... 7.77 · AAA  (nombre de la empresa)
+   - blanco #ffffff sobre #0f2740 ... 15.17 · AAA  (enlaces del pie)
+   - gris   #c3d0de sobre #0f2740 .... 9.68 · AAA  (linea de que es esto)
+   - ambar  #ffd166 sobre #0f2740 ... 10.52 · AAA  (hover y foco)
+   - gris   #c3d0de sobre #0a1c2e ... 11.00 · AAA  (franja legal)
+   - ambar  #ffd166 sobre #0a1c2e ... 11.95 · AAA  (hover en la franja)
    ============================================================ */
 
 #footer-principal {
@@ -16,62 +15,40 @@
   margin-top: clamp(48px, 8vw, 88px);
 }
 
-#footer-principal .footer-rejilla {
-  display: grid;
-  gap: 32px;
-  grid-template-columns: 1fr;
-  padding-top: clamp(36px, 6vw, 56px);
-  padding-bottom: clamp(28px, 5vw, 44px);
+/* Dos bloques y ya: la marca a un lado y los cuatro enlaces al otro. En
+   em y no en px porque con el texto al 200% el viewport mide lo mismo
+   pero el contenido ya no cabe en fila, y el pie tiene que enterarse. */
+#footer-principal .footer-caja {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px 40px;
+  padding-top: clamp(28px, 5vw, 44px);
+  padding-bottom: clamp(24px, 4vw, 36px);
 }
-/* En em y no en px: con el texto al 200% el viewport mide lo mismo pero el
-   contenido ya no cabe en tres columnas, y la rejilla tiene que enterarse.
-   minmax(0, ...) para que una pista nunca crezca hasta el ancho de su
-   contenido y empuje el pie fuera de la pantalla. */
-@media (min-width: 44em) {
-  #footer-principal .footer-rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (min-width: 64em) {
-  #footer-principal .footer-rejilla {
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.2fr);
-    gap: 44px;
-  }
-}
+#footer-principal .footer-marca { min-width: 0; }
 
 #footer-principal .footer-logo {
   display: block;
   width: auto;
   max-height: 92px;      /* max-height, nunca height en linea */
-  margin-bottom: 16px;
-}
-#footer-principal .footer-titulo {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #ffffff;
+  margin-bottom: 12px;
 }
 #footer-principal .footer-descripcion {
   margin: 0;
-  max-width: 40ch;
+  max-width: 56ch;
   color: #c3d0de;
   font-size: 0.97rem;
 }
-
-#footer-principal .footer-encabezado {
-  margin: 0 0 14px;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-#footer-principal .footer-encabezado-2 { margin-top: 26px; }
 
 #footer-principal .footer-lista {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  gap: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 28px;
 }
 #footer-principal .footer-lista a {
   display: inline-flex;
@@ -82,12 +59,12 @@
   overflow-wrap: anywhere;
   min-height: 44px;          /* minimo de toque, tambien con raton */
   padding: 4px 0;
-  color: #e8eef6;
+  color: #ffffff;
+  font-weight: 700;
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
 #footer-principal .footer-lista a svg { flex: 0 0 auto; opacity: 0.85; }
-#footer-principal .footer-canales a { color: #c3d0de; }
 @media (hover: hover) {
   #footer-principal .footer-lista a:hover {
     color: #ffd166;
@@ -100,18 +77,14 @@
   border-radius: 4px;
 }
 
-/* --- Franja legal --- */
+/* --- Franja legal: una sola linea --- */
 #footer-principal .footer-legal {
   background: #0a1c2e;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 #footer-principal .footer-legal-caja {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 6px 28px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 #footer-principal .footer-legal p {
   margin: 0;
@@ -126,7 +99,6 @@
 @media (hover: hover) {
   #footer-principal .footer-legal a:hover { color: #ffd166; }
 }
-#footer-principal .footer-empresa { color: #9fb0c2; }
 
 @media (forced-colors: active) {
   #footer-principal { border-top: 1px solid ButtonText; }

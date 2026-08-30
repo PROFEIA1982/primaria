@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import "./ItemRenderer.css";
+import type { TamanoTexto } from "./practica/BarraApoyo";
 import type { Opcion } from "../lib/tipos";
 
 const LETRAS = ["A", "B", "C", "D"];
@@ -38,6 +39,10 @@ type Props = {
   alElegir: (opcionId: string) => void;
   imagenUrl?: string | null;
   imagenAlt?: string | null;
+  /** tamano de letra que pidio el estudiante en la barra de apoyo */
+  tamano?: TamanoTexto;
+  /** modo de mas contraste, tambien pedido desde la barra de apoyo */
+  altoContraste?: boolean;
 };
 
 // Estructura base del item. La logica de la practica (reloj, avance,
@@ -49,6 +54,8 @@ export default function ItemRenderer({
   alElegir,
   imagenUrl,
   imagenAlt,
+  tamano = "normal",
+  altoContraste = false,
 }: Props) {
   const respondido = elegida !== null;
 
@@ -65,7 +72,14 @@ export default function ItemRenderer({
   const acerto = respondido && opciones.find((o) => o.id === elegida)?.es_correcta;
 
   return (
-    <article className="ps-item">
+    // El tamano y el contraste se quedan encerrados en el recuadro de la
+    // pregunta: no se toca el html ni el body, que arrastrarian el menu,
+    // la barra del reloj y todo lo demas.
+    <article
+      className="ps-item"
+      data-tamano={tamano}
+      data-contraste={altoContraste ? "alto" : undefined}
+    >
       <div className="item-enunciado">
         <Markdown remarkPlugins={REMARK} rehypePlugins={REHYPE} components={BLOQUE}>
           {enunciado}

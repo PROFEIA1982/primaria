@@ -1,14 +1,37 @@
-/* Un item en pantalla. Todo prefijado con .ps-item. */
+/* Un item en pantalla. Todo prefijado con .ps-item.
+
+   Los dos apoyos de lectura (tamano y contraste) entran por data-tamano y
+   data-contraste y no salen de aca: el resto de la pagina no se entera.
+
+   Contrastes calculados con la formula WCAG 2.1, no a ojo:
+   - --foreground #1a1a1a sobre blanco ............... 17.40 · AAA
+   - blanco sobre --foreground (la letra de la opcion)  17.40 · AAA
+   - --foreground sobre --success-suave #e8f6ee ...... 15.62 · AAA
+   - --foreground sobre --error-suave  #fdf2f1 ....... 15.87 · AAA
+   - --border-fuerte #7c8b98 sobre blanco ............  3.50 · borde de control (3:1)
+   (en modo normal la marca de correcta usa --success 5.35 y la de
+    incorrecta --error 6.54 sobre blanco, las dos AA) */
 .ps-item {
+  /* La medida de la letra de la pregunta vive en una variable: los tres
+     tamanos solo la cambian a ella y todo lo de adentro va en em. */
+  --item-fuente: 1rem;
+  font-size: var(--item-fuente);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
   padding: clamp(16px, 4vw, 28px);
 }
+.ps-item[data-tamano="grande"] { --item-fuente: 1.25rem; }
+.ps-item[data-tamano="mayor"]  { --item-fuente: 1.55rem; }
+
 .ps-item .item-enunciado {
-  font-size: 1.1rem;
+  /* em y no rem: asi crece con el tamano que pidio el estudiante */
+  font-size: 1.1em;
   margin-bottom: 20px;
+  /* algunos enunciados citan la fuente con una direccion web larga: sin
+     esto, con la letra grande se sale del recuadro y corre la pagina */
+  overflow-wrap: anywhere;
 }
 .ps-item .item-enunciado p { margin: 0 0 0.8em; }
 .ps-item .item-enunciado img {
@@ -69,8 +92,12 @@
 }
 .ps-item .item-opcion {
   display: flex;
+  /* que envuelva: con la letra grande en un celular de 320px, el "✓
+     Correcta" no cabe en la misma linea y estiraba el boton fuera de la
+     pantalla en vez de bajarse una linea */
+  flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
+  gap: 8px 12px;
   width: 100%;
   min-height: var(--toque-min);
   padding: 14px 16px;
@@ -85,6 +112,11 @@
 .ps-item .item-opcion:hover:not(:disabled) { background: var(--secondary); }
 .ps-item .item-opcion:disabled { cursor: default; }
 .ps-item .item-texto {
+  /* la base en 60% y no en auto: con auto, el texto largo se bajaba entero
+     a la linea de abajo y dejaba la letra sola arriba. Asi el texto se
+     queda al lado de la letra y lo unico que baja, cuando no cabe, es la
+     marca de correcta o incorrecta. */
+  flex: 1 1 60%;
   /* sin esto, una formula larga desborda el boton en un celular de 320px */
   min-width: 0;
   overflow-wrap: anywhere;
@@ -94,8 +126,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  /* crece con la letra de la pregunta, pero nunca baja de 32px */
+  width: 2em;
+  height: 2em;
+  min-width: 32px;
+  min-height: 32px;
   border-radius: 50%;
   background: var(--secondary);
   font-weight: 700;
@@ -117,6 +152,41 @@
   font-weight: 700;
   white-space: nowrap;
 }
+
+/* --- Modo de mas contraste ---
+   Texto y bordes en tinta, la letra de la opcion en blanco sobre negro y
+   en negrita. Todo lo de aca pasa AAA (17.40, 15.62 y 15.87 arriba). */
+.ps-item[data-contraste="alto"] {
+  border: 2px solid var(--foreground);
+  color: var(--foreground);
+}
+.ps-item[data-contraste="alto"] .item-enunciado { font-weight: 600; }
+.ps-item[data-contraste="alto"] .item-enunciado blockquote {
+  border-left-color: var(--foreground);
+}
+.ps-item[data-contraste="alto"] .item-opcion {
+  border-width: 3px;
+  border-color: var(--foreground);
+  color: var(--foreground);
+  font-weight: 600;
+}
+.ps-item[data-contraste="alto"] .item-letra {
+  background: var(--foreground);
+  color: var(--background);
+  font-weight: 900;
+}
+/* Correcta e incorrecta guardan su borde de color (va despues de la regla
+   de arriba, si no la tinta se lo comia) y el texto pasa a tinta: sobre
+   los fondos suaves da 15.62 y 15.87, o sea AAA. */
+.ps-item[data-contraste="alto"] .item-opcion[data-estado="correcta"] {
+  border-color: var(--success);
+  color: var(--foreground);
+}
+.ps-item[data-contraste="alto"] .item-opcion[data-estado="incorrecta"] {
+  border-color: var(--error);
+  color: var(--foreground);
+}
+.ps-item[data-contraste="alto"] .item-marca { font-weight: 900; }
 
 @media (forced-colors: active) {
   .ps-item .item-opcion { border: 2px solid ButtonText; }

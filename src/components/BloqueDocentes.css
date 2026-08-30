@@ -2,87 +2,206 @@
    Aviso para maestros y familias. Vive en el inicio y en contacto.
    Todo prefijado con .ps-docentes.
 
-   Contrastes calculados con la formula WCAG 2.1, no a ojo:
-   - --titulo #1b3a5b sobre --secondary #f2f6fa .... 10.73 · AAA
-   - --foreground #1a1a1a sobre --secondary ........ 16.03 · AAA
-   - --muted #5c6b66 sobre --secondary ............. 5.18 · AA
-   - blanco sobre --primary #1d4ed8 ................ 6.70 · AA
-   - --enlace #0b5fa5 sobre blanco ................. 6.57 · AA
+   Va en banda azul oscura a proposito: en las dos paginas queda entre
+   secciones blancas o gris claro, y asi el maestro lo ve aunque venga
+   bajando rapido. Es el bloque que vende.
+
+   Contrastes calculados con la formula WCAG 2.1 (contraste_wcag.py):
+   - blanco #ffffff sobre la banda #1b3a5b ......... 11.65 · AAA
+   - #dbe7f5 sobre la banda ......................... 9.30 · AAA
+   - #cfe0f2 sobre la banda ......................... 8.65 · AAA
+   - --accent #ffd166 sobre la banda ................ 8.08 · AAA
+   - tinta #1a1a1a sobre --accent #ffd166 .......... 12.07 · AAA
+   - --titulo #1b3a5b sobre blanco ................. 11.65 · AAA
+   - --foreground #1a1a1a sobre blanco ............. 17.40 · AAA
+   - --muted #5c6b66 sobre blanco ................... 5.60 · AA
+   - --enlace #0b5fa5 sobre blanco .................. 6.57 · AA
+   - --primary #1d4ed8 sobre --primary-suave ........ 5.87 · AA
    ============================================================ */
 
 .ps-docentes {
   scroll-margin-top: 90px;
-  padding: clamp(36px, 6vw, 60px) 0;
-  background: var(--secondary);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  padding: clamp(38px, 6vw, 64px) 0;
+  /* mismo azul que --titulo, pero escrito plano: aca es fondo, no texto,
+     y si algun dia cambia el token de titulos esto no debe seguirlo */
+  background: #1b3a5b;
 }
-/* En el inicio va mas contenido: ahi el visitante es el estudiante. */
+/* En el inicio el visitante es el estudiante: el bloque respira menos. */
 .ps-docentes[data-variante="discreta"] {
-  padding: clamp(28px, 4.5vw, 44px) 0;
+  padding: clamp(32px, 5vw, 52px) 0;
 }
 
-.ps-docentes .docentes-caja {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1fr;
-  align-items: start;
-}
-@media (min-width: 720px) {
-  .ps-docentes .docentes-caja { grid-template-columns: auto 1fr; gap: 24px; }
-}
+.ps-docentes .docentes-encabezado { text-align: center; }
 
 .ps-docentes .docentes-icono {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 auto;
   width: 58px;
   height: 58px;
+  margin-bottom: 12px;
   border-radius: var(--radius-sm);
-  background: var(--primary-suave);
-  color: var(--primary);
+  /* blanco al 14% sobre la banda: decorativo, no lleva texto encima */
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
 }
 
 .ps-docentes .docentes-etiqueta {
-  margin: 0 0 4px;
+  margin: 0 0 6px;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #ffd166;                     /* 8.08 sobre la banda · AAA */
 }
 .ps-docentes h2 {
-  margin: 0 0 10px;
-  font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.7rem);
+  margin: 0 auto 10px;
+  overflow-wrap: anywhere;
+  max-width: 22ch;
+  color: #fff;                        /* 11.65 sobre la banda · AAA */
+  font-size: clamp(1.35rem, 1.15rem + 1vw, 2rem);
 }
-.ps-docentes .docentes-texto p { margin: 0 0 12px; max-width: 62ch; }
-.ps-docentes .docentes-fino {
-  font-size: 0.92rem;
-  color: var(--muted);
+.ps-docentes .docentes-bajada {
+  margin: 0 auto;
+  max-width: 60ch;
+  color: #dbe7f5;                     /* 9.30 sobre la banda · AAA */
 }
 
-.ps-docentes .docentes-acciones {
+/* Cuatro tarjetas blancas: 1 · 2 · 4 columnas, la fila siempre cierra. */
+.ps-docentes .docentes-rejilla {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+}
+@media (min-width: 560px) {
+  .ps-docentes .docentes-rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  .ps-docentes .docentes-rejilla { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* anywhere y no break-word: solo "anywhere" achica el ancho minimo de la
+   caja, que es lo que hace que "Acompanamiento" no reviente la columna
+   cuando el texto va al 200%. */
+.ps-docentes .docentes-tarjeta {
   display: flex;
-  flex-wrap: wrap;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 22px 20px;
+  border-radius: var(--radius);
+  background: var(--background);
+  color: var(--foreground);           /* 17.40 sobre blanco · AAA */
+  box-shadow: var(--sombra);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+@media (hover: hover) {
+  .ps-docentes .docentes-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14), 0 16px 36px rgba(0, 0, 0, 0.24);
+  }
+}
+.ps-docentes .docentes-tarjeta-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-suave);
+  color: var(--primary);              /* 5.87 sobre --primary-suave · AA */
+}
+.ps-docentes .docentes-tarjeta-titulo {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--titulo);               /* 11.65 sobre blanco · AAA */
+}
+.ps-docentes .docentes-tarjeta-corto { margin: 0; font-size: 0.98rem; }
+
+/* Desplegable nativo, sin JavaScript. */
+.ps-docentes .ps-mas { margin-top: auto; }
+.ps-docentes .ps-mas > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--toque-min);       /* 48px */
+  padding-top: 6px;
+  color: var(--enlace);               /* 6.57 sobre blanco · AA */
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  list-style: none;
+}
+.ps-docentes .ps-mas > summary::-webkit-details-marker { display: none; }
+.ps-docentes .ps-mas-flecha { flex: 0 0 auto; transition: transform 0.18s ease; }
+.ps-docentes .ps-mas[open] .ps-mas-flecha { transform: rotate(180deg); }
+.ps-docentes .ps-mas-abierto { display: none; }
+.ps-docentes .ps-mas[open] .ps-mas-cerrado { display: none; }
+.ps-docentes .ps-mas[open] .ps-mas-abierto { display: inline; }
+.ps-docentes .ps-mas > p {
+  margin: 4px 0 0;
+  font-size: 0.93rem;
+  color: var(--muted);                /* 5.60 sobre blanco · AA */
+}
+
+/* Los dos botones reparten el ancho: nada de un boton solo y medio metro
+   de banda vacia al lado. */
+.ps-docentes .docentes-acciones {
+  display: grid;
   gap: 12px;
-  margin-top: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  max-width: 720px;
+  margin: 26px auto 0;
+}
+.ps-docentes .docentes-acciones .ps-boton {
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 .ps-docentes .docentes-boton {
-  background: var(--primary);
-  color: var(--primary-foreground);
+  background: var(--accent);          /* tinta encima: 12.07 · AAA */
+  color: var(--accent-foreground);
+  font-size: 1.05rem;
 }
 .ps-docentes .docentes-secundario {
-  background: var(--background);
-  color: var(--enlace);
-  border: 2px solid var(--enlace);
+  background: transparent;
+  color: #fff;                        /* 11.65 sobre la banda · AAA */
+  border: 2px solid #fff;
 }
 @media (hover: hover) {
   .ps-docentes .docentes-boton:hover { filter: brightness(0.93); }
-  .ps-docentes .docentes-secundario:hover { background: var(--primary-suave); filter: none; }
+  .ps-docentes .docentes-secundario:hover {
+    background: rgba(255, 255, 255, 0.14);
+    filter: none;
+  }
 }
 
+.ps-docentes .docentes-fino {
+  margin: 18px 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cfe0f2;                     /* 8.65 sobre la banda · AAA */
+}
+
+/* Sobre azul oscuro el foco azul del sistema no se ve. Solo se cambia
+   en lo que esta sobre la banda; dentro de las tarjetas blancas manda
+   el azul de siempre. */
+.ps-docentes:focus-visible,
+.ps-docentes .docentes-acciones a:focus-visible { outline-color: #fff; }
+
 @media (forced-colors: active) {
-  .ps-docentes { border: 1px solid ButtonText; }
+  .ps-docentes .docentes-tarjeta,
+  .ps-docentes .docentes-boton,
   .ps-docentes .docentes-secundario { border: 2px solid ButtonText; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-docentes .docentes-tarjeta,
+  .ps-docentes .ps-mas-flecha { transition: none; }
+  .ps-docentes .docentes-tarjeta:hover { transform: none; }
 }
