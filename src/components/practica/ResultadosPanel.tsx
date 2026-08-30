@@ -1,10 +1,17 @@
 import Markdown from "react-markdown";
 import remarkMath from "remark-math";
+import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
 import { Link } from "react-router-dom";
 import { CircleAlert, PartyPopper, RotateCcw } from "lucide-react";
 import { nivelNota, PALABRA_NOTA } from "./calificar";
 import type { Practica } from "./usePractica";
+
+// Los enunciados traen tablas y formulas: sin gfm la tabla sale como
+// texto con barras, y sin math las fracciones salen en crudo.
+const REMARK = [remarkMath, remarkGfm];
+const REHYPE = [rehypeKatex];
+const ENLINEA = { p: (props: { children?: React.ReactNode }) => <>{props.children}</> };
 
 type Props = {
   nombreMateria: string;
@@ -93,7 +100,7 @@ export default function ResultadosPanel({ nombreMateria, practica }: Props) {
             {falladas.map((f) => (
               <li className="res-fallada" key={f.itemId}>
                 <div className="res-fallada-enunciado">
-                  <Markdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                  <Markdown remarkPlugins={REMARK} rehypePlugins={REHYPE}>
                     {f.enunciado}
                   </Markdown>
                 </div>
@@ -104,7 +111,10 @@ export default function ResultadosPanel({ nombreMateria, practica }: Props) {
                   ) : (
                     <span className="res-valor" data-tipo="mala">
                       <span aria-hidden="true">✗ </span>
-                      {f.letraElegida}. {f.textoElegido}
+                      {f.letraElegida}.{" "}
+                      <Markdown remarkPlugins={REMARK} rehypePlugins={REHYPE} components={ENLINEA}>
+                        {f.textoElegido}
+                      </Markdown>
                     </span>
                   )}
                 </p>
@@ -112,7 +122,10 @@ export default function ResultadosPanel({ nombreMateria, practica }: Props) {
                   <span className="res-mini">La buena era</span>
                   <span className="res-valor" data-tipo="buena">
                     <span aria-hidden="true">✓ </span>
-                    {f.letraCorrecta}. {f.textoCorrecto}
+                    {f.letraCorrecta}.{" "}
+                    <Markdown remarkPlugins={REMARK} rehypePlugins={REHYPE} components={ENLINEA}>
+                      {f.textoCorrecto}
+                    </Markdown>
                   </span>
                 </p>
               </li>
