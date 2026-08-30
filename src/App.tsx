@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect } from "react";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import InicioPage from "./pages/InicioPage";
@@ -23,9 +23,22 @@ function LlevarAlAviso() {
   return null;
 }
 
-export default function App() {
+// Las cuatro paginas de materia son pantalla de trabajo: el chiquito esta
+// contestando y el pie, con sus enlaces, telefonos y redes, lo saca de ahi.
+// El pie se queda donde sirve de verdad, que es donde uno anda buscando
+// informacion: el inicio y contacto.
+const RUTAS_CON_PIE = ["/", "/contacto"];
+
+// El armazon vive dentro del router porque useLocation necesita el contexto
+// que abre BrowserRouter. App queda por fuera y solo monta el router.
+function Armazon() {
+  const { pathname } = useLocation();
+  // Se limpia la barra final para que "/contacto/" no se quede sin pie.
+  const ruta = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  const llevaPie = RUTAS_CON_PIE.includes(ruta);
+
   return (
-    <BrowserRouter>
+    <>
       <a className="ps-saltar" href="#contenido">Saltar al contenido</a>
       <Nav />
       <main id="contenido" tabIndex={-1}>
@@ -44,7 +57,15 @@ export default function App() {
           </Routes>
         </Suspense>
       </main>
-      <Footer />
+      {llevaPie && <Footer />}
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Armazon />
     </BrowserRouter>
   );
 }
