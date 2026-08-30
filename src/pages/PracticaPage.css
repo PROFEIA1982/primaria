@@ -502,6 +502,32 @@
   overflow-x: auto;
   overflow-y: hidden;
 }
+/* Las falladas tambien pueden traer tabla. Se desliza sola en vez de
+   correr la pagina entera. */
+#practica-resultados .res-fallada-enunciado table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+#practica-resultados .res-fallada-enunciado th,
+#practica-resultados .res-fallada-enunciado td {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+#practica-resultados .res-fallada-enunciado thead th { background: var(--secondary); }
+#practica-resultados .res-fallada-enunciado blockquote {
+  margin: 0 0 1em;
+  padding: 10px 16px;
+  border-left: 4px solid var(--border-fuerte);
+  background: var(--secondary);
+  font-weight: 400;
+}
 #practica-resultados .res-marcaste,
 #practica-resultados .res-correcta {
   display: flex;
