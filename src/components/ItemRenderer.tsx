@@ -1,3 +1,4 @@
+import { Square, Volume2 } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
@@ -5,6 +6,7 @@ import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import "./ItemRenderer.css";
 import type { TamanoTexto } from "./practica/BarraApoyo";
+import { useLectura } from "../lib/voz";
 import type { Opcion } from "../lib/tipos";
 
 const LETRAS = ["A", "B", "C", "D"];
@@ -43,6 +45,13 @@ type Props = {
   tamano?: TamanoTexto;
   /** modo de mas contraste, tambien pedido desde la barra de apoyo */
   altoContraste?: boolean;
+  /**
+   * Pinta el boton de escuchar en la esquina del recuadro. Va apagado por
+   * defecto y solo lo enciende la pantalla del examen: en resultados hay
+   * varios items a la vez y speechSynthesis es una sola cola, o sea que
+   * dos botones encendidos se pisarian la voz.
+   */
+  conVoz?: boolean;
 };
 
 // Estructura base del item. La logica de la practica (reloj, avance,
@@ -56,8 +65,13 @@ export default function ItemRenderer({
   imagenAlt,
   tamano = "normal",
   altoContraste = false,
+  conVoz = false,
 }: Props) {
   const respondido = elegida !== null;
+  // El hook se llama siempre, encendido o no: los hooks no se condicionan.
+  // Lo unico que decide conVoz es si el boton se pinta.
+  const voz = useLectura(enunciado, opciones);
+  const mostrarVoz = conVoz && voz.hayVoz;
 
   // Que estado le toca a cada opcion una vez que ya respondio.
   function estadoDe(op: Opcion): "correcta" | "incorrecta" | undefined {
@@ -80,6 +94,26 @@ export default function ItemRenderer({
       data-tamano={tamano}
       data-contraste={altoContraste ? "alto" : undefined}
     >
+      {mostrarVoz && (
+        // En la esquina de arriba, antes del enunciado: quien lo necesita lo
+        // encuentra donde esta mirando y no en una barra aparte.
+        <div className="item-cima">
+          <button
+            type="button"
+            className="item-escuchar"
+            aria-pressed={voz.leyendo}
+            onClick={voz.alternar}
+          >
+            {voz.leyendo ? (
+              <Square size={20} strokeWidth={2.4} aria-hidden="true" />
+            ) : (
+              <Volume2 size={20} strokeWidth={2.2} aria-hidden="true" />
+            )}
+            {voz.leyendo ? "Parar" : "Escuchar"}
+          </button>
+        </div>
+      )}
+
       <div className="item-enunciado">
         <Markdown remarkPlugins={REMARK} rehypePlugins={REHYPE} components={BLOQUE}>
           {enunciado}
@@ -121,6 +155,14 @@ export default function ItemRenderer({
           );
         })}
       </ul>
+
+      {/* El estado de la lectura se dice, no se deja solo en el color del
+          boton. Cambia de vacio a texto y ahi el lector lo canta. */}
+      {mostrarVoz && (
+        <p className="ps-solo-lectores" role="status">
+          {voz.leyendo ? "Leyendo la pregunta en voz alta." : ""}
+        </p>
+      )}
 
       {/* El resultado tiene que llegarle tambien a quien usa lector de pantalla. */}
       {respondido && (

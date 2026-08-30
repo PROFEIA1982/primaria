@@ -6,25 +6,29 @@
    secciones blancas o gris claro, y asi el maestro lo ve aunque venga
    bajando rapido. Es el bloque que vende.
 
+   Los colores de la banda pasaron a tokens (--banda-*) en src/index.css:
+   escritos a mano se quedaban igual de claros en modo oscuro.
+
    Contrastes calculados con la formula WCAG 2.1 (contraste_wcag.py):
-   - blanco #ffffff sobre la banda #1b3a5b ......... 11.65 · AAA
-   - #dbe7f5 sobre la banda ......................... 9.30 · AAA
-   - #cfe0f2 sobre la banda ......................... 8.65 · AAA
-   - --accent #ffd166 sobre la banda ................ 8.08 · AAA
-   - tinta #1a1a1a sobre --accent #ffd166 .......... 12.07 · AAA
-   - --titulo #1b3a5b sobre blanco ................. 11.65 · AAA
-   - --foreground #1a1a1a sobre blanco ............. 17.40 · AAA
-   - --muted #5c6b66 sobre blanco ................... 5.60 · AA
-   - --enlace #0b5fa5 sobre blanco .................. 6.57 · AA
-   - --primary #1d4ed8 sobre --primary-suave ........ 5.87 · AA
+                                              claro        oscuro
+   - --banda-texto  sobre --banda-fondo ..... 11.65 AAA    14.63 AAA
+   - --banda-bajada sobre --banda-fondo ......  9.30 AAA    10.87 AAA
+   - --banda-fino   sobre --banda-fondo ......  8.65 AAA     9.84 AAA
+   - --accent       sobre --banda-fondo ......  8.08 AAA    10.15 AAA
+   - --accent-foreground sobre --accent ..... 12.07 AAA    12.07 AAA
+   - --titulo     sobre --background ........ 11.65 AAA    10.30 AAA
+   - --foreground sobre --background ........ 17.40 AAA    16.44 AAA
+   - --muted      sobre --background .........  5.60 AA      9.04 AAA
+   - --enlace     sobre --background .........  6.57 AA      9.33 AAA
+   - --primary    sobre --primary-suave ......  5.87 AA      6.10 AA
    ============================================================ */
 
 .ps-docentes {
   scroll-margin-top: 90px;
   padding: clamp(38px, 6vw, 64px) 0;
-  /* mismo azul que --titulo, pero escrito plano: aca es fondo, no texto,
-     y si algun dia cambia el token de titulos esto no debe seguirlo */
-  background: #1b3a5b;
+  /* token propio y no --titulo: aca el azul es fondo, no texto, y en modo
+     oscuro tiene que bajar de tono sin arrastrar a los titulares */
+  background: var(--banda-fondo);
 }
 /* En el inicio el visitante es el estudiante: el bloque respira menos. */
 .ps-docentes[data-variante="discreta"] {
@@ -43,7 +47,7 @@
   border-radius: var(--radius-sm);
   /* blanco al 14% sobre la banda: decorativo, no lleva texto encima */
   background: rgba(255, 255, 255, 0.14);
-  color: #fff;
+  color: var(--banda-texto);
 }
 
 .ps-docentes .docentes-etiqueta {
@@ -52,19 +56,19 @@
   font-weight: 800;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: #ffd166;                     /* 8.08 sobre la banda · AAA */
+  color: var(--accent);               /* 8.08 claro · 10.15 oscuro · AAA */
 }
 .ps-docentes h2 {
   margin: 0 auto 10px;
   overflow-wrap: anywhere;
   max-width: 22ch;
-  color: #fff;                        /* 11.65 sobre la banda · AAA */
+  color: var(--banda-texto);          /* 11.65 claro · 14.63 oscuro · AAA */
   font-size: clamp(1.35rem, 1.15rem + 1vw, 2rem);
 }
 .ps-docentes .docentes-bajada {
   margin: 0 auto;
   max-width: 60ch;
-  color: #dbe7f5;                     /* 9.30 sobre la banda · AAA */
+  color: var(--banda-bajada);         /* 9.30 claro · 10.87 oscuro · AAA */
 }
 
 /* Cuatro tarjetas blancas: 1 · 2 · 4 columnas, la fila siempre cierra. */
@@ -104,7 +108,7 @@
 @media (hover: hover) {
   .ps-docentes .docentes-tarjeta:hover {
     transform: translateY(-4px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14), 0 16px 36px rgba(0, 0, 0, 0.24);
+    box-shadow: var(--sombra-alta);
   }
 }
 .ps-docentes .docentes-tarjeta-icono {
@@ -170,8 +174,8 @@
 }
 .ps-docentes .docentes-secundario {
   background: transparent;
-  color: #fff;                        /* 11.65 sobre la banda · AAA */
-  border: 2px solid #fff;
+  color: var(--banda-texto);          /* 11.65 claro · 14.63 oscuro · AAA */
+  border: 2px solid var(--banda-texto);
 }
 @media (hover: hover) {
   .ps-docentes .docentes-boton:hover { filter: brightness(0.93); }
@@ -185,14 +189,14 @@
   margin: 18px 0 0;
   text-align: center;
   font-size: 0.9rem;
-  color: #cfe0f2;                     /* 8.65 sobre la banda · AAA */
+  color: var(--banda-fino);           /* 8.65 claro · 9.84 oscuro · AAA */
 }
 
 /* Sobre azul oscuro el foco azul del sistema no se ve. Solo se cambia
    en lo que esta sobre la banda; dentro de las tarjetas blancas manda
    el azul de siempre. */
 .ps-docentes:focus-visible,
-.ps-docentes .docentes-acciones a:focus-visible { outline-color: #fff; }
+.ps-docentes .docentes-acciones a:focus-visible { outline-color: var(--banda-texto); }
 
 @media (forced-colors: active) {
   .ps-docentes .docentes-tarjeta,

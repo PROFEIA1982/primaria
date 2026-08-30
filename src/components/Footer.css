@@ -1,17 +1,22 @@
 /* ============================================================
    Pie del sitio. Todo prefijado con #footer-principal.
 
+   Los colores salieron de aca y pasaron a tokens (--pie-*) en
+   src/index.css: el pie tiene que cambiar con el tema como todo lo demas.
+
    Contrastes calculados con la formula WCAG 2.1, no estimados:
-   - blanco #ffffff sobre #0f2740 ... 15.17 · AAA  (enlaces del pie)
-   - gris   #c3d0de sobre #0f2740 .... 9.68 · AAA  (linea de que es esto)
-   - ambar  #ffd166 sobre #0f2740 ... 10.52 · AAA  (hover y foco)
-   - gris   #c3d0de sobre #0a1c2e ... 11.00 · AAA  (franja legal)
-   - ambar  #ffd166 sobre #0a1c2e ... 11.95 · AAA  (hover en la franja)
+                                   claro          oscuro
+   - --pie-enlace sobre --pie-fondo  15.17 AAA     18.83 AAA  (enlaces)
+   - --pie-texto  sobre --pie-fondo  12.99 AAA     16.13 AAA  (cuerpo)
+   - --pie-tenue  sobre --pie-fondo   9.68 AAA     11.02 AAA  (que es esto)
+   - --pie-realce sobre --pie-fondo  10.52 AAA     13.06 AAA  (hover y foco)
+   - --pie-tenue  sobre --pie-legal  11.00 AAA     11.50 AAA  (franja legal)
+   - --pie-realce sobre --pie-legal  11.95 AAA     13.62 AAA  (hover legal)
    ============================================================ */
 
 #footer-principal {
-  background: #0f2740;
-  color: #e8eef6;
+  background: var(--pie-fondo);
+  color: var(--pie-texto);
   margin-top: clamp(48px, 8vw, 88px);
 }
 
@@ -38,7 +43,7 @@
 #footer-principal .footer-descripcion {
   margin: 0;
   max-width: 56ch;
-  color: #c3d0de;
+  color: var(--pie-tenue);
   font-size: 0.97rem;
 }
 
@@ -59,7 +64,7 @@
   overflow-wrap: anywhere;
   min-height: 44px;          /* minimo de toque, tambien con raton */
   padding: 4px 0;
-  color: #ffffff;
+  color: var(--pie-enlace);
   font-weight: 700;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -67,19 +72,19 @@
 #footer-principal .footer-lista a svg { flex: 0 0 auto; opacity: 0.85; }
 @media (hover: hover) {
   #footer-principal .footer-lista a:hover {
-    color: #ffd166;
-    border-bottom-color: #ffd166;
+    color: var(--pie-realce);
+    border-bottom-color: var(--pie-realce);
   }
 }
 #footer-principal a:focus-visible {
-  outline: 3px solid #ffd166;
+  outline: 3px solid var(--pie-realce);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
 /* --- Franja legal: una sola linea --- */
 #footer-principal .footer-legal {
-  background: #0a1c2e;
+  background: var(--pie-legal);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 #footer-principal .footer-legal-caja {
@@ -89,15 +94,15 @@
 #footer-principal .footer-legal p {
   margin: 0;
   font-size: 0.9rem;
-  color: #c3d0de;
+  color: var(--pie-tenue);
 }
 #footer-principal .footer-legal a {
-  color: #c3d0de;
+  color: var(--pie-tenue);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 @media (hover: hover) {
-  #footer-principal .footer-legal a:hover { color: #ffd166; }
+  #footer-principal .footer-legal a:hover { color: var(--pie-realce); }
 }
 
 @media (forced-colors: active) {

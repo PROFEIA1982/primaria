@@ -25,6 +25,62 @@
 .ps-item[data-tamano="grande"] { --item-fuente: 1.25rem; }
 .ps-item[data-tamano="mayor"]  { --item-fuente: 1.55rem; }
 
+/* --- Boton de escuchar ---
+   Va en la esquina de arriba del recuadro, discreto: no compite con el
+   enunciado, pero queda a la vista de quien lo anda buscando.
+   - --titulo #1b3a5b sobre blanco ......... 11.65 (claro)  · AAA
+   - --border-fuerte sobre el fondo ......... 3.50 (claro)  · borde de control
+   Los mismos tokens en oscuro dan 8.91 y 6.09: los cuatro estados estan
+   en la tabla de src/index.css. */
+.ps-item .item-cima {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.ps-item .item-escuchar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* dedos de nino: el alto y el ancho minimos son de toque, no de adorno */
+  min-height: var(--toque-min);
+  min-width: var(--toque-min);
+  padding: 10px 14px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--titulo);
+  font: inherit;
+  /* en rem y no en em: el boton no crece con los tres tamanos de letra,
+     que son para el enunciado, no para los controles */
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.ps-item .item-escuchar svg { flex: 0 0 auto; }
+/* Leyendo = fondo del color de la materia + borde + la palabra "Parar".
+   El color nunca va solo. */
+.ps-item .item-escuchar[aria-pressed="true"] {
+  background: var(--acento, var(--primary));
+  border-color: var(--acento, var(--primary));
+  color: var(--primary-foreground);
+}
+/* El aro se separa 3px para que caiga sobre el fondo de la tarjeta y no
+   encima del boton ya pintado del color de la materia. */
+.ps-item .item-escuchar:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+@media (hover: hover) {
+  .ps-item .item-escuchar { transition: transform 0.15s ease; }
+  .ps-item .item-escuchar:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ps-item .item-escuchar { transition: none; }
+  .ps-item .item-escuchar:hover { transform: none; }
+}
+
 .ps-item .item-enunciado {
   /* em y no rem: asi crece con el tamano que pidio el estudiante */
   font-size: 1.1em;
@@ -189,6 +245,8 @@
 .ps-item[data-contraste="alto"] .item-marca { font-weight: 900; }
 
 @media (forced-colors: active) {
+  .ps-item .item-escuchar { border: 2px solid ButtonText; }
+  .ps-item .item-escuchar[aria-pressed="true"] { border: 3px solid Highlight; }
   .ps-item .item-opcion { border: 2px solid ButtonText; }
   .ps-item .item-opcion[data-estado="correcta"],
   .ps-item .item-opcion[data-estado="incorrecta"] { border: 3px solid ButtonText; }

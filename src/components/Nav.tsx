@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Eye, Menu, Moon, Sun, X } from "lucide-react";
 import { IMG_LOGO_EVI, MATERIAS } from "../config";
+import { useApariencia } from "../lib/apariencia";
 import "./Nav.css";
 
 // Navegacion. En celular se abre con la hamburguesa; en pantalla grande
 // siempre esta a la vista, porque un nino no deberia tener que buscarla.
 export default function Nav() {
   const [abierto, setAbierto] = useState(false);
+  // Los dos apoyos de apariencia viven aca y en ningun otro lado: dos
+  // copias del estado terminan mostrando cosas distintas en cada una.
+  const { tema, vision, alternarTema, alternarVision } = useApariencia();
 
   return (
     <header id="nav-principal">
@@ -54,6 +58,37 @@ export default function Nav() {
               <NavLink to="/contacto" onClick={() => setAbierto(false)}>Contacto</NavLink>
             </li>
           </ul>
+
+          {/* Los dos botones van dentro del menu y no en la barra: en un
+              celular de 320px, al lado del logo y de la hamburguesa, no
+              caben sin dejar el menu apretado. Con el menu abierto quedan
+              a la vista, que es donde se buscan. */}
+          <div className="nav-apariencia" role="group" aria-label="Apariencia de la página">
+            <button
+              type="button"
+              className="nav-ap-boton"
+              aria-pressed={tema === "oscuro"}
+              aria-label="Modo oscuro"
+              onClick={alternarTema}
+            >
+              {/* El icono cambia con el estado: encendido no se dice solo
+                  con el color de fondo del boton. */}
+              {tema === "oscuro"
+                ? <Sun size={20} strokeWidth={2.2} aria-hidden="true" />
+                : <Moon size={20} strokeWidth={2.2} aria-hidden="true" />}
+              <span className="nav-ap-texto">Modo oscuro</span>
+            </button>
+            <button
+              type="button"
+              className="nav-ap-boton"
+              aria-pressed={vision === "alto"}
+              aria-label="Mejor visión"
+              onClick={alternarVision}
+            >
+              <Eye size={20} strokeWidth={2.2} aria-hidden="true" />
+              <span className="nav-ap-texto">Mejor visión</span>
+            </button>
+          </div>
         </nav>
       </div>
     </header>

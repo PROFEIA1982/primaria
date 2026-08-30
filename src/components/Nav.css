@@ -21,11 +21,16 @@
   padding: 4px 2px;
   text-decoration: none;
 }
-/* Alto fijo y ancho automatico: el logo no se deforma ni empuja el menu. */
+/* Alto fijo y ancho automatico: el logo no se deforma ni empuja el menu.
+   La placa solo aparece en oscuro: el archivo del logo trae la letra en
+   negro y el rotulo en gris, y sobre el fondo oscuro se desaparecian. */
 #nav-principal .nav-marca img {
   height: 38px;
   width: auto;
   display: block;
+  padding: 3px 6px;
+  border-radius: 8px;
+  background: var(--marca-placa);
 }
 @media (min-width: 860px) {
   #nav-principal .nav-marca img { height: 44px; }
@@ -73,6 +78,54 @@
   box-shadow: inset 0 -3px 0 var(--acento);
 }
 
+/* --- Apariencia: claro/oscuro y mejor vision ---
+   Los dos botones van juntos, con blanco de toque de 48px, y no aprietan
+   la barra en celular porque viven dentro del menu desplegable.
+   Contrastes (tokens, calculados en src/index.css):
+   - --titulo sobre --background ... 11.65 claro · 10.30 oscuro · AAA
+   - --border-fuerte sobre --background 3.50 claro · 6.09 oscuro · borde
+   - encendido: --primary-foreground sobre --primary  6.70 claro · 7.69 oscuro */
+#nav-principal .nav-apariencia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#nav-principal .nav-ap-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: var(--toque-min);
+  min-height: var(--toque-min);
+  padding: 0 14px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--titulo);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+#nav-principal .nav-ap-boton svg { flex: 0 0 auto; }
+/* Encendido = fondo azul + borde mas grueso + el icono cambiado. Tres
+   senales, ninguna de ellas solo el color. */
+#nav-principal .nav-ap-boton[aria-pressed="true"] {
+  border-width: 3px;
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+#nav-principal .nav-ap-boton:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+@media (hover: hover) {
+  #nav-principal .nav-ap-boton { transition: transform 0.15s ease; }
+  #nav-principal .nav-ap-boton:hover { transform: translateY(-2px); }
+}
+
 /* Celular: el menu se despliega con la hamburguesa. */
 @media (max-width: 859px) {
   #nav-principal .nav-menu {
@@ -84,14 +137,56 @@
   #nav-principal .nav-caja { flex-wrap: wrap; }
   #nav-principal .nav-lista { flex-direction: column; }
   #nav-principal .nav-lista a { width: 100%; }
+  /* Los dos botones se reparten el renglon: apilados sumarian dos filas
+     mas de bajada antes de llegar a Contacto. A 320px cada uno se queda
+     con unos 136px y el texto no se sale porque puede partir. */
+  #nav-principal .nav-apariencia {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: var(--borde-ancho) solid var(--border);
+  }
+  #nav-principal .nav-ap-boton {
+    padding: 6px 8px;
+    font-size: 0.88rem;
+  }
+  #nav-principal .nav-ap-texto { min-width: 0; overflow-wrap: anywhere; }
 }
 
 /* Escritorio: siempre visible, sin boton. */
 @media (min-width: 860px) {
   #nav-principal .nav-hamburguesa { display: none; }
-  #nav-principal .nav-menu { display: block !important; }
+  /* flex y no block: los enlaces y los dos botones de apariencia comparten
+     el renglon en vez de quedar uno debajo del otro. */
+  #nav-principal .nav-menu {
+    display: flex !important;
+    align-items: center;
+    gap: 4px 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  /* En escritorio manda el icono: con las dos palabras completas el menu
+     se partia en dos filas. El nombre sigue ahi para el lector de
+     pantalla, en el aria-label del boton. */
+  #nav-principal .nav-ap-texto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  #nav-principal .nav-ap-boton { padding: 0; }
 }
 
 @media (forced-colors: active) {
   #nav-principal .nav-lista a.active { box-shadow: inset 0 -3px 0 ButtonText; }
+  #nav-principal .nav-ap-boton { border: 2px solid ButtonText; }
+  #nav-principal .nav-ap-boton[aria-pressed="true"] { border: 3px solid Highlight; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #nav-principal .nav-ap-boton { transition: none; }
+  #nav-principal .nav-ap-boton:hover { transform: none; }
 }
