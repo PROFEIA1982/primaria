@@ -40,7 +40,9 @@
   margin: 0 0 40px;
   padding: 0;
 }
-@media (min-width: 620px) {
+/* En em y no en px: con el texto al 200% el viewport sigue midiendo lo
+   mismo, pero las dos columnas ya no caben. En em la rejilla se entera. */
+@media (min-width: 42em) {
   #contacto-principal .contacto-canales { grid-template-columns: repeat(2, 1fr); }
 }
 #contacto-principal .contacto-canal {
@@ -57,7 +59,12 @@
   color: var(--foreground);
 }
 #contacto-principal .contacto-canal:hover { background: var(--secondary); }
-#contacto-principal .contacto-canal .canal-icono { font-size: 1.6rem; }
+#contacto-principal .contacto-canal .canal-icono { flex: 0 0 auto; font-size: 1.6rem; }
+/* sin esto, un correo largo no parte y revienta la tarjeta al hacer zoom */
+#contacto-principal .contacto-canal > span:not(.canal-icono) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 #contacto-principal .contacto-canal .canal-nombre { font-weight: 700; display: block; }
 #contacto-principal .contacto-canal .canal-dato {
   color: var(--enlace);

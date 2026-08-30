@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { enviarContacto, registrarVisita, leerVisitas } from "../lib/api";
 import { CORREO, SOPORTE_VISIBLE, TELEFONO_VISIBLE, WA_SOPORTE, waLink } from "../config";
+import BloqueDocentes from "../components/BloqueDocentes";
 import "./ContactoPage.css";
 
 type Estado = "quieto" | "enviando" | "listo" | "error";
@@ -11,6 +13,21 @@ export default function ContactoPage() {
   const [mensaje, setMensaje] = useState("");
   const [estado, setEstado] = useState<Estado>("quieto");
   const [visitas, setVisitas] = useState<number | null>(null);
+  const ubicacion = useLocation();
+
+  // Quien llega desde la ruta vieja /anuncios viene a ver el aviso para
+  // docentes, no el formulario: se le baja hasta el bloque y se le pone
+  // el foco ahi, para que tambien lo note quien navega con teclado.
+  useEffect(() => {
+    const estado = ubicacion.state as { irA?: string } | null;
+    if (!estado?.irA) return;
+    const destino = document.getElementById(estado.irA);
+    if (!destino) return;
+    const quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    destino.scrollIntoView({ behavior: quieto ? "auto" : "smooth", block: "start" });
+    destino.setAttribute("tabindex", "-1");
+    destino.focus({ preventScroll: true });
+  }, [ubicacion.state]);
 
   // La visita se cuenta una sola vez por sesion del navegador.
   useEffect(() => {
@@ -37,6 +54,7 @@ export default function ContactoPage() {
   }
 
   return (
+    <>
     <section id="contacto-principal" className="ps-contenedor ps-seccion">
       <p className="contacto-kicker">Con gusto le ayudamos</p>
       <h1>Escríbanos</h1>
@@ -150,5 +168,8 @@ export default function ContactoPage() {
         </p>
       )}
     </section>
+
+    <BloqueDocentes />
+    </>
   );
 }

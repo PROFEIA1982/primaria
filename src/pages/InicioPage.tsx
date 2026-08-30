@@ -17,6 +17,7 @@ import {
 import { IMG_HERO, MATERIAS, URL_DESCARGA_OFFLINE, URL_OFFLINE, type SlugMateria } from "../config";
 import { traerConteos, type ConteoMateria } from "../lib/api";
 import { Cargando, ErrorCarga } from "../components/Estados";
+import BloqueDocentes from "../components/BloqueDocentes";
 import "./InicioPage.css";
 
 // Un icono por materia. Se elige por slug para no depender del orden.
@@ -158,7 +159,10 @@ export default function InicioPage() {
         </div>
       </section>
 
-      {/* 5 · Practica sin internet */}
+      {/* 5 · Aviso para maestros y familias */}
+      <BloqueDocentes variante="discreta" />
+
+      {/* 6 · Practica sin internet */}
       <section id="inicio-sin-internet">
         <div className="ps-contenedor">
           <span className="sin-net-icono" aria-hidden="true">
@@ -224,6 +228,7 @@ export default function InicioPage() {
               rel="noopener noreferrer"
             >
               Abrí la versión en línea →
+              <span className="ps-solo-lectores"> (se abre en otra pestaña)</span>
             </a>
           </div>
         </div>

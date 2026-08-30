@@ -43,11 +43,7 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
   if (practica.fase === "examen") {
     return (
       <section id="practica-examen" style={acento} aria-label={`Práctica de ${datos.nombre}`}>
-        <ExamenPanel
-          nombreMateria={datos.nombre}
-          emoji={datos.emoji}
-          practica={practica}
-        />
+        <ExamenPanel nombreMateria={datos.nombre} practica={practica} />
       </section>
     );
   }
@@ -69,13 +65,35 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
 
   // --- Pantalla 1: la seleccion ---
   return (
-    <section id="practica-seleccion" className="ps-contenedor ps-seccion" style={acento}>
-      <h1>
-        <span className="sel-icono" aria-hidden="true">
-          <Icono size={30} strokeWidth={1.9} />
-        </span>
-        {datos.nombre}
-      </h1>
+    <>
+      <section
+        id="practica-hero"
+        style={acento}
+        aria-labelledby="practica-hero-titulo"
+      >
+        <div className="ps-contenedor hero-caja">
+          <div className="hero-texto">
+            <span className="hero-chip">
+              <Icono size={22} strokeWidth={2} aria-hidden="true" />
+              Sexto grado
+            </span>
+            <h1 id="practica-hero-titulo">{datos.nombre}</h1>
+            <p className="hero-gancho">{datos.gancho}</p>
+          </div>
+          <img
+            className="hero-arte"
+            src={datos.hero}
+            alt=""
+            width={860}
+            height={560}
+            fetchPriority="high"
+            decoding="async"
+            onError={(e) => { e.currentTarget.style.display = "none"; }}
+          />
+        </div>
+      </section>
+
+      <section id="practica-seleccion" className="ps-contenedor ps-seccion" style={acento}>
 
       {practica.estadoInicial === "cargando" && <EsqueletoPregunta />}
 
@@ -110,5 +128,6 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
         </>
       )}
     </section>
+    </>
   );
 }

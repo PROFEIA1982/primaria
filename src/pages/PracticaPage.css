@@ -23,17 +23,6 @@
   align-items: center;
   gap: 12px;
 }
-#practica-seleccion .sel-icono {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-sm);
-  background: var(--suave, var(--primary-suave));
-  color: var(--acento, var(--primary));
-}
 #practica-seleccion .sel-bajada {
   max-width: 60ch;
   margin: 0 0 28px;
@@ -598,4 +587,81 @@
   #practica-resultados .res-fallada { border: 1px solid ButtonText; }
   #practica-resultados .res-tema-barra span { background: Highlight; }
   #practica-resultados .res-boton-secundario { border: 2px solid ButtonText; }
+}
+
+/* ============================================================
+   HEROE DE MATERIA (pantalla 1)
+   Dos columnas: el texto a la izquierda, la ilustracion a la derecha.
+   Nunca una encima de la otra, ni en celular. La ilustracion es
+   decorativa (alt vacio): el nombre de la materia ya va en el h1.
+
+   Contrastes calculados con la formula WCAG 2.1, no estimados:
+   - --titulo #1b3a5b sobre crema  #fdede3 ... 10.21 · AAA
+   - --titulo #1b3a5b sobre lila   #f1eafb .... 9.93 · AAA
+   - --titulo #1b3a5b sobre menta  #e8f6ee ... 10.45 · AAA
+   - --titulo #1b3a5b sobre hielo  #e8f1fb ... 10.21 · AAA
+   - --muted  #5c6b66 sobre el mas oscuro ..... 4.77 · AA
+   - acento de materia sobre su propio suave .. 4.78 · AA (el mas bajo)
+   ============================================================ */
+#practica-hero {
+  background: var(--suave, var(--secondary));
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+#practica-hero .hero-caja {
+  display: grid;
+  gap: 6px 32px;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding-top: clamp(26px, 4.5vw, 44px);
+  padding-bottom: clamp(26px, 4.5vw, 44px);
+}
+@media (min-width: 800px) {
+  #practica-hero .hero-caja { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+}
+
+#practica-hero .hero-texto { min-width: 0; }
+#practica-hero .hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--background);
+  border: 2px solid var(--acento, var(--primary));
+  color: var(--acento, var(--primary));
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+#practica-hero h1 { margin: 0 0 8px; }
+#practica-hero .hero-gancho {
+  margin: 0;
+  max-width: 34ch;
+  font-size: clamp(1.02rem, 0.98rem + 0.35vw, 1.22rem);
+  color: var(--muted);
+}
+
+#practica-hero .hero-arte {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 230px;
+  object-fit: contain;
+  object-position: center right;
+  justify-self: end;
+}
+/* En celular la ilustracion va debajo del texto y mas chica: primero se
+   lee de que materia se trata y despues se ve el dibujo. */
+@media (max-width: 799px) {
+  #practica-hero .hero-arte {
+    max-height: 130px;
+    object-position: center left;
+    justify-self: start;
+    margin-top: 14px;
+  }
+}
+@media (forced-colors: active) {
+  #practica-hero .hero-arte { display: none; }
+  #practica-hero .hero-chip { border: 2px solid ButtonText; }
 }

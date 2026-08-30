@@ -10,12 +10,15 @@
   background-image: var(--hero);
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 100% auto;
+  /* con tope: pasados los 1600 la ilustracion deja de crecer, si no
+     se le sube al texto en pantallas grandes */
+  background-size: min(100%, 1600px) auto;
   color: #fff;
   /* El texto vive arriba, sobre el azul plano; la ilustracion queda
      abajo y no se le mete debajo a ninguna letra. */
-  /* el relleno de abajo deja libre toda la franja de la ilustracion */
-  padding: clamp(36px, 7vw, 72px) 0 clamp(130px, 34vw, 400px);
+  /* La ilustracion mide 1600x420, o sea que ocupa alto = ancho / 3.81.
+     El relleno de abajo reserva justo esa franja y ni un pixel mas. */
+  padding: clamp(36px, 7vw, 72px) 0 clamp(105px, 26.5vw, 420px);
   text-align: center;
 }
 #inicio-hero .hero-icono {
