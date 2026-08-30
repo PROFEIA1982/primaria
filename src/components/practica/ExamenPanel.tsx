@@ -100,18 +100,15 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
         style={{ scrollMarginTop: `${altoMenu + altoBarra + 12}px` }}
         aria-label={`Pregunta ${indice + 1} de ${items.length}`}
       >
-        {/* La key hace que la barra se rearme con cada pregunta: al
-            desmontarse corta la lectura y el boton vuelve a "Escuchar". */}
         <BarraApoyo
-          key={`apoyo-${item.id}`}
-          enunciado={item.enunciado}
-          opciones={item.opciones}
           tamano={tamano}
           alCambiarTamano={setTamano}
           altoContraste={altoContraste}
           alCambiarContraste={setAltoContraste}
         />
 
+        {/* La key rearma el item con cada pregunta: al desmontarse corta la
+            lectura en voz alta y el boton vuelve a decir "Escuchar". */}
         <ItemRenderer
           key={item.id}
           enunciado={item.enunciado}
@@ -122,6 +119,7 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           imagenAlt={item.imagen_alt}
           tamano={tamano}
           altoContraste={altoContraste}
+          conVoz
         />
 
         {respondido && (
