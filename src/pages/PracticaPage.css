@@ -4,20 +4,25 @@
    #practica-resultados. Ni un selector suelto: esta hoja la carga
    la app entera y no debe tocar nada de afuera.
 
-   Contrastes calculados con la formula WCAG 2.1, no a ojo:
-   - --titulo #1b3a5b sobre --secondary #f2f6fa .... 10.73 · AAA
-   - --error #b3261e sobre --secondary ............. 6.02 · AA
-   - --accent-fuerte #b45309 sobre --secondary ..... 4.62 · AA
-   - --success #1e7a46 sobre --secondary ........... 4.93 · AA
-   - --muted #5c6b66 sobre blanco .................. 5.60 · AA
+   Contrastes calculados con la formula WCAG 2.1, no a ojo. Ahora hay
+   cuatro estados (claro/oscuro por normal/mejor vision) y los tokens
+   cambian con el tema, asi que se anotan los dos normales; los dos de
+   mejor vision estan en la tabla de src/index.css y todos pasan AAA.
+                                              claro      oscuro
+   - --titulo        sobre --secondary ...... 10.73 AAA   8.91 AAA
+   - --error         sobre --secondary .......  6.02 AA    7.30 AAA
+   - --accent-fuerte sobre --secondary .......  4.62 AA    8.26 AAA
+   - --success       sobre --secondary .......  4.93 AA    8.87 AAA
+   - --muted         sobre --background ......  5.60 AA    9.04 AAA
 
-   Tarjetas de tema (pantalla 1), tonos #fdede3 / #f1eafb / #e8f6ee /
-   #e8f1fb, los mismos suaves de las materias:
-   - --titulo #1b3a5b sobre el tono mas oscuro .... 9.93 · AAA
-   - --muted  #5c6b66 sobre el tono mas oscuro .... 4.77 · AA
-   - blanco sobre el acento de materia ............ 5.46 · AA (el mas bajo)
-   - acento de materia sobre su propio suave ...... 4.78 · AA (el mas bajo)
-   - --border-fuerte #7c8b98 sobre blanco ......... 3.50 · borde visible
+   Tarjetas de tema (pantalla 1), tonos --tono-0 a --tono-3 (los mismos
+   suaves de las materias, con nombre propio porque aca son fondo de
+   texto):
+   - --titulo sobre el tono mas dificil ......  9.93 AAA   8.46 AAA
+   - --muted  sobre el tono mas dificil ......  4.77 AA    7.42 AAA
+   - --primary-foreground sobre el acento ....  5.46 AA    7.69 AAA
+   - acento de materia sobre su propio suave .  4.78 AA    6.10 AA
+   - --border-fuerte sobre --background ......  3.50        6.09
    ============================================================ */
 
 /* ============================================================
@@ -71,7 +76,7 @@
   gap: 12px;
   min-width: 0;
   padding: 16px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
@@ -119,15 +124,16 @@
    alto, le entre un nombre de una palabra o de cuatro.
 
    Contrastes calculados con la formula WCAG 2.1:
-   - --titulo  #1b3a5b sobre los cuatro tonos ... 9.93 a 10.45 · AAA
-   - --muted   #5c6b66 sobre los cuatro tonos ... 4.77 a  5.03 · AA
-   - blanco sobre el acento de materia ..........  5.46 · AA (Espanol, el mas bajo)
-   - --border-fuerte #7c8b98 sobre blanco .......  3.50 · borde de control (3:1)
+                                           claro          oscuro
+   - --titulo sobre los cuatro tonos ..... 9.93 a 10.45   8.46 a 9.20
+   - --muted  sobre los cuatro tonos ..... 4.77 a  5.03   7.42 a 8.08
+   - --primary-foreground sobre el acento  5.46 (el mas bajo)  7.69
+   - --border-fuerte sobre --background .. 3.50           6.09
 */
 #practica-seleccion .sel-todos,
 #practica-seleccion .sel-tema {
   position: relative;
-  border: 2px solid var(--border-fuerte);   /* 3.50 contra el blanco de la pagina */
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);   /* 3.50 contra el blanco de la pagina */
   border-radius: var(--radius);
   background: var(--tono, var(--secondary));
   color: var(--titulo);
@@ -212,10 +218,12 @@
   }
 }
 
-#practica-seleccion .sel-tema[data-tono="0"] { --tono: #fdede3; }  /* durazno */
-#practica-seleccion .sel-tema[data-tono="1"] { --tono: #f1eafb; }  /* lila    */
-#practica-seleccion .sel-tema[data-tono="2"] { --tono: #e8f6ee; }  /* menta   */
-#practica-seleccion .sel-tema[data-tono="3"] { --tono: #e8f1fb; }  /* hielo   */
+/* Los cuatro tonos viven en src/index.css: escritos aqui a mano se
+   quedaban claros en modo oscuro y el nombre del tema desaparecia. */
+#practica-seleccion .sel-tema[data-tono="0"] { --tono: var(--tono-0); }  /* durazno */
+#practica-seleccion .sel-tema[data-tono="1"] { --tono: var(--tono-1); }  /* lila    */
+#practica-seleccion .sel-tema[data-tono="2"] { --tono: var(--tono-2); }  /* menta   */
+#practica-seleccion .sel-tema[data-tono="3"] { --tono: var(--tono-3); }  /* hielo   */
 
 /* La marca: un aro vacio que siempre esta ahi y se llena al elegir. Guarda
    su lugar desde el principio para que la tarjeta no brinque al tocarla. */
@@ -226,7 +234,7 @@
   flex: 0 0 auto;
   width: 28px;
   height: 28px;
-  border: 2px solid var(--border-fuerte);
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
   border-radius: 50%;
   background: var(--background);
 }
@@ -279,7 +287,7 @@
    Panel compacto: ya decidio lo dificil (el tema), esto es un ajuste. */
 #practica-seleccion .sel-panel {
   padding: 16px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--secondary);
 }
@@ -304,7 +312,7 @@
   min-width: 0;
   min-height: var(--toque-min);
   padding: 10px 14px;
-  border: 2px solid var(--border-fuerte);
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
   border-radius: 999px;
   background: var(--background);
   cursor: pointer;
@@ -374,7 +382,7 @@
   gap: 10px;
   margin: 0 0 20px;
   padding: 14px 16px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-left: 5px solid var(--accent-fuerte);
   border-radius: var(--radius-sm);
   background: var(--secondary);
@@ -395,7 +403,7 @@
 #practica-seleccion .practica-esqueleto {
   margin: 24px 0 0;
   padding: clamp(16px, 4vw, 28px);
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
@@ -498,15 +506,17 @@
 }
 
 /* --- Barra de apoyo ---
-   Escuchar la pregunta, agrandar la letra y subir el contraste. Va pegada
-   arriba del recuadro de la pregunta y no en la barra del reloj: ahi
-   quedaria apretada y en celular se comeria dos lineas de pantalla.
+   Agrandar la letra y subir el contraste del recuadro. Escuchar ya no
+   vive aca: se fue al item mismo (ItemRenderer), donde el estudiante
+   esta mirando. Tenerlo en los dos lados dejaba dos botones haciendo lo
+   mismo en la misma pantalla.
 
    Contrastes calculados con la formula WCAG 2.1:
-   - --titulo #1b3a5b sobre blanco ............. 11.65 · AAA
-   - --muted  #5c6b66 sobre --secondary ........  5.16 · AA
-   - blanco sobre el acento de materia .........  5.46 · AA (Espanol, el mas bajo)
-   - --border-fuerte #7c8b98 sobre blanco ......  3.50 · borde de control (3:1)
+                                              claro      oscuro
+   - --titulo sobre --background ............ 11.65 AAA  10.30 AAA
+   - --muted  sobre --secondary ..............  5.16 AA   7.82 AAA
+   - --primary-foreground sobre el acento ....  5.46 AA   7.69 AAA
+   - --border-fuerte sobre --background ......  3.50       6.09
 */
 #practica-examen .examen-apoyo {
   display: flex;
@@ -515,7 +525,7 @@
   gap: 10px;
   margin: 0 0 18px;
   padding: 10px 12px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--secondary);
 }
@@ -541,7 +551,7 @@
   min-height: var(--toque-min);
   min-width: var(--toque-min);
   padding: 10px 14px;
-  border: 2px solid var(--border-fuerte);
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
   border-radius: var(--radius-sm);
   background: var(--background);
   color: var(--titulo);       /* 11.65 sobre blanco · AAA */
@@ -636,7 +646,7 @@
   --nivel: var(--titulo);
   margin: 8px 0 24px;
   padding: 28px 24px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-top: 8px solid var(--nivel);
   border-radius: var(--radius);
   background: var(--secondary);
@@ -681,7 +691,7 @@
   gap: 10px;
   margin: 0 0 24px;
   padding: 16px 18px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--secondary);
 }
@@ -715,7 +725,7 @@
   grid-template-columns: 1fr auto;
   gap: 6px 14px;
   padding: 14px 16px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-left: 5px solid var(--nivel);
   border-radius: var(--radius-sm);
   background: var(--background);
@@ -759,7 +769,7 @@
 }
 #practica-resultados .res-fallada {
   padding: 18px 20px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
@@ -784,7 +794,7 @@
 #practica-resultados .res-fallada-enunciado th,
 #practica-resultados .res-fallada-enunciado td {
   padding: 8px 12px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   text-align: left;
   white-space: nowrap;
 }
@@ -937,22 +947,29 @@
   color: var(--muted);
 }
 
+/* La ilustracion trae su propio fondo claro pintado en el archivo. En
+   claro ese fondo es el mismo de la banda y no se nota; en oscuro, sin
+   la placa, quedaba un rectangulo blanco flotando. Asi el dibujo se lee
+   como una lamina puesta a proposito. */
 #practica-hero .hero-arte {
   display: block;
   width: 100%;
   height: auto;
   max-height: 230px;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--arte, transparent);
   object-fit: contain;
-  object-position: center right;
-  justify-self: end;
+  object-position: center;
+  justify-self: stretch;
 }
 /* En celular la ilustracion va debajo del texto y mas chica: primero se
    lee de que materia se trata y despues se ve el dibujo. */
 @media (max-width: 799px) {
   #practica-hero .hero-arte {
     max-height: 130px;
-    object-position: center left;
-    justify-self: start;
+    object-position: center;
+    justify-self: stretch;
     margin-top: 14px;
   }
 }

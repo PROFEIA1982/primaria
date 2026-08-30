@@ -5,35 +5,37 @@
    CONTRASTES (calculados con la formula WCAG 2.1, no a ojo).
    El hero es un degradado, asi que cada numero se saco contra el
    punto MAS CLARO del degradado, que es el peor caso:
-     · degradado: var(--primary) #1D4ED8 -> #143797 (negro al 30%)
-     · trama de puntos: blanco al 8% sobre #1D4ED8 = #2F5CDB (el pixel
-       mas claro de todo el hero; ahi es donde se mide)
-       blanco     sobre #2F5CDB ....  5.71  AA   (h1, grande: AAA)
-       #E8F1FB    sobre #2F5CDB ....  5.01  AA   (bajada)
-       tinta      sobre #FFD166 .... 12.07  AAA  (pildora del kicker)
-     Al otro extremo del degradado todo sube: blanco sobre #143797 = 10.38.
+     · el azul del fondo es --hero-azul, un token propio y no --primary:
+       en oscuro --primary es celeste y el hero habria quedado como un
+       foco en medio de la pagina.
+     · trama de puntos: blanco al 8% sobre --hero-azul. Ese es el pixel
+       mas claro de todo el hero; ahi es donde se mide.
+                             claro   oscuro   claro+vision  oscuro+vision
+       --hero-azul          #1D4ED8 #123A86    #0E2C66       #0E2C66
+       punto mas claro      #2F5CDB #254A90    #213D72       #213D72
+       --hero-texto encima     5.71    8.53      10.63         10.63
+       --hero-tenue encima     5.01    7.68      10.63          9.57
+       (5.71 y 5.01 son AA; el h1 es texto grande, o sea AAA)
+       --accent-foreground sobre --accent ... 12.07 AAA en los cuatro
 
-   Tarjetas de canal, sobre blanco #FFFFFF:
-       --titulo  #1B3A5B .......... 11.65  AAA  (nombre del canal)
-       --muted   #5C6B66 ..........  5.60  AA   (dato)
-       --enlace  #0B5FA5 ..........  6.57  AA   (llamado "Escribir →")
+   Tarjetas de canal, sobre --background:      claro     oscuro
+       --titulo  (nombre del canal) ........ 11.65 AAA  10.30 AAA
+       --muted   (dato) .....................  5.60 AA   9.04 AAA
+       --enlace  (llamado "Escribir →") .....  6.57 AA   9.33 AAA
    Iconos dentro de su pastilla (grafico: minimo 3.0, todos pasan):
-       --success  sobre --success-suave  ....  4.80
-       --sociales sobre --sociales-suave ....  6.06
-       --primary  sobre --primary-suave  ....  5.87
-       --accent-fuerte sobre --secondary ....  4.62
+       --success  sobre --success-suave  ....  4.80      8.53
+       --sociales sobre --sociales-suave ....  6.06      8.03
+       --primary  sobre --primary-suave  ....  5.87      6.10
+       --accent-fuerte sobre --secondary ....  4.62      8.26
 
-   Formulario, sobre --secondary #F2F6FA:
-       --foreground #1A1A1A ....... 16.03  AAA
-       --muted      #5C6B66 .......  5.16  AA   (notas)
-       --enlace     #0B5FA5 .......  6.05  AA
-   Boton: blanco sobre --primary ...  6.70  AA
+   Formulario, sobre --secondary:              claro     oscuro
+       --foreground ........................ 16.03 AAA  14.21 AAA
+       --muted (notas) ......................  5.16 AA   7.82 AAA
+       --enlace .............................  6.05 AA   8.07 AAA
+   Boton: --primary-foreground sobre --primary  6.70 AA   7.69 AAA
 
-   Tarjeta de "¿Se le ocurre algo para mejorar?", sobre blanco:
-       --accent-fuerte (iconos) ...  5.02  AA
-   Confirmacion, sobre --success-suave #E8F6EE:
-       --foreground #1A1A1A ....... 15.62  AAA
-       --enlace     #0B5FA5 .......  5.90  AA
+   Confirmacion, sobre --success-suave:
+       --foreground ........................ 15.62 AAA  13.67 AAA
    ============================================================ */
 
 /* --- 1. Hero --- */
@@ -44,12 +46,12 @@
   /* La trama va de primera para que quede ENCIMA del degradado; el
      degradado solo oscurece, nunca aclara, asi el peor caso de contraste
      es el punto de la trama y ya esta medido arriba. */
-  background-color: var(--primary);
+  background-color: var(--hero-azul);
   background-image:
     radial-gradient(rgba(255, 255, 255, 0.08) 1.3px, transparent 1.4px),
     linear-gradient(155deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.30) 100%);
   background-size: 26px 26px, auto;
-  color: var(--primary-foreground);
+  color: var(--hero-texto);
   text-align: center;
 }
 /* Resplandor de esquina. Decorativo puro: no lleva texto encima. */
@@ -94,7 +96,7 @@
 }
 #contacto-hero h1 {
   margin: 0 0 12px;
-  color: var(--primary-foreground);
+  color: var(--hero-texto);
   /* "Escríbanos" es una sola palabra larga: con el texto al 200% en un
      celular de 320px no cabe en una linea y sacaba la pagina de cuadro.
      Se le permite partir con guion antes que desbordar. */
@@ -105,16 +107,16 @@
   overflow-wrap: break-word;
   max-width: 44ch;
   margin: 0 auto;
-  color: var(--primary-suave);
+  color: var(--hero-tenue);
   font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
 }
-#contacto-hero :focus-visible { outline-color: var(--primary-foreground); }
+#contacto-hero :focus-visible { outline-color: var(--hero-texto); }
 
 /* --- 2. Aviso para estudiantes --- */
 #contacto-principal .contacto-aviso {
   margin: 0 0 32px;
   padding: 14px 16px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-left: 4px solid var(--primary);
   border-radius: var(--radius-sm);
   background: var(--primary-suave);
@@ -151,7 +153,7 @@
   gap: 6px;
   height: 100%;
   padding: 22px 20px 20px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
@@ -243,7 +245,7 @@
   grid-template-columns: minmax(0, 1fr);
   gap: 18px;
   padding: clamp(18px, 4vw, 28px);
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--secondary);
 }
@@ -269,7 +271,7 @@
   min-width: 0;
   max-width: 100%;
   padding: 12px 14px;
-  border: 2px solid var(--border-fuerte);
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
   border-radius: var(--radius-sm);
   background: var(--background);
   color: var(--foreground);
@@ -294,7 +296,7 @@
 
 #contacto-principal .contacto-invita {
   padding: clamp(18px, 4vw, 26px);
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-left: 4px solid var(--accent-fuerte);
   border-radius: var(--radius);
   background: var(--background);

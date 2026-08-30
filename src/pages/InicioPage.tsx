@@ -209,6 +209,11 @@ export default function InicioPage() {
                     <Link
                       to={`/${m.slug}`}
                       className="materia-tarjeta"
+                      // La tarjeta entera es el enlace. En modo de mejor
+                      // vision los enlaces van subrayados, y aca eso le
+                      // caeria a todo el texto de la tarjeta: data-tarjeta
+                      // lo saca de esa regla (ver src/index.css).
+                      data-tarjeta=""
                       style={{
                         ["--acento" as string]: m.color,
                         ["--suave" as string]: m.suave,

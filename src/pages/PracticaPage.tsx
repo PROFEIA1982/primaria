@@ -37,7 +37,12 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
   }
 
   const Icono = ICONOS[datos.slug];
-  const acento = { ["--acento" as string]: datos.color, ["--suave" as string]: datos.suave };
+  const acento = {
+    ["--acento" as string]: datos.color,
+    ["--suave" as string]: datos.suave,
+    // La placa de la ilustracion; ver el comentario de "arte" en config.ts.
+    ["--arte" as string]: datos.arte,
+  };
 
   // --- Pantalla 2: el examen ---
   if (practica.fase === "examen") {

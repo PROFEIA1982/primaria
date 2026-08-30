@@ -2,23 +2,28 @@
    Pagina de inicio. Cada seccion con su id y todo prefijado.
 
    Contrastes calculados con la formula WCAG 2.1 (contraste_wcag.py),
-   no a ojo. Si alguien cambia un color, hay que recalcular:
-   - blanco #ffffff sobre el azul del hero .......... 9.63 · AAA
-   - #eef3ff sobre el azul del hero ................. 8.67 · AAA
-   - tinta #1a1a1a sobre --accent #ffd166 .......... 12.07 · AAA
-   - --titulo #1b3a5b sobre blanco ................. 11.65 · AAA
-   - --titulo #1b3a5b sobre --secondary #f2f6fa .... 10.73 · AAA
-   - --foreground #1a1a1a sobre blanco ............. 17.40 · AAA
-   - --foreground #1a1a1a sobre --secondary ........ 16.03 · AAA
-   - --muted #5c6b66 sobre blanco ................... 5.60 · AA
-   - --muted #5c6b66 sobre --secondary .............. 5.16 · AA
-   - --enlace #0b5fa5 sobre blanco .................. 6.57 · AA
-   - --enlace #0b5fa5 sobre --secondary ............. 6.05 · AA
-   - --enlace #0b5fa5 sobre --primary-suave ......... 5.76 · AA
-   - blanco sobre --primary #1d4ed8 ................. 6.70 · AA
-   - --primary #1d4ed8 sobre --primary-suave ........ 5.87 · AA
-   - --accent-fuerte #b45309 sobre blanco ........... 5.02 · AA
-   - --accent-fuerte #b45309 sobre --secondary ...... 4.62 · AA
+   no a ojo. Si alguien cambia un color, hay que recalcular los cuatro
+   estados (claro/oscuro por normal/mejor vision), no uno:
+                                              claro        oscuro
+   - --hero-texto sobre --hero-fondo .........  9.63 AAA     9.63 AAA
+   - --hero-tenue sobre --hero-fondo .........  8.67 AAA     8.67 AAA
+   - --accent-foreground sobre --accent ..... 12.07 AAA    12.07 AAA
+   - --titulo     sobre --background ........ 11.65 AAA    10.30 AAA
+   - --titulo     sobre --secondary ......... 10.73 AAA     8.91 AAA
+   - --foreground sobre --background ........ 17.40 AAA    16.44 AAA
+   - --foreground sobre --secondary ......... 16.03 AAA    14.21 AAA
+   - --muted      sobre --background .........  5.60 AA      9.04 AAA
+   - --muted      sobre --secondary ..........  5.16 AA      7.82 AAA
+   - --enlace     sobre --background .........  6.57 AA      9.33 AAA
+   - --enlace     sobre --secondary ..........  6.05 AA      8.07 AAA
+   - --enlace     sobre --primary-suave ......  5.76 AA      7.66 AAA
+   - --primary-foreground sobre --primary ....  6.70 AA      7.69 AAA
+   - --primary    sobre --primary-suave ......  5.87 AA      6.10 AA
+   - --accent-fuerte sobre --background ......  5.02 AA      9.55 AAA
+   - --accent-fuerte sobre --secondary .......  4.62 AA      8.26 AAA
+   El hero conserva su azul en los dos temas: el fondo de la ilustracion
+   viene pintado en el archivo y si el bloque cambiara de color se veria
+   la costura.
 
    Las rejillas cierran fila exacta a proposito: con tres tarjetas en
    dos columnas, la tercera ocupa las dos y no queda hueco al lado.
@@ -27,15 +32,16 @@
 /* --- 1. Hero --- */
 #inicio-hero {
   /* El azul plano es el mismo del fondo de la ilustracion, medido del
-     archivo: asi no se ve la costura entre el color y la imagen. */
-  background-color: #0c3f98;
+     archivo: asi no se ve la costura entre el color y la imagen. Por eso
+     --hero-fondo vale igual en claro y en oscuro. */
+  background-color: var(--hero-fondo);
   background-image: var(--hero);
   background-repeat: no-repeat;
   background-position: center bottom;
   /* con tope: pasados los 1600 la ilustracion deja de crecer, si no
      se le sube al texto en pantallas grandes */
   background-size: min(100%, 1600px) auto;
-  color: #fff;
+  color: var(--hero-texto);
   /* El texto vive arriba, sobre el azul plano; la ilustracion queda
      abajo y no se le mete debajo a ninguna letra. */
   /* La ilustracion mide 1600x420, o sea que ocupa alto = ancho / 3.81.
@@ -55,14 +61,14 @@
   background: rgba(255, 255, 255, 0.18);
 }
 #inicio-hero h1 {
-  color: #fff;                       /* 9.63 sobre el azul del fondo · AAA */
+  color: var(--hero-texto);          /* 9.63 sobre el azul del fondo · AAA */
   margin-bottom: 12px;
 }
 #inicio-hero .hero-bajada {
   max-width: 46ch;
   margin: 0 auto 28px;
   font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
-  color: #eef3ff;                    /* 8.67 sobre el azul del fondo · AAA */
+  color: var(--hero-tenue);          /* 8.67 sobre el azul del fondo · AAA */
 }
 #inicio-hero .hero-boton {
   background: var(--accent);         /* tinta encima: 12.07 · AAA */
@@ -74,9 +80,9 @@
 #inicio-hero .hero-nota {
   margin: 18px 0 0;
   font-size: 0.95rem;
-  color: #eef3ff;
+  color: var(--hero-tenue);
 }
-#inicio-hero :focus-visible { outline-color: #fff; }
+#inicio-hero :focus-visible { outline-color: var(--hero-texto); }
 
 /* --- Rejillas: la misma matematica en toda la pagina --- */
 /* Cuatro tarjetas: 1 · 2 · 4 columnas. Cualquier fila cierra exacta. */
@@ -117,7 +123,7 @@
   gap: 10px;
   height: 100%;
   padding: 26px 18px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--secondary);
   text-align: center;
@@ -126,7 +132,7 @@
 @media (hover: hover) {
   #inicio-pasos .paso:hover {
     transform: translateY(-4px);
-    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.08), 0 14px 34px rgba(26, 26, 26, 0.12);
+    box-shadow: var(--sombra-alta);
   }
 }
 #inicio-pasos .paso-numero {
@@ -163,7 +169,7 @@
   gap: 10px;
   width: 100%;
   padding: 26px 22px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-top: 5px solid var(--acento);
   border-radius: var(--radius);
   background: var(--background);
@@ -175,7 +181,7 @@
 @media (hover: hover) {
   #inicio-materias .materia-tarjeta:hover {
     transform: translateY(-4px);
-    box-shadow: 0 2px 4px rgba(26,26,26,.08), 0 14px 34px rgba(26,26,26,.12);
+    box-shadow: var(--sombra-alta);
   }
 }
 #inicio-materias .materia-icono {
@@ -252,7 +258,7 @@
   gap: 8px;
   height: 100%;
   padding: 24px 20px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--secondary);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -260,7 +266,7 @@
 @media (hover: hover) {
   #inicio-info .info-tarjeta:hover {
     transform: translateY(-4px);
-    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.08), 0 14px 34px rgba(26, 26, 26, 0.12);
+    box-shadow: var(--sombra-alta);
   }
 }
 #inicio-info .info-icono {
@@ -340,7 +346,7 @@
   gap: 10px;
   height: 100%;
   padding: 24px 22px;
-  border: 1px solid var(--border);
+  border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
   box-shadow: var(--sombra);
@@ -349,7 +355,7 @@
 @media (hover: hover) {
   #inicio-sin-internet .sin-net-tarjeta:hover {
     transform: translateY(-4px);
-    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.08), 0 14px 34px rgba(26, 26, 26, 0.12);
+    box-shadow: var(--sombra-alta);
   }
 }
 /* En "como se usa" el numero manda y el icono se va al otro extremo: asi
@@ -414,16 +420,16 @@
 #inicio-sin-internet .sin-net-enlace {
   background: var(--background);
   color: var(--enlace);               /* 6.57 sobre blanco · AA */
-  border: 2px solid var(--enlace);
+  border: var(--borde-ancho-fuerte) solid var(--enlace);
 }
 #inicio-sin-internet .sin-net-compartir {
   background: var(--background);
   color: var(--accent-fuerte);        /* 5.02 sobre blanco · AA */
-  border: 2px solid var(--accent-fuerte);
+  border: var(--borde-ancho-fuerte) solid var(--accent-fuerte);
 }
 @media (hover: hover) {
   #inicio-sin-internet .sin-net-enlace:hover { background: var(--primary-suave); filter: none; }
-  #inicio-sin-internet .sin-net-compartir:hover { background: #fff6ec; filter: none; }
+  #inicio-sin-internet .sin-net-compartir:hover { background: var(--secondary); filter: none; }
 }
 
 @media (forced-colors: active) {

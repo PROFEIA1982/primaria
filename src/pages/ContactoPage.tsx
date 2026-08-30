@@ -178,6 +178,9 @@ export default function ContactoPage() {
               <li key={c.id}>
                 <a
                   className="canal"
+                  // Toda la tarjeta es el enlace: se queda fuera del
+                  // subrayado del modo de mejor vision (ver src/index.css).
+                  data-tarjeta=""
                   data-canal={c.id}
                   href={c.href}
                   {...(c.externo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
