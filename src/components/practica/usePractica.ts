@@ -5,7 +5,13 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SEGUNDOS_POR_ITEM, type SlugMateria } from "../../config";
-import { registrarResultados, sortearItems, traerConteos, traerTemas } from "../../lib/api";
+import {
+  registrarResultados,
+  sortearItems,
+  traerConteos,
+  traerConteosPorTema,
+  traerTemas,
+} from "../../lib/api";
 import type { Item, Tema } from "../../lib/tipos";
 import {
   avisoReloj,
@@ -24,6 +30,8 @@ export type Practica = {
   estadoInicial: EstadoInicial;
   recargar: () => void;
   temas: Tema[];
+  // cuantas preguntas publicadas tiene cada tema, por id. Vacio si no cargo.
+  conteoPorTema: Record<number, number>;
   itemsEnLaMateria: number;
 
   // --- seleccion ---
@@ -59,6 +67,7 @@ export type Practica = {
 export function usePractica(slug: SlugMateria): Practica {
   const [estadoInicial, setEstadoInicial] = useState<EstadoInicial>("cargando");
   const [temas, setTemas] = useState<Tema[]>([]);
+  const [conteoPorTema, setConteoPorTema] = useState<Record<number, number>>({});
   const [itemsEnLaMateria, setItemsEnLaMateria] = useState(0);
 
   const [fase, setFase] = useState<Fase>("seleccion");
@@ -105,6 +114,15 @@ export function usePractica(slug: SlugMateria): Practica {
         lista = [];
       }
       setTemas(lista);
+      // El conteo por tema es adorno de la tarjeta: si falla, la tarjeta
+      // sale sin numero y la pantalla igual sirve. Por eso no toca el estado.
+      let cuentas: Record<number, number> = {};
+      try {
+        cuentas = await traerConteosPorTema(mia.id);
+      } catch {
+        cuentas = {};
+      }
+      setConteoPorTema(cuentas);
       setEstadoInicial("listo");
     } catch {
       setEstadoInicial("error");
@@ -127,6 +145,7 @@ export function usePractica(slug: SlugMateria): Practica {
     setTemaSel(null);
     setCantidad(10);
     setTemas([]);
+    setConteoPorTema({});
     setItemsEnLaMateria(0);
     setItems([]);
     setRespuestas([]);
@@ -278,6 +297,7 @@ export function usePractica(slug: SlugMateria): Practica {
     estadoInicial,
     recargar: () => void cargar(),
     temas,
+    conteoPorTema,
     itemsEnLaMateria,
     fase,
     temaSel,

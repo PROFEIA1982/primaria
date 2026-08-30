@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, CircleAlert, Clock, TriangleAlert } from "lucide-react";
 import ItemRenderer from "../ItemRenderer";
+import BarraApoyo, { type TamanoTexto } from "./BarraApoyo";
 import { formatearReloj, PALABRA_RELOJ, type NivelReloj } from "./calificar";
 import type { Practica } from "./usePractica";
 
@@ -29,6 +30,12 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
   // escribir el numero a mano: el menu crece cuando se le da zoom o
   // cuando los enlaces se acomodan en dos filas. Lo mismo la barra: en
   // celular se parte en dos lineas y tapa el arranque de la pregunta.
+  // Las tres ayudas de lectura. Viven aca y no en la barra para que el
+  // estudiante no tenga que volver a agrandar la letra en cada pregunta;
+  // no se guardan en el navegador a proposito, no hay nada que recordar.
+  const [tamano, setTamano] = useState<TamanoTexto>("normal");
+  const [altoContraste, setAltoContraste] = useState(false);
+
   const barraRef = useRef<HTMLDivElement>(null);
   const [altoMenu, setAltoMenu] = useState(0);
   const [altoBarra, setAltoBarra] = useState(0);
@@ -93,6 +100,18 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
         style={{ scrollMarginTop: `${altoMenu + altoBarra + 12}px` }}
         aria-label={`Pregunta ${indice + 1} de ${items.length}`}
       >
+        {/* La key hace que la barra se rearme con cada pregunta: al
+            desmontarse corta la lectura y el boton vuelve a "Escuchar". */}
+        <BarraApoyo
+          key={`apoyo-${item.id}`}
+          enunciado={item.enunciado}
+          opciones={item.opciones}
+          tamano={tamano}
+          alCambiarTamano={setTamano}
+          altoContraste={altoContraste}
+          alCambiarContraste={setAltoContraste}
+        />
+
         <ItemRenderer
           key={item.id}
           enunciado={item.enunciado}
@@ -101,6 +120,8 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           alElegir={responder}
           imagenUrl={item.imagen_url}
           imagenAlt={item.imagen_alt}
+          tamano={tamano}
+          altoContraste={altoContraste}
         />
 
         {respondido && (

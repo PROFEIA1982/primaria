@@ -1,4 +1,4 @@
-import { CircleAlert, Play } from "lucide-react";
+import { Check, CircleAlert, Clock, EyeOff, ListChecks, Play } from "lucide-react";
 import { CANTIDADES, SEGUNDOS_POR_ITEM } from "../../config";
 import { ErrorCarga } from "../Estados";
 import { tiempoLargo } from "./calificar";
@@ -9,11 +9,33 @@ type Props = {
   practica: Practica;
 };
 
+// Las tres cosas que un chiquito de doce anios pregunta antes de empezar:
+// que hago, cuanto dura y quien ve mi nota. Van arriba y en tarjetas, porque
+// un parrafo de instrucciones nadie lo lee.
+const INSTRUCCIONES = [
+  {
+    icono: ListChecks,
+    titulo: "Escogé y practicá",
+    texto: "Elegís un tema y contestás preguntas como las de la prueba.",
+  },
+  {
+    icono: Clock,
+    titulo: "Dos minutos por pregunta",
+    texto: "El reloj corre igual que el día de la prueba.",
+  },
+  {
+    icono: EyeOff,
+    titulo: "Tu nota no se guarda",
+    texto: "Nadie la ve y podés repetir las veces que querás.",
+  },
+];
+
 // Pantalla 1: se escoge tema y cantidad. Nada mas. Entre menos decisiones,
 // mas rapido se pone a practicar el estudiante.
 export default function SeleccionPanel({ nombreMateria, practica }: Props) {
   const {
     temas,
+    conteoPorTema,
     temaSel,
     elegirTema,
     cantidad,
@@ -27,40 +49,84 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
   } = practica;
 
   const nombreTemaSel = temas.find((t) => t.id === temaSel)?.nombre ?? null;
-  // Solo se puede avisar de antemano cuando practica con todos los temas:
-  // el conteo por tema no viaja al navegador.
+  // Cuantas preguntas hay para lo que tiene escogido ahora mismo. Si el
+  // conteo por tema no cargo, queda en null y no se inventa ningun numero.
+  const disponiblesAhora =
+    temaSel === null ? itemsEnLaMateria : (conteoPorTema[temaSel] ?? null);
   const avisaPocasDeEntrada =
-    temaSel === null && itemsEnLaMateria > 0 && cantidad > itemsEnLaMateria;
+    disponiblesAhora !== null && disponiblesAhora > 0 && cantidad > disponiblesAhora;
 
   return (
     <>
+      <ul className="sel-instrucciones" aria-label="Cómo funciona la práctica">
+        {INSTRUCCIONES.map(({ icono: Icono, titulo, texto }) => (
+          <li className="sel-instruccion" key={titulo}>
+            <span className="sel-instruccion-icono" aria-hidden="true">
+              <Icono size={22} strokeWidth={2} />
+            </span>
+            <span className="sel-instruccion-texto">
+              <strong>{titulo}</strong>
+              {texto}
+            </span>
+          </li>
+        ))}
+      </ul>
+
       <fieldset className="sel-grupo">
         <legend>¿De qué tema querés practicar?</legend>
-        <div className="sel-chips">
-          <label className="sel-chip">
-            <input
-              type="radio"
-              name="practica-tema"
-              checked={temaSel === null}
-              onChange={() => elegirTema(null)}
-            />
-            <span className="sel-marca" aria-hidden="true">✓</span>
-            <span className="sel-chip-texto">Todos los temas</span>
-          </label>
 
-          {temas.map((t) => (
-            <label className="sel-chip" key={t.id}>
-              <input
-                type="radio"
-                name="practica-tema"
-                checked={temaSel === t.id}
-                onChange={() => elegirTema(t.id)}
-              />
-              <span className="sel-marca" aria-hidden="true">✓</span>
-              <span className="sel-chip-texto">{t.nombre}</span>
-            </label>
-          ))}
-        </div>
+        {/* "Todos los temas" sale del enrejado y se pone de banda ancha: es
+            la opcion por omision y, metida entre las demas, quedaba una
+            tarjeta estirada que descuadraba toda la fila. */}
+        <label className="sel-todos">
+          <input
+            type="radio"
+            name="practica-tema"
+            checked={temaSel === null}
+            onChange={() => elegirTema(null)}
+          />
+          <span className="sel-marca" aria-hidden="true">
+            <Check size={17} strokeWidth={3.2} />
+          </span>
+          <span className="sel-todos-cuerpo">
+            <span className="sel-todos-nombre">Todos los temas</span>
+            <span className="sel-todos-cuenta">
+              {itemsEnLaMateria} {itemsEnLaMateria === 1 ? "pregunta" : "preguntas"} · lo más
+              parecido a la prueba
+            </span>
+          </span>
+        </label>
+
+        {temas.length > 0 && (
+          <div className="sel-temas">
+            {temas.map((t, i) => {
+              const cuantas = conteoPorTema[t.id];
+              return (
+                // El tono se reparte por posicion, no por tema: es adorno para que
+                // la rejilla se vea alegre y no informa nada por si solo.
+                <label className="sel-tema" data-tono={i % 4} key={t.id}>
+                  <input
+                    type="radio"
+                    name="practica-tema"
+                    checked={temaSel === t.id}
+                    onChange={() => elegirTema(t.id)}
+                  />
+                  <span className="sel-marca" aria-hidden="true">
+                    <Check size={17} strokeWidth={3.2} />
+                  </span>
+                  <span className="sel-tema-nombre">{t.nombre}</span>
+                  {/* El conteo se ancla abajo aunque el nombre ocupe una o tres
+                      lineas: asi todas las tarjetas cierran a la misma altura. */}
+                  <span className="sel-tema-cuenta">
+                    {cuantas === undefined
+                      ? "Practicá este tema"
+                      : `${cuantas} ${cuantas === 1 ? "pregunta" : "preguntas"}`}
+                  </span>
+                </label>
+              );
+            })}
+          </div>
+        )}
         {temas.length === 0 && (
           <p className="sel-pista">
             Esta materia todavía no está separada por temas. Practicá con todas
@@ -71,33 +137,36 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
 
       <fieldset className="sel-grupo">
         <legend>¿Cuántas preguntas querés hacer?</legend>
-        <div className="sel-rejilla">
-          {CANTIDADES.map((n) => (
-            <label className="sel-cantidad" key={n}>
-              <input
-                type="radio"
-                name="practica-cantidad"
-                checked={cantidad === n}
-                onChange={() => elegirCantidad(n)}
-              />
-              <span className="sel-marca" aria-hidden="true">✓</span>
-              <span className="sel-num">{n}</span>
-              <span className="sel-tiempo">{tiempoLargo(n * SEGUNDOS_POR_ITEM)}</span>
-            </label>
-          ))}
+        <div className="sel-panel">
+          <div className="sel-cantidades">
+            {CANTIDADES.map((n) => (
+              <label className="sel-cantidad" key={n}>
+                <input
+                  type="radio"
+                  name="practica-cantidad"
+                  checked={cantidad === n}
+                  onChange={() => elegirCantidad(n)}
+                />
+                <span className="sel-cantidad-marca" aria-hidden="true">
+                  <Check size={14} strokeWidth={3.2} />
+                </span>
+                <span className="sel-num">{n}</span>
+                <span className="sel-tiempo">{tiempoLargo(n * SEGUNDOS_POR_ITEM)}</span>
+              </label>
+            ))}
+          </div>
         </div>
-        <p className="sel-pista">
-          Son dos minutos por pregunta, igual que el día de la prueba. Si
-          terminás antes, mejor para vos.
-        </p>
       </fieldset>
 
       {avisaPocasDeEntrada && (
         <p className="sel-aviso">
           <CircleAlert size={20} strokeWidth={2} aria-hidden="true" />
           <span>
-            Por ahora en {nombreMateria} hay <strong>{itemsEnLaMateria}</strong>{" "}
-            {itemsEnLaMateria === 1 ? "pregunta" : "preguntas"}. Si pedís {cantidad}, vas
+            {nombreTemaSel
+              ? `En «${nombreTemaSel}» hay `
+              : `Por ahora en ${nombreMateria} hay `}
+            <strong>{disponiblesAhora}</strong>{" "}
+            {disponiblesAhora === 1 ? "pregunta" : "preguntas"}. Si pedís {cantidad}, vas
             a practicar con las que hay.
           </span>
         </p>
@@ -113,9 +182,6 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
           <Play size={22} strokeWidth={2.2} aria-hidden="true" />
           {preparando ? "Preparando…" : "¡Empezar!"}
         </button>
-        <p className="sel-nota">
-          Nadie ve tu nota. Practicá las veces que querás.
-        </p>
       </div>
 
       {errorSorteo && (
