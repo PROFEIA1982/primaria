@@ -35,3 +35,25 @@ export type Tema = {
   nombre: string;
   orden: number;
 };
+
+// --- Simulacros ---
+// Cuadernillos fijos de 40 preguntas. Lo que cambia entre un intento y
+// otro es solo el orden de las opciones; las preguntas son las mismas.
+
+export type SimulacroResumen = {
+  slug: string;
+  numero: number;
+  titulo: string;
+  materia_slug: string;
+  materia_nombre: string;
+  cantidad: number;
+};
+
+export type Simulacro = {
+  slug: string;
+  numero: number;
+  titulo: string;
+  materia_slug: string;
+  materia_nombre: string;
+  items: Item[];
+};
