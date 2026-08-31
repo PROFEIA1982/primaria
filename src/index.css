@@ -135,7 +135,10 @@
   --sombra-alta: 0 2px 4px rgba(26, 26, 26, 0.08), 0 14px 34px rgba(26, 26, 26, 0.12);
   --fuente: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
   --peso-cuerpo: 400;
-  --cuerpo-fuente: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  /* 17 a 19 px. La Guia de Estilo 2023 de la British Dyslexia Association
+     pide 16-19 px de cuerpo: 16 es el piso, no el objetivo. El maximo
+     pasa del doble del minimo para que aguante zoom al 200%. */
+  --cuerpo-fuente: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
 }
 
 /* ============================================================

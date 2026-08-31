@@ -89,11 +89,11 @@
      esto, con la letra grande se sale del recuadro y corre la pagina */
   overflow-wrap: anywhere;
 }
-/* 68ch es la medida comoda de lectura. Sin esto, en una compu de escritorio
+/* 62ch: la BDA pide 60-70 caracteres por linea. Sin esto, en una compu de escritorio
    los textos de comprension de Español corrian a unos 115 caracteres por
    renglon y un lector de doce años pierde el hilo al saltar de linea. */
 .ps-item .item-enunciado p,
-.ps-item .item-enunciado blockquote { max-width: 68ch; }
+.ps-item .item-enunciado blockquote { max-width: 62ch; }
 .ps-item .item-enunciado p { margin: 0 0 0.8em; }
 .ps-item .item-enunciado img {
   display: block;

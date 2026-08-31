@@ -420,8 +420,8 @@
 #inicio-sin-internet .sin-net-rotulo {
   margin: 32px 0 0;
   font-size: 1rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  /* Sin mayusculas sostenidas: borran la silueta de la palabra y frenan
+     la lectura (British Dyslexia Association, Style Guide 2023). */
   color: var(--accent-fuerte);        /* 4.62 sobre --secondary · AA */
 }
 

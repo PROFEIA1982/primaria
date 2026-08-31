@@ -5,6 +5,7 @@ import AccesibilidadFlotante from "./components/Accesibilidad";
 import Footer from "./components/Footer";
 import InicioPage from "./pages/InicioPage";
 import { Cargando } from "./components/Estados";
+import { useConcentracion } from "./lib/concentracion";
 
 // El inicio va directo porque es la primera pantalla. Lo demas se carga
 // cuando hace falta: asi un celular con datos lentos no baja el motor de
@@ -54,12 +55,15 @@ function Armazon() {
   // Se limpia la barra final para que "/contacto/" no se quede sin pie.
   const ruta = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
   const llevaPie = RUTAS_CON_PIE.includes(ruta);
+  // Mientras contesta, el menu se va. La pagina del examen ya trae su
+  // propio boton de salir, asi que nadie queda encerrado.
+  const concentrado = useConcentracion();
 
   return (
     <>
       <a className="ps-saltar" href="#contenido">Saltar al contenido</a>
       <SubirAlCambiar />
-      <Nav />
+      {!concentrado && <Nav />}
       <main id="contenido" tabIndex={-1}>
         <Suspense fallback={<div className="ps-contenedor ps-seccion"><Cargando /></div>}>
           <Routes>
@@ -84,7 +88,7 @@ function Armazon() {
           </Routes>
         </Suspense>
       </main>
-      {llevaPie && <Footer />}
+      {llevaPie && !concentrado && <Footer />}
       {/* Los ajustes de accesibilidad, flotando abajo a la izquierda. Van
           al final del documento y no en el encabezado: asi quien navega
           con teclado llega primero al menu y al contenido, que es lo que

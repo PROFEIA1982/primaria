@@ -562,8 +562,8 @@
 #sim-examen .apoyo-rotulo {
   font-size: 0.82rem;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  /* Sin mayusculas sostenidas: borran la silueta de la palabra y frenan
+     la lectura (British Dyslexia Association, Style Guide 2023). */
   color: var(--muted);        /* 5.16 sobre --secondary · AA */
 }
 #practica-examen .apoyo-boton,
@@ -820,8 +820,8 @@
 #sim-resultados .res-etiqueta-nota {
   margin: 0;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  /* Sin mayusculas sostenidas: borran la silueta de la palabra y frenan
+     la lectura (British Dyslexia Association, Style Guide 2023). */
   font-size: 0.85rem;
   color: var(--muted);
 }
@@ -1015,8 +1015,8 @@
   flex: 0 0 auto;
   font-size: 0.8rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  /* Sin mayusculas sostenidas: borran la silueta de la palabra y frenan
+     la lectura (British Dyslexia Association, Style Guide 2023). */
   color: var(--muted);
 }
 #practica-resultados .res-valor,
@@ -1203,4 +1203,57 @@
 @media (forced-colors: active) {
   #practica-hero .hero-arte { display: none; }
   #practica-hero .hero-chip { border: 2px solid ButtonText; }
+}
+
+/* --- Interruptor del reloj de la practica ---
+   Arranca apagado a proposito: ver el comentario en usePractica.
+   Contrastes (tokens de src/index.css):
+   - --foreground sobre --background ...... 17.40 claro · 14.05 oscuro · AAA
+   - --muted sobre --background ...........  5.60 claro ·  8.30 oscuro · AA
+   - --primary-foreground sobre --primary .  8.59 claro ·  9.12 oscuro · AAA */
+#practica-seleccion .sel-reloj {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding: 14px 16px;
+  border: var(--borde-ancho) solid var(--border);
+  border-radius: var(--radius);
+}
+#practica-seleccion .sel-reloj-texto {
+  flex: 1 1 240px;
+  min-width: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+#practica-seleccion .sel-reloj-texto strong { display: block; font-weight: 800; }
+#practica-seleccion .sel-reloj-texto > span { color: var(--muted); }
+#practica-seleccion .sel-reloj-boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--toque-min);
+  padding: 0 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  /* Pildora: se lee como interruptor y no como un boton mas de arranque. */
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+#practica-seleccion .sel-reloj-boton:hover { background: var(--secondary); }
+/* Encendido: fondo lleno + el icono cambiado + la palabra. Tres senales,
+   ninguna de ellas solo el color. */
+#practica-seleccion .sel-reloj-boton[aria-pressed="true"] {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+#practica-seleccion .sel-reloj-boton[aria-pressed="true"]:hover { filter: brightness(0.94); }
+@media (forced-colors: active) {
+  #practica-seleccion .sel-reloj-boton { border: 2px solid ButtonText; }
+  #practica-seleccion .sel-reloj-boton[aria-pressed="true"] { border: 3px solid Highlight; }
 }

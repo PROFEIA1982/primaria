@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { BookOpen, Calculator, Globe, Microscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MATERIAS, type SlugMateria } from "../config";
+import { ponerConcentracion } from "../lib/concentracion";
 import { ErrorCarga, Vacio } from "../components/Estados";
 import EsqueletoPregunta from "../components/practica/EsqueletoPregunta";
 import ExamenPanel from "../components/practica/ExamenPanel";
@@ -39,6 +40,14 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
     const quieto = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     window.scrollTo({ top: 0, behavior: quieto ? "auto" : "smooth" });
     tituloRef.current?.focus({ preventScroll: true });
+  }, [practica.fase]);
+
+  // Mientras contesta, el menu de arriba y el pie desaparecen: en la
+  // pantalla queda el item y nada mas (ver lib/concentracion.ts). Se apaga
+  // tambien al desmontar, por si se va por el boton de atras del navegador.
+  useEffect(() => {
+    ponerConcentracion(practica.fase === "examen");
+    return () => ponerConcentracion(false);
   }, [practica.fase]);
   const datos = MATERIAS.find((m) => m.slug === materia);
 

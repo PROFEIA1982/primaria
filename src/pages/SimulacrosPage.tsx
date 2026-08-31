@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { BookOpen, Calculator, Globe, Microscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MATERIAS, type SlugMateria } from "../config";
+import { ponerConcentracion } from "../lib/concentracion";
 import ListaPanel from "../components/simulacro/ListaPanel";
 import PestanasMateria from "../components/PestanasMateria";
 import InstruccionesSimulacro from "../components/simulacro/InstruccionesSimulacro";
@@ -24,6 +25,14 @@ const ICONOS: Record<SlugMateria, typeof BookOpen> = {
 /** Los simulacros de una materia, y el que este en curso. */
 export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
   const simulacros = useSimulacros(materia);
+
+  // Mientras contesta, el menu de arriba y el pie desaparecen: en la
+  // pantalla queda el item y nada mas (ver lib/concentracion.ts). Se apaga
+  // tambien al desmontar, por si se va por el boton de atras del navegador.
+  useEffect(() => {
+    ponerConcentracion(simulacros.fase === "examen");
+    return () => ponerConcentracion(false);
+  }, [simulacros.fase]);
   const datos = MATERIAS.find((m) => m.slug === materia);
 
   // Al entregar o al salir, la pantalla cambia entera pero el navegador se

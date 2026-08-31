@@ -1,4 +1,4 @@
-import { Check, CircleAlert, Clock, EyeOff, ListChecks, Play } from "lucide-react";
+import { Check, CircleAlert, Clock, EyeOff, ListChecks, Play, Timer, TimerOff } from "lucide-react";
 import { CANTIDADES, SEGUNDOS_POR_ITEM } from "../../config";
 import { ErrorCarga } from "../Estados";
 import { tiempoLargo } from "./calificar";
@@ -20,8 +20,8 @@ const INSTRUCCIONES = [
   },
   {
     icono: Clock,
-    titulo: "Dos minutos por pregunta",
-    texto: "El reloj corre igual que el día de la prueba.",
+    titulo: "Sin apuro",
+    texto: "Si querés medirte contra el reloj, lo prendés abajo.",
   },
   {
     icono: EyeOff,
@@ -44,6 +44,8 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
     preparando,
     errorSorteo,
     pocasDisponibles,
+    conReloj,
+    alternarReloj,
     empezar,
     aceptarLasQueHay,
   } = practica;
@@ -171,6 +173,31 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
           </span>
         </p>
       )}
+
+      {/* El reloj arranca apagado. Khan Academy, IXL y Google Forms no ponen
+          cuenta regresiva cuando el estudiante esta estudiando: el reloj es de
+          las apps de competencia. Quien se quiere medir lo prende, y queda
+          guardado para la proxima. El simulacro lo trae siempre. */}
+      <div className="sel-reloj">
+        <span className="sel-reloj-texto">
+          <strong>Poner reloj</strong>
+          <span>
+            Apagado practicás con calma. El <strong>simulacro</strong> siempre
+            lleva reloj, como el día de la prueba.
+          </span>
+        </span>
+        <button
+          type="button"
+          className="sel-reloj-boton"
+          aria-pressed={conReloj}
+          onClick={alternarReloj}
+        >
+          {conReloj
+            ? <Timer size={20} strokeWidth={2.2} aria-hidden="true" />
+            : <TimerOff size={20} strokeWidth={2.2} aria-hidden="true" />}
+          {conReloj ? "Encendido" : "Apagado"}
+        </button>
+      </div>
 
       <div className="sel-arranque">
         <button

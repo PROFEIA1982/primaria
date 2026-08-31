@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useConcentracion } from "../../lib/concentracion";
 
 /**
  * La barra del reloj se pega debajo del menu, que es fijo.
@@ -12,12 +13,17 @@ export function useBarraPegada() {
   const barraRef = useRef<HTMLDivElement>(null);
   const [altoMenu, setAltoMenu] = useState(0);
   const [altoBarra, setAltoBarra] = useState(0);
+  // Al entrar en modo concentracion el menu se desmonta y hay que volver a
+  // medir: el ResizeObserver no avisa de un elemento que dejo de existir, y
+  // sin esto la barra del reloj quedaba flotando a 65 px de la nada.
+  const concentrado = useConcentracion();
 
   useEffect(() => {
     const menu = document.getElementById("nav-principal");
     const barra = barraRef.current;
     const medir = () => {
-      if (menu) setAltoMenu(menu.getBoundingClientRect().height);
+      // Sin menu (modo concentracion) el alto es cero, no el ultimo medido.
+      setAltoMenu(menu ? menu.getBoundingClientRect().height : 0);
       if (barra) setAltoBarra(barra.getBoundingClientRect().height);
     };
     medir();
@@ -25,7 +31,7 @@ export function useBarraPegada() {
     if (menu) observador.observe(menu);
     if (barra) observador.observe(barra);
     return () => observador.disconnect();
-  }, []);
+  }, [concentrado]);
 
   return { barraRef, altoMenu, altoBarra };
 }

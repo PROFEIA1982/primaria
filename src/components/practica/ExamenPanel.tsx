@@ -24,7 +24,7 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
   // aca solo se consulta para decidir si se pinta el boton "Escuchar".
   const vozActiva = useVozActiva();
   const { items, indice, respuestas, responder, siguiente, restante, nivel, aviso,
-          volverAPracticar } = practica;
+          conReloj, volverAPracticar } = practica;
 
   // Salir a medio camino. Antes no habia forma: el estudiante que se
   // arrepentia en la tres solo podia irse por el menu de arriba, y en celular
@@ -94,13 +94,17 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           <p className="examen-progreso">
             Pregunta <strong>{indice + 1}</strong> de {items.length}
           </p>
-          <p className="examen-reloj" data-nivel={nivel}>
-            <IconoReloj size={20} strokeWidth={2.2} aria-hidden="true" />
-            <span className="examen-tiempo">{formatearReloj(restante)}</span>
-            {/* La palabra acompana siempre al color: hay chiquitos que no
-                distinguen el ambar del rojo. */}
-            <span className="examen-palabra">{PALABRA_RELOJ[nivel]}</span>
-          </p>
+          {/* El reloj solo si el estudiante lo pidio. Apagado, la practica
+              corre sin apuro: es estudio, no competencia. */}
+          {conReloj && (
+            <p className="examen-reloj" data-nivel={nivel}>
+              <IconoReloj size={20} strokeWidth={2.2} aria-hidden="true" />
+              <span className="examen-tiempo">{formatearReloj(restante)}</span>
+              {/* La palabra acompana siempre al color: hay chiquitos que no
+                  distinguen el ambar del rojo. */}
+              <span className="examen-palabra">{PALABRA_RELOJ[nivel]}</span>
+            </p>
+          )}
         </div>
         {/* La barrita es dibujo y nada mas. Llego a tener role="progressbar"
             para que el lector de pantalla dijera el avance, pero progressbar
@@ -114,7 +118,7 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
 
       {/* La region viva no canta cada segundo: solo cambia al pasar de
           minuto o cuando el tiempo entra en ambar o en rojo. */}
-      <p className="ps-solo-lectores" aria-live="polite">{aviso}</p>
+      {conReloj && <p className="ps-solo-lectores" aria-live="polite">{aviso}</p>}
 
       {/* role="group" y no un div pelado: un div sin rol mapea a "generic",
           y en generic el nombre accesible esta prohibido, o sea que los

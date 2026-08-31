@@ -91,8 +91,8 @@
   color: var(--accent-foreground);
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  /* Sin mayusculas sostenidas: borran la silueta de la palabra y frenan
+     la lectura (British Dyslexia Association, Style Guide 2023). */
 }
 #contacto-hero h1 {
   margin: 0 0 12px;

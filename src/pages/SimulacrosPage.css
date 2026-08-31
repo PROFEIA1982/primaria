@@ -660,8 +660,8 @@
   margin: 0 0 4px;
   font-size: 0.82em;
   font-weight: 800;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  /* Sin mayusculas sostenidas: borran la silueta de la palabra y frenan
+     la lectura (British Dyslexia Association, Style Guide 2023). */
   color: var(--titulo);
 }
 .sim-revi-retro-texto {
