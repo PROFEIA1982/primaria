@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect } from "react";
-import { BrowserRouter, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import InicioPage from "./pages/InicioPage";
@@ -10,9 +10,6 @@ import { Cargando } from "./components/Estados";
 // formulas ni la practica completa solo para ver la portada.
 const PracticaPage = lazy(() => import("./pages/PracticaPage"));
 const SimulacrosPage = lazy(() => import("./pages/SimulacrosPage"));
-const IndiceSimulacros = lazy(() =>
-  import("./pages/SimulacrosPage").then((m) => ({ default: m.IndiceSimulacros })),
-);
 const ContactoPage = lazy(() => import("./pages/ContactoPage"));
 const NoEncontradaPage = lazy(() => import("./pages/NoEncontradaPage"));
 
@@ -31,9 +28,7 @@ function LlevarAlAviso() {
 // contestando y el pie, con sus enlaces, telefonos y redes, lo saca de ahi.
 // El pie se queda donde sirve de verdad, que es donde uno anda buscando
 // informacion: el inicio y contacto.
-// La portada de simulacros si lleva pie: ahi el chiquito esta escogiendo,
-// no contestando. Las paginas de materia con el cuadernillo abierto no.
-const RUTAS_CON_PIE = ["/", "/contacto", "/simulacros"];
+const RUTAS_CON_PIE = ["/", "/contacto"];
 
 // El armazon vive dentro del router porque useLocation necesita el contexto
 // que abre BrowserRouter. App queda por fuera y solo monta el router.
@@ -55,7 +50,10 @@ function Armazon() {
             <Route path="/estudios-sociales" element={<PracticaPage materia="estudios-sociales" />} />
             <Route path="/ciencias" element={<PracticaPage materia="ciencias" />} />
             <Route path="/matematicas" element={<PracticaPage materia="matematicas" />} />
-            <Route path="/simulacros" element={<IndiceSimulacros />} />
+            {/* /simulacros ya no tiene pagina propia: el menu lleva
+                directo a la materia. La ruta se conserva y redirige, para
+                no romper un enlace que alguien ya haya guardado. */}
+            <Route path="/simulacros" element={<Navigate to="/simulacros/espanol" replace />} />
             <Route path="/simulacros/espanol" element={<SimulacrosPage materia="espanol" />} />
             <Route path="/simulacros/estudios-sociales" element={<SimulacrosPage materia="estudios-sociales" />} />
             <Route path="/simulacros/ciencias" element={<SimulacrosPage materia="ciencias" />} />

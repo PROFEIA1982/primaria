@@ -10,18 +10,22 @@
    WCAG 2.1 (contraste_wcag.py). Si alguien cambia un color, hay que
    recalcular los CUATRO estados, no uno.
 
+   El oscuro es AZUL MEDIANOCHE, no gris ni negro: fondo #161d33 y texto
+   crema #f0ebe0, la noche de un cuaderno de space en vez de un panel de
+   oficina. Los numeros de abajo se recalcularon enteros para ese fondo.
+
    CLARO NORMAL (minimo AA 4.5)          OSCURO NORMAL (minimo AA 4.5)
-     texto sobre fondo ......... 17.40     texto sobre fondo ......... 16.44
-     texto sobre tarjeta ....... 16.03     texto sobre tarjeta ....... 14.21
-     gris apagado sobre fondo ... 5.60     gris apagado sobre fondo ... 9.04
-     gris apagado en tarjeta .... 5.16     gris apagado en tarjeta .... 7.82
-     titulo sobre fondo ........ 11.65     titulo sobre fondo ........ 10.30
-     enlace sobre fondo ......... 6.57     enlace sobre fondo ......... 9.33
-     texto del boton azul ....... 6.70     texto del boton azul ....... 7.69
-     aro de foco sobre fondo .... 6.70     aro de foco sobre fondo .... 7.44
-     verde sobre verde suave .... 4.80     verde sobre verde suave .... 8.53
-     rojo sobre rojo suave ...... 5.96     rojo sobre rojo suave ...... 7.84
-     borde fuerte sobre fondo ... 3.50     borde fuerte sobre fondo ... 6.09
+     texto sobre fondo ......... 17.40     texto sobre fondo ......... 14.05
+     texto sobre tarjeta ....... 16.03     texto sobre tarjeta ....... 11.64
+     gris apagado sobre fondo ... 5.60     gris apagado sobre fondo ... 8.30
+     gris apagado en tarjeta .... 5.16     gris apagado en tarjeta .... 6.88
+     titulo sobre fondo ........ 11.65     titulo sobre fondo ......... 9.63
+     enlace sobre fondo ......... 6.57     enlace sobre fondo ......... 8.93
+     texto del boton azul ....... 6.70     texto del boton azul ....... 8.21
+     aro de foco sobre fondo .... 6.70     aro de foco sobre fondo .... 7.23
+     verde sobre verde suave .... 4.80     verde sobre verde suave .... 8.98
+     rojo sobre rojo suave ...... 5.96     rojo sobre rojo suave ...... 7.74
+     borde fuerte sobre fondo ... 3.50     borde fuerte sobre fondo ... 6.03
 
    CLARO MEJOR VISION (meta AAA 7)       OSCURO MEJOR VISION (meta AAA 7)
      texto sobre fondo ......... 21.00     texto sobre fondo ......... 19.97
@@ -36,7 +40,7 @@
      borde fuerte sobre fondo .. 12.30     borde fuerte sobre fondo ... 7.97
 
    --border es separacion decorativa, no informacion: no le aplica el
-   minimo de 3:1 y por eso se queda bajo (1.27 en claro, 1.65 en oscuro).
+   minimo de 3:1 y por eso se queda bajo (1.27 en claro, 1.55 en oscuro).
    En mejor vision sube a 9.08 y 3.84 para que la caja se vea de verdad.
    ============================================================ */
 
@@ -144,47 +148,50 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"]) {
     color-scheme: dark;
-    --background: #0f151c;
-    --foreground: #eef3f8;          /* 16.44 · AAA */
-    --secondary: #1a232e;
-    --muted: #a9b8c5;               /*  9.04 · AAA */
-    --titulo: #9ec6f0;              /* 10.30 · AAA */
-    --enlace: #8fbcf5;              /*  9.33 · AAA */
-    --primary: #6aa6ff;             /* su texto encima: 7.69 · AAA */
-    --primary-foreground: #0a1119;
-    --primary-suave: #18273c;
+    /* Azul medianoche, no gris de oficina: la noche del espacio, con
+       personalidad y calor. El texto es crema, nunca blanco puro, para
+       no deslumbrar al nino que estudia de noche. */
+    --background: #161d33;
+    --foreground: #f0ebe0;          /* crema · 14.05 · AAA */
+    --secondary: #212b4d;
+    --muted: #aeb6d4;               /*  8.30 · AAA */
+    --titulo: #a9c6f7;              /*  9.63 · AAA */
+    --enlace: #96c0fb;              /*  8.93 · AAA */
+    --primary: #7aabff;             /* su texto encima: 8.21 · AAA */
+    --primary-foreground: #0a1020;
+    --primary-suave: #1c2950;
     --accent: #ffd166;
     --accent-foreground: #1a1a1a;
-    --accent-fuerte: #f2ad63;       /* 9.55 sobre el fondo · AAA */
-    --success: #5fd894;             /* 8.53 sobre su suave · AAA */
-    --success-suave: #122a1e;
-    --error: #ff9188;               /* 7.84 sobre su suave · AAA */
-    --error-suave: #2c1613;
-    --border: #2e3d4d;
-    --border-fuerte: #8497a8;       /* 6.09 sobre el fondo · borde de control */
-    --espanol: #f2a074;             --espanol-suave: #301f16;
-    --sociales: #c5a8f5;            --sociales-suave: #241b34;
-    --ciencias: #5cd2c1;            --ciencias-suave: #0f2a29;
-    --mate: #6aa6ff;                --mate-suave: #18273c;
-    --tono-0: #301f16;
-    --tono-1: #241b34;
-    --tono-2: #0f2a29;
-    --tono-3: #18273c;
-    --pie-fondo: #0a121b;
-    --pie-legal: #060c12;
-    --pie-texto: #e8eef6;           /* 16.13 · AAA */
-    --pie-tenue: #b9c8d6;           /* 11.02 · AAA */
+    --accent-fuerte: #f4b56e;       /* 9.29 sobre el fondo · AAA */
+    --success: #63dd98;             /* 8.98 sobre su suave · AAA */
+    --success-suave: #0f2a20;
+    --error: #ff958c;               /* 7.74 sobre su suave · AAA */
+    --error-suave: #331816;
+    --border: #303c63;
+    --border-fuerte: #8b9bc4;       /* 6.03 sobre el fondo · borde de control */
+    --espanol: #f2a074;             --espanol-suave: #2f2018;
+    --sociales: #c8adf6;            --sociales-suave: #241d38;
+    --ciencias: #5cd2c1;            --ciencias-suave: #0f2b29;
+    --mate: #7aabff;                --mate-suave: #1a2647;
+    --tono-0: #2f2018;
+    --tono-1: #241d38;
+    --tono-2: #0f2b29;
+    --tono-3: #1a2647;
+    --pie-fondo: #0c1226;
+    --pie-legal: #080d1c;
+    --pie-texto: #eaeff7;           /* 16.09 · AAA */
+    --pie-tenue: #bcc8dc;           /* 11.00 · AAA */
     --pie-enlace: #ffffff;
-    --pie-realce: #ffd166;          /* 13.06 · AAA */
-    --banda-fondo: #132a41;
-    --banda-texto: #ffffff;         /* 14.63 · AAA */
-    --banda-bajada: #cfe0f2;        /* 10.87 · AAA */
-    --banda-fino: #c3d6ea;          /*  9.84 · AAA */
+    --pie-realce: #ffd166;          /* 12.89 · AAA */
+    --banda-fondo: #17213f;
+    --banda-texto: #ffffff;         /* 15.84 · AAA */
+    --banda-bajada: #d3def2;        /* 11.69 · AAA */
+    --banda-fino: #c7d5ec;          /* 10.68 · AAA */
     --hero-fondo: #0c3f98;          /* el azul de la ilustracion no cambia */
     --hero-texto: #ffffff;
     --hero-tenue: #eef3ff;
     --hero-azul: #123a86;           /* punto mas claro medido: #254a90 */
-    --marca-placa: #eef3f8;         /* el negro del logo encima: 17.41 · AAA */
+    --marca-placa: #f0ebe0;         /* el negro del logo encima: 16.35 · AAA */
     /* Sobre fondo oscuro una sombra negra no se ve: se hace mas densa. */
     --sombra: 0 1px 2px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.55);
     --sombra-alta: 0 2px 4px rgba(0, 0, 0, 0.55), 0 16px 36px rgba(0, 0, 0, 0.6);
@@ -197,47 +204,49 @@
    ============================================================ */
 :root[data-tema="oscuro"] {
   color-scheme: dark;
-  --background: #0f151c;
-  --foreground: #eef3f8;          /* 16.44 · AAA */
-  --secondary: #1a232e;
-  --muted: #a9b8c5;               /*  9.04 · AAA */
-  --titulo: #9ec6f0;              /* 10.30 · AAA */
-  --enlace: #8fbcf5;              /*  9.33 · AAA */
-  --primary: #6aa6ff;             /* su texto encima: 7.69 · AAA */
-  --primary-foreground: #0a1119;
-  --primary-suave: #18273c;
+  /* Misma lista que el bloque 2 (azul medianoche): si cambia una, cambian
+     las dos. No hay preprocesador que las mantenga en linea. */
+  --background: #161d33;
+  --foreground: #f0ebe0;          /* crema · 14.05 · AAA */
+  --secondary: #212b4d;
+  --muted: #aeb6d4;               /*  8.30 · AAA */
+  --titulo: #a9c6f7;              /*  9.63 · AAA */
+  --enlace: #96c0fb;              /*  8.93 · AAA */
+  --primary: #7aabff;             /* su texto encima: 8.21 · AAA */
+  --primary-foreground: #0a1020;
+  --primary-suave: #1c2950;
   --accent: #ffd166;
   --accent-foreground: #1a1a1a;
-  --accent-fuerte: #f2ad63;       /* 9.55 sobre el fondo · AAA */
-  --success: #5fd894;             /* 8.53 sobre su suave · AAA */
-  --success-suave: #122a1e;
-  --error: #ff9188;               /* 7.84 sobre su suave · AAA */
-  --error-suave: #2c1613;
-  --border: #2e3d4d;
-  --border-fuerte: #8497a8;       /* 6.09 sobre el fondo · borde de control */
-  --espanol: #f2a074;             --espanol-suave: #301f16;
-  --sociales: #c5a8f5;            --sociales-suave: #241b34;
-  --ciencias: #5cd2c1;            --ciencias-suave: #0f2a29;
-  --mate: #6aa6ff;                --mate-suave: #18273c;
-  --tono-0: #301f16;
-  --tono-1: #241b34;
-  --tono-2: #0f2a29;
-  --tono-3: #18273c;
-  --pie-fondo: #0a121b;
-  --pie-legal: #060c12;
-  --pie-texto: #e8eef6;           /* 16.13 · AAA */
-  --pie-tenue: #b9c8d6;           /* 11.02 · AAA */
+  --accent-fuerte: #f4b56e;       /* 9.29 sobre el fondo · AAA */
+  --success: #63dd98;             /* 8.98 sobre su suave · AAA */
+  --success-suave: #0f2a20;
+  --error: #ff958c;               /* 7.74 sobre su suave · AAA */
+  --error-suave: #331816;
+  --border: #303c63;
+  --border-fuerte: #8b9bc4;       /* 6.03 sobre el fondo · borde de control */
+  --espanol: #f2a074;             --espanol-suave: #2f2018;
+  --sociales: #c8adf6;            --sociales-suave: #241d38;
+  --ciencias: #5cd2c1;            --ciencias-suave: #0f2b29;
+  --mate: #7aabff;                --mate-suave: #1a2647;
+  --tono-0: #2f2018;
+  --tono-1: #241d38;
+  --tono-2: #0f2b29;
+  --tono-3: #1a2647;
+  --pie-fondo: #0c1226;
+  --pie-legal: #080d1c;
+  --pie-texto: #eaeff7;           /* 16.09 · AAA */
+  --pie-tenue: #bcc8dc;           /* 11.00 · AAA */
   --pie-enlace: #ffffff;
-  --pie-realce: #ffd166;          /* 13.06 · AAA */
-  --banda-fondo: #132a41;
-  --banda-texto: #ffffff;         /* 14.63 · AAA */
-  --banda-bajada: #cfe0f2;        /* 10.87 · AAA */
-  --banda-fino: #c3d6ea;          /*  9.84 · AAA */
+  --pie-realce: #ffd166;          /* 12.89 · AAA */
+  --banda-fondo: #17213f;
+  --banda-texto: #ffffff;         /* 15.84 · AAA */
+  --banda-bajada: #d3def2;        /* 11.69 · AAA */
+  --banda-fino: #c7d5ec;          /* 10.68 · AAA */
   --hero-fondo: #0c3f98;          /* el azul de la ilustracion no cambia */
   --hero-texto: #ffffff;
   --hero-tenue: #eef3ff;
   --hero-azul: #123a86;           /* punto mas claro medido: #254a90 */
-  --marca-placa: #eef3f8;         /* el negro del logo encima: 17.41 · AAA */
+  --marca-placa: #f0ebe0;         /* el negro del logo encima: 16.35 · AAA */
   --sombra: 0 1px 2px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.55);
   --sombra-alta: 0 2px 4px rgba(0, 0, 0, 0.55), 0 16px 36px rgba(0, 0, 0, 0.6);
 }
