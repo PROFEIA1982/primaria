@@ -180,7 +180,7 @@ export default function ResultadosSimulacro({ simulacros }: Props) {
         <h2 id="sim-revision-titulo">Las {total}, una por una</h2>
         <p className="res-bajada">
           Cada pregunta con sus cuatro opciones: la buena va marcada con ✓ y lo que
-          vos marcaste, con ✗ cuando no era.
+          vos marcaste, con ✗ cuando no era. Donde hay explicación, viene abajo.
         </p>
 
         <ol className="sim-revision" role="list">
@@ -231,6 +231,18 @@ export default function ResultadosSimulacro({ simulacros }: Props) {
                     );
                   })}
                 </ul>
+
+                {/* La retroalimentacion, cuando el item la trae. Va en texto
+                    plano con los saltos de linea respetados: el banco la
+                    escribe con emoji y pasos numerados, no con marcado.
+                    Todavia hay items sin ella; ahi el chiquito ve al menos
+                    cual era la buena, que es lo que ya marca la lista. */}
+                {item.retroalimentacion && item.retroalimentacion.trim() && (
+                  <div className="sim-revi-retro">
+                    <p className="sim-revi-retro-titulo">Por qué</p>
+                    <p className="sim-revi-retro-texto">{item.retroalimentacion.trim()}</p>
+                  </div>
+                )}
               </li>
             );
           })}

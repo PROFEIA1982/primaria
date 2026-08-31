@@ -1,7 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Award, ClipboardList, Clock, PlayCircle, RotateCcw } from "lucide-react";
-import { SEGUNDOS_POR_ITEM } from "../../config";
-import { tiempoLargo } from "../practica/calificar";
+import { Award, ClipboardList, PlayCircle, RotateCcw } from "lucide-react";
 import { ErrorCarga, Vacio } from "../Estados";
 import EsqueletoPregunta from "../practica/EsqueletoPregunta";
 import type { Simulacros } from "./useSimulacro";
@@ -15,7 +13,7 @@ type Props = {
 export default function ListaPanel({ nombreMateria, simulacros }: Props) {
   const {
     estadoLista, recargar, lista, marcas, abriendo, errorAbrir, empezar,
-    enCurso, retomar, descartarEnCurso,
+    enCurso, retomar, descartarEnCurso, horas, elegirHoras,
   } = simulacros;
 
   // Si falla la apertura, el foco vuelve al boton que se toco. Sin esto
@@ -80,13 +78,46 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
         </section>
       )}
 
+      {/* Cuanto tiempo va a durar la prueba. Se escoge ANTES de empezar y
+          vale para el cuadernillo que abra despues. Es un radiogroup de
+          verdad (fieldset + radios): asi el lector de pantalla lo anuncia
+          como grupo y se anda con flechas. */}
+      <fieldset className="sim-tiempo">
+        <legend>¿Cuánto tiempo vas a tener?</legend>
+        <div className="sim-tiempo-ops">
+          <label className="sim-tiempo-op" data-elegida={horas === 2 ? "" : undefined}>
+            <input
+              type="radio"
+              name="sim-horas"
+              checked={horas === 2}
+              onChange={() => elegirHoras(2)}
+            />
+            <span className="sim-tiempo-titulo">2 horas</span>
+            <span className="sim-tiempo-nota">Lo normal</span>
+          </label>
+          <label className="sim-tiempo-op" data-elegida={horas === 3 ? "" : undefined}>
+            <input
+              type="radio"
+              name="sim-horas"
+              checked={horas === 3}
+              onChange={() => elegirHoras(3)}
+            />
+            <span className="sim-tiempo-titulo">3 horas</span>
+            <span className="sim-tiempo-nota">Con más tiempo</span>
+          </label>
+        </div>
+        <p className="sim-tiempo-ayuda">
+          Las <strong>3 horas</strong> son para estudiantes con apoyo educativo no
+          significativo. Si no es tu caso, dejá las 2 horas.
+        </p>
+      </fieldset>
+
       {/* role="list" explicito: con list-style:none, Safari y VoiceOver le
           quitan la semantica de lista. */}
       <ul className="sim-lista" role="list">
         {lista.map((s) => {
           const marca = marcas[s.slug];
           const cargando = abriendo === s.slug;
-          const minutos = tiempoLargo(s.cantidad * SEGUNDOS_POR_ITEM);
           return (
             <li key={s.slug}>
               <article className="sim-tarjeta">
@@ -96,10 +127,6 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
                   <span className="sim-dato">
                     <ClipboardList size={20} strokeWidth={2} aria-hidden="true" />
                     {s.cantidad} preguntas
-                  </span>
-                  <span className="sim-dato">
-                    <Clock size={20} strokeWidth={2} aria-hidden="true" />
-                    {minutos}
                   </span>
                 </p>
 

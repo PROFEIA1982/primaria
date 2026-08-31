@@ -47,6 +47,9 @@ export type Simulacros = {
   fase: FaseSimulacro;
   abriendo: string | null;
   errorAbrir: string | null;
+  /** 2 horas por defecto; 3 para apoyo no significativo */
+  horas: 2 | 3;
+  elegirHoras: (h: 2 | 3) => void;
   empezar: (slug: string) => void;
 
   // --- el cuadernillo en curso ---
@@ -81,6 +84,9 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
   const [todos, setTodos] = useState<SimulacroResumen[]>([]);
   const [marcas, setMarcas] = useState<Record<string, MarcaSimulacro>>({});
   const [respaldo, setRespaldo] = useState<EnCurso | null>(null);
+  // Cuanto dura el intento. Dos horas por defecto; tres para estudiantes
+  // con apoyo no significativo. Se escoge antes de arrancar.
+  const [horas, setHoras] = useState<2 | 3>(2);
 
   const [fase, setFase] = useState<FaseSimulacro>("lista");
   const [abriendo, setAbriendo] = useState<string | null>(null);
@@ -97,7 +103,9 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
   );
 
   const items = useMemo(() => actual?.items ?? [], [actual]);
-  const totalSegundos = items.length * SEGUNDOS_POR_ITEM;
+  // Lo fija arrancar segun las horas escogidas (o lo que traiga el
+  // respaldo al retomar). Arranca en cero: no hay examen todavia.
+  const [totalSegundos, setTotalSegundos] = useState(0);
   const [restante, setRestante] = useState(0);
   const [aviso, setAviso] = useState("");
   // Hora de fin en milisegundos, no un contador que se resta: si el celular
@@ -171,11 +179,17 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     // Un respaldo de otro largo (porque cambio el cuadernillo) no se usa:
     // las respuestas no calzarian con las preguntas.
     const sirve = desde && desde.respuestas.length === n && desde.fin > Date.now();
+    // Al retomar manda el total que traia guardado el intento; al empezar
+    // de cero, las horas escogidas. Dos minutos por item para dos horas,
+    // tres minutos para tres horas.
+    const segPorItem = horas === 3 ? 180 : SEGUNDOS_POR_ITEM;
+    const total = sirve ? desde.total : n * segPorItem;
     setActual(cuadernillo);
     setRespuestas(sirve ? [...desde.respuestas] : new Array(n).fill(null));
     setIndice(sirve ? Math.min(Math.max(desde.indice, 0), n - 1) : 0);
     setSeAcaboElTiempo(false);
-    finRef.current = sirve ? desde.fin : Date.now() + n * SEGUNDOS_POR_ITEM * 1000;
+    setTotalSegundos(total);
+    finRef.current = sirve ? desde.fin : Date.now() + total * 1000;
     setRestante(Math.max(0, Math.ceil((finRef.current - Date.now()) / 1000)));
     setAviso("");
     // El candado del guardado se suelta aca, con el arranque de verdad, y
@@ -183,7 +197,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     // fallar y dejaria el intento anterior contado dos veces.
     cerradoRef.current = false;
     setFase("examen");
-  }, []);
+  }, [horas]);
 
   const abrir = useCallback(
     (slug: string, desde?: EnCurso) => {
@@ -278,8 +292,8 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
   // ochenta minutos de trabajo.
   useEffect(() => {
     if (fase !== "examen" || !actual) return;
-    guardarEnCurso({ slug: actual.slug, respuestas, indice, fin: finRef.current });
-  }, [fase, actual, respuestas, indice]);
+    guardarEnCurso({ slug: actual.slug, respuestas, indice, fin: finRef.current, total: totalSegundos });
+  }, [fase, actual, respuestas, indice, totalSegundos]);
 
   // --- el reloj ---
   useEffect(() => {
@@ -371,6 +385,8 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     enCurso,
     retomar,
     descartarEnCurso,
+    horas,
+    elegirHoras: setHoras,
     fase,
     abriendo,
     errorAbrir,

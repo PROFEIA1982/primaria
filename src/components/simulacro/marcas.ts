@@ -86,6 +86,8 @@ export type EnCurso = {
   indice: number;
   /** hora de fin del reloj, en milisegundos */
   fin: number;
+  /** cuantos segundos duraba el intento entero (para el color del reloj) */
+  total: number;
 };
 
 function esEnCurso(x: unknown): x is EnCurso {
@@ -96,7 +98,8 @@ function esEnCurso(x: unknown): x is EnCurso {
     Array.isArray(c.respuestas) &&
     c.respuestas.every((r) => r === null || typeof r === "string") &&
     typeof c.indice === "number" &&
-    typeof c.fin === "number"
+    typeof c.fin === "number" &&
+    typeof c.total === "number"
   );
 }
 
