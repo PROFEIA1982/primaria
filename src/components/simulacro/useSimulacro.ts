@@ -47,9 +47,10 @@ export type Simulacros = {
   fase: FaseSimulacro;
   abriendo: string | null;
   errorAbrir: string | null;
-  /** 2 horas por defecto; 3 para apoyo no significativo */
-  horas: 2 | 3;
-  elegirHoras: (h: 2 | 3) => void;
+  /** Duración del Simulacro 2: 3 horas (normal) o 4 (apoyo no significativo).
+      El Simulacro 1 siempre dura 2 horas y no usa este valor. */
+  horas: 3 | 4;
+  elegirHoras: (h: 3 | 4) => void;
   empezar: (slug: string) => void;
 
   // --- el cuadernillo en curso ---
@@ -84,9 +85,10 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
   const [todos, setTodos] = useState<SimulacroResumen[]>([]);
   const [marcas, setMarcas] = useState<Record<string, MarcaSimulacro>>({});
   const [respaldo, setRespaldo] = useState<EnCurso | null>(null);
-  // Cuanto dura el intento. Dos horas por defecto; tres para estudiantes
-  // con apoyo no significativo. Se escoge antes de arrancar.
-  const [horas, setHoras] = useState<2 | 3>(2);
+  // Cuanto dura el Simulacro 2: tres horas por defecto, o cuatro para
+  // estudiantes con apoyo educativo no significativo. Se escoge antes de
+  // arrancar. El Simulacro 1 no lo usa: siempre son dos horas.
+  const [horas, setHoras] = useState<3 | 4>(3);
 
   const [fase, setFase] = useState<FaseSimulacro>("lista");
   const [abriendo, setAbriendo] = useState<string | null>(null);
@@ -180,9 +182,12 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     // las respuestas no calzarian con las preguntas.
     const sirve = desde && desde.respuestas.length === n && desde.fin > Date.now();
     // Al retomar manda el total que traia guardado el intento; al empezar
-    // de cero, las horas escogidas. Dos minutos por item para dos horas,
-    // tres minutos para tres horas.
-    const segPorItem = horas === 3 ? 180 : SEGUNDOS_POR_ITEM;
+    // de cero, lo fija el cuadernillo. El Simulacro 1 siempre son dos horas
+    // (120 s/item). El Simulacro 2 dura lo que el estudiante escoja: tres
+    // horas (180 s/item) o cuatro (240 s/item) para apoyo no significativo.
+    const segPorItem = cuadernillo.numero >= 2
+      ? (horas === 4 ? 240 : 180)
+      : SEGUNDOS_POR_ITEM;
     const total = sirve ? desde.total : n * segPorItem;
     setActual(cuadernillo);
     setRespuestas(sirve ? [...desde.respuestas] : new Array(n).fill(null));
