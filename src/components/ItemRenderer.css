@@ -103,10 +103,34 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
 }
+/* Solo cuando de verdad se desliza: sombra en el borde derecho para que se
+   vea que hay mas datos hacia alla, y aro de foco porque la caja recibe
+   tabulador. El atributo lo pone el componente midiendo, no se adivina. */
+.ps-item .item-tabla-caja[data-desliza] {
+  background:
+    linear-gradient(to right, var(--background) 30%, transparent) left / 24px 100% no-repeat,
+    linear-gradient(to left,  var(--background) 30%, transparent) right / 24px 100% no-repeat,
+    radial-gradient(farthest-side at 0    50%, rgba(0,0,0,.16), transparent) left  / 12px 100% no-repeat,
+    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.16), transparent) right / 12px 100% no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+.ps-item .item-tabla-caja[data-desliza]:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+/* Antes esto tenia min-width:max-content y white-space:nowrap. Las dos reglas
+   juntas obligaban a la tabla a su ancho natural y le prohibian acomodar el
+   texto, asi que en un celular de 360px se arrastraban 29 de 34 tablas
+   —incluso las de dos columnas—. Se habian puesto pensando en tablas de seis
+   columnas; ahora que todas van verticales, estorban.
+
+   Con el ancho al 100% y el texto acomodandose, la tabla cabe en la pantalla.
+   La caja conserva el overflow-x como red: si alguna vez vuelve a entrar una
+   tabla ancha, se desliza ella sola y no corre la pagina entera. */
 .ps-item .item-tabla-caja table {
   border-collapse: collapse;
   width: 100%;
-  min-width: max-content;
+  table-layout: auto;
   font-size: 0.98rem;
 }
 .ps-item .item-tabla-caja th,
@@ -114,7 +138,22 @@
   padding: 10px 14px;
   border-bottom: 1px solid var(--border);
   text-align: left;
-  white-space: nowrap;
+  /* break-word y NO anywhere. Con anywhere el navegador parte las palabras
+     aunque quepan, y quedaba "Persona / s por / habitaci / ón": ilegible para
+     un chiquito. break-word solo parte la palabra que de verdad no cabe sola,
+     y hyphens pone el guion donde corresponde en espanol. */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+/* En celular el relleno lateral se aprieta: son 28px por fila que en una
+   pantalla de 360 se notan. */
+@media (max-width: 479px) {
+  .ps-item .item-tabla-caja th,
+  .ps-item .item-tabla-caja td { padding: 10px 8px; }
+  /* Un punto menos de letra en la tabla. No baja de 15px reales, que sigue
+     siendo comodo de leer, y le da a las tablas de tres columnas el respiro
+     que necesitan para caber sin partir palabras. */
+  .ps-item .item-tabla-caja table { font-size: 0.9rem; }
 }
 .ps-item .item-tabla-caja thead th {
   background: var(--secondary);

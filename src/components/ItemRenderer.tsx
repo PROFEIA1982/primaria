@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Square, Volume2 } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkMath from "remark-math";
@@ -17,14 +17,50 @@ const LETRAS = ["A", "B", "C", "D"];
 const REMARK = [remarkMath, remarkGfm];
 const REHYPE = [rehypeKatex];
 
-// La tabla va dentro de una caja que se desliza sola: en un celular de
-// 320px una tabla de seis columnas no cabe de otra forma.
-const BLOQUE = {
-  table: (props: { children?: React.ReactNode }) => (
-    <div className="item-tabla-caja">
-      <table>{props.children}</table>
+/**
+ * La caja de la tabla.
+ *
+ * Casi todas las tablas caben en la pantalla del celular. Alguna de tres
+ * columnas con texto largo no, y esa se desliza dentro de su caja en vez de
+ * correr la pagina entera.
+ *
+ * Cuando se desliza pasan dos cosas mas, y las dos hacen falta:
+ * el borde derecho se sombrea, porque si no el estudiante no tiene como
+ * saber que hay mas datos a la derecha; y la caja se vuelve alcanzable con
+ * el tabulador y se anuncia como region, porque una zona que se desplaza y
+ * no recibe foco deja fuera a quien navega con teclado.
+ */
+function TablaCaja({ children }: { children?: React.ReactNode }) {
+  const caja = useRef<HTMLDivElement>(null);
+  const [seDesliza, setSeDesliza] = useState(false);
+
+  useEffect(() => {
+    const el = caja.current;
+    if (!el) return;
+    const medir = () => setSeDesliza(el.scrollWidth > el.clientWidth + 1);
+    medir();
+    // Se vuelve a medir cuando cambia el tamano de la letra o gira el aparato.
+    const obs = new ResizeObserver(medir);
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={caja}
+      className="item-tabla-caja"
+      data-desliza={seDesliza ? "" : undefined}
+      tabIndex={seDesliza ? 0 : undefined}
+      role={seDesliza ? "region" : undefined}
+      aria-label={seDesliza ? "Tabla de datos, se desliza de lado" : undefined}
+    >
+      <table>{children}</table>
     </div>
-  ),
+  );
+}
+
+const BLOQUE = {
+  table: (props: { children?: React.ReactNode }) => <TablaCaja>{props.children}</TablaCaja>,
 };
 
 // En las opciones no queremos parrafos ni tablas: solo el texto, que a
