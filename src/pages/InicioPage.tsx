@@ -32,6 +32,7 @@ import {
 import { traerConteos, type ConteoMateria } from "../lib/api";
 import { Cargando, ErrorCarga } from "../components/Estados";
 import BloqueDocentes from "../components/BloqueDocentes";
+import ContadorPracticadas from "../components/ContadorPracticadas";
 import "./InicioPage.css";
 
 // Un icono por materia. Se elige por slug para no depender del orden.
@@ -167,7 +168,11 @@ export default function InicioPage() {
         </div>
       </section>
 
-      {/* 2 · Como funciona */}
+      {/* 2 · Cuantas preguntas se han practicado. El componente decide si
+          se dibuja: si el numero todavia no luce, no devuelve nada. */}
+      <ContadorPracticadas />
+
+      {/* 3 · Como funciona */}
       <section id="inicio-pasos" className="ps-contenedor">
         <h2>¿Cómo funciona?</h2>
         <ol className="pasos-rejilla">
@@ -185,7 +190,7 @@ export default function InicioPage() {
         </ol>
       </section>
 
-      {/* 3 · Materias */}
+      {/* 4 · Materias */}
       <section id="inicio-materias">
         <div className="ps-contenedor">
           <h2>Las cuatro materias</h2>
@@ -238,7 +243,7 @@ export default function InicioPage() {
         </div>
       </section>
 
-      {/* 4 · Para que sirve */}
+      {/* 5 · Para que sirve */}
       <section id="inicio-info" className="ps-contenedor">
         <h2>¿Para qué te sirve esta práctica?</h2>
         <ul className="info-rejilla">
@@ -265,10 +270,10 @@ export default function InicioPage() {
         </ul>
       </section>
 
-      {/* 5 · Aviso para maestros y familias */}
+      {/* 6 · Aviso para maestros y familias */}
       <BloqueDocentes variante="discreta" />
 
-      {/* 6 · Practica sin internet */}
+      {/* 7 · Practica sin internet */}
       <section id="inicio-sin-internet">
         <div className="ps-contenedor">
           <div className="sin-net-encabezado">
