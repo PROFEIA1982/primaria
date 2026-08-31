@@ -95,15 +95,59 @@ export const REVISIONES = [
     nombre: 'tabla aplastada',
     ayuda: 'La tabla se perdio al migrar: rearmela con pipes',
     revisar(t) {
-      // Habla de una tabla pero no trae ninguna. Es la firma exacta del
-      // destrozo de la migracion desde Moodle: las celdas quedan sueltas, una
-      // por renglon, entre montones de lineas vacias.
-      if (!/\b(la siguiente tabla|siguiente cuadro|se presenta una tabla)\b/i.test(t)) return [];
       if (t.includes('|')) return [];
-      const rachas = t.match(/\n{3,}/g) ?? [];
-      return rachas.length >= 3
-        ? ['menciona una tabla, no trae ninguna, y tiene celdas sueltas entre lineas vacias']
-        : ['menciona una tabla pero no trae ninguna'];
+
+      // La senal que sirve es la forma, no la frase.
+      //
+      // Antes esta revision exigia encontrar primero "la siguiente tabla", y
+      // se le escapo un item que decia "se detallan a continuacion": lo
+      // encontro el cliente, ya publicado y a la vista de los estudiantes.
+      //
+      // El primer intento de arreglo fue contar rachas de lineas vacias, y
+      // resulto peor: acuso 13 textos de lectura que solo tenian los parrafos
+      // separados. Lo que de verdad distingue a una tabla aplastada son las
+      // CELDAS SUELTAS: muchas lineas cortas, sin punto final, una debajo de
+      // otra. Medido sobre los casos reales del banco: un item aplastado tiene
+      // doce lineas asi; un texto de lectura con espaciado, cero o una.
+      // Una imagen tambien se anuncia con "a continuacion", y entonces la
+      // frase no habla de ninguna tabla. Si el item trae imagen, esta
+      // revision no aplica.
+      if (/!\[[^\]]*\]\(/.test(t)) return [];
+
+      const lineas = t.split('\n').map((l) => l.trim()).filter(Boolean);
+      const celdas = lineas.filter((l) =>
+        l.length <= 30 &&
+        !/[.:?!,;]$/.test(l) &&          // una celda no termina en puntuacion
+        !/^[a-zA-Z0-9][).]\s/.test(l) && // ni es un punto de una lista: "a) ..."
+        !/^[-*•]\s/.test(l));            // ni una vineta
+      if (celdas.length >= 5) {
+        return [`hay ${celdas.length} lineas sueltas y cortas y ninguna tabla: parecen celdas`];
+      }
+
+      // Y si encima lo anuncia, con menos celdas ya alcanza para sospechar.
+      const sinTildes = t.normalize('NFD').replace(/[̀-ͯ]/g, '');
+      const anuncia = /\b(la siguiente tabla|siguiente cuadro|se presenta una tabla|se detallan? a continuacion|la tabla adjunta)\b/i;
+      if (anuncia.test(sinTildes)) return ['menciona una tabla pero no trae ninguna'];
+      return [];
+    },
+  },
+  {
+    nombre: 'tabla ancha',
+    ayuda: 'Pasela a vertical: una fila por registro y dos o tres columnas',
+    revisar(t) {
+      const filas = t.split('\n').filter((l) => l.trim().startsWith('|'));
+      if (filas.length === 0) return [];
+      const datos = filas.filter((l) => !/^\s*\|[\s:|-]+\|\s*$/.test(l));
+      const cols = (datos[0].split('|').length) - 2;
+      // Una tabla con muchas columnas y una o dos filas esta acostada: los
+      // datos crecen hacia la derecha. En un celular de 360px eso obliga al
+      // estudiante a arrastrar de lado para leer las cifras. Transponerla
+      // —la etiqueta de cada fila pasa a encabezado— la deja cabiendo en la
+      // pantalla sin perder ni un dato.
+      if (cols >= 4 && datos.length <= 2) {
+        return [`la tabla tiene ${cols} columnas y ${datos.length - 1} fila(s) de datos: se sale en celular`];
+      }
+      return [];
     },
   },
   {

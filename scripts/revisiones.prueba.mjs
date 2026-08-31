@@ -24,6 +24,13 @@ const CASOS_TEXTO = [
   ['la variable entrecomillada', 'La ecuación \\( “n” \\) representa algo', true],
   ['tabla aplastada por la migracion',
     'En la siguiente tabla se muestra el peso de tres conejos:\n\n\n\nConejo\n\n\n\nPeso\n\n\n\nW\n\n\n\n1,62\n\n\n\nR\n\n\n\n1,60\n\n\n\nDe acuerdo con lo anterior', true],
+  // Este es el que se escapo al cliente, ya publicado: no dice "la siguiente
+  // tabla" sino "se detallan a continuacion", asi que la revision vieja —que
+  // exigia la frase antes de mirar la forma— lo dejo pasar.
+  ['tabla aplastada que NO dice "la siguiente tabla"',
+    'Las masas, en kilogramos, de seis niños se detallan a continuación:\n\n\n\nAna\n\n\n\nCarlos\n\n\n\nBeatriz\n\n\n\n41\n\n\n\n45\n\n\n\n43\n\n\n\nDe acuerdo con la información anterior', true],
+  ['tabla ancha, se sale en celular',
+    'Vea:\n\n| Día | 1 | 2 | 3 | 4 | 5 | 6 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Color | A | R | V | A | R | V |\n\nY conteste', true],
 
   // --- rotos armados a proposito para cubrir el resto de las revisiones ---
   ['un dolar sin pareja', 'El total es $\\frac{1}{2} y ya', true],
@@ -35,7 +42,16 @@ const CASOS_TEXTO = [
   ['formula bien escrita', 'El procedimiento es $(15 \\times 150) + (10 \\times 75)$ colones', false],
   ['fraccion bien escrita', '$\\frac{3}{5}$', false],
   ['tabla bien armada', 'Vea:\n\n| Planta | Precio |\n| --- | --- |\n| Rosa | 1500 |\n| Clavel | 1005 |\n\nY conteste', false],
-  ['tabla horizontal bien armada', 'Vea:\n\n| Día | 1 | 2 | 3 |\n| --- | --- | --- | --- |\n| Color | A | R | V |\n\nY conteste', false],
+  ['tabla vertical, la forma buena', 'Vea:\n\n| Día | Color |\n| --- | --- |\n| 1 | A |\n| 2 | R |\n| 3 | V |\n\nY conteste', false],
+  ['tres columnas y varias filas: sigue siendo vertical',
+    'Vea:\n\n| Deporte | Hombres | Mujeres |\n| --- | --- | --- |\n| Fútbol | 32 | 22 |\n| Atletismo | 28 | 33 |\n\nY conteste', false],
+  // Falsos positivos reales que aparecieron al calibrar esta revision.
+  ['lista con letras, no es una tabla',
+    'Lea el siguiente texto:\n\nEl mundo colonial estaba dividido así:\n\na) Virreinatos,\n\nb) Capitanías Generales,\n\nc) Gobernaciones,\n\nd) Audiencias,\n\ne) Corregimientos,\n\nf) Intendencias,\n\ng) Cabildos.\n\nSegún el texto anterior, Costa Rica', false],
+  ['"se muestra a continuacion" hablando de una imagen, no de una tabla',
+    'Axel construyó una piscina circular de radio 3 metros. Tal como se muestra a continuación:\n\n![Circunferencia con un radio rotulado 3 m.](https://ejemplo.test/x.webp)\n\n¿cuál es el área?', false],
+  ['parrafos separados, no es una tabla aplastada',
+    'Lea el siguiente texto:\n\n\nUn párrafo cualquiera del texto de lectura.\n\n\nSegún el texto anterior, ¿qué pasó?', false],
   ['texto normal sin matematica', 'Carlos compró 15 lápices y el precio de cada uno era ₡150.', false],
   ['precio en colones, no es LaTeX', 'La entrada cuesta ₡2500 y el pasaje ₡700.', false],
   ['tabla con fraccion adentro', 'Vea:\n\n| Día | Lunes |\n| --- | --- |\n| Cartones | $\\frac{15}{10}$ |\n\nY conteste', false],
