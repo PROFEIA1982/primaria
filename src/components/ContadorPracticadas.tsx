@@ -17,18 +17,21 @@ import "./ContadorPracticadas.css";
 
 const MINIMO = 25; // debajo de esto el numero no luce; mejor callado
 
+// Se lee una sola vez, fuera del componente: si el visitante pidió menos
+// animación, no hay nada que animar y el numero se devuelve tal cual, sin
+// tocar estado. Asi el caso quieto no pasa por un render de mas.
+const QUIETO =
+  typeof window !== "undefined" &&
+  (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false);
+
 // Cuenta de cero hasta el total en un segundo escaso. Es puro texto, no hay
-// layout que recalcular. Se apaga con prefers-reduced-motion, y ahi el numero
-// aparece de una.
+// layout que recalcular.
 function useConteoAnimado(total: number | null): number {
   const [valor, setValor] = useState(0);
   const cuadro = useRef<number | null>(null);
 
   useEffect(() => {
-    if (total === null) return;
-
-    const quieto = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-    if (quieto) { setValor(total); return; }
+    if (total === null || QUIETO) return;
 
     const DURACION = 900;
     const arranque = performance.now();
@@ -46,7 +49,8 @@ function useConteoAnimado(total: number | null): number {
     return () => { if (cuadro.current !== null) cancelAnimationFrame(cuadro.current); };
   }, [total]);
 
-  return valor;
+  // Con la animación apagada el valor sale derecho del dato, sin estado.
+  return QUIETO ? (total ?? 0) : valor;
 }
 
 export default function ContadorPracticadas() {
