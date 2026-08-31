@@ -1,0 +1,101 @@
+/* ============================================================
+   Contador de la portada. Todo prefijado con #inicio-contador.
+
+   Es una banda fina a proposito: va justo debajo del hero y no puede
+   competir con el, solo confirmar que el sitio esta vivo. Si crece a
+   seccion completa, empuja las materias abajo del pliegue en celular.
+
+   Contrastes calculados con la formula WCAG 2.1 (contraste_wcag.py),
+   no estimados a ojo:
+                                              claro        oscuro
+   - --titulo  sobre --secondary ........... 10.73 AAA     8.91 AAA
+   - --muted   sobre --secondary ...........  5.16 AA      7.82 AAA
+   - --primary sobre --primary-suave .......  5.87 AA      6.10 AA
+   ============================================================ */
+
+#inicio-contador {
+  background: var(--secondary);
+  border-block: var(--borde-ancho) solid var(--border);
+}
+
+/* En fila cuando cabe, apilado cuando no. En em y no en px: con el texto
+   al 200% el viewport mide igual pero el contenido ya no entra en fila. */
+#inicio-contador .contador-caja {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 18px;
+  padding-top: clamp(16px, 2.5vw, 24px);
+  padding-bottom: clamp(16px, 2.5vw, 24px);
+  text-align: center;
+}
+
+#inicio-contador .contador-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--primary-suave);
+  color: var(--primary);            /* 5.87 claro · 6.10 oscuro · AA */
+}
+
+/* El numero y su rotulo son una sola idea, por eso viven en el mismo p y
+   se alinean por la base: el "446" y el "preguntas" tienen que sentarse
+   sobre la misma linea aunque midan distinto. */
+#inicio-contador .contador-dato {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px 10px;
+  margin: 0;
+  min-width: 0;
+}
+
+#inicio-contador .contador-numero {
+  font-size: clamp(1.9rem, 1.4rem + 2.2vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--titulo);             /* 10.73 claro · 8.91 oscuro · AAA */
+  /* Las cifras no bailan mientras el contador sube: sin esto, el 1 es mas
+     angosto que el 8 y el numero entero se mueve en cada cuadro. */
+  font-variant-numeric: tabular-nums;
+}
+
+#inicio-contador .contador-rotulo {
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+  font-weight: 700;
+  color: var(--muted);              /* 5.16 claro · 7.82 oscuro · AA */
+}
+
+#inicio-contador .contador-fino {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+/* A partir de tablet la frase se sienta al lado en vez de robar un renglon. */
+@media (min-width: 48em) {
+  #inicio-contador .contador-fino {
+    flex-basis: auto;
+    padding-left: 18px;
+    border-left: var(--borde-ancho) solid var(--border);
+  }
+}
+
+@media (forced-colors: active) {
+  #inicio-contador { border-block: 1px solid ButtonText; }
+  #inicio-contador .contador-icono { border: 1px solid ButtonText; }
+}
+
+/* No hay nada que apagar aca: la unica animacion del bloque es el conteo,
+   y ese se desactiva en el componente leyendo la misma preferencia. Queda
+   escrito para que nadie agregue una transicion despues sin pensarlo. */
+@media (prefers-reduced-motion: reduce) {
+  #inicio-contador * { animation: none !important; transition: none !important; }
+}
