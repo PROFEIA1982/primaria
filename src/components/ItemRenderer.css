@@ -313,27 +313,37 @@
    En la practica, apenas toca se pinta de verde o de rojo. En el simulacro
    no se corrige hasta el final, y sin esta regla la pantalla no le
    respondia NADA al tocar: marcaba y quedaba sin saber si le habia pegado
-   al boton. Tres senales a la vez, no solo color: el borde engorda de 2 a
-   3 px, la letra se rellena y aparece la palabra "Marcada".
+   al boton.
+
+   Va en VERDE, que el cliente pidio como el color de "esta escogi yo". Ojo:
+   en esta app el verde tambien es el de la correcta, pero aca no hay
+   correccion todavia, y la palabra dice "Marcada" (no "Correcta"), asi que
+   se lee como "mi eleccion" y no como "acerte". Tres senales a la vez, no
+   solo color: el borde engorda de 2 a 3 px, la letra se rellena y aparece
+   la palabra.
 
    El :not([data-estado]) es para que esto nunca le gane al verde de la
-   correcta ni al rojo de la incorrecta cuando si hay correccion.
+   correcta ni al rojo de la incorrecta cuando si hay correccion (en la
+   practica, y en el repaso del simulacro).
 
    Contrastes calculados con la formula WCAG:              claro  oscuro
-   - --primary sobre --primary-suave (texto y palabra) ...  5.87   6.10  AA
-   - --primary-foreground sobre --primary (la letra) .....  6.70   7.69  AA
-   - --primary sobre --background (el borde) .............  6.70   7.44  AA */
+   - --foreground sobre --success-suave (el texto) ......  15.62  12.87 AAA
+   - --primary-foreground sobre --success (la letra) ....   5.35  11.13 AA
+   - --success sobre --success-suave (la palabra) .......   4.80   8.98 AA
+   - --success sobre --background (el borde) ............   5.35   9.80 AA */
 .ps-item .item-opcion[aria-checked="true"]:not([data-estado]) {
   border-width: 3px;
-  border-color: var(--primary);
-  background: var(--primary-suave);
+  border-color: var(--success);
+  background: var(--success-suave);
 }
 .ps-item .item-opcion[aria-checked="true"]:not([data-estado]) .item-letra {
-  background: var(--primary);
+  background: var(--success);
+  /* blanco sobre el verde en claro; tinta oscura sobre el verde claro en
+     oscuro. --primary-foreground vira solo con el tema y da los dos. */
   color: var(--primary-foreground);
 }
 .ps-item .item-opcion[aria-checked="true"]:not([data-estado]) .item-marca {
-  color: var(--primary);
+  color: var(--success);
 }
 
 /* --- Modo de mas contraste ---
