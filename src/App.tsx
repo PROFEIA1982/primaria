@@ -32,6 +32,22 @@ const RUTAS_CON_PIE = ["/", "/contacto"];
 
 // El armazon vive dentro del router porque useLocation necesita el contexto
 // que abre BrowserRouter. App queda por fuera y solo monta el router.
+// Al navegar, el navegador conserva el desplazamiento. El chiquito baja
+// hasta "Las cuatro materias" en la portada, toca Matematicas, y cae en la
+// pagina nueva a media altura: sin ver el titulo ni la ilustracion, como si
+// la app se hubiera saltado un pedazo. Esto la sube al inicio.
+//
+// Se salta cuando la navegacion trae `irA`, porque en ese caso la pagina de
+// destino ya lleva ella misma al bloque que corresponde.
+function SubirAlCambiar() {
+  const { pathname, state } = useLocation();
+  useEffect(() => {
+    if (state && typeof state === "object" && "irA" in state) return;
+    window.scrollTo(0, 0);
+  }, [pathname, state]);
+  return null;
+}
+
 function Armazon() {
   const { pathname } = useLocation();
   // Se limpia la barra final para que "/contacto/" no se quede sin pie.
@@ -41,6 +57,7 @@ function Armazon() {
   return (
     <>
       <a className="ps-saltar" href="#contenido">Saltar al contenido</a>
+      <SubirAlCambiar />
       <Nav />
       <main id="contenido" tabIndex={-1}>
         <Suspense fallback={<div className="ps-contenedor ps-seccion"><Cargando /></div>}>

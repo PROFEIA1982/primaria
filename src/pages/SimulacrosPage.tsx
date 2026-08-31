@@ -3,6 +3,7 @@ import { BookOpen, Calculator, Globe, Microscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MATERIAS, type SlugMateria } from "../config";
 import ListaPanel from "../components/simulacro/ListaPanel";
+import PestanasMateria from "../components/PestanasMateria";
 import InstruccionesSimulacro from "../components/simulacro/InstruccionesSimulacro";
 import ResultadosSimulacro from "../components/simulacro/ResultadosSimulacro";
 import SimulacroPanel from "../components/simulacro/SimulacroPanel";
@@ -102,6 +103,8 @@ export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
         </span>
         Simulacros de {datos.nombre}
       </h1>
+
+      <PestanasMateria slug={datos.slug} actual="simulacro" />
       <InstruccionesSimulacro
         materia={datos.slug}
         nombre={datos.nombre}

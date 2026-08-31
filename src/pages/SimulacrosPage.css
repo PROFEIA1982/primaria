@@ -363,7 +363,7 @@
   background: var(--primary);
 }
 /* La que esta viendo lleva marco grueso, no solo otro color. */
-.sim-cuadro[aria-current="true"] {
+.sim-cuadro[aria-current="step"] {
   border-width: 3px;
   border-color: var(--titulo);
   background: var(--secondary);
@@ -532,7 +532,7 @@
 
 @media (forced-colors: active) {
   .sim-cuadro[data-hecha] { border: 3px solid Highlight; }
-  .sim-cuadro[aria-current="true"] { outline: 3px solid ButtonText; outline-offset: 2px; }
+  .sim-cuadro[aria-current="step"] { outline: 3px solid ButtonText; outline-offset: 2px; }
   .sim-revi-op[data-tipo] { border: 2px solid ButtonText; }
 }
 

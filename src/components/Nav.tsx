@@ -1,26 +1,25 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import {
-  Accessibility, ALargeSmall, ChevronDown, Contrast, ExternalLink, Eye,
-  GraduationCap, Menu, Moon, Palette, Sun, Volume2, VolumeX, X,
+  Accessibility, ALargeSmall, ChevronDown, Contrast, Eye,
+  Menu, Moon, Palette, Sun, Volume2, VolumeX, X,
 } from "lucide-react";
-import { IMG_LOGO_EVI, MATERIAS, URL_IDONEA } from "../config";
+import { IMG_LOGO_EVI, MATERIAS } from "../config";
 import { useApariencia } from "../lib/apariencia";
 import "./Nav.css";
 
-type ItemMenu = { slug: string; nombre: string; color: string; to: string };
-
-// Abrir y cerrar un desplegable del menu. Lo comparten el de materias y
-// el de accesibilidad: dos copias de esta logica terminan con uno que
-// cierra al tocar afuera y otro que no.
+// Abrir y cerrar un desplegable del menu. Vive aparte porque el panel de
+// accesibilidad no es el unico que podria usarlo, y porque la logica de
+// "cerrar al tocar afuera, cerrar con Escape y devolver el foco" es de las
+// que se copian mal si se escriben dos veces.
 function useDesplegable() {
   const [abierto, setAbierto] = useState(false);
   const cajaRef = useRef<HTMLLIElement>(null);
   const botonRef = useRef<HTMLButtonElement>(null);
   const { pathname } = useLocation();
 
-  // Al cambiar de pagina se cierra. Sin esto, en escritorio la lista se
-  // quedaba abierta encima del contenido despues de navegar.
+  // Al cambiar de pagina se cierra. Sin esto, en escritorio el panel se
+  // quedaba abierto encima del contenido despues de navegar.
   useEffect(() => {
     setAbierto(false);
   }, [pathname]);
@@ -33,7 +32,7 @@ function useDesplegable() {
     const alTeclear = (e: KeyboardEvent) => {
       if (e.key !== "Escape") return;
       setAbierto(false);
-      // El foco vuelve al boton que la abrio: si se queda suelto, quien
+      // El foco vuelve al boton que lo abrio: si se queda suelto, quien
       // navega con teclado tiene que empezar desde arriba otra vez.
       botonRef.current?.focus();
     };
@@ -47,56 +46,6 @@ function useDesplegable() {
 
   const alternar = useCallback(() => setAbierto((v) => !v), []);
   return { abierto, alternar, cajaRef, botonRef };
-}
-
-// Un desplegable de enlaces. Se usa dos veces: "Practicar" (por tema) y
-// "Simulacros" (examen completo).
-function MenuDesplegable({
-  etiqueta,
-  id,
-  activo,
-  items,
-}: {
-  etiqueta: string;
-  id: string;
-  activo: boolean;
-  items: ItemMenu[];
-}) {
-  const { abierto, alternar, cajaRef, botonRef } = useDesplegable();
-
-  return (
-    <li className="nav-desplegable" ref={cajaRef}>
-      <button
-        type="button"
-        className="nav-sim-boton"
-        ref={botonRef}
-        aria-expanded={abierto}
-        aria-controls={id}
-        data-activo={activo ? "si" : undefined}
-        onClick={alternar}
-      >
-        {etiqueta}
-        <ChevronDown
-          size={18}
-          strokeWidth={2.4}
-          aria-hidden="true"
-          className="nav-sim-flecha"
-          data-abierto={abierto ? "si" : "no"}
-        />
-      </button>
-      {/* Con hidden y no con display:none en CSS: asi el enlace cerrado
-          tampoco recibe el tabulador ni lo lee el lector. */}
-      <ul id={id} className="nav-sim-lista" hidden={!abierto}>
-        {items.map((it) => (
-          <li key={it.slug}>
-            <NavLink to={it.to} style={{ ["--acento" as string]: it.color }}>
-              {it.nombre}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </li>
-  );
 }
 
 // Una fila del panel de accesibilidad: icono, nombre, y el estado
@@ -239,10 +188,11 @@ function MenuAccesibilidad() {
 // Navegacion. En celular se abre con la hamburguesa; en pantalla grande
 // siempre esta a la vista, porque un nino no deberia tener que buscarla.
 //
-// Menu: Inicio · Practicar ▾ · Simulacros ▾ · Idoneidad Docente ↗ ·
-// Contacto · Accesibilidad ▾. Las cuatro materias no van sueltas en la
-// barra; viven dentro de los dos desplegables, que hacen la misma
-// pregunta al chiquito: practicar por tema o hacer el simulacro completo.
+// Menu: Inicio · Español · Sociales · Ciencias · Matemáticas · Contacto ·
+// Accesibilidad ▾. El enlace a la web de idoneidad docente salio de aca: es
+// publicidad para adultos y no tiene por que ocupar un puesto en el menu de
+// un chiquito. Sigue estando en la portada y en contacto, dentro del bloque
+// de docentes, que es donde corresponde.
 export default function Nav() {
   const [abierto, setAbierto] = useState(false);
   const { pathname } = useLocation();
@@ -251,18 +201,6 @@ export default function Nav() {
   useEffect(() => {
     setAbierto(false);
   }, [pathname]);
-
-  // "Practicar" queda activo en las paginas de materia (/espanol, /ciencias…);
-  // "Simulacros" en /simulacros y sus hijos.
-  const enPracticar = MATERIAS.some((m) => pathname === `/${m.slug}`);
-  const enSimulacros = pathname === "/simulacros" || pathname.startsWith("/simulacros/");
-
-  const itemsPracticar: ItemMenu[] = MATERIAS.map((m) => ({
-    slug: m.slug, nombre: m.nombre, color: m.color, to: `/${m.slug}`,
-  }));
-  const itemsSimulacros: ItemMenu[] = MATERIAS.map((m) => ({
-    slug: m.slug, nombre: m.nombre, color: m.color, to: `/simulacros/${m.slug}`,
-  }));
 
   return (
     <header id="nav-principal">
@@ -294,36 +232,23 @@ export default function Nav() {
             <li>
               <NavLink to="/" onClick={() => setAbierto(false)}>Inicio</NavLink>
             </li>
-            <MenuDesplegable
-              etiqueta="Practicar"
-              id="nav-practicar"
-              activo={enPracticar}
-              items={itemsPracticar}
-            />
-            <MenuDesplegable
-              etiqueta="Simulacros"
-              id="nav-simulacros"
-              activo={enSimulacros}
-              items={itemsSimulacros}
-            />
-            {/* Enlace de salida a la web de idoneidad docente (adultos). Es
-                otro sitio, asi que abre en otra pestaña y lleva el icono de
-                enlace externo; no es NavLink porque no es una ruta de esta
-                app. */}
-            <li>
-              <a
-                href={URL_IDONEA}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-externo"
-                onClick={() => setAbierto(false)}
-              >
-                <GraduationCap size={18} strokeWidth={2.2} aria-hidden="true" />
-                Idoneidad Docente
-                <ExternalLink size={15} strokeWidth={2.2} aria-hidden="true" className="nav-externo-icono" />
-                <span className="ps-solo-lectores"> (se abre en otra pestaña)</span>
-              </a>
-            </li>
+            {/* Las cuatro materias van sueltas y no dentro de un desplegable.
+                Un chiquito no piensa "quiero hacer un simulacro, de que"; piensa
+                "me va mal en mate". La materia es la unidad, y partir por verbo
+                dejaba "Español" repetido en dos menus. Escoger entre practicar y
+                simulacro se hace ya adentro, con las dos pestañas, que es donde
+                cabe explicar la diferencia. */}
+            {MATERIAS.map((m) => (
+              <li key={m.slug}>
+                <NavLink
+                  to={`/${m.slug}`}
+                  style={{ ["--acento" as string]: m.color }}
+                  onClick={() => setAbierto(false)}
+                >
+                  {m.corto}
+                </NavLink>
+              </li>
+            ))}
             <li>
               <NavLink to="/contacto" onClick={() => setAbierto(false)}>Contacto</NavLink>
             </li>

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { BookOpen, Calculator, Globe, Microscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MATERIAS, type SlugMateria } from "../config";
@@ -6,6 +7,7 @@ import EsqueletoPregunta from "../components/practica/EsqueletoPregunta";
 import ExamenPanel from "../components/practica/ExamenPanel";
 import ResultadosPanel from "../components/practica/ResultadosPanel";
 import SeleccionPanel from "../components/practica/SeleccionPanel";
+import PestanasMateria from "../components/PestanasMateria";
 import { usePractica } from "../components/practica/usePractica";
 import "./PracticaPage.css";
 
@@ -23,6 +25,21 @@ const ICONOS: Record<SlugMateria, typeof BookOpen> = {
 // se desincronizan cuando se cambia una sola cosa.
 export default function PracticaPage({ materia }: { materia: SlugMateria }) {
   const practica = usePractica(materia);
+  // Al terminar, el navegador se queda donde estaba: el chiquito toca "Ver
+  // resultados" desde el fondo y cae a media lista de las falladas, sin ver
+  // nunca su nota, que esta hasta arriba. Con teclado ademas se pierde el
+  // foco y con lector de pantalla no se oye nada. El simulacro ya lo
+  // resolvia asi; esto es lo mismo para la practica.
+  const tituloRef = useRef<HTMLHeadingElement>(null);
+  const fasePrevia = useRef(practica.fase);
+  useEffect(() => {
+    if (fasePrevia.current === practica.fase) return;
+    fasePrevia.current = practica.fase;
+    if (practica.fase !== "resultados") return;
+    const quieto = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: quieto ? "auto" : "smooth" });
+    tituloRef.current?.focus({ preventScroll: true });
+  }, [practica.fase]);
   const datos = MATERIAS.find((m) => m.slug === materia);
 
   if (!datos) {
@@ -57,12 +74,17 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
   if (practica.fase === "resultados") {
     return (
       <section id="practica-resultados" className="ps-contenedor ps-seccion" style={acento}>
-        <h1>
+        <h1 tabIndex={-1} ref={tituloRef}>
           <span className="res-icono" aria-hidden="true">
             <Icono size={30} strokeWidth={1.9} />
           </span>
           Resultados de {datos.nombre}
         </h1>
+        {/* Lo que oye quien usa lector de pantalla al terminar. */}
+        <p role="status" className="ps-solo-lectores">
+          Terminaste. Tu nota es {practica.calificacion.nota} de 100:{" "}
+          {practica.calificacion.aciertos} buenas de {practica.calificacion.total}.
+        </p>
         <ResultadosPanel nombreMateria={datos.nombre} practica={practica} />
       </section>
     );
@@ -97,6 +119,10 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
           />
         </div>
       </section>
+
+      <div className="ps-contenedor" style={acento}>
+        <PestanasMateria slug={datos.slug} actual="practicar" />
+      </div>
 
       <section id="practica-seleccion" className="ps-contenedor ps-seccion" style={acento}>
 

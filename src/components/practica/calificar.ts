@@ -149,8 +149,8 @@ export function nivelReloj(restante: number, total: number): NivelReloj {
 
 export const PALABRA_RELOJ: Record<NivelReloj, string> = {
   normal: "Con calma",
-  poco: "Apurate",
-  critico: "Ya casi se acaba",
+  poco: "Te queda un cuarto",
+  critico: "Últimos minutos",
 };
 
 // Lo que oye quien usa lector de pantalla. No canta cada segundo: quien
@@ -159,8 +159,8 @@ export function avisoReloj(restante: number, nivel: NivelReloj): string {
   if (restante <= 0) return "Se acabó el tiempo.";
   const minutos = Math.ceil(restante / 60);
   const cuanto = minutos === 1 ? "Queda menos de un minuto." : `Quedan ${minutos} minutos.`;
-  if (nivel === "critico") return `${cuanto} Ya casi se acaba.`;
-  if (nivel === "poco") return `${cuanto} Apurate.`;
+  if (nivel === "critico") return `${cuanto} Estás en los últimos minutos.`;
+  if (nivel === "poco") return `${cuanto} Te queda un cuarto del tiempo.`;
   return cuanto;
 }
 

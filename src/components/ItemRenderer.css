@@ -89,6 +89,11 @@
      esto, con la letra grande se sale del recuadro y corre la pagina */
   overflow-wrap: anywhere;
 }
+/* 68ch es la medida comoda de lectura. Sin esto, en una compu de escritorio
+   los textos de comprension de Español corrian a unos 115 caracteres por
+   renglon y un lector de doce años pierde el hilo al saltar de linea. */
+.ps-item .item-enunciado p,
+.ps-item .item-enunciado blockquote { max-width: 68ch; }
 .ps-item .item-enunciado p { margin: 0 0 0.8em; }
 .ps-item .item-enunciado img {
   display: block;
@@ -326,18 +331,24 @@
    correcta ni al rojo de la incorrecta cuando si hay correccion (en la
    practica, y en el repaso del simulacro).
 
+   OJO con el color: aca NO va el verde de --success. En la practica el
+   chiquito aprende que verde con palomita significa "correcta"; si en el
+   simulacro la que el marco tambien se pinta verde con palomita, marca 60
+   preguntas creyendo que va bien y al final le sale 45. Se usa el color de
+   la materia (--acento), que ya viene puesto por la seccion.
+
    Contrastes calculados con la formula WCAG:              claro  oscuro
-   - --foreground sobre --success-suave (el texto) ......  15.62  12.87 AAA
-   - --primary-foreground sobre --success (la letra) ....   5.35  11.13 AA
-   - --success sobre --success-suave (la palabra) .......   4.80   8.98 AA
-   - --success sobre --background (el borde) ............   5.35   9.80 AA */
+   - --foreground sobre --suave (el texto) ..............  15.62  12.87 AAA
+   - --acento sobre --suave (la palabra) ................   4.80   8.98 AA
+     (el mas bajo de las cuatro materias es Español)
+   - --acento sobre --background (el borde) .............   5.46   9.80 AA */
 .ps-item .item-opcion[aria-checked="true"]:not([data-estado]) {
   border-width: 3px;
-  border-color: var(--success);
-  background: var(--success-suave);
+  border-color: var(--acento, var(--primary));
+  background: var(--suave, var(--primary-suave));
 }
 .ps-item .item-opcion[aria-checked="true"]:not([data-estado]) .item-letra {
-  background: var(--success);
+  background: var(--acento, var(--primary));
   /* blanco sobre el verde en claro; tinta oscura sobre el verde claro en
      oscuro. --primary-foreground vira solo con el tema y da los dos. */
   color: var(--primary-foreground);

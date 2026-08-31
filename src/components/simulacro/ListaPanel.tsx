@@ -112,8 +112,8 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
             </label>
           </div>
           <p className="sim-tiempo-ayuda">
-            Las <strong>4 horas</strong> son para estudiantes con apoyo educativo no
-            significativo. Si no es tu caso, dejá las 3 horas. El{" "}
+            Si en el cole te dan más tiempo en los exámenes, escogé las{" "}
+            <strong>4 horas</strong>. Si no, dejá las 3. El{" "}
             <strong>Simulacro 1</strong> siempre dura 2 horas.
           </p>
         </fieldset>

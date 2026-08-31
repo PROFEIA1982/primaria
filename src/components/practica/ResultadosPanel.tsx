@@ -50,7 +50,8 @@ export default function ResultadosPanel({ nombreMateria, practica }: Props) {
             {seAcaboElTiempo ? "Se te acabó el tiempo. " : ""}
             Quedaron <strong>{sinResponder}</strong>{" "}
             {sinResponder === 1 ? "pregunta sin responder" : "preguntas sin responder"} y
-            cuentan como malas. La próxima vez pedí menos preguntas o andá más rápido.
+            cuentan como malas. Eso pasa. Probá con menos preguntas la próxima y
+            vas a ver que sí alcanzás.
           </span>
         </p>
       )}
