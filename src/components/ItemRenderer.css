@@ -131,7 +131,14 @@
   border-collapse: collapse;
   width: 100%;
   table-layout: auto;
-  font-size: 0.98rem;
+  /* em y NO rem. En rem la tabla se quedaba congelada en 14,4px mientras el
+     enunciado crecia a 27: el estudiante con baja visión apretaba "Más
+     grande", todo crecia y los datos no. Y los datos son justamente lo que
+     tiene que leer. Medido antes de arreglarlo:
+        Normal      enunciado 17,6px · tabla 14,4px
+        Grande      enunciado 22,0px · tabla 14,4px
+        Más grande  enunciado 27,3px · tabla 14,4px */
+  font-size: 0.95em;
 }
 .ps-item .item-tabla-caja th,
 .ps-item .item-tabla-caja td {
@@ -146,14 +153,68 @@
   hyphens: auto;
 }
 /* En celular el relleno lateral se aprieta: son 28px por fila que en una
-   pantalla de 360 se notan. */
-@media (max-width: 479px) {
+   pantalla de 360 se notan. La letra NO se toca. */
+@media (max-width: 559px) {
   .ps-item .item-tabla-caja th,
   .ps-item .item-tabla-caja td { padding: 10px 8px; }
-  /* Un punto menos de letra en la tabla. No baja de 15px reales, que sigue
-     siendo comodo de leer, y le da a las tablas de tres columnas el respiro
-     que necesitan para caber sin partir palabras. */
-  .ps-item .item-tabla-caja table { font-size: 0.9rem; }
+
+  /* --- Tablas de tres o mas columnas: se apilan en tarjetas ---
+     Una tabla de tres columnas con texto largo no cabe en 360px, y las dos
+     salidas faciles son malas: achicar la letra castiga justo a quien pidio
+     letra grande, y dejarla deslizar esconde datos detras de un gesto que el
+     estudiante no sabe que existe.
+     Apilada, cada fila es una tarjeta con sus pares rotulo-dato, uno debajo
+     del otro. No se achica nada, no se esconde nada y no hay que arrastrar.
+     El atributo lo pone el componente contando columnas; las de dos columnas
+     se quedan como tabla, que ahi es mas compacta y se lee mejor. */
+  .ps-item .item-tabla-caja[data-apilar] {
+    overflow-x: visible;
+    border: 0;
+    border-radius: 0;
+    background: none;
+  }
+  .ps-item .item-tabla-caja[data-apilar] table { display: block; }
+  .ps-item .item-tabla-caja[data-apilar] tbody { display: block; }
+  /* El encabezado se oculta a la vista pero sigue en el arbol: cada dato
+     lleva su rotulo al lado, y el lector de pantalla conserva la tabla. */
+  .ps-item .item-tabla-caja[data-apilar] thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .ps-item .item-tabla-caja[data-apilar] tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .ps-item .item-tabla-caja[data-apilar] tbody tr:last-child { margin-bottom: 0; }
+  .ps-item .item-tabla-caja[data-apilar] td {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ps-item .item-tabla-caja[data-apilar] tr td:last-child { border-bottom: 0; }
+  /* La primera celda es la que identifica la fila: va de titulo de la tarjeta. */
+  .ps-item .item-tabla-caja[data-apilar] td:first-child {
+    background: var(--secondary);
+    font-weight: 700;
+    color: var(--titulo);
+  }
+  .ps-item .item-tabla-caja[data-apilar] td::before {
+    content: attr(data-rotulo);
+    flex: 1 1 40%;
+    min-width: 8ch;
+    font-weight: 700;
+    color: var(--muted);
+  }
+  .ps-item .item-tabla-caja[data-apilar] td:first-child::before { color: var(--titulo); }
 }
 .ps-item .item-tabla-caja thead th {
   background: var(--secondary);

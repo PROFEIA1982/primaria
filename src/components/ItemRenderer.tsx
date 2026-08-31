@@ -33,22 +33,45 @@ const REHYPE = [rehypeKatex];
 function TablaCaja({ children }: { children?: React.ReactNode }) {
   const caja = useRef<HTMLDivElement>(null);
   const [seDesliza, setSeDesliza] = useState(false);
+  const [apilar, setApilar] = useState(false);
 
   useEffect(() => {
     const el = caja.current;
     if (!el) return;
+    const tabla = el.querySelector("table");
+    if (!tabla) return;
+
+    // Tres columnas o mas no caben en un celular, y ahi la tabla se apila en
+    // tarjetas (lo hace el CSS). Dos columnas se quedan como tabla: asi es
+    // mas compacta y se lee mejor.
+    const columnas = tabla.querySelector("tr")?.children.length ?? 0;
+    setApilar(columnas >= 3);
+
+    // Cada dato lleva encima el rotulo de su columna, que es lo que se ve
+    // cuando la tabla esta apilada y el encabezado queda escondido. Se copia
+    // del thead una sola vez.
+    const rotulos = [...tabla.querySelectorAll("thead th")].map((th) => th.textContent?.trim() ?? "");
+    if (rotulos.length) {
+      for (const fila of tabla.querySelectorAll("tbody tr")) {
+        [...fila.children].forEach((celda, i) => {
+          if (rotulos[i]) celda.setAttribute("data-rotulo", rotulos[i]);
+        });
+      }
+    }
+
     const medir = () => setSeDesliza(el.scrollWidth > el.clientWidth + 1);
     medir();
     // Se vuelve a medir cuando cambia el tamano de la letra o gira el aparato.
     const obs = new ResizeObserver(medir);
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [children]);
 
   return (
     <div
       ref={caja}
       className="item-tabla-caja"
+      data-apilar={apilar ? "" : undefined}
       data-desliza={seDesliza ? "" : undefined}
       tabIndex={seDesliza ? 0 : undefined}
       role={seDesliza ? "region" : undefined}
