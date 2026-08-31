@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, CircleAlert, Clock, TriangleAlert } from "lucide-react";
+import { ArrowRight, CircleAlert, Clock, LogOut, TriangleAlert } from "lucide-react";
 import ItemRenderer from "../ItemRenderer";
 import BarraApoyo, { type TamanoTexto } from "./BarraApoyo";
 import { formatearReloj, PALABRA_RELOJ, type NivelReloj } from "./calificar";
@@ -18,7 +18,45 @@ type Props = {
 
 // Pantalla 2: una pregunta a la vez, con la barra del reloj arriba.
 export default function ExamenPanel({ nombreMateria, practica }: Props) {
-  const { items, indice, respuestas, responder, siguiente, restante, nivel, aviso } = practica;
+  const { items, indice, respuestas, responder, siguiente, restante, nivel, aviso,
+          volverAPracticar } = practica;
+
+  // Salir a medio camino. Antes no habia forma: el estudiante que se
+  // arrepentia en la tres solo podia irse por el menu de arriba, y en celular
+  // el menu esta plegado. Va en dos pasos y no en un confirm del navegador:
+  // el confirm interrumpe y a un chiquito lo asusta, ademas de que se ve
+  // distinto en cada aparato.
+  const [confirmandoSalida, setConfirmandoSalida] = useState(false);
+  const cancelarRef = useRef<HTMLButtonElement>(null);
+  const salirRef = useRef<HTMLButtonElement>(null);
+  // Guarda si el aviso llego a abrirse, para no robar el foco al montar.
+  const seAbrioRef = useRef(false);
+  useEffect(() => {
+    if (confirmandoSalida) {
+      seAbrioRef.current = true;
+      // El foco cae en "Seguir practicando", que es la salida segura: si
+      // alguien le da a la tecla de espacio sin leer, no pierde la practica.
+      cancelarRef.current?.focus();
+    } else if (seAbrioRef.current) {
+      // Al arrepentirse, el foco vuelve al boton que abrio el aviso. Sin esto
+      // se caia al cuerpo del documento y quien usa teclado quedaba perdido.
+      //
+      // Si lo que cerro el aviso fue un cambio de pregunta, este foco igual
+      // se pierde: el efecto que lleva el foco a la pregunta nueva se declara
+      // mas abajo y los efectos corren en orden, asi que ese manda.
+      seAbrioRef.current = false;
+      salirRef.current?.focus();
+    }
+  }, [confirmandoSalida]);
+  // Si cambia de pregunta con el aviso abierto, se cierra solo. Se ajusta
+  // durante el render y no en un efecto, que es el patron que ya usa
+  // usePractica con el cambio de materia: asi no se alcanza a dibujar un
+  // cuadro con el aviso de la pregunta anterior.
+  const [indicePrevio, setIndicePrevio] = useState(indice);
+  if (indice !== indicePrevio) {
+    setIndicePrevio(indice);
+    setConfirmandoSalida(false);
+  }
 
   const item = items[indice];
   const elegida = respuestas[indice] ?? null;
@@ -53,11 +91,34 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
     return () => observador.disconnect();
   }, []);
 
-  // Al cambiar de pregunta el foco viaja al cuerpo: quien navega con
-  // teclado o lector de pantalla no tiene que buscar donde quedo.
+  // Al cambiar de pregunta hay que hacer dos cosas: subir la pantalla al
+  // arranque de la pregunta y llevar el foco ahi.
+  //
+  // Antes esto era solo un focus(), y no servia. El navegador desplaza al
+  // enfocar UNICAMENTE cuando el elemento esta del todo fuera de vista, y
+  // este contenedor es tan alto que siempre asoma por abajo: se daba por
+  // satisfecho y no movia nada. Medido en celular de 360 px, el estudiante
+  // caia con 128 px de la pregunta escondidos arriba, y peor conforme
+  // avanzaba: despues de tres preguntas eran 338. O sea que empezaba a leer
+  // a media tabla y tenia que subir a mano cada vez.
+  //
+  // Por eso el desplazamiento va explicito, y el foco despues con
+  // preventScroll para que no pelee con el.
   const cuerpoRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    cuerpoRef.current?.focus();
+    const cuerpo = cuerpoRef.current;
+    if (!cuerpo) return;
+    // Dentro de un cuadro de animacion: al momento de correr el efecto el
+    // enunciado todavia no termino de acomodarse, y una cuenta hecha antes
+    // deja la pregunta mal parada. scrollIntoView la resuelve contra la
+    // medida real y respeta el scrollMarginTop que se calcula abajo, asi
+    // que la pregunta queda justo debajo del menu y de la barra.
+    const cuadro = requestAnimationFrame(() => {
+      const quieto = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+      cuerpo.scrollIntoView({ block: "start", behavior: quieto ? "auto" : "smooth" });
+      cuerpo.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(cuadro);
   }, [indice]);
 
   if (!item) return null;
@@ -82,8 +143,19 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
             <span className="examen-palabra">{PALABRA_RELOJ[nivel]}</span>
           </p>
         </div>
-        <div className="examen-barrita" aria-hidden="true">
-          <span style={{ width: `${avance}%` }} />
+        {/* La barrita era decorativa: quien no la ve no se enteraba de cuanto
+            llevaba. Con el rol y sus valores, el lector de pantalla lo dice.
+            El aria-valuetext va en preguntas y no en porcentaje, que es como
+            piensa el estudiante: "tres de diez", no "treinta por ciento". */}
+        <div
+          className="examen-barrita"
+          role="progressbar"
+          aria-valuemin={1}
+          aria-valuemax={items.length}
+          aria-valuenow={indice + 1}
+          aria-valuetext={`Pregunta ${indice + 1} de ${items.length}`}
+        >
+          <span style={{ width: `${avance}%` }} aria-hidden="true" />
         </div>
       </div>
 
@@ -130,6 +202,42 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
             </button>
           </div>
         )}
+
+        {/* Discreto y al final, que es donde nace la idea de parar. No va en
+            la barra de arriba a proposito: esa barra es para el reloj y ya
+            estaba comiendose mucha pantalla en celular. */}
+        <div className="examen-salida">
+          {confirmandoSalida ? (
+            <div className="examen-confirmar" role="group" aria-label="Confirmar la salida">
+              <p className="examen-confirmar-texto">
+                ¿Seguro que querés salir? Se pierden las respuestas de esta práctica.
+              </p>
+              <div className="examen-confirmar-botones">
+                <button
+                  type="button"
+                  className="ps-boton examen-seguir"
+                  ref={cancelarRef}
+                  onClick={() => setConfirmandoSalida(false)}
+                >
+                  Seguir practicando
+                </button>
+                <button type="button" className="examen-salir-si" onClick={volverAPracticar}>
+                  Sí, salir
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button
+              type="button"
+              className="examen-salir"
+              ref={salirRef}
+              onClick={() => setConfirmandoSalida(true)}
+            >
+              <LogOut size={18} strokeWidth={2} aria-hidden="true" />
+              Salir de la práctica
+            </button>
+          )}
+        </div>
       </div>
     </>
   );
