@@ -1,0 +1,531 @@
+/* ============================================================
+   Simulacros.
+   Lo que se reusa de la practica (barra del reloj, tarjeta de nota,
+   desglose por tema) vive en PracticaPage.css y se importa desde el
+   mismo componente. Aca va solo lo propio del cuadernillo.
+
+   Contrastes, con los tokens calculados en src/index.css:
+   - --foreground sobre --background ........ 17.40 claro · 16.44 oscuro · AAA
+   - --muted sobre --background ..............  5.60 claro ·  6.42 oscuro · AA
+   - --titulo sobre --background ............ 11.65 claro · 10.30 oscuro · AAA
+   - --primary-foreground sobre --primary ....  6.70 claro ·  7.69 oscuro · AA
+   - --success sobre --success-suave .........  4.80 · AA
+   - --error   sobre --error-suave ...........  5.96 · AA
+   - --acento (materia) sobre --background: el mas bajo es Español, 5.46 · AA
+   ============================================================ */
+
+#sim-indice .sim-bajada,
+#sim-lista .sim-bajada {
+  max-width: 62ch;
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+/* El h1 con la placa del icono al lado. En la pantalla de resultados esto
+   viene de PracticaPage.css, pero la lista tiene su propio id y ahi no
+   llega: sin esto el icono quedaba pegado a la primera letra. */
+#sim-lista h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#sim-lista .res-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: var(--suave, var(--primary-suave));
+  color: var(--acento, var(--primary));
+}
+
+.sim-migas {
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.sim-migas a { color: var(--enlace); }
+
+/* --- Portada: las cuatro materias --- */
+.sim-materias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+}
+.sim-materia {
+  --acento: var(--primary);
+  --suave: var(--primary-suave);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  min-height: 148px;
+  padding: 20px;
+  border: var(--borde-ancho-fuerte) solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  color: var(--foreground);
+  text-decoration: none;
+  box-shadow: var(--sombra);
+}
+.sim-materia:hover { border-color: var(--acento); }
+.sim-materia-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--suave);
+  color: var(--acento);
+}
+.sim-materia-nombre {
+  font-size: 1.24rem;
+  font-weight: 800;
+  color: var(--titulo);
+}
+.sim-materia-dato {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.sim-pista {
+  max-width: 62ch;
+  color: var(--muted);
+}
+.sim-pista a { color: var(--enlace); }
+
+/* --- Lista: los tres cuadernillos de la materia --- */
+.sim-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+.sim-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding: 20px;
+  border: var(--borde-ancho-fuerte) solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+}
+.sim-tarjeta-titulo {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--titulo);
+}
+.sim-tarjeta-datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 0;
+}
+.sim-dato {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.sim-marca {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--secondary);
+  color: var(--foreground);
+}
+.sim-marca--nueva { color: var(--muted); }
+.sim-marca svg { flex: none; margin-top: 2px; color: var(--accent-fuerte); }
+/* La tarjeta empuja el boton al fondo: con tres tarjetas de alto
+   distinto, los botones desalineados se ven como un error. */
+.sim-empezar { margin-top: auto; justify-content: center; }
+/* Con aria-disabled y no con disabled: un boton deshabilitado de verdad
+   pierde el foco del teclado. Se ve apagado igual, pero se puede seguir
+   alcanzando con el tabulador. */
+.sim-empezar[data-esperando] { opacity: 0.6; cursor: default; }
+
+/* --- El aviso de retomar --- */
+.sim-retomar {
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  border: var(--borde-ancho-fuerte) solid var(--accent-fuerte);
+  border-radius: var(--radius);
+  background: var(--secondary);
+}
+.sim-retomar h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  /* --accent-fuerte sobre --secondary: 4.62 claro · 8.26 oscuro · AA */
+  color: var(--accent-fuerte);
+}
+.sim-retomar h2 svg { flex: none; }
+.sim-retomar p { margin: 0 0 14px; color: var(--foreground); }
+.sim-retomar-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sim-descartar {
+  min-height: var(--toque-min);
+  padding: 0 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.sim-descartar:hover { background: var(--secondary); }
+
+.sim-error {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  border: var(--borde-ancho-fuerte) solid var(--error);
+  border-radius: var(--radius-sm);
+  background: var(--error-suave);
+  color: var(--error);
+  font-weight: 700;
+}
+
+/* --- Examen: pasar de pregunta --- */
+.sim-pasos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.sim-paso {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--toque-min);
+  padding: 0 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.sim-paso:hover:not([disabled]) { background: var(--secondary); }
+.sim-paso[disabled] { opacity: 0.45; cursor: default; }
+/* El "Siguiente" es el boton de la casa y ya trae su propio color. */
+.ps-boton.sim-paso { border-color: transparent; }
+
+/* --- El mapa de las cuarenta --- */
+.sim-mapa {
+  margin-top: 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+}
+.sim-mapa > summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  min-height: var(--toque-min);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  color: var(--titulo);
+  font-weight: 800;
+  cursor: pointer;
+}
+.sim-mapa > summary:hover { background: var(--secondary); }
+.sim-mapa-cuenta { color: var(--muted); font-weight: 700; }
+.sim-mapa-rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--toque-min), 1fr));
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0 16px 16px;
+}
+.sim-cuadro {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: var(--toque-min);
+  min-height: var(--toque-min);
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+/* Respondida: fondo lleno Y punto en la esquina. Dos senales, porque
+   el color solo deja afuera a quien no lo distingue. */
+.sim-cuadro[data-hecha] {
+  border-color: var(--primary);
+  background: var(--primary-suave);
+  color: var(--titulo);
+}
+.sim-cuadro-punto {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+/* La que esta viendo lleva marco grueso, no solo otro color. */
+.sim-cuadro[aria-current="true"] {
+  border-width: 3px;
+  border-color: var(--titulo);
+  background: var(--secondary);
+}
+
+/* --- Entregar --- */
+.sim-cierre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: var(--borde-ancho) solid var(--border);
+}
+.sim-entregar {
+  min-height: 56px;
+  padding: 0 26px;
+  font-size: 1.06rem;
+}
+.sim-confirmar-si {
+  min-height: var(--toque-min);
+  padding: 0 18px;
+  border: var(--borde-ancho-fuerte) solid var(--success);
+  border-radius: var(--radius-sm);
+  background: var(--success-suave);
+  color: var(--success);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.sim-confirmar-si:hover { background: var(--background); }
+
+/* --- Resultados: las acciones y la revision --- */
+.sim-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 10px;
+}
+.sim-imprimir { background: var(--titulo); }
+
+.sim-revision {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: nada;
+}
+.sim-revi {
+  margin-bottom: 16px;
+  padding: 16px 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border);
+  border-left-width: 6px;
+  border-radius: var(--radius);
+  background: var(--background);
+}
+.sim-revi[data-estado="buena"] { border-left-color: var(--success); }
+.sim-revi[data-estado="mala"]  { border-left-color: var(--error); }
+.sim-revi[data-estado="vacia"] { border-left-color: var(--border-fuerte); }
+
+.sim-revi-cima {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0 0 8px;
+}
+.sim-revi-numero { font-weight: 800; color: var(--titulo); }
+.sim-revi-tema { color: var(--muted); font-weight: 700; }
+/* El sello lleva la palabra y el simbolo, nunca solo el borde de color. */
+.sim-revi-sello { margin-left: auto; font-weight: 800; }
+.sim-revi[data-estado="buena"] .sim-revi-sello { color: var(--success); }
+.sim-revi[data-estado="mala"]  .sim-revi-sello { color: var(--error); }
+.sim-revi[data-estado="vacia"] .sim-revi-sello { color: var(--muted); }
+
+.sim-revi-enunciado { margin-bottom: 10px; }
+.sim-revi-enunciado img { max-width: 100%; height: auto; }
+.sim-revi-enunciado table { border-collapse: collapse; width: 100%; }
+.sim-revi-enunciado th,
+.sim-revi-enunciado td {
+  padding: 6px 10px;
+  border: var(--borde-ancho) solid var(--border);
+  text-align: left;
+}
+
+.sim-revi-opciones {
+  display: grid;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sim-revi-op {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  padding: 8px 12px;
+  border: var(--borde-ancho) solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.sim-revi-op[data-tipo="buena"] {
+  border-color: var(--success);
+  background: var(--success-suave);
+}
+.sim-revi-op[data-tipo="mala"] {
+  border-color: var(--error);
+  background: var(--error-suave);
+}
+.sim-revi-letra {
+  flex: none;
+  width: 26px;
+  font-weight: 800;
+  color: var(--titulo);
+}
+.sim-revi-texto { flex: 1 1 12ch; }
+.sim-revi-nota { font-weight: 800; }
+.sim-revi-op[data-tipo="buena"] .sim-revi-nota { color: var(--success); }
+.sim-revi-op[data-tipo="mala"] .sim-revi-nota { color: var(--error); }
+
+/* El membrete solo existe para la hoja impresa. */
+.sim-membrete { display: none; }
+
+@media (hover: hover) {
+  .sim-materia,
+  .sim-tarjeta { transition: transform 0.16s ease, border-color 0.16s ease; }
+  .sim-materia:hover { transform: translateY(-3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sim-materia,
+  .sim-tarjeta { transition: none; }
+  .sim-materia:hover { transform: none; }
+}
+
+@media (forced-colors: active) {
+  .sim-cuadro[data-hecha] { border: 3px solid Highlight; }
+  .sim-cuadro[aria-current="true"] { outline: 3px solid ButtonText; outline-offset: 2px; }
+  .sim-revi-op[data-tipo] { border: 2px solid ButtonText; }
+}
+
+/* ============================================================
+   La hoja impresa.
+
+   Es el PDF: el chiquito le da a imprimir y escoge "Guardar como PDF".
+   Sin librerias ni servidor, funciona igual en celular y en compu, y no
+   pesa un solo kilobyte extra en la descarga de la pagina.
+
+   Se imprime en negro sobre blanco a proposito: una hoja con fondos de
+   color se traga la tinta y muchas impresoras de casa la sacan gris
+   ilegible. El estado de cada opcion se lee por el texto y el simbolo,
+   que es la misma regla de la pantalla.
+   ============================================================ */
+@media print {
+  /* Fuera todo lo que no es el cuadernillo. */
+  #nav-principal,
+  .ps-saltar,
+  footer,
+  .sim-no-imprime,
+  .res-tarjeta,
+  .res-acciones,
+  .res-nota-pie,
+  .res-felicita,
+  #sim-resultados > h1 {
+    display: none !important;
+  }
+
+  #sim-resultados {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sim-membrete {
+    display: block;
+    margin-bottom: 14pt;
+    padding-bottom: 8pt;
+    border-bottom: 1pt solid #000;
+  }
+  .sim-membrete p { margin: 0 0 3pt; }
+  .sim-membrete-sitio { font-size: 9pt; letter-spacing: 0.04em; text-transform: uppercase; }
+  .sim-membrete-titulo { font-size: 15pt; font-weight: 800; }
+  .sim-membrete-linea { font-size: 10pt; }
+
+  .res-bloque > h2 { font-size: 12pt; }
+  .res-bajada { display: none; }
+  .res-temas { font-size: 10pt; }
+  /* Con el id, porque asi esta escrita la regla que la pinta en
+     PracticaPage.css y una clase suelta no le gana. Sin fondos (que es
+     como imprime casi todo el mundo) la barrita sale como un marco vacio
+     que no dice nada: el "4 de 8 · 50%" de al lado ya lo dice todo. */
+  #sim-resultados .res-tema-barra { display: none; }
+
+  /* 9.5pt y no el tamaño de pantalla: medido, las cuarenta preguntas
+     pasan de catorce hojas a once sin perder legibilidad (9,5 puntos es
+     el cuerpo de un libro cualquiera). Tres hojas menos por intento, en
+     una app que se imprime en la casa, se agradecen. */
+  .sim-revision { font-size: 9.5pt; }
+  /* Que una pregunta no se parta entre dos hojas. */
+  .sim-revi {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 7pt;
+    padding: 5pt 7pt;
+    border: 0.75pt solid #000;
+    border-radius: 0;
+    background: #fff;
+    color: #000;
+  }
+  .sim-revi-cima { margin-bottom: 4pt; }
+  .sim-revi-enunciado { margin-bottom: 5pt; }
+  .sim-revi-opciones { gap: 3pt; }
+  .sim-revi-sello { color: #000 !important; }
+  .sim-revi-tema { color: #333; }
+  .sim-revi-op {
+    padding: 2pt 5pt;
+    border: 0.5pt solid #999;
+    border-radius: 3pt;
+    background: #fff;
+  }
+  .sim-revi-op[data-tipo="buena"] { border: 1.2pt solid #000; }
+  .sim-revi-op[data-tipo="mala"]  { border: 1.2pt dashed #000; }
+  .sim-revi-nota { color: #000 !important; }
+  /* Una imagen de enunciado que ocupe media hoja rompe la paginacion. */
+  .sim-revi-enunciado img { max-height: 6cm; width: auto; }
+
+  @page {
+    margin: 14mm 12mm;
+  }
+}
