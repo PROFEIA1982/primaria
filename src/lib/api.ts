@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { esCuadernilloSano } from "./validar";
 import type { Item, Materia, Simulacro, SimulacroResumen, Tema } from "./tipos";
 
 // Trae las cuatro materias con su conteo de items publicados.
@@ -29,11 +30,17 @@ export async function sortearItems(
   cantidad: number,
   temas: number[] | null = null,
 ): Promise<Item[]> {
-  const { data, error } = await supabase.rpc("sortear_items", {
-    p_materia: materia,
-    p_cantidad: cantidad,
-    p_temas: temas,
-  });
+  // Con corte a los quince segundos, igual que traerSimulacro. supabase-js
+  // no le pone limite al fetch, y en una conexion estancada (el wifi del
+  // cole, tipico) el boton se quedaba en "Preparando..." para siempre: sin
+  // error, sin preguntas y sin manera de arrepentirse.
+  const { data, error } = await supabase
+    .rpc("sortear_items", {
+      p_materia: materia,
+      p_cantidad: cantidad,
+      p_temas: temas,
+    })
+    .abortSignal(AbortSignal.timeout(15000));
   if (error) throw error;
   return (data ?? []) as Item[];
 }
@@ -157,34 +164,11 @@ export async function traerPracticadas(): Promise<number | null> {
 // se pudiera leer simulacro_items de frente, cualquiera sabria de antemano
 // cuales cuarenta preguntas trae el cuadernillo.
 export async function listarSimulacros(): Promise<SimulacroResumen[]> {
-  const { data, error } = await supabase.rpc("listar_simulacros");
+  const { data, error } = await supabase
+    .rpc("listar_simulacros")
+    .abortSignal(AbortSignal.timeout(15000));
   if (error) throw error;
   return (data ?? []) as SimulacroResumen[];
-}
-
-// Un cuadernillo tiene que traer preguntas, y cada pregunta sus opciones
-// con UNA correcta. Se revisa antes de devolverlo en vez de confiar en la
-// asercion de tipo: un item con opciones en null reventaria adentro de
-// ItemRenderer a mitad del examen, y ahi el chiquito se queda con la
-// pantalla en blanco y sin salida. Mejor decirle que no se pudo abrir.
-function cuadernilloSano(d: unknown): d is Simulacro {
-  if (typeof d !== "object" || d === null) return false;
-  const c = d as Record<string, unknown>;
-  if (typeof c.slug !== "string" || !Array.isArray(c.items) || c.items.length === 0) return false;
-  return (c.items as unknown[]).every((x) => {
-    if (typeof x !== "object" || x === null) return false;
-    const i = x as Record<string, unknown>;
-    if (typeof i.id !== "string" || typeof i.enunciado !== "string") return false;
-    if (!Array.isArray(i.opciones) || i.opciones.length < 2) return false;
-    let correctas = 0;
-    for (const o of i.opciones as unknown[]) {
-      if (typeof o !== "object" || o === null) return false;
-      const op = o as Record<string, unknown>;
-      if (typeof op.id !== "string" || typeof op.texto !== "string") return false;
-      if (op.es_correcta === true) correctas += 1;
-    }
-    return correctas === 1;
-  });
 }
 
 // Un cuadernillo completo, en su orden fijo y con las opciones barajadas
@@ -199,6 +183,6 @@ export async function traerSimulacro(slug: string): Promise<Simulacro | null> {
     .rpc("traer_simulacro", { p_slug: slug })
     .abortSignal(AbortSignal.timeout(15000));
   if (error) throw error;
-  if (!cuadernilloSano(data)) return null;
+  if (!esCuadernilloSano(data)) return null;
   return data;
 }

@@ -77,8 +77,8 @@
   color: var(--acento);
   box-shadow: inset 0 -3px 0 var(--acento);
 }
-/* Con siete cosas en la barra, el aire de 14px por lado se vuelve caro.
-   Se baja a 11 y el blanco de toque de 48px lo sostiene el min-height. */
+/* De 900 a 1140 px el renglon va apretado. Se baja el aire a 11 px y el
+   blanco de toque de 48 px lo sostiene el min-height. */
 @media (min-width: 900px) and (max-width: 1140px) {
   #nav-principal .nav-lista a,
   #nav-principal .nav-sim-boton { padding-left: 11px; padding-right: 11px; }
@@ -142,94 +142,6 @@
   box-shadow: inset 3px 0 0 var(--acento);
 }
 
-/* --- Panel de accesibilidad ---
-   Los cinco ajustes con su nombre escrito. Cada fila dice el estado con
-   PALABRA ("Activado"/"Desactivado") ademas del color y del icono: quien
-   no distingue el azul del gris tiene que poder saber que esta puesto.
-   Justo aca eso importa mas que en ninguna otra parte del sitio. */
-#nav-principal .nav-ax-panel {
-  padding: 10px;
-}
-#nav-principal .nav-ax-titulo {
-  margin: 2px 4px 8px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--titulo);
-}
-#nav-principal .nav-ax-lista {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 4px;
-}
-#nav-principal .nav-ax-fila {
-  display: grid;
-  grid-template-columns: 24px 1fr auto;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  min-height: var(--toque-min);
-  padding: 8px 10px;
-  border: var(--borde-ancho) solid transparent;
-  border-radius: var(--radius-sm);
-  background: none;
-  color: var(--foreground);
-  font: inherit;
-  font-weight: 700;
-  text-align: left;
-  cursor: pointer;
-}
-#nav-principal .nav-ax-fila:hover { background: var(--secondary); }
-#nav-principal .nav-ax-icono {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--titulo);
-}
-#nav-principal .nav-ax-nombre { min-width: 0; }
-#nav-principal .nav-ax-estado {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--muted);
-  white-space: nowrap;
-}
-/* Encendido = fondo azul + borde + la palabra "Activado" + el icono
-   cambiado. Cuatro senales, ninguna de ellas solo el color. */
-#nav-principal .nav-ax-fila[aria-pressed="true"],
-#nav-principal .nav-ax-fila[data-nivel="grande"],
-#nav-principal .nav-ax-fila[data-nivel="extra"] {
-  border-color: var(--primary);
-  background: var(--primary);
-  color: var(--primary-foreground);
-}
-#nav-principal .nav-ax-fila[aria-pressed="true"] .nav-ax-icono,
-#nav-principal .nav-ax-fila[aria-pressed="true"] .nav-ax-estado,
-#nav-principal .nav-ax-fila[data-nivel="grande"] .nav-ax-icono,
-#nav-principal .nav-ax-fila[data-nivel="grande"] .nav-ax-estado,
-#nav-principal .nav-ax-fila[data-nivel="extra"] .nav-ax-icono,
-#nav-principal .nav-ax-fila[data-nivel="extra"] .nav-ax-estado {
-  color: var(--primary-foreground);
-}
-#nav-principal .nav-ax-fila[aria-pressed="true"]:hover,
-#nav-principal .nav-ax-fila[data-nivel="grande"]:hover,
-#nav-principal .nav-ax-fila[data-nivel="extra"]:hover {
-  background: var(--primary);
-  filter: brightness(0.94);
-}
-#nav-principal .nav-ax-nota {
-  margin: 10px 4px 2px;
-  padding-top: 8px;
-  border-top: var(--borde-ancho) solid var(--border);
-  font-size: 0.82rem;
-  font-weight: 400;
-  color: var(--muted);
-}
-
-@media (hover: hover) {
-  #nav-principal .nav-ax-fila { transition: background-color 0.15s ease; }
-}
-
 /* Celular: el menu se despliega con la hamburguesa. */
 @media (max-width: 899px) {
   #nav-principal .nav-menu {
@@ -251,7 +163,7 @@
     padding-left: 10px;
     border-left: var(--borde-ancho-fuerte) solid var(--border);
   }
-  #nav-principal .nav-ax-panel {
+  #nav-principal .nav-ax .ax-panel {
     margin: 2px 0 6px 14px;
     padding: 8px 0 8px 10px;
     border-left: var(--borde-ancho-fuerte) solid var(--border);
@@ -273,15 +185,14 @@
     justify-content: flex-end;
     gap: 4px 10px;
   }
-  /* Accesibilidad cierra el renglon y se separa del resto con una linea
-     fina: es un grupo aparte, no una pagina mas del sitio. */
-  #nav-principal .nav-ax {
-    margin-left: 6px;
-    padding-left: 12px;
-    border-left: var(--borde-ancho) solid var(--border);
-  }
-  #nav-principal .nav-sim-lista,
-  #nav-principal .nav-ax-panel {
+  /* De 900 px para arriba, Accesibilidad NO va en la barra. Se midio:
+     con el texto normal los siete botones cabian por 19 px, con "Grande"
+     faltaban 54 y con "Muy grande" 113, y el renglon se partia dejando
+     "Accesibilidad" colgando solo. Lo rompia el propio boton de agrandar
+     el texto. Aca se apaga y el panel sale en el boton flotante de abajo
+     a la izquierda (components/Accesibilidad.css). */
+  #nav-principal .nav-ax { display: none; }
+  #nav-principal .nav-sim-lista {
     position: absolute;
     top: calc(100% + 6px);
     right: 0;
@@ -295,9 +206,6 @@
     min-width: 232px;
     padding: 6px;
   }
-  #nav-principal .nav-ax-panel {
-    width: 306px;
-  }
 }
 
 /* En pantallas medianas el menu completo no cabe en un renglon: que se
@@ -309,16 +217,10 @@
 @media (forced-colors: active) {
   #nav-principal .nav-lista a.active { box-shadow: inset 0 -3px 0 ButtonText; }
   #nav-principal .nav-sim-boton[data-activo="si"] { box-shadow: inset 0 -3px 0 ButtonText; }
-  #nav-principal .nav-sim-lista,
-  #nav-principal .nav-ax-panel { border: 2px solid ButtonText; }
+  #nav-principal .nav-sim-lista { border: 2px solid ButtonText; }
   #nav-principal .nav-sim-lista a.active { box-shadow: inset 3px 0 0 ButtonText; }
-  #nav-principal .nav-ax-fila { border: 2px solid ButtonText; }
-  #nav-principal .nav-ax-fila[aria-pressed="true"],
-  #nav-principal .nav-ax-fila[data-nivel="grande"],
-  #nav-principal .nav-ax-fila[data-nivel="extra"] { border: 3px solid Highlight; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   #nav-principal .nav-sim-flecha { transition: none; }
-  #nav-principal .nav-ax-fila { transition: none; }
 }

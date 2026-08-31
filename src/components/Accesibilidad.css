@@ -1,0 +1,203 @@
+/* ============================================================
+   Los ajustes de accesibilidad.
+
+   Dos partes:
+   1. El panel (.ax-panel y lo de adentro). Es el mismo en celular y en
+      escritorio; lo unico que cambia es donde se para.
+   2. El boton flotante (.ax-flota), que solo existe de 900 px para
+      arriba. En celular el panel vive dentro de la hamburguesa y este
+      envase se apaga entero.
+
+   Contrastes (tokens calculados en src/index.css):
+   - --foreground sobre --background ...... 17.40 claro · 14.05 oscuro · AAA
+   - --muted sobre --background ...........  5.60 claro ·  8.30 oscuro · AA
+   - --primary-foreground sobre --primary .  8.59 claro ·  9.12 oscuro · AAA
+   - --border-fuerte sobre --background ...  3.50 claro ·  6.03 oscuro · borde
+   ============================================================ */
+
+/* --- El panel --- */
+.ax-panel {
+  padding: 10px;
+}
+.ax-titulo {
+  margin: 2px 4px 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--titulo);
+}
+.ax-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+.ax-fila {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: var(--toque-min);
+  padding: 8px 10px;
+  border: var(--borde-ancho) solid transparent;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+.ax-fila:hover { background: var(--secondary); }
+.ax-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--titulo);
+}
+.ax-nombre { min-width: 0; }
+.ax-estado {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
+/* Encendido = fondo azul + borde + la palabra "Activado" + el icono
+   cambiado. Cuatro senales, ninguna de ellas solo el color. */
+.ax-fila[aria-pressed="true"],
+.ax-fila[data-nivel="grande"],
+.ax-fila[data-nivel="extra"] {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.ax-fila[aria-pressed="true"] .ax-icono,
+.ax-fila[aria-pressed="true"] .ax-estado,
+.ax-fila[data-nivel="grande"] .ax-icono,
+.ax-fila[data-nivel="grande"] .ax-estado,
+.ax-fila[data-nivel="extra"] .ax-icono,
+.ax-fila[data-nivel="extra"] .ax-estado {
+  color: var(--primary-foreground);
+}
+.ax-fila[aria-pressed="true"]:hover,
+.ax-fila[data-nivel="grande"]:hover,
+.ax-fila[data-nivel="extra"]:hover {
+  background: var(--primary);
+  filter: brightness(0.94);
+}
+.ax-nota {
+  margin: 10px 4px 2px;
+  padding-top: 8px;
+  border-top: var(--borde-ancho) solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+.ax-flecha { transition: transform 0.18s ease; }
+.ax-flecha[data-abierto="si"] { transform: rotate(180deg); }
+
+/* --- El boton flotante (solo escritorio) ---
+   Apagado por defecto: en celular no existe. */
+.ax-flota { display: none; }
+
+@media (min-width: 900px) {
+  .ax-flota {
+    display: block;
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    /* Por encima del encabezado pegado, que va en 20. */
+    z-index: 60;
+  }
+  .ax-flota-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 20px;
+    border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+    /* Pildora: se lee como herramienta, no como una pagina mas. */
+    border-radius: 999px;
+    background: var(--background);
+    color: var(--foreground);
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: var(--sombra-alta);
+  }
+  .ax-flota-boton:hover { background: var(--secondary); }
+  /* Con algo puesto que no es lo de fabrica, el boton se llena: se nota
+     desde lejos que la pagina esta ajustada, sin tener que abrirlo. */
+  .ax-flota-boton[data-activo="si"] {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  .ax-flota-boton[data-activo="si"]:hover { filter: brightness(0.94); }
+
+  /* El panel se abre HACIA ARRIBA: el boton esta pegado abajo. */
+  .ax-flota .ax-panel {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    z-index: 1;
+    width: 306px;
+    /* Con el texto en "Muy grande" el panel crece: que se desplace por
+       dentro en vez de salirse por arriba de la pantalla. */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    border: var(--borde-ancho) solid var(--border-fuerte);
+    border-radius: var(--radius);
+    background: var(--background);
+    box-shadow: var(--sombra-alta);
+  }
+}
+
+/* En pantallas bajitas (una portatil de 13" con el navegador abierto)
+   el panel no cabe encima del boton. Se pega arriba y se desplaza. */
+@media (min-width: 900px) and (max-height: 620px) {
+  .ax-flota .ax-panel {
+    bottom: auto;
+    top: 12px;
+    position: fixed;
+    left: 16px;
+    max-height: calc(100vh - 24px);
+  }
+}
+
+.ax-fila:focus-visible,
+.ax-flota-boton:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .ax-fila { transition: background-color 0.15s ease; }
+  .ax-flota-boton { transition: background-color 0.15s ease, transform 0.15s ease; }
+  .ax-flota-boton:hover { transform: translateY(-2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ax-flecha,
+  .ax-fila,
+  .ax-flota-boton { transition: none; }
+  .ax-flota-boton:hover { transform: none; }
+}
+
+/* En el alto contraste de Windows el navegador borra fondos y sombras:
+   la marca de "activado" se pasa al borde. */
+@media (forced-colors: active) {
+  .ax-panel { border: 2px solid ButtonText; }
+  .ax-fila { border: 2px solid ButtonText; }
+  .ax-fila[aria-pressed="true"],
+  .ax-fila[data-nivel="grande"],
+  .ax-fila[data-nivel="extra"] { border: 3px solid Highlight; }
+  .ax-flota-boton { border: 2px solid ButtonText; }
+  .ax-flota-boton[data-activo="si"] { border: 3px solid Highlight; }
+}
+
+/* Imprimir una prueba no tiene por que llevar el boton encima. */
+@media print {
+  .ax-flota { display: none !important; }
+}

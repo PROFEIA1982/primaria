@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Nav from "./components/Nav";
+import AccesibilidadFlotante from "./components/Accesibilidad";
 import Footer from "./components/Footer";
 import InicioPage from "./pages/InicioPage";
 import { Cargando } from "./components/Estados";
@@ -84,6 +85,12 @@ function Armazon() {
         </Suspense>
       </main>
       {llevaPie && <Footer />}
+      {/* Los ajustes de accesibilidad, flotando abajo a la izquierda. Van
+          al final del documento y no en el encabezado: asi quien navega
+          con teclado llega primero al menu y al contenido, que es lo que
+          viene a hacer. En celular esto no se ve; ahi el mismo panel vive
+          dentro de la hamburguesa. */}
+      <AccesibilidadFlotante />
     </>
   );
 }
