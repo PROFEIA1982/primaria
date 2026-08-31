@@ -1181,6 +1181,15 @@
   object-position: center;
   justify-self: stretch;
 }
+/* En oscuro la lamina de la ilustracion es clara y brillante; sobre el
+   fondo azul medianoche encandila. Se le baja un pelin el brillo para que
+   descanse la vista, sin ensuciar el dibujo. Solo filter (GPU, sin color
+   suelto) y solo en oscuro. */
+:root[data-tema="oscuro"] #practica-hero .hero-arte { filter: brightness(0.9); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) #practica-hero .hero-arte { filter: brightness(0.9); }
+}
+
 /* En celular la ilustracion va debajo del texto y mas chica: primero se
    lee de que materia se trata y despues se ve el dibujo. */
 @media (max-width: 799px) {

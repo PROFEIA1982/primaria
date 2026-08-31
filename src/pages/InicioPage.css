@@ -8,19 +8,19 @@
    - --hero-texto sobre --hero-fondo .........  9.63 AAA     9.63 AAA
    - --hero-tenue sobre --hero-fondo .........  8.67 AAA     8.67 AAA
    - --accent-foreground sobre --accent ..... 12.07 AAA    12.07 AAA
-   - --titulo     sobre --background ........ 11.65 AAA    10.30 AAA
-   - --titulo     sobre --secondary ......... 10.73 AAA     8.91 AAA
-   - --foreground sobre --background ........ 17.40 AAA    16.44 AAA
-   - --foreground sobre --secondary ......... 16.03 AAA    14.21 AAA
-   - --muted      sobre --background .........  5.60 AA      9.04 AAA
-   - --muted      sobre --secondary ..........  5.16 AA      7.82 AAA
-   - --enlace     sobre --background .........  6.57 AA      9.33 AAA
-   - --enlace     sobre --secondary ..........  6.05 AA      8.07 AAA
-   - --enlace     sobre --primary-suave ......  5.76 AA      7.66 AAA
-   - --primary-foreground sobre --primary ....  6.70 AA      7.69 AAA
-   - --primary    sobre --primary-suave ......  5.87 AA      6.10 AA
-   - --accent-fuerte sobre --background ......  5.02 AA      9.55 AAA
-   - --accent-fuerte sobre --secondary .......  4.62 AA      8.26 AAA
+   - --titulo     sobre --background ........ 11.65 AAA     9.63 AAA
+   - --titulo     sobre --secondary ......... 10.73 AAA     7.98 AAA
+   - --foreground sobre --background ........ 17.40 AAA    14.05 AAA
+   - --foreground sobre --secondary ......... 16.03 AAA    11.64 AAA
+   - --muted      sobre --background .........  5.60 AA      8.30 AAA
+   - --muted      sobre --secondary ..........  5.16 AA      6.88 AA
+   - --enlace     sobre --background .........  6.57 AA      8.93 AAA
+   - --enlace     sobre --secondary ..........  6.05 AA      7.40 AAA
+   - --enlace     sobre --primary-suave ......  5.76 AA      7.58 AAA
+   - --primary-foreground sobre --primary ....  6.70 AA      8.21 AAA
+   - --primary    sobre --primary-suave ......  5.87 AA      6.14 AA
+   - --accent-fuerte sobre --background ......  5.02 AA      9.29 AAA
+   - --accent-fuerte sobre --secondary .......  4.62 AA      7.70 AAA
    El hero conserva su azul en los dos temas: el fondo de la ilustracion
    viene pintado en el archivo y si el bloque cambiara de color se veria
    la costura.

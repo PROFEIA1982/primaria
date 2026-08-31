@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { BookOpen, Calculator, ClipboardList, Globe, Microscope } from "lucide-react";
+import { BookOpen, Calculator, Globe, Microscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MATERIAS, type SlugMateria } from "../config";
 import ListaPanel from "../components/simulacro/ListaPanel";
@@ -19,52 +19,7 @@ const ICONOS: Record<SlugMateria, typeof BookOpen> = {
   matematicas: Calculator,
 };
 
-/** Portada de simulacros: las cuatro materias. Es lo que abre el menu. */
-export function IndiceSimulacros() {
-  return (
-    <section id="sim-indice" className="ps-contenedor ps-seccion">
-      <h1>Simulacros</h1>
-      <p className="sim-bajada">
-        Cada simulacro es un cuadernillo de <strong>cuarenta preguntas</strong> que no
-        cambia: son siempre las mismas y en el mismo orden, como una prueba de verdad.
-        Lo único que se baraja en cada intento son las cuatro opciones. Podés repetirlo
-        las veces que querás y guardar cada intento en PDF.
-      </p>
-      <ul className="sim-materias" role="list">
-        {MATERIAS.map((m) => {
-          const Icono = ICONOS[m.slug];
-          return (
-            <li key={m.slug}>
-              {/* Toda la tarjeta es el enlace: en celular, un area grande
-                  se acierta con el dedo mucho mejor que un texto suelto. */}
-              <Link
-                className="sim-materia"
-                data-tarjeta
-                to={`/simulacros/${m.slug}`}
-                style={{ ["--acento" as string]: m.color, ["--suave" as string]: m.suave }}
-              >
-                <span className="sim-materia-icono" aria-hidden="true">
-                  <Icono size={30} strokeWidth={1.9} />
-                </span>
-                <span className="sim-materia-nombre">{m.nombre}</span>
-                <span className="sim-materia-dato">
-                  <ClipboardList size={18} strokeWidth={2} aria-hidden="true" />
-                  3 simulacros de 40
-                </span>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-      <p className="sim-pista">
-        ¿Preferís practicar poquito y por tema? Eso está en{" "}
-        <Link to="/">el inicio</Link>, en la materia que querás.
-      </p>
-    </section>
-  );
-}
-
-/** Los tres cuadernillos de una materia, y el simulacro en curso. */
+/** Los simulacros de una materia, y el que este en curso. */
 export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
   const simulacros = useSimulacros(materia);
   const datos = MATERIAS.find((m) => m.slug === materia);
@@ -93,7 +48,7 @@ export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
       <section className="ps-contenedor ps-seccion">
         <h1>Esa materia no existe</h1>
         <p>
-          Volvé a <Link to="/simulacros">los simulacros</Link> y escogé una de las cuatro.
+          Volvé al <Link to="/">inicio</Link> y escogé una de las cuatro materias.
         </p>
       </section>
     );
@@ -140,11 +95,6 @@ export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
 
   return (
     <section id="sim-lista" className="ps-contenedor ps-seccion" style={acento}>
-      <p className="sim-migas">
-        <Link to="/simulacros">Simulacros</Link>
-        <span aria-hidden="true"> › </span>
-        <span>{datos.nombre}</span>
-      </p>
       <h1 tabIndex={-1} ref={tituloRef}>
         <span className="res-icono" aria-hidden="true">
           <Icono size={30} strokeWidth={1.9} />
@@ -152,8 +102,11 @@ export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
         Simulacros de {datos.nombre}
       </h1>
       <p className="sim-bajada">
-        Tres cuadernillos de cuarenta preguntas cada uno, con preguntas fijas de
-        todos los temas. Al final te sale la nota y podés guardarla en PDF.
+        Cuadernillos de <strong>60 preguntas</strong> con temas de todo el año. Las
+        preguntas son siempre las mismas y en el mismo orden; lo único que cambia
+        en cada intento es el orden de las cuatro opciones. Podés repetirlo las
+        veces que querás. Al final te sale la nota, el repaso de todas y lo podés
+        guardar en PDF.
       </p>
       <ListaPanel nombreMateria={datos.nombre} simulacros={simulacros} />
     </section>

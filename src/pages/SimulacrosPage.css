@@ -529,3 +529,112 @@
     margin: 14mm 12mm;
   }
 }
+
+/* --- La retroalimentación de cada pregunta en el repaso ---
+   El banco la escribe en texto plano con emoji y pasos numerados, con
+   saltos de línea de verdad (no marcado). Por eso white-space:pre-line:
+   respeta los saltos sin que haya que meter <br>. Fondo tenue para que se
+   note que es una nota aparte del enunciado.
+   Contrastes (tokens de src/index.css):        claro   oscuro
+   - --foreground sobre --secondary ......... 16.03   14.21  AAA
+   - --titulo sobre --secondary ............. 10.73    8.91  AAA */
+.sim-revi-retro {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-left: 4px solid var(--primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--secondary);
+}
+.sim-revi-retro-titulo {
+  margin: 0 0 4px;
+  font-size: 0.82em;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--titulo);
+}
+.sim-revi-retro-texto {
+  margin: 0;
+  white-space: pre-line;
+  color: var(--foreground);
+}
+
+@media print {
+  .sim-revi-retro {
+    margin-top: 5pt;
+    padding: 4pt 8pt;
+    border-left: 1.5pt solid #000;
+    background: #fff;
+  }
+  .sim-revi-retro-titulo { color: #000; }
+  .sim-revi-retro-texto { color: #000; }
+}
+
+/* --- Elegir el tiempo antes de arrancar (2 o 3 horas) ---
+   fieldset de verdad para que el lector lo lea como grupo. Los radios
+   nativos se esconden y la tarjeta entera hace de control; el estado
+   marcado va con borde grueso Y fondo, nunca solo color.
+   Contrastes (tokens de src/index.css):        claro   oscuro
+   - --foreground sobre --primary-suave ..... 15.25   13.49  AAA
+   - --primary sobre --background (borde) ....  6.70    7.44  AA
+   - --muted sobre --background (la nota) ....  5.60    6.42  AA */
+.sim-tiempo {
+  margin: 0 0 20px;
+  padding: 16px 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+}
+.sim-tiempo > legend {
+  padding: 0 6px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--titulo);
+}
+.sim-tiempo-ops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.sim-tiempo-op {
+  flex: 1 1 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: var(--toque-min);
+  padding: 12px 16px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  cursor: pointer;
+}
+/* El radio nativo se saca de la vista pero sigue existiendo para el
+   teclado y el lector: la tarjeta es su etiqueta. */
+.sim-tiempo-op input {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.sim-tiempo-op[data-elegida] {
+  border-width: 3px;
+  border-color: var(--primary);
+  background: var(--primary-suave);
+}
+/* El foco del teclado tiene que verse aunque el radio este escondido. */
+.sim-tiempo-op:has(input:focus-visible) {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+.sim-tiempo-titulo { font-size: 1.05rem; font-weight: 800; color: var(--titulo); }
+.sim-tiempo-nota { color: var(--muted); font-weight: 700; font-size: 0.9em; }
+.sim-tiempo-ayuda {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (forced-colors: active) {
+  .sim-tiempo-op[data-elegida] { border: 3px solid Highlight; }
+}
