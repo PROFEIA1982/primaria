@@ -113,10 +113,9 @@ export default function Nav() {
               </button>
               {/* Con hidden y no con display:none en CSS: asi el enlace
                   cerrado tampoco recibe el tabulador ni lo lee el lector. */}
+              {/* Solo las cuatro materias. No hay pagina de "todos los
+                  simulacros": el desplegable ES el indice. */}
               <ul id="nav-simulacros" className="nav-sim-lista" hidden={!simAbierto}>
-                <li>
-                  <NavLink to="/simulacros" end>Todos los simulacros</NavLink>
-                </li>
                 {MATERIAS.map((m) => (
                   <li key={m.slug}>
                     <NavLink

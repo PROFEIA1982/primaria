@@ -309,6 +309,33 @@
   white-space: nowrap;
 }
 
+/* --- La opcion que el estudiante marco, en simulacro ---
+   En la practica, apenas toca se pinta de verde o de rojo. En el simulacro
+   no se corrige hasta el final, y sin esta regla la pantalla no le
+   respondia NADA al tocar: marcaba y quedaba sin saber si le habia pegado
+   al boton. Tres senales a la vez, no solo color: el borde engorda de 2 a
+   3 px, la letra se rellena y aparece la palabra "Marcada".
+
+   El :not([data-estado]) es para que esto nunca le gane al verde de la
+   correcta ni al rojo de la incorrecta cuando si hay correccion.
+
+   Contrastes calculados con la formula WCAG:              claro  oscuro
+   - --primary sobre --primary-suave (texto y palabra) ...  5.87   6.10  AA
+   - --primary-foreground sobre --primary (la letra) .....  6.70   7.69  AA
+   - --primary sobre --background (el borde) .............  6.70   7.44  AA */
+.ps-item .item-opcion[aria-checked="true"]:not([data-estado]) {
+  border-width: 3px;
+  border-color: var(--primary);
+  background: var(--primary-suave);
+}
+.ps-item .item-opcion[aria-checked="true"]:not([data-estado]) .item-letra {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.ps-item .item-opcion[aria-checked="true"]:not([data-estado]) .item-marca {
+  color: var(--primary);
+}
+
 /* --- Modo de mas contraste ---
    Texto y bordes en tinta, la letra de la opcion en blanco sobre negro y
    en negrita. Todo lo de aca pasa AAA (17.40, 15.62 y 15.87 arriba). */
@@ -334,6 +361,17 @@
 /* Correcta e incorrecta guardan su borde de color (va despues de la regla
    de arriba, si no la tinta se lo comia) y el texto pasa a tinta: sobre
    los fondos suaves da 15.62 y 15.87, o sea AAA. */
+.ps-item[data-contraste="alto"] .item-opcion[aria-checked="true"]:not([data-estado]) {
+  border-color: var(--foreground);
+  background: var(--secondary);
+}
+.ps-item[data-contraste="alto"] .item-opcion[aria-checked="true"]:not([data-estado]) .item-letra {
+  background: var(--foreground);
+  color: var(--background);
+}
+.ps-item[data-contraste="alto"] .item-opcion[aria-checked="true"]:not([data-estado]) .item-marca {
+  color: var(--foreground);
+}
 .ps-item[data-contraste="alto"] .item-opcion[data-estado="correcta"] {
   border-color: var(--success);
   color: var(--foreground);
@@ -350,4 +388,5 @@
   .ps-item .item-opcion { border: 2px solid ButtonText; }
   .ps-item .item-opcion[data-estado="correcta"],
   .ps-item .item-opcion[data-estado="incorrecta"] { border: 3px solid ButtonText; }
+  .ps-item .item-opcion[aria-checked="true"] { border: 3px solid Highlight; }
 }

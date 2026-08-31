@@ -273,6 +273,11 @@ export default function ItemRenderer({
                 </span>
                 {estado === "correcta" && <span className="item-marca">✓ Correcta</span>}
                 {estado === "incorrecta" && <span className="item-marca">✗ Incorrecta</span>}
+                {/* En simulacro no hay corrección, pero SÍ tiene que verse cuál
+                    tocó. Sin esto el chiquito marcaba y la pantalla no le
+                    respondía nada: quedaba sin saber si le había pegado al
+                    botón. La palabra acompaña al color, igual que siempre. */}
+                {!corrige && seleccionada && <span className="item-marca">✓ Marcada</span>}
               </button>
             </li>
           );
