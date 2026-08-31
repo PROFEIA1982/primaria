@@ -133,3 +133,19 @@ export async function traerConteosPorTema(
   }
   return cuenta;
 }
+
+// Cuantas preguntas se han contestado en total, para el contador de la
+// portada. Sale de una funcion y no de un select porque item_stats tiene
+// RLS sin politicas y tiene que seguir cerrada: esa tabla dice cuantas
+// veces se acerto cada item, y abierta le diria al estudiante cuales son
+// los faciles. La funcion devuelve solo el total.
+export async function traerPracticadas(): Promise<number | null> {
+  try {
+    const { data, error } = await supabase.rpc("total_practicadas");
+    if (error) throw error;
+    const n = Number(data);
+    return Number.isFinite(n) ? n : null;
+  } catch {
+    return null;
+  }
+}
