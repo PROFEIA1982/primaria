@@ -3,6 +3,7 @@ import { ArrowRight, CircleAlert, Clock, LogOut, TriangleAlert } from "lucide-re
 import ItemRenderer from "../ItemRenderer";
 import BarraApoyo, { type TamanoTexto } from "./BarraApoyo";
 import { formatearReloj, PALABRA_RELOJ, type NivelReloj } from "./calificar";
+import { useBarraPegada, useLlevarALaPregunta } from "./useBarraPegada";
 import type { Practica } from "./usePractica";
 
 const ICONO_RELOJ: Record<NivelReloj, typeof Clock> = {
@@ -64,62 +65,16 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
   const esLaUltima = indice === items.length - 1;
   const IconoReloj = ICONO_RELOJ[nivel];
 
-  // La barra se pega debajo del menu, que es fijo. Se mide en vez de
-  // escribir el numero a mano: el menu crece cuando se le da zoom o
-  // cuando los enlaces se acomodan en dos filas. Lo mismo la barra: en
-  // celular se parte en dos lineas y tapa el arranque de la pregunta.
   // Las tres ayudas de lectura. Viven aca y no en la barra para que el
   // estudiante no tenga que volver a agrandar la letra en cada pregunta;
   // no se guardan en el navegador a proposito, no hay nada que recordar.
   const [tamano, setTamano] = useState<TamanoTexto>("normal");
   const [altoContraste, setAltoContraste] = useState(false);
 
-  const barraRef = useRef<HTMLDivElement>(null);
-  const [altoMenu, setAltoMenu] = useState(0);
-  const [altoBarra, setAltoBarra] = useState(0);
-  useEffect(() => {
-    const menu = document.getElementById("nav-principal");
-    const barra = barraRef.current;
-    const medir = () => {
-      if (menu) setAltoMenu(menu.getBoundingClientRect().height);
-      if (barra) setAltoBarra(barra.getBoundingClientRect().height);
-    };
-    medir();
-    const observador = new ResizeObserver(medir);
-    if (menu) observador.observe(menu);
-    if (barra) observador.observe(barra);
-    return () => observador.disconnect();
-  }, []);
-
-  // Al cambiar de pregunta hay que hacer dos cosas: subir la pantalla al
-  // arranque de la pregunta y llevar el foco ahi.
-  //
-  // Antes esto era solo un focus(), y no servia. El navegador desplaza al
-  // enfocar UNICAMENTE cuando el elemento esta del todo fuera de vista, y
-  // este contenedor es tan alto que siempre asoma por abajo: se daba por
-  // satisfecho y no movia nada. Medido en celular de 360 px, el estudiante
-  // caia con 128 px de la pregunta escondidos arriba, y peor conforme
-  // avanzaba: despues de tres preguntas eran 338. O sea que empezaba a leer
-  // a media tabla y tenia que subir a mano cada vez.
-  //
-  // Por eso el desplazamiento va explicito, y el foco despues con
-  // preventScroll para que no pelee con el.
-  const cuerpoRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const cuerpo = cuerpoRef.current;
-    if (!cuerpo) return;
-    // Dentro de un cuadro de animacion: al momento de correr el efecto el
-    // enunciado todavia no termino de acomodarse, y una cuenta hecha antes
-    // deja la pregunta mal parada. scrollIntoView la resuelve contra la
-    // medida real y respeta el scrollMarginTop que se calcula abajo, asi
-    // que la pregunta queda justo debajo del menu y de la barra.
-    const cuadro = requestAnimationFrame(() => {
-      const quieto = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-      cuerpo.scrollIntoView({ block: "start", behavior: quieto ? "auto" : "smooth" });
-      cuerpo.focus({ preventScroll: true });
-    });
-    return () => cancelAnimationFrame(cuadro);
-  }, [indice]);
+  // Las dos medidas de la barra pegada y el salto de foco a la pregunta
+  // nueva salen del mismo sitio que en el simulacro: ver useBarraPegada.
+  const { barraRef, altoMenu, altoBarra } = useBarraPegada();
+  const cuerpoRef = useLlevarALaPregunta(indice);
 
   if (!item) return null;
 
@@ -143,19 +98,13 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
             <span className="examen-palabra">{PALABRA_RELOJ[nivel]}</span>
           </p>
         </div>
-        {/* La barrita era decorativa: quien no la ve no se enteraba de cuanto
-            llevaba. Con el rol y sus valores, el lector de pantalla lo dice.
-            El aria-valuetext va en preguntas y no en porcentaje, que es como
-            piensa el estudiante: "tres de diez", no "treinta por ciento". */}
-        <div
-          className="examen-barrita"
-          role="progressbar"
-          aria-valuemin={1}
-          aria-valuemax={items.length}
-          aria-valuenow={indice + 1}
-          aria-valuetext={`Pregunta ${indice + 1} de ${items.length}`}
-        >
-          <span style={{ width: `${avance}%` }} aria-hidden="true" />
+        {/* La barrita es dibujo y nada mas. Llego a tener role="progressbar"
+            para que el lector de pantalla dijera el avance, pero progressbar
+            exige nombre accesible y no lo tenia; y con el "Pregunta 3 de 10"
+            de arriba, que ya lo dice, quedaba diciendo lo mismo dos veces
+            seguidas. Mejor callada. */}
+        <div className="examen-barrita" aria-hidden="true">
+          <span style={{ width: `${avance}%` }} />
         </div>
       </div>
 
@@ -163,9 +112,14 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           minuto o cuando el tiempo entra en ambar o en rojo. */}
       <p className="ps-solo-lectores" aria-live="polite">{aviso}</p>
 
+      {/* role="group" y no un div pelado: un div sin rol mapea a "generic",
+          y en generic el nombre accesible esta prohibido, o sea que los
+          navegadores se tragaban este aria-label. Al saltar a la pregunta
+          nueva no se anunciaba nada. */}
       <div
         className="ps-contenedor examen-cuerpo"
         tabIndex={-1}
+        role="group"
         ref={cuerpoRef}
         // Cuando el foco salta a la pregunta nueva, el navegador la sube:
         // sin este margen quedaria escondida bajo el menu y la barra.
