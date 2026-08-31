@@ -7,6 +7,7 @@ import BarraApoyo, { type TamanoTexto } from "../practica/BarraApoyo";
 import { formatearReloj, PALABRA_RELOJ, type NivelReloj } from "../practica/calificar";
 import { useBarraPegada, useLlevarALaPregunta } from "../practica/useBarraPegada";
 import type { Simulacros } from "./useSimulacro";
+import { useVozActiva } from "../../lib/apariencia";
 
 const ICONO_RELOJ: Record<NivelReloj, typeof Clock> = {
   normal: Clock,
@@ -28,6 +29,9 @@ type Props = {
  *   · se puede cambiar una respuesta mientras no entregue
  */
 export default function SimulacroPanel({ simulacros }: Props) {
+  // El interruptor de "Leer en voz alta" vive en el menu de accesibilidad;
+  // aca solo se consulta para decidir si se pinta el boton "Escuchar".
+  const vozActiva = useVozActiva();
   const {
     actual, indice, respuestas, responder, irA, siguiente, anterior, entregar,
     sinResponderAun, restante, nivel, aviso, volverALista,
@@ -165,7 +169,7 @@ export default function SimulacroPanel({ simulacros }: Props) {
           imagenAlt={item.imagen_alt}
           tamano={tamano}
           altoContraste={altoContraste}
-          conVoz
+          conVoz={vozActiva}
           modo="examen"
         />
 

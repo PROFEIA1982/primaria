@@ -32,7 +32,7 @@
   border-radius: 8px;
   background: var(--marca-placa);
 }
-@media (min-width: 860px) {
+@media (min-width: 900px) {
   #nav-principal .nav-marca img { height: 44px; }
 }
 #nav-principal .nav-hamburguesa {
@@ -72,152 +72,25 @@
   font-weight: 700;
 }
 #nav-principal .nav-lista a:hover { background: var(--secondary); }
-
-/* Enlace de salida a la otra web (idoneidad docente). El iconito de enlace
-   externo va mas tenue y no cambia el largo del toque. */
-#nav-principal .nav-externo-icono { color: var(--muted); margin-left: 2px; }
-#nav-principal .nav-externo:hover .nav-externo-icono { color: var(--foreground); }
 /* La pagina activa se marca con color Y con una barra: nunca solo color. */
 #nav-principal .nav-lista a.active {
   color: var(--acento);
   box-shadow: inset 0 -3px 0 var(--acento);
 }
 
-/* --- Apariencia: claro/oscuro y mejor vision ---
-   Los dos botones van juntos, con blanco de toque de 48px, y no aprietan
-   la barra en celular porque viven dentro del menu desplegable.
-   Contrastes (tokens, calculados en src/index.css):
-   - --titulo sobre --background ... 11.65 claro · 10.30 oscuro · AAA
-   - --border-fuerte sobre --background 3.50 claro · 6.09 oscuro · borde
-   - encendido: --primary-foreground sobre --primary  6.70 claro · 7.69 oscuro */
-#nav-principal .nav-apariencia {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-#nav-principal .nav-ap-boton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-width: var(--toque-min);
-  min-height: var(--toque-min);
-  padding: 0 14px;
-  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
-  border-radius: var(--radius-sm);
-  background: var(--background);
-  color: var(--titulo);
-  font: inherit;
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1.2;
-  cursor: pointer;
-}
-#nav-principal .nav-ap-boton svg { flex: 0 0 auto; }
-/* Encendido = fondo azul + borde mas grueso + el icono cambiado. Tres
-   senales, ninguna de ellas solo el color. */
-#nav-principal .nav-ap-boton[aria-pressed="true"],
-#nav-principal .nav-ap-boton[data-nivel="grande"],
-#nav-principal .nav-ap-boton[data-nivel="extra"] {
-  border-width: 3px;
-  border-color: var(--primary);
-  background: var(--primary);
-  color: var(--primary-foreground);
-}
-#nav-principal .nav-ap-boton:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 3px;
-}
-@media (hover: hover) {
-  #nav-principal .nav-ap-boton { transition: transform 0.15s ease; }
-  #nav-principal .nav-ap-boton:hover { transform: translateY(-2px); }
-}
+/* Enlace de salida a la otra web (idoneidad docente). El iconito de enlace
+   externo va mas tenue y no cambia el largo del toque. */
+#nav-principal .nav-externo-icono { color: var(--muted); margin-left: 2px; }
+#nav-principal .nav-externo:hover .nav-externo-icono { color: var(--foreground); }
 
-/* Celular: el menu se despliega con la hamburguesa. */
-@media (max-width: 859px) {
-  #nav-principal .nav-menu {
-    display: none;
-    width: 100%;
-    padding-bottom: 12px;
-  }
-  #nav-principal .nav-menu[data-abierto="si"] { display: block; }
-  #nav-principal .nav-caja { flex-wrap: wrap; }
-  #nav-principal .nav-lista { flex-direction: column; }
-  #nav-principal .nav-lista a { width: 100%; }
-  /* Los dos botones se reparten el renglon: apilados sumarian dos filas
-     mas de bajada antes de llegar a Contacto. A 320px cada uno se queda
-     con unos 136px y el texto no se sale porque puede partir. */
-  #nav-principal .nav-apariencia {
-    display: grid;
-    /* Tres botones: auto-fit los reparte solo (2 por fila y luego 1, o 3
-       si el aparato es mas ancho) sin dejar una columna vacia. */
-    grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: var(--borde-ancho) solid var(--border);
-  }
-  #nav-principal .nav-ap-boton {
-    padding: 6px 8px;
-    font-size: 0.88rem;
-  }
-  #nav-principal .nav-ap-texto { min-width: 0; overflow-wrap: anywhere; }
-}
-
-/* Escritorio: siempre visible, sin boton. */
-@media (min-width: 860px) {
-  #nav-principal .nav-hamburguesa { display: none; }
-  /* flex y no block: los enlaces y los dos botones de apariencia comparten
-     el renglon en vez de quedar uno debajo del otro. */
-  #nav-principal .nav-menu {
-    display: flex !important;
-    align-items: center;
-    /* Mas aire entre los enlaces: antes se veian pegados. */
-    gap: 8px 22px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  /* Los tres botones de apariencia se separan del bloque de enlaces con una
-     linea fina, para que se lean como un grupo aparte y no apretados contra
-     "Contacto". */
-  #nav-principal .nav-apariencia {
-    padding-left: 18px;
-    border-left: var(--borde-ancho) solid var(--border);
-  }
-  /* En escritorio manda el icono: con las dos palabras completas el menu
-     se partia en dos filas. El nombre sigue ahi para el lector de
-     pantalla, en el aria-label del boton. */
-  #nav-principal .nav-ap-texto {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-  #nav-principal .nav-ap-boton { padding: 0; }
-}
-
-@media (forced-colors: active) {
-  #nav-principal .nav-lista a.active { box-shadow: inset 0 -3px 0 ButtonText; }
-  #nav-principal .nav-ap-boton { border: 2px solid ButtonText; }
-  #nav-principal .nav-ap-boton[aria-pressed="true"],
-  #nav-principal .nav-ap-boton[data-nivel="grande"],
-  #nav-principal .nav-ap-boton[data-nivel="extra"] { border: 3px solid Highlight; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #nav-principal .nav-ap-boton { transition: none; }
-  #nav-principal .nav-ap-boton:hover { transform: none; }
-}
-
-/* --- Simulacros: el desplegable del menu ---
-   Un boton que muestra u oculta una lista. En escritorio la lista flota
-   debajo del boton; en celular se queda en el flujo, indentada, para no
+/* --- Desplegables (Practicar, Simulacros y Accesibilidad) ---
+   Un boton que muestra u oculta un panel. En escritorio el panel flota
+   debajo del boton; en celular se queda en el flujo, indentado, para no
    tapar el resto del menu con una capa encima.
    Contrastes (tokens calculados en src/index.css):
-   - --foreground sobre --background ...... 17.40 claro · 15.62 oscuro · AAA
+   - --foreground sobre --background ...... 17.40 claro · 14.05 oscuro · AAA
    - --acento (materia) sobre --background . 5.46 el mas bajo (Español) · AA
-   - --border-fuerte sobre --background .... 3.50 claro · 6.09 oscuro · borde */
+   - --border-fuerte sobre --background .... 3.50 claro · 6.03 oscuro · borde */
 #nav-principal .nav-desplegable {
   position: relative;
 }
@@ -226,7 +99,7 @@
   align-items: center;
   gap: 6px;
   min-height: var(--toque-min);
-  padding: 8px 12px;
+  padding: 8px 14px;
   border: 0;
   border-radius: var(--radius-sm);
   background: none;
@@ -236,7 +109,7 @@
   cursor: pointer;
 }
 #nav-principal .nav-sim-boton:hover { background: var(--secondary); }
-/* Estar dentro de simulacros se marca con color Y con la barra de abajo,
+/* Estar dentro de la seccion se marca con color Y con la barra de abajo,
    igual que los demas enlaces del menu: nunca solo con el color. */
 #nav-principal .nav-sim-boton[data-activo="si"] {
   color: var(--primary);
@@ -267,36 +140,183 @@
   box-shadow: inset 3px 0 0 var(--acento);
 }
 
-@media (max-width: 859px) {
+/* --- Panel de accesibilidad ---
+   Los cinco ajustes con su nombre escrito. Cada fila dice el estado con
+   PALABRA ("Activado"/"Desactivado") ademas del color y del icono: quien
+   no distingue el azul del gris tiene que poder saber que esta puesto.
+   Justo aca eso importa mas que en ninguna otra parte del sitio. */
+#nav-principal .nav-ax-panel {
+  padding: 10px;
+}
+#nav-principal .nav-ax-titulo {
+  margin: 2px 4px 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--titulo);
+}
+#nav-principal .nav-ax-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+#nav-principal .nav-ax-fila {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: var(--toque-min);
+  padding: 8px 10px;
+  border: var(--borde-ancho) solid transparent;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+#nav-principal .nav-ax-fila:hover { background: var(--secondary); }
+#nav-principal .nav-ax-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--titulo);
+}
+#nav-principal .nav-ax-nombre { min-width: 0; }
+#nav-principal .nav-ax-estado {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
+/* Encendido = fondo azul + borde + la palabra "Activado" + el icono
+   cambiado. Cuatro senales, ninguna de ellas solo el color. */
+#nav-principal .nav-ax-fila[aria-pressed="true"],
+#nav-principal .nav-ax-fila[data-nivel="grande"],
+#nav-principal .nav-ax-fila[data-nivel="extra"] {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+#nav-principal .nav-ax-fila[aria-pressed="true"] .nav-ax-icono,
+#nav-principal .nav-ax-fila[aria-pressed="true"] .nav-ax-estado,
+#nav-principal .nav-ax-fila[data-nivel="grande"] .nav-ax-icono,
+#nav-principal .nav-ax-fila[data-nivel="grande"] .nav-ax-estado,
+#nav-principal .nav-ax-fila[data-nivel="extra"] .nav-ax-icono,
+#nav-principal .nav-ax-fila[data-nivel="extra"] .nav-ax-estado {
+  color: var(--primary-foreground);
+}
+#nav-principal .nav-ax-fila[aria-pressed="true"]:hover,
+#nav-principal .nav-ax-fila[data-nivel="grande"]:hover,
+#nav-principal .nav-ax-fila[data-nivel="extra"]:hover {
+  background: var(--primary);
+  filter: brightness(0.94);
+}
+#nav-principal .nav-ax-nota {
+  margin: 10px 4px 2px;
+  padding-top: 8px;
+  border-top: var(--borde-ancho) solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+@media (hover: hover) {
+  #nav-principal .nav-ax-fila { transition: background-color 0.15s ease; }
+}
+
+/* Celular: el menu se despliega con la hamburguesa. */
+@media (max-width: 899px) {
+  #nav-principal .nav-menu {
+    display: none;
+    width: 100%;
+    padding-bottom: 12px;
+  }
+  #nav-principal .nav-menu[data-abierto="si"] { display: block; }
+  #nav-principal .nav-caja { flex-wrap: wrap; }
+  #nav-principal .nav-lista { flex-direction: column; }
+  #nav-principal .nav-lista a { width: 100%; }
   #nav-principal .nav-sim-boton { width: 100%; justify-content: space-between; }
+  /* En el desplegable de accesibilidad la flecha va al final, pero el
+     icono y el nombre tienen que quedar juntos a la izquierda. */
+  #nav-principal .nav-ax > .nav-sim-boton { justify-content: flex-start; }
+  #nav-principal .nav-ax > .nav-sim-boton .nav-sim-flecha { margin-left: auto; }
   #nav-principal .nav-sim-lista {
     margin: 2px 0 6px 14px;
     padding-left: 10px;
     border-left: var(--borde-ancho-fuerte) solid var(--border);
   }
+  #nav-principal .nav-ax-panel {
+    margin: 2px 0 6px 14px;
+    padding: 8px 0 8px 10px;
+    border-left: var(--borde-ancho-fuerte) solid var(--border);
+  }
 }
 
-@media (min-width: 860px) {
-  #nav-principal .nav-sim-lista {
+/* Escritorio: siempre visible, sin boton.
+   El corte subio de 860 a 900 px: con "Idoneidad Docente" y
+   "Accesibilidad" el renglon necesita mas campo antes de partirse. */
+@media (min-width: 900px) {
+  #nav-principal .nav-hamburguesa { display: none; }
+  #nav-principal .nav-menu {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  #nav-principal .nav-lista {
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px 10px;
+  }
+  /* Accesibilidad cierra el renglon y se separa del resto con una linea
+     fina: es un grupo aparte, no una pagina mas del sitio. */
+  #nav-principal .nav-ax {
+    margin-left: 6px;
+    padding-left: 12px;
+    border-left: var(--borde-ancho) solid var(--border);
+  }
+  #nav-principal .nav-sim-lista,
+  #nav-principal .nav-ax-panel {
     position: absolute;
-    top: calc(100% + 4px);
+    top: calc(100% + 6px);
     right: 0;
     z-index: 40;
-    min-width: 232px;
-    padding: 6px;
     border: var(--borde-ancho) solid var(--border-fuerte);
     border-radius: var(--radius);
     background: var(--background);
     box-shadow: var(--sombra-alta);
   }
+  #nav-principal .nav-sim-lista {
+    min-width: 232px;
+    padding: 6px;
+  }
+  #nav-principal .nav-ax-panel {
+    width: 306px;
+  }
+}
+
+/* En pantallas medianas el menu completo no cabe en un renglon: que se
+   parta en dos ordenado, en vez de apretarse. */
+@media (min-width: 900px) and (max-width: 1080px) {
+  #nav-principal .nav-lista { flex-wrap: wrap; }
 }
 
 @media (forced-colors: active) {
+  #nav-principal .nav-lista a.active { box-shadow: inset 0 -3px 0 ButtonText; }
   #nav-principal .nav-sim-boton[data-activo="si"] { box-shadow: inset 0 -3px 0 ButtonText; }
-  #nav-principal .nav-sim-lista { border: 2px solid ButtonText; }
+  #nav-principal .nav-sim-lista,
+  #nav-principal .nav-ax-panel { border: 2px solid ButtonText; }
   #nav-principal .nav-sim-lista a.active { box-shadow: inset 3px 0 0 ButtonText; }
+  #nav-principal .nav-ax-fila { border: 2px solid ButtonText; }
+  #nav-principal .nav-ax-fila[aria-pressed="true"],
+  #nav-principal .nav-ax-fila[data-nivel="grande"],
+  #nav-principal .nav-ax-fila[data-nivel="extra"] { border: 3px solid Highlight; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   #nav-principal .nav-sim-flecha { transition: none; }
+  #nav-principal .nav-ax-fila { transition: none; }
 }

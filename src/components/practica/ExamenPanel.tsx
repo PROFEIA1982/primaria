@@ -5,6 +5,7 @@ import BarraApoyo, { type TamanoTexto } from "./BarraApoyo";
 import { formatearReloj, PALABRA_RELOJ, type NivelReloj } from "./calificar";
 import { useBarraPegada, useLlevarALaPregunta } from "./useBarraPegada";
 import type { Practica } from "./usePractica";
+import { useVozActiva } from "../../lib/apariencia";
 
 const ICONO_RELOJ: Record<NivelReloj, typeof Clock> = {
   normal: Clock,
@@ -19,6 +20,9 @@ type Props = {
 
 // Pantalla 2: una pregunta a la vez, con la barra del reloj arriba.
 export default function ExamenPanel({ nombreMateria, practica }: Props) {
+  // El interruptor de "Leer en voz alta" vive en el menu de accesibilidad;
+  // aca solo se consulta para decidir si se pinta el boton "Escuchar".
+  const vozActiva = useVozActiva();
   const { items, indice, respuestas, responder, siguiente, restante, nivel, aviso,
           volverAPracticar } = practica;
 
@@ -145,7 +149,7 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           imagenAlt={item.imagen_alt}
           tamano={tamano}
           altoContraste={altoContraste}
-          conVoz
+          conVoz={vozActiva}
         />
 
         {respondido && (

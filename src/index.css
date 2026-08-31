@@ -334,6 +334,218 @@
   --marca-placa: #ffffff;         /* el negro del logo encima: 19.44 · AAA */
 }
 
+/* ============================================================
+   7 · MODO DALTONISMO (data-color="daltonismo")
+   Va DESPUES de los bloques 1-6 para ganarles por orden.
+
+   Las cuatro materias usaban naranja, morado, verde azulado y azul; el
+   par correcto/incorrecto usaba verde y rojo. Ese verde contra rojo es
+   justo el que no distingue una persona con deuteranopia o protanopia,
+   que son las mas comunes. Aca se cambian por matices de la paleta
+   Okabe-Ito, que se separan por tono Y por luminosidad, oscurecidos
+   hasta que dan AA sobre blanco.
+
+   Lo mas importante del cambio: CORRECTO pasa a AZUL e INCORRECTO a
+   bermellon. Aun asi la app nunca comunica solo con color (siempre hay
+   icono y texto), y esto es la segunda red, no la unica.
+
+   Contrastes calculados con la formula WCAG 2.1, no estimados:
+     CLARO, el color sobre fondo blanco        OSCURO, sobre #161d33
+       espanol  #8a5000 ... 6.51 AA              #f0b060 ... 8.81 AAA
+       sociales #8f3d6b ... 6.89 AA              #f0a0cc ... 8.43 AAA
+       ciencias #00695c ... 6.61 AA              #5fd6bd ... 9.41 AAA
+       mate     #0059a6 ... 7.05 AAA             #7ab8ff ... 8.05 AAA
+       success  #0059a6 ... 7.05 AAA             #7ab8ff ... 8.05 AAA
+       error    #a33b00 ... 6.60 AA              #ffa070 ... 8.36 AAA
+   ============================================================ */
+:root[data-color="daltonismo"] {
+  --espanol: #8a5000;             --espanol-suave: #fbf0e2;
+  --sociales: #8f3d6b;            --sociales-suave: #fbeaf3;
+  --ciencias: #00695c;            --ciencias-suave: #e2f2ef;
+  --mate: #0059a6;                --mate-suave: #e5f0fa;
+  --tono-0: #fbf0e2;
+  --tono-1: #fbeaf3;
+  --tono-2: #e2f2ef;
+  --tono-3: #e5f0fa;
+  --primary: #0059a6;
+  --primary-suave: #e5f0fa;
+  --success: #0059a6;             /* correcto = AZUL, no verde */
+  --success-suave: #e5f0fa;
+  --error: #a33b00;               /* incorrecto = bermellon, no rojo */
+  --error-suave: #fbeae2;
+  --enlace: #0059a6;
+  --accent-fuerte: #8a5000;
+  --hero-fondo: #0059a6;
+  --hero-azul: #0059a6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"])[data-color="daltonismo"] {
+    --espanol: #f0b060;           --espanol-suave: #2f2418;
+    --sociales: #f0a0cc;          --sociales-suave: #331f2b;
+    --ciencias: #5fd6bd;          --ciencias-suave: #0f2b28;
+    --mate: #7ab8ff;              --mate-suave: #17284a;
+    --tono-0: #2f2418;
+    --tono-1: #331f2b;
+    --tono-2: #0f2b28;
+    --tono-3: #17284a;
+    --primary: #7ab8ff;
+    --primary-suave: #17284a;
+    --success: #7ab8ff;
+    --success-suave: #17284a;
+    --error: #ffa070;
+    --error-suave: #33201a;
+    --enlace: #7ab8ff;
+    --accent-fuerte: #f0b060;
+  }
+}
+:root[data-tema="oscuro"][data-color="daltonismo"] {
+  --espanol: #f0b060;             --espanol-suave: #2f2418;
+  --sociales: #f0a0cc;            --sociales-suave: #331f2b;
+  --ciencias: #5fd6bd;            --ciencias-suave: #0f2b28;
+  --mate: #7ab8ff;                --mate-suave: #17284a;
+  --tono-0: #2f2418;
+  --tono-1: #331f2b;
+  --tono-2: #0f2b28;
+  --tono-3: #17284a;
+  --primary: #7ab8ff;
+  --primary-suave: #17284a;
+  --success: #7ab8ff;
+  --success-suave: #17284a;
+  --error: #ffa070;
+  --error-suave: #33201a;
+  --enlace: #7ab8ff;
+  --accent-fuerte: #f0b060;
+}
+
+/* ============================================================
+   8 · ESCALA DE GRISES (data-color="grises")
+   Para quien se satura con el color. Se apaga el color por TOKENS y no
+   con filter: un filter en la raiz crea un bloque contenedor y le
+   rompe el pegado (sticky) al menu de arriba.
+
+   Los cuatro grises de materia se separan por luminosidad, que es lo
+   unico que queda cuando no hay tono. Aca importa mas que nunca la
+   regla de la casa: nada se comunica solo con color, siempre hay icono
+   o texto al lado.
+
+   Contrastes calculados, no estimados:
+     CLARO, sobre blanco                OSCURO, sobre #161d33
+       #1f1f1f ... 16.48 AAA              #f2f2f2 ... 14.92 AAA
+       #3d3d3d ... 10.86 AAA              #d0d0d0 ... 10.83 AAA
+       #5a5a5a ...  6.90 AA               #adadad ...  7.44 AAA
+       #757575 ...  4.61 AA               #8f8f8f ...  5.16 AA
+   ============================================================ */
+:root[data-color="grises"] {
+  --espanol: #1f1f1f;             --espanol-suave: #f0f0f0;
+  --sociales: #3d3d3d;            --sociales-suave: #ebebeb;
+  --ciencias: #5a5a5a;            --ciencias-suave: #e6e6e6;
+  --mate: #757575;                --mate-suave: #f2f2f2;
+  --tono-0: #f0f0f0;
+  --tono-1: #ebebeb;
+  --tono-2: #e6e6e6;
+  --tono-3: #f2f2f2;
+  --primary: #1f1f1f;
+  --primary-foreground: #ffffff;
+  --primary-suave: #f0f0f0;
+  --success: #1f1f1f;
+  --success-suave: #eeeeee;
+  --error: #3d3d3d;
+  --error-suave: #e8e8e8;
+  --accent: #d6d6d6;
+  --accent-foreground: #1a1a1a;
+  --accent-fuerte: #3d3d3d;
+  --enlace: #1f1f1f;
+  --titulo: #1f1f1f;
+  --muted: #5a5a5a;
+  --secondary: #f4f4f4;
+  --border: #d8d8d8;
+  --border-fuerte: #6e6e6e;
+  --pie-fondo: #262626;
+  --pie-legal: #1a1a1a;
+  --pie-realce: #e0e0e0;
+  --banda-fondo: #2e2e2e;
+  --hero-fondo: #2e2e2e;
+  --hero-azul: #2e2e2e;
+  --marca-placa: transparent;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"])[data-color="grises"] {
+    --espanol: #f2f2f2;           --espanol-suave: #262626;
+    --sociales: #d0d0d0;          --sociales-suave: #2b2b2b;
+    --ciencias: #adadad;          --ciencias-suave: #303030;
+    --mate: #8f8f8f;              --mate-suave: #242424;
+    --tono-0: #262626;
+    --tono-1: #2b2b2b;
+    --tono-2: #303030;
+    --tono-3: #242424;
+    --background: #141414;
+    --secondary: #242424;
+    --primary: #f2f2f2;
+    --primary-foreground: #141414;
+    --primary-suave: #2b2b2b;
+    --success: #f2f2f2;
+    --success-suave: #262626;
+    --error: #d0d0d0;
+    --error-suave: #2e2e2e;
+    --accent: #d6d6d6;
+    --accent-foreground: #1a1a1a;
+    --accent-fuerte: #d0d0d0;
+    --enlace: #f2f2f2;
+    --titulo: #f2f2f2;
+    --foreground: #f2f2f2;
+    --muted: #adadad;
+    --border: #3a3a3a;
+    --border-fuerte: #8f8f8f;
+    --pie-fondo: #0d0d0d;
+    --pie-legal: #080808;
+    --pie-realce: #e0e0e0;
+    --banda-fondo: #1f1f1f;
+    --hero-fondo: #1f1f1f;
+    --hero-azul: #1f1f1f;
+    --marca-placa: #f2f2f2;
+  }
+}
+:root[data-tema="oscuro"][data-color="grises"] {
+  --espanol: #f2f2f2;             --espanol-suave: #262626;
+  --sociales: #d0d0d0;            --sociales-suave: #2b2b2b;
+  --ciencias: #adadad;            --ciencias-suave: #303030;
+  --mate: #8f8f8f;                --mate-suave: #242424;
+  --tono-0: #262626;
+  --tono-1: #2b2b2b;
+  --tono-2: #303030;
+  --tono-3: #242424;
+  --background: #141414;
+  --secondary: #242424;
+  --primary: #f2f2f2;
+  --primary-foreground: #141414;
+  --primary-suave: #2b2b2b;
+  --success: #f2f2f2;
+  --success-suave: #262626;
+  --error: #d0d0d0;
+  --error-suave: #2e2e2e;
+  --accent: #d6d6d6;
+  --accent-foreground: #1a1a1a;
+  --accent-fuerte: #d0d0d0;
+  --enlace: #f2f2f2;
+  --titulo: #f2f2f2;
+  --foreground: #f2f2f2;
+  --muted: #adadad;
+  --border: #3a3a3a;
+  --border-fuerte: #8f8f8f;
+  --pie-fondo: #0d0d0d;
+  --pie-legal: #080808;
+  --pie-realce: #e0e0e0;
+  --banda-fondo: #1f1f1f;
+  --hero-fondo: #1f1f1f;
+  --hero-azul: #1f1f1f;
+  --marca-placa: #f2f2f2;
+}
+
+/* En grises, la ilustracion del hero y los logos tambien pierden color:
+   si no, quedan como el unico parche de color de toda la pantalla. */
+:root[data-color="grises"] img,
+:root[data-color="grises"] svg { filter: grayscale(1); }
+
 *,
 *::before,
 *::after { box-sizing: border-box; }

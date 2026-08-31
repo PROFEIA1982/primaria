@@ -35,6 +35,9 @@
           if (leer("ps-vision") === "alto") d.setAttribute("data-vision", "alto");
           var tx = leer("ps-texto");
           if (tx === "grande" || tx === "extra") d.setAttribute("data-texto", tx);
+          var co = leer("ps-color");
+          if (co === "daltonismo" || co === "grises") d.setAttribute("data-color", co);
+          if (leer("ps-voz") === "no") d.setAttribute("data-voz", "no");
         } catch (e) {
           // Si algo falla, la pagina arranca en claro y no se rompe nada.
         }

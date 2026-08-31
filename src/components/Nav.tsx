@@ -1,27 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { ALargeSmall, ChevronDown, ExternalLink, Eye, GraduationCap, Menu, Moon, Sun, X } from "lucide-react";
+import {
+  Accessibility, ALargeSmall, ChevronDown, Contrast, ExternalLink, Eye,
+  GraduationCap, Menu, Moon, Palette, Sun, Volume2, VolumeX, X,
+} from "lucide-react";
 import { IMG_LOGO_EVI, MATERIAS, URL_IDONEA } from "../config";
 import { useApariencia } from "../lib/apariencia";
 import "./Nav.css";
 
 type ItemMenu = { slug: string; nombre: string; color: string; to: string };
 
-// Un desplegable del menu: un boton que muestra u oculta una lista. Es el
-// patron sencillo, no un menu de escritorio con flechas, porque es el que
-// mejor se porta en celular y con lector de pantalla. Se usa dos veces:
-// "Practicar" (por tema) y "Simulacros" (examen completo).
-function MenuDesplegable({
-  etiqueta,
-  id,
-  activo,
-  items,
-}: {
-  etiqueta: string;
-  id: string;
-  activo: boolean;
-  items: ItemMenu[];
-}) {
+// Abrir y cerrar un desplegable del menu. Lo comparten el de materias y
+// el de accesibilidad: dos copias de esta logica terminan con uno que
+// cierra al tocar afuera y otro que no.
+function useDesplegable() {
   const [abierto, setAbierto] = useState(false);
   const cajaRef = useRef<HTMLLIElement>(null);
   const botonRef = useRef<HTMLButtonElement>(null);
@@ -53,6 +45,25 @@ function MenuDesplegable({
     };
   }, [abierto]);
 
+  const alternar = useCallback(() => setAbierto((v) => !v), []);
+  return { abierto, alternar, cajaRef, botonRef };
+}
+
+// Un desplegable de enlaces. Se usa dos veces: "Practicar" (por tema) y
+// "Simulacros" (examen completo).
+function MenuDesplegable({
+  etiqueta,
+  id,
+  activo,
+  items,
+}: {
+  etiqueta: string;
+  id: string;
+  activo: boolean;
+  items: ItemMenu[];
+}) {
+  const { abierto, alternar, cajaRef, botonRef } = useDesplegable();
+
   return (
     <li className="nav-desplegable" ref={cajaRef}>
       <button
@@ -62,7 +73,7 @@ function MenuDesplegable({
         aria-expanded={abierto}
         aria-controls={id}
         data-activo={activo ? "si" : undefined}
-        onClick={() => setAbierto((v) => !v)}
+        onClick={alternar}
       >
         {etiqueta}
         <ChevronDown
@@ -88,18 +99,152 @@ function MenuDesplegable({
   );
 }
 
+// Una fila del panel de accesibilidad: icono, nombre, y el estado
+// escrito. El estado NUNCA se comunica solo con el color de fondo: va
+// tambien la palabra ("Activado" / "Desactivado") y el icono cambia.
+function FilaAjuste({
+  icono,
+  nombre,
+  estado,
+  encendido,
+  onClick,
+}: {
+  icono: React.ReactNode;
+  nombre: string;
+  estado: string;
+  encendido: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <li>
+      <button
+        type="button"
+        className="nav-ax-fila"
+        aria-pressed={encendido}
+        onClick={onClick}
+      >
+        <span className="nav-ax-icono" aria-hidden="true">{icono}</span>
+        <span className="nav-ax-nombre">{nombre}</span>
+        <span className="nav-ax-estado">{estado}</span>
+      </button>
+    </li>
+  );
+}
+
+// El panel de accesibilidad. Junta los cinco ajustes en un solo lugar
+// con su nombre escrito: tres botones sueltos con puro icono en la
+// barra no le decian a nadie que la lunita era el modo oscuro.
+function MenuAccesibilidad() {
+  const { abierto, alternar, cajaRef, botonRef } = useDesplegable();
+  const {
+    tema, vision, color, texto, voz,
+    alternarTema, alternarVision, ponerColor, ciclarTexto, alternarVoz,
+  } = useApariencia();
+
+  const nombreTexto =
+    texto === "normal" ? "Normal" : texto === "grande" ? "Grande" : "Muy grande";
+  // Hay algo puesto que no es lo de fabrica: el boton lo avisa con un
+  // punto, para que se note sin tener que abrir el panel.
+  const hayAjustes =
+    tema === "oscuro" || vision === "alto" || color !== "normal" || texto !== "normal" || !voz;
+
+  return (
+    <li className="nav-desplegable nav-ax" ref={cajaRef}>
+      <button
+        type="button"
+        className="nav-sim-boton"
+        ref={botonRef}
+        aria-expanded={abierto}
+        aria-controls="nav-accesibilidad"
+        data-activo={hayAjustes ? "si" : undefined}
+        onClick={alternar}
+      >
+        <Accessibility size={19} strokeWidth={2.2} aria-hidden="true" />
+        Accesibilidad
+        <ChevronDown
+          size={18}
+          strokeWidth={2.4}
+          aria-hidden="true"
+          className="nav-sim-flecha"
+          data-abierto={abierto ? "si" : "no"}
+        />
+      </button>
+
+      <div id="nav-accesibilidad" className="nav-ax-panel" hidden={!abierto}>
+        <p className="nav-ax-titulo">Ajustá la página como la veas mejor</p>
+
+        <ul className="nav-ax-lista">
+          <FilaAjuste
+            icono={tema === "oscuro" ? <Sun size={19} strokeWidth={2.2} /> : <Moon size={19} strokeWidth={2.2} />}
+            nombre="Modo oscuro"
+            estado={tema === "oscuro" ? "Activado" : "Desactivado"}
+            encendido={tema === "oscuro"}
+            onClick={alternarTema}
+          />
+          <FilaAjuste
+            icono={<Eye size={19} strokeWidth={2.2} />}
+            nombre="Alto contraste"
+            estado={vision === "alto" ? "Activado" : "Desactivado"}
+            encendido={vision === "alto"}
+            onClick={alternarVision}
+          />
+          <FilaAjuste
+            icono={<Palette size={19} strokeWidth={2.2} />}
+            nombre="Modo daltonismo"
+            estado={color === "daltonismo" ? "Activado" : "Desactivado"}
+            encendido={color === "daltonismo"}
+            onClick={() => ponerColor("daltonismo")}
+          />
+          <FilaAjuste
+            icono={<Contrast size={19} strokeWidth={2.2} />}
+            nombre="Escala de grises"
+            estado={color === "grises" ? "Activado" : "Desactivado"}
+            encendido={color === "grises"}
+            onClick={() => ponerColor("grises")}
+          />
+          {/* El tamano no es de encender y apagar: da tres pasos, asi que
+              en vez de aria-pressed dice cual esta puesto. */}
+          <li>
+            <button
+              type="button"
+              className="nav-ax-fila"
+              data-nivel={texto}
+              aria-label={`Tamaño del texto: ${nombreTexto}. Tocá para agrandarlo`}
+              onClick={ciclarTexto}
+            >
+              <span className="nav-ax-icono" aria-hidden="true">
+                <ALargeSmall size={21} strokeWidth={2.2} />
+              </span>
+              <span className="nav-ax-nombre" aria-hidden="true">Tamaño del texto</span>
+              <span className="nav-ax-estado" aria-hidden="true">{nombreTexto}</span>
+            </button>
+          </li>
+          <FilaAjuste
+            icono={voz ? <Volume2 size={19} strokeWidth={2.2} /> : <VolumeX size={19} strokeWidth={2.2} />}
+            nombre="Leer en voz alta"
+            estado={voz ? "Activado" : "Desactivado"}
+            encendido={voz}
+            onClick={alternarVoz}
+          />
+        </ul>
+
+        <p className="nav-ax-nota">
+          Con la lectura activada, cada pregunta trae un botón «Escuchar».
+        </p>
+      </div>
+    </li>
+  );
+}
+
 // Navegacion. En celular se abre con la hamburguesa; en pantalla grande
 // siempre esta a la vista, porque un nino no deberia tener que buscarla.
 //
-// Menu limpio: Inicio · Practicar ▾ · Simulacros ▾ · Contacto. Las cuatro
-// materias no van sueltas en la barra; viven dentro de los dos desplegables,
-// que hacen la misma pregunta al chiquito: practicar por tema o hacer el
-// simulacro completo.
+// Menu: Inicio · Practicar ▾ · Simulacros ▾ · Idoneidad Docente ↗ ·
+// Contacto · Accesibilidad ▾. Las cuatro materias no van sueltas en la
+// barra; viven dentro de los dos desplegables, que hacen la misma
+// pregunta al chiquito: practicar por tema o hacer el simulacro completo.
 export default function Nav() {
   const [abierto, setAbierto] = useState(false);
-  // Los dos apoyos de apariencia viven aca y en ningun otro lado: dos
-  // copias del estado terminan mostrando cosas distintas en cada una.
-  const { tema, vision, texto, alternarTema, alternarVision, ciclarTexto } = useApariencia();
   const { pathname } = useLocation();
 
   // Al cambiar de pagina se cierra la hamburguesa del celular.
@@ -118,12 +263,6 @@ export default function Nav() {
   const itemsSimulacros: ItemMenu[] = MATERIAS.map((m) => ({
     slug: m.slug, nombre: m.nombre, color: m.color, to: `/simulacros/${m.slug}`,
   }));
-
-  // El boton de tamano da tres pasos. La etiqueta le dice al lector de
-  // pantalla en cual esta y que pasa al tocarlo, porque aria-pressed solo
-  // sirve para si/no y aca hay tres estados.
-  const nombreTexto = texto === "normal" ? "normal" : texto === "grande" ? "grande" : "extra grande";
-  const etiquetaTexto = `Tamaño del texto: ${nombreTexto}. Tocá para cambiarlo`;
 
   return (
     <header id="nav-principal">
@@ -188,48 +327,8 @@ export default function Nav() {
             <li>
               <NavLink to="/contacto" onClick={() => setAbierto(false)}>Contacto</NavLink>
             </li>
+            <MenuAccesibilidad />
           </ul>
-
-          {/* Los dos botones van dentro del menu y no en la barra: en un
-              celular de 320px, al lado del logo y de la hamburguesa, no
-              caben sin dejar el menu apretado. Con el menu abierto quedan
-              a la vista, que es donde se buscan. */}
-          <div className="nav-apariencia" role="group" aria-label="Apariencia de la página">
-            <button
-              type="button"
-              className="nav-ap-boton"
-              aria-pressed={tema === "oscuro"}
-              aria-label="Modo oscuro"
-              onClick={alternarTema}
-            >
-              {/* El icono cambia con el estado: encendido no se dice solo
-                  con el color de fondo del boton. */}
-              {tema === "oscuro"
-                ? <Sun size={20} strokeWidth={2.2} aria-hidden="true" />
-                : <Moon size={20} strokeWidth={2.2} aria-hidden="true" />}
-              <span className="nav-ap-texto">Modo oscuro</span>
-            </button>
-            <button
-              type="button"
-              className="nav-ap-boton"
-              aria-pressed={vision === "alto"}
-              aria-label="Mejor visión"
-              onClick={alternarVision}
-            >
-              <Eye size={20} strokeWidth={2.2} aria-hidden="true" />
-              <span className="nav-ap-texto">Mejor visión</span>
-            </button>
-            <button
-              type="button"
-              className="nav-ap-boton"
-              data-nivel={texto}
-              aria-label={etiquetaTexto}
-              onClick={ciclarTexto}
-            >
-              <ALargeSmall size={22} strokeWidth={2.2} aria-hidden="true" />
-              <span className="nav-ap-texto">Tamaño del texto</span>
-            </button>
-          </div>
         </nav>
       </div>
     </header>
