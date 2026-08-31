@@ -340,6 +340,17 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
+/* ============================================================
+   Tamano del texto de toda la web (boton del menu).
+   Se escala el font-size del <html>, no cada regla: como el cuerpo, los
+   titulos y los clamp() estan en rem, todos crecen juntos y en proporcion.
+   Las medidas en px (blanco de toque de 48px, margenes del contenedor) no
+   se tocan a proposito: el texto crece pero los botones no se deforman ni
+   se pierde el objetivo minimo. "normal" = 100% = como siempre.
+   ============================================================ */
+:root[data-texto="grande"] { font-size: 112.5%; }  /* 16 → 18 px de base */
+:root[data-texto="extra"]  { font-size: 125%;   }  /* 16 → 20 px de base */
+
 body {
   margin: 0;
   font-family: var(--fuente);

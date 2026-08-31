@@ -54,7 +54,7 @@
 #nav-principal .nav-lista {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 6px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -65,13 +65,18 @@
   align-items: center;
   gap: 6px;
   min-height: var(--toque-min);
-  padding: 8px 12px;
+  padding: 8px 14px;
   border-radius: var(--radius-sm);
   color: var(--foreground);
   text-decoration: none;
   font-weight: 700;
 }
 #nav-principal .nav-lista a:hover { background: var(--secondary); }
+
+/* Enlace de salida a la otra web (idoneidad docente). El iconito de enlace
+   externo va mas tenue y no cambia el largo del toque. */
+#nav-principal .nav-externo-icono { color: var(--muted); margin-left: 2px; }
+#nav-principal .nav-externo:hover .nav-externo-icono { color: var(--foreground); }
 /* La pagina activa se marca con color Y con una barra: nunca solo color. */
 #nav-principal .nav-lista a.active {
   color: var(--acento);
@@ -111,7 +116,9 @@
 #nav-principal .nav-ap-boton svg { flex: 0 0 auto; }
 /* Encendido = fondo azul + borde mas grueso + el icono cambiado. Tres
    senales, ninguna de ellas solo el color. */
-#nav-principal .nav-ap-boton[aria-pressed="true"] {
+#nav-principal .nav-ap-boton[aria-pressed="true"],
+#nav-principal .nav-ap-boton[data-nivel="grande"],
+#nav-principal .nav-ap-boton[data-nivel="extra"] {
   border-width: 3px;
   border-color: var(--primary);
   background: var(--primary);
@@ -142,7 +149,9 @@
      con unos 136px y el texto no se sale porque puede partir. */
   #nav-principal .nav-apariencia {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Tres botones: auto-fit los reparte solo (2 por fila y luego 1, o 3
+       si el aparato es mas ancho) sin dejar una columna vacia. */
+    grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
     margin-top: 10px;
     padding-top: 10px;
     border-top: var(--borde-ancho) solid var(--border);
@@ -162,9 +171,17 @@
   #nav-principal .nav-menu {
     display: flex !important;
     align-items: center;
-    gap: 4px 14px;
+    /* Mas aire entre los enlaces: antes se veian pegados. */
+    gap: 8px 22px;
     flex-wrap: wrap;
     justify-content: flex-end;
+  }
+  /* Los tres botones de apariencia se separan del bloque de enlaces con una
+     linea fina, para que se lean como un grupo aparte y no apretados contra
+     "Contacto". */
+  #nav-principal .nav-apariencia {
+    padding-left: 18px;
+    border-left: var(--borde-ancho) solid var(--border);
   }
   /* En escritorio manda el icono: con las dos palabras completas el menu
      se partia en dos filas. El nombre sigue ahi para el lector de
@@ -183,7 +200,9 @@
 @media (forced-colors: active) {
   #nav-principal .nav-lista a.active { box-shadow: inset 0 -3px 0 ButtonText; }
   #nav-principal .nav-ap-boton { border: 2px solid ButtonText; }
-  #nav-principal .nav-ap-boton[aria-pressed="true"] { border: 3px solid Highlight; }
+  #nav-principal .nav-ap-boton[aria-pressed="true"],
+  #nav-principal .nav-ap-boton[data-nivel="grande"],
+  #nav-principal .nav-ap-boton[data-nivel="extra"] { border: 3px solid Highlight; }
 }
 
 @media (prefers-reduced-motion: reduce) {

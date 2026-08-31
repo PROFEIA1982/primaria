@@ -33,6 +33,8 @@
           var t = leer("ps-tema");
           if (t === "claro" || t === "oscuro") d.setAttribute("data-tema", t);
           if (leer("ps-vision") === "alto") d.setAttribute("data-vision", "alto");
+          var tx = leer("ps-texto");
+          if (tx === "grande" || tx === "extra") d.setAttribute("data-texto", tx);
         } catch (e) {
           // Si algo falla, la pagina arranca en claro y no se rompe nada.
         }

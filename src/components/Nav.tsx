@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { ChevronDown, Eye, Menu, Moon, Sun, X } from "lucide-react";
-import { IMG_LOGO_EVI, MATERIAS } from "../config";
+import { ALargeSmall, ChevronDown, ExternalLink, Eye, GraduationCap, Menu, Moon, Sun, X } from "lucide-react";
+import { IMG_LOGO_EVI, MATERIAS, URL_IDONEA } from "../config";
 import { useApariencia } from "../lib/apariencia";
 import "./Nav.css";
 
@@ -99,7 +99,7 @@ export default function Nav() {
   const [abierto, setAbierto] = useState(false);
   // Los dos apoyos de apariencia viven aca y en ningun otro lado: dos
   // copias del estado terminan mostrando cosas distintas en cada una.
-  const { tema, vision, alternarTema, alternarVision } = useApariencia();
+  const { tema, vision, texto, alternarTema, alternarVision, ciclarTexto } = useApariencia();
   const { pathname } = useLocation();
 
   // Al cambiar de pagina se cierra la hamburguesa del celular.
@@ -118,6 +118,12 @@ export default function Nav() {
   const itemsSimulacros: ItemMenu[] = MATERIAS.map((m) => ({
     slug: m.slug, nombre: m.nombre, color: m.color, to: `/simulacros/${m.slug}`,
   }));
+
+  // El boton de tamano da tres pasos. La etiqueta le dice al lector de
+  // pantalla en cual esta y que pasa al tocarlo, porque aria-pressed solo
+  // sirve para si/no y aca hay tres estados.
+  const nombreTexto = texto === "normal" ? "normal" : texto === "grande" ? "grande" : "extra grande";
+  const etiquetaTexto = `Tamaño del texto: ${nombreTexto}. Tocá para cambiarlo`;
 
   return (
     <header id="nav-principal">
@@ -161,6 +167,24 @@ export default function Nav() {
               activo={enSimulacros}
               items={itemsSimulacros}
             />
+            {/* Enlace de salida a la web de idoneidad docente (adultos). Es
+                otro sitio, asi que abre en otra pestaña y lleva el icono de
+                enlace externo; no es NavLink porque no es una ruta de esta
+                app. */}
+            <li>
+              <a
+                href={URL_IDONEA}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-externo"
+                onClick={() => setAbierto(false)}
+              >
+                <GraduationCap size={18} strokeWidth={2.2} aria-hidden="true" />
+                Idoneidad Docente
+                <ExternalLink size={15} strokeWidth={2.2} aria-hidden="true" className="nav-externo-icono" />
+                <span className="ps-solo-lectores"> (se abre en otra pestaña)</span>
+              </a>
+            </li>
             <li>
               <NavLink to="/contacto" onClick={() => setAbierto(false)}>Contacto</NavLink>
             </li>
@@ -194,6 +218,16 @@ export default function Nav() {
             >
               <Eye size={20} strokeWidth={2.2} aria-hidden="true" />
               <span className="nav-ap-texto">Mejor visión</span>
+            </button>
+            <button
+              type="button"
+              className="nav-ap-boton"
+              data-nivel={texto}
+              aria-label={etiquetaTexto}
+              onClick={ciclarTexto}
+            >
+              <ALargeSmall size={22} strokeWidth={2.2} aria-hidden="true" />
+              <span className="nav-ap-texto">Tamaño del texto</span>
             </button>
           </div>
         </nav>

@@ -12,9 +12,16 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 export type Tema = "claro" | "oscuro";
 export type Vision = "normal" | "alto";
+// Tamano del texto de toda la web. Tres pasos, no un interruptor: un chiquito
+// que ve poco no necesita lo mismo que uno que ve bien pero lee mejor con
+// letra grande. "normal" no pone atributo; los otros dos escalan el font-size
+// del <html> en index.css, asi crece todo lo que esta en rem de una sola vez.
+export type Texto = "normal" | "grande" | "extra";
+const ORDEN_TEXTO: Texto[] = ["normal", "grande", "extra"];
 
 const LLAVE_TEMA = "ps-tema";
 const LLAVE_VISION = "ps-vision";
+const LLAVE_TEXTO = "ps-texto";
 
 function leer(llave: string): string | null {
   try {
@@ -53,17 +60,31 @@ function visionInicial(): Vision {
   return leer(LLAVE_VISION) === "alto" ? "alto" : "normal";
 }
 
+function esTexto(v: string | null): v is Texto {
+  return v === "normal" || v === "grande" || v === "extra";
+}
+
+function textoInicial(): Texto {
+  const puesto = document.documentElement.getAttribute("data-texto");
+  if (esTexto(puesto)) return puesto;
+  const guardado = leer(LLAVE_TEXTO);
+  return esTexto(guardado) ? guardado : "normal";
+}
+
 export type Apariencia = {
   tema: Tema;
   vision: Vision;
+  texto: Texto;
   alternarTema: () => void;
   alternarVision: () => void;
+  ciclarTexto: () => void;
 };
 
 // Un solo consumidor (el menu) para que no haya dos estados peleandose.
 export function useApariencia(): Apariencia {
   const [tema, setTema] = useState<Tema>(temaInicial);
   const [vision, setVision] = useState<Vision>(visionInicial);
+  const [texto, setTexto] = useState<Texto>(textoInicial);
 
   // En la primera pasada no se escribe nada si el visitante nunca eligio:
   // sin atributo manda el prefers-color-scheme del CSS y el sitio sigue al
@@ -88,6 +109,23 @@ export function useApariencia(): Apariencia {
     guardar(LLAVE_VISION, vision);
   }, [vision]);
 
+  // "normal" no deja atributo puesto: asi la web arranca en su tamano de
+  // siempre y solo se marca cuando el visitante pide letra mas grande. En la
+  // primera pasada, si no hay eleccion previa, no se escribe nada.
+  const primeraTexto = useRef(true);
+  useEffect(() => {
+    if (primeraTexto.current) {
+      primeraTexto.current = false;
+      if (!document.documentElement.hasAttribute("data-texto") && texto === "normal") return;
+    }
+    if (texto === "normal") {
+      document.documentElement.removeAttribute("data-texto");
+    } else {
+      document.documentElement.setAttribute("data-texto", texto);
+    }
+    guardar(LLAVE_TEXTO, texto);
+  }, [texto]);
+
   const alternarTema = useCallback(
     () => setTema((t) => (t === "oscuro" ? "claro" : "oscuro")),
     [],
@@ -96,6 +134,10 @@ export function useApariencia(): Apariencia {
     () => setVision((v) => (v === "alto" ? "normal" : "alto")),
     [],
   );
+  const ciclarTexto = useCallback(
+    () => setTexto((v) => ORDEN_TEXTO[(ORDEN_TEXTO.indexOf(v) + 1) % ORDEN_TEXTO.length]),
+    [],
+  );
 
-  return { tema, vision, alternarTema, alternarVision };
+  return { tema, vision, texto, alternarTema, alternarVision, ciclarTexto };
 }
