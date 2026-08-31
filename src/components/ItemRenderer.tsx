@@ -112,6 +112,17 @@ type Props = {
    * dos botones encendidos se pisarian la voz.
    */
   conVoz?: boolean;
+  /**
+   * "practica" es lo de siempre: apenas toca una opcion se le dice si
+   * estuvo bien y la pregunta se congela.
+   *
+   * "examen" es para los simulacros. Ahi no se corrige nada hasta el
+   * final, y por lo mismo la respuesta se puede cambiar todas las veces
+   * que quiera mientras no entregue: en una prueba de cuarenta preguntas
+   * uno vuelve sobre lo que dudo, y dejarle la respuesta clavada desde el
+   * primer toque castiga al que se arrepiente, no al que no sabe.
+   */
+  modo?: "practica" | "examen";
 };
 
 // Estructura base del item. La logica de la practica (reloj, avance,
@@ -126,8 +137,12 @@ export default function ItemRenderer({
   tamano = "normal",
   altoContraste = false,
   conVoz = false,
+  modo = "practica",
 }: Props) {
   const respondido = elegida !== null;
+  // En simulacro no se corrige a la vista ni se traba la opcion.
+  const corrige = modo === "practica";
+  const bloqueado = corrige && respondido;
   // El hook se llama siempre, encendido o no: los hooks no se condicionan.
   // Lo unico que decide conVoz es si el boton se pinta.
   const voz = useLectura(enunciado, opciones);
@@ -135,7 +150,7 @@ export default function ItemRenderer({
 
   // Que estado le toca a cada opcion una vez que ya respondio.
   function estadoDe(op: Opcion): "correcta" | "incorrecta" | undefined {
-    if (!respondido) return undefined;
+    if (!corrige || !respondido) return undefined;
     if (op.es_correcta) return "correcta";
     if (op.id === elegida) return "incorrecta";
     return undefined;
@@ -170,9 +185,10 @@ export default function ItemRenderer({
     e.preventDefault();
     setIndiceFoco(destino);
     botonesRef.current[destino]?.focus();
-    // En un radiogroup la flecha tambien escoge. Cuando ya contesto solo
-    // mueve el foco: asi puede releer las opciones sin cambiar su respuesta.
-    if (!respondido) alElegir(opciones[destino].id);
+    // En un radiogroup la flecha tambien escoge. En practica, cuando ya
+    // contesto solo mueve el foco, asi puede releer las opciones sin
+    // cambiar su respuesta; en simulacro escoge siempre.
+    if (!bloqueado) alElegir(opciones[destino].id);
   }
 
   return (
@@ -245,8 +261,8 @@ export default function ItemRenderer({
                 data-estado={estado}
                 // aria-disabled y no disabled: un boton deshabilitado pierde el
                 // foco del teclado y quien navega asi queda tirado al inicio.
-                aria-disabled={respondido}
-                onClick={() => { if (!respondido) alElegir(op.id); setIndiceFoco(i); }}
+                aria-disabled={bloqueado}
+                onClick={() => { if (!bloqueado) alElegir(op.id); setIndiceFoco(i); }}
                 onKeyDown={(e) => alTeclearEnGrupo(e, i)}
               >
                 <span className="item-letra" aria-hidden="true">{LETRAS[i] ?? i + 1}</span>
@@ -272,7 +288,7 @@ export default function ItemRenderer({
       )}
 
       {/* El resultado tiene que llegarle tambien a quien usa lector de pantalla. */}
-      {respondido && (
+      {corrige && respondido && (
         <p role="status" className="ps-solo-lectores">
           {acerto
             ? "Correcta."

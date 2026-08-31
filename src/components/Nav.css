@@ -190,3 +190,94 @@
   #nav-principal .nav-ap-boton { transition: none; }
   #nav-principal .nav-ap-boton:hover { transform: none; }
 }
+
+/* --- Simulacros: el desplegable del menu ---
+   Un boton que muestra u oculta una lista. En escritorio la lista flota
+   debajo del boton; en celular se queda en el flujo, indentada, para no
+   tapar el resto del menu con una capa encima.
+   Contrastes (tokens calculados en src/index.css):
+   - --foreground sobre --background ...... 17.40 claro · 15.62 oscuro · AAA
+   - --acento (materia) sobre --background . 5.46 el mas bajo (Español) · AA
+   - --border-fuerte sobre --background .... 3.50 claro · 6.09 oscuro · borde */
+#nav-principal .nav-desplegable {
+  position: relative;
+}
+#nav-principal .nav-sim-boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--toque-min);
+  padding: 8px 12px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+#nav-principal .nav-sim-boton:hover { background: var(--secondary); }
+/* Estar dentro de simulacros se marca con color Y con la barra de abajo,
+   igual que los demas enlaces del menu: nunca solo con el color. */
+#nav-principal .nav-sim-boton[data-activo="si"] {
+  color: var(--primary);
+  box-shadow: inset 0 -3px 0 var(--primary);
+}
+#nav-principal .nav-sim-flecha { transition: transform 0.18s ease; }
+#nav-principal .nav-sim-flecha[data-abierto="si"] { transform: rotate(180deg); }
+
+#nav-principal .nav-sim-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#nav-principal .nav-sim-lista a {
+  --acento: var(--primary);
+  display: flex;
+  align-items: center;
+  min-height: var(--toque-min);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 700;
+}
+#nav-principal .nav-sim-lista a:hover { background: var(--secondary); }
+#nav-principal .nav-sim-lista a.active {
+  color: var(--acento);
+  box-shadow: inset 3px 0 0 var(--acento);
+}
+
+@media (max-width: 859px) {
+  #nav-principal .nav-sim-boton { width: 100%; justify-content: space-between; }
+  #nav-principal .nav-sim-lista {
+    margin: 2px 0 6px 14px;
+    padding-left: 10px;
+    border-left: var(--borde-ancho-fuerte) solid var(--border);
+  }
+}
+
+@media (min-width: 860px) {
+  #nav-principal .nav-sim-lista {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    z-index: 40;
+    min-width: 232px;
+    padding: 6px;
+    border: var(--borde-ancho) solid var(--border-fuerte);
+    border-radius: var(--radius);
+    background: var(--background);
+    box-shadow: var(--sombra-alta);
+  }
+}
+
+@media (forced-colors: active) {
+  #nav-principal .nav-sim-boton[data-activo="si"] { box-shadow: inset 0 -3px 0 ButtonText; }
+  #nav-principal .nav-sim-lista { border: 2px solid ButtonText; }
+  #nav-principal .nav-sim-lista a.active { box-shadow: inset 3px 0 0 ButtonText; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #nav-principal .nav-sim-flecha { transition: none; }
+}

@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { Eye, Menu, Moon, Sun, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { ChevronDown, Eye, Menu, Moon, Sun, X } from "lucide-react";
 import { IMG_LOGO_EVI, MATERIAS } from "../config";
 import { useApariencia } from "../lib/apariencia";
 import "./Nav.css";
@@ -12,6 +12,44 @@ export default function Nav() {
   // Los dos apoyos de apariencia viven aca y en ningun otro lado: dos
   // copias del estado terminan mostrando cosas distintas en cada una.
   const { tema, vision, alternarTema, alternarVision } = useApariencia();
+
+  // --- El desplegable de simulacros ---
+  // Es un boton que muestra u oculta una lista, no un menu de escritorio
+  // con flechas: el patron sencillo es el que mejor se porta en celular y
+  // con lector de pantalla, y aca solo hay cinco enlaces adentro.
+  const [simAbierto, setSimAbierto] = useState(false);
+  const cajaSimRef = useRef<HTMLLIElement>(null);
+  const botonSimRef = useRef<HTMLButtonElement>(null);
+  const { pathname } = useLocation();
+
+  // Al cambiar de pagina se cierra todo. Sin esto, en escritorio la lista
+  // se quedaba abierta encima del contenido despues de navegar.
+  useEffect(() => {
+    setSimAbierto(false);
+    setAbierto(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!simAbierto) return;
+    const alTocarAfuera = (e: MouseEvent) => {
+      if (!cajaSimRef.current?.contains(e.target as Node)) setSimAbierto(false);
+    };
+    const alTeclear = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      setSimAbierto(false);
+      // El foco vuelve al boton que la abrio: si se queda suelto, quien
+      // navega con teclado tiene que empezar desde arriba otra vez.
+      botonSimRef.current?.focus();
+    };
+    document.addEventListener("mousedown", alTocarAfuera);
+    document.addEventListener("keydown", alTeclear);
+    return () => {
+      document.removeEventListener("mousedown", alTocarAfuera);
+      document.removeEventListener("keydown", alTeclear);
+    };
+  }, [simAbierto]);
+
+  const enSimulacros = pathname === "/simulacros" || pathname.startsWith("/simulacros/");
 
   return (
     <header id="nav-principal">
@@ -54,6 +92,43 @@ export default function Nav() {
                 </NavLink>
               </li>
             ))}
+            <li className="nav-desplegable" ref={cajaSimRef}>
+              <button
+                type="button"
+                className="nav-sim-boton"
+                ref={botonSimRef}
+                aria-expanded={simAbierto}
+                aria-controls="nav-simulacros"
+                data-activo={enSimulacros ? "si" : undefined}
+                onClick={() => setSimAbierto((v) => !v)}
+              >
+                Simulacros
+                <ChevronDown
+                  size={18}
+                  strokeWidth={2.4}
+                  aria-hidden="true"
+                  className="nav-sim-flecha"
+                  data-abierto={simAbierto ? "si" : "no"}
+                />
+              </button>
+              {/* Con hidden y no con display:none en CSS: asi el enlace
+                  cerrado tampoco recibe el tabulador ni lo lee el lector. */}
+              <ul id="nav-simulacros" className="nav-sim-lista" hidden={!simAbierto}>
+                <li>
+                  <NavLink to="/simulacros" end>Todos los simulacros</NavLink>
+                </li>
+                {MATERIAS.map((m) => (
+                  <li key={m.slug}>
+                    <NavLink
+                      to={`/simulacros/${m.slug}`}
+                      style={{ ["--acento" as string]: m.color }}
+                    >
+                      {m.nombre}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </li>
             <li>
               <NavLink to="/contacto" onClick={() => setAbierto(false)}>Contacto</NavLink>
             </li>
