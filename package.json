@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint": "oxlint"
+    "lint": "oxlint",
+    "verificar:items": "node --env-file-if-exists=.env.local scripts/verificar-items.mjs",
+    "probar:revisiones": "node scripts/revisiones.prueba.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.112.4",
@@ -27,7 +29,11 @@
     "@types/react-dom": "19.2.5",
     "@vitejs/plugin-react": "6.1.1",
     "oxlint": "1.80.0",
+    "rehype-stringify": "10.0.1",
+    "remark-parse": "11.0.0",
+    "remark-rehype": "11.1.2",
     "typescript": "6.0.3",
+    "unified": "11.0.5",
     "vite": "8.2.2"
   }
 }
