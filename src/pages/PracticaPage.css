@@ -594,6 +594,28 @@
     font-size: 0.88rem;
   }
   #practica-examen .apoyo-grupo { flex: 1 1 100%; }
+
+  /* La barra del reloj tambien se aprieta. Medido en un celular de 360x800:
+     entre el menu y esta barra se iban 178px de 800, mas de un quinto de la
+     pantalla, antes de que empiece la pregunta.
+     El reloj se llevaba 57 de esos el solo, porque se caia a una segunda
+     fila con un min-height de 48px heredado del area de toque. Pero el reloj
+     NO se toca: es un parrafo, no un control. Ese minimo no le aplica.
+     Los tres canales del reloj se quedan intactos: icono, palabra y color. */
+  #practica-examen .examen-barra-caja {
+    gap: 2px 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  #practica-examen .examen-materia  { font-size: 0.95rem; }
+  #practica-examen .examen-progreso { font-size: 0.95rem; }
+  #practica-examen .examen-reloj {
+    min-height: 0;
+    gap: 6px;
+    padding: 4px 12px;
+  }
+  #practica-examen .examen-tiempo   { font-size: 1rem; }
+  #practica-examen .examen-palabra  { font-size: 0.82rem; }
 }
 
 #practica-examen .examen-cuerpo:focus { outline: none; }
@@ -616,6 +638,80 @@
 @media (max-width: 479px) {
   #practica-examen .examen-pie { justify-content: stretch; }
   #practica-examen .examen-siguiente { width: 100%; }
+}
+
+/* --- Salir de la practica ---
+   Va apagado a proposito: es una salida, no una invitacion. El boton que
+   tiene que llamar la atencion en esta pantalla es "Siguiente".
+   Contrastes calculados (contraste_wcag.py):
+                                        claro       oscuro
+   - --muted  sobre --background ...... 5.60 AA     9.04 AAA
+   - --error  sobre --background ...... 6.54 AA     7.84 AAA  */
+#practica-examen .examen-salida {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+#practica-examen .examen-salir {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--toque-min);
+  padding: 10px 18px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--muted);              /* 5.60 claro · 9.04 oscuro */
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  #practica-examen .examen-salir:hover {
+    background: var(--secondary);
+    color: var(--foreground);
+  }
+}
+
+#practica-examen .examen-confirmar {
+  width: 100%;
+  max-width: 520px;
+  padding: 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: var(--radius);
+  background: var(--secondary);
+  text-align: center;
+}
+#practica-examen .examen-confirmar-texto {
+  margin: 0 0 14px;
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+/* auto-fit para que en celular se apilen y cada uno tome el ancho entero */
+#practica-examen .examen-confirmar-botones {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+#practica-examen .examen-seguir { min-height: var(--toque-min); }
+/* "Si, salir" queda en segundo plano y en rojo: es la accion que destruye. */
+#practica-examen .examen-salir-si {
+  min-height: var(--toque-min);
+  padding: 12px 18px;
+  border: var(--borde-ancho-fuerte) solid currentColor;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--error);              /* 6.54 claro · 7.84 oscuro */
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  #practica-examen .examen-salir-si:hover { background: var(--error-suave); }
+}
+@media (forced-colors: active) {
+  #practica-examen .examen-salir,
+  #practica-examen .examen-salir-si { border: 2px solid ButtonText; }
 }
 
 /* ============================================================
