@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { Square, Volume2 } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkMath from "remark-math";
@@ -85,6 +86,36 @@ export default function ItemRenderer({
   const iCorrecta = opciones.findIndex((o) => o.es_correcta);
   const acerto = respondido && opciones.find((o) => o.id === elegida)?.es_correcta;
 
+  // --- Andar por las opciones con las flechas ---
+  // Un radiogroup se recorre con flechas, no con tabulador: el grupo entero
+  // es una sola parada y adentro las flechas mueven. Asi el estudiante que
+  // usa teclado no tiene que tabular cuatro veces para llegar a la D.
+  const botonesRef = useRef<(HTMLButtonElement | null)[]>([]);
+  const elegidaIdx = opciones.findIndex((o) => o.id === elegida);
+  // Quien recibe el tabulador. Se deriva en vez de sincronizarse con un
+  // efecto: mientras el estudiante no mueva nada manda la elegida, y si
+  // todavia no contesta, la primera. El componente se rearma con cada
+  // pregunta (la key del padre), asi que esto arranca limpio cada vez.
+  const [focoManual, setFocoManual] = useState<number | null>(null);
+  const indiceFoco = focoManual ?? (elegidaIdx >= 0 ? elegidaIdx : 0);
+  const setIndiceFoco = setFocoManual;
+
+  function alTeclearEnGrupo(e: React.KeyboardEvent, i: number) {
+    const ultimo = opciones.length - 1;
+    let destino: number | null = null;
+    if (e.key === "ArrowDown" || e.key === "ArrowRight") destino = i === ultimo ? 0 : i + 1;
+    if (e.key === "ArrowUp" || e.key === "ArrowLeft") destino = i === 0 ? ultimo : i - 1;
+    if (e.key === "Home") destino = 0;
+    if (e.key === "End") destino = ultimo;
+    if (destino === null) return;
+    e.preventDefault();
+    setIndiceFoco(destino);
+    botonesRef.current[destino]?.focus();
+    // En un radiogroup la flecha tambien escoge. Cuando ya contesto solo
+    // mueve el foco: asi puede releer las opciones sin cambiar su respuesta.
+    if (!respondido) alElegir(opciones[destino].id);
+  }
+
   return (
     // El tamano y el contraste se quedan encerrados en el recuadro de la
     // pregunta: no se toca el html ni el body, que arrastrarian el menu,
@@ -128,19 +159,36 @@ export default function ItemRenderer({
         )}
       </div>
 
-      <ul className="item-opciones">
+      {/* Escoger una de cuatro es justo lo que describe un radiogroup.
+          Antes eran botones con aria-pressed y el lector de pantalla decia
+          "boton, no presionado", que suena a interruptor: el estudiante
+          ciego no se enteraba de cuantas opciones habia ni en cual iba.
+          Ahora dice "opcion 2 de 4, seleccionada".
+
+          El li va en presentation porque entre el radiogroup y sus radios no
+          puede haber nada mas; la lista se conserva solo por el dibujo. */}
+      <ul className="item-opciones" role="radiogroup" aria-label="Opciones de respuesta">
         {opciones.map((op, i) => {
           const estado = estadoDe(op);
+          const seleccionada = op.id === elegida;
           return (
-            <li key={op.id}>
+            <li key={op.id} role="presentation">
               <button
                 type="button"
                 className="item-opcion"
+                role="radio"
+                aria-checked={seleccionada}
+                // Tabulacion movil: el grupo entero es UNA parada de tabulador
+                // y adentro se anda con las flechas, que es el patron de los
+                // radios. Antes habia que tabular cuatro veces para pasarlas.
+                tabIndex={indiceFoco === i ? 0 : -1}
+                ref={(el) => { botonesRef.current[i] = el; }}
                 data-estado={estado}
                 // aria-disabled y no disabled: un boton deshabilitado pierde el
                 // foco del teclado y quien navega asi queda tirado al inicio.
                 aria-disabled={respondido}
-                onClick={() => { if (!respondido) alElegir(op.id); }}
+                onClick={() => { if (!respondido) alElegir(op.id); setIndiceFoco(i); }}
+                onKeyDown={(e) => alTeclearEnGrupo(e, i)}
               >
                 <span className="item-letra" aria-hidden="true">{LETRAS[i] ?? i + 1}</span>
                 <span className="item-texto">

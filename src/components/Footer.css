@@ -96,7 +96,13 @@
   font-size: 0.9rem;
   color: var(--pie-tenue);
 }
+/* Era el unico enlace de toda la aplicacion por debajo del minimo de toque:
+   medido, 110x20. Con el relleno vertical y el inline-block llega a 44 sin
+   empujar la linea, porque el alto de la franja lo manda su propio padding. */
 #footer-principal .footer-legal a {
+  display: inline-block;
+  padding: 12px 2px;
+  margin: -12px 0;
   color: var(--pie-tenue);
   text-decoration: underline;
   text-underline-offset: 3px;
