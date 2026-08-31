@@ -21,6 +21,71 @@
   color: var(--muted);
 }
 
+/* --- La tarjeta de instrucciones de la materia ---
+   Reemplaza el parrafo suelto que se veia como un hueco. Version minimalista:
+   tarjeta blanca con borde fino, sin fondo de color; el color de la materia
+   aparece solo en los iconos de los chips. Adentro: la linea de que se hace,
+   tres chips de datos y una linea de como funciona pensada para que el
+   chiquito no se equivoque (una sola respuesta; las opciones se barajan, hay
+   que leer lo que dicen, no la letra).
+
+   Contrastes (tokens de src/index.css):          claro   oscuro
+   - --titulo    sobre --background ......... 11.65   10.30  AAA (la linea de arriba)
+   - --muted     sobre --background .........  5.60    6.42  AA  (la linea de abajo)
+   - --foreground sobre --secondary ......... 16.03   14.21  AAA (los chips)
+   El acento de la materia va sobre --background en los iconos, donde ya esta
+   medido AA en index.css (Español 5.46, el mas bajo). */
+.sim-guia {
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  border: var(--borde-ancho) solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+}
+.sim-guia-hacer {
+  margin: 0 0 12px;
+  max-width: 60ch;
+  font-size: clamp(1.02rem, 0.97rem + 0.4vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--titulo);
+  text-wrap: balance;
+}
+.sim-guia-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+.sim-guia-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: 0.92rem;
+  line-height: 1.2;
+}
+.sim-guia-chip svg { flex: none; color: var(--acento, var(--primary)); }
+.sim-guia-chip strong { color: var(--titulo); }
+.sim-guia-como {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+.sim-guia-como strong { color: var(--titulo); }
+
+@media (forced-colors: active) {
+  .sim-guia-chip { border: 1px solid ButtonText; }
+}
+
 /* El h1 con la placa del icono al lado. En la pantalla de resultados esto
    viene de PracticaPage.css, pero la lista tiene su propio id y ahi no
    llega: sin esto el icono quedaba pegado a la primera letra. */
@@ -374,14 +439,45 @@
 .sim-revi[data-estado="mala"]  .sim-revi-sello { color: var(--error); }
 .sim-revi[data-estado="vacia"] .sim-revi-sello { color: var(--muted); }
 
-.sim-revi-enunciado { margin-bottom: 10px; }
+.sim-revi-enunciado {
+  margin-bottom: 10px;
+  /* Un enunciado que cite una direccion web larga no debe correr la pagina
+     en un celular de 320px: parte antes que desbordar. */
+  overflow-wrap: anywhere;
+}
 .sim-revi-enunciado img { max-width: 100%; height: auto; }
-.sim-revi-enunciado table { border-collapse: collapse; width: 100%; }
+/* La tabla se desliza dentro de su caja en vez de correr la pagina entera,
+   igual que en el repaso de la practica (.res-fallada-enunciado). Sin esto,
+   una tabla de varias columnas en el enunciado de una pregunta desbordaba a
+   lo ancho en el celular. */
+.sim-revi-enunciado table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
 .sim-revi-enunciado th,
 .sim-revi-enunciado td {
   padding: 6px 10px;
   border: var(--borde-ancho) solid var(--border);
   text-align: left;
+  white-space: nowrap;
+}
+.sim-revi-enunciado thead th { background: var(--secondary); }
+/* Una formula larga tampoco rompe la pagina: se desliza dentro de su caja. */
+.sim-revi-enunciado .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.sim-revi-enunciado blockquote {
+  margin: 0 0 1em;
+  padding: 10px 16px;
+  border-left: 4px solid var(--border-fuerte);
+  background: var(--secondary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
 .sim-revi-opciones {
@@ -510,6 +606,21 @@
   }
   .sim-revi-cima { margin-bottom: 4pt; }
   .sim-revi-enunciado { margin-bottom: 5pt; }
+  /* En pantalla la tabla del enunciado se desliza (display:block + nowrap);
+     en papel no hay barra que arrastrar, asi que vuelve a tabla normal y el
+     texto de las celdas se acomoda para que salga completa. */
+  .sim-revi-enunciado table {
+    display: table;
+    width: 100%;
+    overflow: visible;
+    font-size: 9pt;
+  }
+  .sim-revi-enunciado th,
+  .sim-revi-enunciado td {
+    white-space: normal;
+    border: 0.5pt solid #000;
+  }
+  .sim-revi-enunciado thead th { background: #fff; }
   .sim-revi-opciones { gap: 3pt; }
   .sim-revi-sello { color: #000 !important; }
   .sim-revi-tema { color: #333; }

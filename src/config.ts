@@ -84,3 +84,26 @@ export const MATERIAS = [
 ] as const;
 
 export type SlugMateria = (typeof MATERIAS)[number]["slug"];
+
+// Lo que dice la tarjeta de instrucciones de cada materia. La cantidad de
+// preguntas y el tiempo salen de los datos (no se escriben aca), pero el
+// "foco" (que tipo de prueba es) y el "hacer" (que hace el chiquito) cambian
+// segun la materia. Sin siglas ni promesas: solo lo que de verdad va a hacer.
+export const GUIA_MATERIA: Record<SlugMateria, { foco: string; hacer: string }> = {
+  espanol: {
+    foco: "Comprensión de lectura",
+    hacer: "Leés un texto y respondés preguntas sobre lo que dice.",
+  },
+  "estudios-sociales": {
+    foco: "Geografía, historia y cívica",
+    hacer: "Leés un texto corto sobre Costa Rica y respondés lo que entendiste.",
+  },
+  ciencias: {
+    foco: "Comprensión de ciencias",
+    hacer: "Leés una situación de ciencias y escogés la respuesta correcta.",
+  },
+  matematicas: {
+    foco: "Resolución de problemas",
+    hacer: "Resolvés un problema con números, figuras o datos.",
+  },
+};

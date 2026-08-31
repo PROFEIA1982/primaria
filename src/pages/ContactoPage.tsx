@@ -6,14 +6,14 @@ import {
   Handshake,
   Lightbulb,
   LifeBuoy,
-  Mail,
   MessageCircle,
   MessagesSquare,
   Phone,
+  PlayCircle,
   Send,
 } from "lucide-react";
 import { enviarContacto, registrarVisita, leerVisitas } from "../lib/api";
-import { CORREO, SOPORTE_VISIBLE, TELEFONO_VISIBLE, WA_SOPORTE, waLink } from "../config";
+import { SOPORTE_VISIBLE, TELEFONO_VISIBLE, URL_YOUTUBE_ECOS, WA_SOPORTE, waLink } from "../config";
 import BloqueDocentes from "../components/BloqueDocentes";
 import "./ContactoPage.css";
 
@@ -59,13 +59,13 @@ const CANALES = [
     externo: false,
   },
   {
-    id: "correo",
-    icono: Mail,
-    nombre: "Correo",
-    dato: CORREO,
-    accion: "Escribir correo",
-    href: `mailto:${CORREO}`,
-    externo: false,
+    id: "youtube",
+    icono: PlayCircle,
+    nombre: "YouTube",
+    dato: "@ECOSDelAprendizaje",
+    accion: "Ver el canal",
+    href: URL_YOUTUBE_ECOS,
+    externo: true,
   },
 ] as const;
 

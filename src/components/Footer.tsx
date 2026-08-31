@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Mail, MessageCircle } from "lucide-react";
+import { MessageCircle, PlayCircle } from "lucide-react";
 import {
-  CORREO,
   EMPRESA,
   IMG_LOGO_CONCURSO,
   TELEFONO_VISIBLE,
   URL_PROFESEGURO,
+  URL_YOUTUBE_ECOS,
   waLink,
 } from "../config";
 import "./Footer.css";
@@ -53,9 +53,10 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href={`mailto:${CORREO}`}>
-                <Mail size={18} strokeWidth={2} aria-hidden="true" />
-                {CORREO}
+              <a href={URL_YOUTUBE_ECOS} target="_blank" rel="noopener noreferrer">
+                <PlayCircle size={18} strokeWidth={2} aria-hidden="true" />
+                YouTube: ECOS del Aprendizaje
+                <span className="ps-solo-lectores"> (se abre en otra pestaña)</span>
               </a>
             </li>
           </ul>

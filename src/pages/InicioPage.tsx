@@ -243,6 +243,48 @@ export default function InicioPage() {
         </div>
       </section>
 
+      {/* 4b · Simulacros completos: una tarjeta por materia, directo al
+          cuadernillo. Es la pareja de "Las cuatro materias": alla se
+          practica por tema, aca se hace el examen completo. Estatico desde
+          MATERIAS, sin pedir datos: siempre son sesenta preguntas. */}
+      <section id="inicio-simulacros" className="ps-contenedor">
+        <h2>¿Listo para un simulacro completo?</h2>
+        <p className="inicio-lede">
+          Cuando ya practicaste por tema, date una vuelta por un simulacro: es el
+          examen completo, con las 60 preguntas de la materia y con reloj, como el
+          día de la prueba. Al final te sale la nota y el repaso de cada pregunta,
+          para que sepás en qué te equivocaste.
+        </p>
+        <ul className="simu-rejilla">
+          {MATERIAS.map((m) => {
+            const Icono = ICONOS[m.slug];
+            return (
+              <li key={m.slug}>
+                <Link
+                  to={`/simulacros/${m.slug}`}
+                  className="simu-tarjeta"
+                  data-tarjeta=""
+                  style={{
+                    ["--acento" as string]: m.color,
+                    ["--suave" as string]: m.suave,
+                  }}
+                >
+                  <span className="simu-icono" aria-hidden="true">
+                    <Icono size={30} strokeWidth={1.8} />
+                  </span>
+                  <span className="simu-nombre">{m.nombre}</span>
+                  <span className="simu-dato">
+                    <ClipboardList size={18} strokeWidth={2} aria-hidden="true" />
+                    60 preguntas · con reloj
+                  </span>
+                  <span className="simu-cta">Hacer el simulacro →</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
       {/* 5 · Para que sirve */}
       <section id="inicio-info" className="ps-contenedor">
         <h2>¿Para qué te sirve esta práctica?</h2>

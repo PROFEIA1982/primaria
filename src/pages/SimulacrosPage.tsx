@@ -3,6 +3,7 @@ import { BookOpen, Calculator, Globe, Microscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MATERIAS, type SlugMateria } from "../config";
 import ListaPanel from "../components/simulacro/ListaPanel";
+import InstruccionesSimulacro from "../components/simulacro/InstruccionesSimulacro";
 import ResultadosSimulacro from "../components/simulacro/ResultadosSimulacro";
 import SimulacroPanel from "../components/simulacro/SimulacroPanel";
 import { useSimulacros } from "../components/simulacro/useSimulacro";
@@ -101,13 +102,12 @@ export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
         </span>
         Simulacros de {datos.nombre}
       </h1>
-      <p className="sim-bajada">
-        Cuadernillos de <strong>60 preguntas</strong> con temas de todo el año. Las
-        preguntas son siempre las mismas y en el mismo orden; lo único que cambia
-        en cada intento es el orden de las cuatro opciones. Podés repetirlo las
-        veces que querás. Al final te sale la nota, el repaso de todas y lo podés
-        guardar en PDF.
-      </p>
+      <InstruccionesSimulacro
+        materia={datos.slug}
+        nombre={datos.nombre}
+        cantidad={simulacros.lista[0]?.cantidad ?? 60}
+        haySim2={simulacros.lista.some((s) => s.numero >= 2)}
+      />
       <ListaPanel nombreMateria={datos.nombre} simulacros={simulacros} />
     </section>
   );

@@ -5,41 +5,45 @@ import { IMG_LOGO_EVI, MATERIAS } from "../config";
 import { useApariencia } from "../lib/apariencia";
 import "./Nav.css";
 
-// Navegacion. En celular se abre con la hamburguesa; en pantalla grande
-// siempre esta a la vista, porque un nino no deberia tener que buscarla.
-export default function Nav() {
-  const [abierto, setAbierto] = useState(false);
-  // Los dos apoyos de apariencia viven aca y en ningun otro lado: dos
-  // copias del estado terminan mostrando cosas distintas en cada una.
-  const { tema, vision, alternarTema, alternarVision } = useApariencia();
+type ItemMenu = { slug: string; nombre: string; color: string; to: string };
 
-  // --- El desplegable de simulacros ---
-  // Es un boton que muestra u oculta una lista, no un menu de escritorio
-  // con flechas: el patron sencillo es el que mejor se porta en celular y
-  // con lector de pantalla, y aca solo hay cinco enlaces adentro.
-  const [simAbierto, setSimAbierto] = useState(false);
-  const cajaSimRef = useRef<HTMLLIElement>(null);
-  const botonSimRef = useRef<HTMLButtonElement>(null);
+// Un desplegable del menu: un boton que muestra u oculta una lista. Es el
+// patron sencillo, no un menu de escritorio con flechas, porque es el que
+// mejor se porta en celular y con lector de pantalla. Se usa dos veces:
+// "Practicar" (por tema) y "Simulacros" (examen completo).
+function MenuDesplegable({
+  etiqueta,
+  id,
+  activo,
+  items,
+}: {
+  etiqueta: string;
+  id: string;
+  activo: boolean;
+  items: ItemMenu[];
+}) {
+  const [abierto, setAbierto] = useState(false);
+  const cajaRef = useRef<HTMLLIElement>(null);
+  const botonRef = useRef<HTMLButtonElement>(null);
   const { pathname } = useLocation();
 
-  // Al cambiar de pagina se cierra todo. Sin esto, en escritorio la lista
-  // se quedaba abierta encima del contenido despues de navegar.
+  // Al cambiar de pagina se cierra. Sin esto, en escritorio la lista se
+  // quedaba abierta encima del contenido despues de navegar.
   useEffect(() => {
-    setSimAbierto(false);
     setAbierto(false);
   }, [pathname]);
 
   useEffect(() => {
-    if (!simAbierto) return;
+    if (!abierto) return;
     const alTocarAfuera = (e: MouseEvent) => {
-      if (!cajaSimRef.current?.contains(e.target as Node)) setSimAbierto(false);
+      if (!cajaRef.current?.contains(e.target as Node)) setAbierto(false);
     };
     const alTeclear = (e: KeyboardEvent) => {
       if (e.key !== "Escape") return;
-      setSimAbierto(false);
+      setAbierto(false);
       // El foco vuelve al boton que la abrio: si se queda suelto, quien
       // navega con teclado tiene que empezar desde arriba otra vez.
-      botonSimRef.current?.focus();
+      botonRef.current?.focus();
     };
     document.addEventListener("mousedown", alTocarAfuera);
     document.addEventListener("keydown", alTeclear);
@@ -47,9 +51,73 @@ export default function Nav() {
       document.removeEventListener("mousedown", alTocarAfuera);
       document.removeEventListener("keydown", alTeclear);
     };
-  }, [simAbierto]);
+  }, [abierto]);
 
+  return (
+    <li className="nav-desplegable" ref={cajaRef}>
+      <button
+        type="button"
+        className="nav-sim-boton"
+        ref={botonRef}
+        aria-expanded={abierto}
+        aria-controls={id}
+        data-activo={activo ? "si" : undefined}
+        onClick={() => setAbierto((v) => !v)}
+      >
+        {etiqueta}
+        <ChevronDown
+          size={18}
+          strokeWidth={2.4}
+          aria-hidden="true"
+          className="nav-sim-flecha"
+          data-abierto={abierto ? "si" : "no"}
+        />
+      </button>
+      {/* Con hidden y no con display:none en CSS: asi el enlace cerrado
+          tampoco recibe el tabulador ni lo lee el lector. */}
+      <ul id={id} className="nav-sim-lista" hidden={!abierto}>
+        {items.map((it) => (
+          <li key={it.slug}>
+            <NavLink to={it.to} style={{ ["--acento" as string]: it.color }}>
+              {it.nombre}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
+
+// Navegacion. En celular se abre con la hamburguesa; en pantalla grande
+// siempre esta a la vista, porque un nino no deberia tener que buscarla.
+//
+// Menu limpio: Inicio · Practicar ▾ · Simulacros ▾ · Contacto. Las cuatro
+// materias no van sueltas en la barra; viven dentro de los dos desplegables,
+// que hacen la misma pregunta al chiquito: practicar por tema o hacer el
+// simulacro completo.
+export default function Nav() {
+  const [abierto, setAbierto] = useState(false);
+  // Los dos apoyos de apariencia viven aca y en ningun otro lado: dos
+  // copias del estado terminan mostrando cosas distintas en cada una.
+  const { tema, vision, alternarTema, alternarVision } = useApariencia();
+  const { pathname } = useLocation();
+
+  // Al cambiar de pagina se cierra la hamburguesa del celular.
+  useEffect(() => {
+    setAbierto(false);
+  }, [pathname]);
+
+  // "Practicar" queda activo en las paginas de materia (/espanol, /ciencias…);
+  // "Simulacros" en /simulacros y sus hijos.
+  const enPracticar = MATERIAS.some((m) => pathname === `/${m.slug}`);
   const enSimulacros = pathname === "/simulacros" || pathname.startsWith("/simulacros/");
+
+  const itemsPracticar: ItemMenu[] = MATERIAS.map((m) => ({
+    slug: m.slug, nombre: m.nombre, color: m.color, to: `/${m.slug}`,
+  }));
+  const itemsSimulacros: ItemMenu[] = MATERIAS.map((m) => ({
+    slug: m.slug, nombre: m.nombre, color: m.color, to: `/simulacros/${m.slug}`,
+  }));
 
   return (
     <header id="nav-principal">
@@ -81,53 +149,18 @@ export default function Nav() {
             <li>
               <NavLink to="/" onClick={() => setAbierto(false)}>Inicio</NavLink>
             </li>
-            {MATERIAS.map((m) => (
-              <li key={m.slug}>
-                <NavLink
-                  to={`/${m.slug}`}
-                  style={{ ["--acento" as string]: m.color }}
-                  onClick={() => setAbierto(false)}
-                >
-                  {m.corto}
-                </NavLink>
-              </li>
-            ))}
-            <li className="nav-desplegable" ref={cajaSimRef}>
-              <button
-                type="button"
-                className="nav-sim-boton"
-                ref={botonSimRef}
-                aria-expanded={simAbierto}
-                aria-controls="nav-simulacros"
-                data-activo={enSimulacros ? "si" : undefined}
-                onClick={() => setSimAbierto((v) => !v)}
-              >
-                Simulacros
-                <ChevronDown
-                  size={18}
-                  strokeWidth={2.4}
-                  aria-hidden="true"
-                  className="nav-sim-flecha"
-                  data-abierto={simAbierto ? "si" : "no"}
-                />
-              </button>
-              {/* Con hidden y no con display:none en CSS: asi el enlace
-                  cerrado tampoco recibe el tabulador ni lo lee el lector. */}
-              {/* Solo las cuatro materias. No hay pagina de "todos los
-                  simulacros": el desplegable ES el indice. */}
-              <ul id="nav-simulacros" className="nav-sim-lista" hidden={!simAbierto}>
-                {MATERIAS.map((m) => (
-                  <li key={m.slug}>
-                    <NavLink
-                      to={`/simulacros/${m.slug}`}
-                      style={{ ["--acento" as string]: m.color }}
-                    >
-                      {m.nombre}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </li>
+            <MenuDesplegable
+              etiqueta="Practicar"
+              id="nav-practicar"
+              activo={enPracticar}
+              items={itemsPracticar}
+            />
+            <MenuDesplegable
+              etiqueta="Simulacros"
+              id="nav-simulacros"
+              activo={enSimulacros}
+              items={itemsSimulacros}
+            />
             <li>
               <NavLink to="/contacto" onClick={() => setAbierto(false)}>Contacto</NavLink>
             </li>
