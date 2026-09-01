@@ -26,7 +26,10 @@ import {
   Accessibility, ALargeSmall, ChevronDown, Contrast, Eye,
   Hourglass, Moon, Palette, Sun, Volume2, VolumeX,
 } from "lucide-react";
-import { useApariencia } from "../lib/apariencia";
+import {
+  alternarTema, alternarTiempoExtra, alternarVision, alternarVoz, ciclarTexto,
+  hayAjustesPuestos, ponerColor, useAjustes,
+} from "../lib/apariencia";
 import "./Accesibilidad.css";
 
 // Abrir y cerrar un desplegable. Vive aca porque lo usan los dos
@@ -100,22 +103,14 @@ function FilaAjuste({
 /** Hay algo puesto que no es lo de fabrica. Sirve para marcar el boton
  *  con un punto y que se note sin tener que abrir el panel. */
 export function useHayAjustes(): boolean {
-  const { tema, vision, color, texto, voz, tiempoExtra } = useApariencia();
-  return (
-    tema === "oscuro" || vision === "alto" || color !== "normal" ||
-    texto !== "normal" || !voz || tiempoExtra
-  );
+  return hayAjustesPuestos(useAjustes());
 }
 
 // El contenido del panel. Los seis ajustes con su nombre escrito: tres
 // botones sueltos con puro icono no le decian a nadie que la lunita era
 // el modo oscuro.
 export function PanelAccesibilidad({ id, abierto }: { id: string; abierto: boolean }) {
-  const {
-    tema, vision, color, texto, voz, tiempoExtra,
-    alternarTema, alternarVision, ponerColor, ciclarTexto, alternarVoz,
-    alternarTiempoExtra,
-  } = useApariencia();
+  const { tema, vision, color, texto, voz, tiempoExtra } = useAjustes();
 
   const nombreTexto =
     texto === "normal" ? "Normal" : texto === "grande" ? "Grande" : "Muy grande";
@@ -227,5 +222,108 @@ export default function AccesibilidadFlotante() {
         />
       </button>
     </div>
+  );
+}
+
+// El envase de CELULAR y TABLET: una barra fija abajo con las tres ayudas
+// que mas se usan, y un cuarto boton que abre el panel completo.
+//
+// Por que no sigue dentro de la hamburguesa: ahi el panel se salia de la
+// pantalla y el ultimo ajuste quedaba cortado, sin manera de alcanzarlo.
+// Y por que abajo: es donde llega el pulgar. En un celular de 6 pulgadas
+// la parte de arriba de la pantalla es la zona mas incomoda de tocar, y
+// justo ahi estaba el unico camino a los ajustes.
+//
+// Los cuatro botones se reparten el ancho en partes iguales, con 56 px de
+// alto: bastante mas que los 44 x 44 que pide el nivel AAA de WCAG 2.5.5.
+export function AccesibilidadMovil() {
+  const [abierto, setAbierto] = useState(false);
+  const { texto, voz, tiempoExtra } = useAjustes();
+  const { pathname } = useLocation();
+
+  // Al cambiar de pagina se cierra la hoja.
+  useEffect(() => {
+    setAbierto(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!abierto) return;
+    const alTeclear = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setAbierto(false);
+    };
+    document.addEventListener("keydown", alTeclear);
+    return () => document.removeEventListener("keydown", alTeclear);
+  }, [abierto]);
+
+  const nombreTexto =
+    texto === "normal" ? "Normal" : texto === "grande" ? "Grande" : "Muy grande";
+
+  return (
+    <>
+      {abierto && (
+        <button
+          type="button"
+          className="ax-velo"
+          aria-label="Cerrar los ajustes"
+          onClick={() => setAbierto(false)}
+        />
+      )}
+
+      <div className="ax-hoja" hidden={!abierto}>
+        <PanelAccesibilidad id="ax-panel-movil" abierto={abierto} />
+      </div>
+
+      <nav className="ax-barra" aria-label="Ajustes de accesibilidad">
+        <button
+          type="button"
+          className="ax-barra-boton"
+          aria-pressed={voz}
+          onClick={alternarVoz}
+        >
+          {voz
+            ? <Volume2 size={22} strokeWidth={2.2} aria-hidden="true" />
+            : <VolumeX size={22} strokeWidth={2.2} aria-hidden="true" />}
+          <span>Sonido</span>
+          <span className="ps-solo-lectores">
+            : {voz ? "activado" : "desactivado"}
+          </span>
+        </button>
+
+        <button
+          type="button"
+          className="ax-barra-boton"
+          data-nivel={texto}
+          onClick={ciclarTexto}
+        >
+          <ALargeSmall size={24} strokeWidth={2.2} aria-hidden="true" />
+          <span>Texto</span>
+          <span className="ps-solo-lectores">: {nombreTexto}. Tocá para agrandarlo</span>
+        </button>
+
+        <button
+          type="button"
+          className="ax-barra-boton"
+          aria-pressed={tiempoExtra}
+          onClick={alternarTiempoExtra}
+        >
+          <Hourglass size={22} strokeWidth={2.2} aria-hidden="true" />
+          <span>Tiempo</span>
+          <span className="ps-solo-lectores">
+            : más tiempo en el simulacro, {tiempoExtra ? "activado" : "desactivado"}
+          </span>
+        </button>
+
+        <button
+          type="button"
+          className="ax-barra-boton"
+          aria-expanded={abierto}
+          aria-controls="ax-panel-movil"
+          onClick={() => setAbierto((v) => !v)}
+        >
+          <Accessibility size={22} strokeWidth={2.2} aria-hidden="true" />
+          <span>{abierto ? "Cerrar" : "Más"}</span>
+        </button>
+      </nav>
+    </>
   );
 }

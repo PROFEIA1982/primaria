@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 
 // ============================================================
 // Los cinco ajustes de accesibilidad. Todos viven en un atributo del
@@ -100,12 +100,35 @@ function textoInicial(): Texto {
 }
 
 // ============================================================
-// La lectura en voz alta la enciende el menu, pero el boton "Escuchar"
-// lo pintan las pantallas de practica y de simulacro, que estan lejos
-// del menu en el arbol. En vez de arrastrar un contexto por toda la
-// app, el valor vive en este modulo y los dos lados se suscriben con
-// useSyncExternalStore: una sola fuente de verdad y sin desincronizar.
+// UN SOLO ALMACEN PARA LOS SEIS AJUSTES.
+//
+// Antes cada ajuste vivia en un useState dentro de useApariencia(), y eso
+// se rompio en cuanto el panel dejo de estar en un solo lugar: hoy
+// useApariencia() se llama CUATRO veces a la vez -- el panel de la
+// hamburguesa, el panel flotante, y useHayAjustes() dentro de cada uno --
+// asi que habia cuatro copias del mismo ajuste sin hablarse. Se medio:
+//
+//   · el punto del boton flotante no se encendia al poner modo oscuro,
+//     porque esa copia nunca corria su propio setter;
+//   · tocar "Escala de grises" desde el panel desactualizado apagaba el
+//     daltonismo que si estaba puesto;
+//   · al salir de un examen el menu se vuelve a montar, resembraba los
+//     valores desde localStorage y, si el navegador lo tiene bloqueado,
+//     la adecuacion de tiempo se apagaba sola.
+//
+// Ahora el valor vive en el modulo, los componentes se suscriben con
+// useSyncExternalStore y los setters son funciones sueltas que escriben
+// el atributo, guardan y avisan. Un solo lugar donde equivocarse.
 // ============================================================
+
+type Estado = {
+  tema: Tema;
+  vision: Vision;
+  color: Color;
+  texto: Texto;
+  voz: boolean;
+  tiempoExtra: boolean;
+};
 
 function vozInicial(): boolean {
   if (typeof document === "undefined") return true;
@@ -113,7 +136,22 @@ function vozInicial(): boolean {
   return leer(LLAVE_VOZ) !== "no";
 }
 
-let vozActiva = true;
+function tiempoExtraInicial(): boolean {
+  if (typeof document === "undefined") return false;
+  return leer(LLAVE_TIEMPO) === "si";
+}
+
+// Se siembra una sola vez, al cargar el modulo, con lo que ya dejo puesto
+// el script de arranque de index.html.
+let estado: Estado = {
+  tema: temaInicial(),
+  vision: visionInicial(),
+  color: colorInicial(),
+  texto: textoInicial(),
+  voz: vozInicial(),
+  tiempoExtra: tiempoExtraInicial(),
+};
+
 const oyentes = new Set<() => void>();
 
 function suscribir(fn: () => void): () => void {
@@ -123,180 +161,100 @@ function suscribir(fn: () => void): () => void {
   };
 }
 
-function leerVoz(): boolean {
-  return vozActiva;
+function leerEstado(): Estado {
+  return estado;
 }
 
-function ponerVoz(valor: boolean): void {
-  if (vozActiva === valor) return;
-  vozActiva = valor;
-  marcar("data-voz", valor ? "si" : "no", "si");
-  guardar(LLAVE_VOZ, valor ? "si" : "no");
+// La instantanea del servidor tiene que ser un objeto ESTABLE, no uno
+// nuevo en cada llamada: si cambia de identidad, React entra en un bucle
+// de renders. Por eso es una constante y no un objeto literal inline.
+const ESTADO_SERVIDOR: Estado = {
+  tema: "claro", vision: "normal", color: "normal",
+  texto: "normal", voz: true, tiempoExtra: false,
+};
+
+function cambiar(parche: Partial<Estado>): void {
+  estado = { ...estado, ...parche };
   oyentes.forEach((fn) => fn());
+}
+
+// --- Los setters. Cada uno escribe el atributo, guarda y avisa. ---
+
+export function alternarTema(): void {
+  const tema: Tema = estado.tema === "oscuro" ? "claro" : "oscuro";
+  document.documentElement.setAttribute("data-tema", tema);
+  guardar(LLAVE_TEMA, tema);
+  cambiar({ tema });
+}
+
+export function alternarVision(): void {
+  const vision: Vision = estado.vision === "alto" ? "normal" : "alto";
+  marcar("data-vision", vision, "normal");
+  guardar(LLAVE_VISION, vision);
+  cambiar({ vision });
+}
+
+/** Volver a tocar el modo que ya esta puesto lo apaga: el mismo boton
+ *  sirve para poner y para quitar, sin un "normal" aparte. */
+export function ponerColor(c: Color): void {
+  const color: Color = estado.color === c ? "normal" : c;
+  marcar("data-color", color, "normal");
+  guardar(LLAVE_COLOR, color);
+  cambiar({ color });
+}
+
+export function ciclarTexto(): void {
+  const i = ORDEN_TEXTO.indexOf(estado.texto);
+  const texto = ORDEN_TEXTO[(i + 1) % ORDEN_TEXTO.length];
+  marcar("data-texto", texto, "normal");
+  guardar(LLAVE_TEXTO, texto);
+  cambiar({ texto });
+}
+
+export function alternarVoz(): void {
+  const voz = !estado.voz;
+  marcar("data-voz", voz ? "si" : "no", "si");
+  guardar(LLAVE_VOZ, voz ? "si" : "no");
+  cambiar({ voz });
+}
+
+export function alternarTiempoExtra(): void {
+  const tiempoExtra = !estado.tiempoExtra;
+  guardar(LLAVE_TIEMPO, tiempoExtra ? "si" : "no");
+  cambiar({ tiempoExtra });
+}
+
+// --- Los lectores ---
+
+/** Todo el estado. Lo usan los paneles, que pintan las seis filas. */
+export function useAjustes(): Estado {
+  return useSyncExternalStore(suscribir, leerEstado, () => ESTADO_SERVIDOR);
 }
 
 /** Para las pantallas que pintan el boton "Escuchar". */
 export function useVozActiva(): boolean {
-  return useSyncExternalStore(suscribir, leerVoz, () => true);
-}
-
-// ============================================================
-// Tiempo extra en el simulacro.
-//
-// El simulacro corre a tres minutos por item. Este interruptor lo sube a
-// cuatro, que es un tercio mas, para estudiantes con apoyo educativo no
-// significativo.
-//
-// Vive en accesibilidad y no en la pantalla del simulacro a proposito.
-// Antes era un par de botones de "3 horas / 4 horas" que TODOS veian
-// antes de empezar: una decision de mas para la gran mayoria, que no la
-// necesita, y encima obligaba al estudiante con adecuacion a declararla
-// cada vez, delante de quien estuviera al lado. Aca se pone una sola vez,
-// queda guardado, y no vuelve a preguntar.
-// ============================================================
-
-function tiempoExtraInicial(): boolean {
-  if (typeof document === "undefined") return false;
-  return leer(LLAVE_TIEMPO) === "si";
-}
-
-let tiempoExtra = false;
-const oyentesTiempo = new Set<() => void>();
-
-function suscribirTiempo(fn: () => void): () => void {
-  oyentesTiempo.add(fn);
-  return () => {
-    oyentesTiempo.delete(fn);
-  };
-}
-
-function leerTiempo(): boolean {
-  return tiempoExtra;
-}
-
-function ponerTiempoExtra(valor: boolean): void {
-  if (tiempoExtra === valor) return;
-  tiempoExtra = valor;
-  guardar(LLAVE_TIEMPO, valor ? "si" : "no");
-  oyentesTiempo.forEach((fn) => fn());
+  return useAjustes().voz;
 }
 
 /** Lo consulta el simulacro para saber cuanto dura el cuadernillo. */
 export function useTiempoExtra(): boolean {
-  return useSyncExternalStore(suscribirTiempo, leerTiempo, () => false);
+  return useAjustes().tiempoExtra;
 }
 
-export type Apariencia = {
-  tema: Tema;
-  vision: Vision;
-  color: Color;
-  texto: Texto;
-  voz: boolean;
-  tiempoExtra: boolean;
-  alternarTema: () => void;
-  alternarVision: () => void;
-  ponerColor: (c: Color) => void;
-  ciclarTexto: () => void;
-  alternarVoz: () => void;
-  alternarTiempoExtra: () => void;
-};
+/** Para los botones discretos que van dentro del recuadro de la pregunta. */
+export function useVisionAlta(): boolean {
+  return useAjustes().vision === "alto";
+}
 
-// Un solo consumidor (el menu) para que no haya dos estados peleandose.
-export function useApariencia(): Apariencia {
-  const [tema, setTema] = useState<Tema>(temaInicial);
-  const [vision, setVision] = useState<Vision>(visionInicial);
-  const [color, setColor] = useState<Color>(colorInicial);
-  const [texto, setTexto] = useState<Texto>(textoInicial);
-  const [voz, setVoz] = useState<boolean>(vozInicial);
-  const [extra, setExtra] = useState<boolean>(tiempoExtraInicial);
+export function useTextoActual(): Texto {
+  return useAjustes().texto;
+}
 
-  // En la primera pasada no se escribe nada si el visitante nunca eligio:
-  // sin atributo manda el prefers-color-scheme del CSS y el sitio sigue al
-  // sistema en vivo. Guardar ahi seria decidir por el.
-  const primeraTema = useRef(true);
-  useEffect(() => {
-    if (primeraTema.current) {
-      primeraTema.current = false;
-      if (!document.documentElement.hasAttribute("data-tema")) return;
-    }
-    document.documentElement.setAttribute("data-tema", tema);
-    guardar(LLAVE_TEMA, tema);
-  }, [tema]);
-
-  const primeraVision = useRef(true);
-  useEffect(() => {
-    if (primeraVision.current) {
-      primeraVision.current = false;
-      if (!document.documentElement.hasAttribute("data-vision")) return;
-    }
-    document.documentElement.setAttribute("data-vision", vision);
-    guardar(LLAVE_VISION, vision);
-  }, [vision]);
-
-  const primeraColor = useRef(true);
-  useEffect(() => {
-    if (primeraColor.current) {
-      primeraColor.current = false;
-      if (!document.documentElement.hasAttribute("data-color") && color === "normal") return;
-    }
-    marcar("data-color", color, "normal");
-    guardar(LLAVE_COLOR, color);
-  }, [color]);
-
-  const primeraTexto = useRef(true);
-  useEffect(() => {
-    if (primeraTexto.current) {
-      primeraTexto.current = false;
-      if (!document.documentElement.hasAttribute("data-texto") && texto === "normal") return;
-    }
-    marcar("data-texto", texto, "normal");
-    guardar(LLAVE_TEXTO, texto);
-  }, [texto]);
-
-  // La voz arranca sincronizando el modulo con lo que se guardo, sin
-  // avisarle a nadie todavia (nadie escucha aun en el primer render).
-  const primeraVoz = useRef(true);
-  useEffect(() => {
-    if (primeraVoz.current) {
-      primeraVoz.current = false;
-      vozActiva = voz;
-      marcar("data-voz", voz ? "si" : "no", "si");
-      return;
-    }
-    ponerVoz(voz);
-  }, [voz]);
-
-  const alternarTema = useCallback(
-    () => setTema((t) => (t === "oscuro" ? "claro" : "oscuro")),
-    [],
+/** Hay algo puesto que no es lo de fabrica. Sirve para marcar el boton
+ *  con un punto y que se note sin tener que abrir el panel. */
+export function hayAjustesPuestos(e: Estado): boolean {
+  return (
+    e.tema === "oscuro" || e.vision === "alto" || e.color !== "normal" ||
+    e.texto !== "normal" || !e.voz || e.tiempoExtra
   );
-  const alternarVision = useCallback(
-    () => setVision((v) => (v === "alto" ? "normal" : "alto")),
-    [],
-  );
-  // Volver a tocar el modo que ya esta puesto lo apaga: asi el mismo
-  // boton sirve para poner y para quitar, sin un "normal" aparte.
-  const ponerColor = useCallback(
-    (c: Color) => setColor((actual) => (actual === c ? "normal" : c)),
-    [],
-  );
-  const ciclarTexto = useCallback(
-    () => setTexto((v) => ORDEN_TEXTO[(ORDEN_TEXTO.indexOf(v) + 1) % ORDEN_TEXTO.length]),
-    [],
-  );
-  const alternarTiempoExtra = useCallback(() => setExtra((v) => !v), []);
-
-  // El almacen de modulo se mantiene al dia con el estado del hook, para
-  // que el simulacro (que esta lejos en el arbol) lea siempre lo mismo.
-  useEffect(() => {
-    ponerTiempoExtra(extra);
-  }, [extra]);
-
-  const alternarVoz = useCallback(() => setVoz((v) => !v), []);
-
-  return {
-    tema, vision, color, texto, voz, tiempoExtra: extra,
-    alternarTema, alternarVision, ponerColor, ciclarTexto, alternarVoz,
-    alternarTiempoExtra,
-  };
 }

@@ -2,7 +2,21 @@ import { useEffect, useRef } from "react";
 import { Award, ClipboardList, Clock, PlayCircle, RotateCcw } from "lucide-react";
 import { ErrorCarga, Vacio } from "../Estados";
 import EsqueletoPregunta from "../practica/EsqueletoPregunta";
+import {
+  SEGUNDOS_ITEM_SIMULACRO, SEGUNDOS_ITEM_SIMULACRO_EXTRA,
+} from "../../config";
+import { useTiempoExtra } from "../../lib/apariencia";
 import type { Simulacros } from "./useSimulacro";
+
+// "3 horas", "3 h 20 min", "45 minutos". Sin decimales raros.
+function duracion(segundos: number): string {
+  const min = Math.round(segundos / 60);
+  if (min < 60) return `${min} minutos`;
+  const h = Math.floor(min / 60);
+  const resto = min % 60;
+  const parteH = h === 1 ? "1 hora" : `${h} horas`;
+  return resto === 0 ? parteH : `${parteH} y ${resto} min`;
+}
 
 type Props = {
   nombreMateria: string;
@@ -15,6 +29,11 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
     estadoLista, recargar, lista, marcas, abriendo, errorAbrir, empezar,
     enCurso, retomar, descartarEnCurso,
   } = simulacros;
+  // La duracion sale de la cuenta, no escrita a mano: son tres minutos por
+  // pregunta, o cuatro con la adecuacion puesta. Decia "3 horas" fijo, que
+  // solo calzaba con cuadernillos de 60 y con la adecuacion apagada.
+  const tiempoExtra = useTiempoExtra();
+  const segPorItem = tiempoExtra ? SEGUNDOS_ITEM_SIMULACRO_EXTRA : SEGUNDOS_ITEM_SIMULACRO;
 
   // Si falla la apertura, el foco vuelve al boton que se toco. Sin esto
   // quedaba suelto en el cuerpo del documento y quien anda con teclado
@@ -96,7 +115,7 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
                   </span>
                   <span className="sim-dato">
                     <Clock size={20} strokeWidth={2} aria-hidden="true" />
-                    3 horas
+                    {duracion(s.cantidad * segPorItem)}
                   </span>
                 </p>
 

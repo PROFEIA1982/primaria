@@ -54,6 +54,7 @@ export type Practica = {
   respuestas: Respuestas;
   responder: (opcionId: string) => void;
   siguiente: () => void;
+  anterior: () => void;
 
   // --- lo que saco ---
   calificacion: Calificacion;
@@ -211,6 +212,15 @@ export function usePractica(slug: SlugMateria): Practica {
     else setFase("resultados");
   }, [indice, items.length]);
 
+  // Devolverse. La respuesta anterior sigue congelada -- en la practica
+  // manda la primera que toco -- asi que volver no sirve para cambiarla:
+  // sirve para releer la pregunta y la explicacion, que es donde esta el
+  // aprendizaje. Sin esto, el que se pasaba de pregunta sin terminar de
+  // leer la retroalimentacion la perdia y no habia como recuperarla.
+  const anterior = useCallback(() => {
+    setIndice((i) => (i > 0 ? i - 1 : i));
+  }, []);
+
   // --- resultados ---
   const calificacion = useMemo(() => calificar(items, respuestas), [items, respuestas]);
 
@@ -256,6 +266,7 @@ export function usePractica(slug: SlugMateria): Practica {
     respuestas,
     responder,
     siguiente,
+    anterior,
     calificacion,
     volverAPracticar,
   };

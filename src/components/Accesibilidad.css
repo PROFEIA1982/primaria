@@ -201,3 +201,108 @@
 @media print {
   .ax-flota { display: none !important; }
 }
+
+/* ============================================================
+   La barra de abajo, para celular y tablet.
+
+   Reemplaza al desplegable que vivia dentro de la hamburguesa, donde el
+   panel se salia de la pantalla y el ultimo ajuste quedaba cortado. Va
+   abajo porque es donde llega el pulgar: en un celular de seis pulgadas
+   la parte de arriba es la zona mas incomoda de alcanzar, y justo ahi
+   estaba el unico camino a los ajustes.
+
+   Contrastes (tokens de src/index.css):
+   - --foreground sobre --background ...... 17.40 claro · 14.05 oscuro · AAA
+   - --muted sobre --background ...........  5.60 claro ·  8.30 oscuro · AA
+   - --primary-foreground sobre --primary .  8.59 claro ·  9.12 oscuro · AAA
+   ============================================================ */
+.ax-barra { display: none; }
+.ax-hoja { display: none; }
+.ax-velo { display: none; }
+
+@media (max-width: 899px) {
+  .ax-barra {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+    background: var(--background);
+    border-top: var(--borde-ancho-fuerte) solid var(--border);
+    /* El area segura de los iPhone con barra de gestos. */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .ax-barra-boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    /* 56 px de alto: bastante mas que los 44 del nivel AAA de WCAG 2.5.5,
+       y el ancho es un cuarto de la pantalla, asi que fallar es dificil. */
+    min-height: 56px;
+    padding: 6px 4px;
+    border: 0;
+    background: none;
+    color: var(--muted);
+    font: inherit;
+    font-size: 0.74rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .ax-barra-boton:hover { background: var(--secondary); }
+  /* Puesto: relleno + el icono cambiado + lo que dice el lector de
+     pantalla. Nunca solo el color. */
+  .ax-barra-boton[aria-pressed="true"],
+  .ax-barra-boton[data-nivel="grande"],
+  .ax-barra-boton[data-nivel="extra"] {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  .ax-barra-boton:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: -3px;
+  }
+
+  /* La hoja con el panel completo sube desde la barra. */
+  .ax-hoja {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+    z-index: 70;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    background: var(--background);
+    border-top: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+    box-shadow: var(--sombra-alta);
+  }
+  .ax-hoja[hidden] { display: none; }
+  .ax-velo {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 65;
+    border: 0;
+    background: rgba(10, 16, 32, 0.45);
+  }
+
+  /* Que la barra no le tape el final a ninguna pagina. */
+  body { padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
+}
+
+@media (forced-colors: active) {
+  .ax-barra { border-top: 2px solid ButtonText; }
+  .ax-barra-boton[aria-pressed="true"],
+  .ax-barra-boton[data-nivel="grande"],
+  .ax-barra-boton[data-nivel="extra"] { outline: 3px solid Highlight; outline-offset: -3px; }
+  .ax-hoja { border-top: 2px solid ButtonText; }
+}
+
+/* Imprimir una prueba no lleva la barra encima. */
+@media print {
+  .ax-barra, .ax-hoja, .ax-velo { display: none !important; }
+}

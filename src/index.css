@@ -54,6 +54,18 @@
   --background: #ffffff;
   --foreground: #1a1a1a;          /* 17.40 sobre el fondo · AAA */
   --secondary: #f2f6fa;           /* superficie de tarjetas */
+  /* Fondo de los BLOQUES LARGOS DE LECTURA (el texto base de un item de
+     comprension), distinto del gris de las tarjetas.
+     No es decoracion: Rello y Bigham (ASSETS 2017) midieron diez fondos
+     con 341 lectores -- 89 con dislexia y 252 sin ella -- y los calidos
+     (durazno el mas rapido, luego naranja y amarillo) dieron tiempos de
+     lectura menores; el gris AZULADO salio el peor de los diez. El patron
+     fue igual en los lectores sin dislexia, o sea que es legibilidad
+     general y no una terapia. En escala de grises y en alto contraste
+     manda el modo, no el hallazgo.
+     claro: durazno muy claro · tinta #1a1a1a encima = 15.89 · AAA */
+  --lectura: #fdf3e9;
+  --lectura-borde: #e8d9c8;
   --muted: #5c6b66;               /*  5.60 sobre el fondo · AA  */
   --titulo: #1b3a5b;              /* 11.65 sobre el fondo · AAA */
   --enlace: #0b5fa5;              /*  6.57 sobre el fondo · AA  */
@@ -150,6 +162,13 @@
    ============================================================ */
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"]) {
+    /* cafe calido · crema #f0ebe0 encima = 13.07 · AAA
+       Faltaba: sin esto el bloque heredaba el durazno CLARO del
+       primer bloque y la cita quedaba crema sobre durazno = 1.09.
+       O sea el texto base de comprension, invisible, para todo el
+       que tenga el celular en modo noche sin haber tocado nada. */
+    --lectura: #2a2318;
+    --lectura-borde: #8a7250;
     color-scheme: dark;
     /* Azul medianoche, no gris de oficina: la noche del espacio, con
        personalidad y calor. El texto es crema, nunca blanco puro, para
@@ -212,6 +231,9 @@
   --background: #161d33;
   --foreground: #f0ebe0;          /* crema · 14.05 · AAA */
   --secondary: #212b4d;
+  /* oscuro: cafe calido · crema #f0ebe0 encima = 13.07 · AAA */
+  --lectura: #2a2318;
+  --lectura-borde: #4a3c28;
   --muted: #aeb6d4;               /*  8.30 · AAA */
   --titulo: #a9c6f7;              /*  9.63 · AAA */
   --enlace: #96c0fb;              /*  8.93 · AAA */
@@ -264,6 +286,9 @@
   --foreground: #000000;          /* 21.00 sobre el fondo · AAA */
   --muted: #000000;               /* 21.00 · el gris apagado se acaba */
   --secondary: #eef3f8;
+  /* alto contraste claro · negro encima = 20.23 · AAA */
+  --lectura: #fffaf4;
+  --lectura-borde: #c9b8a4;
   --titulo: #0a2036;              /* 16.50 · AAA */
   --enlace: #0a4a86;              /*  8.99 · AAA */
   --primary: #153a9e;             /* su texto encima: 9.86 · AAA */
@@ -292,6 +317,13 @@
    ============================================================ */
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"])[data-vision="alto"] {
+    /* alto contraste oscuro · blanco encima = 18.14 · AAA
+       Faltaba: sin esto el bloque heredaba el durazno CLARO del
+       primer bloque y la cita quedaba crema sobre durazno = 1.09.
+       O sea el texto base de comprension, invisible, para todo el
+       que tenga el celular en modo noche sin haber tocado nada. */
+    --lectura: #1a150e;
+    --lectura-borde: #8f7a5c;
     --background: #05090d;
     --foreground: #ffffff;        /* 19.97 · AAA */
     --muted: #ffffff;             /* 19.97 · el gris apagado se acaba */
@@ -321,6 +353,9 @@
   --foreground: #ffffff;          /* 19.97 · AAA */
   --muted: #ffffff;               /* 19.97 · el gris apagado se acaba */
   --secondary: #131b24;
+  /* alto contraste oscuro · blanco encima = 18.14 · AAA */
+  --lectura: #1a150e;
+  --lectura-borde: #6b5a44;
   --titulo: #bcd9f7;              /* 13.70 · AAA */
   --enlace: #a9cdfb;              /* 12.19 · AAA */
   --primary: #8fbeff;             /* su texto encima: 9.92 · AAA */
@@ -383,6 +418,13 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"])[data-color="daltonismo"] {
+    /* igual que el oscuro normal
+       Faltaba: sin esto el bloque heredaba el durazno CLARO del
+       primer bloque y la cita quedaba crema sobre durazno = 1.09.
+       O sea el texto base de comprension, invisible, para todo el
+       que tenga el celular en modo noche sin haber tocado nada. */
+    --lectura: #2a2318;
+    --lectura-borde: #8a7250;
     --espanol: #f0b060;           --espanol-suave: #2f2418;
     --sociales: #f0a0cc;          --sociales-suave: #331f2b;
     --ciencias: #5fd6bd;          --ciencias-suave: #0f2b28;
@@ -461,6 +503,9 @@
   --titulo: #1f1f1f;
   --muted: #5a5a5a;
   --secondary: #f4f4f4;
+  /* escala de grises claro · #1f1f1f encima = 14.72 · AAA */
+  --lectura: #f2f2f2;
+  --lectura-borde: #d4d4d4;
   --border: #d8d8d8;
   --border-fuerte: #6e6e6e;
   --pie-fondo: #262626;
@@ -473,6 +518,13 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"])[data-color="grises"] {
+    /* escala de grises oscuro · #f5f5f5 encima = 14.24 · AAA
+       Faltaba: sin esto el bloque heredaba el durazno CLARO del
+       primer bloque y la cita quedaba crema sobre durazno = 1.09.
+       O sea el texto base de comprension, invisible, para todo el
+       que tenga el celular en modo noche sin haber tocado nada. */
+    --lectura: #242424;
+    --lectura-borde: #767676;
     --espanol: #f2f2f2;           --espanol-suave: #262626;
     --sociales: #d0d0d0;          --sociales-suave: #2b2b2b;
     --ciencias: #adadad;          --ciencias-suave: #303030;
@@ -519,6 +571,9 @@
   --tono-3: #242424;
   --background: #141414;
   --secondary: #242424;
+  /* escala de grises oscuro · #f5f5f5 encima = 14.24 · AAA */
+  --lectura: #242424;
+  --lectura-borde: #4a4a4a;
   --primary: #f2f2f2;
   --primary-foreground: #141414;
   --primary-suave: #2b2b2b;

@@ -1,51 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Accessibility, ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { IMG_LOGO_EVI, MATERIAS } from "../config";
-import {
-  PanelAccesibilidad, useDesplegable, useHayAjustes,
-} from "./Accesibilidad";
 import "./Nav.css";
-
-// El desplegable de accesibilidad DENTRO de la hamburguesa. Solo se ve
-// en celular: de 900 px para arriba el CSS lo apaga y el mismo panel
-// aparece en el boton flotante de abajo a la izquierda (Accesibilidad.tsx
-// explica por que se mudo).
-function MenuAccesibilidad() {
-  const { abierto, alternar, cajaRef, botonRef } = useDesplegable<HTMLLIElement>();
-  const hayAjustes = useHayAjustes();
-
-  return (
-    <li className="nav-desplegable nav-ax" ref={cajaRef}>
-      <button
-        type="button"
-        className="nav-sim-boton"
-        ref={botonRef}
-        aria-expanded={abierto}
-        aria-controls="nav-accesibilidad"
-        data-activo={hayAjustes ? "si" : undefined}
-        onClick={alternar}
-      >
-        <Accessibility size={19} strokeWidth={2.2} aria-hidden="true" />
-        Accesibilidad
-        <ChevronDown
-          size={18}
-          strokeWidth={2.4}
-          aria-hidden="true"
-          className="nav-sim-flecha"
-          data-abierto={abierto ? "si" : "no"}
-        />
-      </button>
-
-      <PanelAccesibilidad id="nav-accesibilidad" abierto={abierto} />
-    </li>
-  );
-}
 
 // Navegacion. En celular se abre con la hamburguesa; en pantalla grande
 // siempre esta a la vista, porque un nino no deberia tener que buscarla.
 //
 // Menu: Inicio · Español · Sociales · Ciencias · Matemáticas · Contacto.
+// Accesibilidad ya no vive aca. En pantalla grande esta en el boton
+// flotante de abajo a la izquierda; en celular y tablet, en la barra fija
+// de abajo. Dentro de la hamburguesa el panel se salia de la pantalla y el
+// ultimo ajuste quedaba cortado, sin manera de alcanzarlo.
 // El enlace a la web de idoneidad docente salio de aca: es publicidad
 // para adultos y no tiene por que ocupar un puesto en el menu de un
 // chiquito. Sigue estando en la portada y en contacto, dentro del bloque
@@ -109,7 +75,6 @@ export default function Nav() {
             <li>
               <NavLink to="/contacto" onClick={() => setAbierto(false)}>Contacto</NavLink>
             </li>
-            <MenuAccesibilidad />
           </ul>
         </nav>
       </div>

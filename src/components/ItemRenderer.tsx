@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { Square, Volume2 } from "lucide-react";
+import { ALargeSmall, Contrast, Square, Volume2 } from "lucide-react";
+import {
+  alternarVision, ciclarTexto, useTextoActual, useVisionAlta,
+} from "../lib/apariencia";
 import Markdown from "react-markdown";
 import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
@@ -123,6 +126,12 @@ type Props = {
 
 // Estructura base del item. La logica de la practica (reloj, avance,
 // puntaje) vive afuera; este componente solo pinta y avisa que tocaron.
+const NOMBRE_TAMANO = {
+  normal: "normal",
+  grande: "grande",
+  extra: "muy grande",
+} as const;
+
 export default function ItemRenderer({
   enunciado,
   opciones,
@@ -141,6 +150,10 @@ export default function ItemRenderer({
   // Lo unico que decide conVoz es si el boton se pinta.
   const voz = useLectura(enunciado, opciones);
   const mostrarVoz = conVoz && voz.hayVoz;
+  // Los dos ajustes salen del almacen compartido: los mismos que mueve el
+  // panel de accesibilidad, no una copia local.
+  const visionAlta = useVisionAlta();
+  const tamanoTexto = useTextoActual();
 
   // Que estado le toca a cada opcion una vez que ya respondio.
   function estadoDe(op: Opcion): "correcta" | "incorrecta" | undefined {
@@ -192,10 +205,15 @@ export default function ItemRenderer({
     <article
       className="ps-item"
     >
-      {mostrarVoz && (
-        // En la esquina de arriba, antes del enunciado: quien lo necesita lo
-        // encuentra donde esta mirando y no en una barra aparte.
-        <div className="item-cima">
+      {/* Las tres ayudas, en la esquina de arriba y en pequeno: quien las
+          necesita las encuentra donde ya esta mirando, y quien no, casi ni
+          las ve. No llevan estado propio -- mueven el MISMO ajuste que el
+          panel de accesibilidad (ver lib/apariencia.ts) -- asi que nunca
+          van a decir una cosa aca y otra alla.
+          "Escuchar" conserva la palabra porque es la accion principal; las
+          otras dos van con icono y su nombre en aria-label y en title. */}
+      <div className="item-cima">
+        {mostrarVoz && (
           <button
             type="button"
             className="item-escuchar"
@@ -209,8 +227,28 @@ export default function ItemRenderer({
             )}
             {voz.leyendo ? "Parar" : "Escuchar"}
           </button>
-        </div>
-      )}
+        )}
+        <button
+          type="button"
+          className="item-ayuda"
+          aria-pressed={visionAlta}
+          title="Más contraste"
+          aria-label={`Más contraste: ${visionAlta ? "activado" : "desactivado"}`}
+          onClick={alternarVision}
+        >
+          <Contrast size={20} strokeWidth={2.2} aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          className="item-ayuda"
+          data-nivel={tamanoTexto}
+          title={`Tamaño del texto: ${NOMBRE_TAMANO[tamanoTexto]}`}
+          aria-label={`Tamaño del texto: ${NOMBRE_TAMANO[tamanoTexto]}. Tocá para agrandarlo`}
+          onClick={ciclarTexto}
+        >
+          <ALargeSmall size={22} strokeWidth={2.2} aria-hidden="true" />
+        </button>
+      </div>
 
       <div className="item-enunciado">
         <Markdown remarkPlugins={REMARK} rehypePlugins={REHYPE} components={BLOQUE}>

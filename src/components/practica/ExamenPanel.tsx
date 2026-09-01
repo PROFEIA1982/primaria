@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, LogOut } from "lucide-react";
+import { ArrowLeft, ArrowRight, LogOut } from "lucide-react";
 import ItemRenderer from "../ItemRenderer";
 import { useBarraPegada, useLlevarALaPregunta } from "./useBarraPegada";
 import type { Practica } from "./usePractica";
@@ -18,7 +18,8 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
   // El interruptor de "Leer en voz alta" vive en el menu de accesibilidad;
   // aca solo se consulta para decidir si se pinta el boton "Escuchar".
   const vozActiva = useVozActiva();
-  const { items, indice, respuestas, responder, siguiente, volverAPracticar } = practica;
+  const { items, indice, respuestas, responder, siguiente, anterior,
+          volverAPracticar } = practica;
 
   // Salir a medio camino. Antes no habia forma: el estudiante que se
   // arrepentia en la tres solo podia irse por el menu de arriba, y en celular
@@ -110,11 +111,10 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
         style={{ scrollMarginTop: `${altoMenu + altoBarra + 12}px` }}
         aria-label={`Pregunta ${indice + 1} de ${items.length}`}
       >
-/* La barra de apoyo (mas contraste + tres tamanos de letra) salio de la
-   pantalla del item. Eran cinco botones encima de la pregunta que hacian
-   lo mismo que el panel de accesibilidad, y en la pantalla donde menos
-   debe haber cosas que no sean el item. Del apoyo queda el boton
-   "Escuchar", que vive en el propio ItemRenderer. */
+        {/* La barra de apoyo (mas contraste + tres tamanos de letra) salio de
+            esta pantalla: eran cinco botones encima de la pregunta que hacian
+            lo mismo que el panel de accesibilidad. Del apoyo queda el boton
+            "Escuchar", que vive dentro del propio ItemRenderer. */}
         {/* La key rearma el item con cada pregunta: al desmontarse corta la
             lectura en voz alta y el boton vuelve a decir "Escuchar". */}
         <ItemRenderer
@@ -128,12 +128,28 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           conVoz={vozActiva}
         />
 
-        {respondido && (
-          <div className="examen-pie">
-            <button type="button" className="ps-boton examen-siguiente" onClick={siguiente}>
-              {esLaUltima ? "Ver resultados" : "Siguiente"}
-              <ArrowRight size={20} strokeWidth={2.2} aria-hidden="true" />
-            </button>
+        {/* Devolverse y avanzar. "Anterior" aparece desde la segunda
+            pregunta, haya contestado o no: sirve para releer la pregunta y
+            la explicacion de la de atras. "Siguiente" solo despues de
+            contestar, para que nadie se salte una sin querer. */}
+        {(respondido || indice > 0) && (
+          <div className="examen-pasos">
+            {indice > 0 ? (
+              <button type="button" className="examen-atras" onClick={anterior}>
+                <ArrowLeft size={20} strokeWidth={2.2} aria-hidden="true" />
+                Anterior
+              </button>
+            ) : (
+              /* Hueco para que "Siguiente" no se corra a la izquierda en la
+                 primera pregunta. */
+              <span />
+            )}
+            {respondido && (
+              <button type="button" className="ps-boton examen-siguiente" onClick={siguiente}>
+                {esLaUltima ? "Ver resultados" : "Siguiente"}
+                <ArrowRight size={20} strokeWidth={2.2} aria-hidden="true" />
+              </button>
+            )}
           </div>
         )}
 

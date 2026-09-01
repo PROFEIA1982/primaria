@@ -12,9 +12,12 @@
    (en modo normal la marca de correcta usa --success 5.35 y la de
     incorrecta --error 6.54 sobre blanco, las dos AA) */
 .ps-item {
-  /* La medida de la letra de la pregunta vive en una variable: los tres
-     tamanos solo la cambian a ella y todo lo de adentro va en em. */
-  --item-fuente: 1rem;
+  /* La letra de la pregunta sigue al cuerpo de la app. Estaba clavada en
+     1rem (16 px) mientras el cuerpo iba a 19: la pregunta -- que es lo mas
+     importante de la pantalla -- se veia mas chica que cualquier otro
+     texto del sitio, y dejaba huecos a los lados. Todo lo de adentro del
+     recuadro va en em, asi que con cambiar esta variable crece todo. */
+  --item-fuente: var(--cuerpo-fuente);
   font-size: var(--item-fuente);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -30,11 +33,7 @@
    - --border-fuerte sobre el fondo ......... 3.50 (claro)  · borde de control
    Los mismos tokens en oscuro dan 8.91 y 6.09: los cuatro estados estan
    en la tabla de src/index.css. */
-.ps-item .item-cima {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-}
+
 .ps-item .item-escuchar {
   display: inline-flex;
   align-items: center;
@@ -87,11 +86,11 @@
      esto, con la letra grande se sale del recuadro y corre la pagina */
   overflow-wrap: anywhere;
 }
-/* 62ch: la BDA pide 60-70 caracteres por linea. Sin esto, en una compu de escritorio
-   los textos de comprension de Español corrian a unos 115 caracteres por
-   renglon y un lector de doce años pierde el hilo al saltar de linea. */
-.ps-item .item-enunciado p,
-.ps-item .item-enunciado blockquote { max-width: 62ch; }
+/* La medida de lectura (60-70 caracteres, British Dyslexia Association) ya
+   NO se pone aca. Se pone al ancho de toda la columna de trabajo, en
+   PracticaPage.css. Ponerla solo en el parrafo dejaba el recuadro ancho y
+   el texto angosto: media pantalla vacia a la derecha, y las opciones
+   estiradas a lo largo de mil pixeles para decir seis palabras. */
 .ps-item .item-enunciado p { margin: 0 0 0.8em; }
 .ps-item .item-enunciado img {
   display: block;
@@ -227,11 +226,15 @@
 .ps-item .item-tabla-caja tbody tr:last-child td { border-bottom: 0; }
 
 /* La cita del texto de lectura, para que se vea que es una cita. */
+/* El texto base de un item de comprension: el unico bloque de la app
+   donde un chiquito lee parrafos largos de corrido. Va sobre --lectura y
+   no sobre el gris azulado de las tarjetas; el porque, con el estudio y
+   los numeros, esta en el token, en src/index.css. */
 .ps-item .item-enunciado blockquote {
   margin: 0 0 1em;
-  padding: 12px 18px;
-  border-left: 4px solid var(--border-fuerte);
-  background: var(--secondary);
+  padding: 14px 18px;
+  border-left: 4px solid var(--lectura-borde);
+  background: var(--lectura);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 .ps-item .item-enunciado blockquote p:last-child { margin-bottom: 0; }
@@ -268,7 +271,7 @@
   text-align: left;
   cursor: pointer;
 }
-.ps-item .item-opcion:hover:not(:disabled) { background: var(--secondary); }
+.ps-item .item-opcion:hover:not([aria-disabled="true"]) { background: var(--secondary); }
 .ps-item .item-opcion:disabled { cursor: default; }
 .ps-item .item-texto {
   /* la base en 60% y no en auto: con auto, el texto largo se bajaba entero
@@ -363,3 +366,70 @@
   .ps-item .item-opcion[data-estado="incorrecta"] { border: 3px solid ButtonText; }
   .ps-item .item-opcion[aria-checked="true"] { border: 3px solid Highlight; }
 }
+
+/* --- Las tres ayudas de la esquina del item ---
+   Discretas a proposito: "Escuchar" con su palabra, porque es la accion
+   principal; contraste y tamano en boton cuadrado de solo icono, con el
+   nombre en title y en aria-label. No son la unica manera de llegar a esos
+   ajustes -- el panel de accesibilidad los tiene con su nombre escrito --
+   sino un atajo para quien ya esta leyendo la pregunta.
+   Contrastes (tokens de src/index.css):
+   - --muted sobre --background ...........  5.60 claro ·  8.30 oscuro · AA
+   - --border-fuerte sobre --background ...  3.50 claro ·  6.03 oscuro · borde
+   - --primary-foreground sobre --primary .  8.59 claro ·  9.12 oscuro · AAA */
+.ps-item .item-cima {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.ps-item .item-ayuda {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* 44 px es el minimo de blanco de toque del nivel AAA de WCAG 2.5.5. */
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: var(--borde-ancho) solid var(--border);
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+.ps-item .item-ayuda:hover {
+  border-color: var(--border-fuerte);
+  background: var(--secondary);
+  color: var(--foreground);
+}
+/* Puesto: relleno + borde + el icono en blanco. Tres senales, y ademas el
+   aria-label dice la palabra. */
+.ps-item .item-ayuda[aria-pressed="true"],
+.ps-item .item-ayuda[data-nivel="grande"],
+.ps-item .item-ayuda[data-nivel="extra"] {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.ps-item .item-ayuda:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+@media (hover: hover) {
+  .ps-item .item-ayuda { transition: background-color 0.15s ease, border-color 0.15s ease; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ps-item .item-ayuda { transition: none; }
+}
+@media (forced-colors: active) {
+  .ps-item .item-ayuda { border: 2px solid ButtonText; }
+  .ps-item .item-ayuda[aria-pressed="true"],
+  .ps-item .item-ayuda[data-nivel="grande"],
+  .ps-item .item-ayuda[data-nivel="extra"] { border: 3px solid Highlight; }
+}
+
+/* Contestada y congelada: sin manita, para no invitar a un clic que ya no
+   hace nada. El boton usa aria-disabled y no disabled, para no perder el
+   foco del teclado. */
+.ps-item .item-opcion[aria-disabled="true"] { cursor: default; }

@@ -1194,6 +1194,13 @@
   border-radius: var(--radius-sm);
   background: var(--secondary);
 }
+/* Sin esto la lista NUNCA se cerraba. El `hidden` del JSX lo aplica la hoja
+   del navegador con `[hidden]{display:none}`, y cualquier `display` que
+   declare el autor le gana por origen. O sea que el boton "Escoger un tema"
+   giraba la flechita, cambiaba aria-expanded a false, y los ocho temas
+   seguian a la vista: le decia "contraido" al lector de pantalla con el
+   contenido puesto. */
+#practica-seleccion .sel-lista-temas[hidden] { display: none; }
 #practica-seleccion .sel-tema-fila {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -1253,4 +1260,69 @@
 }
 @media (prefers-reduced-motion: reduce) {
   #practica-seleccion .sel-flecha { transition: none; }
+}
+
+/* --- El ancho de la columna de trabajo ---
+   La barra de arriba y el recuadro de la pregunta comparten UNA medida.
+   Antes el recuadro se estiraba a los 1200 px del contenedor mientras el
+   texto se cortaba a 62 caracteres adentro: quedaba media pantalla en
+   blanco a la derecha y las opciones corrian mil pixeles para decir seis
+   palabras.
+
+   46rem crece con el tamano de letra que escoja el estudiante, asi que la
+   linea se mantiene entre 60 y 70 caracteres en los tres tamanos:
+     normal (raiz 16px) → 46rem = 736px → unos 65 caracteres
+     grande (raiz 18px) → 46rem = 828px → unos 66 caracteres
+     muy grande (20px)  → 46rem = 920px → unos 66 caracteres
+   Que es justo la banda que pide la British Dyslexia Association. */
+#practica-examen .examen-barra-caja,
+#practica-examen .examen-cuerpo,
+#sim-examen .examen-barra-caja,
+#sim-examen .examen-cuerpo {
+  max-width: 46rem;
+}
+
+/* --- Devolverse y avanzar en la practica ---
+   "Anterior" es un boton de borde, no relleno: no compite con "Siguiente",
+   que es la accion principal. Los dos con blanco de toque de 48 px.
+   Contrastes (tokens de src/index.css):
+   - --foreground sobre --background ... 17.40 claro · 14.05 oscuro · AAA
+   - --border-fuerte sobre --background . 3.50 claro · 6.03 oscuro · borde */
+#practica-examen .examen-pasos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+#practica-examen .examen-atras {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--toque-min);
+  padding: 0 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+#practica-examen .examen-atras:hover { background: var(--secondary); }
+#practica-examen .examen-atras:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+/* En celular los dos botones se apilan y ocupan todo el ancho: mas facil
+   de acertar con el pulgar que dos botones angostos en la misma linea. */
+@media (max-width: 559px) {
+  #practica-examen .examen-pasos { flex-direction: column-reverse; align-items: stretch; }
+  #practica-examen .examen-pasos > span { display: none; }
+  #practica-examen .examen-atras { width: 100%; }
+}
+@media (forced-colors: active) {
+  #practica-examen .examen-atras { border: 2px solid ButtonText; }
 }

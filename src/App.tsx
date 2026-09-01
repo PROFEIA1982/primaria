@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Nav from "./components/Nav";
-import AccesibilidadFlotante from "./components/Accesibilidad";
+import AccesibilidadFlotante, { AccesibilidadMovil } from "./components/Accesibilidad";
 import Footer from "./components/Footer";
 import InicioPage from "./pages/InicioPage";
 import { Cargando } from "./components/Estados";
@@ -95,6 +95,9 @@ function Armazon() {
           viene a hacer. En celular esto no se ve; ahi el mismo panel vive
           dentro de la hamburguesa. */}
       <AccesibilidadFlotante />
+      {/* Y su gemela de celular y tablet: barra fija abajo, donde llega el
+          pulgar. Cada una se apaga sola con CSS en el ancho de la otra. */}
+      <AccesibilidadMovil />
     </>
   );
 }
