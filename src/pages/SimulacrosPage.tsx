@@ -5,7 +5,6 @@ import { MATERIAS, type SlugMateria } from "../config";
 import { ponerConcentracion } from "../lib/concentracion";
 import ListaPanel from "../components/simulacro/ListaPanel";
 import PestanasMateria from "../components/PestanasMateria";
-import InstruccionesSimulacro from "../components/simulacro/InstruccionesSimulacro";
 import ResultadosSimulacro from "../components/simulacro/ResultadosSimulacro";
 import SimulacroPanel from "../components/simulacro/SimulacroPanel";
 import { useSimulacros } from "../components/simulacro/useSimulacro";
@@ -113,13 +112,13 @@ export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
         Simulacros de {datos.nombre}
       </h1>
 
+      {/* Sin parrafo de instrucciones. Lo que decia -- de que va la
+          materia, cuantas preguntas, cuanto dura, que las opciones se
+          barajan -- o lo explica la maestra, o ya esta escrito en la
+          tarjeta de cada cuadernillo. Repetirlo era relleno, y de 8 a 12
+          anos los bloques de instrucciones se los saltan (Nielsen Norman
+          Group, Children's UX). */}
       <PestanasMateria slug={datos.slug} actual="simulacro" />
-      <InstruccionesSimulacro
-        materia={datos.slug}
-        nombre={datos.nombre}
-        cantidad={simulacros.lista[0]?.cantidad ?? 60}
-        haySim2={simulacros.lista.some((s) => s.numero >= 2)}
-      />
       <ListaPanel nombreMateria={datos.nombre} simulacros={simulacros} />
     </section>
   );

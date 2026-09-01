@@ -1,8 +1,7 @@
 import { useId, useState } from "react";
-import { Check, ChevronDown, CircleAlert, Play, Timer, TimerOff } from "lucide-react";
-import { CANTIDADES, SEGUNDOS_POR_ITEM } from "../../config";
+import { Check, ChevronDown, CircleAlert, Play } from "lucide-react";
+import { CANTIDADES } from "../../config";
 import { ErrorCarga } from "../Estados";
-import { tiempoLargo } from "./calificar";
 import type { Practica } from "./usePractica";
 
 type Props = {
@@ -50,8 +49,6 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
     preparando,
     errorSorteo,
     pocasDisponibles,
-    conReloj,
-    alternarReloj,
     empezar,
     aceptarLasQueHay,
   } = practica;
@@ -153,14 +150,6 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
                 <Check size={14} strokeWidth={3.2} />
               </span>
               <span className="sel-num">{n}</span>
-              {/* Con el reloj puesto el tiempo es un limite; sin reloj es apenas
-                  un calculo de cuanto le va a tomar. La palabra cambia para no
-                  prometer un limite que no existe. */}
-              <span className="sel-tiempo">
-                {conReloj
-                  ? tiempoLargo(n * SEGUNDOS_POR_ITEM)
-                  : `como ${tiempoLargo(n * SEGUNDOS_POR_ITEM)}`}
-              </span>
             </label>
           ))}
         </div>
@@ -194,18 +183,7 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
 
       {/* Lo que antes eran tres tarjetas, en un renglon. */}
       <p className="sel-fino">
-        <span>Tu nota no se guarda y podés repetir las veces que querás.</span>
-        <button
-          type="button"
-          className="sel-reloj-boton"
-          aria-pressed={conReloj}
-          onClick={alternarReloj}
-        >
-          {conReloj
-            ? <Timer size={19} strokeWidth={2.2} aria-hidden="true" />
-            : <TimerOff size={19} strokeWidth={2.2} aria-hidden="true" />}
-          {conReloj ? "Con reloj" : "Sin reloj"}
-        </button>
+        Sin reloj y sin apuro. Tu nota no se guarda y podés repetir las veces que querás.
       </p>
 
       {errorSorteo && (

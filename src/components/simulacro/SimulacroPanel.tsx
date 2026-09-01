@@ -3,7 +3,6 @@ import {
   ArrowLeft, ArrowRight, CheckCheck, CircleAlert, Clock, LogOut, TriangleAlert,
 } from "lucide-react";
 import ItemRenderer from "../ItemRenderer";
-import BarraApoyo, { type TamanoTexto } from "../practica/BarraApoyo";
 import { formatearReloj, PALABRA_RELOJ, type NivelReloj } from "../practica/calificar";
 import { useBarraPegada, useLlevarALaPregunta } from "../practica/useBarraPegada";
 import type { Simulacros } from "./useSimulacro";
@@ -41,8 +40,6 @@ export default function SimulacroPanel({ simulacros }: Props) {
   const total = items.length;
 
   // Las dos ayudas de lectura, iguales que en la practica.
-  const [tamano, setTamano] = useState<TamanoTexto>("normal");
-  const [altoContraste, setAltoContraste] = useState(false);
 
   const { barraRef, altoMenu, altoBarra } = useBarraPegada();
   const cuerpoRef = useLlevarALaPregunta(indice);
@@ -150,13 +147,6 @@ export default function SimulacroPanel({ simulacros }: Props) {
         style={{ scrollMarginTop: `${altoMenu + altoBarra + 12}px` }}
         aria-label={`Pregunta ${indice + 1} de ${total}`}
       >
-        <BarraApoyo
-          tamano={tamano}
-          alCambiarTamano={setTamano}
-          altoContraste={altoContraste}
-          alCambiarContraste={setAltoContraste}
-        />
-
         {/* La key rearma el item con cada pregunta: al desmontarse corta la
             lectura en voz alta y el boton vuelve a decir "Escuchar". */}
         <ItemRenderer
@@ -167,8 +157,6 @@ export default function SimulacroPanel({ simulacros }: Props) {
           alElegir={responder}
           imagenUrl={item.imagen_url}
           imagenAlt={item.imagen_alt}
-          tamano={tamano}
-          altoContraste={altoContraste}
           conVoz={vozActiva}
           modo="examen"
         />

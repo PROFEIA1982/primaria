@@ -13,7 +13,7 @@ type Props = {
 export default function ListaPanel({ nombreMateria, simulacros }: Props) {
   const {
     estadoLista, recargar, lista, marcas, abriendo, errorAbrir, empezar,
-    enCurso, retomar, descartarEnCurso, horas, elegirHoras,
+    enCurso, retomar, descartarEnCurso,
   } = simulacros;
 
   // Si falla la apertura, el foco vuelve al boton que se toco. Sin esto
@@ -48,10 +48,6 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
     empezar(slug);
   }
 
-  // El selector de tiempo solo tiene sentido si hay un Simulacro 2 en esta
-  // materia: es el unico con opcion de horas. El Simulacro 1 siempre es 2 h.
-  const haySim2 = lista.some((s) => s.numero >= 2);
-
   return (
     <>
       {/* Lo que quedo a medias va de primero: es lo que el chiquito viene
@@ -82,43 +78,6 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
         </section>
       )}
 
-      {/* El tiempo solo aplica al Simulacro 2: el Simulacro 1 siempre dura dos
-          horas. Por eso el selector aparece nada mas cuando esta materia tiene
-          un Simulacro 2. Es un radiogroup de verdad (fieldset + radios): asi el
-          lector de pantalla lo anuncia como grupo y se anda con flechas. */}
-      {haySim2 && (
-        <fieldset className="sim-tiempo">
-          <legend>¿Cuánto tiempo para el Simulacro 2?</legend>
-          <div className="sim-tiempo-ops">
-            <label className="sim-tiempo-op" data-elegida={horas === 3 ? "" : undefined}>
-              <input
-                type="radio"
-                name="sim-horas"
-                checked={horas === 3}
-                onChange={() => elegirHoras(3)}
-              />
-              <span className="sim-tiempo-titulo">3 horas</span>
-              <span className="sim-tiempo-nota">Lo normal</span>
-            </label>
-            <label className="sim-tiempo-op" data-elegida={horas === 4 ? "" : undefined}>
-              <input
-                type="radio"
-                name="sim-horas"
-                checked={horas === 4}
-                onChange={() => elegirHoras(4)}
-              />
-              <span className="sim-tiempo-titulo">4 horas</span>
-              <span className="sim-tiempo-nota">Con más tiempo</span>
-            </label>
-          </div>
-          <p className="sim-tiempo-ayuda">
-            Si en el cole te dan más tiempo en los exámenes, escogé las{" "}
-            <strong>4 horas</strong>. Si no, dejá las 3. El{" "}
-            <strong>Simulacro 1</strong> siempre dura 2 horas.
-          </p>
-        </fieldset>
-      )}
-
       {/* role="list" explicito: con list-style:none, Safari y VoiceOver le
           quitan la semantica de lista. */}
       <ul className="sim-lista" role="list">
@@ -137,7 +96,7 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
                   </span>
                   <span className="sim-dato">
                     <Clock size={20} strokeWidth={2} aria-hidden="true" />
-                    {s.numero >= 2 ? "3 o 4 horas" : "2 horas"}
+                    3 horas
                   </span>
                 </p>
 

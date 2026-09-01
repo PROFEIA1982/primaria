@@ -1,10 +1,18 @@
 // ============================================================
 // El cerebro de la practica. Todo el estado vive aca, en memoria
 // del navegador: de este estudiante no se guarda nada en la base.
+//
+// LA PRACTICA NO LLEVA RELOJ. Ni cuenta regresiva ni interruptor para
+// ponerla. Practicar contra el reloj mide la prisa, no lo que el
+// estudiante sabe: Khan Academy, IXL y Google Forms tampoco lo ponen, y
+// la cuenta regresiva es de las apps de competencia tipo Kahoot. Aca el
+// estudiante para cuando quiera y sigue cuando quiera. Quien se quiera
+// medir contra el tiempo tiene el simulacro, que si lo trae y para eso
+// existe.
 // ============================================================
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { SEGUNDOS_POR_ITEM, type SlugMateria } from "../../config";
+import { type SlugMateria } from "../../config";
 import {
   registrarResultados,
   sortearItems,
@@ -12,18 +20,8 @@ import {
   traerConteosPorTema,
   traerTemas,
 } from "../../lib/api";
-import { guardarJSON, leerJSON } from "../../lib/almacen";
 import type { Item, Tema } from "../../lib/tipos";
-import {
-  avisoReloj,
-  calificar,
-  nivelReloj,
-  type Calificacion,
-  type NivelReloj,
-  type Respuestas,
-} from "./calificar";
-
-const LLAVE_RELOJ = "ps_practica_reloj";
+import { calificar, type Calificacion, type Respuestas } from "./calificar";
 
 export type Fase = "seleccion" | "examen" | "resultados";
 export type EstadoInicial = "cargando" | "listo" | "error";
@@ -43,9 +41,6 @@ export type Practica = {
   elegirTema: (id: number | null) => void;
   cantidad: number;
   elegirCantidad: (n: number) => void;
-  /** si la practica corre con cuenta regresiva. Arranca apagado. */
-  conReloj: boolean;
-  alternarReloj: () => void;
   preparando: boolean;
   errorSorteo: boolean;
   // cuantas aparecieron cuando salieron menos de las pedidas; null si no aplica
@@ -59,14 +54,9 @@ export type Practica = {
   respuestas: Respuestas;
   responder: (opcionId: string) => void;
   siguiente: () => void;
-  restante: number;
-  totalSegundos: number;
-  nivel: NivelReloj;
-  aviso: string;
 
-  // --- resultados ---
+  // --- lo que saco ---
   calificacion: Calificacion;
-  seAcaboElTiempo: boolean;
   volverAPracticar: () => void;
 };
 
@@ -79,21 +69,6 @@ export function usePractica(slug: SlugMateria): Practica {
   const [fase, setFase] = useState<Fase>("seleccion");
   const [temaSel, setTemaSel] = useState<number | null>(null);
   const [cantidad, setCantidad] = useState(10);
-  // El reloj de la practica arranca APAGADO, y es a proposito. Khan
-  // Academy, IXL y Google Forms no ponen cuenta regresiva cuando el
-  // estudiante esta estudiando; el reloj es de Kahoot, que es competencia.
-  // Practicar contra el reloj mide la prisa, no lo que sabe. Quien se
-  // quiere medir lo prende, y el simulacro lo trae siempre.
-  const [conReloj, setConReloj] = useState<boolean>(
-    () => leerJSON(LLAVE_RELOJ) === true,
-  );
-  const alternarReloj = useCallback(() => {
-    setConReloj((v) => {
-      guardarJSON(LLAVE_RELOJ, !v);
-      return !v;
-    });
-  }, []);
-
   const [preparando, setPreparando] = useState(false);
   const [errorSorteo, setErrorSorteo] = useState(false);
   const [pocasDisponibles, setPocasDisponibles] = useState<number | null>(null);
@@ -104,15 +79,6 @@ export function usePractica(slug: SlugMateria): Practica {
   const [items, setItems] = useState<Item[]>([]);
   const [indice, setIndice] = useState(0);
   const [respuestas, setRespuestas] = useState<Respuestas>([]);
-  const [seAcaboElTiempo, setSeAcaboElTiempo] = useState(false);
-
-  const totalSegundos = items.length * SEGUNDOS_POR_ITEM;
-  const [restante, setRestante] = useState(0);
-  const [aviso, setAviso] = useState("");
-  // Marca del reloj en milisegundos. Se guarda la hora de fin y no un
-  // contador que se resta: si el celular duerme la pestana, el contador
-  // se atrasa y la hora de fin no.
-  const finRef = useRef(0);
 
   // --- carga inicial: id de la materia, cuantos items tiene y sus temas ---
   const cargar = useCallback(async () => {
@@ -172,7 +138,6 @@ export function usePractica(slug: SlugMateria): Practica {
     setIndice(0);
     setPocasDisponibles(null);
     setErrorSorteo(false);
-    setSeAcaboElTiempo(false);
     setGuardadas([]);
   }
 
@@ -181,13 +146,8 @@ export function usePractica(slug: SlugMateria): Practica {
     setItems(lista);
     setRespuestas(new Array(lista.length).fill(null));
     setIndice(0);
-    setSeAcaboElTiempo(false);
     setPocasDisponibles(null);
     setGuardadas([]);
-    const segundos = lista.length * SEGUNDOS_POR_ITEM;
-    finRef.current = Date.now() + segundos * 1000;
-    setRestante(segundos);
-    setAviso("");
     setFase("examen");
   }, []);
 
@@ -246,47 +206,10 @@ export function usePractica(slug: SlugMateria): Practica {
     [indice],
   );
 
-  const terminar = useCallback((porTiempo: boolean) => {
-    setSeAcaboElTiempo(porTiempo);
-    setFase("resultados");
-  }, []);
-
   const siguiente = useCallback(() => {
     if (indice + 1 < items.length) setIndice(indice + 1);
-    else terminar(false);
-  }, [indice, items.length, terminar]);
-
-  // --- el reloj ---
-  useEffect(() => {
-    if (fase !== "examen" || !conReloj) return;
-    // Medio segundo: con un segundo justo, el reloj a veces se salta un
-    // numero cuando el navegador atrasa el disparo.
-    const id = window.setInterval(() => {
-      const seg = Math.max(0, Math.ceil((finRef.current - Date.now()) / 1000));
-      setRestante(seg);
-      if (seg <= 0) {
-        window.clearInterval(id);
-        terminar(true);
-      }
-    }, 500);
-    return () => window.clearInterval(id);
-  }, [fase, conReloj, terminar]);
-
-  const nivel = nivelReloj(restante, totalSegundos);
-
-  // La region viva solo habla al cambiar de minuto o de nivel. Si cantara
-  // cada segundo, el lector de pantalla taparia la pregunta.
-  const claveAvisoRef = useRef("");
-  useEffect(() => {
-    if (fase !== "examen" || !conReloj) {
-      claveAvisoRef.current = "";
-      return;
-    }
-    const clave = `${nivel}|${Math.ceil(restante / 60)}`;
-    if (clave === claveAvisoRef.current) return;
-    claveAvisoRef.current = clave;
-    setAviso(avisoReloj(restante, nivel));
-  }, [fase, conReloj, restante, nivel]);
+    else setFase("resultados");
+  }, [indice, items.length]);
 
   // --- resultados ---
   const calificacion = useMemo(() => calificar(items, respuestas), [items, respuestas]);
@@ -307,7 +230,6 @@ export function usePractica(slug: SlugMateria): Practica {
     setItems([]);
     setRespuestas([]);
     setIndice(0);
-    setSeAcaboElTiempo(false);
     setPocasDisponibles(null);
     setErrorSorteo(false);
     setFase("seleccion");
@@ -324,8 +246,6 @@ export function usePractica(slug: SlugMateria): Practica {
     elegirTema,
     cantidad,
     elegirCantidad,
-    conReloj,
-    alternarReloj,
     preparando,
     errorSorteo,
     pocasDisponibles,
@@ -336,12 +256,7 @@ export function usePractica(slug: SlugMateria): Practica {
     respuestas,
     responder,
     siguiente,
-    restante,
-    totalSegundos,
-    nivel,
-    aviso,
     calificacion,
-    seAcaboElTiempo,
     volverAPracticar,
   };
 }

@@ -6,7 +6,6 @@ import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import "./ItemRenderer.css";
-import type { TamanoTexto } from "./practica/BarraApoyo";
 import { useLectura } from "../lib/voz";
 import type { Opcion } from "../lib/tipos";
 
@@ -101,10 +100,7 @@ type Props = {
   alElegir: (opcionId: string) => void;
   imagenUrl?: string | null;
   imagenAlt?: string | null;
-  /** tamano de letra que pidio el estudiante en la barra de apoyo */
-  tamano?: TamanoTexto;
-  /** modo de mas contraste, tambien pedido desde la barra de apoyo */
-  altoContraste?: boolean;
+  
   /**
    * Pinta el boton de escuchar en la esquina del recuadro. Va apagado por
    * defecto y solo lo enciende la pantalla del examen: en resultados hay
@@ -134,8 +130,6 @@ export default function ItemRenderer({
   alElegir,
   imagenUrl,
   imagenAlt,
-  tamano = "normal",
-  altoContraste = false,
   conVoz = false,
   modo = "practica",
 }: Props) {
@@ -197,8 +191,6 @@ export default function ItemRenderer({
     // la barra del reloj y todo lo demas.
     <article
       className="ps-item"
-      data-tamano={tamano}
-      data-contraste={altoContraste ? "alto" : undefined}
     >
       {mostrarVoz && (
         // En la esquina de arriba, antes del enunciado: quien lo necesita lo

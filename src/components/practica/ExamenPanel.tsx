@@ -1,30 +1,24 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, CircleAlert, Clock, LogOut, TriangleAlert } from "lucide-react";
+import { ArrowRight, LogOut } from "lucide-react";
 import ItemRenderer from "../ItemRenderer";
-import BarraApoyo, { type TamanoTexto } from "./BarraApoyo";
-import { formatearReloj, PALABRA_RELOJ, type NivelReloj } from "./calificar";
 import { useBarraPegada, useLlevarALaPregunta } from "./useBarraPegada";
 import type { Practica } from "./usePractica";
 import { useVozActiva } from "../../lib/apariencia";
-
-const ICONO_RELOJ: Record<NivelReloj, typeof Clock> = {
-  normal: Clock,
-  poco: TriangleAlert,
-  critico: CircleAlert,
-};
 
 type Props = {
   nombreMateria: string;
   practica: Practica;
 };
 
-// Pantalla 2: una pregunta a la vez, con la barra del reloj arriba.
+// Pantalla 2: una pregunta a la vez.
+//
+// Sin reloj: la practica no lleva cuenta regresiva (ver usePractica). Lo
+// unico que queda arriba es la materia y el avance.
 export default function ExamenPanel({ nombreMateria, practica }: Props) {
   // El interruptor de "Leer en voz alta" vive en el menu de accesibilidad;
   // aca solo se consulta para decidir si se pinta el boton "Escuchar".
   const vozActiva = useVozActiva();
-  const { items, indice, respuestas, responder, siguiente, restante, nivel, aviso,
-          conReloj, volverAPracticar } = practica;
+  const { items, indice, respuestas, responder, siguiente, volverAPracticar } = practica;
 
   // Salir a medio camino. Antes no habia forma: el estudiante que se
   // arrepentia en la tres solo podia irse por el menu de arriba, y en celular
@@ -67,13 +61,10 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
   const elegida = respuestas[indice] ?? null;
   const respondido = elegida !== null;
   const esLaUltima = indice === items.length - 1;
-  const IconoReloj = ICONO_RELOJ[nivel];
 
   // Las tres ayudas de lectura. Viven aca y no en la barra para que el
   // estudiante no tenga que volver a agrandar la letra en cada pregunta;
   // no se guardan en el navegador a proposito, no hay nada que recordar.
-  const [tamano, setTamano] = useState<TamanoTexto>("normal");
-  const [altoContraste, setAltoContraste] = useState(false);
 
   // Las dos medidas de la barra pegada y el salto de foco a la pregunta
   // nueva salen del mismo sitio que en el simulacro: ver useBarraPegada.
@@ -94,17 +85,6 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           <p className="examen-progreso">
             Pregunta <strong>{indice + 1}</strong> de {items.length}
           </p>
-          {/* El reloj solo si el estudiante lo pidio. Apagado, la practica
-              corre sin apuro: es estudio, no competencia. */}
-          {conReloj && (
-            <p className="examen-reloj" data-nivel={nivel}>
-              <IconoReloj size={20} strokeWidth={2.2} aria-hidden="true" />
-              <span className="examen-tiempo">{formatearReloj(restante)}</span>
-              {/* La palabra acompana siempre al color: hay chiquitos que no
-                  distinguen el ambar del rojo. */}
-              <span className="examen-palabra">{PALABRA_RELOJ[nivel]}</span>
-            </p>
-          )}
         </div>
         {/* La barrita es dibujo y nada mas. Llego a tener role="progressbar"
             para que el lector de pantalla dijera el avance, pero progressbar
@@ -115,10 +95,6 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           <span style={{ width: `${avance}%` }} />
         </div>
       </div>
-
-      {/* La region viva no canta cada segundo: solo cambia al pasar de
-          minuto o cuando el tiempo entra en ambar o en rojo. */}
-      {conReloj && <p className="ps-solo-lectores" aria-live="polite">{aviso}</p>}
 
       {/* role="group" y no un div pelado: un div sin rol mapea a "generic",
           y en generic el nombre accesible esta prohibido, o sea que los
@@ -134,13 +110,11 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
         style={{ scrollMarginTop: `${altoMenu + altoBarra + 12}px` }}
         aria-label={`Pregunta ${indice + 1} de ${items.length}`}
       >
-        <BarraApoyo
-          tamano={tamano}
-          alCambiarTamano={setTamano}
-          altoContraste={altoContraste}
-          alCambiarContraste={setAltoContraste}
-        />
-
+/* La barra de apoyo (mas contraste + tres tamanos de letra) salio de la
+   pantalla del item. Eran cinco botones encima de la pregunta que hacian
+   lo mismo que el panel de accesibilidad, y en la pantalla donde menos
+   debe haber cosas que no sean el item. Del apoyo queda el boton
+   "Escuchar", que vive en el propio ItemRenderer. */
         {/* La key rearma el item con cada pregunta: al desmontarse corta la
             lectura en voz alta y el boton vuelve a decir "Escuchar". */}
         <ItemRenderer
@@ -151,8 +125,6 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
           alElegir={responder}
           imagenUrl={item.imagen_url}
           imagenAlt={item.imagen_alt}
-          tamano={tamano}
-          altoContraste={altoContraste}
           conVoz={vozActiva}
         />
 

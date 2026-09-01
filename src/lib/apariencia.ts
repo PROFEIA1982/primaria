@@ -31,6 +31,7 @@ const LLAVE_VISION = "ps-vision";
 const LLAVE_COLOR = "ps-color";
 const LLAVE_TEXTO = "ps-texto";
 const LLAVE_VOZ = "ps-voz";
+const LLAVE_TIEMPO = "ps-tiempo-extra";
 
 function leer(llave: string): string | null {
   try {
@@ -139,17 +140,65 @@ export function useVozActiva(): boolean {
   return useSyncExternalStore(suscribir, leerVoz, () => true);
 }
 
+// ============================================================
+// Tiempo extra en el simulacro.
+//
+// El simulacro corre a tres minutos por item. Este interruptor lo sube a
+// cuatro, que es un tercio mas, para estudiantes con apoyo educativo no
+// significativo.
+//
+// Vive en accesibilidad y no en la pantalla del simulacro a proposito.
+// Antes era un par de botones de "3 horas / 4 horas" que TODOS veian
+// antes de empezar: una decision de mas para la gran mayoria, que no la
+// necesita, y encima obligaba al estudiante con adecuacion a declararla
+// cada vez, delante de quien estuviera al lado. Aca se pone una sola vez,
+// queda guardado, y no vuelve a preguntar.
+// ============================================================
+
+function tiempoExtraInicial(): boolean {
+  if (typeof document === "undefined") return false;
+  return leer(LLAVE_TIEMPO) === "si";
+}
+
+let tiempoExtra = false;
+const oyentesTiempo = new Set<() => void>();
+
+function suscribirTiempo(fn: () => void): () => void {
+  oyentesTiempo.add(fn);
+  return () => {
+    oyentesTiempo.delete(fn);
+  };
+}
+
+function leerTiempo(): boolean {
+  return tiempoExtra;
+}
+
+function ponerTiempoExtra(valor: boolean): void {
+  if (tiempoExtra === valor) return;
+  tiempoExtra = valor;
+  guardar(LLAVE_TIEMPO, valor ? "si" : "no");
+  oyentesTiempo.forEach((fn) => fn());
+}
+
+/** Lo consulta el simulacro para saber cuanto dura el cuadernillo. */
+export function useTiempoExtra(): boolean {
+  return useSyncExternalStore(suscribirTiempo, leerTiempo, () => false);
+}
+
 export type Apariencia = {
   tema: Tema;
   vision: Vision;
   color: Color;
   texto: Texto;
   voz: boolean;
+  tiempoExtra: boolean;
   alternarTema: () => void;
   alternarVision: () => void;
   ponerColor: (c: Color) => void;
   ciclarTexto: () => void;
   alternarVoz: () => void;
+  alternarTiempoExtra: () => void;
 };
 
 // Un solo consumidor (el menu) para que no haya dos estados peleandose.
@@ -159,6 +208,7 @@ export function useApariencia(): Apariencia {
   const [color, setColor] = useState<Color>(colorInicial);
   const [texto, setTexto] = useState<Texto>(textoInicial);
   const [voz, setVoz] = useState<boolean>(vozInicial);
+  const [extra, setExtra] = useState<boolean>(tiempoExtraInicial);
 
   // En la primera pasada no se escribe nada si el visitante nunca eligio:
   // sin atributo manda el prefers-color-scheme del CSS y el sitio sigue al
@@ -234,10 +284,19 @@ export function useApariencia(): Apariencia {
     () => setTexto((v) => ORDEN_TEXTO[(ORDEN_TEXTO.indexOf(v) + 1) % ORDEN_TEXTO.length]),
     [],
   );
+  const alternarTiempoExtra = useCallback(() => setExtra((v) => !v), []);
+
+  // El almacen de modulo se mantiene al dia con el estado del hook, para
+  // que el simulacro (que esta lejos en el arbol) lea siempre lo mismo.
+  useEffect(() => {
+    ponerTiempoExtra(extra);
+  }, [extra]);
+
   const alternarVoz = useCallback(() => setVoz((v) => !v), []);
 
   return {
-    tema, vision, color, texto, voz,
+    tema, vision, color, texto, voz, tiempoExtra: extra,
     alternarTema, alternarVision, ponerColor, ciclarTexto, alternarVoz,
+    alternarTiempoExtra,
   };
 }

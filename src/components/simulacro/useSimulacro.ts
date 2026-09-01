@@ -13,9 +13,12 @@
 // ============================================================
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { SEGUNDOS_POR_ITEM, type SlugMateria } from "../../config";
+import {
+  SEGUNDOS_ITEM_SIMULACRO, SEGUNDOS_ITEM_SIMULACRO_EXTRA, type SlugMateria,
+} from "../../config";
 import { listarSimulacros, registrarResultados, traerSimulacro } from "../../lib/api";
 import type { Simulacro, SimulacroResumen } from "../../lib/tipos";
+import { useTiempoExtra } from "../../lib/apariencia";
 import {
   avisoReloj,
   calificar,
@@ -47,10 +50,6 @@ export type Simulacros = {
   fase: FaseSimulacro;
   abriendo: string | null;
   errorAbrir: string | null;
-  /** Duración del Simulacro 2: 3 horas (normal) o 4 (apoyo no significativo).
-      El Simulacro 1 siempre dura 2 horas y no usa este valor. */
-  horas: 3 | 4;
-  elegirHoras: (h: 3 | 4) => void;
   empezar: (slug: string) => void;
 
   // --- el cuadernillo en curso ---
@@ -85,10 +84,10 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
   const [todos, setTodos] = useState<SimulacroResumen[]>([]);
   const [marcas, setMarcas] = useState<Record<string, MarcaSimulacro>>({});
   const [respaldo, setRespaldo] = useState<EnCurso | null>(null);
-  // Cuanto dura el Simulacro 2: tres horas por defecto, o cuatro para
-  // estudiantes con apoyo educativo no significativo. Se escoge antes de
-  // arrancar. El Simulacro 1 no lo usa: siempre son dos horas.
-  const [horas, setHoras] = useState<3 | 4>(3);
+  // Tres minutos por pregunta, parejo para todos los cuadernillos. Cuatro
+  // si el estudiante tiene puesta la adecuacion de tiempo, que vive en el
+  // panel de accesibilidad y no aca: asi no hay que declararla cada vez.
+  const tiempoExtra = useTiempoExtra();
 
   const [fase, setFase] = useState<FaseSimulacro>("lista");
   const [abriendo, setAbriendo] = useState<string | null>(null);
@@ -105,7 +104,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
   );
 
   const items = useMemo(() => actual?.items ?? [], [actual]);
-  // Lo fija arrancar segun las horas escogidas (o lo que traiga el
+  // Lo fija arrancar segun los minutos por pregunta (o lo que traiga el
   // respaldo al retomar). Arranca en cero: no hay examen todavia.
   const [totalSegundos, setTotalSegundos] = useState(0);
   const [restante, setRestante] = useState(0);
@@ -182,12 +181,10 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     // las respuestas no calzarian con las preguntas.
     const sirve = desde && desde.respuestas.length === n && desde.fin > Date.now();
     // Al retomar manda el total que traia guardado el intento; al empezar
-    // de cero, lo fija el cuadernillo. El Simulacro 1 siempre son dos horas
-    // (120 s/item). El Simulacro 2 dura lo que el estudiante escoja: tres
-    // horas (180 s/item) o cuatro (240 s/item) para apoyo no significativo.
-    const segPorItem = cuadernillo.numero >= 2
-      ? (horas === 4 ? 240 : 180)
-      : SEGUNDOS_POR_ITEM;
+    // de cero, tres minutos por pregunta, o cuatro con la adecuacion.
+    const segPorItem = tiempoExtra
+      ? SEGUNDOS_ITEM_SIMULACRO_EXTRA
+      : SEGUNDOS_ITEM_SIMULACRO;
     const total = sirve ? desde.total : n * segPorItem;
     setActual(cuadernillo);
     setRespuestas(sirve ? [...desde.respuestas] : new Array(n).fill(null));
@@ -202,7 +199,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     // fallar y dejaria el intento anterior contado dos veces.
     cerradoRef.current = false;
     setFase("examen");
-  }, [horas]);
+  }, [tiempoExtra]);
 
   const abrir = useCallback(
     (slug: string, desde?: EnCurso) => {
@@ -390,8 +387,6 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     enCurso,
     retomar,
     descartarEnCurso,
-    horas,
-    elegirHoras: setHoras,
     fase,
     abriendo,
     errorAbrir,

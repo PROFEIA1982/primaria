@@ -525,109 +525,13 @@
   padding-top: 28px;
   padding-bottom: 8px;
 }
-
-/* --- Barra de apoyo ---
-   Agrandar la letra y subir el contraste del recuadro. Escuchar ya no
-   vive aca: se fue al item mismo (ItemRenderer), donde el estudiante
-   esta mirando. Tenerlo en los dos lados dejaba dos botones haciendo lo
-   mismo en la misma pantalla.
-
-   Contrastes calculados con la formula WCAG 2.1:
-                                              claro      oscuro
-   - --titulo sobre --background ............ 11.65 AAA  10.30 AAA
-   - --muted  sobre --secondary ..............  5.16 AA   7.82 AAA
-   - --primary-foreground sobre el acento ....  5.46 AA   7.69 AAA
-   - --border-fuerte sobre --background ......  3.50       6.09
-*/
-#practica-examen .examen-apoyo,
-#sim-examen .examen-apoyo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 18px;
-  padding: 10px 12px;
-  border: var(--borde-ancho) solid var(--border);
-  border-radius: var(--radius);
-  background: var(--secondary);
-}
-#practica-examen .apoyo-grupo,
-#sim-examen .apoyo-grupo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-#practica-examen .apoyo-rotulo,
-#sim-examen .apoyo-rotulo {
-  font-size: 0.82rem;
-  font-weight: 800;
-  /* Sin mayusculas sostenidas: borran la silueta de la palabra y frenan
-     la lectura (British Dyslexia Association, Style Guide 2023). */
-  color: var(--muted);        /* 5.16 sobre --secondary · AA */
-}
-#practica-examen .apoyo-boton,
-#sim-examen .apoyo-boton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  /* dedos de nino: el alto y el ancho minimos son de toque, no de adorno */
-  min-height: var(--toque-min);
-  min-width: var(--toque-min);
-  padding: 10px 14px;
-  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
-  border-radius: var(--radius-sm);
-  background: var(--background);
-  color: var(--titulo);       /* 11.65 sobre blanco · AAA */
-  font: inherit;
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1.2;
-  cursor: pointer;
-}
-#practica-examen .apoyo-boton svg,
-#sim-examen .apoyo-boton svg { flex: 0 0 auto; }
-/* Encendido = fondo del color de la materia + borde + la palabra que ya
-   trae el boton. El color nunca va solo. */
-#practica-examen .apoyo-boton[aria-pressed="true"],
-#sim-examen .apoyo-boton[aria-pressed="true"] {
-  background: var(--acento, var(--primary));
-  border-color: var(--acento, var(--primary));
-  color: var(--primary-foreground);   /* 5.46 el mas bajo sobre los acentos */
-}
-/* El foco se separa 3px para que el aro azul caiga sobre el fondo claro y
-   no encima del boton ya pintado del color de la materia. */
-#practica-examen .apoyo-boton:focus-visible,
-#sim-examen .apoyo-boton:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 3px;
-}
 @media (hover: hover) {
-  #practica-examen .apoyo-boton,
-#sim-examen .apoyo-boton { transition: transform 0.15s ease; }
-  #practica-examen .apoyo-boton:hover,
-#sim-examen .apoyo-boton:hover { transform: translateY(-2px); }
 }
 /* En celular la barra se comia media pantalla antes de la pregunta. Se
    aprieta el relleno y se quita el rotulo "Texto", que es adorno: el grupo
    ya se llama "Tamano del texto" para el lector de pantalla. El alto de
    toque se queda en 48px, eso no se negocia. */
 @media (max-width: 479px) {
-  #practica-examen .examen-apoyo,
-#sim-examen .examen-apoyo { gap: 8px; padding: 8px; }
-  #practica-examen .apoyo-rotulo,
-#sim-examen .apoyo-rotulo { display: none; }
-  /* los botones se reparten el ancho de su fila: sin esto la barra queda
-     con el borde derecho dentado */
-  #practica-examen .apoyo-boton,
-#sim-examen .apoyo-boton {
-    flex: 1 1 auto;
-    padding: 8px 10px;
-    font-size: 0.88rem;
-  }
-  #practica-examen .apoyo-grupo,
-#sim-examen .apoyo-grupo { flex: 1 1 100%; }
 
   /* La barra del reloj tambien se aprieta. Medido en un celular de 360x800:
      entre el menu y esta barra se iban 178px de 800, mas de un quinto de la
@@ -1072,10 +976,6 @@
   #practica-seleccion .sel-tema:hover { transform: none; }
   #practica-examen .examen-barrita span,
 #sim-examen .examen-barrita span { transition: none; }
-  #practica-examen .apoyo-boton,
-#sim-examen .apoyo-boton { transition: none; }
-  #practica-examen .apoyo-boton:hover,
-#sim-examen .apoyo-boton:hover { transform: none; }
 }
 
 @media (forced-colors: active) {
@@ -1090,12 +990,6 @@
   #practica-seleccion .sel-instruccion { border: 1px solid ButtonText; }
   #practica-examen .examen-reloj,
 #sim-examen .examen-reloj { border: 2px solid ButtonText; }
-  #practica-examen .examen-apoyo,
-#sim-examen .examen-apoyo { border: 1px solid ButtonText; }
-  #practica-examen .apoyo-boton,
-#sim-examen .apoyo-boton { border: 2px solid ButtonText; }
-  #practica-examen .apoyo-boton[aria-pressed="true"],
-#sim-examen .apoyo-boton[aria-pressed="true"] { border: 3px solid Highlight; }
   #practica-examen .examen-barrita span,
 #sim-examen .examen-barrita span { background: Highlight; }
   #practica-resultados .res-tarjeta,

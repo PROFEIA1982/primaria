@@ -21,7 +21,7 @@ type Props = {
 // Pantalla 3: la nota, el desglose por tema y las que fallo. Sin
 // explicaciones didacticas: eso lo trabaja con su maestra.
 export default function ResultadosPanel({ nombreMateria, practica }: Props) {
-  const { calificacion, seAcaboElTiempo, volverAPracticar } = practica;
+  const { calificacion, volverAPracticar } = practica;
   const { nota, aciertos, total, respondidas, sinResponder, porTema, falladas } = calificacion;
 
   const nivel = nivelNota(nota);
@@ -47,7 +47,6 @@ export default function ResultadosPanel({ nombreMateria, practica }: Props) {
         <p className="res-aviso">
           <CircleAlert size={20} strokeWidth={2} aria-hidden="true" />
           <span>
-            {seAcaboElTiempo ? "Se te acabó el tiempo. " : ""}
             Quedaron <strong>{sinResponder}</strong>{" "}
             {sinResponder === 1 ? "pregunta sin responder" : "preguntas sin responder"} y
             cuentan como malas. Eso pasa. Probá con menos preguntas la próxima y

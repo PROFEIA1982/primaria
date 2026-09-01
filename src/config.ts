@@ -58,6 +58,14 @@ export function waLink(texto: string, numero: string = WA_NUMERO): string {
 // una practica de 60 items dura tres horas y ningun chiquito la termina.
 export const SEGUNDOS_POR_ITEM = 120;
 
+// El simulacro corre a TRES minutos por item, parejo para todos los
+// cuadernillos: 60 preguntas son 3 horas. Antes cada cuadernillo tenia su
+// duracion y ademas se le preguntaba al estudiante si queria 3 o 4 horas,
+// que era una decision de mas antes de arrancar. Los cuatro minutos siguen
+// disponibles como adecuacion, en el panel de accesibilidad.
+export const SEGUNDOS_ITEM_SIMULACRO = 180;
+export const SEGUNDOS_ITEM_SIMULACRO_EXTRA = 240;
+
 // Las cantidades que puede elegir el estudiante.
 export const CANTIDADES = [10, 20, 30, 60] as const;
 
@@ -85,25 +93,3 @@ export const MATERIAS = [
 
 export type SlugMateria = (typeof MATERIAS)[number]["slug"];
 
-// Lo que dice la tarjeta de instrucciones de cada materia. La cantidad de
-// preguntas y el tiempo salen de los datos (no se escriben aca), pero el
-// "foco" (que tipo de prueba es) y el "hacer" (que hace el chiquito) cambian
-// segun la materia. Sin siglas ni promesas: solo lo que de verdad va a hacer.
-export const GUIA_MATERIA: Record<SlugMateria, { foco: string; hacer: string }> = {
-  espanol: {
-    foco: "Comprensión de lectura",
-    hacer: "Leés un texto y respondés preguntas sobre lo que dice.",
-  },
-  "estudios-sociales": {
-    foco: "Geografía, historia y cívica",
-    hacer: "Leés un texto corto sobre Costa Rica y respondés lo que entendiste.",
-  },
-  ciencias: {
-    foco: "Comprensión de ciencias",
-    hacer: "Leés una situación de ciencias y escogés la respuesta correcta.",
-  },
-  matematicas: {
-    foco: "Resolución de problemas",
-    hacer: "Resolvés un problema con números, figuras o datos.",
-  },
-};

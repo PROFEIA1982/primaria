@@ -24,7 +24,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
   Accessibility, ALargeSmall, ChevronDown, Contrast, Eye,
-  Moon, Palette, Sun, Volume2, VolumeX,
+  Hourglass, Moon, Palette, Sun, Volume2, VolumeX,
 } from "lucide-react";
 import { useApariencia } from "../lib/apariencia";
 import "./Accesibilidad.css";
@@ -100,10 +100,10 @@ function FilaAjuste({
 /** Hay algo puesto que no es lo de fabrica. Sirve para marcar el boton
  *  con un punto y que se note sin tener que abrir el panel. */
 export function useHayAjustes(): boolean {
-  const { tema, vision, color, texto, voz } = useApariencia();
+  const { tema, vision, color, texto, voz, tiempoExtra } = useApariencia();
   return (
     tema === "oscuro" || vision === "alto" || color !== "normal" ||
-    texto !== "normal" || !voz
+    texto !== "normal" || !voz || tiempoExtra
   );
 }
 
@@ -112,8 +112,9 @@ export function useHayAjustes(): boolean {
 // el modo oscuro.
 export function PanelAccesibilidad({ id, abierto }: { id: string; abierto: boolean }) {
   const {
-    tema, vision, color, texto, voz,
+    tema, vision, color, texto, voz, tiempoExtra,
     alternarTema, alternarVision, ponerColor, ciclarTexto, alternarVoz,
+    alternarTiempoExtra,
   } = useApariencia();
 
   const nombreTexto =
@@ -176,10 +177,21 @@ export function PanelAccesibilidad({ id, abierto }: { id: string; abierto: boole
           encendido={voz}
           onClick={alternarVoz}
         />
+        {/* La adecuacion de tiempo vive aca y no en la pantalla del
+            simulacro: se pone una sola vez, queda guardada, y el estudiante
+            no tiene que declararla cada vez delante de quien este al lado. */}
+        <FilaAjuste
+          icono={<Hourglass size={19} strokeWidth={2.2} />}
+          nombre="Más tiempo en el simulacro"
+          estado={tiempoExtra ? "Activado" : "Desactivado"}
+          encendido={tiempoExtra}
+          onClick={alternarTiempoExtra}
+        />
       </ul>
 
       <p className="ax-nota">
-        Con la lectura activada, cada pregunta trae un botón «Escuchar».
+        Con la lectura activada, cada pregunta trae un botón «Escuchar». Con más
+        tiempo, el simulacro pasa de 3 a 4 horas.
       </p>
     </div>
   );

@@ -22,8 +22,6 @@
   box-shadow: var(--sombra);
   padding: clamp(16px, 4vw, 28px);
 }
-.ps-item[data-tamano="grande"] { --item-fuente: 1.25rem; }
-.ps-item[data-tamano="mayor"]  { --item-fuente: 1.55rem; }
 
 /* --- Boton de escuchar ---
    Va en la esquina de arriba del recuadro, discreto: no compite con el
@@ -356,52 +354,6 @@
 .ps-item .item-opcion[aria-checked="true"]:not([data-estado]) .item-marca {
   color: var(--success);
 }
-
-/* --- Modo de mas contraste ---
-   Texto y bordes en tinta, la letra de la opcion en blanco sobre negro y
-   en negrita. Todo lo de aca pasa AAA (17.40, 15.62 y 15.87 arriba). */
-.ps-item[data-contraste="alto"] {
-  border: 2px solid var(--foreground);
-  color: var(--foreground);
-}
-.ps-item[data-contraste="alto"] .item-enunciado { font-weight: 600; }
-.ps-item[data-contraste="alto"] .item-enunciado blockquote {
-  border-left-color: var(--foreground);
-}
-.ps-item[data-contraste="alto"] .item-opcion {
-  border-width: 3px;
-  border-color: var(--foreground);
-  color: var(--foreground);
-  font-weight: 600;
-}
-.ps-item[data-contraste="alto"] .item-letra {
-  background: var(--foreground);
-  color: var(--background);
-  font-weight: 900;
-}
-/* Correcta e incorrecta guardan su borde de color (va despues de la regla
-   de arriba, si no la tinta se lo comia) y el texto pasa a tinta: sobre
-   los fondos suaves da 15.62 y 15.87, o sea AAA. */
-.ps-item[data-contraste="alto"] .item-opcion[aria-checked="true"]:not([data-estado]) {
-  border-color: var(--foreground);
-  background: var(--secondary);
-}
-.ps-item[data-contraste="alto"] .item-opcion[aria-checked="true"]:not([data-estado]) .item-letra {
-  background: var(--foreground);
-  color: var(--background);
-}
-.ps-item[data-contraste="alto"] .item-opcion[aria-checked="true"]:not([data-estado]) .item-marca {
-  color: var(--foreground);
-}
-.ps-item[data-contraste="alto"] .item-opcion[data-estado="correcta"] {
-  border-color: var(--success);
-  color: var(--foreground);
-}
-.ps-item[data-contraste="alto"] .item-opcion[data-estado="incorrecta"] {
-  border-color: var(--error);
-  color: var(--foreground);
-}
-.ps-item[data-contraste="alto"] .item-marca { font-weight: 900; }
 
 @media (forced-colors: active) {
   .ps-item .item-escuchar { border: 2px solid ButtonText; }
