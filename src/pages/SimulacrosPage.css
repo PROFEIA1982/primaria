@@ -169,10 +169,21 @@
 .sim-pista a { color: var(--enlace); }
 
 /* --- Lista: los tres cuadernillos de la materia --- */
+/* Los cuadernillos van APILADOS y en una columna angosta, no lado a lado
+   a todo el ancho.
+   El hueco de esta pagina no era falta de contenido: era dos tarjetas
+   chicas repartidas en mil doscientos pixeles, que dejaban un vacio de
+   cuatrocientos abajo. Llenarlo con adorno habria sido peor -- el
+   metaanalisis de "detalles seductores" (Sundararajan y Adesope, 2020,
+   Educational Psychology Review) encontro que los adornos irrelevantes
+   PERJUDICAN el aprendizaje. Asi que en vez de agregar, se recompone: la
+   columna se angosta a la misma medida de lectura que usa el examen, cada
+   cuadernillo ocupa todo su ancho y crece, y el aire que queda alrededor
+   se lee como margen y no como hueco. */
 .sim-lista {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
+  gap: 16px;
+  max-width: 46rem;
   list-style: none;
   margin: 0 0 20px;
   padding: 0;
@@ -180,9 +191,9 @@
 .sim-tarjeta {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   height: 100%;
-  padding: 20px;
+  padding: 24px 26px;
   border: var(--borde-ancho-fuerte) solid var(--border);
   border-radius: var(--radius);
   background: var(--background);
@@ -759,6 +770,7 @@
    - --muted sobre --background ........  5.60 claro ·  8.30 oscuro · AA
    - --acento sobre --background .......  5.46 el más bajo (Español) · AA */
 #sim-lista .sim-reglas {
+  max-width: 46rem;
   display: grid;
   gap: 14px;
   margin: 0 0 24px;
@@ -788,4 +800,31 @@
 @media (forced-colors: active) {
   #sim-lista .sim-reglas { border: 1px solid ButtonText; }
   #sim-lista .sim-reglas p { border-left: 3px solid ButtonText; }
+}
+
+/* Toda la pagina de simulacros vive en la misma columna: titulo,
+   pestañas, reglas y cuadernillos alineados a la misma medida. Antes el
+   titulo y las pestañas iban a mil doscientos y las tarjetas quedaban
+   flotando debajo, sin un borde comun donde apoyarse. */
+#sim-lista h1,
+#sim-lista .mat-pestanas,
+#sim-lista .sim-retomar { max-width: 46rem; }
+
+/* El cierre: que pasa cuando termina. Es lo unico que le faltaba saber a
+   esta pagina y ademas apoya la ultima tarjeta, para que no quede
+   colgando sobre el vacio. */
+#sim-lista .sim-cierre {
+  max-width: 46rem;
+  margin: 0;
+  padding: 16px 20px;
+  border-left: 3px solid var(--acento, var(--primary));
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--secondary);
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: var(--muted);   /* 5.16 sobre --secondary claro · 7.62 oscuro · AA */
+}
+#sim-lista .sim-cierre strong { color: var(--foreground); font-weight: 800; }
+@media (forced-colors: active) {
+  #sim-lista .sim-cierre { border-left: 3px solid ButtonText; }
 }
