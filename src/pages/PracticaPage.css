@@ -1134,8 +1134,11 @@
   gap: 6px 32px;
   grid-template-columns: 1fr;
   align-items: center;
-  padding-top: clamp(26px, 4.5vw, 44px);
-  padding-bottom: clamp(26px, 4.5vw, 44px);
+  /* Bajo a proposito. El hero es un rotulo, no un afiche: lo que el
+     chiquito viene a hacer empieza debajo, y cada pixel de aqui es un
+     pixel que empuja la primera decision fuera de la pantalla. */
+  padding-top: clamp(18px, 3vw, 30px);
+  padding-bottom: clamp(18px, 3vw, 30px);
 }
 @media (min-width: 800px) {
   #practica-hero .hero-caja { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
@@ -1173,7 +1176,7 @@
   display: block;
   width: 100%;
   height: auto;
-  max-height: 230px;
+  max-height: 168px;
   padding: 10px;
   border-radius: var(--radius);
   background: var(--arte, transparent);
@@ -1205,30 +1208,25 @@
   #practica-hero .hero-chip { border: 2px solid ButtonText; }
 }
 
-/* --- Interruptor del reloj de la practica ---
-   Arranca apagado a proposito: ver el comentario en usePractica.
+/* --- Renglon fino del final ---
+   Lo que antes eran tres tarjetas de instrucciones (nueve lineas de texto
+   que, medido por Nielsen Norman Group, los chiquitos de 8 a 12 anos se
+   saltan) quedo en un renglon debajo del boton, con el interruptor del
+   reloj al lado.
    Contrastes (tokens de src/index.css):
-   - --foreground sobre --background ...... 17.40 claro · 14.05 oscuro · AAA
    - --muted sobre --background ...........  5.60 claro ·  8.30 oscuro · AA
    - --primary-foreground sobre --primary .  8.59 claro ·  9.12 oscuro · AAA */
-#practica-seleccion .sel-reloj {
+#practica-seleccion .sel-fino {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
-  margin-top: 22px;
-  padding: 14px 16px;
-  border: var(--borde-ancho) solid var(--border);
-  border-radius: var(--radius);
+  justify-content: center;
+  gap: 10px 16px;
+  margin: 16px 0 0;
+  font-size: 0.93rem;
+  color: var(--muted);
+  text-align: center;
 }
-#practica-seleccion .sel-reloj-texto {
-  flex: 1 1 240px;
-  min-width: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-#practica-seleccion .sel-reloj-texto strong { display: block; font-weight: 800; }
-#practica-seleccion .sel-reloj-texto > span { color: var(--muted); }
 #practica-seleccion .sel-reloj-boton {
   display: inline-flex;
   align-items: center;
@@ -1256,4 +1254,109 @@
 @media (forced-colors: active) {
   #practica-seleccion .sel-reloj-boton { border: 2px solid ButtonText; }
   #practica-seleccion .sel-reloj-boton[aria-pressed="true"] { border: 3px solid Highlight; }
+}
+
+/* --- Aire entre el hero y las dos pestañas ---
+   Sin esto las tarjetas de Practicar y Simulacro nacen pegadas al borde de
+   la banda de color del hero y se leen como parte de el. */
+.mat-pestanas-caja { padding-top: 22px; }
+@media (min-width: 700px) { .mat-pestanas-caja { padding-top: 28px; } }
+
+/* --- Desplegable de temas ---
+   Arranca cerrado: practicar todos los temas es lo normal y es lo que mas
+   se parece a la prueba. Ocho tarjetas de colores a la vista, antes de la
+   primera decision, era ruido sin significado. */
+#practica-seleccion .sel-abrir-temas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-height: var(--toque-min);
+  margin-top: 8px;
+  padding: 10px 14px;
+  border: var(--borde-ancho) solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+#practica-seleccion .sel-abrir-temas:hover {
+  border-color: var(--border-fuerte);
+  background: var(--secondary);
+}
+#practica-seleccion .sel-flecha { flex: none; transition: transform 0.18s ease; }
+#practica-seleccion .sel-flecha[data-abierto="si"] { transform: rotate(180deg); }
+
+#practica-seleccion .sel-lista-temas {
+  display: grid;
+  gap: 2px;
+  margin-top: 6px;
+  padding: 6px;
+  border: var(--borde-ancho) solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--secondary);
+}
+#practica-seleccion .sel-tema-fila {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: var(--toque-min);
+  padding: 8px 12px;
+  border-left: 3px solid transparent;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--foreground);
+  font-weight: 600;
+  cursor: pointer;
+}
+/* El radio de verdad sigue ahi para el teclado y el lector de pantalla;
+   se le quita el dibujo nada mas. */
+#practica-seleccion .sel-tema-fila input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+#practica-seleccion .sel-tema-fila:hover { background: var(--background); }
+/* Escogido: barra a la izquierda + fondo + negrita. Tres senales; en modo
+   daltonismo o escala de grises se sigue viendo cual es. */
+#practica-seleccion .sel-tema-fila:has(input:checked) {
+  border-left-color: var(--acento, var(--primary));
+  background: var(--background);
+  color: var(--acento, var(--primary));
+  font-weight: 800;
+}
+#practica-seleccion .sel-tema-fila:has(input:focus-visible) {
+  outline: 3px solid var(--primary);
+  outline-offset: -2px;
+}
+/* Nombre propio para la lista, distinto del de las tarjetas viejas: esas
+   reglas no estaban acotadas a .sel-tema y le pegaban a esta lista. */
+#practica-seleccion .sel-fila-nombre {
+  font-size: 0.98rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+#practica-seleccion .sel-fila-cuenta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+#practica-seleccion .sel-tema-fila:has(input:checked) .sel-fila-cuenta {
+  color: var(--acento, var(--primary));
+}
+
+@media (forced-colors: active) {
+  #practica-seleccion .sel-abrir-temas { border: 2px solid ButtonText; }
+  #practica-seleccion .sel-lista-temas { border: 2px solid ButtonText; }
+  #practica-seleccion .sel-tema-fila:has(input:checked) { border-left: 4px solid Highlight; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #practica-seleccion .sel-flecha { transition: none; }
 }

@@ -1,4 +1,5 @@
-import { Check, CircleAlert, Clock, EyeOff, ListChecks, Play, Timer, TimerOff } from "lucide-react";
+import { useId, useState } from "react";
+import { Check, ChevronDown, CircleAlert, Play, Timer, TimerOff } from "lucide-react";
 import { CANTIDADES, SEGUNDOS_POR_ITEM } from "../../config";
 import { ErrorCarga } from "../Estados";
 import { tiempoLargo } from "./calificar";
@@ -9,29 +10,34 @@ type Props = {
   practica: Practica;
 };
 
-// Las tres cosas que un chiquito de doce anios pregunta antes de empezar:
-// que hago, cuanto dura y quien ve mi nota. Van arriba y en tarjetas, porque
-// un parrafo de instrucciones nadie lo lee.
-const INSTRUCCIONES = [
-  {
-    icono: ListChecks,
-    titulo: "Escogé y practicá",
-    texto: "Elegís un tema y contestás preguntas como las de la prueba.",
-  },
-  {
-    icono: Clock,
-    titulo: "Sin apuro",
-    texto: "Si querés medirte contra el reloj, lo prendés abajo.",
-  },
-  {
-    icono: EyeOff,
-    titulo: "Tu nota no se guarda",
-    texto: "Nadie la ve y podés repetir las veces que querás.",
-  },
-];
+// ============================================================
+// Pantalla 1: escoger y arrancar.
+//
+// Esta pantalla estuvo recargada y se rehizo con la cuenta en la mano.
+// Antes de contestar la primera pregunta, un chiquito veia: tres tarjetas
+// de instrucciones, una banda de "todos los temas", ocho tarjetas de tema
+// cada una de un color pastel distinto, cuatro tarjetas de cantidad y una
+// tarjeta de reloj de tres lineas. Veinte cajas y cinco titulos.
+//
+// La memoria de trabajo a los once o doce anos ronda las TRES unidades
+// (Cowan, 2012), o sea lo mismo que la de un adulto. Veinte cajas no es
+// generosidad: es ruido, y con un estudiante con deficit atencional o del
+// espectro es directamente una barrera.
+//
+// Lo que quedo, y por que:
+//   · Las tres tarjetas de instrucciones se fueron. Nielsen Norman Group
+//     tiene medido que de 8 a 12 anos ya escanean como adultos y SALTAN los
+//     bloques de instrucciones. Lo que decian cabe en un renglon al final.
+//   · Los temas arrancan cerrados. Practicar todo es lo normal y es lo que
+//     mas se parece a la prueba; quien quiera afinar, abre la lista.
+//   · Se fueron los ocho colores pastel. Colores que no significan nada son
+//     ruido: el color se guarda para lo que si dice algo (correcto,
+//     incorrecto, escogido).
+//   · El reloj bajo de tarjeta a renglon.
+//
+// Quedan TRES decisiones a la vista: que tema, cuantas, y arrancar.
+// ============================================================
 
-// Pantalla 1: se escoge tema y cantidad. Nada mas. Entre menos decisiones,
-// mas rapido se pone a practicar el estudiante.
 export default function SeleccionPanel({ nombreMateria, practica }: Props) {
   const {
     temas,
@@ -50,6 +56,11 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
     aceptarLasQueHay,
   } = practica;
 
+  // La lista arranca cerrada. Se abre sola si ya venia un tema escogido,
+  // para que quien vuelve de una practica no crea que se le perdio.
+  const [temasAbiertos, setTemasAbiertos] = useState(temaSel !== null);
+  const idLista = useId();
+
   const nombreTemaSel = temas.find((t) => t.id === temaSel)?.nombre ?? null;
   // Cuantas preguntas hay para lo que tiene escogido ahora mismo. Si el
   // conteo por tema no cargo, queda en null y no se inventa ningun numero.
@@ -60,26 +71,9 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
 
   return (
     <>
-      <ul className="sel-instrucciones" aria-label="Cómo funciona la práctica">
-        {INSTRUCCIONES.map(({ icono: Icono, titulo, texto }) => (
-          <li className="sel-instruccion" key={titulo}>
-            <span className="sel-instruccion-icono" aria-hidden="true">
-              <Icono size={22} strokeWidth={2} />
-            </span>
-            <span className="sel-instruccion-texto">
-              <strong>{titulo}</strong>
-              {texto}
-            </span>
-          </li>
-        ))}
-      </ul>
-
       <fieldset className="sel-grupo">
-        <legend>¿De qué tema querés practicar?</legend>
+        <legend>¿Qué vas a practicar?</legend>
 
-        {/* "Todos los temas" sale del enrejado y se pone de banda ancha: es
-            la opcion por omision y, metida entre las demas, quedaba una
-            tarjeta estirada que descuadraba toda la fila. */}
         <label className="sel-todos">
           <input
             type="radio"
@@ -100,63 +94,75 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
         </label>
 
         {temas.length > 0 && (
-          <div className="sel-temas">
-            {temas.map((t, i) => {
-              const cuantas = conteoPorTema[t.id];
-              return (
-                // El tono se reparte por posicion, no por tema: es adorno para que
-                // la rejilla se vea alegre y no informa nada por si solo.
-                <label className="sel-tema" data-tono={i % 4} key={t.id}>
-                  <input
-                    type="radio"
-                    name="practica-tema"
-                    checked={temaSel === t.id}
-                    onChange={() => elegirTema(t.id)}
-                  />
-                  <span className="sel-marca" aria-hidden="true">
-                    <Check size={17} strokeWidth={3.2} />
-                  </span>
-                  <span className="sel-tema-nombre">{t.nombre}</span>
-                  {/* El conteo se ancla abajo aunque el nombre ocupe una o tres
-                      lineas: asi todas las tarjetas cierran a la misma altura. */}
-                  <span className="sel-tema-cuenta">
-                    {cuantas === undefined
-                      ? "Practicá este tema"
-                      : `${cuantas} ${cuantas === 1 ? "pregunta" : "preguntas"}`}
-                  </span>
-                </label>
-              );
-            })}
-          </div>
-        )}
-        {temas.length === 0 && (
-          <p className="sel-pista">
-            Esta materia todavía no está separada por temas. Practicá con todas
-            las preguntas y ya.
-          </p>
+          <>
+            <button
+              type="button"
+              className="sel-abrir-temas"
+              aria-expanded={temasAbiertos}
+              aria-controls={idLista}
+              onClick={() => setTemasAbiertos((v) => !v)}
+            >
+              {nombreTemaSel ? `Tema: ${nombreTemaSel}` : "Escoger un tema"}
+              <ChevronDown
+                size={20}
+                strokeWidth={2.4}
+                aria-hidden="true"
+                className="sel-flecha"
+                data-abierto={temasAbiertos ? "si" : "no"}
+              />
+            </button>
+
+            {/* Lista calmada, todos del mismo color. Lo escogido se marca con
+                la barra de la izquierda, el fondo y la negrita: tres senales,
+                ninguna de ellas solo el color. */}
+            <div className="sel-lista-temas" id={idLista} hidden={!temasAbiertos}>
+              {temas.map((t) => {
+                const cuantas = conteoPorTema[t.id];
+                return (
+                  <label className="sel-tema-fila" key={t.id}>
+                    <input
+                      type="radio"
+                      name="practica-tema"
+                      checked={temaSel === t.id}
+                      onChange={() => elegirTema(t.id)}
+                    />
+                    <span className="sel-fila-nombre">{t.nombre}</span>
+                    <span className="sel-fila-cuenta">
+                      {cuantas === undefined ? "" : cuantas}
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
+          </>
         )}
       </fieldset>
 
       <fieldset className="sel-grupo">
-        <legend>¿Cuántas preguntas querés hacer?</legend>
-        <div className="sel-panel">
-          <div className="sel-cantidades">
-            {CANTIDADES.map((n) => (
-              <label className="sel-cantidad" key={n}>
-                <input
-                  type="radio"
-                  name="practica-cantidad"
-                  checked={cantidad === n}
-                  onChange={() => elegirCantidad(n)}
-                />
-                <span className="sel-cantidad-marca" aria-hidden="true">
-                  <Check size={14} strokeWidth={3.2} />
-                </span>
-                <span className="sel-num">{n}</span>
-                <span className="sel-tiempo">{tiempoLargo(n * SEGUNDOS_POR_ITEM)}</span>
-              </label>
-            ))}
-          </div>
+        <legend>¿Cuántas?</legend>
+        <div className="sel-cantidades">
+          {CANTIDADES.map((n) => (
+            <label className="sel-cantidad" key={n}>
+              <input
+                type="radio"
+                name="practica-cantidad"
+                checked={cantidad === n}
+                onChange={() => elegirCantidad(n)}
+              />
+              <span className="sel-cantidad-marca" aria-hidden="true">
+                <Check size={14} strokeWidth={3.2} />
+              </span>
+              <span className="sel-num">{n}</span>
+              {/* Con el reloj puesto el tiempo es un limite; sin reloj es apenas
+                  un calculo de cuanto le va a tomar. La palabra cambia para no
+                  prometer un limite que no existe. */}
+              <span className="sel-tiempo">
+                {conReloj
+                  ? tiempoLargo(n * SEGUNDOS_POR_ITEM)
+                  : `como ${tiempoLargo(n * SEGUNDOS_POR_ITEM)}`}
+              </span>
+            </label>
+          ))}
         </div>
       </fieldset>
 
@@ -174,31 +180,6 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
         </p>
       )}
 
-      {/* El reloj arranca apagado. Khan Academy, IXL y Google Forms no ponen
-          cuenta regresiva cuando el estudiante esta estudiando: el reloj es de
-          las apps de competencia. Quien se quiere medir lo prende, y queda
-          guardado para la proxima. El simulacro lo trae siempre. */}
-      <div className="sel-reloj">
-        <span className="sel-reloj-texto">
-          <strong>Poner reloj</strong>
-          <span>
-            Apagado practicás con calma. El <strong>simulacro</strong> siempre
-            lleva reloj, como el día de la prueba.
-          </span>
-        </span>
-        <button
-          type="button"
-          className="sel-reloj-boton"
-          aria-pressed={conReloj}
-          onClick={alternarReloj}
-        >
-          {conReloj
-            ? <Timer size={20} strokeWidth={2.2} aria-hidden="true" />
-            : <TimerOff size={20} strokeWidth={2.2} aria-hidden="true" />}
-          {conReloj ? "Encendido" : "Apagado"}
-        </button>
-      </div>
-
       <div className="sel-arranque">
         <button
           type="button"
@@ -210,6 +191,22 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
           {preparando ? "Preparando…" : "¡Empezar!"}
         </button>
       </div>
+
+      {/* Lo que antes eran tres tarjetas, en un renglon. */}
+      <p className="sel-fino">
+        <span>Tu nota no se guarda y podés repetir las veces que querás.</span>
+        <button
+          type="button"
+          className="sel-reloj-boton"
+          aria-pressed={conReloj}
+          onClick={alternarReloj}
+        >
+          {conReloj
+            ? <Timer size={19} strokeWidth={2.2} aria-hidden="true" />
+            : <TimerOff size={19} strokeWidth={2.2} aria-hidden="true" />}
+          {conReloj ? "Con reloj" : "Sin reloj"}
+        </button>
+      </p>
 
       {errorSorteo && (
         <ErrorCarga

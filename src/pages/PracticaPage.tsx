@@ -129,7 +129,7 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
         </div>
       </section>
 
-      <div className="ps-contenedor" style={acento}>
+      <div className="ps-contenedor mat-pestanas-caja" style={acento}>
         <PestanasMateria slug={datos.slug} actual="practicar" />
       </div>
 
