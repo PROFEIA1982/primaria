@@ -1326,3 +1326,77 @@
 @media (forced-colors: active) {
   #practica-examen .examen-atras { border: 2px solid ButtonText; }
 }
+
+/* --- Tarjeta para retomar la practica a medias (pantalla 1) ---
+   Una practica de sesenta preguntas no se hace de una sentada y la
+   pestana se cierra sola en cualquier celular. Lo que quedo a medias se
+   pinta arriba del todo, antes del grupo de escoger tema: es lo primero
+   que el chiquito viene a buscar cuando vuelve, y si aparece despues de
+   los temas no lo ve. Se distingue con borde ambar + fondo de tarjeta +
+   titulo con icono; nunca solo con el color.
+
+   Contrastes (tokens de src/index.css):              claro       oscuro
+   - --accent-fuerte sobre --secondary .......  4.62 AA    8.26 AAA
+   - --foreground    sobre --secondary ....... 16.03 AAA  11.64 AAA
+   - --foreground    sobre --background ...... 17.40 AAA  14.05 AAA
+   - --border-fuerte sobre --background ......  3.50       6.03   borde
+   Los dos botones llevan blanco de toque de 48 px (--toque-min): el de
+   seguir por .ps-boton, el de descartar aca abajo. */
+#practica-seleccion .sel-retomar {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border: var(--borde-ancho-fuerte) solid var(--accent-fuerte);
+  border-radius: var(--radius);
+  background: var(--secondary);
+}
+#practica-seleccion .sel-retomar h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--accent-fuerte);
+}
+#practica-seleccion .sel-retomar h2 svg { flex: none; }
+#practica-seleccion .sel-retomar p {
+  margin: 0 0 14px;
+  color: var(--foreground);
+}
+#practica-seleccion .sel-retomar-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+/* "Empezar de cero" es de borde, no de relleno: no compite con seguir,
+   que es lo que el chiquito casi siempre quiere. */
+#practica-seleccion .sel-descartar {
+  min-height: var(--toque-min);
+  padding: 0 18px;
+  border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+#practica-seleccion .sel-descartar:hover { background: var(--secondary); }
+#practica-seleccion .sel-descartar:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+/* En celular se apilan a lo ancho: mas facil de acertar con el pulgar
+   que dos botones angostos peleando la misma linea. */
+@media (max-width: 559px) {
+  #practica-seleccion .sel-retomar-botones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* En alto contraste el fondo y el borde de color se pierden: la tarjeta
+   y el boton se quedan con bordes del sistema para no desaparecer. */
+@media (forced-colors: active) {
+  #practica-seleccion .sel-retomar { border: 2px solid ButtonText; }
+  #practica-seleccion .sel-descartar { border: 2px solid ButtonText; }
+}

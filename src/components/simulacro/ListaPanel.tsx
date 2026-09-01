@@ -27,7 +27,7 @@ type Props = {
 export default function ListaPanel({ nombreMateria, simulacros }: Props) {
   const {
     estadoLista, recargar, lista, marcas, abriendo, errorAbrir, empezar,
-    enCurso, retomar, descartarEnCurso,
+    enCurso, enCursoVencido, enCursoRespondidas, retomar, descartarEnCurso,
   } = simulacros;
   // La duracion sale de la cuenta, no escrita a mano: son tres minutos por
   // pregunta, o cuatro con la adecuacion puesta. Decia "3 horas" fijo, que
@@ -75,11 +75,24 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
         <section className="sim-retomar" aria-labelledby="sim-retomar-titulo">
           <h2 id="sim-retomar-titulo">
             <PlayCircle size={22} strokeWidth={2.2} aria-hidden="true" />
-            Dejaste el {enCurso.titulo} a medias
+            {enCursoVencido
+              ? `Se te acabó el tiempo del ${enCurso.titulo}`
+              : `Dejaste el ${enCurso.titulo} a medias`}
           </h2>
           <p>
-            Se guardó en este aparato. Podés seguirlo donde ibas, con el tiempo
-            que te quedaba.
+            {enCursoVencido ? (
+              <>
+                Alcanzaste a contestar <strong>{enCursoRespondidas}</strong> de{" "}
+                {enCurso.cantidad}. Ese trabajo no se perdió: mirá cómo te fue y
+                qué fallaste.
+              </>
+            ) : (
+              <>
+                Llevás <strong>{enCursoRespondidas}</strong> de {enCurso.cantidad}{" "}
+                y se guardó en este aparato. Seguí donde ibas, con el tiempo que
+                te quedaba.
+              </>
+            )}
           </p>
           <div className="sim-retomar-botones">
             <button
@@ -88,14 +101,27 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
               onClick={() => { ultimoRef.current = enCurso.slug; retomar(); }}
               aria-busy={abriendo === enCurso.slug}
             >
-              {abriendo === enCurso.slug ? "Preparando…" : "Seguir donde iba"}
+              {abriendo === enCurso.slug
+                ? "Preparando…"
+                : enCursoVencido ? "Ver cómo me fue" : "Seguir donde iba"}
             </button>
             <button type="button" className="sim-descartar" onClick={descartarEnCurso}>
-              Empezar de cero
+              {enCursoVencido ? "Descartarlo" : "Empezar de cero"}
             </button>
           </div>
         </section>
       )}
+
+      {/* Las tres reglas del simulacro, arriba y en una sola pasada. Van
+          aca y no repetidas dentro de cada tarjeta: son iguales para los
+          dos cuadernillos y decirlas dos veces es relleno.
+          Tres, no diez: de 8 a 12 anos los bloques largos de instrucciones
+          se los saltan (Nielsen Norman Group, Children's UX). */}
+      <section className="sim-reglas" aria-label="Cómo funciona el simulacro">
+        <p><strong>Todas de corrido, con reloj.</strong> Como el día de la prueba.</p>
+        <p><strong>Podés devolverte.</strong> Cambiás lo que querás hasta entregar.</p>
+        <p><strong>No se pierde.</strong> Si se cierra la pestaña, seguís donde ibas.</p>
+      </section>
 
       {/* role="list" explicito: con list-style:none, Safari y VoiceOver le
           quitan la semantica de lista. */}

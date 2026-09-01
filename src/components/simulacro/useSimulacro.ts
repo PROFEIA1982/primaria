@@ -28,7 +28,8 @@ import {
   type Respuestas,
 } from "../practica/calificar";
 import {
-  borrarEnCurso, guardarEnCurso, guardarIntento, leerEnCurso, leerMarcas,
+  borrarEnCurso, estaVencido, guardarCuadernillo, guardarEnCurso,
+  guardarIntento, leerCuadernillo, leerEnCurso, leerMarcas,
   type EnCurso, type MarcaSimulacro,
 } from "./marcas";
 
@@ -43,6 +44,10 @@ export type Simulacros = {
   marcas: Record<string, MarcaSimulacro>;
   /** intento a medias guardado en este aparato, si es de esta materia */
   enCurso: SimulacroResumen | null;
+  /** al intento guardado ya se le acabo el tiempo: no se retoma, se califica */
+  enCursoVencido: boolean;
+  /** cuantas alcanzo a contestar, para decirselo en la tarjeta */
+  enCursoRespondidas: number;
   retomar: () => void;
   descartarEnCurso: () => void;
 
@@ -173,13 +178,39 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     () => (respaldo ? lista.find((s) => s.slug === respaldo.slug) ?? null : null),
     [respaldo, lista],
   );
+  const enCursoVencido = respaldo !== null && estaVencido(respaldo);
+  const enCursoRespondidas = respaldo
+    ? respaldo.respuestas.filter((r) => r !== null && r !== undefined).length
+    : 0;
 
   // --- arranque ---
   const arrancar = useCallback((cuadernillo: Simulacro, desde?: EnCurso) => {
     const n = cuadernillo.items.length;
     // Un respaldo de otro largo (porque cambio el cuadernillo) no se usa:
     // las respuestas no calzarian con las preguntas.
-    const sirve = desde && desde.respuestas.length === n && desde.fin > Date.now();
+    const calza = desde !== undefined && desde.respuestas.length === n;
+
+    // Intento vencido: NO se abre el examen. Se le muestra la nota de lo
+    // que alcanzo a contestar. Antes esto se descartaba en silencio y el
+    // chiquito volvia a encontrar la pantalla en blanco, como si nunca
+    // hubiera trabajado.
+    if (calza && estaVencido(desde)) {
+      setActual(cuadernillo);
+      setRespuestas([...desde.respuestas]);
+      setIndice(0);
+      setSeAcaboElTiempo(true);
+      setTotalSegundos(desde.total);
+      setRestante(0);
+      finRef.current = Date.now();
+      setAviso("");
+      cerradoRef.current = false;
+      borrarEnCurso();
+      setRespaldo(null);
+      setFase("resultados");
+      return;
+    }
+
+    const sirve = calza && desde.fin > Date.now();
     // Al retomar manda el total que traia guardado el intento; al empezar
     // de cero, tres minutos por pregunta, o cuatro con la adecuacion.
     const segPorItem = tiempoExtra
@@ -198,6 +229,14 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     // no cuando alguien toca "Hacerlo otra vez": esa intencion puede
     // fallar y dejaria el intento anterior contado dos veces.
     cerradoRef.current = false;
+    // El respaldo viejo se bota ACA y no en empezar(): este es el momento
+    // en que el intento anterior deja de existir de verdad. Botarlo antes
+    // de pedir el cuadernillo, como estaba, dejaba al chiquito sin el
+    // intento viejo Y sin el nuevo cuando se caia la red.
+    borrarEnCurso();
+    // Y se guarda el cuadernillo de una vez, para poder retomar sin
+    // internet. El intento en curso lo escribe el efecto de mas abajo.
+    guardarCuadernillo(cuadernillo);
     setFase("examen");
   }, [tiempoExtra]);
 
@@ -228,10 +267,9 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
 
   const empezar = useCallback(
     (slug: string) => {
-      // Empezar de cero bota el respaldo: si no, terminado el nuevo
-      // intento le seguiria saliendo el aviso del viejo.
-      borrarEnCurso();
-      setRespaldo(null);
+      // No se borra nada todavia: si el servidor no responde, el chiquito
+      // se queda con su intento anterior intacto. El borrado pasa en
+      // arrancar(), cuando el cuadernillo nuevo ya esta en la mano.
       abrir(slug);
     },
     [abrir],
@@ -239,8 +277,16 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
 
   const retomar = useCallback(() => {
     if (!respaldo) return;
+    // Primero el aparato: si el cuadernillo esta guardado, retomar no
+    // necesita internet. Justamente cuando a alguien se le cierra la
+    // pestana es cuando la conexion suele estar mala.
+    const local = leerCuadernillo(respaldo.slug, respaldo.respuestas.length);
+    if (local) {
+      arrancar(local, respaldo);
+      return;
+    }
     abrir(respaldo.slug, respaldo);
-  }, [abrir, respaldo]);
+  }, [abrir, arrancar, respaldo]);
 
   const descartarEnCurso = useCallback(() => {
     borrarEnCurso();
@@ -385,6 +431,8 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     lista,
     marcas,
     enCurso,
+    enCursoVencido,
+    enCursoRespondidas,
     retomar,
     descartarEnCurso,
     fase,

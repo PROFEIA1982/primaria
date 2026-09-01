@@ -14,8 +14,13 @@
 // sencillamente no muestra ni marcas ni el aviso de retomar.
 // ============================================================
 
+import type { Simulacro } from "../../lib/tipos";
+import { esCuadernilloSano } from "../../lib/validar";
+
 const LLAVE = "ps_simulacros";
 const LLAVE_CURSO = "ps_simulacro_curso";
+// El cuadernillo entero, aparte. Ver el comentario de guardarCuadernillo.
+const LLAVE_CUADERNILLO = "ps_simulacro_cuadernillo";
 
 export type MarcaSimulacro = {
   intentos: number;
@@ -109,11 +114,14 @@ export function leerEnCurso(): EnCurso | null {
     if (!crudo) return null;
     const dato: unknown = JSON.parse(crudo);
     if (!esEnCurso(dato)) return null;
-    // Si al reloj ya no le queda tiempo, no hay nada que retomar.
-    if (dato.fin <= Date.now()) {
-      borrarEnCurso();
-      return null;
-    }
+    // OJO: el intento VENCIDO ya NO se borra aca.
+    //
+    // Antes, si al chiquito se le acababa el tiempo con la pestana
+    // cerrada, al volver no encontraba nada: sus cuarenta y cinco
+    // respuestas desaparecian sin dejar rastro, sin nota y sin aviso.
+    // Ahora se devuelve igual y quien llama decide: si esta vencido, en
+    // vez de retomarlo se le muestra la nota de lo que alcanzo a hacer,
+    // que es lo unico honesto que se puede hacer con ese trabajo.
     return dato;
   } catch {
     return null;
@@ -128,10 +136,62 @@ export function guardarEnCurso(curso: EnCurso): void {
   }
 }
 
+/** Un intento cuyo reloj ya se acabo. No se retoma: se califica. */
+export function estaVencido(curso: EnCurso): boolean {
+  return curso.fin <= Date.now();
+}
+
 export function borrarEnCurso(): void {
+  for (const llave of [LLAVE_CURSO, LLAVE_CUADERNILLO]) {
+    try {
+      localStorage.removeItem(llave);
+    } catch {
+      // idem
+    }
+  }
+}
+
+// --- El cuadernillo del intento en curso ---
+//
+// Va en su propia llave y se escribe UNA sola vez, al arrancar. Sesenta
+// preguntas con sus opciones son unos 140 KB; el intento en curso, que se
+// reescribe con cada toque, son cientos de bytes. Serializar los 140 KB
+// en cada respuesta bloquea el hilo de la pantalla y se siente en un
+// celular barato.
+//
+// Guardarlo sirve para dos cosas: retomar SIN INTERNET, que es lo comun
+// cuando a alguien se le cae la pestana, y poder calificar un intento
+// vencido sin tener que pedirle el cuadernillo al servidor otra vez.
+//
+// Si no cabe (cuota llena), no pasa nada: retomar vuelve a pedirlo por
+// red, que es como funcionaba antes.
+export function guardarCuadernillo(cuadernillo: Simulacro): void {
   try {
-    localStorage.removeItem(LLAVE_CURSO);
+    localStorage.setItem(LLAVE_CUADERNILLO, JSON.stringify(cuadernillo));
   } catch {
-    // idem
+    // silencio: sin copia local, retomar pasa por la red y ya
+  }
+}
+
+/**
+ * El cuadernillo guardado, solo si es el del intento que se esta
+ * retomando y trae la misma cantidad de preguntas. Un cuadernillo de otro
+ * largo (porque cambio en la base) no sirve: las respuestas guardadas no
+ * calzarian con las preguntas.
+ */
+export function leerCuadernillo(slug: string, cuantasRespuestas: number): Simulacro | null {
+  try {
+    const crudo = localStorage.getItem(LLAVE_CUADERNILLO);
+    if (!crudo) return null;
+    const dato: unknown = JSON.parse(crudo);
+    // El mismo validador que usa lo que llega del servidor: lo que sale de
+    // localStorage merece la misma desconfianza, porque pudo escribirlo
+    // una version de la app de hace un mes.
+    if (!esCuadernilloSano(dato)) return null;
+    if (dato.slug !== slug) return null;
+    if (dato.items.length !== cuantasRespuestas) return null;
+    return dato;
+  } catch {
+    return null;
   }
 }

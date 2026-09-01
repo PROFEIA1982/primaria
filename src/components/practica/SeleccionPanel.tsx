@@ -1,5 +1,5 @@
 import { useId, useState } from "react";
-import { Check, ChevronDown, CircleAlert, Play } from "lucide-react";
+import { Check, ChevronDown, CircleAlert, Play, PlayCircle } from "lucide-react";
 import { CANTIDADES } from "../../config";
 import { ErrorCarga } from "../Estados";
 import type { Practica } from "./usePractica";
@@ -51,6 +51,9 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
     pocasDisponibles,
     empezar,
     aceptarLasQueHay,
+    respaldo,
+    retomar,
+    descartarRespaldo,
   } = practica;
 
   // La lista arranca cerrada. Se abre sola si ya venia un tema escogido,
@@ -68,6 +71,29 @@ export default function SeleccionPanel({ nombreMateria, practica }: Props) {
 
   return (
     <>
+      {/* Lo que quedo a medias va de primero, antes de escoger nada: es lo
+          que el chiquito viene a buscar cuando vuelve. */}
+      {respaldo && (
+        <section className="sel-retomar" aria-labelledby="sel-retomar-titulo">
+          <h2 id="sel-retomar-titulo">
+            <PlayCircle size={22} strokeWidth={2.2} aria-hidden="true" />
+            Dejaste una práctica de {nombreMateria} a medias
+          </h2>
+          <p>
+            Contestaste {respaldo.contestadas} de {respaldo.total}. Se guardó en este
+            aparato, así que podés seguir donde ibas.
+          </p>
+          <div className="sel-retomar-botones">
+            <button type="button" className="ps-boton" onClick={retomar}>
+              Seguir donde iba
+            </button>
+            <button type="button" className="sel-descartar" onClick={descartarRespaldo}>
+              Empezar de cero
+            </button>
+          </div>
+        </section>
+      )}
+
       <fieldset className="sel-grupo">
         <legend>¿Qué vas a practicar?</legend>
 

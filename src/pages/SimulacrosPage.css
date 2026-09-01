@@ -749,3 +749,43 @@
 @media (forced-colors: active) {
   .sim-tiempo-op[data-elegida] { border: 3px solid Highlight; }
 }
+
+/* --- Las tres reglas del simulacro ---
+   Ocupan el aire que quedaba entre las pestañas y los cuadernillos, pero
+   sin volverse un bloque de instrucciones: tres frases cortas, una idea
+   cada una, la parte que importa en negrita.
+   Contrastes (tokens de src/index.css):
+   - --foreground sobre --background ... 17.40 claro · 14.05 oscuro · AAA
+   - --muted sobre --background ........  5.60 claro ·  8.30 oscuro · AA
+   - --acento sobre --background .......  5.46 el más bajo (Español) · AA */
+#sim-lista .sim-reglas {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 24px;
+  padding: 18px 20px;
+  border: var(--borde-ancho) solid var(--border);
+  border-radius: var(--radius);
+  background: var(--secondary);
+}
+@media (min-width: 760px) {
+  #sim-lista .sim-reglas { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+}
+#sim-lista .sim-reglas p {
+  margin: 0;
+  padding-left: 14px;
+  /* Una barrita del color de la materia en vez de una viñeta: marca las
+     tres sin meter un ícono más en la pantalla. */
+  border-left: 3px solid var(--acento, var(--primary));
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+#sim-lista .sim-reglas strong {
+  display: block;
+  font-weight: 800;
+  color: var(--foreground);
+}
+@media (forced-colors: active) {
+  #sim-lista .sim-reglas { border: 1px solid ButtonText; }
+  #sim-lista .sim-reglas p { border-left: 3px solid ButtonText; }
+}

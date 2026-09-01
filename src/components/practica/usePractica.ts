@@ -22,9 +22,22 @@ import {
 } from "../../lib/api";
 import type { Item, Tema } from "../../lib/tipos";
 import { calificar, type Calificacion, type Respuestas } from "./calificar";
+import {
+  borrarRespaldo,
+  guardarCurso,
+  guardarItems,
+  leerRespaldo,
+  type RespaldoPractica,
+} from "./respaldo";
 
 export type Fase = "seleccion" | "examen" | "resultados";
 export type EstadoInicial = "cargando" | "listo" | "error";
+
+/** Lo que la pantalla de escoger necesita saber de la practica a medias. */
+export type ResumenRespaldo = {
+  contestadas: number;
+  total: number;
+};
 
 export type Practica = {
   // --- carga inicial ---
@@ -47,6 +60,12 @@ export type Practica = {
   pocasDisponibles: number | null;
   empezar: () => void;
   aceptarLasQueHay: () => void;
+
+  // --- practica a medias guardada en este aparato ---
+  // null si no hay, o si la que hay es de otra materia.
+  respaldo: ResumenRespaldo | null;
+  retomar: () => void;
+  descartarRespaldo: () => void;
 
   // --- examen ---
   items: Item[];
@@ -80,12 +99,27 @@ export function usePractica(slug: SlugMateria): Practica {
   const [items, setItems] = useState<Item[]>([]);
   const [indice, setIndice] = useState(0);
   const [respuestas, setRespuestas] = useState<Respuestas>([]);
+  // La practica a medias que quedo guardada en este aparato, ya revisada
+  // contra esta materia. Ver respaldo.ts.
+  const [respaldo, setRespaldo] = useState<RespaldoPractica | null>(null);
+
+  // Cada peticion toma un turno. Cuando llega una respuesta se compara
+  // con el turno vigente y, si no calza, se bota: es de un toque anterior
+  // que ya no interesa. Sin esto, tocar "Empezar" en Ciencias y cambiarse
+  // a Matematicas por el menu terminaba pintando las preguntas de
+  // Ciencias dentro de la pantalla de Matematicas.
+  const peticionRef = useRef(0);
 
   // --- carga inicial: id de la materia, cuantos items tiene y sus temas ---
   const cargar = useCallback(async () => {
+    const turno = ++peticionRef.current;
     setEstadoInicial("cargando");
+    // Esto sale del aparato, no de la red: se lee de una vez y no espera
+    // a que conteste el servidor.
+    setRespaldo(leerRespaldo(slug));
     try {
       const conteos = await traerConteos();
+      if (peticionRef.current !== turno) return;
       const mia = conteos.find((c) => c.slug === slug);
       if (!mia) {
         setEstadoInicial("error");
@@ -100,6 +134,7 @@ export function usePractica(slug: SlugMateria): Practica {
       } catch {
         lista = [];
       }
+      if (peticionRef.current !== turno) return;
       setTemas(lista);
       // El conteo por tema es adorno de la tarjeta: si falla, la tarjeta
       // sale sin numero y la pantalla igual sirve. Por eso no toca el estado.
@@ -109,9 +144,11 @@ export function usePractica(slug: SlugMateria): Practica {
       } catch {
         cuentas = {};
       }
+      if (peticionRef.current !== turno) return;
       setConteoPorTema(cuentas);
       setEstadoInicial("listo");
     } catch {
+      if (peticionRef.current !== turno) return;
       setEstadoInicial("error");
     }
   }, [slug]);
@@ -140,25 +177,49 @@ export function usePractica(slug: SlugMateria): Practica {
     setPocasDisponibles(null);
     setErrorSorteo(false);
     setGuardadas([]);
+    // El respaldo de la materia anterior no aplica aca. El de esta, si
+    // lo hay, lo vuelve a leer cargar() de una vez.
+    setRespaldo(null);
+    // Y lo que estuviera a medio pedir: sin esto el boton de empezar
+    // quedaba muerto en "Preparando…" hasta que llegara la respuesta de
+    // la materia anterior, que ademas ya no se va a usar.
+    setPreparando(false);
+    peticionRef.current += 1;
   }
 
   // --- arranque del examen ---
-  const arrancar = useCallback((lista: Item[]) => {
+  // `desde` viene lleno solo al retomar: leerRespaldo ya reviso que esas
+  // respuestas calcen con estos items y que el indice este en rango.
+  const arrancar = useCallback((lista: Item[], desde?: RespaldoPractica) => {
     setItems(lista);
-    setRespuestas(new Array(lista.length).fill(null));
-    setIndice(0);
+    if (desde) {
+      setRespuestas([...desde.respuestas]);
+      setIndice(desde.indice);
+    } else {
+      setRespuestas(new Array(lista.length).fill(null));
+      setIndice(0);
+      // Recien aca se bota el respaldo viejo: con las preguntas nuevas ya
+      // en la mano. Botarlo en empezar(), antes de pedirle al servidor,
+      // dejaba al estudiante sin el respaldo viejo y sin practica nueva
+      // cada vez que se cayera la red.
+      borrarRespaldo();
+      guardarItems(lista);
+    }
     setPocasDisponibles(null);
     setGuardadas([]);
+    setRespaldo(null);
     setFase("examen");
   }, []);
 
   const empezar = useCallback(() => {
+    const turno = ++peticionRef.current;
     setPreparando(true);
     setErrorSorteo(false);
     setPocasDisponibles(null);
     const temasPedidos = temaSel === null ? null : [temaSel];
     void sortearItems(slug, cantidad, temasPedidos)
       .then((lista) => {
+        if (peticionRef.current !== turno) return;
         if (lista.length === 0) {
           setGuardadas([]);
           setPocasDisponibles(0);
@@ -173,9 +234,24 @@ export function usePractica(slug: SlugMateria): Practica {
         }
         arrancar(lista);
       })
-      .catch(() => setErrorSorteo(true))
-      .finally(() => setPreparando(false));
+      .catch(() => {
+        if (peticionRef.current !== turno) return;
+        setErrorSorteo(true);
+      })
+      .finally(() => {
+        if (peticionRef.current === turno) setPreparando(false);
+      });
   }, [slug, cantidad, temaSel, arrancar]);
+
+  const retomar = useCallback(() => {
+    if (!respaldo) return;
+    arrancar(respaldo.items, respaldo);
+  }, [arrancar, respaldo]);
+
+  const descartarRespaldo = useCallback(() => {
+    borrarRespaldo();
+    setRespaldo(null);
+  }, []);
 
   const aceptarLasQueHay = useCallback(() => {
     if (guardadas.length > 0) arrancar(guardadas);
@@ -221,6 +297,24 @@ export function usePractica(slug: SlugMateria): Practica {
     setIndice((i) => (i > 0 ? i - 1 : i));
   }, []);
 
+  // --- respaldo del avance ---
+  // Se escribe con cada respuesta y cada cambio de pregunta, pero solo la
+  // parte liviana: los items se guardaron una sola vez en arrancar() y no
+  // cambian en toda la practica. Ver el porque en respaldo.ts.
+  useEffect(() => {
+    if (fase !== "examen") return;
+    if (items.length === 0) return;
+    guardarCurso(slug, indice, respuestas);
+  }, [fase, slug, indice, respuestas, items.length]);
+
+  // Terminada la practica ya no hay nada que retomar. Va aparte del envio
+  // de resultados porque ese se salta cuando no hay nada que mandar, y el
+  // respaldo hay que botarlo igual.
+  useEffect(() => {
+    if (fase !== "resultados") return;
+    borrarRespaldo();
+  }, [fase]);
+
   // --- resultados ---
   const calificacion = useMemo(() => calificar(items, respuestas), [items, respuestas]);
 
@@ -242,8 +336,25 @@ export function usePractica(slug: SlugMateria): Practica {
     setIndice(0);
     setPocasDisponibles(null);
     setErrorSorteo(false);
+    // Se vuelve a la pantalla de escoger por dos puertas y en las dos el
+    // estudiante ya decidio soltar esta practica: el boton de salir del
+    // examen, que antes le avisa en letras que pierde las respuestas, y
+    // el de practicar otra vez al final. Ofrecerle despues seguir donde
+    // iba seria contradecir lo que la app acaba de decirle.
+    borrarRespaldo();
+    setRespaldo(null);
     setFase("seleccion");
   }, []);
+
+  // Lo unico que la pantalla de escoger necesita del respaldo: cuantas
+  // lleva y de cuantas. Las preguntas guardadas no salen del hook.
+  const resumenRespaldo = useMemo<ResumenRespaldo | null>(() => {
+    if (!respaldo) return null;
+    return {
+      contestadas: respaldo.respuestas.filter((r) => r !== null && r !== undefined).length,
+      total: respaldo.items.length,
+    };
+  }, [respaldo]);
 
   return {
     estadoInicial,
@@ -261,6 +372,9 @@ export function usePractica(slug: SlugMateria): Practica {
     pocasDisponibles,
     empezar,
     aceptarLasQueHay,
+    respaldo: resumenRespaldo,
+    retomar,
+    descartarRespaldo,
     items,
     indice,
     respuestas,
