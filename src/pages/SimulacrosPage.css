@@ -1,3 +1,8 @@
+/* La columna de esta pagina. Una sola medida para el titulo, las
+   pestañas, las reglas, los cuadernillos y el cierre: si cambia, cambia
+   todo junto y nada se desalinea. */
+#sim-lista { --columna-sim: 46rem; }
+
 /* ============================================================
    Simulacros.
    Lo que se reusa de la practica (barra del reloj, tarjeta de nota,
@@ -183,9 +188,11 @@
 .sim-lista {
   display: grid;
   gap: 16px;
-  max-width: 46rem;
+  /* La medida Y el centrado. Con solo max-width la columna se pegaba a la
+     izquierda y el hueco cambiaba de lugar en vez de desaparecer. */
+  max-width: var(--columna-sim);
+  margin: 0 auto 20px;
   list-style: none;
-  margin: 0 0 20px;
   padding: 0;
 }
 .sim-tarjeta {
@@ -770,10 +777,11 @@
    - --muted sobre --background ........  5.60 claro ·  8.30 oscuro · AA
    - --acento sobre --background .......  5.46 el más bajo (Español) · AA */
 #sim-lista .sim-reglas {
-  max-width: 46rem;
+  max-width: var(--columna-sim);
+  margin-inline: auto;
   display: grid;
   gap: 14px;
-  margin: 0 0 24px;
+  margin-bottom: 24px;
   padding: 18px 20px;
   border: var(--borde-ancho) solid var(--border);
   border-radius: var(--radius);
@@ -808,14 +816,21 @@
    flotando debajo, sin un borde comun donde apoyarse. */
 #sim-lista h1,
 #sim-lista .mat-pestanas,
-#sim-lista .sim-retomar { max-width: 46rem; }
+#sim-lista .sim-retomar {
+  max-width: var(--columna-sim);
+  margin-inline: auto;
+}
 
 /* El cierre: que pasa cuando termina. Es lo unico que le faltaba saber a
    esta pagina y ademas apoya la ultima tarjeta, para que no quede
    colgando sobre el vacio. */
-#sim-lista .sim-cierre {
-  max-width: 46rem;
-  margin: 0;
+/* Nombre propio: ".sim-cierre" ya estaba tomado por el pie del examen
+   (linea 391), que es un contenedor flex en columna y centrado. Al reusar
+   el nombre, este parrafo heredaba ese display y la frase se partia en
+   dos, con la negrita centrada en su propio renglon. */
+#sim-lista .sim-remate {
+  max-width: var(--columna-sim);
+  margin: 0 auto;
   padding: 16px 20px;
   border-left: 3px solid var(--acento, var(--primary));
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -824,7 +839,7 @@
   line-height: 1.55;
   color: var(--muted);   /* 5.16 sobre --secondary claro · 7.62 oscuro · AA */
 }
-#sim-lista .sim-cierre strong { color: var(--foreground); font-weight: 800; }
+#sim-lista .sim-remate strong { color: var(--foreground); font-weight: 800; }
 @media (forced-colors: active) {
-  #sim-lista .sim-cierre { border-left: 3px solid ButtonText; }
+  #sim-lista .sim-remate { border-left: 3px solid ButtonText; }
 }

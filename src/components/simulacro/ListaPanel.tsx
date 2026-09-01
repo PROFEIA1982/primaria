@@ -195,7 +195,7 @@ export default function ListaPanel({ nombreMateria, simulacros }: Props) {
 
       {/* Lo unico que quedaba por decir de esta pantalla, y apoya la
           ultima tarjeta para que no quede colgando sobre el vacio. */}
-      <p className="sim-cierre">
+      <p className="sim-remate">
         <strong>Al entregar ves tu nota</strong> y, pregunta por pregunta, cuál
         fallaste y por qué. Podés guardarlo en PDF para repasarlo después o
         enseñárselo a la maestra.
