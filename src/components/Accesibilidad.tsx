@@ -24,7 +24,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
   Accessibility, ALargeSmall, ChevronDown, Contrast, Eye,
-  Hourglass, Moon, Palette, Sun, Volume2, VolumeX,
+  Hourglass, Moon, Palette, Sun, Volume2, VolumeX, X,
 } from "lucide-react";
 import {
   alternarTema, alternarTiempoExtra, alternarVision, alternarVoz, ciclarTexto,
@@ -236,10 +236,35 @@ export default function AccesibilidadFlotante() {
 //
 // Los cuatro botones se reparten el ancho en partes iguales, con 56 px de
 // alto: bastante mas que los 44 x 44 que pide el nivel AAA de WCAG 2.5.5.
+// Se esconde mientras se baja y reaparece al subir o al quedarse quieto.
+// Umbral de 14 px para que un dedo tembloroso no lo haga parpadear.
+function useEscondidoAlBajar(): boolean {
+  const [escondido, setEscondido] = useState(false);
+  useEffect(() => {
+    let ultimo = window.scrollY;
+    let quieto: ReturnType<typeof setTimeout> | null = null;
+    const alMover = () => {
+      const y = window.scrollY;
+      const delta = y - ultimo;
+      if (delta > 14 && y > 80) setEscondido(true);
+      else if (delta < -14) setEscondido(false);
+      ultimo = y;
+      if (quieto) clearTimeout(quieto);
+      quieto = setTimeout(() => setEscondido(false), 900);
+    };
+    window.addEventListener("scroll", alMover, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", alMover);
+      if (quieto) clearTimeout(quieto);
+    };
+  }, []);
+  return escondido;
+}
+
 export function AccesibilidadMovil() {
   const [abierto, setAbierto] = useState(false);
-  const { texto, voz, tiempoExtra } = useAjustes();
   const { pathname } = useLocation();
+  const escondido = useEscondidoAlBajar();
 
   // Al cambiar de pagina se cierra la hoja.
   useEffect(() => {
@@ -254,9 +279,6 @@ export function AccesibilidadMovil() {
     document.addEventListener("keydown", alTeclear);
     return () => document.removeEventListener("keydown", alTeclear);
   }, [abierto]);
-
-  const nombreTexto =
-    texto === "normal" ? "Normal" : texto === "grande" ? "Grande" : "Muy grande";
 
   return (
     <>
@@ -273,57 +295,25 @@ export function AccesibilidadMovil() {
         <PanelAccesibilidad id="ax-panel-movil" abierto={abierto} />
       </div>
 
-      <nav className="ax-barra" aria-label="Ajustes de accesibilidad">
-        <button
-          type="button"
-          className="ax-barra-boton"
-          aria-pressed={voz}
-          onClick={alternarVoz}
-        >
-          {voz
-            ? <Volume2 size={22} strokeWidth={2.2} aria-hidden="true" />
-            : <VolumeX size={22} strokeWidth={2.2} aria-hidden="true" />}
-          <span>Sonido</span>
-          <span className="ps-solo-lectores">
-            : {voz ? "activado" : "desactivado"}
-          </span>
-        </button>
-
-        <button
-          type="button"
-          className="ax-barra-boton"
-          data-nivel={texto}
-          onClick={ciclarTexto}
-        >
-          <ALargeSmall size={24} strokeWidth={2.2} aria-hidden="true" />
-          <span>Texto</span>
-          <span className="ps-solo-lectores">: {nombreTexto}. Tocá para agrandarlo</span>
-        </button>
-
-        <button
-          type="button"
-          className="ax-barra-boton"
-          aria-pressed={tiempoExtra}
-          onClick={alternarTiempoExtra}
-        >
-          <Hourglass size={22} strokeWidth={2.2} aria-hidden="true" />
-          <span>Tiempo</span>
-          <span className="ps-solo-lectores">
-            : más tiempo en el simulacro, {tiempoExtra ? "activado" : "desactivado"}
-          </span>
-        </button>
-
-        <button
-          type="button"
-          className="ax-barra-boton"
-          aria-expanded={abierto}
-          aria-controls="ax-panel-movil"
-          onClick={() => setAbierto((v) => !v)}
-        >
-          <Accessibility size={22} strokeWidth={2.2} aria-hidden="true" />
-          <span>{abierto ? "Cerrar" : "Más"}</span>
-        </button>
-      </nav>
+      {/* Un solo boton redondo, abajo a la derecha, que se esconde mientras
+          el chiquito baja leyendo y vuelve cuando sube o se detiene. La
+          barra de cuatro botones que habia antes le comia 56 px a toda
+          pantalla, todo el tiempo; esto ocupa un circulo y solo cuando se
+          necesita. Los ajustes rapidos (sonido, texto, tiempo) siguen a un
+          toque de distancia, adentro de la hoja. */}
+      <button
+        type="button"
+        className="ax-fab"
+        data-escondido={escondido && !abierto ? "" : undefined}
+        aria-expanded={abierto}
+        aria-controls="ax-panel-movil"
+        aria-label={abierto ? "Cerrar los ajustes de accesibilidad" : "Ajustes de accesibilidad: sonido, texto, contraste y tiempo"}
+        onClick={() => setAbierto((v) => !v)}
+      >
+        {abierto
+          ? <X size={26} strokeWidth={2.4} aria-hidden="true" />
+          : <Accessibility size={26} strokeWidth={2.4} aria-hidden="true" />}
+      </button>
     </>
   );
 }

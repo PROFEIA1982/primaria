@@ -1,136 +1,81 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  BookOpen,
-  Calculator,
-  ChevronDown,
-  CircleCheckBig,
-  ClipboardList,
-  Download,
-  EyeOff,
-  FolderOpen,
-  Globe,
-  GraduationCap,
-  ListOrdered,
-  Microscope,
-  MousePointerClick,
-  RefreshCw,
-  Share2,
-  Smartphone,
-  Target,
-  Timer,
-  WifiOff,
-} from "lucide-react";
-import {
-  IMG_HERO,
-  MATERIAS,
-  URL_DESCARGA_OFFLINE,
-  URL_OFFLINE,
-  waLink,
-  type SlugMateria,
-} from "../config";
+import { ArrowRight } from "lucide-react";
+import { MATERIAS, type SlugMateria } from "../config";
 import { traerConteos, type ConteoMateria } from "../lib/api";
 import { Cargando, ErrorCarga } from "../components/Estados";
-import BloqueDocentes from "../components/BloqueDocentes";
-import ContadorPracticadas from "../components/ContadorPracticadas";
+import { Mascota } from "../components/Amigos";
+import { Companero, Comunidad } from "../components/Rincon";
+import Fondo from "../components/Fondo";
 import "./InicioPage.css";
 
-// Un icono por materia. Se elige por slug para no depender del orden.
-const ICONOS: Record<SlugMateria, typeof BookOpen> = {
-  espanol: BookOpen,
-  "estudios-sociales": Globe,
-  ciencias: Microscope,
-  matematicas: Calculator,
+// El inicio es para el chiquito: hero, las cuatro materias, su compañero y
+// los simulacros. Lo de maestras y familias (para qué sirve, idoneidad,
+// práctica sin internet) vive en /maestras, enlazado desde el pie.
+//
+// Sin adornos irrelevantes en las pantallas de trabajo (Sundararajan y
+// Adesope 2020): el color y los animales están aquí, en el menú, y no
+// dentro del ítem.
+
+// Figuras propias por materia: un dibujo de verdad, no un icono de línea
+// de 24 px. Se pintan en SVG para que respeten grises y escalen.
+function FiguraMateria({ slug }: { slug: SlugMateria }) {
+  switch (slug) {
+    case "espanol":
+      return (
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M8 14 q24 -8 24 4 v34 q0 -10 -24 -4 z" fill="#E8593C" />
+          <path d="M56 14 q-24 -8 -24 4 v34 q0 -10 24 -4 z" fill="#FF9A82" />
+          <path d="M14 22 h12 M14 30 h12 M38 22 h12 M38 30 h12" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
+        </svg>
+      );
+    case "estudios-sociales":
+      return (
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="24" fill="#6D4AE8" />
+          <path d="M12 24 q10 6 20 0 q10 -6 20 0 M12 40 q10 -6 20 0 q10 6 20 0" stroke="#C9B8FF" strokeWidth="3" fill="none" />
+          <path d="M32 8 q-12 24 0 48 M32 8 q12 24 0 48" stroke="#C9B8FF" strokeWidth="3" fill="none" />
+        </svg>
+      );
+    case "ciencias":
+      return (
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M26 8 h12 v18 l14 22 a4 4 0 0 1 -3.5 6 h-33 a4 4 0 0 1 -3.5 -6 l14 -22 z" fill="#DDF6EC" stroke="#17A673" strokeWidth="3" />
+          <path d="M18 44 h28 l-9 -14 h-10 z" fill="#17A673" />
+          <circle cx="30" cy="40" r="2.5" fill="#fff" /><circle cx="38" cy="46" r="2" fill="#fff" />
+        </svg>
+      );
+    case "matematicas":
+      return (
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="10" y="10" width="44" height="44" rx="10" fill="#2F6BFF" />
+          <path d="M22 24 h8 M26 20 v8 M36 24 h8 M22 42 h8 M36 38 l8 8 M44 38 l-8 8" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
+        </svg>
+      );
+  }
+}
+
+const VIVA: Record<SlugMateria, string> = {
+  espanol: "var(--viva-espanol)",
+  "estudios-sociales": "var(--viva-sociales)",
+  ciencias: "var(--viva-ciencias)",
+  matematicas: "var(--viva-mate)",
 };
 
-const PASOS = [
-  { icono: MousePointerClick, titulo: "Elegí la materia", texto: "Vos escogés." },
-  { icono: ListOrdered, titulo: "Escogé cuántas preguntas", texto: "Diez si andás con poco tiempo. Sesenta si querés entrenar en serio." },
-  { icono: Timer, titulo: "Respondé a tu ritmo", texto: "Hay reloj, pero solo para que te acostumbrés." },
-  { icono: CircleCheckBig, titulo: "Mirá tus resultados", texto: "Vas a ver en cuáles te equivocaste, con la respuesta buena al lado." },
-];
-
-// Lo que antes eran tres parrafos. El publico tiene doce anos: una idea corta
-// por tarjeta y el detalle escondido en un details, para el que quiera mas.
-const PARA_QUE = [
-  {
-    icono: ClipboardList,
-    titulo: "Es la prueba de sexto",
-    corto: "Al final del año se aplica en todo el país.",
-    mas: "Son preguntas de escoger: te dan una pregunta y cuatro opciones, y vos marcás la que creés correcta.",
-  },
-  {
-    icono: Target,
-    titulo: "Preguntas del mismo tipo",
-    corto: "Acá entrenás con preguntas parecidas.",
-    mas: "Así, cuando llegue el día, ya sabés cómo se leen y cuánto tardás en cada una. Eso es media batalla ganada.",
-  },
-  {
-    icono: EyeOff,
-    titulo: "Nadie ve tu nota",
-    corto: "Esto no es un examen.",
-    mas: "Tu resultado no se guarda ni se le manda a nadie. Es solo para que vos sepás cómo vas.",
-  },
-  {
-    icono: RefreshCw,
-    titulo: "Repetí cuando querás",
-    corto: "Es gratis y no hay que hacer cuenta.",
-    mas: "Podés volver a la misma materia hoy, mañana y el otro mes, las veces que necesités.",
-  },
-];
-
-// Fila 1 de "sin internet": que es. Fila 2: como se usa, con numero grande.
-const SIN_NET_QUE = [
-  {
-    dato: "200",
-    icono: null,
-    titulo: "Doscientas preguntas",
-    corto: "Cincuenta de cada materia.",
-    mas: "Cada una trae la respuesta correcta y una explicación en palabras sencillas.",
-  },
-  {
-    dato: null,
-    icono: Smartphone,
-    titulo: "Sirve en compu o celular",
-    corto: "Es un solo archivo.",
-    mas: "Se toca dos veces y se abre en el navegador que ya tenga el aparato. No hay que instalar nada.",
-  },
-  {
-    dato: null,
-    icono: WifiOff,
-    titulo: "No gasta datos",
-    corto: "Una vez guardado, no vuelve a pedir internet.",
-    mas: "Sirve igual en el aula, en la casa o en el bus.",
-  },
-];
-
-const SIN_NET_COMO = [
-  {
-    icono: Download,
-    titulo: "Descargalo",
-    corto: "Tocá el botón azul de abajo.",
-    mas: "Se guarda un archivo que termina en .html. Pesa cinco megas y se baja una sola vez.",
-  },
-  {
-    icono: FolderOpen,
-    titulo: "Abrilo",
-    corto: "Buscalo en la carpeta de descargas.",
-    mas: "En compu, doble clic. En celular, un toque. Se abre como una página normal.",
-  },
-  {
-    icono: Share2,
-    titulo: "Pasalo",
-    corto: "Por WhatsApp o en llave maya.",
-    mas: "En la otra máquina funciona igual, aunque ahí no haya señal.",
-  },
-];
-
-// wa.me sin numero abre la lista de contactos del telefono: es el enlace de
-// compartir, no el de escribirle a EVI. Por eso el segundo argumento va vacio.
-const WA_COMPARTIR = waLink(
-  `Te paso la práctica de sexto grado para estudiar, sirve hasta sin internet: ${URL_OFFLINE}`,
-  "",
-);
+function HeroArte() {
+  return (
+    <svg viewBox="0 0 360 300" className="hero-arte" aria-hidden="true" focusable="false">
+      <ellipse cx="180" cy="262" rx="150" ry="18" fill="var(--selva)" opacity=".18" />
+      <path d="M20 100 Q100 40 180 80 Q260 120 340 70" stroke="#8C6A45" strokeWidth="16" fill="none" strokeLinecap="round" />
+      <use href="#m-perezoso" x="100" y="40" width="190" height="190" />
+      <use href="#m-tucan" x="255" y="150" width="105" height="105" />
+      <use href="#m-rana" x="10" y="160" width="100" height="100" />
+      <use href="#s-estrella" x="300" y="30" width="34" height="34" />
+      <use href="#s-estrella" x="50" y="60" width="24" height="24" />
+      <use href="#s-estrella" x="215" y="120" width="18" height="18" />
+    </svg>
+  );
+}
 
 export default function InicioPage() {
   const [conteos, setConteos] = useState<ConteoMateria[] | null>(null);
@@ -149,268 +94,108 @@ export default function InicioPage() {
   useEffect(() => { void cargar(); }, []);
 
   return (
-    <>
-      {/* 1 · Hero */}
-      <section id="inicio-hero" style={{ ["--hero" as string]: `url(${IMG_HERO})` }}>
-        <div className="ps-contenedor">
-          <span className="hero-icono" aria-hidden="true">
-            <GraduationCap size={48} strokeWidth={1.8} />
-          </span>
-          <h1>Practicá para tu prueba de sexto</h1>
+    <div className="ps-contenedor inicio">
+      <Fondo tipo="confeti" />
+      {/* 1 · Hero: claro, con los animales y un solo botón. */}
+      <section id="inicio-hero" className="hero">
+        <div>
+          <p className="hero-kicker">
+            <span className="hero-punto" aria-hidden="true" />
+            Un desafío de <b>ProfeSeguro.com</b> y <b>EVI</b> para los niños y niñas de Costa Rica
+          </p>
+          <h1 className="hero-titulo">
+            Practicá para tu <span>prueba de sexto</span>
+          </h1>
           <p className="hero-bajada">
-            Preguntas de las cuatro materias para que llegués con calma el día de
-            la prueba. Es gratis y no hay que hacer ninguna cuenta.
+            Preguntas de las cuatro materias, gratis y sin cuenta. Cada acierto te da una
+            estrella, y con las estrellas vas ganando amigos del bosque.
           </p>
           <a className="ps-boton hero-boton" href="#inicio-materias">
-            Elegí tu materia →
+            Elegí tu materia
+            <ArrowRight size={22} strokeWidth={2.5} aria-hidden="true" />
           </a>
-          <p className="hero-nota">Entrás y practicás. Así de simple.</p>
         </div>
+        <HeroArte />
       </section>
 
-      {/* 2 · Cuantas preguntas se han practicado. El componente decide si
-          se dibuja: si el numero todavia no luce, no devuelve nada. */}
-      <ContadorPracticadas />
-
-      {/* 3 · Como funciona */}
-      <section id="inicio-pasos" className="ps-contenedor">
-        <h2>¿Cómo funciona?</h2>
-        <ol className="pasos-rejilla">
-          {PASOS.map((p, i) => {
-            const Icono = p.icono;
-            return (
-              <li className="paso" key={p.titulo}>
-                <span className="paso-numero" aria-hidden="true">{i + 1}</span>
-                <Icono size={34} strokeWidth={1.7} aria-hidden="true" />
-                <span className="paso-titulo">{p.titulo}</span>
-                <p>{p.texto}</p>
-              </li>
-            );
-          })}
-        </ol>
-      </section>
-
-      {/* 4 · Materias */}
-      <section id="inicio-materias">
-        <div className="ps-contenedor">
-          <h2>Las cuatro materias</h2>
-
-          {conteos === null && !fallo && <Cargando texto="Buscando las preguntas…" />}
-          {fallo && (
-            <ErrorCarga
-              mensaje="No se cargaron las materias."
-              alReintentar={() => void cargar()}
-            />
-          )}
-
-          {conteos !== null && (
-            <ul className="materias-rejilla">
-              {MATERIAS.map((m) => {
-                const Icono = ICONOS[m.slug];
-                const dato = conteos.find((c) => c.slug === m.slug);
-                const cuantas = dato?.items ?? 0;
-                return (
-                  <li key={m.slug}>
-                    <Link
-                      to={`/${m.slug}`}
-                      className="materia-tarjeta"
-                      // La tarjeta entera es el enlace. En modo de mejor
-                      // vision los enlaces van subrayados, y aca eso le
-                      // caeria a todo el texto de la tarjeta: data-tarjeta
-                      // lo saca de esa regla (ver src/index.css).
-                      data-tarjeta=""
-                      style={{
-                        ["--acento" as string]: m.color,
-                        ["--suave" as string]: m.suave,
-                      }}
-                    >
-                      <span className="materia-icono" aria-hidden="true">
-                        <Icono size={30} strokeWidth={1.8} />
-                      </span>
-                      <span className="materia-nombre">{m.nombre}</span>
-                      <span className="materia-cuenta">
-                        {cuantas > 0
-                          ? `${cuantas} ${cuantas === 1 ? "pregunta" : "preguntas"} para practicar`
-                          : "Todavía no hay preguntas acá"}
-                      </span>
-                      <span className="materia-cta">Practicá →</span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-        </div>
-      </section>
-
-      {/* 4b · Simulacros completos: una tarjeta por materia, directo al
-          cuadernillo. Es la pareja de "Las cuatro materias": alla se
-          practica por tema, aca se hace el examen completo. Estatico desde
-          MATERIAS, sin pedir datos: siempre son sesenta preguntas. */}
-      <section id="inicio-simulacros" className="ps-contenedor">
-        <h2>¿Listo para un simulacro completo?</h2>
-        <p className="inicio-lede">
-          Cuando ya practicaste por tema, date una vuelta por un simulacro: es el
-          examen completo, con las 60 preguntas de la materia y con reloj, como el
-          día de la prueba. Al final te sale la nota y el repaso de cada pregunta,
-          para que sepás en qué te equivocaste.
-        </p>
-        <ul className="simu-rejilla">
-          {MATERIAS.map((m) => {
-            const Icono = ICONOS[m.slug];
-            return (
-              <li key={m.slug}>
-                <Link
-                  to={`/simulacros/${m.slug}`}
-                  className="simu-tarjeta"
-                  data-tarjeta=""
-                  style={{
-                    ["--acento" as string]: m.color,
-                    ["--suave" as string]: m.suave,
-                  }}
-                >
-                  <span className="simu-icono" aria-hidden="true">
-                    <Icono size={30} strokeWidth={1.8} />
-                  </span>
-                  <span className="simu-nombre">{m.nombre}</span>
-                  <span className="simu-dato">
-                    <ClipboardList size={18} strokeWidth={2} aria-hidden="true" />
-                    60 preguntas · con reloj
-                  </span>
-                  <span className="simu-cta">Hacer el simulacro →</span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
-      {/* 5 · Para que sirve */}
-      <section id="inicio-info" className="ps-contenedor">
-        <h2>¿Para qué te sirve esta práctica?</h2>
-        <ul className="info-rejilla">
-          {PARA_QUE.map((t) => {
-            const Icono = t.icono;
-            return (
-              <li className="info-tarjeta" key={t.titulo}>
-                <span className="info-icono" aria-hidden="true">
-                  <Icono size={28} strokeWidth={1.8} />
-                </span>
-                <h3 className="info-titulo">{t.titulo}</h3>
-                <p className="info-corto">{t.corto}</p>
-                <details className="ps-mas">
-                  <summary>
-                    <span className="ps-mas-cerrado">Contame más</span>
-                    <span className="ps-mas-abierto">Ya entendí</span>
-                    <ChevronDown className="ps-mas-flecha" size={18} strokeWidth={2.2} aria-hidden="true" />
-                  </summary>
-                  <p>{t.mas}</p>
-                </details>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
-      {/* 6 · Aviso para maestros y familias */}
-      <BloqueDocentes variante="discreta" />
-
-      {/* 7 · Practica sin internet */}
-      <section id="inicio-sin-internet">
-        <div className="ps-contenedor">
-          <div className="sin-net-encabezado">
-            <span className="sin-net-icono" aria-hidden="true">
-              <WifiOff size={34} strokeWidth={1.7} />
-            </span>
-            <h2>Práctica sin internet</h2>
-            <p className="sin-net-bajada">
-              Un archivo que se baja una vez y después funciona solo, aunque la
-              señal se caiga.
-            </p>
-          </div>
-
-          <h3 className="sin-net-rotulo">Qué trae</h3>
-          <ul className="sin-net-rejilla">
-            {SIN_NET_QUE.map((t) => {
-              const Icono = t.icono;
+      {/* 2 · Materias: bloques de color, la tarjeta entera es el enlace. */}
+      <section id="inicio-materias" className="inicio-seccion" aria-labelledby="t-materias">
+        <h2 id="t-materias">¿Qué practicamos hoy?</h2>
+        {conteos === null && !fallo && <Cargando texto="Buscando las preguntas…" />}
+        {fallo && <ErrorCarga mensaje="No se cargaron las materias." alReintentar={() => void cargar()} />}
+        {conteos !== null && (
+          <ul className="materias">
+            {MATERIAS.map((m) => {
+              const dato = conteos.find((c) => c.slug === m.slug);
+              const cuantas = dato?.items ?? 0;
               return (
-                <li className="sin-net-tarjeta" key={t.titulo}>
-                  {t.dato ? (
-                    <span className="sin-net-num" aria-hidden="true">{t.dato}</span>
-                  ) : Icono ? (
-                    <span className="sin-net-icono-chico" aria-hidden="true">
-                      <Icono size={28} strokeWidth={1.7} />
+                <li key={m.slug}>
+                  <Link
+                    to={`/${m.slug}`}
+                    className="materia"
+                    data-tarjeta=""
+                    style={{ ["--c" as string]: VIVA[m.slug] }}
+                  >
+                    <span className="materia-ir" aria-hidden="true">
+                      <ArrowRight size={18} strokeWidth={2.5} />
                     </span>
-                  ) : null}
-                  <h4 className="sin-net-titulo">{t.titulo}</h4>
-                  <p className="sin-net-corto">{t.corto}</p>
-                  <details className="ps-mas">
-                    <summary>
-                      <span className="ps-mas-cerrado">Contame más</span>
-                      <span className="ps-mas-abierto">Ya entendí</span>
-                      <ChevronDown className="ps-mas-flecha" size={18} strokeWidth={2.2} aria-hidden="true" />
-                    </summary>
-                    <p>{t.mas}</p>
-                  </details>
+                    <span className="materia-figura"><FiguraMateria slug={m.slug} /></span>
+                    <span className="materia-nombre">{m.nombre}</span>
+                    <span className="materia-n">
+                      {cuantas > 0 ? `${cuantas} preguntas` : "Pronto"}
+                    </span>
+                  </Link>
                 </li>
               );
             })}
           </ul>
+        )}
+      </section>
 
-          <h3 className="sin-net-rotulo">Cómo se usa</h3>
-          <ol className="sin-net-rejilla sin-net-rejilla--pasos">
-            {SIN_NET_COMO.map((t, i) => {
-              const Icono = t.icono;
-              return (
-                <li className="sin-net-tarjeta sin-net-paso" key={t.titulo}>
-                  <span className="sin-net-paso-cima" aria-hidden="true">
-                    <span className="sin-net-paso-num">{i + 1}</span>
-                    <span className="sin-net-icono-chico">
-                      <Icono size={28} strokeWidth={1.7} />
-                    </span>
-                  </span>
-                  <h4 className="sin-net-titulo">{t.titulo}</h4>
-                  <p className="sin-net-corto">{t.corto}</p>
-                  <details className="ps-mas">
-                    <summary>
-                      <span className="ps-mas-cerrado">Contame más</span>
-                      <span className="ps-mas-abierto">Ya entendí</span>
-                      <ChevronDown className="ps-mas-flecha" size={18} strokeWidth={2.2} aria-hidden="true" />
-                    </summary>
-                    <p>{t.mas}</p>
-                  </details>
-                </li>
-              );
-            })}
-          </ol>
+      {/* 3 · Su compañero y lo de toda la comunidad. */}
+      <section className="inicio-seccion" aria-labelledby="t-companero">
+        <h2 id="t-companero">Tu compañero de estudio</h2>
+        <Companero />
+        <Comunidad />
+      </section>
 
-          <div className="sin-net-acciones">
-            <a className="ps-boton sin-net-boton" href={URL_DESCARGA_OFFLINE} download>
-              <Download size={20} strokeWidth={2} aria-hidden="true" />
-              Descargar el archivo (5 MB)
-            </a>
-            <a
-              className="ps-boton sin-net-enlace"
-              href={URL_OFFLINE}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Abrir la versión en línea →
-              <span className="ps-solo-lectores"> (se abre en otra pestaña)</span>
-            </a>
-            <a
-              className="ps-boton sin-net-compartir"
-              href={WA_COMPARTIR}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Share2 size={20} strokeWidth={2} aria-hidden="true" />
-              Compartir por WhatsApp
-              <span className="ps-solo-lectores"> (se abre en otra pestaña)</span>
-            </a>
-          </div>
+      {/* 4 · Simulacros. */}
+      <section id="inicio-simulacros" className="inicio-seccion" aria-labelledby="t-simulacros">
+        <h2 id="t-simulacros">¿Ya te sentís listo?</h2>
+        <p className="inicio-lede">
+          El simulacro son las 60 preguntas de corrido y con reloj, como el día de la prueba.
+        </p>
+        <ul className="simus">
+          {MATERIAS.map((m) => (
+            <li key={m.slug}>
+              <Link to={`/simulacros/${m.slug}`} className="simu" data-tarjeta="" style={{ ["--c" as string]: VIVA[m.slug] }}>
+                <i aria-hidden="true" />
+                Simulacro de {m.corto}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* 5 · Créditos: quién hace esto y para quién. */}
+      <section className="creditos" aria-label="Quién hace esta práctica">
+        <div>
+          <h2>Este desafío lo crearon ProfeSeguro.com y EVI</h2>
+          <p>
+            Para que todos los niños y niñas de Costa Rica lleguen a la prueba de sexto con
+            calma, gratis y sin cuentas. Cada estrella que ganás es tuya; el banco de preguntas
+            lo revisan docentes de verdad.
+          </p>
+          <p className="creditos-enlace">
+            <Link to="/maestras">Para maestras y familias →</Link>
+          </p>
+        </div>
+        <div className="creditos-logos" aria-hidden="true">
+          <span>ProfeSeguro.com</span>
+          <span>EVI</span>
+          <Mascota id="quetzal" size={64} />
         </div>
       </section>
-    </>
+    </div>
   );
 }

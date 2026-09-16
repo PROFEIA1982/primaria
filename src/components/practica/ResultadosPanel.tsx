@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { CircleAlert, PartyPopper, RotateCcw } from "lucide-react";
 import { nivelNota, PALABRA_NOTA } from "./calificar";
 import type { Practica } from "./usePractica";
+import { Estrella } from "../Amigos";
+import { BarraAmigo, BotonCompartir } from "../Rincon";
+
 
 // Los enunciados traen tablas y formulas: sin gfm la tabla sale como
 // texto con barras, y sin math las fracciones salen en crudo.
@@ -42,6 +45,19 @@ export default function ResultadosPanel({ nombreMateria, practica }: Props) {
           {total === 1 ? "pregunta" : "preguntas"}. Respondiste {respondidas} de {total}.
         </p>
       </div>
+
+
+      {/* Las estrellas de esta tanda: una por acierto. La barra es la misma
+          del rincon, para que vea cuanto le falta para el proximo amigo. */}
+      {aciertos > 0 && (
+        <div className="res-estrellas">
+          <p className="res-estrellas-ganadas">
+            <Estrella size={26} />
+            <span>+{aciertos} {aciertos === 1 ? "estrella" : "estrellas"} para tu mochila</span>
+          </p>
+          <BarraAmigo />
+        </div>
+      )}
 
       {sinResponder > 0 && (
         <p className="res-aviso">
@@ -143,6 +159,7 @@ export default function ResultadosPanel({ nombreMateria, practica }: Props) {
           Elegir otra materia
         </Link>
       </div>
+      <BotonCompartir className="res-compartir" />
       <p className="res-nota-pie">
         Practicaste {nombreMateria}. Esta nota no queda guardada en ningún lado:
         es solo para vos.

@@ -40,6 +40,8 @@ export default function Footer() {
         <nav className="footer-enlaces" aria-label="Pie de página">
           <ul className="footer-lista">
             <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/maestras">Para maestras y familias</Link></li>
+            <li><Link to="/rincon">Mi rincón</Link></li>
             <li><Link to="/contacto">Contacto</Link></li>
             <li>
               <a

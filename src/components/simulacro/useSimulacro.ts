@@ -19,6 +19,7 @@ import {
 import { listarSimulacros, registrarResultados, traerSimulacro } from "../../lib/api";
 import type { Simulacro, SimulacroResumen } from "../../lib/tipos";
 import { useTiempoExtra } from "../../lib/apariencia";
+import { sumarEstrellas } from "../../lib/rincon";
 import {
   avisoReloj,
   calificar,
@@ -397,8 +398,23 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     if (!actual) return;
     cerradoRef.current = true;
     if (calificacion.registro.length > 0) void registrarResultados(calificacion.registro);
+    // En el simulacro las estrellas llegan todas juntas al entregar (una
+    // por acierto): durante el examen no se dice que va bien ni mal, como
+    // el dia de la prueba. Va bajo el mismo candado de "una sola vez".
+    //
+    // Repetir el MISMO cuadernillo solo paga lo que se mejoro sobre la
+    // mejor vez anterior: con las respuestas ya sabidas, tres repeticiones
+    // de 60 serian la coleccion entera en una tarde. La primera vez paga
+    // completo; despues, la diferencia. Eso premia mejorar, que es lo que
+    // se quiere. Se lee la marca ANTES de guardar la de hoy.
+    const previa = marcas[actual.slug];
+    const aciertosPrevios = previa && calificacion.total > 0
+      ? Math.round((previa.mejor / 100) * calificacion.total)
+      : 0;
+    const nuevas = Math.max(0, calificacion.aciertos - aciertosPrevios);
     setMarcas(guardarIntento(actual.slug, calificacion.nota));
-  }, [fase, actual, calificacion]);
+    if (nuevas > 0) sumarEstrellas(nuevas);
+  }, [fase, actual, calificacion, marcas]);
 
   const volverALista = useCallback(() => {
     setActual(null);

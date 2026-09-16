@@ -1,0 +1,30 @@
+/* Fondos alusivos (ver Fondo.tsx). Detrás de todo, sin capturar clics. */
+.fondo {
+  position: fixed;
+  inset: 0;
+  /* Negativo DENTRO del contexto de #contenido: queda sobre el fondo de la
+     página pero debajo de todo el texto, aunque el texto no esté
+     posicionado. */
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: repeat;
+  background-size: 260px 260px;
+  animation: fondo-deriva 60s linear infinite;
+}
+/* El contenido va encima del fondo. main ya existe en App; con esto queda
+   por delante sin tocar cada página. */
+#contenido { position: relative; z-index: 1; }
+@keyframes fondo-deriva {
+  from { background-position: 0 0; }
+  to { background-position: 260px 260px; }
+}
+@media (prefers-reduced-motion: reduce) { .fondo { animation: none; } }
+/* El confeti del inicio, más tenue: es ambiente, no protagonista. */
+.fondo[data-tipo="confeti"] { opacity: 0.18; }
+/* En mejor visión el fondo se va: el patrón le resta contraste al texto. */
+:root[data-vision="alto"] .fondo { display: none; }
+.fondo[data-tipo="confeti"] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg opacity='.55'%3E%3Crect x='20' y='30' width='10' height='16' rx='2' fill='%23FFB020' transform='rotate(20 25 38)'/%3E%3Ccircle cx='120' cy='40' r='6' fill='%236F3DF0'/%3E%3Crect x='200' y='70' width='10' height='16' rx='2' fill='%23EE4F2F' transform='rotate(-30 205 78)'/%3E%3Ccircle cx='60' cy='140' r='5' fill='%230E9C63'/%3E%3Crect x='150' y='150' width='10' height='16' rx='2' fill='%232457F5' transform='rotate(40 155 158)'/%3E%3Ccircle cx='230' cy='200' r='6' fill='%23FFB020'/%3E%3Crect x='30' y='220' width='10' height='16' rx='2' fill='%236F3DF0' transform='rotate(-15 35 228)'/%3E%3Cpath d='M100 210 l4 8 8 1 -6 6 2 8 -8 -4 -8 4 2 -8 -6 -6 8 -1z' fill='%23FFB020'/%3E%3C/g%3E%3C/svg%3E"); }
+.fondo[data-tipo="espanol"] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='%23EE4F2F' opacity='.13' font-family='Georgia,serif' font-size='54' font-weight='700'%3E%3Ctext x='18' y='70'%3E%C2%AB%3C/text%3E%3Ctext x='190' y='120'%3E%C2%BB%3C/text%3E%3Ctext x='100' y='220'%3E%3F%3C/text%3E%3Ctext x='30' y='190' font-size='40'%3EA%3C/text%3E%3Ctext x='170' y='230' font-size='40'%3E%C3%B1%3C/text%3E%3C/g%3E%3Cpath d='M120 60 q30 -30 60 0' stroke='%23EE4F2F' stroke-width='6' fill='none' opacity='.13' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.fondo[data-tipo="estudios-sociales"] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='%236F3DF0' opacity='.13'%3E%3Cpath d='M10 120 l40 -50 30 30 30 -45 40 65z'/%3E%3Ccircle cx='200' cy='60' r='26' fill='none' stroke='%236F3DF0' stroke-width='6'/%3E%3Cpath d='M200 40 l8 20 -8 -6 -8 6z'/%3E%3Cpath d='M40 200 q40 -30 80 0 q40 30 80 0' stroke='%236F3DF0' stroke-width='6' fill='none'/%3E%3C/g%3E%3C/svg%3E"); }
+.fondo[data-tipo="ciencias"] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='%230E9C63' opacity='.13'%3E%3Cpath d='M40 120 q0 -70 70 -70 q0 70 -70 70z'/%3E%3Ccircle cx='190' cy='70' r='12'/%3E%3Ccircle cx='230' cy='110' r='9'/%3E%3Ccircle cx='160' cy='120' r='9'/%3E%3Cpath d='M190 70 L230 110 M190 70 L160 120' stroke='%230E9C63' stroke-width='5'/%3E%3Cpath d='M60 230 l18 -50 h24 l18 50z'/%3E%3Ccircle cx='200' cy='210' r='20' fill='none' stroke='%230E9C63' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
+.fondo[data-tipo="matematicas"] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='%232457F5' opacity='.13' font-family='Nunito,Arial,sans-serif' font-size='56' font-weight='800'%3E%3Ctext x='20' y='70'%3E%2B%3C/text%3E%3Ctext x='190' y='90'%3E%C3%B7%3C/text%3E%3Ctext x='110' y='160'%3E%C3%97%3C/text%3E%3Ctext x='30' y='230'%3E%3D%3C/text%3E%3C/g%3E%3Cg fill='none' stroke='%232457F5' stroke-width='6' opacity='.13'%3E%3Cpath d='M160 200 l30 -50 30 50z'/%3E%3Crect x='70' y='90' width='40' height='40' rx='6'/%3E%3C/g%3E%3C/svg%3E"); }

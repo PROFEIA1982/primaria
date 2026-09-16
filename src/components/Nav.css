@@ -224,3 +224,19 @@
 @media (prefers-reduced-motion: reduce) {
   #nav-principal .nav-sim-flecha { transition: none; }
 }
+
+/* La mochila de estrellas en la cabecera (16 set 2026). En celular va
+   entre el logo y la hamburguesa; en escritorio, al final del menu. */
+#nav-principal .mochila { flex: none; margin-left: auto; }
+@media (max-width: 899px) {
+  /* En celular: logo · mochila · hamburguesa en la primera linea; el menu
+     desplegado ocupa su propia linea abajo. */
+  #nav-principal .nav-hamburguesa { order: 2; }
+  #nav-principal .mochila { order: 1; margin-left: auto; }
+  #nav-principal .nav-menu { order: 3; }
+}
+@media (min-width: 900px) {
+  #nav-principal .nav-caja { flex-wrap: nowrap; }
+  #nav-principal .nav-menu { margin-left: auto; }
+  #nav-principal .mochila { margin-left: 8px; }
+}

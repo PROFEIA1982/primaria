@@ -21,7 +21,8 @@ import {
   traerTemas,
 } from "../../lib/api";
 import type { Item, Tema } from "../../lib/tipos";
-import { calificar, type Calificacion, type Respuestas } from "./calificar";
+import { acerto, calificar, type Calificacion, type Respuestas } from "./calificar";
+import { sumarEstrellas } from "../../lib/rincon";
 import {
   borrarRespaldo,
   guardarCurso,
@@ -190,7 +191,11 @@ export function usePractica(slug: SlugMateria): Practica {
   // --- arranque del examen ---
   // `desde` viene lleno solo al retomar: leerRespaldo ya reviso que esas
   // respuestas calcen con estos items y que el indice este en rango.
+  // Preguntas por las que ya se decidio la estrella en esta practica.
+  const premiadoRef = useRef<Set<number>>(new Set());
+
   const arrancar = useCallback((lista: Item[], desde?: RespaldoPractica) => {
+    premiadoRef.current = new Set();
     setItems(lista);
     if (desde) {
       setRespuestas([...desde.respuestas]);
@@ -273,14 +278,27 @@ export function usePractica(slug: SlugMateria): Practica {
   const responder = useCallback(
     (opcionId: string) => {
       // La primera respuesta manda. Despues el item queda congelado.
+      const yaContestada = respuestas[indice] !== null && respuestas[indice] !== undefined;
+      if (yaContestada) return;
       setRespuestas((prev) => {
         if (prev[indice] !== null && prev[indice] !== undefined) return prev;
         const copia = [...prev];
         copia[indice] = opcionId;
         return copia;
       });
+      // La estrella se gana aqui mismo, en el acierto, y no al final: en la
+      // practica el chiquito ve la estrella volar a la mochila en el
+      // momento. Una practica retomada no vuelve a dar estrellas por lo
+      // que ya estaba contestado, porque esas respuestas ya no pasan por
+      // aqui. El ref cierra el hueco del doble toque: dos clics en el
+      // mismo tick ven `respuestas` sin actualizar y sin esto premiaban dos
+      // veces.
+      if (premiadoRef.current.has(indice)) return;
+      premiadoRef.current.add(indice);
+      const item = items[indice];
+      if (item && acerto(item, opcionId)) sumarEstrellas(1);
     },
-    [indice],
+    [indice, items, respuestas],
   );
 
   const siguiente = useCallback(() => {
@@ -331,6 +349,7 @@ export function usePractica(slug: SlugMateria): Practica {
 
   const volverAPracticar = useCallback(() => {
     enviadoRef.current = false;
+    premiadoRef.current = new Set();
     setItems([]);
     setRespuestas([]);
     setIndice(0);

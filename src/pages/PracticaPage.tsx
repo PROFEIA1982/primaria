@@ -10,6 +10,7 @@ import ResultadosPanel from "../components/practica/ResultadosPanel";
 import SeleccionPanel from "../components/practica/SeleccionPanel";
 import PestanasMateria from "../components/PestanasMateria";
 import { usePractica } from "../components/practica/usePractica";
+import Fondo from "../components/Fondo";
 import "./PracticaPage.css";
 
 // Un icono por materia, elegido por slug para no depender del orden
@@ -83,6 +84,7 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
   if (practica.fase === "resultados") {
     return (
       <section id="practica-resultados" className="ps-contenedor ps-seccion" style={acento}>
+        <Fondo tipo={datos.slug} />
         <h1 tabIndex={-1} ref={tituloRef}>
           <span className="res-icono" aria-hidden="true">
             <Icono size={30} strokeWidth={1.9} />
@@ -102,6 +104,7 @@ export default function PracticaPage({ materia }: { materia: SlugMateria }) {
   // --- Pantalla 1: la seleccion ---
   return (
     <>
+      <Fondo tipo={datos.slug} />
       <section
         id="practica-hero"
         style={acento}

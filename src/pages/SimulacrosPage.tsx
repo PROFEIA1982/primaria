@@ -12,6 +12,7 @@ import { useSimulacros } from "../components/simulacro/useSimulacro";
 // practica. Se importa la misma hoja en vez de copiar las reglas: dos
 // copias del mismo estilo terminan separandose sin que nadie se entere.
 import "./PracticaPage.css";
+import Fondo from "../components/Fondo";
 import "./SimulacrosPage.css";
 
 const ICONOS: Record<SlugMateria, typeof BookOpen> = {
@@ -86,6 +87,7 @@ export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
   if (simulacros.fase === "resultados") {
     return (
       <section id="sim-resultados" className="ps-contenedor ps-seccion" style={acento}>
+        <Fondo tipo={datos.slug} />
         <h1 tabIndex={-1} ref={tituloRef}>
           <span className="res-icono" aria-hidden="true">
             <Icono size={30} strokeWidth={1.9} />
@@ -105,6 +107,7 @@ export default function SimulacrosPage({ materia }: { materia: SlugMateria }) {
 
   return (
     <section id="sim-lista" className="ps-contenedor ps-seccion" style={acento}>
+      <Fondo tipo={datos.slug} />
       <h1 tabIndex={-1} ref={tituloRef}>
         <span className="res-icono" aria-hidden="true">
           <Icono size={30} strokeWidth={1.9} />

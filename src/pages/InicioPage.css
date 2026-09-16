@@ -1,319 +1,234 @@
 /* ============================================================
-   Pagina de inicio. Cada seccion con su id y todo prefijado.
-
-   Contrastes calculados con la formula WCAG 2.1 (contraste_wcag.py),
-   no a ojo. Si alguien cambia un color, hay que recalcular los cuatro
-   estados (claro/oscuro por normal/mejor vision), no uno:
-                                              claro        oscuro
-   - --hero-texto sobre --hero-fondo .........  9.63 AAA     9.63 AAA
-   - --hero-tenue sobre --hero-fondo .........  8.67 AAA     8.67 AAA
-   - --accent-foreground sobre --accent ..... 12.07 AAA    12.07 AAA
-   - --titulo     sobre --background ........ 11.65 AAA     9.63 AAA
-   - --titulo     sobre --secondary ......... 10.73 AAA     7.98 AAA
-   - --foreground sobre --background ........ 17.40 AAA    14.05 AAA
-   - --foreground sobre --secondary ......... 16.03 AAA    11.64 AAA
-   - --muted      sobre --background .........  5.60 AA      8.30 AAA
-   - --muted      sobre --secondary ..........  5.16 AA      6.88 AA
-   - --enlace     sobre --background .........  6.57 AA      8.93 AAA
-   - --enlace     sobre --secondary ..........  6.05 AA      7.40 AAA
-   - --enlace     sobre --primary-suave ......  5.76 AA      7.58 AAA
-   - --primary-foreground sobre --primary ....  6.70 AA      8.21 AAA
-   - --primary    sobre --primary-suave ......  5.87 AA      6.14 AA
-   - --accent-fuerte sobre --background ......  5.02 AA      9.29 AAA
-   - --accent-fuerte sobre --secondary .......  4.62 AA      7.70 AAA
-   El hero conserva su azul en los dos temas: el fondo de la ilustracion
-   viene pintado en el archivo y si el bloque cambiara de color se veria
-   la costura.
-
-   Las rejillas cierran fila exacta a proposito: con tres tarjetas en
-   dos columnas, la tercera ocupa las dos y no queda hueco al lado.
+   Inicio (rediseño 16 set 2026) y página "Para maestras y familias".
+   El inicio nuevo usa clases con prefijo .inicio; lo de abajo del corte
+   es lo que se conservó para /maestras (para qué sirve y sin internet).
    ============================================================ */
 
-/* --- 1. Hero --- */
-#inicio-hero {
-  /* El azul plano es el mismo del fondo de la ilustracion, medido del
-     archivo: asi no se ve la costura entre el color y la imagen. Por eso
-     --hero-fondo vale igual en claro y en oscuro. */
-  background-color: var(--hero-fondo);
-  background-image: var(--hero);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  /* con tope: pasados los 1600 la ilustracion deja de crecer, si no
-     se le sube al texto en pantallas grandes */
-  background-size: min(100%, 1600px) auto;
-  color: var(--hero-texto);
-  /* El texto vive arriba, sobre el azul plano; la ilustracion queda
-     abajo y no se le mete debajo a ninguna letra. */
-  /* La ilustracion mide 1600x420, o sea que ocupa alto = ancho / 3.81.
-     El relleno de abajo reserva justo esa franja y ni un pixel mas. */
-  padding: clamp(36px, 7vw, 72px) 0 clamp(105px, 26.5vw, 420px);
-  text-align: center;
-}
-#inicio-hero .hero-icono {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 92px;
-  height: 92px;
-  margin-bottom: 20px;
-  border-radius: 50%;
-  /* blanco al 18% sobre el azul: sigue siendo decorativo, no texto */
-  background: rgba(255, 255, 255, 0.18);
-}
-#inicio-hero h1 {
-  color: var(--hero-texto);          /* 9.63 sobre el azul del fondo · AAA */
-  margin-bottom: 12px;
-}
-#inicio-hero .hero-bajada {
-  max-width: 46ch;
-  margin: 0 auto 28px;
-  font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
-  color: var(--hero-tenue);          /* 8.67 sobre el azul del fondo · AAA */
-}
-#inicio-hero .hero-boton {
-  background: var(--accent);         /* tinta encima: 12.07 · AAA */
-  color: var(--accent-foreground);
-  font-size: 1.1rem;
-  padding: 16px 30px;
-}
-#inicio-hero .hero-boton:hover { filter: brightness(0.94); }
-#inicio-hero .hero-nota {
-  margin: 18px 0 0;
-  font-size: 0.95rem;
-  color: var(--hero-tenue);
-}
-#inicio-hero :focus-visible { outline-color: var(--hero-texto); }
-
-/* --- Rejillas: la misma matematica en toda la pagina --- */
-/* Cuatro tarjetas: 1 · 2 · 4 columnas. Cualquier fila cierra exacta. */
-#inicio-pasos .pasos-rejilla,
-#inicio-materias .materias-rejilla,
+/* --- rejilla compartida de la página de maestras --- */
 #inicio-info .info-rejilla {
-  display: grid;
-  gap: 18px;
-  /* minmax con 0 y no auto: sin esto una palabra larga estira la columna
-     y la rejilla se sale de la pantalla en celular. */
-  grid-template-columns: minmax(0, 1fr);
-  align-items: stretch;
-  list-style: none;
-  margin: 28px 0 0;
-  padding: 0;
-}
-@media (min-width: 560px) {
-  #inicio-pasos .pasos-rejilla,
-  #inicio-materias .materias-rejilla,
-  #inicio-info .info-rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (min-width: 1000px) {
-  #inicio-pasos .pasos-rejilla,
-  #inicio-materias .materias-rejilla,
-  #inicio-info .info-rejilla { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
-
-/* --- 2. Como funciona --- */
-#inicio-pasos { padding: clamp(40px, 7vw, 64px) 0; }
-#inicio-pasos h2 { text-align: center; }
-#inicio-pasos .pasos-rejilla { counter-reset: paso; }
-#inicio-pasos .paso {
-  display: flex;
-  min-width: 0;
-  overflow-wrap: anywhere;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  height: 100%;
-  padding: 26px 18px;
-  border: var(--borde-ancho) solid var(--border);
-  border-radius: var(--radius);
-  background: var(--secondary);
-  text-align: center;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-@media (hover: hover) {
-  #inicio-pasos .paso:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--sombra-alta);
-  }
-}
-#inicio-pasos .paso-numero {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: var(--primary-foreground);   /* 6.70 · AA */
-  font-weight: 700;
-}
-#inicio-pasos .paso-titulo { font-weight: 700; color: var(--titulo); }
-#inicio-pasos .paso p { margin: 0; font-size: 0.98rem; }
-
-/* --- 3. Materias --- */
-#inicio-materias {
-  scroll-margin-top: 84px;           /* el menu es fijo */
-  padding: clamp(40px, 7vw, 64px) 0;
-  background: var(--secondary);
-}
-#inicio-materias h2 { text-align: center; }
-/* El li estira para que las dos tarjetas de una fila midan igual de alto. */
-#inicio-materias .materias-rejilla > li { display: flex; }
-
-/* Toda la tarjeta es el enlace, no solo el boton de adentro. */
-#inicio-materias .materia-tarjeta {
-  --acento: var(--primary);
-  display: flex;
-  min-width: 0;
-  overflow-wrap: anywhere;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  padding: 26px 22px;
-  border: var(--borde-ancho) solid var(--border);
-  border-top: 5px solid var(--acento);
-  border-radius: var(--radius);
-  background: var(--background);
-  box-shadow: var(--sombra);
-  color: var(--foreground);
-  text-decoration: none;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-@media (hover: hover) {
-  #inicio-materias .materia-tarjeta:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--sombra-alta);
-  }
-}
-#inicio-materias .materia-icono {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
-  border-radius: var(--radius-sm);
-  background: var(--suave);
-  color: var(--acento);
-}
-#inicio-materias .materia-nombre {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--titulo);
-}
-#inicio-materias .materia-cuenta { color: var(--muted); font-size: 0.98rem; }
-#inicio-materias .materia-cta {
-  margin-top: auto;
-  padding-top: 12px;
-  font-weight: 700;
-  color: var(--acento);
-}
-
-/* --- 4b. Simulacros completos: una tarjeta por materia ---
-   Gemela de "Las cuatro materias" pero para el examen completo. Fondo blanco,
-   borde fino, el color de la materia solo en el icono y el llamado. Estatica.
-   Contrastes (tokens de src/index.css):        claro   oscuro
-   - --titulo sobre --background ........... 11.65   10.30  AAA (nombre)
-   - --muted  sobre --background ...........  5.60    6.42  AA  (dato/lede)
-   - --acento (materia) sobre --background: el mas bajo es Español, 5.46 · AA */
-#inicio-simulacros {
-  scroll-margin-top: 84px;             /* el menu es fijo */
-  padding: clamp(40px, 7vw, 64px) 0;
-}
-#inicio-simulacros h2 { text-align: center; }
-#inicio-simulacros .inicio-lede {
-  max-width: 60ch;
-  margin: 0 auto 24px;
-  text-align: center;
-  color: var(--muted);
-}
-#inicio-simulacros .simu-rejilla {
-  display: grid;
-  gap: 18px;
-  /* minmax con 0: sin esto una palabra larga estira la columna y la rejilla
-     se sale de la pantalla en celular. */
-  grid-template-columns: minmax(0, 1fr);
-  align-items: stretch;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
-@media (min-width: 560px) {
-  #inicio-simulacros .simu-rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (min-width: 1000px) {
-  #inicio-simulacros .simu-rejilla { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
-/* El li estira para que las tarjetas de una fila midan igual de alto. */
-#inicio-simulacros .simu-rejilla > li { display: flex; }
+@media (min-width: 560px) { #inicio-info .info-rejilla { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { #inicio-info .info-rejilla { grid-template-columns: repeat(4, 1fr); } }
+#maestras-cabecera h1 { margin-bottom: 8px; }
+#maestras-cabecera .inicio-lede { max-width: 46rem; color: var(--muted); margin: 0; }
 
-/* Toda la tarjeta es el enlace, no solo el llamado de adentro. */
-#inicio-simulacros .simu-tarjeta {
-  --acento: var(--primary);
+/* ============================================================
+   INICIO NUEVO
+   ============================================================ */
+.inicio { padding-block: 16px 56px; }
+.inicio .inicio-seccion { margin-top: 40px; }
+.inicio h2 { font-size: clamp(1.5rem, 2vw + 0.8rem, 2.1rem); margin-bottom: 16px; }
+.inicio .inicio-lede { color: var(--muted); margin: -8px 0 16px; }
+
+/* hero */
+.inicio .hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 12px 0 8px;
+}
+@media (min-width: 760px) {
+  .inicio .hero { grid-template-columns: 1.15fr 0.85fr; padding: 28px 0 12px; }
+}
+.inicio .hero-kicker {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 7px 16px 7px 12px;
+  border-radius: 999px;
+  background: var(--secondary);
+  border: 2px solid var(--border);
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.inicio .hero-kicker b { color: var(--selva); }
+:root[data-tema="oscuro"] .inicio .hero-kicker b { color: var(--selva); }
+.inicio .hero-punto {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 999px;
+  background: var(--selva);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--selva) 22%, transparent);
+}
+.inicio .hero-titulo {
+  font-size: clamp(2.2rem, 4.5vw + 1rem, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--foreground);
+}
+.inicio .hero-titulo span { color: var(--selva); }
+.inicio .hero-bajada { font-size: 1.15rem; color: var(--muted); max-width: 34rem; margin: 12px 0 0; }
+.inicio .hero-boton {
+  margin-top: 22px;
+  min-height: 56px;
+  padding: 16px 26px;
+  border-radius: 999px;
+  background: var(--sol);
+  color: var(--sol-texto);
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 6px 0 var(--sol-oscuro);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.inicio .hero-boton:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--sol-oscuro); }
+.inicio .hero-arte { width: min(100%, 360px); height: auto; justify-self: center; display: block; }
+
+/* materias: bloques de color sólido */
+.inicio .materias {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+@media (min-width: 760px) { .inicio .materias { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } }
+.inicio .materias > li { display: flex; min-width: 0; }
+.inicio .materia {
+  position: relative;
   display: flex;
-  min-width: 0;
-  overflow-wrap: anywhere;
   flex-direction: column;
-  align-items: center;      /* todo el contenido centrado en la tarjeta */
-  text-align: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
-  padding: 22px 20px;
-  border: var(--borde-ancho-fuerte) solid var(--border);
+  min-height: 200px;
+  padding: 18px 16px 16px;
   border-radius: var(--radius);
+  background: var(--c);
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 6px 0 color-mix(in srgb, var(--c) 70%, #000);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.inicio .materia::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+@media (hover: hover) {
+  .inicio .materia:hover { transform: translateY(-4px); box-shadow: 0 12px 0 color-mix(in srgb, var(--c) 70%, #000), var(--sombra); }
+}
+.inicio .materia-figura {
+  width: 74px;
+  height: 74px;
+  padding: 10px;
+  margin-bottom: auto;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+}
+.inicio .materia-figura svg { width: 100%; height: 100%; display: block; }
+.inicio .materia-nombre {
+  position: relative;
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  line-height: 1.1;
+  color: #fff;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+.inicio .materia-n {
+  position: relative;
+  align-self: flex-start;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+.inicio .materia-ir {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--c);
+  display: grid;
+  place-items: center;
+}
+.inicio .materia:focus-visible { outline: 4px solid var(--foreground); outline-offset: 3px; }
+
+/* simulacros */
+.inicio .simus {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (min-width: 760px) { .inicio .simus { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.inicio .simu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: var(--secondary);
+  border: 2px solid var(--border);
+  color: var(--foreground);
+  font-weight: 800;
+  text-decoration: none;
+}
+.inicio .simu:hover { border-color: var(--c); }
+.inicio .simu i { flex: none; width: 10px; height: 10px; border-radius: 999px; background: var(--c); }
+
+/* créditos */
+.inicio .creditos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-top: 40px;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: var(--selva);
+  color: var(--selva-texto);
+}
+@media (min-width: 700px) { .inicio .creditos { grid-template-columns: 1fr auto; } }
+.inicio .creditos h2 { color: inherit; font-size: clamp(1.4rem, 2vw + 0.6rem, 1.9rem); margin: 0; }
+.inicio .creditos p { margin: 6px 0 0; opacity: 0.95; }
+.inicio .creditos-enlace a { color: inherit; font-weight: 800; }
+.inicio .creditos-logos { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.inicio .creditos-logos span {
+  padding: 10px 16px;
+  border-radius: 14px;
   background: var(--background);
   color: var(--foreground);
-  text-decoration: none;
-  box-shadow: var(--sombra);
-}
-#inicio-simulacros .simu-tarjeta:hover { border-color: var(--acento); }
-#inicio-simulacros .simu-icono {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
-  border-radius: var(--radius-sm);
-  background: var(--suave);
-  color: var(--acento);
-}
-#inicio-simulacros .simu-nombre {
-  font-size: 1.25rem;
+  font-family: var(--fuente-titulo);
   font-weight: 700;
-  color: var(--titulo);
-}
-#inicio-simulacros .simu-dato {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--muted);
-  font-size: 0.98rem;
-  font-weight: 700;
-}
-#inicio-simulacros .simu-dato svg { flex: none; color: var(--acento); }
-#inicio-simulacros .simu-cta {
-  margin-top: auto;
-  padding-top: 12px;
-  font-weight: 700;
-  color: var(--acento);
+  font-size: 1.1rem;
 }
 
-@media (hover: hover) {
-  #inicio-simulacros .simu-tarjeta {
-    transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
-  }
-  #inicio-simulacros .simu-tarjeta:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--sombra-alta);
-  }
-}
 @media (prefers-reduced-motion: reduce) {
-  #inicio-simulacros .simu-tarjeta { transition: none; }
-  #inicio-simulacros .simu-tarjeta:hover { transform: none; }
+  .inicio .materia, .inicio .hero-boton { transition: none; }
 }
 @media (forced-colors: active) {
-  #inicio-simulacros .simu-tarjeta { border: 2px solid ButtonText; }
+  .inicio .materia, .inicio .simu, .inicio .creditos { border: 2px solid ButtonText; }
 }
 
-/* --- Desplegable de tarjeta (details nativo, cero JavaScript) --- */
 #inicio-info .ps-mas,
 #inicio-sin-internet .ps-mas { margin-top: auto; }
 #inicio-info .ps-mas > summary,

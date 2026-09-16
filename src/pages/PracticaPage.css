@@ -1400,3 +1400,56 @@
   #practica-seleccion .sel-retomar { border: 2px solid ButtonText; }
   #practica-seleccion .sel-descartar { border: 2px solid ButtonText; }
 }
+
+/* ============================================================
+   Puntitos de avance y mochila en la barra del examen (16 set 2026).
+   ============================================================ */
+#practica-examen .examen-progreso { white-space: normal; }
+#practica-examen .examen-puntos {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  vertical-align: middle;
+}
+#practica-examen .examen-puntos i {
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 999px;
+  background: var(--secondary);
+  border: 2px solid var(--border-fuerte);
+}
+#practica-examen .examen-puntos i[data-hecho] {
+  background: var(--success);
+  border-color: var(--success);
+}
+#practica-examen .examen-puntos i[data-actual] {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-suave);
+}
+#practica-examen .examen-barra-caja .mochila { margin-left: auto; }
+@media (max-width: 560px) {
+  #practica-examen .examen-puntos i { width: 10px; height: 10px; }
+}
+
+/* --- estrellas en resultados --- */
+#practica-resultados .res-estrellas,
+#sim-resultados .res-estrellas {
+  margin: 16px 0 0;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: var(--secondary);
+  border: var(--borde-ancho) solid var(--border);
+}
+#practica-resultados .res-estrellas-ganadas,
+#sim-resultados .res-estrellas-ganadas {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+#practica-resultados .res-compartir,
+#sim-resultados .res-compartir { margin-top: 14px; }

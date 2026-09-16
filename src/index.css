@@ -51,9 +51,9 @@
   color-scheme: light;
 
   /* --- Base --- */
-  --background: #ffffff;
-  --foreground: #1a1a1a;          /* 17.40 sobre el fondo · AAA */
-  --secondary: #f2f6fa;           /* superficie de tarjetas */
+  --background: #fff8ee;          /* crema cálida (16 set 2026) · tinta encima 16.3 · AAA */
+  --foreground: #1a1a1a;
+  --secondary: #ffffff;           /* superficie de tarjetas: blanco sobre crema */
   /* Fondo de los BLOQUES LARGOS DE LECTURA (el texto base de un item de
      comprension), distinto del gris de las tarjetas.
      No es decoracion: Rello y Bigham (ASSETS 2017) midieron diez fondos
@@ -66,7 +66,7 @@
      claro: durazno muy claro · tinta #1a1a1a encima = 15.89 · AAA */
   --lectura: #fdf3e9;
   --lectura-borde: #e8d9c8;
-  --muted: #5c6b66;               /*  5.60 sobre el fondo · AA  */
+  --muted: #5c6b66;               /*  5.31 sobre la crema · AA  */
   --titulo: #1b3a5b;              /* 11.65 sobre el fondo · AAA */
   --enlace: #0b5fa5;              /*  6.57 sobre el fondo · AA  */
 
@@ -138,6 +138,22 @@
      pierde. En claro la placa es transparente y no se nota. */
   --marca-placa: transparent;
 
+  /* --- Rincón y estilo vivo (16 set 2026) ---
+     Color sólido para las tarjetas de materia del inicio, con texto blanco
+     encima solo en tamaño grande y negrita (>= 18.66 px): ahí el mínimo
+     AA es 3:1. Los números pequeños van siempre en píldora blanca.
+       medidos: coral 4.11 · uva 5.83 · hoja 4.38 · cielo 5.59 (blanco encima) */
+  --viva-espanol: #d94f2c;
+  --viva-sociales: #6f3df0;
+  --viva-ciencias: #0f8a58;
+  --viva-mate: #2457f5;
+  --sol: #ffb020;                 /* botón principal · --sol-texto encima 10.1 */
+  --sol-oscuro: #e89a00;
+  --sol-texto: #3a2a00;
+  --selva: #0a7d4f;               /* verde del rincón · blanco encima 5.17 · sobre crema 4.91 */
+  --selva-texto: #ffffff;
+  --fuente-titulo: "Fredoka", "Nunito", "Segoe UI", system-ui, sans-serif;
+
   /* --- Medidas --- */
   --radius: 16px;
   --radius-sm: 10px;
@@ -169,6 +185,15 @@
        que tenga el celular en modo noche sin haber tocado nada. */
     --lectura: #2a2318;
     --lectura-borde: #8a7250;
+    --viva-espanol: #d94f2c;
+    --viva-sociales: #8b62ff;
+    --viva-ciencias: #0f8a58;
+    --viva-mate: #4a7bff;
+    --sol: #ffb020;
+    --sol-oscuro: #e89a00;
+    --sol-texto: #3a2a00;
+    --selva: #63dd98;
+    --selva-texto: #0a1020;
     color-scheme: dark;
     /* Azul medianoche, no gris de oficina: la noche del espacio, con
        personalidad y calor. El texto es crema, nunca blanco puro, para
@@ -225,6 +250,15 @@
    especificidad, asi que gana por orden.
    ============================================================ */
 :root[data-tema="oscuro"] {
+  --viva-espanol: #d94f2c;
+  --viva-sociales: #8b62ff;
+  --viva-ciencias: #0f8a58;
+  --viva-mate: #4a7bff;
+  --sol: #ffb020;
+  --sol-oscuro: #e89a00;
+  --sol-texto: #3a2a00;
+  --selva: #63dd98;
+  --selva-texto: #0a1020;
   color-scheme: dark;
   /* Misma lista que el bloque 2 (azul medianoche): si cambia una, cambian
      las dos. No hay preprocesador que las mantenga en linea. */
@@ -283,6 +317,7 @@
    escalon mas grande.
    ============================================================ */
 :root[data-vision="alto"] {
+  --background: #ffffff;          /* en mejor visión el fondo vuelve a blanco puro */
   --foreground: #000000;          /* 21.00 sobre el fondo · AAA */
   --muted: #000000;               /* 21.00 · el gris apagado se acaba */
   --secondary: #eef3f8;
@@ -397,6 +432,16 @@
        error    #a33b00 ... 6.60 AA              #ffa070 ... 8.36 AAA
    ============================================================ */
 :root[data-color="daltonismo"] {
+  /* Rincón y tarjetas vivas en Okabe-Ito (16 set 2026) */
+  --viva-espanol: #8a5000;
+  --viva-sociales: #8f3d6b;
+  --viva-ciencias: #00695c;
+  --viva-mate: #0059a6;
+  --sol: #e69f00;
+  --sol-oscuro: #b87d00;
+  --sol-texto: #1a1a1a;
+  --selva: #00695c;
+  --selva-texto: #ffffff;
   --espanol: #8a5000;             --espanol-suave: #fbf0e2;
   --sociales: #8f3d6b;            --sociales-suave: #fbeaf3;
   --ciencias: #00695c;            --ciencias-suave: #e2f2ef;
@@ -418,6 +463,16 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"])[data-color="daltonismo"] {
+    /* Rincón y tarjetas vivas en Okabe-Ito (16 set 2026) */
+    --viva-espanol: #8a5000;
+    --viva-sociales: #8f3d6b;
+    --viva-ciencias: #00695c;
+    --viva-mate: #0059a6;
+    --sol: #e69f00;
+    --sol-oscuro: #b87d00;
+    --sol-texto: #1a1a1a;
+    --selva: #00695c;
+    --selva-texto: #ffffff;
     /* igual que el oscuro normal
        Faltaba: sin esto el bloque heredaba el durazno CLARO del
        primer bloque y la cita quedaba crema sobre durazno = 1.09.
@@ -444,6 +499,16 @@
   }
 }
 :root[data-tema="oscuro"][data-color="daltonismo"] {
+  /* Rincón y tarjetas vivas en Okabe-Ito (16 set 2026) */
+  --viva-espanol: #8a5000;
+  --viva-sociales: #8f3d6b;
+  --viva-ciencias: #00695c;
+  --viva-mate: #0059a6;
+  --sol: #e69f00;
+  --sol-oscuro: #b87d00;
+  --sol-texto: #1a1a1a;
+  --selva: #00695c;
+  --selva-texto: #ffffff;
   --espanol: #f0b060;             --espanol-suave: #2f2418;
   --sociales: #f0a0cc;            --sociales-suave: #331f2b;
   --ciencias: #5fd6bd;            --ciencias-suave: #0f2b28;
@@ -481,6 +546,18 @@
        #757575 ...  4.61 AA               #8f8f8f ...  5.16 AA
    ============================================================ */
 :root[data-color="grises"] {
+  /* Rincón y tarjetas vivas en gris (16 set 2026): el filtro de grises
+     solo alcanza img y svg, no los fondos de CSS. */
+  --background: #ffffff;
+  --viva-espanol: #4a4a4a;
+  --viva-sociales: #3a3a3a;
+  --viva-ciencias: #555555;
+  --viva-mate: #2f2f2f;
+  --sol: #3d3d3d;
+  --sol-oscuro: #1f1f1f;
+  --sol-texto: #ffffff;
+  --selva: #1f1f1f;
+  --selva-texto: #ffffff;
   --espanol: #1f1f1f;             --espanol-suave: #f0f0f0;
   --sociales: #3d3d3d;            --sociales-suave: #ebebeb;
   --ciencias: #5a5a5a;            --ciencias-suave: #e6e6e6;
@@ -518,6 +595,18 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"])[data-color="grises"] {
+    /* Rincón y tarjetas vivas en gris (16 set 2026): el filtro de grises
+       solo alcanza img y svg, no los fondos de CSS. */
+    
+    --viva-espanol: #5a5a5a;
+    --viva-sociales: #6a6a6a;
+    --viva-ciencias: #4f4f4f;
+    --viva-mate: #707070;
+    --sol: #d0d0d0;
+    --sol-oscuro: #a0a0a0;
+    --sol-texto: #111111;
+    --selva: #d0d0d0;
+    --selva-texto: #111111;
     /* escala de grises oscuro · #f5f5f5 encima = 14.24 · AAA
        Faltaba: sin esto el bloque heredaba el durazno CLARO del
        primer bloque y la cita quedaba crema sobre durazno = 1.09.
@@ -561,6 +650,18 @@
   }
 }
 :root[data-tema="oscuro"][data-color="grises"] {
+  /* Rincón y tarjetas vivas en gris (16 set 2026): el filtro de grises
+     solo alcanza img y svg, no los fondos de CSS. */
+  
+  --viva-espanol: #5a5a5a;
+  --viva-sociales: #6a6a6a;
+  --viva-ciencias: #4f4f4f;
+  --viva-mate: #707070;
+  --sol: #d0d0d0;
+  --sol-oscuro: #a0a0a0;
+  --sol-texto: #111111;
+  --selva: #d0d0d0;
+  --selva-texto: #111111;
   --espanol: #f2f2f2;             --espanol-suave: #262626;
   --sociales: #d0d0d0;            --sociales-suave: #2b2b2b;
   --ciencias: #adadad;            --ciencias-suave: #303030;
@@ -602,7 +703,8 @@
 /* En grises, la ilustracion del hero y los logos tambien pierden color:
    si no, quedan como el unico parche de color de toda la pantalla. */
 :root[data-color="grises"] img,
-:root[data-color="grises"] svg { filter: grayscale(1); }
+:root[data-color="grises"] svg,
+:root[data-color="grises"] .fondo { filter: grayscale(1); }
 
 *,
 *::before,
@@ -634,10 +736,14 @@ body {
 
 h1, h2, h3 {
   color: var(--titulo);
-  line-height: 1.2;
+  line-height: 1.15;
   text-wrap: balance;
   margin: 0 0 0.5em;
-  font-weight: 700;
+  /* Fredoka para los titulares: redonda y con carácter, sin ser de kínder.
+     El cuerpo sigue en Nunito, que es la que respalda la legibilidad. */
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 h1 { font-size: clamp(1.75rem, 1.4rem + 1.8vw, 3rem); }
 h2 { font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem); }
@@ -714,6 +820,12 @@ img { max-width: 100%; height: auto; }
   cursor: pointer;
 }
 .ps-boton:hover { filter: brightness(0.92); }
+/* Variante con borde, para la acción secundaria al lado de la principal. */
+.ps-boton-borde {
+  background: var(--background);
+  color: var(--foreground);
+  border: 2px solid var(--border-fuerte);
+}
 /* En oscuro el boton ya es un azul claro: bajarle el brillo lo apaga en
    vez de resaltarlo, asi que ahi se aclara. */
 :root[data-tema="oscuro"] .ps-boton:hover { filter: brightness(1.12); }
@@ -759,3 +871,7 @@ img { max-width: 100%; height: auto; }
 @media (forced-colors: active) {
   .ps-boton { border: 2px solid ButtonText; }
 }
+
+/* El boton flotante de accesibilidad (abajo a la derecha, >=900px) no debe
+   tapar el ultimo control de la pagina: se deja aire abajo. */
+@media (min-width: 900px) { body { padding-bottom: 88px; } }

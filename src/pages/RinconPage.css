@@ -1,0 +1,85 @@
+/* Mi rincón. Columna de lectura, tarjetas de amigos y el fondo de hojas. */
+#rincon .rincon-col { max-width: 46rem; margin-inline: auto; }
+
+#rincon .rincon-cabecera {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--ciencias-suave), var(--mate-suave));
+  border: var(--borde-ancho) solid var(--border);
+}
+@media (min-width: 700px) {
+  #rincon .rincon-cabecera { grid-template-columns: 180px 1fr; }
+}
+#rincon .rincon-mascota { justify-self: center; }
+#rincon .rincon-cabecera h1 { font-size: clamp(1.8rem, 3vw + 1rem, 2.6rem); margin: 0; }
+#rincon .rincon-bajada { color: var(--muted); margin: 6px 0 0; }
+#rincon .rincon-compartir { margin-top: 14px; }
+
+#rincon .rincon-titulo { font-size: 1.5rem; margin: 26px 0 12px; }
+
+#rincon .rincon-amigos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+@media (min-width: 640px) {
+  #rincon .rincon-amigos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+#rincon .rincon-amigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px;
+  text-align: center;
+  border-radius: 20px;
+  background: var(--secondary);
+  border: 2px solid var(--border);
+}
+#rincon .rincon-amigo b { font-family: var(--fuente-titulo); font-size: 1.1rem; font-weight: 600; }
+#rincon .rincon-amigo small { color: var(--muted); font-weight: 600; }
+#rincon .rincon-amigo[data-bloqueado] svg { filter: grayscale(1) contrast(0.4) brightness(1.2); opacity: 0.6; }
+#rincon .rincon-amigo[data-elegido] { border-color: var(--selva); }
+#rincon .rincon-elegir { min-height: 40px; padding: 6px 14px; font-size: 0.95rem; margin-top: 4px; }
+#rincon .rincon-chip {
+  margin-top: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--selva);
+  color: var(--selva-texto);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+#rincon .rincon-nota { color: var(--muted); font-size: 0.95rem; margin: 18px 0 0; }
+
+#rincon .rincon-reinicio { margin-top: 28px; }
+#rincon .rincon-reiniciar,
+#rincon .rincon-borrar {
+  background: none;
+  border: 0;
+  padding: 8px 0;
+  min-height: var(--toque-min);
+  color: var(--muted);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+#rincon .rincon-borrar { color: var(--error); }
+#rincon .rincon-confirmar {
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: var(--borde-ancho-fuerte) solid var(--error);
+  background: var(--error-suave);
+}
+#rincon .rincon-confirmar p { margin: 0 0 10px; }
+#rincon .rincon-confirmar-botones { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }

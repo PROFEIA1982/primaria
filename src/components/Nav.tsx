@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { IMG_LOGO_EVI, MATERIAS } from "../config";
+import { Mochila } from "./Rincon";
 import "./Nav.css";
 
 // Navegacion. En celular se abre con la hamburguesa; en pantalla grande
@@ -73,10 +74,16 @@ export default function Nav() {
               </li>
             ))}
             <li>
-              <NavLink to="/contacto" onClick={() => setAbierto(false)}>Contacto</NavLink>
+              <NavLink to="/rincon" onClick={() => setAbierto(false)}>Mi rincón</NavLink>
             </li>
+
           </ul>
         </nav>
+
+        {/* La mochila de estrellas: siempre a la vista, en celular tambien.
+            Va despues del menu en el DOM para que el orden de Tab sea el
+            mismo que el visual; en celular el CSS la sube junto al logo. */}
+        <Mochila />
       </div>
     </header>
   );

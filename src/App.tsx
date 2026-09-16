@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import InicioPage from "./pages/InicioPage";
 import { Cargando } from "./components/Estados";
 import { useConcentracion } from "./lib/concentracion";
+import { SpriteAmigos } from "./components/Amigos";
+import { NuevoAmigo } from "./components/Rincon";
 
 // El inicio va directo porque es la primera pantalla. Lo demas se carga
 // cuando hace falta: asi un celular con datos lentos no baja el motor de
@@ -14,6 +16,8 @@ const PracticaPage = lazy(() => import("./pages/PracticaPage"));
 const SimulacrosPage = lazy(() => import("./pages/SimulacrosPage"));
 const ContactoPage = lazy(() => import("./pages/ContactoPage"));
 const NoEncontradaPage = lazy(() => import("./pages/NoEncontradaPage"));
+const RinconPage = lazy(() => import("./pages/RinconPage"));
+const MaestrasPage = lazy(() => import("./pages/MaestrasPage"));
 
 // La ruta vieja /anuncios manda a contacto y le avisa a esa pagina que baje
 // hasta el aviso. No se hace el scroll aca: en cuanto se navega, este
@@ -30,7 +34,7 @@ function LlevarAlAviso() {
 // contestando y el pie, con sus enlaces, telefonos y redes, lo saca de ahi.
 // El pie se queda donde sirve de verdad, que es donde uno anda buscando
 // informacion: el inicio y contacto.
-const RUTAS_CON_PIE = ["/", "/contacto"];
+const RUTAS_CON_PIE = ["/", "/contacto", "/maestras", "/rincon"];
 
 // El armazon vive dentro del router porque useLocation necesita el contexto
 // que abre BrowserRouter. App queda por fuera y solo monta el router.
@@ -62,6 +66,8 @@ function Armazon() {
   return (
     <>
       <a className="ps-saltar" href="#contenido">Saltar al contenido</a>
+      {/* Los dibujos de los amigos, una sola vez; cada <Mascota> los reusa. */}
+      <SpriteAmigos />
       <SubirAlCambiar />
       {!concentrado && <Nav />}
       <main id="contenido" tabIndex={-1}>
@@ -81,6 +87,8 @@ function Armazon() {
             <Route path="/simulacros/ciencias" element={<SimulacrosPage materia="ciencias" />} />
             <Route path="/simulacros/matematicas" element={<SimulacrosPage materia="matematicas" />} />
             <Route path="/contacto" element={<ContactoPage />} />
+            <Route path="/rincon" element={<RinconPage />} />
+            <Route path="/maestras" element={<MaestrasPage />} />
             {/* El aviso para docentes ya vive dentro de inicio y contacto.
                 La ruta vieja se conserva para no romper enlaces ya repartidos. */}
             <Route path="/anuncios" element={<LlevarAlAviso />} />
@@ -95,6 +103,8 @@ function Armazon() {
           viene a hacer. En celular esto no se ve; ahi el mismo panel vive
           dentro de la hamburguesa. */}
       <AccesibilidadFlotante />
+      {/* La celebracion de un amigo nuevo salta en cualquier pantalla. */}
+      <NuevoAmigo />
       {/* Y su gemela de celular y tablet: barra fija abajo, donde llega el
           pulgar. Cada una se apaga sola con CSS en el ancho de la otra. */}
       <AccesibilidadMovil />

@@ -7,6 +7,9 @@ import { CircleAlert, ListChecks, PartyPopper, Printer, RotateCcw } from "lucide
 import { NOMBRE_SITIO } from "../../config";
 import { letraDe, nivelNota, PALABRA_NOTA } from "../practica/calificar";
 import type { Simulacros } from "./useSimulacro";
+import { Estrella } from "../Amigos";
+import { BarraAmigo, BotonCompartir } from "../Rincon";
+
 
 const REMARK = [remarkMath, remarkGfm];
 const REHYPE = [rehypeKatex];
@@ -98,6 +101,16 @@ export default function ResultadosSimulacro({ simulacros }: Props) {
           Respondiste {respondidas} de {total}.
         </p>
       </div>
+
+      {aciertos > 0 && (
+        <div className="res-estrellas sim-no-imprime">
+          <p className="res-estrellas-ganadas">
+            <Estrella size={26} />
+            <span>+{aciertos} {aciertos === 1 ? "estrella" : "estrellas"} para tu mochila</span>
+          </p>
+          <BarraAmigo />
+        </div>
+      )}
 
       <div className="sim-acciones sim-no-imprime">
         <button type="button" className="ps-boton sim-imprimir" onClick={() => window.print()}>
@@ -263,6 +276,7 @@ export default function ResultadosSimulacro({ simulacros }: Props) {
           Volver al inicio
         </Link>
       </div>
+      <BotonCompartir className="res-compartir sim-no-imprime" />
       <p className="res-nota-pie">
         Esta nota no queda guardada en ningún servidor: se guarda solo en este
         aparato, para que puedas comparar cuando lo repitás.

@@ -105,7 +105,10 @@
   .ax-flota {
     display: block;
     position: fixed;
-    left: 16px;
+    /* A la DERECHA (16 set 2026): a la izquierda se montaba sobre la
+       etiqueta "Cuantas" y el primer chip cuando la columna quedaba a ese
+       lado en pantallas de 1366 px. */
+    right: 16px;
     bottom: 16px;
     /* Por encima del encabezado pegado, que va en 20. */
     z-index: 60;
@@ -140,7 +143,7 @@
   .ax-flota .ax-panel {
     position: absolute;
     bottom: calc(100% + 10px);
-    left: 0;
+    right: 0;
     z-index: 1;
     width: 306px;
     /* Con el texto en "Muy grande" el panel crece: que se desplace por
@@ -161,7 +164,7 @@
     bottom: auto;
     top: 12px;
     position: fixed;
-    left: 16px;
+    right: 16px;
     max-height: calc(100vh - 24px);
   }
 }
@@ -216,71 +219,55 @@
    - --muted sobre --background ...........  5.60 claro ·  8.30 oscuro · AA
    - --primary-foreground sobre --primary .  8.59 claro ·  9.12 oscuro · AAA
    ============================================================ */
-.ax-barra { display: none; }
+.ax-fab { display: none; }
 .ax-hoja { display: none; }
 .ax-velo { display: none; }
 
 @media (max-width: 899px) {
-  .ax-barra {
+  /* El boton redondo (16 set 2026). Sustituye a la barra de cuatro
+     botones, que tapaba 56 px de cada pantalla todo el tiempo. */
+  .ax-fab {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
     z-index: 70;
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    border: var(--borde-ancho-fuerte) solid var(--border-fuerte);
     background: var(--background);
-    border-top: var(--borde-ancho-fuerte) solid var(--border);
-    /* El area segura de los iPhone con barra de gestos. */
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
-  .ax-barra-boton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    /* 56 px de alto: bastante mas que los 44 del nivel AAA de WCAG 2.5.5,
-       y el ancho es un cuarto de la pantalla, asi que fallar es dificil. */
-    min-height: 56px;
-    padding: 6px 4px;
-    border: 0;
-    background: none;
-    color: var(--muted);
-    font: inherit;
-    font-size: 0.74rem;
-    font-weight: 800;
+    color: var(--foreground);
     cursor: pointer;
+    box-shadow: var(--sombra-alta);
+    transition: transform 0.25s ease, opacity 0.25s ease;
   }
-  .ax-barra-boton:hover { background: var(--secondary); }
-  /* Puesto: relleno + el icono cambiado + lo que dice el lector de
-     pantalla. Nunca solo el color. */
-  .ax-barra-boton[aria-pressed="true"],
-  .ax-barra-boton[data-nivel="grande"],
-  .ax-barra-boton[data-nivel="extra"] {
-    background: var(--primary);
-    color: var(--primary-foreground);
-  }
-  .ax-barra-boton:focus-visible {
-    outline: 3px solid var(--primary);
-    outline-offset: -3px;
-  }
+  /* Mientras se baja leyendo, se guarda en la orilla; sigue en el DOM y
+     enfocable, solo se corre. */
+  .ax-fab[data-escondido] { transform: translateX(calc(100% + 20px)); opacity: 0.6; }
+  .ax-fab[aria-expanded="true"] { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
+  .ax-fab:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; transform: none; opacity: 1; }
 
-  /* La hoja con el panel completo sube desde la barra. */
+  /* La hoja con el panel completo sube desde abajo, encima del boton. */
   .ax-hoja {
     display: block;
     position: fixed;
     left: 0;
     right: 0;
-    bottom: calc(56px + env(safe-area-inset-bottom, 0px));
-    z-index: 70;
-    max-height: calc(100vh - 90px);
+    bottom: 0;
+    z-index: 71;
+    max-height: calc(100vh - 80px);
     overflow-y: auto;
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
     background: var(--background);
     border-top: var(--borde-ancho-fuerte) solid var(--border-fuerte);
+    border-radius: 20px 20px 0 0;
     box-shadow: var(--sombra-alta);
   }
   .ax-hoja[hidden] { display: none; }
+  /* Con la hoja abierta el boton queda encima de ella, para cerrarla. */
+  .ax-fab[aria-expanded="true"] { z-index: 72; }
   .ax-velo {
     display: block;
     position: fixed;
@@ -290,19 +277,21 @@
     background: rgba(10, 16, 32, 0.45);
   }
 
-  /* Que la barra no le tape el final a ninguna pagina. */
-  body { padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
+  /* Que el boton no le tape el ultimo control a ninguna pagina. */
+  body { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ax-fab { transition: none; }
 }
 
 @media (forced-colors: active) {
-  .ax-barra { border-top: 2px solid ButtonText; }
-  .ax-barra-boton[aria-pressed="true"],
-  .ax-barra-boton[data-nivel="grande"],
-  .ax-barra-boton[data-nivel="extra"] { outline: 3px solid Highlight; outline-offset: -3px; }
+  .ax-fab { border: 2px solid ButtonText; }
+  .ax-fab[aria-expanded="true"] { outline: 3px solid Highlight; outline-offset: -3px; }
   .ax-hoja { border-top: 2px solid ButtonText; }
 }
 
 /* Imprimir una prueba no lleva la barra encima. */
 @media print {
-  .ax-barra, .ax-hoja, .ax-velo { display: none !important; }
+  .ax-fab, .ax-hoja, .ax-velo { display: none !important; }
 }

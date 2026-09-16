@@ -1,0 +1,179 @@
+/* ============================================================
+   Rincón: mochila, compañero, comunidad, celebración y compartir.
+   Los colores salen de los tokens nuevos de index.css (--sol, --selva,
+   --viva-*) para que respeten los diez estados de tema.
+   ============================================================ */
+
+/* --- mochila (contador de estrellas) --- */
+.mochila {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 6px 14px 6px 8px;
+  border-radius: 999px;
+  border: 2px solid var(--border-fuerte);
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+}
+.mochila[data-compacta] { min-height: 40px; font-size: 1rem; padding-block: 4px; }
+.mochila[data-late] { animation: mochila-late 0.5s ease; }
+@keyframes mochila-late {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+/* La estrella que vuela de la opción correcta hasta la mochila. */
+.estrella-vuela {
+  position: fixed;
+  z-index: 90;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  animation: estrella-vuela 0.8s cubic-bezier(0.3, 0.7, 0.4, 1) forwards;
+}
+@keyframes estrella-vuela {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(0.5); opacity: 0; }
+}
+
+/* --- barra de progreso hacia el próximo amigo --- */
+.rincon-barra {
+  margin-top: 12px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--secondary);
+  border: var(--borde-ancho) solid var(--border-fuerte);
+  overflow: hidden;
+}
+.rincon-barra > i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--sol), #ffd466);
+  transition: width 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.rincon-barra-leyenda {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- compañero (inicio) --- */
+.companero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+  background: var(--secondary);
+  border: var(--borde-ancho) solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--sombra);
+}
+@media (min-width: 700px) {
+  .companero { grid-template-columns: 150px 1fr auto; }
+}
+.companero-mascota { justify-self: center; }
+.companero-nombre { font-family: var(--fuente-titulo); font-size: 1.4rem; margin: 0; color: var(--foreground); }
+.companero-estado { color: var(--muted); margin: 4px 0 0; }
+.companero-ir { white-space: nowrap; }
+
+/* --- comunidad: tres números --- */
+.comunidad {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+@media (min-width: 760px) {
+  .comunidad { grid-template-columns: 1.4fr 1fr 1fr; }
+}
+.comunidad-dato {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  background: var(--secondary);
+  border: var(--borde-ancho) solid var(--border);
+  box-shadow: var(--sombra);
+}
+.comunidad-dato b {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--foreground);
+}
+.comunidad-dato span { color: var(--muted); font-weight: 600; }
+.comunidad-principal { background: var(--pie-fondo); border-color: var(--pie-fondo); }
+.comunidad-principal b { font-size: clamp(3rem, 7vw, 5rem); color: var(--sol); }
+.comunidad-principal span { color: var(--pie-texto); }
+
+/* --- celebración --- */
+.amigo-velo {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(20, 30, 28, 0.6);
+}
+.amigo-modal {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px 22px;
+  border-radius: 28px;
+  background: var(--background);
+  color: var(--foreground);
+  text-align: center;
+  box-shadow: var(--sombra-alta);
+  animation: amigo-brinca 0.5s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+.amigo-modal h2 { font-family: var(--fuente-titulo); font-size: 1.9rem; margin: 8px 0 0; }
+.amigo-modal p { color: var(--muted); margin: 8px 0 0; }
+.amigo-ok { margin-top: 18px; background: var(--sol); color: var(--sol-texto); }
+@keyframes amigo-brinca {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.confeti { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.confeti i {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  animation: confeti-cae 1.8s ease-out forwards;
+}
+@keyframes confeti-cae {
+  0% { transform: translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateY(95vh) rotate(540deg); opacity: 0; }
+}
+
+/* --- compartir --- */
+.compartir { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.compartir-boton { background: var(--selva); color: var(--selva-texto); }
+.compartir-aviso { flex-basis: 100%; margin: 0; font-size: 0.95rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .mochila[data-late], .estrella-vuela, .amigo-modal, .confeti i { animation: none !important; }
+  .estrella-vuela { display: none; }
+  .rincon-barra > i { transition: none; }
+}

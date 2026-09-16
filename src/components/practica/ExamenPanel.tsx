@@ -4,6 +4,8 @@ import ItemRenderer from "../ItemRenderer";
 import { useBarraPegada, useLlevarALaPregunta } from "./useBarraPegada";
 import type { Practica } from "./usePractica";
 import { useVozActiva } from "../../lib/apariencia";
+import { acerto } from "./calificar";
+import { Mochila, volarEstrella } from "../Rincon";
 
 type Props = {
   nombreMateria: string;
@@ -61,6 +63,20 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
   const item = items[indice];
   const elegida = respuestas[indice] ?? null;
   const respondido = elegida !== null;
+
+  // Cuando la respuesta recien marcada es la correcta, la estrella sale de
+  // esa opcion y vuela a la mochila. Se compara contra la respuesta
+  // anterior para que no vuele al devolverse a una pregunta ya contestada.
+  const previaRef = useRef<{ indice: number; elegida: string | null }>({ indice, elegida });
+  useEffect(() => {
+    const previa = previaRef.current;
+    previaRef.current = { indice, elegida };
+    // Solo vuela cuando, en LA MISMA pregunta, se pasa de sin contestar a
+    // contestada bien. Al devolverse a una ya contestada no vuela nada.
+    if (previa.indice !== indice || previa.elegida !== null || elegida === null) return;
+    if (!item || !acerto(item, elegida)) return;
+    volarEstrella(document.querySelector('.item-opcion[data-estado="correcta"]'));
+  }, [item, indice, elegida]);
   const esLaUltima = indice === items.length - 1;
 
   // Las tres ayudas de lectura. Viven aca y no en la barra para que el
@@ -84,8 +100,21 @@ export default function ExamenPanel({ nombreMateria, practica }: Props) {
               pagina del examen no tenia ni un encabezado. */}
           <h1 className="examen-materia">{nombreMateria}</h1>
           <p className="examen-progreso">
-            Pregunta <strong>{indice + 1}</strong> de {items.length}
+            <span className="ps-solo-lectores">Pregunta {indice + 1} de {items.length}</span>
+            {/* Puntitos: uno por pregunta. Verde la contestada, con aro la
+                actual. A un chiquito le dice "voy por aqui" mejor que la
+                fraccion, y la fraccion sigue ahi para el lector de pantalla. */}
+            <span className="examen-puntos" aria-hidden="true">
+              {items.map((it, i) => (
+                <i
+                  key={it.id}
+                  data-hecho={respuestas[i] !== null && respuestas[i] !== undefined ? "" : undefined}
+                  data-actual={i === indice ? "" : undefined}
+                />
+              ))}
+            </span>
           </p>
+          <Mochila compacta />
         </div>
         {/* La barrita es dibujo y nada mas. Llego a tener role="progressbar"
             para que el lector de pantalla dijera el avance, pero progressbar
