@@ -37,19 +37,30 @@ export function leerExamen(materia) {
   return { ruta, ...datos };
 }
 
-/** El enunciado con la figura ya puesta en Markdown. */
+/**
+ * Todo lo que lee el estudiante antes de las opciones. En Matematicas es el
+ * enunciado. En Estudios Sociales el item trae ademas un contexto (la
+ * apertura, el texto, la tabla o el mapa) y el enunciado es solo la
+ * pregunta: en la base van juntos, el contexto primero.
+ */
+export function textoCompleto(item) {
+  return item.contexto ? `${item.contexto}\n\n${item.enunciado}` : item.enunciado;
+}
+
+/** El texto completo con la figura ya puesta en Markdown. */
 export function enunciadoFinal(item) {
-  if (!item.imagen) return item.enunciado;
+  const texto = textoCompleto(item);
+  if (!item.imagen) return texto;
   const alt = item.imagen.alt.replace(/[[\]]/g, '');
   // Con funcion y no con cadena: en una cadena de reemplazo, "$&", "$'" o
   // "$$" dentro del texto alternativo se interpretan como patrones y lo
   // corrompen (paso en la auditoria con un precio escrito con signo de dolar).
-  return item.enunciado.replace(MARCA_FIGURA, () => `![${alt}](${URL_FIGURAS}${item.imagen.archivo})`);
+  return texto.replace(MARCA_FIGURA, () => `![${alt}](${URL_FIGURAS}${item.imagen.archivo})`);
 }
 
 /** Si el item trae formulas: el signo de dolar sin barra delante abre LaTeX. */
 export function tieneLatex(item) {
-  const textos = [item.enunciado, ...Object.values(item.opciones)];
+  const textos = [textoCompleto(item), ...Object.values(item.opciones)];
   return textos.some((t) => /(^|[^\\])\$/.test(t));
 }
 

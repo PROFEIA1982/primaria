@@ -1,0 +1,2117 @@
+{
+  "simulacro": {
+    "slug": "nuevo-estudios-sociales-1",
+    "materia": "estudios-sociales",
+    "numero": 1,
+    "titulo": "Simulacro nuevo 1",
+    "preguntas": 60,
+    "segundos_por_item": 180,
+    "barajar_opciones": false,
+    "version": "2026-10-05"
+  },
+  "items": [
+    {
+      "id": "soc-1-1-a",
+      "orden": 1,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Definición e importancia de los Estudios Sociales y la Educación Cívica",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.1",
+        "texto": "Comprende la definición y la importancia de los Estudios Sociales y la Educación Cívica."
+      },
+      "evidencia": {
+        "codigo": "1.1.2",
+        "texto": "Distingue la importancia de los Estudios Sociales y la Educación Cívica para la convivencia social."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nEn la escuela de Santa Cruz, el grupo de sexto investigó por qué el parque del barrio se llenaba de basura los domingos. Entrevistaron a vecinos, revisaron fotos viejas del lugar y leyeron las reglas municipales sobre el uso de los espacios públicos. Con lo aprendido, le propusieron a la asociación de desarrollo colocar basureros y organizar turnos de limpieza entre las familias.",
+      "enunciado": "Según el texto anterior, ¿qué muestra esa experiencia sobre la importancia de los Estudios Sociales y la Educación Cívica para la convivencia?",
+      "opciones": {
+        "A": "Sirven sobre todo para conocer cómo se fundó y creció el barrio.",
+        "B": "Enseñan que las reglas municipales resuelven por sí mismas los problemas.",
+        "C": "Ayudan a entender un problema común y a acordar cómo resolverlo.",
+        "D": "Permiten que la escuela decida por las familias cómo usar el parque."
+      },
+      "clave": "C",
+      "explicacion": "El grupo estudió el problema desde varias miradas y después propuso una solución para acordarla con la comunidad. Eso es lo que aportan los Estudios Sociales y la Educación Cívica: entender lo que pasa y convivir mejor buscando acuerdos.",
+      "por_que": {
+        "A": "confunde una herramienta de la investigación, el pasado del lugar, con el propósito de convivir mejor",
+        "B": "cree que basta con la norma, sin la participación de la comunidad",
+        "D": "confunde participar y proponer con imponer una decisión"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-1-b",
+      "orden": 2,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Definición e importancia de los Estudios Sociales y la Educación Cívica",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.1",
+        "texto": "Comprende la definición y la importancia de los Estudios Sociales y la Educación Cívica."
+      },
+      "evidencia": {
+        "codigo": "1.1.3",
+        "texto": "Infiere cómo los Estudios Sociales y la Educación Cívica promueven acciones ciudadanas respetuosas, responsables y críticas."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Considere la siguiente información:\n\nAntes de las elecciones del gobierno estudiantil, Daniela leyó en un chat que uno de los partidos iba a eliminar el recreo largo. Le preguntó al Tribunal Electoral Estudiantil y leyó el plan de trabajo del partido: la noticia era falsa. Luego lo explicó con respeto en el mismo chat.",
+      "enunciado": "A partir de la información anterior, ¿qué actitud ciudadana, de las que promueve la Educación Cívica, mostró Daniela?",
+      "opciones": {
+        "A": "Confirmar si un dato es cierto y aclararlo sin ofender a nadie.",
+        "B": "Apoyar al partido contrario para que el recreo largo se mantenga.",
+        "C": "Evitar opinar en los chats para no meterse en ningún problema.",
+        "D": "Pedir que el Tribunal sacara de la elección al partido acusado."
+      },
+      "clave": "A",
+      "explicacion": "Daniela no se quedó con lo primero que leyó: buscó la fuente, comprobó y después aclaró con respeto. Esa es una acción ciudadana crítica y responsable, justo lo que busca la Educación Cívica.",
+      "por_que": {
+        "B": "se queda con la promesa del chat y no ve la actitud de verificar",
+        "C": "confunde el respeto con no participar",
+        "D": "confunde la actitud crítica con buscar un castigo"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-2-a",
+      "orden": 3,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Posición geográfica de Costa Rica",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.2",
+        "texto": "Reconoce la importancia de Costa Rica en el contexto geográfico, social y político regional y mundial."
+      },
+      "evidencia": {
+        "codigo": "1.2.1",
+        "texto": "Identifica la ubicación de Costa Rica en el contexto hemisférico, continental y regional."
+      },
+      "verbo": "identificar",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea la siguiente información:\n\nUna estudiante de Japón le escribió a Mateo, que vive en Liberia, para preguntarle dónde queda Costa Rica. Mateo le contestó con tres pistas: el país está al norte de la línea del ecuador, está al oeste del meridiano de Greenwich y forma parte del istmo que une a América del Norte con América del Sur.",
+      "enunciado": "De acuerdo con las pistas de Mateo, ¿cuál es la ubicación de Costa Rica?",
+      "opciones": {
+        "A": "Hemisferios norte y occidental, en América Central.",
+        "B": "Hemisferios norte y oriental, en América Central.",
+        "C": "Hemisferios sur y occidental, en América del Sur.",
+        "D": "Hemisferios norte y occidental, en las islas Antillas."
+      },
+      "clave": "A",
+      "explicacion": "Al norte del ecuador está el hemisferio norte, y al oeste del meridiano de Greenwich, el occidental. El istmo que une las dos Américas es América Central, y ahí está Costa Rica.",
+      "por_que": {
+        "B": "confunde el oeste del meridiano de Greenwich con el hemisferio oriental",
+        "C": "confunde el istmo con América del Sur y ubica el país al sur del ecuador",
+        "D": "acierta los hemisferios pero confunde el istmo con las islas del Caribe"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-2-b",
+      "orden": 4,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Posición geográfica de Costa Rica",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.2",
+        "texto": "Reconoce la importancia de Costa Rica en el contexto geográfico, social y político regional y mundial."
+      },
+      "evidencia": {
+        "codigo": "1.2.2",
+        "texto": "Reconoce ventajas y desventajas de la posición geográfica de Costa Rica en relación con su entorno regional."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nCosta Rica tiene costas en el mar Caribe y en el océano Pacífico, y forma parte de un istmo angosto entre dos grandes masas continentales. Por eso, plantas y animales del norte y del sur se encontraron en su territorio. Pero esa misma posición la deja en la ruta de algunas tormentas tropicales y sobre placas de la corteza terrestre que se mueven.",
+      "enunciado": "Según el texto anterior, ¿cuál opción presenta una ventaja y una desventaja de la posición geográfica de Costa Rica?",
+      "opciones": {
+        "A": "Ventaja: salida a dos mares. Desventaja: riesgo de sequías.",
+        "B": "Ventaja: gran variedad de especies. Desventaja: riesgo de sismos.",
+        "C": "Ventaja: suelos buenos para el café. Desventaja: paso de tormentas.",
+        "D": "Ventaja: clima frío en las costas. Desventaja: paso de tormentas."
+      },
+      "clave": "B",
+      "explicacion": "Que se encuentren especies del norte y del sur es una ventaja: por eso el país tiene tanta biodiversidad. Estar sobre placas que se mueven es una desventaja, porque trae sismos.",
+      "por_que": {
+        "A": "toma una ventaja del texto, pero agrega una desventaja que el texto no menciona",
+        "C": "agrega una ventaja que el texto no atribuye a la posición",
+        "D": "inventa una ventaja falsa: las costas del país son cálidas"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-2-c",
+      "orden": 5,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Posición geográfica de Costa Rica",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.2",
+        "texto": "Reconoce la importancia de Costa Rica en el contexto geográfico, social y político regional y mundial."
+      },
+      "evidencia": {
+        "codigo": "1.2.3",
+        "texto": "Distingue cómo la posición geográfica de Costa Rica favorece relaciones sociales y políticas con países centroamericanos."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nCuando un huracán afecta a un país de Centroamérica, los gobiernos vecinos suelen coordinar el envío de ayuda por carretera, porque las fronteras están cerca y comparten rutas. Los países del istmo también se reúnen en el Sistema de la Integración Centroamericana para tomar acuerdos sobre comercio, salud y protección ante desastres.",
+      "enunciado": "De acuerdo con el texto anterior, ¿cómo favorece la posición geográfica de Costa Rica sus relaciones con la región?",
+      "opciones": {
+        "A": "La cercanía facilita que los países cooperen entre sí.",
+        "B": "La cercanía hace que los países vecinos compartan un mismo gobierno.",
+        "C": "Estar entre dos mares hace innecesario el comercio con los vecinos.",
+        "D": "Los acuerdos se deben al idioma común más que a la cercanía."
+      },
+      "clave": "A",
+      "explicacion": "Los países del istmo están cerca y comparten fronteras y rutas, y eso les permite ayudarse y tomar acuerdos. Cada país mantiene su propio gobierno: lo que comparten es la cooperación.",
+      "por_que": {
+        "B": "confunde la integración regional con unirse en un solo país",
+        "C": "confunde la ventaja marítima con no necesitar a la región",
+        "D": "ignora el factor geográfico que señala el texto"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-3-a",
+      "orden": 6,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Formas de relieve",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.3",
+        "texto": "Identifica las características básicas de las diferentes formas de relieve de Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "1.3.1",
+        "texto": "Reconoce los conceptos relacionados con el relieve de Costa Rica: costas, llanuras, valles y cordilleras."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nDurante una gira al volcán Irazú, Keylor observó desde lo alto una larga cadena de montañas y volcanes, unidos unos con otros, que se extendía por muchos kilómetros. El guía explicó que esa formación separa las aguas que corren hacia el mar Caribe de las que bajan hacia el océano Pacífico.",
+      "enunciado": "La forma de relieve que observó Keylor se conoce como",
+      "opciones": {
+        "A": "cordillera.",
+        "B": "valle.",
+        "C": "llanura costera.",
+        "D": "meseta."
+      },
+      "clave": "A",
+      "explicacion": "Una cadena larga de montañas y volcanes unidos es una cordillera. La del Irazú es la Cordillera Volcánica Central, que reparte las aguas entre las dos vertientes del país.",
+      "por_que": {
+        "B": "confunde la zona baja entre montañas con las montañas mismas",
+        "C": "confunde una zona plana junto al mar con una cadena de montañas",
+        "D": "confunde una zona alta y plana con una cadena de montañas y volcanes"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-3-b",
+      "orden": 7,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Formas de relieve",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.3",
+        "texto": "Identifica las características básicas de las diferentes formas de relieve de Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "1.3.2",
+        "texto": "Distingue las características principales de las costas, llanuras, valles y cordilleras de Costa Rica."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "espacial",
+      "contexto": "Considere la siguiente información:\n\nEn una clase de Estudios Sociales, el grupo de Randall comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:\n\n| Característica | Costa 1 | Costa 2 |\n| --- | --- | --- |\n| Forma del litoral | Muy recortada, con golfos y penínsulas | Casi recta, con pocas entradas del mar |\n| Extensión | Más larga | Más corta |",
+      "enunciado": "De acuerdo con la información anterior, ¿cuál opción distingue correctamente las dos costas de Costa Rica?",
+      "opciones": {
+        "A": "La costa 1 es la del Caribe, con la península de Osa.",
+        "B": "La costa 2 es la del Pacífico, con el golfo de Nicoya.",
+        "C": "La costa 2 es la del Caribe, con la península de Nicoya.",
+        "D": "La costa 1 es la del Pacífico, con el golfo Dulce."
+      },
+      "clave": "D",
+      "explicacion": "La costa del Pacífico es larga y muy recortada, con golfos como el de Nicoya y penínsulas como la de Osa. La del Caribe es más corta y casi recta.",
+      "por_que": {
+        "A": "invierte las costas y además ubica en el Caribe una península del Pacífico",
+        "B": "invierte las costas: la casi recta es la del Caribe",
+        "C": "acierta que la costa 2 es la del Caribe, pero le pone una península del Pacífico"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-3-c",
+      "orden": 8,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Formas de relieve",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.3",
+        "texto": "Identifica las características básicas de las diferentes formas de relieve de Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "1.3.3",
+        "texto": "Infiere cómo las características del relieve costarricense influyen en actividades humanas generales."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nEn el Valle Central, rodeado de montañas, buena parte de los suelos se formó con ceniza de antiguas erupciones y el clima es templado. Desde hace mucho tiempo ahí se concentran ciudades, carreteras y cafetales. En cambio, en las partes altas de la cordillera de Talamanca, con pendientes fuertes y mucho frío, hay pocos poblados.",
+      "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre la relación entre el relieve y las actividades humanas?",
+      "opciones": {
+        "A": "Las partes altas atraen más gente, porque el frío ayuda al cultivo de café.",
+        "B": "El relieve no influye: los poblados crecen donde hubo erupciones recientes.",
+        "C": "Los terrenos poco empinados y de buen suelo facilitan poblar y sembrar.",
+        "D": "Las ciudades y carreteras hicieron que el clima del valle sea templado."
+      },
+      "clave": "C",
+      "explicacion": "En el Valle Central el terreno, el suelo y el clima ayudan a vivir y a sembrar, por eso ahí hay tantas ciudades y cafetales. En las partes altas y empinadas de Talamanca es más difícil, y hay menos poblados.",
+      "por_que": {
+        "A": "invierte la relación entre altura, clima y población",
+        "B": "confunde el origen del suelo con una causa de la población",
+        "D": "confunde la consecuencia con la causa"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-4-a",
+      "orden": 9,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Concepto de región y regionalización",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.4",
+        "texto": "Reconoce el concepto de región y sus características."
+      },
+      "evidencia": {
+        "codigo": "1.4.1",
+        "texto": "Reconoce el concepto de región."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nPara un trabajo de clase, Ana Lucía pintó en un mapa de Costa Rica un área que incluye cantones de distintas provincias. Explicó que los escogió porque comparten características: clima cálido y húmedo, llanuras extensas, ríos caudalosos y fincas dedicadas a cultivos como la piña y la yuca.",
+      "enunciado": "La información anterior hace referencia al concepto de",
+      "opciones": {
+        "A": "provincia.",
+        "B": "cantón.",
+        "C": "región.",
+        "D": "distrito."
+      },
+      "clave": "C",
+      "explicacion": "Una región es un espacio que se delimita porque sus partes comparten características, aunque sean de provincias distintas. Provincias, cantones y distritos son divisiones administrativas con límites fijos.",
+      "por_que": {
+        "A": "confunde un área con rasgos comunes con una división administrativa",
+        "B": "confunde el área completa con una de sus partes administrativas",
+        "D": "confunde un área con rasgos comunes con la división administrativa más pequeña"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-4-b",
+      "orden": 10,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Concepto de región y regionalización",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.4",
+        "texto": "Reconoce el concepto de región y sus características."
+      },
+      "evidencia": {
+        "codigo": "1.4.2",
+        "texto": "Distingue las características principales del concepto de región."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea la siguiente información:\n\nDos estudiantes discuten en clase. Camila asegura que una región siempre tiene los mismos límites que una provincia. Esteban dice que una región solo se puede delimitar según el clima de la zona, sin tomar en cuenta el relieve ni las actividades de la gente.",
+      "enunciado": "De acuerdo con la información anterior, ¿cuál afirmación sobre el concepto de región es correcta?",
+      "opciones": {
+        "A": "Camila acierta, porque las regiones siguen los límites provinciales.",
+        "B": "Ninguno acierta: los rasgos escogidos marcan los límites.",
+        "C": "Esteban acierta, porque el clima es lo único que define una región.",
+        "D": "Los dos aciertan, porque cada uno usa un criterio distinto."
+      },
+      "clave": "B",
+      "explicacion": "Una región se delimita con las características que se escojan: el clima, el relieve o las actividades económicas, entre otras. Por eso no tiene que coincidir con una provincia ni depender solo del clima.",
+      "por_que": {
+        "A": "confunde la región con una división administrativa",
+        "C": "reduce las características de una región a una sola",
+        "D": "cree que los dos tienen razón, cuando los dos se equivocan"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-4-c",
+      "orden": 11,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Estudios Sociales y geografía",
+      "subtema": "Concepto de región y regionalización",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.4",
+        "texto": "Reconoce el concepto de región y sus características."
+      },
+      "evidencia": {
+        "codigo": "1.4.3",
+        "texto": "Infiere cómo la regionalización propicia el desarrollo socioeconómico de Costa Rica."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nCosta Rica se organiza en seis regiones socioeconómicas, como la Chorotega, la Brunca y la Huetar Norte, para planificar su desarrollo. Suponga que en una de ellas se detecta que muchos jóvenes deben viajar lejos para estudiar una carrera técnica, y que por eso se abren nuevas opciones de formación técnica dentro de esa misma región.",
+      "enunciado": "A partir del texto anterior, ¿cómo favorece la regionalización el desarrollo del país?",
+      "opciones": {
+        "A": "Permite conocer las necesidades de cada zona y atenderlas mejor.",
+        "B": "Hace que cada región se gobierne sola, con sus propias leyes.",
+        "C": "Obliga a que todas las regiones reciban exactamente lo mismo.",
+        "D": "Busca que la gente joven se traslade a estudiar a la región Central."
+      },
+      "clave": "A",
+      "explicacion": "Al dividir el país en regiones, se puede estudiar qué necesita cada una y tomar decisiones a su medida, como abrir estudios técnicos donde hacen falta. Las regiones no hacen leyes: sirven para planificar.",
+      "por_que": {
+        "B": "confunde la planificación por regiones con la autonomía política",
+        "C": "cree que planificar es repartir igual sin mirar las necesidades",
+        "D": "contradice la solución que plantea el texto"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-5-a",
+      "orden": 12,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Instituciones que promueven los derechos de las personas estudiantes",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.5",
+        "texto": "Comprende la importancia de las instituciones promotoras de los derechos de las personas estudiantes: MEP, PANI, Ebais, Defensoría de los Habitantes e IMAS."
+      },
+      "evidencia": {
+        "codigo": "1.5.1",
+        "texto": "Reconoce las funciones básicas de las instituciones que promueven los derechos de las personas estudiantes."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea la siguiente información:\n\nLa maestra de Sebastián notó que él llegaba triste, con miedo de volver a su casa, y que sus derechos podían estar en peligro. Siguiendo el protocolo de la escuela, la directora informó de inmediato a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en riesgo.",
+      "enunciado": "¿A cuál institución se refiere la información anterior?",
+      "opciones": {
+        "A": "Instituto Mixto de Ayuda Social",
+        "B": "Defensoría de los Habitantes de la República",
+        "C": "Ministerio de Educación Pública",
+        "D": "Patronato Nacional de la Infancia"
+      },
+      "clave": "D",
+      "explicacion": "El PANI es la institución que protege a niñas, niños y adolescentes cuando sus derechos están en riesgo, y la escuela tiene el deber de avisarle. La Defensoría vigila a las instituciones públicas y el IMAS da ayudas económicas.",
+      "por_que": {
+        "A": "confunde la protección de la niñez con la ayuda económica a las familias",
+        "B": "confunde la protección de la niñez con la vigilancia de las instituciones públicas",
+        "C": "cree que la escuela misma es la que protege, cuando lo que hace es avisar"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-5-b",
+      "orden": 13,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Instituciones que promueven los derechos de las personas estudiantes",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.5",
+        "texto": "Comprende la importancia de las instituciones promotoras de los derechos de las personas estudiantes: MEP, PANI, Ebais, Defensoría de los Habitantes e IMAS."
+      },
+      "evidencia": {
+        "codigo": "1.5.2",
+        "texto": "Distingue qué derechos se vulneran a partir de situaciones generales o específicas."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nJoselyn tiene doce años. Desde hace dos meses no va a la escuela, porque sus papás le pidieron que cuidara a sus hermanos pequeños mientras ellos trabajan todo el día en una finca. Ella dice que le gustaría volver a clases y que extraña a sus compañeros.",
+      "enunciado": "Según el texto anterior, ¿cuál derecho de Joselyn se está vulnerando?",
+      "opciones": {
+        "A": "El derecho a la salud.",
+        "B": "El derecho al trabajo.",
+        "C": "El derecho a la educación.",
+        "D": "El derecho a la libre expresión."
+      },
+      "clave": "C",
+      "explicacion": "Joselyn dejó de ir a la escuela, así que se le está quitando su derecho a estudiar. A su edad, lo que le corresponde es aprender y estar protegida, no cargar con el trabajo de cuidar a otros todo el día.",
+      "por_que": {
+        "A": "no relaciona la situación con la escuela, que es lo que perdió",
+        "B": "cree que cuidar a sus hermanos es ejercer un derecho, cuando a su edad le corresponde estudiar",
+        "D": "se fija en que ella dice lo que siente, pero eso no se le está impidiendo"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-5-c",
+      "orden": 14,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Instituciones que promueven los derechos de las personas estudiantes",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.5",
+        "texto": "Comprende la importancia de las instituciones promotoras de los derechos de las personas estudiantes: MEP, PANI, Ebais, Defensoría de los Habitantes e IMAS."
+      },
+      "evidencia": {
+        "codigo": "1.5.3",
+        "texto": "Comprende la importancia de los derechos para la práctica de actitudes éticas y ciudadanas."
+      },
+      "verbo": "comprender",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nEn una comunidad de Upala, el Ebais organizó una feria de salud en la escuela. Revisaron las vacunas, el peso y la talla de los niños, y una enfermera explicó cómo lavarse bien las manos. Al final, el comité estudiantil propuso hacer carteles para que toda la escuela practicara lo aprendido.",
+      "enunciado": "De acuerdo con el texto anterior, ¿por qué es importante conocer el derecho a la salud para actuar como ciudadanos?",
+      "opciones": {
+        "A": "Porque permite exigir que lo atiendan antes que a los demás.",
+        "B": "Porque lleva a cuidarse uno mismo y a cuidar a los demás.",
+        "C": "Porque ese derecho consiste en recibir vacunas y controles.",
+        "D": "Porque cuidar la salud es tarea del Ebais y no de la escuela."
+      },
+      "clave": "B",
+      "explicacion": "El derecho a la salud no es solo recibir atención: también es aprender a cuidarse. Los estudiantes que hicieron carteles usaron lo aprendido para ayudar a toda la escuela, y eso es actuar como ciudadanos.",
+      "por_que": {
+        "A": "confunde un derecho con un privilegio",
+        "C": "reduce el derecho a la salud a recibir un servicio",
+        "D": "deja toda la responsabilidad en el Ebais y olvida la de cada persona"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-6-a",
+      "orden": 15,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Clima, biodiversidad y vida cotidiana",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.6",
+        "texto": "Comprende la relación del clima con la biodiversidad y la vida cotidiana en Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "1.6.1",
+        "texto": "Reconoce cómo el clima influye en la biodiversidad y en actividades cotidianas."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nEn Cañas, Guanacaste, la familia de Yerlin recoge agua de lluvia entre mayo y noviembre, porque de diciembre a abril casi no llueve, los potreros se secan y muchos árboles botan sus hojas. En cambio, su prima, que vive en Limón, cuenta que allá llueve en casi todos los meses del año.",
+      "enunciado": "Según el texto anterior, ¿cómo influye el clima en la vida de la familia de Yerlin?",
+      "opciones": {
+        "A": "Viven igual todo el año, porque en Guanacaste llueve como en Limón.",
+        "B": "Siembran en diciembre, cuando hay menos lluvias.",
+        "C": "Ajustan sus tareas a la época seca y a la lluviosa.",
+        "D": "Recogen agua de diciembre a abril, cuando más llueve."
+      },
+      "clave": "C",
+      "explicacion": "En Guanacaste hay una época seca muy marcada, así que la familia guarda agua cuando llueve para tenerla en los meses secos. El clima cambia lo que hacen durante el año, y también a las plantas: los árboles botan las hojas para ahorrar agua.",
+      "por_que": {
+        "A": "generaliza el clima de Limón a Guanacaste",
+        "B": "invierte la época que conviene para sembrar",
+        "D": "confunde la época seca con la lluviosa"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-6-b",
+      "orden": 16,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Clima, biodiversidad y vida cotidiana",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.6",
+        "texto": "Comprende la relación del clima con la biodiversidad y la vida cotidiana en Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "1.6.2",
+        "texto": "Distingue la relación entre el clima, la biodiversidad y las actividades humanas."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "espacial",
+      "contexto": "Analice la siguiente información:\n\n| | Lugar 1 | Lugar 2 |\n| --- | --- | --- |\n| Clima | Fresco, húmedo y con neblina casi todo el año | Cálido, con varios meses sin lluvia |\n| Vegetación | Árboles cubiertos de musgos, helechos y orquídeas | Árboles que botan sus hojas en verano |\n| Actividad común | Observación de aves en senderos | Ganadería en potreros |",
+      "enunciado": "De acuerdo con la información anterior, ¿cuál conclusión es correcta?",
+      "opciones": {
+        "A": "La humedad del lugar 1 favorece plantas que necesitan mucha agua.",
+        "B": "El calor del lugar 2 hace que sus árboles conserven las hojas todo el año.",
+        "C": "La ganadería del lugar 2 es la causa de que su clima sea cálido.",
+        "D": "El lugar 2 tiene más especies de plantas porque es más cálido."
+      },
+      "clave": "A",
+      "explicacion": "Los musgos, helechos y orquídeas necesitan humedad casi todo el año, y eso es lo que tiene el lugar 1. En el lugar 2, los meses secos hacen que los árboles boten las hojas para ahorrar agua.",
+      "por_que": {
+        "B": "invierte lo que dice la tabla sobre los árboles del lugar 2",
+        "C": "confunde una actividad humana con la causa del clima",
+        "D": "saca una conclusión que la tabla no permite"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-6-c",
+      "orden": 17,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Clima, biodiversidad y vida cotidiana",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.6",
+        "texto": "Comprende la relación del clima con la biodiversidad y la vida cotidiana en Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "1.6.3",
+        "texto": "Infiere cómo las actividades humanas afectan la biodiversidad."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nEn una cuenca, varias fincas cortaron los árboles que crecían a la orilla del río para sembrar hasta el borde. Con los años, los vecinos notaron que en verano el río llevaba menos agua, que con los aguaceros el agua bajaba turbia y que ya casi no se veían los peces ni las nutrias de antes.",
+      "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre el efecto de esa actividad humana?",
+      "opciones": {
+        "A": "Los peces se fueron y por eso el río lleva menos agua en verano.",
+        "B": "Los cultivos junto al río protegen el suelo igual que los árboles.",
+        "C": "Quitar el bosque junto al río dañó el hogar de muchas especies.",
+        "D": "El agua turbia viene de los aguaceros y no tiene que ver con las fincas."
+      },
+      "clave": "C",
+      "explicacion": "Los árboles de la orilla protegen el suelo y dan sombra y alimento a los animales del río. Al cortarlos, la tierra cae al agua, el río se seca más en verano y las especies pierden su hogar.",
+      "por_que": {
+        "A": "confunde la causa con la consecuencia",
+        "B": "cree que cualquier planta cumple la función del bosque de la orilla",
+        "D": "no relaciona la tierra suelta sin árboles con el agua turbia"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-7-a",
+      "orden": 18,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Actitudes ciudadanas y ambiente",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.7",
+        "texto": "Distingue la importancia de las actitudes ciudadanas en el fortalecimiento de la relación armoniosa con el ambiente."
+      },
+      "evidencia": {
+        "codigo": "1.7.1",
+        "texto": "Distingue las buenas prácticas y las actitudes ciudadanas que contribuyen a la conservación ambiental."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nLa familia de Andrea paga cada mes un recibo de agua muy alto. Al revisar, notaron que la manguera queda abierta mientras lavan el carro y que una llave del baño gotea todo el día. El agua de su comunidad viene de una naciente que en verano baja su caudal.",
+      "enunciado": "¿Cuál práctica de la familia ayudaría más a conservar la naciente?",
+      "opciones": {
+        "A": "Pagar el recibo a tiempo para no tener que pagar multas.",
+        "B": "Comprar agua embotellada para tomar durante el verano.",
+        "C": "Arreglar la fuga y usar un balde para lavar el carro.",
+        "D": "Lavar el carro de noche, cuando hace menos calor."
+      },
+      "clave": "C",
+      "explicacion": "Lo que más agua desperdicia es la llave que gotea y la manguera abierta. Arreglar la fuga y lavar con balde ahorra agua todos los días, y así la naciente sufre menos en verano.",
+      "por_que": {
+        "A": "confunde una responsabilidad económica con una práctica ambiental",
+        "B": "no ahorra el agua de la naciente y además produce más plástico",
+        "D": "cambia la hora, pero sigue gastando la misma agua"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-7-b",
+      "orden": 19,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Actitudes ciudadanas y ambiente",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.7",
+        "texto": "Distingue la importancia de las actitudes ciudadanas en el fortalecimiento de la relación armoniosa con el ambiente."
+      },
+      "evidencia": {
+        "codigo": "1.7.2",
+        "texto": "Infiere la importancia de las actitudes ciudadanas y los acuerdos para cuidar el medio ambiente."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nEn una playa del Pacífico, los vecinos, los dueños de restaurantes y los pescadores firmaron un acuerdo: no dejar basura en la arena, recoger cada sábado lo que trae la marea y no usar pajillas de plástico. Al año siguiente, la playa recibió la Bandera Azul Ecológica y llegaron más visitantes.",
+      "enunciado": "Según el texto anterior, ¿por qué fue importante el acuerdo entre los distintos grupos?",
+      "opciones": {
+        "A": "Porque su fin principal era que llegaran más turistas a los negocios.",
+        "B": "Porque una ley obligaba a cada grupo a limpiar su parte de la playa.",
+        "C": "Porque los pescadores eran los únicos que ensuciaban la playa.",
+        "D": "Porque cuidarla juntos benefició a la naturaleza y al pueblo."
+      },
+      "clave": "D",
+      "explicacion": "El acuerdo funcionó porque todos se comprometieron a lo mismo. La playa quedó limpia, se protegió la vida del mar y la comunidad ganó con más visitantes.",
+      "por_que": {
+        "A": "reduce el acuerdo a su efecto económico",
+        "B": "confunde un acuerdo voluntario con una obligación legal",
+        "C": "busca un culpable en vez de ver la responsabilidad compartida"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-1-7-c",
+      "orden": 20,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: un espacio socio geográfico de integración",
+      "tema": "Derechos y ambiente",
+      "subtema": "Actitudes ciudadanas y ambiente",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.7",
+        "texto": "Distingue la importancia de las actitudes ciudadanas en el fortalecimiento de la relación armoniosa con el ambiente."
+      },
+      "evidencia": {
+        "codigo": "1.7.1",
+        "texto": "Distingue las buenas prácticas y las actitudes ciudadanas que contribuyen a la conservación ambiental."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nPara la feria científica, el grupo de Allan investigó qué hacen las familias de su barrio con los residuos. Encontraron que algunas queman las hojas secas y los plásticos en el patio, otras entierran las latas y otras separan lo reciclable y hacen abono con las cáscaras de las frutas.",
+      "enunciado": "De acuerdo con el texto anterior, ¿cuál práctica contribuye a la conservación ambiental?",
+      "opciones": {
+        "A": "Transformar los restos orgánicos en tierra fértil.",
+        "B": "Quemar las cáscaras y las hojas para no atraer moscas.",
+        "C": "Enterrar las latas para que no se vean en el patio.",
+        "D": "Juntar todo en una sola bolsa para el camión."
+      },
+      "clave": "A",
+      "explicacion": "Quemar o enterrar residuos contamina el aire y el suelo. Convertir los restos de comida en abono reduce la basura y le devuelve nutrientes a la tierra.",
+      "por_que": {
+        "B": "cree que quemar elimina el problema, pero contamina el aire",
+        "C": "esconde el residuo en vez de aprovecharlo",
+        "D": "no separa lo que se puede reciclar o aprovechar"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-1-a",
+      "orden": 21,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Historia antigua de Costa Rica",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.1",
+        "texto": "Identifica temporalmente la historia antigua de Costa Rica y su incidencia en la sociedad actual."
+      },
+      "evidencia": {
+        "codigo": "2.1.1",
+        "texto": "Identifica temporalmente los distintos periodos de la historia antigua de Costa Rica."
+      },
+      "verbo": "identificar",
+      "tipo_contexto": "temporal",
+      "contexto": "Analice la siguiente información:\n\n| Momento | Cómo vivían las personas |\n| --- | --- |\n| 1 | Formaban aldeas permanentes, sembraban y hacían vasijas de cerámica. |\n| 2 | Se movían de un lugar a otro siguiendo a los animales que cazaban y los frutos de cada época. |\n| 3 | Vivían en cacicazgos, con jefes, caminos empedrados y grandes obras de piedra. |",
+      "enunciado": "¿Cuál es el orden de esos momentos de la historia antigua de Costa Rica, del más antiguo al más reciente?",
+      "opciones": {
+        "A": "1, 2 y 3",
+        "B": "1, 3 y 2",
+        "C": "2, 1 y 3",
+        "D": "2, 3 y 1"
+      },
+      "clave": "C",
+      "explicacion": "Primero hubo grupos que se movían para cazar y recolectar. Después, al aprender a sembrar, formaron aldeas, y más tarde surgieron los cacicazgos, con jefes y grandes obras como las de Guayabo.",
+      "por_que": {
+        "A": "cree que primero vinieron las aldeas y después la vida en movimiento",
+        "B": "cree que la vida en movimiento fue la más reciente",
+        "D": "pone los cacicazgos antes de que existieran las aldeas agrícolas"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-2-a",
+      "orden": 22,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Etnias de la Costa Rica antigua",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.2",
+        "texto": "Comprende las características básicas de las principales etnias de la Costa Rica antigua."
+      },
+      "evidencia": {
+        "codigo": "2.2.1",
+        "texto": "Reconoce los principales asentamientos de las etnias de Costa Rica antigua."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nEn un museo, el grupo de Ariana vio vasijas de cerámica pintada con varios colores, decoradas con figuras de jaguares y serpientes. La guía explicó que piezas como esas se encontraron en la península de Nicoya y en otras zonas de lo que hoy es Guanacaste, donde vivía uno de los pueblos de la Costa Rica antigua.",
+      "enunciado": "Según el texto anterior, ¿cuál pueblo de la Costa Rica antigua habitaba esa zona?",
+      "opciones": {
+        "A": "Huetar",
+        "B": "Cabécar",
+        "C": "Maleku",
+        "D": "Chorotega"
+      },
+      "clave": "D",
+      "explicacion": "Los chorotegas vivieron en la península de Nicoya y el resto de Guanacaste, y son conocidos por su cerámica de varios colores. Los huetares vivían en el centro del país, los cabécares en Talamanca y los malekus en las llanuras del norte.",
+      "por_que": {
+        "A": "ubica en el noroeste a un pueblo que vivía en el centro del país",
+        "B": "ubica en el noroeste a un pueblo de Talamanca y el Caribe sur",
+        "C": "ubica en la península de Nicoya a un pueblo de las llanuras del norte"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-2-b",
+      "orden": 23,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Etnias de la Costa Rica antigua",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.2",
+        "texto": "Comprende las características básicas de las principales etnias de la Costa Rica antigua."
+      },
+      "evidencia": {
+        "codigo": "2.2.3",
+        "texto": "Infiere la influencia de la cosmovisión y el arte de los pueblos originarios en sus prácticas sociales, políticas, económicas y culturales."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "temporal",
+      "contexto": "Lea el siguiente texto:\n\nPara muchos pueblos de la Costa Rica antigua, la naturaleza tenía un valor sagrado: animales como el jaguar, el cocodrilo o el águila representaban fuerza y protección. Por eso los tallaban en piedra o los pintaban en la cerámica que se usaba en ceremonias, y algunos jefes llevaban adornos con esas figuras.",
+      "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre la cosmovisión de esos pueblos?",
+      "opciones": {
+        "A": "Los jefes eran quienes tallaban las figuras de animales en piedra.",
+        "B": "Tallaban animales para enseñar a los jóvenes a cazarlos.",
+        "C": "Sus creencias se reflejaban en su arte y en sus formas de autoridad.",
+        "D": "Los animales tallados mostraban las especies que criaban en las aldeas."
+      },
+      "clave": "C",
+      "explicacion": "Los animales tallados y pintados no eran solo adornos: representaban fuerza y protección. Por eso aparecían en objetos de ceremonia y en los adornos de los jefes, lo que muestra cómo sus creencias se unían con su vida social.",
+      "por_que": {
+        "A": "agrega una regla que el texto no menciona",
+        "B": "confunde el sentido sagrado con un uso práctico",
+        "D": "confunde el símbolo con la crianza de animales"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-3-a",
+      "orden": 24,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Pueblos originarios y aportes culturales",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.3",
+        "texto": "Comprende las principales características de los pueblos originarios y sus aportes a la sociedad actual."
+      },
+      "evidencia": {
+        "codigo": "2.3.2",
+        "texto": "Distingue los aportes culturales, sociales y ambientales de los pueblos originarios, africanos y asiáticos a la sociedad costarricense actual."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Analice la siguiente tabla:\n\n| Aporte | Ejemplo en la Costa Rica de hoy |\n| --- | --- |\n| 1 | El rice and beans, el patí y el pan bon de Limón |\n| 2 | La chicha de maíz, el uso ceremonial del cacao y el saber sobre plantas medicinales |\n| 3 | El arroz cantonés y el chop suey, que se comen en todo el país |",
+      "enunciado": "¿Cuál opción relaciona correctamente cada aporte con la población que lo hizo?",
+      "opciones": {
+        "A": "1 pueblos originarios, 2 afrodescendiente y 3 asiática",
+        "B": "1 afrodescendiente, 2 asiática y 3 pueblos originarios",
+        "C": "1 afrodescendiente, 2 pueblos originarios y 3 asiática",
+        "D": "1 asiática, 2 pueblos originarios y 3 afrodescendiente"
+      },
+      "clave": "C",
+      "explicacion": "El rice and beans, el patí y el pan bon vienen de la población afrodescendiente de Limón. La chicha de maíz y el saber sobre plantas son de los pueblos originarios, y el arroz cantonés llegó con la población china.",
+      "por_que": {
+        "A": "confunde los aportes de la población afrodescendiente con los de los pueblos originarios",
+        "B": "confunde los aportes de los pueblos originarios con los de la población china",
+        "D": "confunde la comida afrocaribeña con la de origen chino"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-3-b",
+      "orden": 25,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Pueblos originarios y aportes culturales",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.3",
+        "texto": "Comprende las principales características de los pueblos originarios y sus aportes a la sociedad actual."
+      },
+      "evidencia": {
+        "codigo": "2.3.3",
+        "texto": "Infiere cómo los aportes de los pueblos originarios fortalecen la identidad y el desarrollo de la sociedad costarricense."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nEn Talamanca, algunas familias bribris siembran cacao bajo la sombra de otros árboles, junto con plátano y frutales, sin cortar el bosque. Ese saber, que pasa de abuelas y abuelos a nietos, hoy interesa a productores de otras zonas que buscan cultivar sin dañar los suelos ni los ríos.",
+      "enunciado": "Según el texto anterior, ¿cómo contribuye ese conocimiento bribri al desarrollo del país?",
+      "opciones": {
+        "A": "Demuestra que el mejor cacao del país se cultiva en Talamanca.",
+        "B": "Reemplaza el trabajo de las personas productoras de otras zonas.",
+        "C": "Sirve sobre todo para vender más cacao en el extranjero.",
+        "D": "Ofrece una forma de producir que protege la naturaleza."
+      },
+      "clave": "D",
+      "explicacion": "Sembrar cacao bajo la sombra del bosque permite producir sin destruirlo. Por eso ese saber ancestral sirve de ejemplo a otras personas productoras y fortalece la identidad del país.",
+      "por_que": {
+        "A": "generaliza a partir de un ejemplo de un lugar",
+        "B": "confunde compartir un saber con quitarle el trabajo a otros",
+        "C": "reduce el aporte a lo comercial y olvida el cuidado del ambiente"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-4-a",
+      "orden": 26,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Situación actual de los pueblos originarios",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.4",
+        "texto": "Comprende la situación actual y los retos de los pueblos originarios."
+      },
+      "evidencia": {
+        "codigo": "2.4.2",
+        "texto": "Distingue los desafíos que enfrentan los pueblos originarios y cómo afectan su desarrollo y bienestar."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nEn un territorio boruca, muchas familias hacen máscaras de madera y tejidos teñidos con plantas. Un comerciante les compra cada máscara a un precio bajo y luego la vende cara en San José. Además, en algunas tiendas se venden copias hechas en fábrica como si fueran piezas borucas.",
+      "enunciado": "De acuerdo con el texto anterior, ¿cuál desafío enfrenta esa comunidad?",
+      "opciones": {
+        "A": "El poco pago por sus artesanías y las imitaciones.",
+        "B": "La pérdida de su lengua por el uso del español en la escuela.",
+        "C": "La falta de interés de los jóvenes por aprender el oficio.",
+        "D": "La escasez de plantas para teñir lo que tejen."
+      },
+      "clave": "A",
+      "explicacion": "El comerciante paga poco por las máscaras y otras tiendas venden imitaciones. Eso le quita a la comunidad el fruto de su trabajo y afecta su bienestar.",
+      "por_que": {
+        "B": "menciona un reto real de otros casos, pero el texto no habla de él",
+        "C": "agrega un problema que el texto no plantea",
+        "D": "confunde un material del oficio con el problema que describe el texto"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-4-b",
+      "orden": 27,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Situación actual de los pueblos originarios",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.4",
+        "texto": "Comprende la situación actual y los retos de los pueblos originarios."
+      },
+      "evidencia": {
+        "codigo": "2.4.3",
+        "texto": "Infiere los retos que enfrenta la sociedad costarricense para garantizar los derechos y la inclusión de los pueblos originarios."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nEn varios territorios indígenas, personas que no pertenecen a esos pueblos ocupan tierras que la ley reserva para ellos. Algunas comunidades también piden que en sus escuelas se enseñe su propia lengua y que las decisiones sobre su territorio se tomen consultándoles.",
+      "enunciado": "A partir del texto anterior, ¿cuál es un reto para la sociedad costarricense?",
+      "opciones": {
+        "A": "Darles más ayudas económicas sin atender quién ocupa sus tierras.",
+        "B": "Hacer cumplir la ley que los protege y tomar en cuenta su voz.",
+        "C": "Enseñarles en español para que puedan reclamar sus derechos.",
+        "D": "Dejar que cada comunidad resuelva sola los conflictos de tierras."
+      },
+      "clave": "B",
+      "explicacion": "Garantizar los derechos de los pueblos originarios significa respetar sus tierras, su lengua y su derecho a ser consultados. Ese es un reto de todo el país, no solo de ellos.",
+      "por_que": {
+        "A": "atiende una necesidad, pero deja sin resolver lo de las tierras",
+        "C": "cree que quitarles su lengua los ayuda, cuando ellos piden lo contrario",
+        "D": "pasa a las comunidades una responsabilidad de toda la sociedad"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-5-a",
+      "orden": 28,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Identidad intercultural, multiétnica y plurilingüe",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.5",
+        "texto": "Comprende la identidad costarricense desde una perspectiva intercultural, multiétnica y plurilingüe, reconociendo aportes de poblaciones afrodescendientes, asiáticas y de pueblos originarios."
+      },
+      "evidencia": {
+        "codigo": "2.5.2",
+        "texto": "Distingue las expresiones culturales que reflejan la diversidad étnica en la sociedad costarricense actual."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea la siguiente información:\n\nPara el acto cívico del 31 de agosto, Día de la Persona Negra y la Cultura Afrocostarricense, el grupo de Brenda preparó una presentación. Querían mostrar una expresión cultural que naciera en esa población y que hoy forme parte de la diversidad del país.",
+      "enunciado": "¿Cuál expresión cultural cumple con lo que buscaba el grupo?",
+      "opciones": {
+        "A": "El punto guanacasteco.",
+        "B": "El Juego de los Diablitos.",
+        "C": "El tope de caballos.",
+        "D": "El calipso limonense."
+      },
+      "clave": "D",
+      "explicacion": "El calipso nació en Limón, en la población afrodescendiente, y hoy es parte de la cultura de todo el país. El punto guanacasteco y el tope vienen de otras tradiciones, y el Juego de los Diablitos es del pueblo boruca.",
+      "por_que": {
+        "A": "escoge una expresión de la tradición guanacasteca",
+        "B": "escoge una tradición del pueblo boruca",
+        "C": "escoge una tradición de origen campesino y colonial"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-5-b",
+      "orden": 29,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Costa Rica antigua y pueblos originarios",
+      "subtema": "Identidad intercultural, multiétnica y plurilingüe",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.5",
+        "texto": "Comprende la identidad costarricense desde una perspectiva intercultural, multiétnica y plurilingüe, reconociendo aportes de poblaciones afrodescendientes, asiáticas y de pueblos originarios."
+      },
+      "evidencia": {
+        "codigo": "2.5.3",
+        "texto": "Infiere cómo la diversidad étnica y lingüística enriquece la identidad nacional."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nEn Costa Rica, además del español, se hablan lenguas indígenas como el bribri, el cabécar, el maleku y el ngäbere, y en Limón muchas personas hablan un inglés criollo. En algunas escuelas hay docentes que enseñan la lengua y la cultura de su pueblo.",
+      "enunciado": "Según el texto anterior, ¿qué aporta esa diversidad de lenguas a la identidad nacional?",
+      "opciones": {
+        "A": "Complica la identidad, porque un país debe tener una sola lengua.",
+        "B": "Tiene valor sobre todo en las comunidades donde se habla cada una.",
+        "C": "Sirve sobre todo para atraer a turistas de otros países.",
+        "D": "Muestra que el país se forma con muchos pueblos que conviven."
+      },
+      "clave": "D",
+      "explicacion": "Que se hablen varias lenguas muestra que Costa Rica es un país multiétnico y plurilingüe. Enseñarlas en las escuelas ayuda a que esas culturas sigan vivas y sean parte de la identidad de todos.",
+      "por_que": {
+        "A": "cree que la identidad exige que todos hablen igual",
+        "B": "no ve que esas lenguas son parte de la identidad de todo el país",
+        "C": "reduce la diversidad a un uso económico"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-6-a",
+      "orden": 30,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Conquista y colonia",
+      "subtema": "Conquista española",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.6",
+        "texto": "Comprende el impacto cultural, demográfico y social de la conquista española."
+      },
+      "evidencia": {
+        "codigo": "2.6.1",
+        "texto": "Reconoce en el espacio y el tiempo la conquista de Costa Rica."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "temporal",
+      "contexto": "Analice la siguiente información:\n\n| Año | Hecho |\n| --- | --- |\n| 1502 | Cristóbal Colón llega a la costa caribeña, cerca de lo que hoy es Limón. |\n| 1524 | Se funda Villa Bruselas, cerca del golfo de Nicoya. |\n| 1563 | Juan Vázquez de Coronado funda Cartago, en el valle del Guarco. |\n\nLa tabla resume tres hechos ocurridos en lo que hoy es el territorio de Costa Rica.",
+      "enunciado": "De acuerdo con la información anterior, ¿qué proceso de la historia de Costa Rica se ubica en esas fechas y lugares?",
+      "opciones": {
+        "A": "El periodo colonial",
+        "B": "La época de la independencia",
+        "C": "La conquista española",
+        "D": "La historia antigua"
+      },
+      "clave": "C",
+      "explicacion": "La llegada de Colón y la fundación de las primeras poblaciones españolas marcan el tiempo de la conquista: los españoles exploraron el territorio y lo tomaron por la fuerza. La colonia vino después, cuando ya estaban asentados.",
+      "por_que": {
+        "A": "confunde la llegada y la toma del territorio con el periodo que vino después",
+        "B": "confunde la llegada de los españoles con un hecho que ocurrió casi tres siglos después",
+        "D": "confunde la llegada de los españoles con el tiempo anterior a ella"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-6-b",
+      "orden": 31,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Conquista y colonia",
+      "subtema": "Conquista española",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.6",
+        "texto": "Comprende el impacto cultural, demográfico y social de la conquista española."
+      },
+      "evidencia": {
+        "codigo": "2.6.2",
+        "texto": "Distingue las consecuencias culturales, demográficas y sociales de la conquista española en Costa Rica."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "temporal",
+      "contexto": "Lea el siguiente texto:\n\nCon la conquista llegaron enfermedades como la viruela y el sarampión, contra las que la población indígena no tenía defensas. Además, muchos indígenas murieron en enfrentamientos o por el trabajo forzado, y otros huyeron a las montañas. En pocas décadas, los pueblos originarios del territorio se redujeron muchísimo.",
+      "enunciado": "La información anterior describe una consecuencia de la conquista de tipo",
+      "opciones": {
+        "A": "cultural.",
+        "B": "demográfico.",
+        "C": "económico.",
+        "D": "religioso."
+      },
+      "clave": "B",
+      "explicacion": "Lo que describe el texto es la caída de la población indígena: cuántas personas había y cuántas quedaron. Eso es una consecuencia demográfica, la que tiene que ver con la población.",
+      "por_que": {
+        "A": "confunde la pérdida de población con la pérdida de costumbres",
+        "C": "se fija en el trabajo forzado y no en la caída de la población",
+        "D": "confunde la conquista con la imposición de creencias, que el texto no menciona"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-7-a",
+      "orden": 32,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Conquista y colonia",
+      "subtema": "Periodo colonial en el espacio y el tiempo",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.7",
+        "texto": "Ubica en el espacio y el tiempo el periodo colonial de Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "2.7.1",
+        "texto": "Reconoce en el espacio y el tiempo el periodo colonial de Costa Rica."
+      },
+      "verbo": "ubicar",
+      "tipo_contexto": "espacial",
+      "contexto": "Analice la siguiente información:\n\n| Tramo | Fechas aproximadas |\n| --- | --- |\n| 1 | Antes de 1502 |\n| 2 | De 1502 a la década de 1570 |\n| 3 | De la década de 1570 a 1821 |\n| 4 | De 1821 en adelante |\n\nEn una época de la historia de Costa Rica, el territorio era una provincia de la Capitanía General de Guatemala, bajo el dominio de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.",
+      "enunciado": "¿En cuál tramo se ubica la época descrita?",
+      "opciones": {
+        "A": "Tramo 1",
+        "B": "Tramo 2",
+        "C": "Tramo 3",
+        "D": "Tramo 4"
+      },
+      "clave": "C",
+      "explicacion": "Esa época es la colonia: Costa Rica era una provincia de la Capitanía General de Guatemala, bajo el dominio español, y Cartago era su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.",
+      "por_que": {
+        "A": "ubica la época antes de la llegada de los españoles",
+        "B": "confunde la colonia con el tiempo de la conquista",
+        "D": "ubica la época después de la independencia"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-8-a",
+      "orden": 33,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Conquista y colonia",
+      "subtema": "Características y aportes de la colonia",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.8",
+        "texto": "Reconoce las principales características de la colonia en Costa Rica y sus aportes a la sociedad actual."
+      },
+      "evidencia": {
+        "codigo": "2.8.2",
+        "texto": "Distingue los aportes sociales, culturales y económicos del periodo colonial a la sociedad costarricense actual."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nValentina dibujó el centro de su pueblo: una plaza en el medio, la iglesia frente a ella y las calles cruzándose en ángulo recto, formando cuadras. Su abuelo le contó que muchos pueblos de Costa Rica se trazaron así desde hace siglos, siguiendo las normas que España usaba en sus colonias.",
+      "enunciado": "Según el texto anterior, ¿qué aporte del periodo colonial se mantiene en la actualidad?",
+      "opciones": {
+        "A": "El trazado en cuadrícula con un espacio central.",
+        "B": "La división del territorio en siete provincias.",
+        "C": "El cultivo de café alrededor de las ciudades.",
+        "D": "La costumbre de hacer ferias en la plaza cada domingo."
+      },
+      "clave": "A",
+      "explicacion": "Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias son de la vida republicana, y el café, aunque llegó al final de la colonia, se extendió después de la independencia.",
+      "por_que": {
+        "B": "confunde un aporte colonial con una organización de la vida republicana",
+        "C": "ubica en la colonia un cultivo que se extendió después de la independencia",
+        "D": "confunde un uso actual de la plaza con la forma colonial de trazar el pueblo"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-8-b",
+      "orden": 34,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Conquista y colonia",
+      "subtema": "Características y aportes de la colonia",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.8",
+        "texto": "Reconoce las principales características de la colonia en Costa Rica y sus aportes a la sociedad actual."
+      },
+      "evidencia": {
+        "codigo": "2.8.1",
+        "texto": "Reconoce las características económicas, sociales y culturales de la colonia en Costa Rica."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "temporal",
+      "contexto": "Lea el siguiente texto:\n\nEn el siglo XVIII, algunos vecinos de Cartago tenían plantaciones de cacao en el valle de Matina, en el Caribe. Para trabajarlas usaban a personas africanas esclavizadas. El cacao era tan importante que, en la provincia, sus semillas se usaban como moneda para comprar y vender.",
+      "enunciado": "De acuerdo con el texto anterior, ¿qué característica de la economía colonial se puede reconocer?",
+      "opciones": {
+        "A": "Se basaba en fábricas que exportaban chocolate a Europa.",
+        "B": "Tenía cultivos que se sostenían con mano de obra forzada.",
+        "C": "Usaba monedas de oro acuñadas en la ciudad de Cartago.",
+        "D": "Tenía al café como el producto más vendido de la provincia."
+      },
+      "clave": "B",
+      "explicacion": "El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café se volvió el producto principal hasta después de la independencia.",
+      "por_que": {
+        "A": "imagina una industria que no existía en la provincia",
+        "C": "no ve que el texto dice que se usaban semillas como moneda",
+        "D": "ubica en el siglo XVIII un cultivo que se volvió el principal hasta después de la independencia"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-9-a",
+      "orden": 35,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Conquista y colonia",
+      "subtema": "Sociedad colonial y discriminación",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.9",
+        "texto": "Comprende los problemas éticos y ciudadanos establecidos en la cotidianidad, durante el periodo colonial, para la construcción de una sociedad igualitaria y equitativa."
+      },
+      "evidencia": {
+        "codigo": "2.9.1",
+        "texto": "Reconoce la estratificación social que existió en el periodo colonial en Costa Rica."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "temporal",
+      "contexto": "Lea la siguiente información:\n\nEn la sociedad colonial, los cargos más importantes del gobierno local solo podían ocuparlos españoles y sus descendientes. Los mestizos se dedicaban a oficios y a la agricultura; los indígenas debían pagar tributo, y las personas africanas esclavizadas no tenían libertad.",
+      "enunciado": "La información anterior describe una sociedad en la que",
+      "opciones": {
+        "A": "todas las personas tenían los mismos derechos ante la ley.",
+        "B": "el trabajo de cada quien dependía de su propio esfuerzo.",
+        "C": "los cargos de gobierno se escogían por votación de todos.",
+        "D": "el origen de cada persona definía sus derechos y su labor."
+      },
+      "clave": "D",
+      "explicacion": "En la colonia, nacer español, mestizo, indígena o africano decidía qué podía hacer cada persona. A eso se le llama estratificación social: una sociedad dividida en grupos con derechos desiguales.",
+      "por_que": {
+        "A": "contradice las diferencias entre grupos que describe el texto",
+        "B": "no ve que el origen decidía qué podía hacer cada persona",
+        "C": "imagina en la colonia una forma de elegir que no existía"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-9-b",
+      "orden": 36,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Conquista y colonia",
+      "subtema": "Sociedad colonial y discriminación",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.9",
+        "texto": "Comprende los problemas éticos y ciudadanos establecidos en la cotidianidad, durante el periodo colonial, para la construcción de una sociedad igualitaria y equitativa."
+      },
+      "evidencia": {
+        "codigo": "2.9.2",
+        "texto": "Distingue las formas de discriminación sufridas por las mujeres, los pueblos originarios y afrodescendientes durante la colonia."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Analice la siguiente tabla:\n\nDurante la colonia, varios grupos de la población sufrieron discriminación. La tabla resume algunas situaciones de esa época.\n\n| Grupo | Situación durante la colonia |\n| --- | --- |\n| Mujeres | ? |\n| Pueblos indígenas | Debían pagar tributo y trabajar para los encomenderos. |\n| Personas africanas esclavizadas | Eran compradas y vendidas como si fueran objetos. |",
+      "enunciado": "¿Cuál situación completa correctamente la fila de las mujeres?",
+      "opciones": {
+        "A": "Podían votar, pero no ser elegidas para el gobierno local.",
+        "B": "Debían pagar tributo en productos a los encomenderos.",
+        "C": "No podían ocupar cargos públicos y pocas sabían leer.",
+        "D": "Tenían prohibido participar en las fiestas del pueblo."
+      },
+      "clave": "C",
+      "explicacion": "En la colonia, las mujeres no podían ocupar cargos públicos y muy pocas aprendían a leer y escribir. El tributo era para los indígenas, y en esa época nadie votaba como lo hacemos hoy.",
+      "por_que": {
+        "A": "imagina un derecho al voto que en la colonia nadie tenía",
+        "B": "confunde la discriminación de las mujeres con la de los indígenas",
+        "D": "inventa una prohibición que no fue la forma de discriminación de la época"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-10-a",
+      "orden": 37,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Independencia y Estado",
+      "subtema": "Independencia y principios democráticos",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.10",
+        "texto": "Analiza la independencia como un proceso histórico cuyos principios democráticos continúan vigentes."
+      },
+      "evidencia": {
+        "codigo": "2.10.2",
+        "texto": "Distingue las causas y consecuencias de la independencia de Costa Rica."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "temporal",
+      "contexto": "Lea el siguiente texto:\n\nEl 15 de setiembre de 1821 se firmó en Guatemala el acta de independencia de Centroamérica. La noticia llegó a Cartago a mediados de octubre, y como la provincia no tenía un gobierno propio, los ayuntamientos de las ciudades tuvieron que reunirse para decidir cómo organizarse.",
+      "enunciado": "Según el texto anterior, ¿cuál fue una consecuencia de la independencia para Costa Rica?",
+      "opciones": {
+        "A": "La llegada de las ideas de libertad desde otros países.",
+        "B": "La firma del acta de independencia en Guatemala.",
+        "C": "La necesidad de crear sus propias formas de gobierno.",
+        "D": "El regreso del gobierno de España a la provincia."
+      },
+      "clave": "C",
+      "explicacion": "Al independizarse, Costa Rica se quedó sin el gobierno español y tuvo que decidir cómo organizarse. Las ideas de libertad que venían de otros países fueron una causa, no una consecuencia.",
+      "por_que": {
+        "A": "confunde una causa de la independencia con una consecuencia",
+        "B": "confunde el hecho mismo con lo que provocó después",
+        "D": "contradice que la provincia quedó sin gobierno español"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-10-b",
+      "orden": 38,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Independencia y Estado",
+      "subtema": "Independencia y principios democráticos",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.10",
+        "texto": "Analiza la independencia como un proceso histórico cuyos principios democráticos continúan vigentes."
+      },
+      "evidencia": {
+        "codigo": "2.10.3",
+        "texto": "Infiere la vigencia actual de los principios democráticos de la independencia."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nCon la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Más de doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.",
+      "enunciado": "A partir del texto anterior, ¿cuáles principios de la independencia siguen vigentes en la escuela de Josué?",
+      "opciones": {
+        "A": "La participación y la igualdad.",
+        "B": "La obediencia y la disciplina.",
+        "C": "La tradición y el respeto a los mayores.",
+        "D": "La libertad de comercio y la propiedad."
+      },
+      "clave": "A",
+      "explicacion": "Votar es participar en las decisiones, y que todas las candidaturas tengan las mismas reglas es igualdad. Esos principios democráticos nacieron con la independencia y siguen vivos hoy.",
+      "por_que": {
+        "B": "confunde el orden escolar con los principios democráticos",
+        "C": "confunde valores de convivencia con principios democráticos",
+        "D": "escoge ideas económicas que el texto no relaciona con la escuela"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-11-a",
+      "orden": 39,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Independencia y Estado",
+      "subtema": "Pacto de Concordia",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.11",
+        "texto": "Reconoce el Pacto de Concordia como elemento fundamental en la organización del Estado Nación costarricense."
+      },
+      "evidencia": {
+        "codigo": "2.11.1",
+        "texto": "Reconoce la importancia del Pacto de Concordia, la negociación, el diálogo y el acuerdo como pilares del nuevo Estado Nación costarricense."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nDespués de la independencia, los pueblos de Costa Rica no estaban de acuerdo: unos querían unirse a México y otros preferían gobernarse solos. Para evitar un enfrentamiento, enviaron representantes a una junta en la que discutieron y, el 1 de diciembre de 1821, firmaron el Pacto de Concordia, que organizó un gobierno provisional.",
+      "enunciado": "A partir del texto anterior, ¿qué enseñanza del Pacto de Concordia sigue siendo útil para la convivencia democrática?",
+      "opciones": {
+        "A": "Aceptar lo que proponga el pueblo con más habitantes.",
+        "B": "Esperar que una autoridad de afuera decida por todos.",
+        "C": "Dejar que cada pueblo se gobierne aparte de los otros.",
+        "D": "Resolver las diferencias conversando y negociando."
+      },
+      "clave": "D",
+      "explicacion": "Los pueblos pensaban distinto, pero en vez de pelear se sentaron a discutir y firmaron un pacto. Por eso el Pacto de Concordia es un ejemplo de diálogo y negociación en el nacimiento del Estado.",
+      "por_que": {
+        "A": "confunde el acuerdo con imponer lo que quiere la mayoría",
+        "B": "confunde la autonomía con depender de México o de España",
+        "C": "confunde gobernarse con dividirse"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-12-a",
+      "orden": 40,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Independencia y Estado",
+      "subtema": "Anexión del Partido de Nicoya",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.12",
+        "texto": "Comprende la importancia geográfica y cultural de la Anexión del Partido de Nicoya a Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "2.12.2",
+        "texto": "Distingue los aportes geográficos y culturales de la Anexión del Partido de Nicoya al desarrollo nacional costarricense."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "espacial",
+      "contexto": "Lea el siguiente texto:\n\nEl 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con la península de Nicoya, y también tradiciones como la música de marimba, los bailes y las comidas de maíz de esa región.",
+      "enunciado": "De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?",
+      "opciones": {
+        "A": "La salida al océano Pacífico por el golfo de Nicoya.",
+        "B": "El aumento de las tierras para la ganadería del país.",
+        "C": "La firma de un acuerdo de límites con Nicaragua.",
+        "D": "Las expresiones musicales y de danza de esa zona."
+      },
+      "clave": "D",
+      "explicacion": "La música de marimba y los bailes tradicionales guanacastecos hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.",
+      "por_que": {
+        "A": "confunde un aporte geográfico con uno cultural",
+        "B": "confunde un aporte económico y territorial con uno cultural",
+        "C": "confunde la Anexión con un hecho político posterior"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-12-b",
+      "orden": 41,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Independencia y Estado",
+      "subtema": "Anexión del Partido de Nicoya",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.12",
+        "texto": "Comprende la importancia geográfica y cultural de la Anexión del Partido de Nicoya a Costa Rica."
+      },
+      "evidencia": {
+        "codigo": "2.12.3",
+        "texto": "Infiere la contribución de la Anexión del Partido de Nicoya al fortalecimiento de la identidad nacional y la integración territorial de Costa Rica."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea la siguiente información:\n\nCada 25 de julio, en escuelas de todo el país se celebra la Anexión del Partido de Nicoya con bailes, comidas típicas y desfiles. En Guanacaste, la fecha se vive como una fiesta de su identidad regional, y en el resto del país se recuerda como el día en que el territorio nacional quedó más completo.",
+      "enunciado": "A partir de la información anterior, ¿qué se puede inferir sobre la Anexión?",
+      "opciones": {
+        "A": "Tiene importancia sobre todo para la identidad de Guanacaste.",
+        "B": "Hace que lo guanacasteco sea parte de lo costarricense.",
+        "C": "Separó a Guanacaste del resto del territorio nacional.",
+        "D": "Es una celebración que nació durante el periodo colonial."
+      },
+      "clave": "B",
+      "explicacion": "La Anexión se celebra en todo el país y en Guanacaste es una fiesta propia. Eso muestra que unió territorios y también identidades: lo guanacasteco es parte de lo costarricense.",
+      "por_que": {
+        "A": "no ve que la fecha se celebra en todo el país",
+        "C": "invierte el sentido de la Anexión",
+        "D": "ubica la Anexión en una época anterior a la independencia"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-13-a",
+      "orden": 42,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Independencia y Estado",
+      "subtema": "Símbolos nacionales",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.13",
+        "texto": "Comprende el papel de los símbolos nacionales en la consolidación del Estado Nación costarricense: Escudo, Bandera e Himno Nacional."
+      },
+      "evidencia": {
+        "codigo": "2.13.1",
+        "texto": "Reconoce los símbolos nacionales de Costa Rica: Escudo, Bandera e Himno Nacional, y su significado."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea la siguiente información:\n\nEl Escudo Nacional muestra tres volcanes entre dos mares, con un barco navegando en cada uno. Al fondo sale el sol y arriba hay siete estrellas. Cuando Pablo lo dibujó para un trabajo, su maestra le pidió explicar qué parte del escudo representa la posición geográfica del país.",
+      "enunciado": "¿Cuál parte del escudo debería señalar Pablo?",
+      "opciones": {
+        "A": "Las siete estrellas",
+        "B": "Los tres volcanes",
+        "C": "Los dos mares",
+        "D": "El sol que sale"
+      },
+      "clave": "C",
+      "explicacion": "Los dos mares del escudo son el Pacífico y el Caribe, y muestran que Costa Rica está entre dos océanos. Las estrellas representan las provincias y los volcanes, el relieve del país.",
+      "por_que": {
+        "A": "confunde la posición del país con su división en provincias",
+        "B": "confunde el relieve con la posición entre dos océanos",
+        "D": "escoge un elemento que no representa la ubicación del país"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-14-a",
+      "orden": 43,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Campaña Nacional",
+      "subtema": "Campaña Nacional y consolidación del Estado",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.14",
+        "texto": "Reconoce la importancia de la Campaña Nacional en la conformación del Estado Nación costarricense."
+      },
+      "evidencia": {
+        "codigo": "2.14.1",
+        "texto": "Infiere cómo la Campaña Nacional fortaleció la unidad y la soberanía del Estado costarricense."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "temporal",
+      "contexto": "Lea el siguiente texto:\n\nEn 1856, el presidente Juan Rafael Mora llamó a defender el país del ejército filibustero de William Walker, que se había apoderado del gobierno de Nicaragua. Campesinos, artesanos y personas de todas las provincias se unieron al ejército. Al terminar la guerra, en 1857, Costa Rica había defendido su independencia.",
+      "enunciado": "Según el texto anterior, ¿por qué la Campaña Nacional fue determinante en la consolidación del Estado costarricense?",
+      "opciones": {
+        "A": "Porque enfrentar juntos al invasor unió a la población del país.",
+        "B": "Porque Costa Rica ganó territorio nicaragüense al final de la guerra.",
+        "C": "Porque el ejército pasó a gobernar el país después de 1857.",
+        "D": "Porque después de la guerra se abolió el ejército en el país."
+      },
+      "clave": "A",
+      "explicacion": "Ante una amenaza externa, gente de todas las provincias luchó por el mismo país. Esa unión fortaleció el sentimiento de ser costarricenses y consolidó al Estado.",
+      "por_que": {
+        "B": "inventa un resultado territorial que el texto no menciona",
+        "C": "confunde la defensa del país con un gobierno militar",
+        "D": "confunde la Campaña Nacional con un hecho de 1948"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-14-b",
+      "orden": 44,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Campaña Nacional",
+      "subtema": "Campaña Nacional y consolidación del Estado",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.14",
+        "texto": "Reconoce la importancia de la Campaña Nacional en la conformación del Estado Nación costarricense."
+      },
+      "evidencia": {
+        "codigo": "2.14.2",
+        "texto": "Distingue consecuencias de la Campaña Nacional en la sociedad costarricense."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "temporal",
+      "contexto": "Lea el siguiente texto:\n\nDespués de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas en todo el país, lo que dejó a muchas familias sin sostén.",
+      "enunciado": "La información anterior describe una consecuencia de la Campaña Nacional que fue",
+      "opciones": {
+        "A": "política, porque provocó un cambio de gobierno.",
+        "B": "territorial, porque el país perdió parte de su tierra.",
+        "C": "cultural, porque llegaron costumbres de otros lugares.",
+        "D": "social, porque cambió la vida de la población."
+      },
+      "clave": "D",
+      "explicacion": "El cólera mató a miles de personas y dejó a muchas familias sin quien las sostuviera. Eso cambió la vida de la población: fue una consecuencia social de la guerra.",
+      "por_que": {
+        "A": "confunde el efecto en la población con un cambio de gobierno",
+        "B": "inventa una pérdida de territorio que el texto no menciona",
+        "C": "confunde el efecto de la epidemia con un cambio de costumbres"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-15-a",
+      "orden": 45,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Campaña Nacional",
+      "subtema": "Escenarios y rutas de la Campaña Nacional",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.15",
+        "texto": "Ubica los escenarios y las rutas de la Campaña Nacional de 1856-1857."
+      },
+      "evidencia": {
+        "codigo": "2.15.1",
+        "texto": "Ubica en el tiempo los principales hechos de la Campaña Nacional: Santa Rosa, Rivas, La Trinidad y la Vía del Tránsito."
+      },
+      "verbo": "ubicar",
+      "tipo_contexto": "temporal",
+      "contexto": "Analice la siguiente tabla:\n\nDurante la Campaña Nacional, el ejército costarricense combatió en su propio territorio y en Nicaragua contra los filibusteros de William Walker.\n\n| Hecho de la Campaña Nacional | Lugar |\n| --- | --- |\n| Batalla de Rivas | Nicaragua |\n| Batalla de Santa Rosa | Guanacaste |\n| Toma de los vapores en la Vía del Tránsito | Río San Juan |",
+      "enunciado": "¿En qué orden ocurrieron esos hechos?",
+      "opciones": {
+        "A": "Rivas, Santa Rosa y Vía del Tránsito",
+        "B": "Santa Rosa, Rivas y Vía del Tránsito",
+        "C": "Santa Rosa, Vía del Tránsito y Rivas",
+        "D": "Vía del Tránsito, Rivas y Santa Rosa"
+      },
+      "clave": "B",
+      "explicacion": "Primero, en marzo de 1856, se peleó en Santa Rosa, dentro de Costa Rica. En abril siguió Rivas, en Nicaragua, y a finales de ese año se tomó el control de la Vía del Tránsito.",
+      "por_que": {
+        "A": "cree que la guerra empezó en Nicaragua y no en territorio costarricense",
+        "C": "pone el control de la ruta antes de la batalla de Rivas",
+        "D": "invierte el orden de los hechos"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-15-b",
+      "orden": 46,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Campaña Nacional",
+      "subtema": "Escenarios y rutas de la Campaña Nacional",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.15",
+        "texto": "Ubica los escenarios y las rutas de la Campaña Nacional de 1856-1857."
+      },
+      "evidencia": {
+        "codigo": "2.15.2",
+        "texto": "Relaciona los escenarios y las rutas de la Campaña Nacional con las decisiones estratégicas de la guerra."
+      },
+      "verbo": "relacionar",
+      "tipo_contexto": "espacial",
+      "contexto": "Observe el siguiente esquema:\n\n[[figura]]\n\nEn la época de la Campaña Nacional, muchos viajeros cruzaban de un océano al otro por esta ruta: en barcos de vapor por el río y el lago, y en carretas por tierra. Por ella también le llegaban a Walker soldados y armas desde otros países.",
+      "enunciado": "A partir de la información anterior, ¿por qué fue importante que el ejército costarricense tomara el control de la Vía del Tránsito?",
+      "opciones": {
+        "A": "Porque era el único camino entre San José y la capital de Nicaragua.",
+        "B": "Porque así se cortaban los refuerzos para los filibusteros.",
+        "C": "Porque por esa ruta salía el café que Costa Rica vendía a Europa.",
+        "D": "Porque de esa forma el río San Juan pasó a ser costarricense."
+      },
+      "clave": "B",
+      "explicacion": "Por la Vía del Tránsito llegaban soldados y armas para Walker. Al controlarla, Costa Rica le cortó la ayuda que venía de afuera y lo debilitó.",
+      "por_que": {
+        "A": "confunde una ruta entre océanos con un camino entre capitales",
+        "C": "cambia el sentido militar de la ruta por uno comercial",
+        "D": "confunde el control militar de la ruta con un cambio de fronteras"
+      },
+      "imagen": {
+        "archivo": "soc-2-15-via-del-transito.svg",
+        "alt": "Esquema sin escala de la Vía del Tránsito. Al norte, Nicaragua con el lago de Nicaragua; al sur, Costa Rica. Una línea punteada marca la ruta: por tierra desde San Juan del Sur, en el océano Pacífico, hasta La Virgen, a orillas del lago; luego por el lago y por el río San Juan, que corre por el límite con Costa Rica, hasta San Juan del Norte, en el mar Caribe."
+      }
+    },
+    {
+      "id": "soc-2-16-a",
+      "orden": 47,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Campaña Nacional",
+      "subtema": "Figuras de la Campaña Nacional y personas de hoy",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.16",
+        "texto": "Relaciona el aporte de figuras de la Campaña Nacional con el de personas que hoy contribuyen al bienestar del país."
+      },
+      "evidencia": {
+        "codigo": "2.16.1",
+        "texto": "Relaciona valores de servicio, defensa y solidaridad de figuras de la Campaña Nacional con acciones de personas de la actualidad."
+      },
+      "verbo": "relacionar",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nFrancisca Carrasco, conocida como Pancha Carrasco, marchó con el ejército durante la Campaña Nacional. En la batalla de Rivas atendió a soldados heridos, les llevó agua y alimentos y, según se cuenta, también tomó las armas para defender a sus compañeros.",
+      "enunciado": "¿Cuál persona de la actualidad muestra un valor semejante al de Pancha Carrasco?",
+      "opciones": {
+        "A": "Una socorrista que da primeros auxilios en una emergencia.",
+        "B": "Una deportista que gana una medalla en un torneo internacional.",
+        "C": "Una empresaria que abre una tienda nueva en su comunidad.",
+        "D": "Una cantante que compone canciones sobre la patria."
+      },
+      "clave": "A",
+      "explicacion": "Pancha Carrasco se arriesgó para cuidar a otras personas en un momento difícil. Hoy, quienes dan primeros auxilios en una emergencia muestran ese mismo valor de servicio y solidaridad.",
+      "por_que": {
+        "B": "confunde el servicio a los demás con el éxito personal",
+        "C": "confunde el servicio en un momento difícil con emprender un negocio",
+        "D": "confunde el amor por el país expresado en arte con ayudar en una emergencia"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-16-b",
+      "orden": 48,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Campaña Nacional",
+      "subtema": "Figuras de la Campaña Nacional y personas de hoy",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.16",
+        "texto": "Relaciona el aporte de figuras de la Campaña Nacional con el de personas que hoy contribuyen al bienestar del país."
+      },
+      "evidencia": {
+        "codigo": "2.16.1",
+        "texto": "Relaciona valores de servicio, defensa y solidaridad de figuras de la Campaña Nacional con acciones de personas de la actualidad."
+      },
+      "verbo": "relacionar",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea la siguiente información:\n\nEn la batalla de Rivas, Juan Santamaría, un joven de Alajuela, se ofreció a incendiar el edificio desde donde disparaban los filibusteros, y perdió la vida al hacerlo. Hoy, muchos bomberos entran a casas en llamas para rescatar a personas que ni siquiera conocen.",
+      "enunciado": "¿Qué valor comparten Juan Santamaría y los bomberos de hoy?",
+      "opciones": {
+        "A": "La búsqueda de reconocimiento y fama.",
+        "B": "La obediencia a las órdenes recibidas.",
+        "C": "El gusto por las situaciones de peligro.",
+        "D": "La entrega para proteger a los demás."
+      },
+      "clave": "D",
+      "explicacion": "Juan Santamaría arriesgó su vida por su país, y los bomberos se arriesgan para salvar a gente que ni conocen. Lo que los une es la entrega al servicio de los demás, no la fama ni el gusto por el peligro.",
+      "por_que": {
+        "A": "confunde el motivo de la acción con un posible resultado",
+        "B": "confunde la entrega voluntaria con solo obedecer",
+        "C": "confunde la valentía con buscar el riesgo por gusto"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-17-a",
+      "orden": 49,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Reformas y logros sociales",
+      "subtema": "Reformas Liberales",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.17",
+        "texto": "Comprende la importancia de las Reformas Liberales (1870-1890) para la consolidación del Estado Nación costarricense."
+      },
+      "evidencia": {
+        "codigo": "2.17.1",
+        "texto": "Distingue los componentes de las Reformas Liberales: Constitución de 1871, leyes anticlericales y Reforma Educativa de 1886."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "temporal",
+      "contexto": "Lea el siguiente texto:\n\nEn 1886, el gobierno aprobó leyes para que las escuelas primarias de todo el país quedaran a cargo del Estado. Se prepararon mejor los maestros, se abrieron nuevos colegios, como el Liceo de Costa Rica y el Colegio Superior de Señoritas, y se buscó que niñas y niños de todas las clases sociales pudieran asistir a clases.",
+      "enunciado": "La información anterior se refiere a la parte de las Reformas Liberales conocida como",
+      "opciones": {
+        "A": "leyes anticlericales.",
+        "B": "Reforma Educativa.",
+        "C": "Constitución de 1871.",
+        "D": "garantías sociales."
+      },
+      "clave": "B",
+      "explicacion": "Poner la educación en manos del Estado y abrir colegios fue la Reforma Educativa de 1886. Las garantías sociales son de la década de 1940, mucho después.",
+      "por_que": {
+        "A": "confunde los cambios en la educación con los cambios entre el Estado y la Iglesia",
+        "C": "confunde una ley sobre la educación con la constitución de la época",
+        "D": "ubica en el siglo XIX un logro de la década de 1940"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-17-b",
+      "orden": 50,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Reformas y logros sociales",
+      "subtema": "Reformas Liberales",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.17",
+        "texto": "Comprende la importancia de las Reformas Liberales (1870-1890) para la consolidación del Estado Nación costarricense."
+      },
+      "evidencia": {
+        "codigo": "2.17.2",
+        "texto": "Infiere el propósito de las Reformas Liberales en el fortalecimiento del Estado."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nEn la década de 1880, con las reformas liberales, el Estado costarricense asumió tareas que antes llevaba la Iglesia católica, como registrar los nacimientos, los matrimonios y las defunciones. Desde entonces, esos registros se hacen ante oficinas del Estado y valen para todas las personas, sin importar su religión.",
+      "enunciado": "Según el texto anterior, ¿qué buscaban los gobiernos liberales con esas leyes?",
+      "opciones": {
+        "A": "Prohibir que las personas practicaran la religión católica.",
+        "B": "Cobrar un impuesto por cada nacimiento y matrimonio.",
+        "C": "Unir al Estado y a la Iglesia en una sola institución.",
+        "D": "Poner en manos civiles lo que hacía la Iglesia."
+      },
+      "clave": "D",
+      "explicacion": "Las reformas liberales pasaron al Estado tareas que antes hacía la Iglesia, como registrar a las personas. No prohibieron la religión: buscaban que el Estado fuera la autoridad en los asuntos civiles.",
+      "por_que": {
+        "A": "exagera el cambio: las leyes no prohibían la religión",
+        "B": "confunde un trámite civil con un cobro, que el texto no menciona",
+        "C": "confunde la separación de tareas con una fusión"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-18-a",
+      "orden": 51,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Reformas y logros sociales",
+      "subtema": "Logros sociales de la década de 1940",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.18",
+        "texto": "Comprende los logros sociales de la década de 1940 y su impacto en la sociedad actual (salud, educación y trabajo)."
+      },
+      "evidencia": {
+        "codigo": "2.18.1",
+        "texto": "Relaciona situaciones actuales con los logros sociales de la década de 1940."
+      },
+      "verbo": "relacionar",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nLa mamá de Isaac trabaja en una empresa. Cada mes, una parte de su salario y un aporte de la empresa se pagan a la Caja. Gracias a eso, cuando Isaac se enfermó, lo atendieron en el Ebais y en el hospital sin que la familia tuviera que pagar la consulta.",
+      "enunciado": "La situación anterior se relaciona con uno de los logros de la década de 1940, conocido como",
+      "opciones": {
+        "A": "la educación gratuita y obligatoria.",
+        "B": "el derecho al voto de las mujeres.",
+        "C": "la abolición del ejército.",
+        "D": "la seguridad social."
+      },
+      "clave": "D",
+      "explicacion": "La Caja Costarricense de Seguro Social, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.",
+      "por_que": {
+        "A": "confunde la atención médica con un logro educativo anterior",
+        "B": "escoge un logro político que no tiene relación con la situación",
+        "C": "escoge un hecho político que no tiene relación con la salud"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-18-b",
+      "orden": 52,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Reformas y logros sociales",
+      "subtema": "Logros sociales de la década de 1940",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.18",
+        "texto": "Comprende los logros sociales de la década de 1940 y su impacto en la sociedad actual (salud, educación y trabajo)."
+      },
+      "evidencia": {
+        "codigo": "2.18.2",
+        "texto": "Infiere el impacto actual de las garantías sociales y del Código de Trabajo."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea la siguiente información:\n\nDon Rodrigo trabaja para una empresa constructora privada. Su contrato dice que su jornada es de ocho horas diarias, que tiene un día de descanso a la semana y que su salario no puede ser menor que el mínimo que fija la ley. Si lo despiden sin una causa justa, tiene derecho a una indemnización.",
+      "enunciado": "A partir de la información anterior, ¿qué impacto tienen hoy el Código de Trabajo y las garantías sociales de 1943?",
+      "opciones": {
+        "A": "Ponen límites para que el empleo sea digno y justo.",
+        "B": "Permiten que cada patrono fije la jornada que prefiera.",
+        "C": "Protegen sobre todo a quienes trabajan para el Estado.",
+        "D": "Garantizan que a las personas no se les pueda despedir."
+      },
+      "clave": "A",
+      "explicacion": "La jornada máxima de ocho horas, el descanso semanal y el salario mínimo quedaron protegidos por las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.",
+      "por_que": {
+        "B": "contradice el límite de ocho horas del contrato",
+        "C": "no ve que don Rodrigo trabaja para una empresa privada",
+        "D": "exagera: el despido existe, pero sin causa justa da derecho a indemnización"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-19-a",
+      "orden": 53,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Derechos y retos de hoy",
+      "subtema": "Derechos fundamentales de la Constitución de 1949",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.19",
+        "texto": "Comprende los derechos fundamentales establecidos en la Constitución Política de 1949."
+      },
+      "evidencia": {
+        "codigo": "2.19.1",
+        "texto": "Distingue los derechos fundamentales de la Constitución Política de 1949 en situaciones concretas."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nEn un barrio, la asociación de vecinos organizó un programa para que personas voluntarias visiten cada semana a señores y señoras de más de setenta años que viven solos. Les ayudan con las compras, conversan con ellos y avisan al Ebais si notan que alguno está enfermo.",
+      "enunciado": "Según el texto anterior, ¿cuál derecho de la Constitución Política se está apoyando?",
+      "opciones": {
+        "A": "La libertad de comercio de las personas de la comunidad.",
+        "B": "La igualdad de todas las personas ante la ley.",
+        "C": "El derecho a la educación de niñas y niños.",
+        "D": "La protección especial a las personas adultas mayores."
+      },
+      "clave": "D",
+      "explicacion": "La Constitución dice que el Estado debe proteger de forma especial a las personas adultas mayores. El programa de los vecinos ayuda a cumplir ese derecho, cuidando a quienes viven solos.",
+      "por_que": {
+        "A": "se fija en que los voluntarios ayudan con las compras, pero ese no es el derecho que se apoya",
+        "B": "escoge un derecho general que no describe la situación",
+        "C": "escoge un derecho de otro grupo de la población"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-19-b",
+      "orden": 54,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Derechos y retos de hoy",
+      "subtema": "Derechos fundamentales de la Constitución de 1949",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.19",
+        "texto": "Comprende los derechos fundamentales establecidos en la Constitución Política de 1949."
+      },
+      "evidencia": {
+        "codigo": "2.19.1",
+        "texto": "Distingue los derechos fundamentales de la Constitución Política de 1949 en situaciones concretas."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea la siguiente información:\n\nEn una escuela, dos estudiantes tenían religiones distintas y otro compañero se burlaba de ellos. La directora reunió al grupo y explicó que en Costa Rica cada persona puede tener sus propias creencias y opiniones, y que nadie puede ser tratado de forma distinta por eso.",
+      "enunciado": "¿Cuáles derechos fundamentales explicó la directora?",
+      "opciones": {
+        "A": "La libertad de reunión y el derecho a recibir educación gratuita.",
+        "B": "La libertad de pensamiento y la igualdad ante la ley.",
+        "C": "El derecho de petición y la protección especial a la niñez.",
+        "D": "La igualdad ante la ley y la libertad de reunión pacífica."
+      },
+      "clave": "B",
+      "explicacion": "Tener las propias creencias y opiniones es la libertad de pensamiento, y que nadie sea tratado distinto por eso es igualdad ante la ley. Los dos están en la Constitución de 1949.",
+      "por_que": {
+        "A": "se fija en que la directora reunió al grupo, no en lo que explicó",
+        "C": "se fija en que son estudiantes y no en lo que se defendió",
+        "D": "acierta en la igualdad, pero confunde la reunión del grupo con el derecho explicado"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-20-a",
+      "orden": 55,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Derechos y retos de hoy",
+      "subtema": "Derechos constitucionales en la vida cotidiana",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.20",
+        "texto": "Comprende el ejercicio de los derechos constitucionales en la vida cotidiana y sus limitaciones."
+      },
+      "evidencia": {
+        "codigo": "2.20.2",
+        "texto": "Infiere los límites de los derechos constitucionales en la convivencia."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nMariana publicó en el chat del grupo su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.",
+      "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre la libertad de expresión?",
+      "opciones": {
+        "A": "Permite publicar lo que uno quiera cuando se hace en un chat.",
+        "B": "Tiene límites y no permite dañar la dignidad de otra persona.",
+        "C": "Es un derecho de las personas adultas, no de los estudiantes.",
+        "D": "Prohíbe dar opiniones sobre las decisiones de la escuela."
+      },
+      "clave": "B",
+      "explicacion": "Mariana usó su derecho a opinar con respeto. La libertad de expresión no da permiso para insultar ni burlarse de nadie: termina donde empieza la dignidad de los demás.",
+      "por_que": {
+        "A": "cree que en los chats no hay límites",
+        "C": "cree que la niñez no tiene derecho a opinar",
+        "D": "confunde el límite del derecho con quitar el derecho"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-20-b",
+      "orden": 56,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Derechos y retos de hoy",
+      "subtema": "Derechos constitucionales en la vida cotidiana",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.20",
+        "texto": "Comprende el ejercicio de los derechos constitucionales en la vida cotidiana y sus limitaciones."
+      },
+      "evidencia": {
+        "codigo": "2.20.1",
+        "texto": "Relaciona situaciones cotidianas con el ejercicio de derechos constitucionales."
+      },
+      "verbo": "relacionar",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea la siguiente información:\n\nLos vecinos de una comunidad están preocupados porque el puente que usan los escolares está en mal estado. Algunos proponen escribir una carta a la municipalidad, firmada por todos, para pedir que lo reparen. Otros quieren juntarse frente al edificio municipal, sin violencia, para que los escuchen.",
+      "enunciado": "¿Qué derechos constitucionales están ejerciendo los vecinos?",
+      "opciones": {
+        "A": "El de petición y el de reunión.",
+        "B": "El de votar y el de elegir alcalde.",
+        "C": "El de propiedad y el de comercio.",
+        "D": "El de salud y el de educación."
+      },
+      "clave": "A",
+      "explicacion": "Pedir por escrito a una institución es el derecho de petición, y juntarse sin violencia para hacerse oír es el derecho de reunión. Los dos están en la Constitución y se usan en la vida diaria.",
+      "por_que": {
+        "B": "confunde pedir algo a una institución con elegir autoridades",
+        "C": "escoge derechos que no tienen relación con la situación",
+        "D": "se fija en que el puente lo usan escolares y no en lo que hacen los vecinos"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-21-a",
+      "orden": 57,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Derechos y retos de hoy",
+      "subtema": "Retos actuales y participación ciudadana",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.21",
+        "texto": "Comprende los retos actuales como espacios de participación ciudadana: seguridad vial, gestión del riesgo, convivencia en redes sociales y cultura fiscal."
+      },
+      "evidencia": {
+        "codigo": "2.21.1",
+        "texto": "Distingue acciones de participación ciudadana ante retos actuales."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nEn la escuela de Fabiola se hizo un simulacro de evacuación por terremoto. Cada grupo salió por la ruta señalada, sin correr, hasta la zona de seguridad de la cancha. Después, el comité de gestión del riesgo revisó cuánto tardaron y les pidió a las familias preparar en casa un plan con un punto de reunión.",
+      "enunciado": "Según el texto anterior, ¿por qué la gestión del riesgo es un espacio de participación ciudadana?",
+      "opciones": {
+        "A": "Porque saber qué hacer en un sismo es tarea de los bomberos.",
+        "B": "Porque estar preparados ante una emergencia es tarea de todos.",
+        "C": "Porque los simulacros permiten saber cuándo habrá un terremoto.",
+        "D": "Porque así la escuela cumple un requisito y no hace falta más."
+      },
+      "clave": "B",
+      "explicacion": "En un simulacro participan estudiantes, docentes y familias, y cada quien aprende qué hacer. Nadie puede predecir un terremoto, pero sí prepararse: por eso la gestión del riesgo es de todos.",
+      "por_que": {
+        "A": "deja la responsabilidad solo en los cuerpos de socorro",
+        "C": "confunde prepararse con predecir un sismo",
+        "D": "reduce la gestión del riesgo a un trámite"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-21-b",
+      "orden": 58,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Derechos y retos de hoy",
+      "subtema": "Retos actuales y participación ciudadana",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.21",
+        "texto": "Comprende los retos actuales como espacios de participación ciudadana: seguridad vial, gestión del riesgo, convivencia en redes sociales y cultura fiscal."
+      },
+      "evidencia": {
+        "codigo": "2.21.2",
+        "texto": "Infiere la importancia de la participación ciudadana ante retos actuales."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Lea el siguiente texto:\n\nAl comprar unos zapatos, el papá de Gabriel pidió la factura electrónica. El vendedor le ofreció un descuento si la compra se hacía sin factura. El papá no aceptó y le explicó a Gabriel que, con los impuestos de cada compra, el Estado paga escuelas, carreteras y hospitales.",
+      "enunciado": "A partir del texto anterior, ¿qué actitud de cultura fiscal mostró el papá de Gabriel?",
+      "opciones": {
+        "A": "Ahorrar dinero aunque los impuestos de la compra no se paguen.",
+        "B": "Cuidar que los impuestos lleguen a servicios para todos.",
+        "C": "Pagar los impuestos que a cada quien le parezcan justos.",
+        "D": "Pedir la factura cuando la compra es muy grande."
+      },
+      "clave": "B",
+      "explicacion": "Pedir factura asegura que el impuesto de la compra llegue al Estado. Con ese dinero se pagan escuelas, carreteras y hospitales que usamos todas las personas.",
+      "por_que": {
+        "A": "se queda con el descuento y no ve lo que se pierde",
+        "C": "confunde cumplir con los impuestos con escoger cuáles pagar",
+        "D": "cree que las compras pequeñas no aportan"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-22-a",
+      "orden": 59,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Derechos y retos de hoy",
+      "subtema": "Desafíos contemporáneos y soluciones ciudadanas",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.22",
+        "texto": "Analiza desafíos contemporáneos de la sociedad costarricense y las responsabilidades y soluciones ciudadanas."
+      },
+      "evidencia": {
+        "codigo": "2.22.1",
+        "texto": "Distingue desafíos sociales, políticos, ambientales y económicos de la sociedad actual."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "cívico-político",
+      "contexto": "Considere la siguiente información:\n\nUn grupo de sexto anotó algunos desafíos que enfrenta hoy la sociedad costarricense.\n\n| Desafío | Ejemplo |\n| --- | --- |\n| 1 | Muchas personas jóvenes buscan empleo y no lo encuentran. |\n| 2 | En las elecciones, una parte de las personas que pueden votar no lo hace. |\n| 3 | Algunos ríos de las ciudades reciben aguas sucias y basura. |",
+      "enunciado": "¿Cuál opción clasifica correctamente esos desafíos?",
+      "opciones": {
+        "A": "1 económico, 2 político y 3 ambiental",
+        "B": "1 político, 2 económico y 3 ambiental",
+        "C": "1 económico, 2 ambiental y 3 político",
+        "D": "1 ambiental, 2 político y 3 económico"
+      },
+      "clave": "A",
+      "explicacion": "La falta de empleo es un desafío económico, no ir a votar es un desafío político y la contaminación de los ríos es ambiental. Clasificarlos ayuda a pensar quién y cómo puede resolver cada uno.",
+      "por_que": {
+        "B": "confunde el desempleo con un problema político",
+        "C": "confunde la contaminación con un problema político",
+        "D": "confunde el desempleo con un problema ambiental"
+      },
+      "imagen": null
+    },
+    {
+      "id": "soc-2-22-b",
+      "orden": 60,
+      "materia": "estudios-sociales",
+      "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+      "tema": "Derechos y retos de hoy",
+      "subtema": "Desafíos contemporáneos y soluciones ciudadanas",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.22",
+        "texto": "Analiza desafíos contemporáneos de la sociedad costarricense y las responsabilidades y soluciones ciudadanas."
+      },
+      "evidencia": {
+        "codigo": "2.22.2",
+        "texto": "Infiere soluciones ciudadanas ante desafíos contemporáneos."
+      },
+      "verbo": "inferir",
+      "tipo_contexto": "sociocultural",
+      "contexto": "Lea el siguiente texto:\n\nEn un cantón, muchas personas mayores se sentían solas y no sabían usar el celular para pedir sus citas médicas. Un grupo de colegiales y escolares propuso enseñarles los sábados en la biblioteca pública, y la municipalidad les prestó computadoras. Al cabo de unos meses, esos vecinos ya pedían sus citas sin ayuda.",
+      "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre la solución de los desafíos sociales?",
+      "opciones": {
+        "A": "El Estado es el que debe resolverlos con leyes nuevas.",
+        "B": "La comunidad organizada ayuda a resolverlos.",
+        "C": "Las personas mayores son las que deben buscar cómo resolverlos.",
+        "D": "La municipalidad los resuelve sin ayuda de los vecinos."
+      },
+      "clave": "B",
+      "explicacion": "Los estudiantes vieron un problema, propusieron una solución y la municipalidad los apoyó. Así se ve que los desafíos sociales se pueden enfrentar con la participación de la comunidad.",
+      "por_que": {
+        "A": "no ve que la solución salió de la comunidad",
+        "C": "deja el problema en manos de quienes lo sufren",
+        "D": "confunde el apoyo municipal con resolver sola el problema"
+      },
+      "imagen": null
+    }
+  ]
+}

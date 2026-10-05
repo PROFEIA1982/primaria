@@ -276,7 +276,7 @@ function Tarjetas({ simulacros }: { simulacros: Simulacros }) {
                               {duracion(s.cantidad * seg)} en total
                             </li>
                           </ul>
-                          <Consejo />
+                          <Consejo materia={m.slug} />
                         </div>
                         <div className="simn-accion">
                           {marca ? (
@@ -320,7 +320,7 @@ function Tarjetas({ simulacros }: { simulacros: Simulacros }) {
                       pregunta: {duracion(SIMULACRO_NUEVO_PREGUNTAS * segProximo)} en
                       total.
                     </p>
-                    <Consejo />
+                    <Consejo materia={m.slug} />
                   </div>
                 )}
               </article>
@@ -340,12 +340,19 @@ function Tarjetas({ simulacros }: { simulacros: Simulacros }) {
 }
 
 // La recomendacion va en cada tarjeta y no una sola vez arriba: quien llega
-// directo a su materia la lee justo antes de tocar "Empezar".
-function Consejo() {
+// directo a su materia la lee justo antes de tocar "Empezar". Una materia
+// puede traer su propio consejo; las demas usan el de siempre.
+const CONSEJO_GENERAL = "Hacelo con calma, en un lugar tranquilo y con agua a mano.";
+const CONSEJOS: Partial<Record<SlugMateria, string>> = {
+  "estudios-sociales":
+    "Hacelo en un lugar tranquilo y con agua a mano. Si tu familia lo permite, hacé una pausa corta a la mitad: el reloj sigue corriendo mientras tanto.",
+};
+
+function Consejo({ materia }: { materia: SlugMateria }) {
   return (
     <p className="simn-consejo">
       <Droplet size={20} strokeWidth={2} aria-hidden="true" />
-      <span>Hacelo con calma, en un lugar tranquilo y con agua a mano.</span>
+      <span>{CONSEJOS[materia] ?? CONSEJO_GENERAL}</span>
     </p>
   );
 }

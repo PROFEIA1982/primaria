@@ -18,11 +18,17 @@
  *   · cada figura existe en public/simulacros-nuevos y trae texto alternativo
  *   · formulas y tablas que KaTeX y Markdown dibujan sin dejar nada crudo
  *     (las mismas revisiones de scripts/revisiones.mjs que usa el banco)
+ *   · ningun "Adaptado de" ni "Tomado de": los textos son originales
+ *   · en las materias que traen contexto (Estudios Sociales, Ciencias), los
+ *     campos del marco: bloque, verbo, tipo de contexto y el contexto mismo
  *
- * Y si encuentra VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY (en .env.local o
- * en el ambiente), compara cada enunciado nuevo contra los enunciados
- * publicados de la misma materia en el banco y avisa de los que se parecen
- * demasiado. Solo lee: la tabla items es de lectura publica.
+ * Y compara cada item nuevo contra los publicados de la misma materia en el
+ * banco, para avisar de los que se parecen demasiado. El banco sale de:
+ *   · --banco-archivo <ruta>: un JSON con los items (por ejemplo, el de un
+ *     respaldo): un arreglo de textos o de objetos con "texto" o "enunciado".
+ *   · o de Supabase, si encuentra VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY
+ *     (en .env.local o en el ambiente). Solo lee: la tabla items es de
+ *     lectura publica.
  *
  * Sale con codigo 1 si encuentra un error. Los avisos no detienen nada, pero
  * hay que leerlos: casi siempre son un item que conviene mirar con calma.
@@ -33,17 +39,48 @@ import path from 'node:path';
 import process from 'node:process';
 import { revisarEstructura, revisarTexto } from '../revisiones.mjs';
 import {
-  DIR_FIGURAS, LETRAS, MARCA_FIGURA, NIVELES, RAIZ, enunciadoFinal, leerExamen, textoPlano,
+  DIR_FIGURAS, LETRAS, MARCA_FIGURA, NIVELES, RAIZ, enunciadoFinal, leerExamen, textoCompleto, textoPlano,
 } from './comun.mjs';
 
-const materia = process.argv.slice(2).find((a) => !a.startsWith('--'));
-const exigirBanco = process.argv.includes('--exigir-banco');
+const args = process.argv.slice(2);
+const iBanco = args.indexOf('--banco-archivo');
+const bancoArchivo = iBanco >= 0 ? args[iBanco + 1] : null;
+const materia = args.find((a, i) => !a.startsWith('--') && (iBanco < 0 || i !== iBanco + 1));
+const exigirBanco = args.includes('--exigir-banco');
 if (!materia) {
   console.error('Falta la materia. Ejemplo: pnpm verificar:simulacros-nuevos matematicas');
   process.exit(2);
 }
 
 const examen = leerExamen(materia);
+
+// Lo que cambia de una materia a otra. Matematicas no trae contexto: su
+// enunciado ya lo dice todo. Estudios Sociales y Ciencias siguen el marco
+// 2026 con un contexto aparte, un verbo y un tipo de contexto por item.
+const REGLAS = {
+  matematicas: {},
+  'estudios-sociales': {
+    campos: ['bloque', 'verbo', 'tipo_contexto', 'contexto'],
+    verbos: ['identificar', 'reconocer', 'ubicar', 'distinguir', 'relacionar', 'comprender', 'analizar', 'inferir'],
+    tipos: ['espacial', 'temporal', 'sociocultural', 'cívico-político'],
+    palabrasContexto: [40, 90],
+  },
+  ciencias: {
+    campos: ['bloque', 'verbo', 'tipo_contexto', 'contexto'],
+    verbos: ['analizar', 'clasificar', 'comparar', 'comprender', 'describir', 'determinar', 'diferenciar',
+      'distinguir', 'identificar', 'reconocer'],
+    tipos: ['científico-escolar', 'personal-cotidiano', 'local-nacional', 'global-planetario'],
+    palabrasContexto: [40, 90],
+  },
+};
+const reglas = REGLAS[materia] ?? {};
+
+// Palabras del contexto, sin la linea de apertura ("Lea el siguiente texto:")
+// ni las tablas y figuras, que no se leen como prosa.
+function palabrasDelContexto(contexto) {
+  const sinApertura = contexto.replace(/^[^\n]*:\s*\n/, '');
+  return textoPlano(sinApertura.replace(MARCA_FIGURA, ' ')).split(/\s+/).filter((w) => /[\p{L}\d]/u.test(w)).length;
+}
 const items = examen.items ?? [];
 const errores = [];
 const avisos = [];
@@ -107,9 +144,19 @@ if (items.length !== PREGUNTAS) error('examen', `trae ${items.length} items y de
 const ids = new Set();
 items.forEach((it, i) => {
   const donde = it.id ?? `item ${i + 1}`;
-  for (const campo of ['id', 'orden', 'materia', 'tema', 'subtema', 'nivel', 'enunciado', 'opciones', 'clave', 'explicacion']) {
+  for (const campo of ['id', 'orden', 'materia', 'tema', 'subtema', 'nivel', 'enunciado', 'opciones', 'clave', 'explicacion',
+    ...(reglas.campos ?? [])]) {
     if (it[campo] === undefined || it[campo] === null || it[campo] === '') error(donde, `falta "${campo}"`);
   }
+  if (reglas.verbos && !reglas.verbos.includes(it.verbo)) error(donde, `verbo "${it.verbo}" (solo ${reglas.verbos.join(', ')})`);
+  if (reglas.tipos && !reglas.tipos.includes(it.tipo_contexto)) error(donde, `tipo de contexto "${it.tipo_contexto}"`);
+  if (reglas.palabrasContexto && typeof it.contexto === 'string') {
+    const [min, max] = reglas.palabrasContexto;
+    const n = palabrasDelContexto(it.contexto);
+    if (n < min || n > max) aviso(donde, `contexto de ${n} palabras (lo pedido: ${min} a ${max})`);
+  }
+  const todoElTexto = [it.contexto ?? '', it.enunciado ?? '', it.explicacion ?? '', ...Object.values(it.opciones ?? {})].join('\n');
+  if (/(adaptado|tomado)\s+de/i.test(todoElTexto)) error(donde, 'trae "Adaptado de" o "Tomado de": los textos tienen que ser originales');
   if (ids.has(it.id)) error(donde, 'id repetido');
   ids.add(it.id);
   if (it.orden !== i + 1) error(donde, `orden ${it.orden} y deberia ser ${i + 1}`);
@@ -155,7 +202,7 @@ items.forEach((it, i) => {
   //   · todas las opciones son nombres o rotulos sacados del enunciado
   //     ("¿quien salto mas lejos?": las cuatro opciones son personas del
   //     enunciado, y la correcta no puede no repetirlo)
-  const delEnunciado = new Set(palabras(it.enunciado ?? ''));
+  const delEnunciado = new Set(palabras(textoCompleto(it) ?? ''));
   const eco = palabras(textos[iClave] ?? '').filter((p) => delEnunciado.has(p));
   const sonRotulos = textos.every((t) => palabras(t).length > 0 && palabras(t).every((p) => delEnunciado.has(p)));
   if (eco.length && !sonRotulos) {
@@ -187,7 +234,7 @@ items.forEach((it, i) => {
   if (pq[it.clave]) error(donde, 'por_que no lleva la clave: es solo para los distractores');
 
   // Figura: existe, tiene texto alternativo y la marca esta en el enunciado.
-  const marcas = (it.enunciado ?? '').split(MARCA_FIGURA).length - 1;
+  const marcas = textoCompleto(it).split(MARCA_FIGURA).length - 1;
   const conMarca = marcas > 0;
   if (marcas > 1) error(donde, `el enunciado trae ${marcas} marcas ${MARCA_FIGURA} y solo se usa una`);
   if (it.imagen) {
@@ -236,7 +283,7 @@ for (let i = 0; i + 4 <= claves.length; i++) {
 
 for (let i = 0; i < items.length; i++) {
   for (let j = i + 1; j < items.length; j++) {
-    const p = parecido(items[i].enunciado, items[j].enunciado);
+    const p = parecido(textoCompleto(items[i]), textoCompleto(items[j]));
     if (p >= 0.5) error(`${items[i].id} y ${items[j].id}`, `enunciados casi iguales (${p.toFixed(2)})`);
     else if (p >= 0.3) aviso(`${items[i].id} y ${items[j].id}`, `enunciados parecidos (${p.toFixed(2)})`);
   }
@@ -244,7 +291,49 @@ for (let i = 0; i < items.length; i++) {
 
 // ---------------------------------------------------------------- contra el banco
 
+// Compara cada item contra los textos del banco y devuelve cuantos se
+// parecen. Sirve igual para el banco de Supabase y para un respaldo.
+function compararContra(banco, origen) {
+  let parecidos = 0;
+  // Ademas del parecido de frases, el de palabras con contenido: el mismo
+  // problema con otros nombres y otros numeros casi no comparte frases,
+  // pero si palabras.
+  const conPalabras = (a, b) => {
+    const A = new Set(palabras(a)); const B = new Set(palabras(b));
+    let comun = 0; for (const x of A) if (B.has(x)) comun++;
+    return A.size && B.size ? comun / (A.size + B.size - comun) : 0;
+  };
+  for (const it of items) {
+    const texto = textoCompleto(it);
+    let peor = { p: 0, texto: '' };
+    for (const b of banco) {
+      const p = parecido(texto, b);
+      if (p > peor.p) peor = { p, texto: b };
+    }
+    for (const b of banco) {
+      const p = conPalabras(texto, b);
+      if (p >= 0.45 && p > peor.p) peor = { p, texto: b };
+    }
+    if (peor.p >= 0.3) {
+      parecidos++;
+      const muestra = textoPlano(peor.texto).slice(0, 90);
+      if (peor.p >= 0.5) error(it.id, `casi igual a uno del banco (${peor.p.toFixed(2)}): "${muestra}…"`);
+      else aviso(it.id, `se parece a uno del banco (${peor.p.toFixed(2)}): "${muestra}…"`);
+    }
+  }
+  console.log(`Comparado contra ${banco.length} textos de ${origen}: ${parecidos} con parecido para revisar.\n`);
+  return banco.length;
+}
+
 async function compararConBanco() {
+  if (bancoArchivo) {
+    const datos = JSON.parse(fs.readFileSync(path.resolve(bancoArchivo), 'utf8'));
+    const textos = (Array.isArray(datos) ? datos : [])
+      .map((d) => (typeof d === 'string' ? d : d.texto ?? d.enunciado ?? ''))
+      .filter((t) => t.trim());
+    if (!textos.length) throw new Error(`${bancoArchivo} no trae textos para comparar`);
+    return compararContra(textos, path.basename(bancoArchivo));
+  }
   // Lee .env.local a mano para no depender de --env-file. Desde la raiz del
   // repo, no desde donde se corra el comando.
   const env = { ...process.env };
@@ -257,7 +346,7 @@ async function compararConBanco() {
   const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
   const llave = env.VITE_SUPABASE_ANON_KEY || env.SUPABASE_ANON_KEY;
   if (!url || !llave) {
-    const queja = 'sin VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY no se comparo contra el banco publicado';
+    const queja = 'sin --banco-archivo ni VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY no se comparo contra el banco publicado';
     if (exigirBanco) error('banco', `${queja}. Para generar igual, use --sin-banco y dejelo dicho`);
     else aviso('banco', `${queja}: corralo con esas variables antes de publicar`);
     return null;
@@ -282,34 +371,7 @@ async function compararConBanco() {
   const [m] = await pedir(`materias?select=id&slug=eq.${materia}`);
   if (!m) throw new Error(`no hay materia ${materia} en la base`);
   const banco = await todas(`items?select=enunciado&estado=eq.publicado&materia_id=eq.${m.id}`);
-  let parecidos = 0;
-  for (const it of items) {
-    let peor = { p: 0, texto: '' };
-    for (const b of banco) {
-      const p = parecido(it.enunciado, b.enunciado ?? '');
-      if (p > peor.p) peor = { p, texto: b.enunciado };
-    }
-    // Ademas del parecido de frases, el de palabras con contenido: el mismo
-    // problema con otros nombres y otros numeros casi no comparte frases,
-    // pero si palabras.
-    const conPalabras = (a, b) => {
-      const A = new Set(palabras(a)); const B = new Set(palabras(b));
-      let comun = 0; for (const x of A) if (B.has(x)) comun++;
-      return A.size && B.size ? comun / (A.size + B.size - comun) : 0;
-    };
-    for (const b of banco) {
-      const p = conPalabras(it.enunciado, b.enunciado ?? '');
-      if (p >= 0.45 && p > peor.p) peor = { p, texto: b.enunciado };
-    }
-    if (peor.p >= 0.3) {
-      parecidos++;
-      const muestra = textoPlano(peor.texto).slice(0, 90);
-      if (peor.p >= 0.5) error(it.id, `casi igual a uno del banco (${peor.p.toFixed(2)}): "${muestra}…"`);
-      else aviso(it.id, `se parece a uno del banco (${peor.p.toFixed(2)}): "${muestra}…"`);
-    }
-  }
-  console.log(`Comparado contra ${banco.length} enunciados publicados de ${materia}: ${parecidos} con parecido para revisar.\n`);
-  return banco.length;
+  return compararContra(banco.map((b) => b.enunciado ?? ''), `${materia} publicados en el banco`);
 }
 
 try {
