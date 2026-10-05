@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { MATERIAS } from "../config";
 import { esCuadernilloSano } from "./validar";
 import type { Item, Materia, Simulacro, SimulacroResumen, Tema } from "./tipos";
 
@@ -185,4 +186,46 @@ export async function traerSimulacro(slug: string): Promise<Simulacro | null> {
   if (error) throw error;
   if (!esCuadernilloSano(data)) return null;
   return data;
+}
+
+// --- Simulacros nuevos ---
+//
+// Viven en tablas propias (ver supabase/migrations/20261005210000_simulacros_nuevos.sql)
+// y se piden por sus propias funciones, pero llegan con la MISMA forma que
+// los cuadernillos de siempre: asi el motor del simulacro los corre sin
+// cambios. El nombre de la materia no viene de la base; se completa aca con
+// el de config.ts, que es el mismo que usa el resto del sitio.
+
+function nombreMateria(slug: string): string {
+  return MATERIAS.find((m) => m.slug === slug)?.nombre ?? slug;
+}
+
+export async function listarSimulacrosNuevos(): Promise<SimulacroResumen[]> {
+  const { data, error } = await supabase
+    .rpc("listar_simulacros_nuevos")
+    .abortSignal(AbortSignal.timeout(15000));
+  if (error) throw error;
+  const filas = (data ?? []) as Omit<SimulacroResumen, "materia_nombre">[];
+  return filas.map((f) => ({ ...f, materia_nombre: nombreMateria(f.materia_slug) }));
+}
+
+export async function traerSimulacroNuevo(slug: string): Promise<Simulacro | null> {
+  const { data, error } = await supabase
+    .rpc("traer_simulacro_nuevo", { p_slug: slug })
+    .abortSignal(AbortSignal.timeout(15000));
+  if (error) throw error;
+  if (!esCuadernilloSano(data)) return null;
+  return { ...data, materia_nombre: nombreMateria(data.materia_slug) };
+}
+
+// El agregado anonimo de los simulacros nuevos va a su propia tabla. Igual
+// que registrarResultados: si falla, silencio.
+export async function registrarResultadosNuevos(
+  resultados: { item_id: string; acerto: boolean }[],
+): Promise<void> {
+  try {
+    await supabase.rpc("registrar_resultados_simulacro_nuevo", { p_resultados: resultados });
+  } catch {
+    // silencio a proposito
+  }
 }

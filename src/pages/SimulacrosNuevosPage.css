@@ -1,0 +1,241 @@
+/* ============================================================
+   Simulacros nuevos (/simulacros-nuevos): las cuatro tarjetas.
+   El examen y la nota usan las hojas de la practica y de los simulacros
+   de siempre; aca va solo la portada.
+
+   Todo color sale de un token de src/index.css. Contrastes con los
+   numeros ya calculados alla:                       claro   oscuro
+   - --titulo     sobre --background ............... 11.65    9.63  AAA
+   - --foreground sobre --background ............... 17.40   14.05  AAA
+   - --foreground sobre --secondary (chips) ........ 16.03   11.64  AAA
+   - --muted      sobre --secondary (Proximamente) .  5.16    6.88  AA
+   - --success    sobre --success-suave (Listo) ....  4.80    8.98  AA
+   - --acento de la materia, iconos sobre --suave: el mas bajo es
+     Español, 5.46 en claro. Son iconos: el minimo es 3:1.
+   ============================================================ */
+
+#simn-lista {
+  --columna-simn: 64rem;
+  /* .ps-seccion pisa el relleno lateral de .ps-contenedor (misma
+     especificidad, va despues) y la pagina quedaba pegada al borde del
+     celular. Se devuelven los 20 px del contenedor solo aca. */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#simn-lista h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: var(--columna-simn);
+  margin-inline: auto;
+}
+#simn-lista .simn-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-suave);
+  color: var(--primary);
+}
+
+/* La bajada se topa en una medida de lectura (68ch) pero arranca en el
+   mismo borde izquierdo que las tarjetas: el margen izquierdo es lo que
+   sobra a cada lado de la columna. */
+#simn-lista .simn-bajada {
+  max-width: min(var(--columna-simn), 68ch);
+  margin: 0 0 22px max(0px, calc((100% - var(--columna-simn)) / 2));
+  color: var(--foreground);
+  text-wrap: pretty;
+}
+
+#simn-lista .simn-columna {
+  max-width: var(--columna-simn);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- La rejilla ---
+   La tarjeta lista ocupa todo el ancho; las "Proximamente" se reparten
+   abajo, tres por fila cuando caben. auto-fit y no auto-fill: con tres
+   tarjetas no quedan pistas vacias ocupando sitio. minmax con min() para
+   que a 320 px ninguna se salga del borde. */
+#simn-lista .simn-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 16px;
+  max-width: var(--columna-simn);
+  margin: 0 auto 22px;
+  padding: 0;
+  list-style: none;
+}
+/* El li reparte su alto a la tarjeta: con dos tarjetas de alto distinto en
+   la misma fila, los botones quedan alineados abajo. */
+#simn-lista .simn-tarjetas > li { display: grid; }
+#simn-lista .simn-tarjetas > li.simn-ancha { grid-column: 1 / -1; }
+
+#simn-lista .simn-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 22px 24px;
+  border: var(--borde-ancho-fuerte) solid var(--border);
+  border-top: 6px solid var(--acento);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: var(--sombra);
+}
+/* La que todavia no esta: borde punteado y sin sombra, para que no se lea
+   como algo que se toca. El texto sigue con contraste completo. */
+#simn-lista .simn-tarjeta[data-estado="proximamente"] {
+  border-style: dashed;
+  border-top-style: solid;
+  box-shadow: none;
+}
+
+#simn-lista .simn-cabeza {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+}
+#simn-lista .simn-materia-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--suave);
+  color: var(--acento);
+}
+#simn-lista .simn-materia {
+  margin: 0;
+  flex: 1 1 auto;
+  font-size: 1.35rem;
+  color: var(--titulo);
+}
+/* El estado va escrito, nunca solo en el color. */
+#simn-lista .simn-estado {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+#simn-lista [data-estado="lista"] .simn-estado {
+  background: var(--success-suave);
+  color: var(--success);
+}
+#simn-lista [data-estado="proximamente"] .simn-estado {
+  background: var(--secondary);
+  color: var(--muted);
+}
+
+#simn-lista .simn-examen,
+#simn-lista .simn-info,
+#simn-lista .simn-accion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#simn-lista .simn-examen { flex: 1 1 auto; }
+
+/* En la tarjeta ancha, cuando hay espacio, la informacion a la izquierda y
+   la marca con el boton a la derecha. Se mide la TARJETA y no la ventana:
+   lo que importa es cuanto mide ella. */
+#simn-lista .simn-ancha .simn-tarjeta { container-type: inline-size; }
+@container (min-width: 640px) {
+  #simn-lista .simn-ancha .simn-examen {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(15rem, 1fr);
+    gap: 18px 28px;
+    align-items: end;
+  }
+}
+#simn-lista .simn-examen + .simn-examen {
+  padding-top: 14px;
+  border-top: var(--borde-ancho) solid var(--border);
+}
+#simn-lista .simn-examen-titulo {
+  margin: 0;
+  font-size: 1.12rem;
+  color: var(--titulo);
+}
+#simn-lista .simn-trae {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+/* Los tres datos del examen, en pildoras. */
+#simn-lista .simn-datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#simn-lista .simn-datos li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+#simn-lista .simn-datos svg { flex: none; color: var(--acento); }
+
+#simn-lista .simn-consejo {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-suave);
+  color: var(--foreground);
+  line-height: 1.45;
+}
+#simn-lista .simn-consejo svg { flex: none; margin-top: 2px; color: var(--enlace); }
+
+/* El boton se va al fondo de la tarjeta (margin-top:auto viene de .sim-empezar). */
+#simn-lista .sim-empezar { align-self: stretch; }
+
+#simn-lista .simn-remate {
+  margin-top: 6px;
+  padding: 14px 18px;
+  border-left: 4px solid var(--primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--secondary);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+#simn-lista .sim-retomar { margin-bottom: 20px; }
+
+@media (max-width: 420px) {
+  #simn-lista .simn-tarjeta { padding: 18px 16px 20px; }
+}
+
+/* Colores forzados (Windows): los fondos desaparecen, asi que las pildoras
+   y el estado necesitan un borde para seguir viendose como pildoras. */
+@media (forced-colors: active) {
+  #simn-lista .simn-estado,
+  #simn-lista .simn-datos li,
+  #simn-lista .simn-consejo { border: 1px solid CanvasText; }
+  #simn-lista .simn-tarjeta { border-top-color: CanvasText; }
+}

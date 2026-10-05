@@ -35,6 +35,29 @@ import {
 } from "./marcas";
 
 export type FaseSimulacro = "lista" | "examen" | "resultados";
+
+/**
+ * De donde salen los cuadernillos y adonde va el agregado anonimo.
+ *
+ * Los cuadernillos de siempre y los simulacros nuevos viven en tablas
+ * distintas, pero el motor es el mismo: cambia solo la puerta por la que
+ * entran los datos. Cada fuente es una constante de modulo, no un objeto
+ * armado en el render, para que los useCallback que dependen de ella no se
+ * rearmen en cada pintada.
+ */
+export type FuenteSimulacros = {
+  listar: () => Promise<SimulacroResumen[]>;
+  traer: (slug: string) => Promise<Simulacro | null>;
+  registrar: (resultados: { item_id: string; acerto: boolean }[]) => Promise<void>;
+};
+
+/** Los cuadernillos de /simulacros/<materia>, como funcionaban antes. */
+export const FUENTE_CUADERNILLOS: FuenteSimulacros = {
+  listar: listarSimulacros,
+  traer: traerSimulacro,
+  registrar: registrarResultados,
+};
+
 export type EstadoLista = "cargando" | "listo" | "error";
 
 export type Simulacros = {
@@ -82,7 +105,15 @@ export type Simulacros = {
   volverALista: () => void;
 };
 
-export function useSimulacros(materia: SlugMateria): Simulacros {
+/**
+ * @param materia la materia cuyos cuadernillos se muestran, o null para
+ *   traerlos todos (la pagina de simulacros nuevos tiene las cuatro juntas).
+ * @param fuente de donde salen los datos. Por defecto, los de siempre.
+ */
+export function useSimulacros(
+  materia: SlugMateria | null,
+  fuente: FuenteSimulacros = FUENTE_CUADERNILLOS,
+): Simulacros {
   const [estadoLista, setEstadoLista] = useState<EstadoLista>("cargando");
   // Se guarda la lista completa, sin filtrar. Filtrar aca dejaba que una
   // respuesta atrasada de otra materia pintara sus cuadernillos en la
@@ -105,7 +136,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
   const [seAcaboElTiempo, setSeAcaboElTiempo] = useState(false);
 
   const lista = useMemo(
-    () => todos.filter((s) => s.materia_slug === materia),
+    () => (materia === null ? todos : todos.filter((s) => s.materia_slug === materia)),
     [todos, materia],
   );
 
@@ -134,7 +165,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     const mia = ++peticionRef.current;
     setEstadoLista("cargando");
     try {
-      const traidos = await listarSimulacros();
+      const traidos = await fuente.listar();
       if (peticionRef.current !== mia) return;
       setTodos(traidos);
       setEstadoLista("listo");
@@ -146,7 +177,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     // almacenamiento cerrado, sale vacio y ya.
     setMarcas(leerMarcas());
     setRespaldo(leerEnCurso());
-  }, []);
+  }, [fuente]);
 
   useEffect(() => {
     void cargar();
@@ -214,9 +245,12 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     const sirve = calza && desde.fin > Date.now();
     // Al retomar manda el total que traia guardado el intento; al empezar
     // de cero, tres minutos por pregunta, o cuatro con la adecuacion.
+    // Si el cuadernillo trae su propio tiempo por pregunta (los simulacros
+    // nuevos lo traen de la base), manda ese; los de siempre no lo traen y
+    // siguen con la constante de config.ts, igual que antes.
     const segPorItem = tiempoExtra
       ? SEGUNDOS_ITEM_SIMULACRO_EXTRA
-      : SEGUNDOS_ITEM_SIMULACRO;
+      : cuadernillo.segundos_por_item ?? SEGUNDOS_ITEM_SIMULACRO;
     const total = sirve ? desde.total : n * segPorItem;
     setActual(cuadernillo);
     setRespuestas(sirve ? [...desde.respuestas] : new Array(n).fill(null));
@@ -246,7 +280,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
       const mia = ++peticionRef.current;
       setAbriendo(slug);
       setErrorAbrir(null);
-      void traerSimulacro(slug)
+      void fuente.traer(slug)
         .then((cuadernillo) => {
           if (peticionRef.current !== mia) return;
           if (!cuadernillo) {
@@ -263,7 +297,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
           if (peticionRef.current === mia) setAbriendo(null);
         });
     },
-    [arrancar],
+    [arrancar, fuente],
   );
 
   const empezar = useCallback(
@@ -397,7 +431,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     if (cerradoRef.current) return;
     if (!actual) return;
     cerradoRef.current = true;
-    if (calificacion.registro.length > 0) void registrarResultados(calificacion.registro);
+    if (calificacion.registro.length > 0) void fuente.registrar(calificacion.registro);
     // En el simulacro las estrellas llegan todas juntas al entregar (una
     // por acierto): durante el examen no se dice que va bien ni mal, como
     // el dia de la prueba. Va bajo el mismo candado de "una sola vez".
@@ -414,7 +448,7 @@ export function useSimulacros(materia: SlugMateria): Simulacros {
     const nuevas = Math.max(0, calificacion.aciertos - aciertosPrevios);
     setMarcas(guardarIntento(actual.slug, calificacion.nota));
     if (nuevas > 0) sumarEstrellas(nuevas);
-  }, [fase, actual, calificacion, marcas]);
+  }, [fase, actual, calificacion, marcas, fuente]);
 
   const volverALista = useCallback(() => {
     setActual(null);

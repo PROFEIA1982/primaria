@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320" role="img" aria-labelledby="t">
+  <title id="t">Terreno con forma de L. Abajo mide 10 m, a la izquierda 8 m, arriba 6 m; luego baja 3 m, sigue 4 m a la derecha y baja 5 m hasta la base.</title>
+  <rect x="1" y="1" width="398" height="318" rx="14" fill="#ffffff" stroke="#c9d3dd" stroke-width="2"/>
+  <polygon points="50,280 350,280 350,130 230,130 230,40 50,40" fill="#e8f1fb" stroke="#1b3a5b" stroke-width="3.5" stroke-linejoin="round"/>
+  <g font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="19" font-weight="700" fill="#1a1a1a">
+    <text x="200" y="305" text-anchor="middle">10 m</text>
+    <text x="42" y="167" text-anchor="end">8 m</text>
+    <text x="140" y="31" text-anchor="middle">6 m</text>
+    <text x="242" y="92">3 m</text>
+    <text x="290" y="121" text-anchor="middle">4 m</text>
+    <text x="358" y="212">5 m</text>
+  </g>
+</svg>

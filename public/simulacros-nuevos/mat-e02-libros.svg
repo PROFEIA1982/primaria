@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 320" width="440" height="320" role="img" aria-labelledby="t">
+  <title id="t">Gráfico de barras de los libros leídos en un mes: 6-1 leyó 24, 6-2 leyó 30, 6-3 leyó 18 y 6-4 leyó 28.</title>
+  <rect x="1" y="1" width="438" height="318" rx="14" fill="#ffffff" stroke="#c9d3dd" stroke-width="2"/>
+  <g stroke="#d5dde6" stroke-width="1.5">
+    <line x1="80" y1="215" x2="420" y2="215"/>
+    <line x1="80" y1="180" x2="420" y2="180"/>
+    <line x1="80" y1="145" x2="420" y2="145"/>
+    <line x1="80" y1="110" x2="420" y2="110"/>
+    <line x1="80" y1="75" x2="420" y2="75"/>
+    <line x1="80" y1="40" x2="420" y2="40"/>
+  </g>
+  <g font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="15" fill="#1a1a1a" text-anchor="end">
+    <text x="72" y="255">0</text>
+    <text x="72" y="220">5</text>
+    <text x="72" y="185">10</text>
+    <text x="72" y="150">15</text>
+    <text x="72" y="115">20</text>
+    <text x="72" y="80">25</text>
+    <text x="72" y="45">30</text>
+  </g>
+  <rect x="100" y="82" width="56" height="168" fill="#2457f5" stroke="#1b3a5b" stroke-width="1.5"/>
+  <text x="128" y="74" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="18" font-weight="800" fill="#1a1a1a">24</text>
+  <text x="128" y="274" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="17" font-weight="700" fill="#1a1a1a">6-1</text>
+  <rect x="180" y="40" width="56" height="210" fill="#2457f5" stroke="#1b3a5b" stroke-width="1.5"/>
+  <text x="208" y="32" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="18" font-weight="800" fill="#1a1a1a">30</text>
+  <text x="208" y="274" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="17" font-weight="700" fill="#1a1a1a">6-2</text>
+  <rect x="260" y="124" width="56" height="126" fill="#2457f5" stroke="#1b3a5b" stroke-width="1.5"/>
+  <text x="288" y="116" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="18" font-weight="800" fill="#1a1a1a">18</text>
+  <text x="288" y="274" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="17" font-weight="700" fill="#1a1a1a">6-3</text>
+  <rect x="340" y="54" width="56" height="196" fill="#2457f5" stroke="#1b3a5b" stroke-width="1.5"/>
+  <text x="368" y="46" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="18" font-weight="800" fill="#1a1a1a">28</text>
+  <text x="368" y="274" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="17" font-weight="700" fill="#1a1a1a">6-4</text>
+  <line x1="80" y1="250" x2="420" y2="250" stroke="#1b3a5b" stroke-width="2.5"/>
+  <line x1="80" y1="30" x2="80" y2="250" stroke="#1b3a5b" stroke-width="2.5"/>
+  <text x="250" y="304" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="16" font-weight="700" fill="#1a1a1a">Grupo</text>
+  <text transform="translate(24 140) rotate(-90)" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="16" font-weight="700" fill="#1a1a1a">Cantidad de libros</text>
+</svg>

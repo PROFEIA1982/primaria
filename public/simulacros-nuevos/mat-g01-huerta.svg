@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-labelledby="t">
+  <title id="t">Huerta con forma de círculo. Una línea la cruza por el centro, de borde a borde: el diámetro mide 10 m.</title>
+  <rect x="1" y="1" width="398" height="298" rx="14" fill="#ffffff" stroke="#c9d3dd" stroke-width="2"/>
+  <circle cx="200" cy="155" r="115" fill="#d8efd9" stroke="#1e6b3c" stroke-width="4"/>
+  <g fill="#2f8f55">
+    <circle cx="150" cy="105" r="9"/><circle cx="250" cy="105" r="9"/><circle cx="200" cy="92" r="9"/>
+    <circle cx="150" cy="205" r="9"/><circle cx="250" cy="205" r="9"/><circle cx="200" cy="218" r="9"/>
+  </g>
+  <line x1="85" y1="155" x2="315" y2="155" stroke="#1b3a5b" stroke-width="3.5"/>
+  <circle cx="85" cy="155" r="5" fill="#1b3a5b"/><circle cx="315" cy="155" r="5" fill="#1b3a5b"/>
+  <circle cx="200" cy="155" r="4" fill="#1b3a5b"/>
+  <rect x="160" y="122" width="80" height="26" rx="6" fill="#ffffff"/>
+  <text x="200" y="142" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a">10 m</text>
+  <text x="200" y="292" text-anchor="middle" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="16" fill="#1a1a1a">diámetro: 10 m</text>
+</svg>

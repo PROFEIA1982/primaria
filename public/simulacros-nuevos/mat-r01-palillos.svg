@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150" width="420" height="150" role="img" aria-labelledby="t">
+  <title id="t">Figura 1: un cuadrado de 4 palillos. Figura 2: dos cuadrados unidos, 7 palillos. Figura 3: tres cuadrados en fila, 10 palillos.</title>
+  <rect x="1" y="1" width="418" height="148" rx="14" fill="#ffffff" stroke="#c9d3dd" stroke-width="2"/>
+  <g stroke="#8a5512" stroke-width="7" stroke-linecap="round">
+    <line x1="35" y1="40" x2="69" y2="40"/>
+    <line x1="35" y1="84" x2="69" y2="84"/>
+    <line x1="30" y1="45" x2="30" y2="79"/>
+    <line x1="74" y1="45" x2="74" y2="79"/>
+    <line x1="125" y1="40" x2="159" y2="40"/>
+    <line x1="125" y1="84" x2="159" y2="84"/>
+    <line x1="169" y1="40" x2="203" y2="40"/>
+    <line x1="169" y1="84" x2="203" y2="84"/>
+    <line x1="120" y1="45" x2="120" y2="79"/>
+    <line x1="164" y1="45" x2="164" y2="79"/>
+    <line x1="208" y1="45" x2="208" y2="79"/>
+    <line x1="260" y1="40" x2="294" y2="40"/>
+    <line x1="260" y1="84" x2="294" y2="84"/>
+    <line x1="304" y1="40" x2="338" y2="40"/>
+    <line x1="304" y1="84" x2="338" y2="84"/>
+    <line x1="348" y1="40" x2="382" y2="40"/>
+    <line x1="348" y1="84" x2="382" y2="84"/>
+    <line x1="255" y1="45" x2="255" y2="79"/>
+    <line x1="299" y1="45" x2="299" y2="79"/>
+    <line x1="343" y1="45" x2="343" y2="79"/>
+    <line x1="387" y1="45" x2="387" y2="79"/>
+  </g>
+  <g font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="17" font-weight="700" fill="#1a1a1a" text-anchor="middle">
+    <text x="52" y="122">Figura 1</text>
+    <text x="164" y="122">Figura 2</text>
+    <text x="321" y="122">Figura 3</text>
+  </g>
+</svg>

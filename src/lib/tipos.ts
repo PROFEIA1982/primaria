@@ -47,6 +47,11 @@ export type SimulacroResumen = {
   materia_slug: string;
   materia_nombre: string;
   cantidad: number;
+  /** Solo los simulacros nuevos lo traen de la base. Sin el, manda la
+   *  constante de config.ts, como siempre. */
+  segundos_por_item?: number;
+  /** Simulacros nuevos: los temas del examen, en el orden en que salen. */
+  temas?: string[];
 };
 
 export type Simulacro = {
@@ -55,5 +60,7 @@ export type Simulacro = {
   titulo: string;
   materia_slug: string;
   materia_nombre: string;
+  /** Ver SimulacroResumen.segundos_por_item. */
+  segundos_por_item?: number;
   items: Item[];
 };
