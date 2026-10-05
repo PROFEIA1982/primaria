@@ -424,11 +424,11 @@ De acuerdo con la información anterior, si se sigue el mismo patrón, ¿cuánto
 ![Mapa con dos pueblos, A y B, unidos por una línea que mide 7,5 cm. Abajo, una barra de escala indica que 1 cm del mapa equivale a 5 km en la realidad.](/simulacros-nuevos/mat-r10-mapa.svg)
 
 De acuerdo con la información anterior, ¿cuál es la distancia real entre los dos pueblos?', 'Si 1 cm del mapa son 5 km, entonces 7,5 cm son 7,5 × 5 = 37,5 km. Es una relación proporcional: el doble de centímetros, el doble de kilómetros.', false),
-    ('mat-r09', 51, 'Relaciones y Álgebra', 'Valor desconocido en una ecuación', 'alto', 'Melissa tenía ahorrada cierta cantidad de dinero. Gastó ₡850 en un cuaderno y luego su abuela le regaló ₡1200. Ahora tiene ₡3000. En la siguiente ecuación, «d» representa el dinero que Melissa tenía ahorrado al inicio:
+    ('mat-r09', 51, 'Relaciones y Álgebra', 'Valor desconocido en una ecuación', 'alto', 'En una campaña de reforestación, los árboles que donó un vivero se repartieron en partes iguales entre 4 comunidades. Además, la municipalidad le entregó 15 árboles más a cada comunidad. Al final, cada comunidad recibió 40 árboles en total. En la siguiente ecuación, «a» representa la cantidad de árboles que donó el vivero:
 
-$d - 850 + 1200 = 3000$
+$a \div 4 + 15 = 40$
 
-De acuerdo con la información anterior, ¿cuánto dinero tenía ahorrado Melissa al inicio?', 'Se deshacen los pasos al revés: antes del regalo tenía 3000 − 1200 = ₡1800, y antes de gastar tenía 1800 + 850 = ₡2650. Se comprueba: 2650 − 850 + 1200 = 3000.', true),
+De acuerdo con la información anterior, ¿cuántos árboles donó el vivero?', 'Primero se quitan los 15 árboles que dio la municipalidad: 40 − 15 = 25. Esos 25 árboles son lo que le tocó a cada comunidad cuando se repartió entre 4 lo del vivero, así que el vivero donó 25 × 4 = 100 árboles. Se comprueba: 100 ÷ 4 + 15 = 25 + 15 = 40.', true),
     ('mat-r06', 52, 'Relaciones y Álgebra', 'Número que falta en una representación gráfica', 'intermedio', 'La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg.
 
 ![Balanza de dos platillos, nivelada. En el platillo izquierdo hay tres cajas iguales y una pesa de 2 kg. En el platillo derecho hay una pesa de 14 kg.](/simulacros-nuevos/mat-r06-balanza.svg)
@@ -693,10 +693,10 @@ from (values
     ('mat-r10', 'B', '12,5 km', false),
     ('mat-r10', 'C', '37,5 km', true),
     ('mat-r10', 'D', '375 km', false),
-    ('mat-r09', 'A', '₡2650', true),
-    ('mat-r09', 'B', '₡3350', false),
-    ('mat-r09', 'C', '₡3850', false),
-    ('mat-r09', 'D', '₡5050', false),
+    ('mat-r09', 'A', '100', true),
+    ('mat-r09', 'B', '145', false),
+    ('mat-r09', 'C', '160', false),
+    ('mat-r09', 'D', '220', false),
     ('mat-r06', 'A', '4 kg', true),
     ('mat-r06', 'B', '6 kg', false),
     ('mat-r06', 'C', '12 kg', false),

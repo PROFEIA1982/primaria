@@ -936,16 +936,16 @@ Figura `mat-r10-mapa.svg`. Texto alternativo: Mapa con dos pueblos, A y B, unido
 **Evidencia R3.2:** Determina el valor desconocido (letra) en una ecuación matemática dada.  
 **Subtema:** Valor desconocido en una ecuación
 
-Melissa tenía ahorrada cierta cantidad de dinero. Gastó ₡850 en un cuaderno y luego su abuela le regaló ₡1200. Ahora tiene ₡3000. En la siguiente ecuación, «d» representa el dinero que Melissa tenía ahorrado al inicio: $d - 850 + 1200 = 3000$ De acuerdo con la información anterior, ¿cuánto dinero tenía ahorrado Melissa al inicio?
+En una campaña de reforestación, los árboles que donó un vivero se repartieron en partes iguales entre 4 comunidades. Además, la municipalidad le entregó 15 árboles más a cada comunidad. Al final, cada comunidad recibió 40 árboles en total. En la siguiente ecuación, «a» representa la cantidad de árboles que donó el vivero: $a \div 4 + 15 = 40$ De acuerdo con la información anterior, ¿cuántos árboles donó el vivero?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | ₡2650 | **Correcta** |
-| B | ₡3350 | deshace con los signos cambiados: 3000 + 1200 − 850 |
-| C | ₡3850 | solo deshace el gasto y se olvida del regalo |
-| D | ₡5050 | suma todas las cantidades |
+| A | 100 | **Correcta** |
+| B | 145 | multiplica primero y resta después: 40 × 4 − 15 |
+| C | 160 | multiplica 40 × 4 y se olvida de los 15 árboles de la municipalidad |
+| D | 220 | suma los 15 en vez de quitarlos: (40 + 15) × 4 |
 
-**Resolución:** Se deshacen los pasos al revés: antes del regalo tenía 3000 − 1200 = ₡1800, y antes de gastar tenía 1800 + 850 = ₡2650. Se comprueba: 2650 − 850 + 1200 = 3000.
+**Resolución:** Primero se quitan los 15 árboles que dio la municipalidad: 40 − 15 = 25. Esos 25 árboles son lo que le tocó a cada comunidad cuando se repartió entre 4 lo del vivero, así que el vivero donó 25 × 4 = 100 árboles. Se comprueba: 100 ÷ 4 + 15 = 25 + 15 = 40.
 
 ### 52. mat-r06 · Relaciones y Álgebra · intermedio
 
