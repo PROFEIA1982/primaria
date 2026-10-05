@@ -319,12 +319,12 @@ cross join (values
 
 $$2^3 + 4 \times 3^2 - 10 \div 2$$', 'Primero van las potencias: 2³ = 8 y 3² = 9. Luego las multiplicaciones y divisiones: 4 × 9 = 36 y 10 ÷ 2 = 5. Por último, de izquierda a derecha: 8 + 36 − 5 = 39.', true),
     ('mat-n08', 3, 'Números', 'Operaciones con números decimales', 'intermedio', 'En la feria del agricultor, Andrés compró 2,5 kg de papas a ₡840 el kilogramo y 1,25 kg de zanahorias a ₡720 el kilogramo. ¿Cuánto pagó en total?', 'Las papas cuestan 2,5 × 840 = 2100 colones y las zanahorias 1,25 × 720 = 900 colones. Sumando, 2100 + 900 = 3000. El medio kilo y el cuarto de kilo también se pagan.', false),
-    ('mat-n11', 4, 'Números', 'Múltiplos y divisibilidad', 'alto', 'Keylor tiene entre 30 y 50 canicas. Si las acomoda en grupos de 6 no le sobra ninguna, y si las acomoda en grupos de 8 tampoco le sobra ninguna. ¿Cuántas canicas tiene?', 'La cantidad tiene que ser múltiplo de 6 y de 8 a la vez, o sea, múltiplo de 24. Entre 30 y 50 el único es 48: 48 ÷ 6 = 8 y 48 ÷ 8 = 6, sin que sobre nada.', false),
+    ('mat-n11', 4, 'Números', 'Múltiplos y divisibilidad', 'alto', 'Keylor tiene entre 30 y 50 bolinchas. Si las acomoda en grupos de 6 no le sobra ninguna, y si las acomoda en grupos de 8 tampoco le sobra ninguna. ¿Cuántas bolinchas tiene?', 'La cantidad tiene que ser múltiplo de 6 y de 8 a la vez, o sea, múltiplo de 24. Entre 30 y 50 el único es 48: 48 ÷ 6 = 8 y 48 ÷ 8 = 6, sin que sobre nada.', false),
     ('mat-n03', 5, 'Números', 'Máximo común divisor', 'alto', 'Para la huerta escolar, don Rafael tiene 48 matas de chile dulce y 72 matas de tomate. Quiere sembrarlas en filas que tengan todas la misma cantidad de matas, sin mezclar chile con tomate y con la mayor cantidad posible de matas en cada fila. ¿Cuántas filas tendrá en total?', 'El número más grande que divide exacto a 48 y a 72 es 24, su máximo común divisor: cada fila lleva 24 matas. Así quedan 48 ÷ 24 = 2 filas de chile y 72 ÷ 24 = 3 filas de tomate, o sea 5 filas en total.', false),
     ('mat-n02', 6, 'Números', 'Mínimo común múltiplo', 'alto', 'Desde la terminal de buses de Guápiles salen dos rutas a las 6:00 a. m. La ruta 1 sale cada 12 minutos y la ruta 2 sale cada 18 minutos. ¿A qué hora vuelven a salir juntas por primera vez?', 'Hay que buscar el primer número que esté en la tabla del 12 y también en la del 18: ese es el mínimo común múltiplo, 36. Por eso las dos rutas vuelven a salir juntas 36 minutos después, a las 6:36 a. m.', false),
     ('mat-n01', 7, 'Números', 'Operaciones combinadas con números naturales', 'intermedio', 'En la soda de la escuela, Mariela compró 3 empanadas de ₡650 cada una y 2 refrescos naturales de ₡450 cada uno. Pagó con un billete de ₡5000. ¿Cuánto dinero le devolvieron?', 'Primero se calcula lo que gastó: 3 × 650 = 1950 y 2 × 450 = 900, en total ₡2850. Después se resta del billete: 5000 − 2850 = 2150. Ese es el vuelto.', false),
     ('mat-n05', 8, 'Números', 'Suma y resta de fracciones', 'intermedio', 'Valeria pintó $\frac{2}{5}$ de un mural de la escuela el lunes y $\frac{1}{3}$ del mismo mural el martes. ¿Qué fracción del mural le falta por pintar?', 'Para sumar fracciones con distinto denominador se buscan equivalentes: 2/5 = 6/15 y 1/3 = 5/15, así que ya pintó 11/15. El mural completo es 15/15, entonces le falta 15/15 − 11/15 = 4/15.', true),
-    ('mat-n04', 9, 'Números', 'Números primos y compuestos', 'intermedio', 'Josué asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Josué está equivocado?', 'Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso no es primo y le gana la discusión a Josué.', false),
+    ('mat-n04', 9, 'Números', 'Números primos y compuestos', 'intermedio', 'Josué asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Josué está equivocado?', 'Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso no es primo, y con él se demuestra que Josué se equivoca.', false),
     ('mat-n06', 10, 'Números', 'Fracción de una cantidad', 'alto', 'En un grupo de sexto hay 30 estudiantes. Las $\frac{2}{3}$ partes del grupo participan en la feria científica y, de quienes participan, $\frac{3}{5}$ presentan un proyecto sobre el agua. ¿Cuántos estudiantes presentan un proyecto sobre el agua?', 'Primero se calcula cuántos participan: 2/3 de 30 es 20. Después se saca 3/5 de esos 20, que da 12. Ojo: el 3/5 se aplica a quienes participan, no a todo el grupo.', true),
     ('mat-n07', 11, 'Números', 'División de fracciones', 'intermedio', 'Una botella tiene $\frac{2}{3}$ de litro de fresco de cas. Si se sirve en vasos de $\frac{1}{6}$ de litro cada uno, ¿cuántos vasos se llenan?', 'Hay que ver cuántas veces cabe 1/6 dentro de 2/3. Como 2/3 es lo mismo que 4/6, caben 4 vasos: 2/3 ÷ 1/6 = 4.', true),
     ('mat-n12', 12, 'Números', 'Comparación de fracciones', 'alto', 'Tres amigas compraron una pizza cada una, todas del mismo tamaño. Sofía comió $\frac{3}{8}$ de su pizza, Jimena comió $\frac{2}{5}$ de la suya y Yerlin comió $\frac{1}{3}$ de la suya. ¿Cuál es el orden correcto, de la que comió más a la que comió menos?', 'Para comparar se pueden pasar a decimales: 3/8 = 0,375; 2/5 = 0,4 y 1/3 es casi 0,33. Por eso Jimena comió más, luego Sofía y de última Yerlin. Fijate que el numerador más grande no siempre gana.', true),
@@ -356,7 +356,7 @@ Se quiere poner malla alrededor de toda la huerta y cada metro de malla cuesta �
 
 Si lo dobla por las líneas punteadas y lo arma, ¿qué cuerpo sólido se forma?', 'Los dos triángulos iguales son las bases, una de cada lado, y los tres rectángulos forman las caras de alrededor. Un cuerpo con dos bases iguales y caras rectangulares es un prisma, y aquí sus bases son triángulos.', false),
     ('mat-g02', 24, 'Geometría', 'Ángulos internos del triángulo', 'alto', 'Un triángulo isósceles tiene dos ángulos iguales y el ángulo distinto mide 40°. ¿Cuánto mide cada uno de los ángulos iguales?', 'Los tres ángulos de cualquier triángulo suman 180°. Si uno mide 40°, a los otros dos les quedan 180 − 40 = 140°, y como son iguales, cada uno mide 140 ÷ 2 = 70°.', false),
-    ('mat-g03', 25, 'Geometría', 'Clasificación de cuadriláteros', 'intermedio', 'Un cuadrilátero tiene dos pares de lados paralelos, sus cuatro lados miden lo mismo y ninguno de sus ángulos es recto. ¿Qué cuadrilátero es?', 'Tener los cuatro lados iguales deja por fuera al rectángulo y al trapecio. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.', false),
+    ('mat-g03', 25, 'Geometría', 'Clasificación de cuadriláteros', 'intermedio', 'Un cuadrilátero tiene dos pares de lados paralelos, sus cuatro lados miden lo mismo y ninguno de sus ángulos es recto. ¿Qué cuadrilátero es?', 'Tener los cuatro lados iguales deja por fuera al romboide y al trapecio. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.', false),
     ('mat-g08', 26, 'Geometría', 'Perímetro de polígonos regulares', 'alto', 'Con un alambre, Esteban formó un pentágono regular de 18 cm de lado. Después lo desarmó y, con todo el alambre, formó un hexágono regular. ¿Cuánto mide cada lado del hexágono?', 'El alambre mide lo mismo que el perímetro del pentágono: 5 × 18 = 90 cm. Al repartir esos 90 cm en los 6 lados iguales del hexágono, cada lado mide 90 ÷ 6 = 15 cm.', false),
     ('mat-g04', 27, 'Geometría', 'Elementos de los cuerpos sólidos', 'alto', 'Una pirámide tiene como base un hexágono. ¿Cuántas aristas tiene en total?', 'La base hexagonal tiene 6 aristas, y de cada vértice de la base sale una arista que sube hasta la punta: 6 más. En total son 6 + 6 = 12 aristas.', false),
     ('mat-r06', 28, 'Relaciones y álgebra', 'Ecuaciones con balanzas', 'intermedio', 'La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg.
@@ -370,11 +370,11 @@ Si lo dobla por las líneas punteadas y lo arma, ¿qué cuerpo sólido se forma?
 
 Si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15?', 'La figura 1 usa 4 palillos y cada cuadrado nuevo agrega solo 3, porque comparte un lado con el anterior. Así, la figura 15 usa 4 + 3 × 14 = 46 palillos.', false),
     ('mat-r04', 30, 'Relaciones y álgebra', 'Expresiones con variables', 'alto', 'En una librería, un cuaderno cuesta $c$ colones y un lapicero cuesta ₡300 menos que un cuaderno. ¿Cuál expresión representa lo que se paga por 2 cuadernos y 3 lapiceros?', 'Cada lapicero cuesta c − 300. Los 2 cuadernos son 2c y los 3 lapiceros son 3 × (c − 300) = 3c − 900. Sumando todo: 2c + 3c − 900 = 5c − 900.', true),
-    ('mat-r05', 31, 'Relaciones y álgebra', 'Sucesiones numéricas', 'alto', 'Observe la siguiente sucesión: 3, 7, 15, 31, 63, … ¿Cuál es el número que sigue?', 'Las diferencias entre un número y el siguiente se van duplicando: 4, 8, 16, 32. La próxima diferencia es 64, así que sigue 63 + 64 = 127. Otra forma de verlo: cada número es el anterior por 2, más 1.', false),
+    ('mat-r05', 31, 'Relaciones y álgebra', 'Sucesiones numéricas', 'alto', 'En la sucesión 3, 7, 15, 31, 63, …, ¿cuál es el número que sigue?', 'Las diferencias entre un número y el siguiente se van duplicando: 4, 8, 16, 32. La próxima diferencia es 64, así que sigue 63 + 64 = 127. Otra forma de verlo: cada número es el anterior por 2, más 1.', false),
     ('mat-r02', 32, 'Relaciones y álgebra', 'Ecuaciones', 'intermedio', 'Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. ¿Qué número pensó Daniela?', 'Se deshacen los pasos al revés: si al restarle 7 quedó 33, antes era 33 + 7 = 40. Y si 40 salió de multiplicar por 4, el número era 40 ÷ 4 = 10. Comprobación: 10 × 4 − 7 = 33.', false),
     ('mat-r03', 33, 'Relaciones y álgebra', 'Proporcionalidad directa', 'intermedio', 'En una tortillería, con 3 kg de masa se hacen 48 tortillas. Si la cantidad de tortillas es proporcional a la masa, ¿cuántas tortillas se hacen con 5 kg de masa?', 'Primero se averigua cuántas salen con 1 kg: 48 ÷ 3 = 16 tortillas. Con 5 kg salen 16 × 5 = 80 tortillas.', false),
     ('mat-e04', 34, 'Estadística y probabilidad', 'Probabilidad de un evento', 'intermedio', 'En una bolsa hay 5 bolitas rojas, 3 azules y 4 verdes, todas del mismo tamaño. Si se saca una bolita sin ver, ¿cuál es la probabilidad de que sea azul?', 'En total hay 5 + 3 + 4 = 12 bolitas y 3 son azules. La probabilidad es 3/12, que simplificada es 1/4.', true),
-    ('mat-e07', 35, 'Estadística y probabilidad', 'Media aritmética y moda', 'intermedio', 'Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?', 'La moda es el dato que más se repite: el 15 aparece dos veces. La media se saca sumando todo y dividiendo entre la cantidad de días: 65 ÷ 5 = 13.', false),
+    ('mat-e07', 35, 'Estadística y probabilidad', 'Promedio y moda', 'intermedio', 'Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?', 'La moda es el dato que más se repite: el 15 aparece dos veces. El promedio se saca sumando todo y dividiendo entre la cantidad de días: 65 ÷ 5 = 13.', false),
     ('mat-e06', 36, 'Estadística y probabilidad', 'Pictogramas', 'alto', 'El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg.
 
 ![Pictograma de fruta vendida, donde cada círculo completo vale 6 kg. Mango: 4 círculos. Papaya: 2 círculos y medio círculo. Piña: 3 círculos.](/simulacros-nuevos/mat-e06-frutas.svg)
@@ -397,7 +397,7 @@ Si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15
 | 4 | 1 |
 
 ¿Cuál es la moda de la cantidad de hermanos?', 'La moda es el dato que más se repite. Tener 1 hermano es lo que más aparece, en 8 estudiantes. El 8 no es la moda: es cuántas veces se repite el dato.', false),
-    ('mat-e05', 40, 'Estadística y probabilidad', 'Comparación de probabilidades', 'alto', 'Para una rifa del comité de padres hay dos cajas. En la caja A hay 20 boletos y 4 tienen premio. En la caja B hay 12 boletos y 3 tienen premio. Si solo se puede sacar un boleto de una caja, ¿en cuál es más probable ganar y por qué?', 'Lo que importa es qué parte de cada caja tiene premio. En la A es 4/20 = 1/5 y en la B es 3/12 = 1/4. Como 1/4 es mayor que 1/5, es más probable ganar sacando de la caja B.', false)
+    ('mat-e05', 40, 'Estadística y probabilidad', 'Comparación de probabilidades', 'alto', 'Para una rifa del comité de padres hay dos cajas. En la caja A hay 20 boletos y 4 tienen premio. En la caja B hay 12 boletos y 3 tienen premio. Si solo se puede sacar un boleto de una caja, ¿en cuál es más probable ganar y por qué?', 'Lo que importa es qué parte de cada caja tiene premio. En la A gana 4 de 20, o sea 1 de cada 5 boletos; en la B gana 3 de 12, o sea 1 de cada 4. Como 1/4 es mayor que 1/5, es más probable ganar sacando de la caja B.', false)
 ) as v (codigo, orden, tema, subtema, nivel, enunciado, explicacion, tiene_latex)
 where s.slug = 'nuevo-matematicas-1'
 on conflict (simulacro_id, codigo) do update set
@@ -424,7 +424,7 @@ select i.id, v.letra, v.texto, v.es_correcta
 from (values
     ('mat-n09', 'A', '₡1700', false),
     ('mat-n09', 'B', '₡6800', true),
-    ('mat-n09', 'C', '₡8075', false),
+    ('mat-n09', 'C', '₡8330', false),
     ('mat-n09', 'D', '₡8480', false),
     ('mat-n10', 'A', '25', false),
     ('mat-n10', 'B', '27', false),
@@ -520,7 +520,7 @@ from (values
     ('mat-g02', 'D', '140°', false),
     ('mat-g03', 'A', 'Rombo', true),
     ('mat-g03', 'B', 'Cuadrado', false),
-    ('mat-g03', 'C', 'Rectángulo', false),
+    ('mat-g03', 'C', 'Romboide', false),
     ('mat-g03', 'D', 'Trapecio', false),
     ('mat-g08', 'A', '12 cm', false),
     ('mat-g08', 'B', '15 cm', true),
@@ -539,8 +539,8 @@ from (values
     ('mat-r01', 'C', '49', false),
     ('mat-r01', 'D', '60', false),
     ('mat-r04', 'A', '$5c - 900$', true),
-    ('mat-r04', 'B', '$5c - 300$', false),
-    ('mat-r04', 'C', '$5c - 600$', false),
+    ('mat-r04', 'B', '$5c - 600$', false),
+    ('mat-r04', 'C', '$5c - 300$', false),
     ('mat-r04', 'D', '$5c + 900$', false),
     ('mat-r05', 'A', '67', false),
     ('mat-r05', 'B', '95', false),
@@ -558,10 +558,10 @@ from (values
     ('mat-e04', 'B', '$\frac{1}{4}$', true),
     ('mat-e04', 'C', '$\frac{1}{3}$', false),
     ('mat-e04', 'D', '$\frac{3}{4}$', false),
-    ('mat-e07', 'A', 'La moda es 15 y la media es 13.', true),
-    ('mat-e07', 'B', 'La moda es 15 y la media es 15.', false),
-    ('mat-e07', 'C', 'La moda es 2 y la media es 13.', false),
-    ('mat-e07', 'D', 'La moda es 13 y la media es 15.', false),
+    ('mat-e07', 'A', 'La moda es 15 y el promedio es 13.', true),
+    ('mat-e07', 'B', 'La moda es 15 y el promedio es 15.', false),
+    ('mat-e07', 'C', 'La moda es 2 y el promedio es 13.', false),
+    ('mat-e07', 'D', 'La moda es 13 y el promedio es 15.', false),
     ('mat-e06', 'A', '1,5 kg', false),
     ('mat-e06', 'B', '6 kg', false),
     ('mat-e06', 'C', '9 kg', true),
@@ -578,10 +578,10 @@ from (values
     ('mat-e03', 'B', '2 hermanos', false),
     ('mat-e03', 'C', '4 hermanos', false),
     ('mat-e03', 'D', '8 hermanos', false),
-    ('mat-e05', 'A', 'En la A, porque tiene más boletos que ganan.', false),
-    ('mat-e05', 'B', 'En la A, porque tiene más boletos en total.', false),
-    ('mat-e05', 'C', 'En las dos por igual, porque ambas dan premio.', false),
-    ('mat-e05', 'D', 'En la B, porque su parte favorable es mayor.', true)
+    ('mat-e05', 'A', 'En la A, porque tiene más boletos con premio.', false),
+    ('mat-e05', 'B', 'En la A, porque gana 1 de cada 5 boletos.', false),
+    ('mat-e05', 'C', 'En las dos por igual, porque hay boletos con premio.', false),
+    ('mat-e05', 'D', 'En la B, porque gana 1 de cada 4 boletos.', true)
 ) as v (codigo, letra, texto, es_correcta)
 join public.simulacro_nuevo_items i on i.codigo = v.codigo
 join public.simulacros_nuevos s on s.id = i.simulacro_id and s.slug = 'nuevo-matematicas-1'

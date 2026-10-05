@@ -44,7 +44,7 @@ Cada ítem se resolvió dos veces: a mano (la columna «Resolución») y con un 
 | 32 | mat-r02 | Relaciones y álgebra | Ecuaciones | intermedio | B | — |
 | 33 | mat-r03 | Relaciones y álgebra | Proporcionalidad directa | intermedio | C | — |
 | 34 | mat-e04 | Estadística y probabilidad | Probabilidad de un evento | intermedio | B | — |
-| 35 | mat-e07 | Estadística y probabilidad | Media aritmética y moda | intermedio | A | — |
+| 35 | mat-e07 | Estadística y probabilidad | Promedio y moda | intermedio | A | — |
 | 36 | mat-e06 | Estadística y probabilidad | Pictogramas | alto | C | mat-e06-frutas.svg |
 | 37 | mat-e02 | Estadística y probabilidad | Gráficos de barras | alto | B | mat-e02-libros.svg |
 | 38 | mat-e01 | Estadística y probabilidad | Promedio | alto | D | — |
@@ -61,7 +61,7 @@ Una camisa del uniforme cuesta ₡8500 y tiene un descuento del 20 %. ¿Cuánto 
 | :---: | --- | --- |
 | A | ₡1700 | da el descuento, no el precio |
 | B | ₡6800 | **Correcta** |
-| C | ₡8075 | divide entre 20 en vez de sacar el 20 % |
+| C | ₡8330 | saca mal el 20 %: divide entre 1000 en vez de 100 y rebaja 170 |
 | D | ₡8480 | resta 20 colones |
 
 **Resolución:** El 20 % de 8500 es 8500 × 20 ÷ 100 = 1700, y eso es lo que se rebaja. Entonces se paga 8500 − 1700 = 6800 colones.
@@ -94,7 +94,7 @@ En la feria del agricultor, Andrés compró 2,5 kg de papas a ₡840 el kilogram
 
 ### 4. mat-n11 · Números · Múltiplos y divisibilidad · alto
 
-Keylor tiene entre 30 y 50 canicas. Si las acomoda en grupos de 6 no le sobra ninguna, y si las acomoda en grupos de 8 tampoco le sobra ninguna. ¿Cuántas canicas tiene?
+Keylor tiene entre 30 y 50 bolinchas. Si las acomoda en grupos de 6 no le sobra ninguna, y si las acomoda en grupos de 8 tampoco le sobra ninguna. ¿Cuántas bolinchas tiene?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -168,7 +168,7 @@ Josué asegura: «Todos los números impares mayores que 15 son primos». ¿Cuá
 | C | 29 | primo; quien no conoce bien los primos duda con los que terminan en 9 o en 3 |
 | D | 33 | **Correcta** |
 
-**Resolución:** Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso no es primo y le gana la discusión a Josué.
+**Resolución:** Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso no es primo, y con él se demuestra que Josué se equivoca.
 
 ### 10. mat-n06 · Números · Fracción de una cantidad · alto
 
@@ -381,10 +381,10 @@ Un cuadrilátero tiene dos pares de lados paralelos, sus cuatro lados miden lo m
 | :---: | --- | --- |
 | A | Rombo | **Correcta** |
 | B | Cuadrado | se fija en los lados iguales y olvida que no hay ángulos rectos |
-| C | Rectángulo | se fija solo en los lados paralelos |
+| C | Romboide | se fija en los lados paralelos y en los ángulos, y olvida que los cuatro lados son iguales |
 | D | Trapecio | confunde paralelogramo con trapecio |
 
-**Resolución:** Tener los cuatro lados iguales deja por fuera al rectángulo y al trapecio. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.
+**Resolución:** Tener los cuatro lados iguales deja por fuera al romboide y al trapecio. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.
 
 ### 26. mat-g08 · Geometría · Perímetro de polígonos regulares · alto
 
@@ -449,15 +449,15 @@ En una librería, un cuaderno cuesta $c$ colones y un lapicero cuesta ₡300 men
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | $5c - 900$ | **Correcta** |
-| B | $5c - 300$ | no multiplica el 300 por los 3 lapiceros |
-| C | $5c - 600$ | aplica el 300 a los 2 cuadernos |
+| B | $5c - 600$ | aplica el 300 a los 2 cuadernos |
+| C | $5c - 300$ | no multiplica el 300 por los 3 lapiceros |
 | D | $5c + 900$ | error de signo al distribuir |
 
 **Resolución:** Cada lapicero cuesta c − 300. Los 2 cuadernos son 2c y los 3 lapiceros son 3 × (c − 300) = 3c − 900. Sumando todo: 2c + 3c − 900 = 5c − 900.
 
 ### 31. mat-r05 · Relaciones y álgebra · Sucesiones numéricas · alto
 
-Observe la siguiente sucesión: 3, 7, 15, 31, 63, … ¿Cuál es el número que sigue?
+En la sucesión 3, 7, 15, 31, 63, …, ¿cuál es el número que sigue?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -507,18 +507,18 @@ En una bolsa hay 5 bolitas rojas, 3 azules y 4 verdes, todas del mismo tamaño. 
 
 **Resolución:** En total hay 5 + 3 + 4 = 12 bolitas y 3 son azules. La probabilidad es 3/12, que simplificada es 1/4.
 
-### 35. mat-e07 · Estadística y probabilidad · Media aritmética y moda · intermedio
+### 35. mat-e07 · Estadística y probabilidad · Promedio y moda · intermedio
 
 Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La moda es 15 y la media es 13. | **Correcta** |
-| B | La moda es 15 y la media es 15. | confunde la media con la moda |
-| C | La moda es 2 y la media es 13. | da cuántas veces se repite el 15 |
-| D | La moda es 13 y la media es 15. | cambia moda por media |
+| A | La moda es 15 y el promedio es 13. | **Correcta** |
+| B | La moda es 15 y el promedio es 15. | confunde el promedio con la moda |
+| C | La moda es 2 y el promedio es 13. | da cuántas veces se repite el 15 |
+| D | La moda es 13 y el promedio es 15. | cambia la moda por el promedio |
 
-**Resolución:** La moda es el dato que más se repite: el 15 aparece dos veces. La media se saca sumando todo y dividiendo entre la cantidad de días: 65 ÷ 5 = 13.
+**Resolución:** La moda es el dato que más se repite: el 15 aparece dos veces. El promedio se saca sumando todo y dividiendo entre la cantidad de días: 65 ÷ 5 = 13.
 
 ### 36. mat-e06 · Estadística y probabilidad · Pictogramas · alto
 
@@ -582,9 +582,9 @@ Para una rifa del comité de padres hay dos cajas. En la caja A hay 20 boletos y
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | En la A, porque tiene más boletos que ganan. | compara cantidades de premios y no la parte del total |
-| B | En la A, porque tiene más boletos en total. | cree que más boletos dan más chance |
-| C | En las dos por igual, porque ambas dan premio. | cree que basta con que haya premios |
-| D | En la B, porque su parte favorable es mayor. | **Correcta** |
+| A | En la A, porque tiene más boletos con premio. | compara cantidades de premios y no la parte del total |
+| B | En la A, porque gana 1 de cada 5 boletos. | calcula bien la fracción pero cree que 1/5 es mayor que 1/4 |
+| C | En las dos por igual, porque hay boletos con premio. | cree que basta con que haya premios |
+| D | En la B, porque gana 1 de cada 4 boletos. | **Correcta** |
 
-**Resolución:** Lo que importa es qué parte de cada caja tiene premio. En la A es 4/20 = 1/5 y en la B es 3/12 = 1/4. Como 1/4 es mayor que 1/5, es más probable ganar sacando de la caja B.
+**Resolución:** Lo que importa es qué parte de cada caja tiene premio. En la A gana 4 de 20, o sea 1 de cada 5 boletos; en la B gana 3 de 12, o sea 1 de cada 4. Como 1/4 es mayor que 1/5, es más probable ganar sacando de la caja B.

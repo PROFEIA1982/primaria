@@ -20,7 +20,7 @@
       "opciones": {
         "A": "₡1700",
         "B": "₡6800",
-        "C": "₡8075",
+        "C": "₡8330",
         "D": "₡8480"
       },
       "clave": "B",
@@ -70,7 +70,7 @@
       "tema": "Números",
       "subtema": "Múltiplos y divisibilidad",
       "nivel": "alto",
-      "enunciado": "Keylor tiene entre 30 y 50 canicas. Si las acomoda en grupos de 6 no le sobra ninguna, y si las acomoda en grupos de 8 tampoco le sobra ninguna. ¿Cuántas canicas tiene?",
+      "enunciado": "Keylor tiene entre 30 y 50 bolinchas. Si las acomoda en grupos de 6 no le sobra ninguna, y si las acomoda en grupos de 8 tampoco le sobra ninguna. ¿Cuántas bolinchas tiene?",
       "opciones": {
         "A": "32",
         "B": "36",
@@ -168,7 +168,7 @@
         "D": "33"
       },
       "clave": "D",
-      "explicacion": "Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso no es primo y le gana la discusión a Josué.",
+      "explicacion": "Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso no es primo, y con él se demuestra que Josué se equivoca.",
       "imagen": null
     },
     {
@@ -464,11 +464,11 @@
       "opciones": {
         "A": "Rombo",
         "B": "Cuadrado",
-        "C": "Rectángulo",
+        "C": "Romboide",
         "D": "Trapecio"
       },
       "clave": "A",
-      "explicacion": "Tener los cuatro lados iguales deja por fuera al rectángulo y al trapecio. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.",
+      "explicacion": "Tener los cuatro lados iguales deja por fuera al romboide y al trapecio. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.",
       "imagen": null
     },
     {
@@ -559,8 +559,8 @@
       "enunciado": "En una librería, un cuaderno cuesta $c$ colones y un lapicero cuesta ₡300 menos que un cuaderno. ¿Cuál expresión representa lo que se paga por 2 cuadernos y 3 lapiceros?",
       "opciones": {
         "A": "$5c - 900$",
-        "B": "$5c - 300$",
-        "C": "$5c - 600$",
+        "B": "$5c - 600$",
+        "C": "$5c - 300$",
         "D": "$5c + 900$"
       },
       "clave": "A",
@@ -574,7 +574,7 @@
       "tema": "Relaciones y álgebra",
       "subtema": "Sucesiones numéricas",
       "nivel": "alto",
-      "enunciado": "Observe la siguiente sucesión: 3, 7, 15, 31, 63, … ¿Cuál es el número que sigue?",
+      "enunciado": "En la sucesión 3, 7, 15, 31, 63, …, ¿cuál es el número que sigue?",
       "opciones": {
         "A": "67",
         "B": "95",
@@ -644,17 +644,17 @@
       "orden": 35,
       "materia": "matematicas",
       "tema": "Estadística y probabilidad",
-      "subtema": "Media aritmética y moda",
+      "subtema": "Promedio y moda",
       "nivel": "intermedio",
       "enunciado": "Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?",
       "opciones": {
-        "A": "La moda es 15 y la media es 13.",
-        "B": "La moda es 15 y la media es 15.",
-        "C": "La moda es 2 y la media es 13.",
-        "D": "La moda es 13 y la media es 15."
+        "A": "La moda es 15 y el promedio es 13.",
+        "B": "La moda es 15 y el promedio es 15.",
+        "C": "La moda es 2 y el promedio es 13.",
+        "D": "La moda es 13 y el promedio es 15."
       },
       "clave": "A",
-      "explicacion": "La moda es el dato que más se repite: el 15 aparece dos veces. La media se saca sumando todo y dividiendo entre la cantidad de días: 65 ÷ 5 = 13.",
+      "explicacion": "La moda es el dato que más se repite: el 15 aparece dos veces. El promedio se saca sumando todo y dividiendo entre la cantidad de días: 65 ÷ 5 = 13.",
       "imagen": null
     },
     {
@@ -744,13 +744,13 @@
       "nivel": "alto",
       "enunciado": "Para una rifa del comité de padres hay dos cajas. En la caja A hay 20 boletos y 4 tienen premio. En la caja B hay 12 boletos y 3 tienen premio. Si solo se puede sacar un boleto de una caja, ¿en cuál es más probable ganar y por qué?",
       "opciones": {
-        "A": "En la A, porque tiene más boletos que ganan.",
-        "B": "En la A, porque tiene más boletos en total.",
-        "C": "En las dos por igual, porque ambas dan premio.",
-        "D": "En la B, porque su parte favorable es mayor."
+        "A": "En la A, porque tiene más boletos con premio.",
+        "B": "En la A, porque gana 1 de cada 5 boletos.",
+        "C": "En las dos por igual, porque hay boletos con premio.",
+        "D": "En la B, porque gana 1 de cada 4 boletos."
       },
       "clave": "D",
-      "explicacion": "Lo que importa es qué parte de cada caja tiene premio. En la A es 4/20 = 1/5 y en la B es 3/12 = 1/4. Como 1/4 es mayor que 1/5, es más probable ganar sacando de la caja B.",
+      "explicacion": "Lo que importa es qué parte de cada caja tiene premio. En la A gana 4 de 20, o sea 1 de cada 5 boletos; en la B gana 3 de 12, o sea 1 de cada 4. Como 1/4 es mayor que 1/5, es más probable ganar sacando de la caja B.",
       "imagen": null
     }
   ]
