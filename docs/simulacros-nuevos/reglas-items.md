@@ -86,7 +86,7 @@ y Estudios Sociales. Las reglas son las mismas del piloto de Matemáticas
 ```json
 {
   "id": "mat-n01",            // prefijo de materia + tema + número; no se reusa
-  "orden": 1,                  // posición en el examen, 1 a 40
+  "orden": 1,                  // posición en el examen, 1 a 60
   "materia": "matematicas",    // espanol | estudios-sociales | ciencias | matematicas
   "tema": "Números",
   "subtema": "Operaciones combinadas con números naturales",

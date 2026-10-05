@@ -14,7 +14,7 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | # | Id | Bloque | Evidencia | Subtema | Nivel | Clave |
 | ---: | --- | --- | --- | --- | --- | :---: |
 | 1 | mat-n07 | Números | N6.3 | Números decimales y fracciones | intermedio | B |
-| 2 | mat-n05 | Números | N5.3 | Suma y resta de fracciones | intermedio | A |
+| 2 | mat-n05 | Números | N5.3 | Suma y resta de fracciones | alto | A |
 | 3 | mat-n08 | Números | N4.2 | Operaciones con números decimales | intermedio | D |
 | 4 | mat-n21 | Números | N4.3 | Multiplicación por 10, 100 y 1000 | intermedio | D |
 | 5 | mat-n19 | Números | N1.1 | Valor posicional en números naturales | intermedio | C |
@@ -32,7 +32,7 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | 17 | mat-n01 | Números | N4.2 | Operaciones combinadas con números naturales | intermedio | B |
 | 18 | mat-g04 | Geometría | G3.6 | Elementos de los prismas | intermedio | D |
 | 19 | mat-g14 | Geometría | G1.3 | Propiedades de los cuadriláteros | alto | C |
-| 20 | mat-g05 | Geometría | G3.7 | Elementos del cilindro | alto | A |
+| 20 | mat-g05 | Geometría | G3.7 | Elementos del cilindro | intermedio | A |
 | 21 | mat-g17 | Geometría | G6.1 | Ubicación en el sistema de coordenadas | intermedio | D |
 | 22 | mat-g03 | Geometría | G2.4 | Clasificación de cuadriláteros | intermedio | A |
 | 23 | mat-g06 | Geometría | G4.2 | Área de figuras compuestas | alto | B |
@@ -40,7 +40,7 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | 25 | mat-g12 | Geometría | G4.3 | Perímetro y área del rectángulo | alto | B |
 | 26 | mat-g15 | Geometría | G2.1 | Clasificación de triángulos según sus ángulos | intermedio | C |
 | 27 | mat-g11 | Geometría | G2.2 | Clasificación de triángulos | intermedio | A |
-| 28 | mat-g08 | Geometría | G4.3 | Perímetro de triángulos y cuadriláteros | intermedio | B |
+| 28 | mat-g08 | Geometría | G4.3 | Perímetro de triángulos y cuadriláteros | alto | B |
 | 29 | mat-g07 | Geometría | G4.3 | Área del triángulo | intermedio | C |
 | 30 | mat-g16 | Geometría | G5.1 | Ejes de simetría | intermedio | C |
 | 31 | mat-g13 | Geometría | G2.5 | Clasificación de cuadriláteros | intermedio | D |
@@ -65,7 +65,7 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | 50 | mat-r10 | Relaciones y Álgebra | R2.4 | Escalas y proporcionalidad | intermedio | C |
 | 51 | mat-r09 | Relaciones y Álgebra | R3.2 | Valor desconocido en una ecuación | alto | A |
 | 52 | mat-r06 | Relaciones y Álgebra | R3.1 | Número que falta en una representación gráfica | intermedio | A |
-| 53 | mat-r11 | Relaciones y Álgebra | R2.2 | Expresiones matemáticas con dos cantidades | alto | B |
+| 53 | mat-r11 | Relaciones y Álgebra | R2.2 | Expresiones matemáticas con dos cantidades | intermedio | B |
 | 54 | mat-e07 | Estadística y Probabilidad | E1.3 | Moda y recorrido | intermedio | C |
 | 55 | mat-e11 | Estadística y Probabilidad | E1.4 | Población y muestra | intermedio | A |
 | 56 | mat-e06 | Estadística y Probabilidad | E1.1 | Pictogramas | alto | C |
@@ -93,7 +93,7 @@ Para un experimento de Ciencias, el grupo de Keylor necesita 0,75 L de agua. La 
 
 **Resolución:** 0,75 se lee «setenta y cinco centésimos», o sea 75/100. Si se simplifica dividiendo entre 25, queda 3/4. Por eso 0,75 L son tres cuartos de litro.
 
-### 2. mat-n05 · Números · intermedio
+### 2. mat-n05 · Números · alto
 
 **Afirmación N5:** Resuelve problemas relacionados con el concepto, los tipos o representaciones de fracciones.  
 **Evidencia N5.3:** Resuelve problemas que involucren fracciones propias.  
@@ -125,7 +125,7 @@ En la feria del agricultor, Andrés compró 2,5 kg de papas a ₡840 el kilogram
 | C | ₡2820 | ignora el 0,25 de las zanahorias |
 | D | ₡3000 | **Correcta** |
 
-**Resolución:** Las papas cuestan 2,5 × 840 = 2100 colones y las zanahorias 1,25 × 720 = 900 colones. Sumando, 2100 + 900 = 3000. El medio kilo y el cuarto de kilo también se pagan.
+**Resolución:** Las papas cuestan 2,5 × 840 = 2100 colones y las zanahorias 1,25 × 720 = 900 colones. Sumando, 2100 + 900 = 3000. Por eso Andrés pagó ₡3000 en total.
 
 ### 4. mat-n21 · Números · intermedio
 
@@ -133,7 +133,7 @@ En la feria del agricultor, Andrés compró 2,5 kg de papas a ₡840 el kilogram
 **Evidencia N4.3:** Determina la multiplicación de un número, con o sin expansión decimal, por 10, 100, 1000 o 10 000.  
 **Subtema:** Multiplicación por 10, 100 y 1000
 
-En una bodega hay 100 paquetes de arroz, y cada paquete pesa 2,35 kg. ¿Cuántos kilogramos de arroz hay en total?
+Un centro de acopio de la comunidad recibió 100 paquetes de arroz para familias afectadas por una inundación, y cada paquete pesa 2,35 kg. ¿Cuántos kilogramos de arroz recibió en total?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -142,7 +142,7 @@ En una bodega hay 100 paquetes de arroz, y cada paquete pesa 2,35 kg. ¿Cuántos
 | C | 23,5 kg | corre la coma un solo lugar, como si multiplicara por 10 |
 | D | 235 kg | **Correcta** |
 
-**Resolución:** Multiplicar por 100 es correr la coma dos lugares a la derecha: 2,35 × 100 = 235. En la bodega hay 235 kg de arroz.
+**Resolución:** Multiplicar por 100 es correr la coma dos lugares a la derecha: 2,35 × 100 = 235. El centro de acopio recibió 235 kg de arroz.
 
 ### 5. mat-n19 · Números · intermedio
 
@@ -150,7 +150,7 @@ En una bodega hay 100 paquetes de arroz, y cada paquete pesa 2,35 kg. ¿Cuántos
 **Evidencia N1.1:** Reconoce las distintas representaciones de un número natural mayor o igual que 100 000.  
 **Subtema:** Valor posicional en números naturales
 
-Una empresa de buses informó que durante un año transportó 2 607 045 pasajeros. En ese número, ¿cuál es el valor de la cifra 6?
+Una empresa de buses informó que durante un año transportó 2 607 045 pasajeros. De acuerdo con la información anterior, ¿cuál es el valor de la cifra 6 en ese número?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -201,7 +201,7 @@ Desde la terminal de buses de Guápiles salen dos rutas a las 6:00 a. m. La ruta
 **Evidencia N3.3:** Determina divisibilidad, divisor o factor de un número natural.  
 **Subtema:** Divisores de un número
 
-Para la huerta escolar, don Rafael tiene 48 matas de chile dulce y 72 matas de tomate. Las va a sembrar en filas, sin mezclar chile con tomate. Todas las filas deben tener la misma cantidad de matas, y esa cantidad debe ser la mayor posible. ¿Cuántas filas tendrá en total?
+Para la huerta escolar, don Rafael tiene 48 matas de chile dulce y 72 matas de tomate. Las va a sembrar en filas, sin mezclar chile con tomate. Todas las filas deben tener la misma cantidad de matas, y esa cantidad debe ser la mayor posible. De acuerdo con la información anterior, ¿cuántas filas tendrá en total?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -224,7 +224,7 @@ Ocho compañeros compraron un queque de ₡9600 y 8 refrescos de ₡650 cada uno
 | :---: | --- | --- |
 | A | ₡1200 | reparte solo el queque |
 | B | ₡1850 | **Correcta** |
-| C | ₡6400 | reparte el queque pero le carga todos los refrescos a una sola persona |
+| C | ₡6400 | divide solo el queque entre 8 y le suma los ₡5200 de refrescos sin repartirlos |
 | D | ₡14 800 | da el gasto total sin repartirlo |
 
 **Resolución:** Los refrescos cuestan 8 × 650 = ₡5200, y con el queque el gasto total es 9600 + 5200 = ₡14 800. Al repartirlo entre 8, cada uno paga 14 800 ÷ 8 = ₡1850.
@@ -261,7 +261,7 @@ Tres amigas compraron una pizza cada una, todas del mismo tamaño. Sofía comió
 | C | Yerlin, Sofía y Jimena | ordena al revés, de menor a mayor |
 | D | Jimena, Sofía y Yerlin | **Correcta** |
 
-**Resolución:** Para comparar se pueden pasar a decimales: 3/8 = 0,375; 2/5 = 0,4 y 1/3 = 0,333…, que es el menor. Por eso Jimena comió más, luego Sofía y de última Yerlin. Fijate que el numerador más grande no siempre gana.
+**Resolución:** Para comparar se pueden pasar a decimales: 3/8 = 0,375; 2/5 = 0,4 y 1/3 = 0,333…, que es el menor. Por eso Jimena comió más, luego Sofía y de última Yerlin. Hay que fijarse en que el numerador más grande no siempre gana.
 
 ### 12. mat-n18 · Números · intermedio
 
@@ -269,7 +269,7 @@ Tres amigas compraron una pizza cada una, todas del mismo tamaño. Sofía comió
 **Evidencia N2.3:** Compara números en su representación decimal.  
 **Subtema:** Comparación de números decimales
 
-En el festival deportivo de la escuela, cuatro estudiantes hicieron salto largo. Ariana saltó 2,08 m; Brenda, 2,8 m; Camila, 2,75 m; y Diego, 2,705 m. ¿Quién saltó más lejos?
+En el festival deportivo de la escuela, cuatro estudiantes participaron en salto largo. En la siguiente tabla se muestra la distancia que saltó cada uno: (tabla) De acuerdo con la información anterior, ¿quién saltó más lejos?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -286,16 +286,16 @@ En el festival deportivo de la escuela, cuatro estudiantes hicieron salto largo.
 **Evidencia N4.1:** Resuelve problemas que involucren el algoritmo de la división de números naturales.  
 **Subtema:** División con residuo
 
-Para una gira, 230 estudiantes van a viajar en buses de 45 asientos cada uno. Si nadie puede viajar de pie, ¿cuántos buses se necesitan como mínimo?
+Para una gira, viajarán 220 estudiantes y 20 docentes en buses de 45 asientos cada uno. Si nadie puede viajar de pie, ¿cuántos buses se necesitan como mínimo?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | 5 | divide bien pero se olvida de los 5 estudiantes que sobran |
+| A | 5 | divide bien, pero deja por fuera a las 15 personas que sobran |
 | B | 6 | **Correcta** |
-| C | 185 | resta 230 − 45 |
-| D | 275 | suma 230 + 45 |
+| C | 15 | responde con el residuo de la división |
+| D | 240 | se queda en el primer paso: el total de personas |
 
-**Resolución:** Al dividir, 230 ÷ 45 da 5 y sobran 5 estudiantes. Esos 5 también tienen que viajar, así que hace falta un bus más: 6 buses.
+**Resolución:** En total viajan 220 + 20 = 240 personas. Al dividir, 240 ÷ 45 da 5 y sobran 15 personas, que también tienen que viajar, así que hace falta un bus más: 6 buses.
 
 ### 14. mat-n16 · Números · alto
 
@@ -303,7 +303,7 @@ Para una gira, 230 estudiantes van a viajar en buses de 45 asientos cada uno. Si
 **Evidencia N3.2:** Determina si un número natural es divisible por 2, 3, 5 o 10, mediante la aplicación de las reglas de divisibilidad.  
 **Subtema:** Reglas de divisibilidad
 
-El número del casillero de Mariela tiene tres cifras, pero la del medio se borró: 5 ? 1. Ella recuerda que ese número es divisible por 3 y que la cifra borrada es mayor que 5 y menor que 8. ¿Cuál es el número del casillero?
+El número del casillero de Maripaz tiene tres cifras, pero la del medio se borró: 5 ? 1. Ella recuerda que ese número es divisible por 3 y que la cifra borrada es mayor que 5 y menor que 8. ¿Cuál es el número del casillero?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -320,16 +320,16 @@ El número del casillero de Mariela tiene tres cifras, pero la del medio se borr
 **Evidencia N3.3:** Determina divisibilidad, divisor o factor de un número natural.  
 **Subtema:** Números primos y compuestos
 
-Josué asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Josué está equivocado?
+Jeremy asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Jeremy está equivocado?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | 19 | primo |
-| B | 23 | primo |
-| C | 29 | primo; quien no conoce bien los primos duda con los que terminan en 9 o en 3 |
+| A | 9 | es compuesto, pero no es mayor que 15 |
+| B | 18 | es compuesto, pero es par y la afirmación habla de impares |
+| C | 29 | es impar y mayor que 15, pero es primo |
 | D | 33 | **Correcta** |
 
-**Resolución:** Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso es compuesto, y con él se demuestra que Josué se equivoca.
+**Resolución:** El 33 es impar y mayor que 15, pero se divide entre 3 y entre 11, porque 3 × 11 = 33; por eso es compuesto y demuestra que Jeremy se equivoca. El 9 y el 18 también son compuestos, pero el 9 no es mayor que 15 y el 18 es par.
 
 ### 16. mat-n20 · Números · intermedio
 
@@ -344,9 +344,9 @@ Doña Ana tiene 48 kg de café y va a vender 0,75 de esa cantidad. Sin hacer la 
 | A | Es mayor que 48. | cree que multiplicar siempre agranda |
 | B | Es igual a 48. | cree que multiplicar por un decimal no cambia la cantidad |
 | C | Es menor que 48. | **Correcta** |
-| D | Es menor que 0,75. | confunde el resultado con el número decimal |
+| D | Es menor que 24. | cree que multiplicar por un decimal achica muchísimo el número |
 
-**Resolución:** Multiplicar por un número menor que 1 es como tomar solo una parte, así que el resultado queda menor que el número inicial. Como 0,75 es menor que 1, el resultado es menor que 48; de hecho, da 36.
+**Resolución:** Multiplicar por un número menor que 1 es como tomar solo una parte, así que el resultado queda menor que 48. Pero 0,75 es más que la mitad, así que el resultado no baja de 24: de hecho, da 36.
 
 ### 17. mat-n01 · Números · intermedio
 
@@ -371,7 +371,7 @@ En la soda de la escuela, Mariela compró 3 empanadas de ₡650 cada una y 2 ref
 **Evidencia G3.6:** Reconoce prismas o algunos de sus elementos (caras, bases, altura) o propiedades.  
 **Subtema:** Elementos de los prismas
 
-Una caja de zapatos tiene forma de prisma rectangular. Andrés quiere pegar cinta sobre todas las aristas de la caja. ¿En cuántas aristas debe pegar cinta?
+Una caja de zapatos tiene forma de prisma rectangular. Sebastián quiere pegar cinta sobre todas las aristas de la caja. ¿En cuántas aristas debe pegar cinta?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -388,18 +388,18 @@ Una caja de zapatos tiene forma de prisma rectangular. Andrés quiere pegar cint
 **Evidencia G1.3:** Reconoce propiedades de cuadriláteros referidas a los lados, los ángulos y las diagonales.  
 **Subtema:** Propiedades de los cuadriláteros
 
-Fabián dibujó un cuadrilátero con sus cuatro ángulos rectos. Sus dos diagonales miden lo mismo, pero no son perpendiculares. ¿Qué cuadrilátero dibujó?
+Fabián dibujó un cuadrilátero cuyas dos diagonales miden lo mismo y se cortan justo en la mitad de cada una, pero no son perpendiculares. ¿Qué cuadrilátero dibujó?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Cuadrado | ve los ángulos rectos y las diagonales iguales, pero olvida que en el cuadrado son perpendiculares |
-| B | Trapezoide | no relaciona los ángulos rectos con ningún cuadrilátero y escoge uno sin lados paralelos |
+| A | Cuadrado | ve las diagonales iguales y olvida que en el cuadrado son perpendiculares |
+| B | Romboide | se fija en que se cortan en la mitad, pero en el romboide no miden lo mismo |
 | C | Rectángulo | **Correcta** |
-| D | Romboide | no toma en cuenta los ángulos rectos |
+| D | Trapecio | se fija en que miden lo mismo, como en algunos trapecios, pero en ellos no se cortan en la mitad |
 
-**Resolución:** Con cuatro ángulos rectos solo puede ser un cuadrado o un rectángulo, y en los dos las diagonales miden lo mismo. En el cuadrado las diagonales además son perpendiculares; como aquí no lo son, es un rectángulo.
+**Resolución:** Si las diagonales se cortan en la mitad de cada una, la figura es un paralelogramo, y si además miden lo mismo, es un rectángulo o un cuadrado. En el cuadrado las diagonales también son perpendiculares; como aquí no lo son, es un rectángulo.
 
-### 20. mat-g05 · Geometría · alto
+### 20. mat-g05 · Geometría · intermedio
 
 **Afirmación G3:** Determina cuerpos sólidos, sus elementos o propiedades.  
 **Evidencia G3.7:** Reconoce cilindros o algunos de sus elementos (bases, superficie lateral, eje, altura, radio y diámetro de la base) o propiedades.  
@@ -490,7 +490,7 @@ Un parqueo tiene forma de paralelogramo. Uno de sus lados mide 20 m, y la distan
 **Evidencia G4.3:** Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros.  
 **Subtema:** Perímetro y área del rectángulo
 
-Un terreno rectangular tiene un perímetro de 54 m, y su largo mide 15 m. Se quiere sembrar zacate en todo el terreno, y el metro cuadrado de zacate cuesta ₡2500. ¿Cuánto cuesta el zacate?
+Un terreno rectangular tiene un perímetro de 54 m, y su largo mide 15 m. Se quiere sembrar zacate en todo el terreno, y el metro cuadrado de zacate cuesta ₡2500. De acuerdo con la información anterior, ¿cuánto cuesta el zacate?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -535,7 +535,7 @@ Un triángulo tiene un ángulo de 90° y dos de sus lados miden lo mismo. ¿Cóm
 
 **Resolución:** Por tener un ángulo de 90°, el triángulo es rectángulo. Por tener dos lados iguales, es isósceles. Juntando las dos cosas, es un triángulo rectángulo isósceles.
 
-### 28. mat-g08 · Geometría · intermedio
+### 28. mat-g08 · Geometría · alto
 
 **Afirmación G4:** Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos.  
 **Evidencia G4.3:** Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros.  
@@ -643,7 +643,7 @@ Doña Lucía empaca 3,6 kg de frijoles en bolsas de 450 g cada una. ¿Cuántas b
 **Evidencia M1.3:** Determina conversiones entre medidas de tiempo (años, meses, semanas, horas, minutos o segundos).  
 **Subtema:** Medidas de tiempo
 
-Un partido de fútbol entre dos escuelas empezó a las 2:50 p. m. Tuvo dos tiempos de 35 minutos cada uno y un descanso de 15 minutos entre ellos. ¿A qué hora terminó el partido?
+Un partido de fútbol entre dos escuelas empezó a las 2:50 p. m. Tuvo dos tiempos de 35 minutos cada uno y un descanso de 15 minutos entre ellos. De acuerdo con la información anterior, ¿a qué hora terminó el partido?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -667,9 +667,9 @@ Un tanque de 1200 L se llena con una manguera que echa 15 L de agua por minuto. 
 | A | 10:38 a. m. | toma 80 minutos como 0,8 horas, o sea 48 minutos |
 | B | 10:58 a. m. | toma 80 minutos como 1 hora y 8 minutos |
 | C | 11:10 a. m. | **Correcta** |
-| D | 11:20 a. m. | confunde 80 minutos con 1 hora y 30 minutos (9:50 + 1:30) |
+| D | 11:23 a. m. | divide 80 ÷ 60 = 1,33 y lo lee como 1 hora y 33 minutos |
 
-**Resolución:** El tanque tarda 1200 ÷ 15 = 80 minutos, que es 1 hora y 20 minutos. A las 9:50 a. m. se le suma 1 hora y llegamos a las 10:50; con 20 minutos más son las 11:10 a. m.
+**Resolución:** El tanque tarda 1200 ÷ 15 = 80 minutos, que es 1 hora y 20 minutos. A las 9:50 a. m. se le suma 1 hora y son las 10:50 a. m.; con 20 minutos más son las 11:10 a. m.
 
 ### 36. mat-m06 · Medidas · intermedio
 
@@ -677,7 +677,7 @@ Un tanque de 1200 L se llena con una manguera que echa 15 L de agua por minuto. 
 **Evidencia M1.4:** Resuelve problemas relacionados con la conversión entre distintas medidas (longitud, peso, tiempo, superficie, capacidad, temperatura).  
 **Subtema:** Problemas con medidas de longitud
 
-Fabián camina 750 m de su casa a la escuela y la misma distancia de regreso, de lunes a viernes. ¿Cuántos kilómetros camina en total durante esos cinco días?
+Yeiner camina 750 m de su casa a la escuela y la misma distancia de regreso, de lunes a viernes. ¿Cuántos kilómetros camina en total durante esos cinco días?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -701,7 +701,7 @@ El piso de un aula mide 8 m de largo y 6 m de ancho. ¿Cuál es el área del pis
 | A | 4800 cm² | multiplica por 100, como si fueran metros de longitud (1 m = 100 cm) |
 | B | 48 000 cm² | multiplica por 1000: se le corre un cero |
 | C | 480 000 cm² | **Correcta** |
-| D | 4 800 000 cm² | se pasa de ceros |
+| D | 4 800 000 cm² | multiplica por 100 000, se pasa de ceros |
 
 **Resolución:** El área es 8 × 6 = 48 m². Cada metro cuadrado es un cuadro de 100 cm por 100 cm, o sea 10 000 cm². Entonces el piso mide 48 × 10 000 = 480 000 cm².
 
@@ -728,7 +728,7 @@ Una receta de arroz con pollo para 4 personas lleva 750 g de pollo. ¿Cuántos k
 **Evidencia M1.2:** Determina conversiones de mediciones de temperatura entre las escalas Celsius y Fahrenheit.  
 **Subtema:** Conversión de temperatura
 
-En un viaje, Valeria vio en un termómetro que la temperatura era de 77 °F. Para pasar de grados Fahrenheit a grados Celsius se usa la regla °C = (°F − 32) × 5 ÷ 9. ¿Cuál era la temperatura en grados Celsius?
+En un viaje, Fiorella vio en un termómetro que la temperatura era de 77 °F. Para pasar de grados Fahrenheit a grados Celsius se usa la regla °C = (°F − 32) × 5 ÷ 9. ¿Cuál era la temperatura en grados Celsius?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -762,7 +762,7 @@ Un pasillo mide 6 m de largo. Se van a poner baldosas cuadradas de 25 cm de lado
 **Evidencia M2.2:** Resuelve problemas que involucren el sistema monetario nacional.  
 **Subtema:** Sistema monetario nacional
 
-En la caja de la soda escolar hay 3 billetes de ₡5000, 4 billetes de ₡2000 y 9 monedas de ₡500. ¿Cuánto dinero hay en total en la caja?
+En la siguiente tabla se muestra el dinero que hay en la caja de la soda escolar al final del día: (tabla) De acuerdo con la información anterior, ¿cuánto dinero hay en total en la caja?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -779,7 +779,7 @@ En la caja de la soda escolar hay 3 billetes de ₡5000, 4 billetes de ₡2000 y
 **Evidencia R2.3:** Reconoce relaciones entre dos cantidades, presentadas mediante tablas, que varían simultáneamente.  
 **Subtema:** Relaciones entre cantidades en tablas
 
-La tabla muestra lo que cuestan las entradas al festival de la escuela. (tabla) ¿Cuál de las siguientes afirmaciones describe la relación entre las dos cantidades?
+La siguiente tabla muestra el costo total, en colones, según la cantidad de entradas que se compren para el festival de la escuela: (tabla) De acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones describe la relación entre las dos cantidades?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -796,7 +796,7 @@ La tabla muestra lo que cuestan las entradas al festival de la escuela. (tabla) 
 **Evidencia R2.3:** Reconoce relaciones entre dos cantidades, presentadas mediante tablas, que varían simultáneamente.  
 **Subtema:** Proporcionalidad directa
 
-En una tortillería, la cantidad de tortillas es proporcional a la cantidad de masa que se usa. La tabla muestra algunos datos. (tabla) ¿Cuántas tortillas se hacen con 5 kg de masa?
+En una tortillería, la cantidad de tortillas es proporcional a la cantidad de masa que se usa. La siguiente tabla muestra algunos datos: (tabla) De acuerdo con la información anterior, ¿cuántas tortillas se hacen con 5 kg de masa?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -830,16 +830,16 @@ Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al f
 **Evidencia R1.2:** Resuelve problemas que involucren patrones en sucesiones numéricas o tablas con números naturales menores que 1 000 000.  
 **Subtema:** Sucesiones numéricas
 
-En una sucesión, el primer término es 5 y cada término siguiente se obtiene sumándole 4 al anterior. ¿Cuál es el término número 20?
+Para un proyecto de reciclaje, un grupo de sexto anota el total de botellas que ha recogido al final de cada semana. La siguiente tabla muestra los datos de las primeras semanas: (tabla) De acuerdo con la información anterior, si el total sigue aumentando de la misma forma, ¿en cuál semana el total llegará a 83 botellas?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | 80 | multiplica 4 × 20 y olvida el primer término |
-| B | 81 | **Correcta** |
-| C | 85 | cuenta 20 saltos en vez de 19 |
-| D | 100 | multiplica el primer término por 20 |
+| A | 19 | cuenta los aumentos y olvida que se empieza en la semana 1 |
+| B | 20 | **Correcta** |
+| C | 21 | divide 83 ÷ 4 = 20,75 y redondea hacia arriba |
+| D | 76 | se queda en la resta 83 − 7 |
 
-**Resolución:** Del primer término al vigésimo hay 19 saltos de 4, o sea 19 × 4 = 76. Entonces el término 20 es 5 + 76 = 81.
+**Resolución:** Cada semana el total aumenta 4 botellas. De 7 a 83 faltan 83 − 7 = 76 botellas, o sea 76 ÷ 4 = 19 aumentos, y como se empieza en la semana 1, se llega a 83 en la semana 20.
 
 ### 46. mat-r04 · Relaciones y Álgebra · alto
 
@@ -898,7 +898,7 @@ En la soda de una escuela, el almuerzo cuesta ₡2200 todos los días, la soda a
 **Evidencia R1.1:** Resuelve problemas que involucren patrones en sucesiones con figuras o representaciones geométricas.  
 **Subtema:** Patrones y sucesiones con figuras
 
-Con palillos se forman las figuras que se muestran: la figura 1 tiene un cuadrado, la figura 2 tiene dos cuadrados unidos y la figura 3 tiene tres. (figura) Si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15?
+Con palillos se forman las figuras que se muestran: la figura 1 tiene un cuadrado, la figura 2 tiene dos cuadrados unidos y la figura 3 tiene tres. (figura) De acuerdo con la información anterior, si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15?
 
 Figura `mat-r01-palillos.svg`. Texto alternativo: Tres figuras hechas con palillos. Figura 1: un cuadrado de 4 palillos. Figura 2: dos cuadrados unidos por un lado, 7 palillos. Figura 3: tres cuadrados en fila, 10 palillos.
 
@@ -936,16 +936,16 @@ Figura `mat-r10-mapa.svg`. Texto alternativo: Mapa con dos pueblos, A y B, unido
 **Evidencia R3.2:** Determina el valor desconocido (letra) en una ecuación matemática dada.  
 **Subtema:** Valor desconocido en una ecuación
 
-El doble de la edad de Sofía, aumentado en 5 años, da 31 años. En la siguiente ecuación, «e» representa la edad de Sofía: 2 × e + 5 = 31. De acuerdo con la información anterior, ¿cuántos años tiene Sofía?
+Melissa tenía ahorrada cierta cantidad de dinero. Gastó ₡850 en un cuaderno y luego su abuela le regaló ₡1200. Ahora tiene ₡3000. En la siguiente ecuación, «d» representa el dinero que Melissa tenía ahorrado al inicio: $d - 850 + 1200 = 3000$ De acuerdo con la información anterior, ¿cuánto dinero tenía ahorrado Melissa al inicio?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | 13 | **Correcta** |
-| B | 18 | suma 5 en vez de restarlo: (31 + 5) ÷ 2 |
-| C | 26 | resta 5 y se olvida de dividir entre 2 |
-| D | 36 | suma 31 + 5 |
+| A | ₡2650 | **Correcta** |
+| B | ₡3350 | deshace con los signos cambiados: 3000 + 1200 − 850 |
+| C | ₡3850 | solo deshace el gasto y se olvida del regalo |
+| D | ₡5050 | suma todas las cantidades |
 
-**Resolución:** Se deshacen las operaciones al revés: primero se resta 5, 31 − 5 = 26, y después se divide entre 2, 26 ÷ 2 = 13. Sofía tiene 13 años, y se comprueba con 2 × 13 + 5 = 31.
+**Resolución:** Se deshacen los pasos al revés: antes del regalo tenía 3000 − 1200 = ₡1800, y antes de gastar tenía 1800 + 850 = ₡2650. Se comprueba: 2650 − 850 + 1200 = 3000.
 
 ### 52. mat-r06 · Relaciones y Álgebra · intermedio
 
@@ -953,7 +953,7 @@ El doble de la edad de Sofía, aumentado en 5 años, da 31 años. En la siguient
 **Evidencia R3.1:** Reconoce el número que falta en una expresión matemática que contiene representaciones gráficas (figuras o tablas).  
 **Subtema:** Número que falta en una representación gráfica
 
-La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg. (figura) ¿Cuánto pesa cada caja?
+La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg. (figura) De acuerdo con la información anterior, ¿cuánto pesa cada caja?
 
 Figura `mat-r06-balanza.svg`. Texto alternativo: Balanza de dos platillos, nivelada. En el platillo izquierdo hay tres cajas iguales y una pesa de 2 kg. En el platillo derecho hay una pesa de 14 kg.
 
@@ -966,7 +966,7 @@ Figura `mat-r06-balanza.svg`. Texto alternativo: Balanza de dos platillos, nivel
 
 **Resolución:** Si se quitan 2 kg de cada lado, la balanza sigue en equilibrio: las 3 cajas pesan 14 − 2 = 12 kg. Entonces cada caja pesa 12 ÷ 3 = 4 kg.
 
-### 53. mat-r11 · Relaciones y Álgebra · alto
+### 53. mat-r11 · Relaciones y Álgebra · intermedio
 
 **Afirmación R2:** Resuelve problemas que involucran relaciones entre dos cantidades, en una expresión matemática.  
 **Evidencia R2.2:** Determina relaciones entre dos cantidades variables en una expresión matemática.  
@@ -989,7 +989,7 @@ Un taxi cobra ₡700 por subirse y ₡650 por cada kilómetro recorrido. El cobr
 **Evidencia E1.3:** Reconoce el recorrido de un grupo de datos como la diferencia entre el máximo y el mínimo.  
 **Subtema:** Moda y recorrido
 
-Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?
+La siguiente tabla muestra la cantidad de lluvia, en milímetros, que registró el pluviómetro de una escuela durante cinco días: (tabla) De acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -1006,16 +1006,16 @@ Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, m
 **Evidencia E1.4:** Reconoce el concepto de población o muestra.  
 **Subtema:** Población y muestra
 
-Para conocer cuánta agua gastan por mes los 600 hogares de un distrito, la municipalidad escogió al azar 3 hogares de cada uno de sus 20 barrios, o sea, 60 hogares, y les aplicó una encuesta. En ese estudio, ¿cuál es la población?
+Una municipalidad quiere saber cuántos kilogramos de basura produce por semana cada una de las 1200 casas de un distrito. Para eso, escogió al azar 150 de esas casas y pesó su basura durante una semana. En ese estudio, ¿cuál es la población?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Todos los hogares del distrito. | **Correcta** |
-| B | Los 60 hogares que fueron encuestados. | confunde la población con la muestra |
-| C | Los 20 barrios del distrito. | confunde los barrios con los hogares que se estudian |
-| D | La cantidad de agua que gasta cada hogar encuestado. | confunde la población con el dato que se quiere medir |
+| A | Todas las casas del distrito. | **Correcta** |
+| B | Las 150 casas escogidas al azar. | confunde la población con la muestra |
+| C | Los kilogramos de basura de cada casa. | confunde la población con el dato que se mide |
+| D | Las personas que recogen la basura del distrito. | piensa en quienes trabajan en el servicio y no en lo que se estudia |
 
-**Resolución:** La población es el grupo completo que se quiere estudiar: los 600 hogares del distrito. Los 60 hogares que respondieron la encuesta son solo una parte, que se llama muestra.
+**Resolución:** La población es el grupo completo que se quiere estudiar: las 1200 casas del distrito. Las 150 casas escogidas al azar son solo una parte, y esa parte se llama muestra.
 
 ### 56. mat-e06 · Estadística y Probabilidad · alto
 
@@ -1023,7 +1023,7 @@ Para conocer cuánta agua gastan por mes los 600 hogares de un distrito, la muni
 **Evidencia E1.1:** Interpreta información que ha sido resumida en dibujos, diagramas, cuadros o gráficos.  
 **Subtema:** Pictogramas
 
-El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg. (figura) ¿Cuántos kilogramos más de mango que de papaya se vendieron?
+El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg. (figura) De acuerdo con la información anterior, ¿cuántos kilogramos más de mango que de papaya se vendieron?
 
 Figura `mat-e06-frutas.svg`. Texto alternativo: Pictograma de fruta vendida, donde cada círculo completo vale 6 kg. Mango: 4 círculos. Papaya: 2 círculos y medio círculo. Piña: 3 círculos.
 
@@ -1059,7 +1059,7 @@ En una bolsa hay 5 bolitas rojas, 3 azules y 4 verdes, todas del mismo tamaño. 
 **Evidencia E1.2:** Interpreta las medidas de posición (moda, media aritmética, máximo o mínimo) de un grupo de datos presentados en tablas o gráficos con frecuencias absolutas.  
 **Subtema:** Media aritmética con tabla de frecuencias
 
-La tabla muestra cuántos goles anotó el equipo de la escuela en sus partidos del campeonato. (tabla) ¿Cuál fue el promedio (media aritmética) de goles por partido?
+La tabla muestra cuántos goles anotó el equipo de la escuela en sus partidos del campeonato. (tabla) De acuerdo con la información anterior, ¿cuál fue el promedio (media aritmética) de goles por partido?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -1076,7 +1076,7 @@ La tabla muestra cuántos goles anotó el equipo de la escuela en sus partidos d
 **Evidencia E1.5:** Interpreta la frecuencia porcentual de datos presentados en representaciones (tablas o gráficos) con frecuencias absolutas.  
 **Subtema:** Frecuencia porcentual
 
-El gráfico muestra la cantidad de libros que leyó cada grupo de sexto durante un mes. (figura) ¿Qué porcentaje del total de libros leyó el grupo 6-4?
+El gráfico muestra la cantidad de libros que leyó cada grupo de sexto durante un mes. (figura) De acuerdo con la información anterior, ¿qué porcentaje del total de libros leyó el grupo 6-4?
 
 Figura `mat-e02-libros.svg`. Texto alternativo: Gráfico de barras de los libros leídos en un mes por cada grupo de sexto: 6-1 leyó 48, 6-2 leyó 60, 6-3 leyó 36 y 6-4 leyó 56.
 

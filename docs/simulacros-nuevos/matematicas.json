@@ -47,7 +47,7 @@
       "materia": "matematicas",
       "tema": "Números",
       "subtema": "Suma y resta de fracciones",
-      "nivel": "intermedio",
+      "nivel": "alto",
       "afirmacion": {
         "codigo": "N5",
         "texto": "Resuelve problemas relacionados con el concepto, los tipos o representaciones de fracciones."
@@ -95,7 +95,7 @@
         "D": "₡3000"
       },
       "clave": "D",
-      "explicacion": "Las papas cuestan 2,5 × 840 = 2100 colones y las zanahorias 1,25 × 720 = 900 colones. Sumando, 2100 + 900 = 3000. El medio kilo y el cuarto de kilo también se pagan.",
+      "explicacion": "Las papas cuestan 2,5 × 840 = 2100 colones y las zanahorias 1,25 × 720 = 900 colones. Sumando, 2100 + 900 = 3000. Por eso Andrés pagó ₡3000 en total.",
       "por_que": {
         "A": "solo las papas",
         "B": "ignora los decimales: 2 × 840 + 1 × 720",
@@ -118,7 +118,7 @@
         "codigo": "N4.3",
         "texto": "Determina la multiplicación de un número, con o sin expansión decimal, por 10, 100, 1000 o 10 000."
       },
-      "enunciado": "En una bodega hay 100 paquetes de arroz, y cada paquete pesa 2,35 kg. ¿Cuántos kilogramos de arroz hay en total?",
+      "enunciado": "Un centro de acopio de la comunidad recibió 100 paquetes de arroz para familias afectadas por una inundación, y cada paquete pesa 2,35 kg. ¿Cuántos kilogramos de arroz recibió en total?",
       "opciones": {
         "A": "0,0235 kg",
         "B": "2,35 kg",
@@ -126,7 +126,7 @@
         "D": "235 kg"
       },
       "clave": "D",
-      "explicacion": "Multiplicar por 100 es correr la coma dos lugares a la derecha: 2,35 × 100 = 235. En la bodega hay 235 kg de arroz.",
+      "explicacion": "Multiplicar por 100 es correr la coma dos lugares a la derecha: 2,35 × 100 = 235. El centro de acopio recibió 235 kg de arroz.",
       "por_que": {
         "A": "divide entre 100 en vez de multiplicar",
         "B": "da el peso de un solo paquete",
@@ -149,7 +149,7 @@
         "codigo": "N1.1",
         "texto": "Reconoce las distintas representaciones de un número natural mayor o igual que 100 000."
       },
-      "enunciado": "Una empresa de buses informó que durante un año transportó 2 607 045 pasajeros. En ese número, ¿cuál es el valor de la cifra 6?",
+      "enunciado": "Una empresa de buses informó que durante un año transportó 2 607 045 pasajeros. De acuerdo con la información anterior, ¿cuál es el valor de la cifra 6 en ese número?",
       "opciones": {
         "A": "600",
         "B": "60 000",
@@ -242,7 +242,7 @@
         "codigo": "N3.3",
         "texto": "Determina divisibilidad, divisor o factor de un número natural."
       },
-      "enunciado": "Para la huerta escolar, don Rafael tiene 48 matas de chile dulce y 72 matas de tomate. Las va a sembrar en filas, sin mezclar chile con tomate. Todas las filas deben tener la misma cantidad de matas, y esa cantidad debe ser la mayor posible. ¿Cuántas filas tendrá en total?",
+      "enunciado": "Para la huerta escolar, don Rafael tiene 48 matas de chile dulce y 72 matas de tomate. Las va a sembrar en filas, sin mezclar chile con tomate. Todas las filas deben tener la misma cantidad de matas, y esa cantidad debe ser la mayor posible. De acuerdo con la información anterior, ¿cuántas filas tendrá en total?",
       "opciones": {
         "A": "5 filas",
         "B": "10 filas",
@@ -284,7 +284,7 @@
       "explicacion": "Los refrescos cuestan 8 × 650 = ₡5200, y con el queque el gasto total es 9600 + 5200 = ₡14 800. Al repartirlo entre 8, cada uno paga 14 800 ÷ 8 = ₡1850.",
       "por_que": {
         "A": "reparte solo el queque",
-        "C": "reparte el queque pero le carga todos los refrescos a una sola persona",
+        "C": "divide solo el queque entre 8 y le suma los ₡5200 de refrescos sin repartirlos",
         "D": "da el gasto total sin repartirlo"
       },
       "imagen": null
@@ -343,7 +343,7 @@
         "D": "Jimena, Sofía y Yerlin"
       },
       "clave": "D",
-      "explicacion": "Para comparar se pueden pasar a decimales: 3/8 = 0,375; 2/5 = 0,4 y 1/3 = 0,333…, que es el menor. Por eso Jimena comió más, luego Sofía y de última Yerlin. Fijate que el numerador más grande no siempre gana.",
+      "explicacion": "Para comparar se pueden pasar a decimales: 3/8 = 0,375; 2/5 = 0,4 y 1/3 = 0,333…, que es el menor. Por eso Jimena comió más, luego Sofía y de última Yerlin. Hay que fijarse en que el numerador más grande no siempre gana.",
       "por_que": {
         "A": "ordena por el numerador",
         "B": "cree que el denominador menor siempre gana",
@@ -366,7 +366,7 @@
         "codigo": "N2.3",
         "texto": "Compara números en su representación decimal."
       },
-      "enunciado": "En el festival deportivo de la escuela, cuatro estudiantes hicieron salto largo. Ariana saltó 2,08 m; Brenda, 2,8 m; Camila, 2,75 m; y Diego, 2,705 m. ¿Quién saltó más lejos?",
+      "enunciado": "En el festival deportivo de la escuela, cuatro estudiantes participaron en salto largo. En la siguiente tabla se muestra la distancia que saltó cada uno:\n\n| Estudiante | Distancia (en metros) |\n| --- | --- |\n| Ariana | 2,08 |\n| Brenda | 2,8 |\n| Camila | 2,75 |\n| Diego | 2,705 |\n\nDe acuerdo con la información anterior, ¿quién saltó más lejos?",
       "opciones": {
         "A": "Ariana",
         "B": "Camila",
@@ -397,19 +397,19 @@
         "codigo": "N4.1",
         "texto": "Resuelve problemas que involucren el algoritmo de la división de números naturales."
       },
-      "enunciado": "Para una gira, 230 estudiantes van a viajar en buses de 45 asientos cada uno. Si nadie puede viajar de pie, ¿cuántos buses se necesitan como mínimo?",
+      "enunciado": "Para una gira, viajarán 220 estudiantes y 20 docentes en buses de 45 asientos cada uno. Si nadie puede viajar de pie, ¿cuántos buses se necesitan como mínimo?",
       "opciones": {
         "A": "5",
         "B": "6",
-        "C": "185",
-        "D": "275"
+        "C": "15",
+        "D": "240"
       },
       "clave": "B",
-      "explicacion": "Al dividir, 230 ÷ 45 da 5 y sobran 5 estudiantes. Esos 5 también tienen que viajar, así que hace falta un bus más: 6 buses.",
+      "explicacion": "En total viajan 220 + 20 = 240 personas. Al dividir, 240 ÷ 45 da 5 y sobran 15 personas, que también tienen que viajar, así que hace falta un bus más: 6 buses.",
       "por_que": {
-        "A": "divide bien pero se olvida de los 5 estudiantes que sobran",
-        "C": "resta 230 − 45",
-        "D": "suma 230 + 45"
+        "A": "divide bien, pero deja por fuera a las 15 personas que sobran",
+        "C": "responde con el residuo de la división",
+        "D": "se queda en el primer paso: el total de personas"
       },
       "imagen": null
     },
@@ -428,7 +428,7 @@
         "codigo": "N3.2",
         "texto": "Determina si un número natural es divisible por 2, 3, 5 o 10, mediante la aplicación de las reglas de divisibilidad."
       },
-      "enunciado": "El número del casillero de Mariela tiene tres cifras, pero la del medio se borró: 5 ? 1. Ella recuerda que ese número es divisible por 3 y que la cifra borrada es mayor que 5 y menor que 8. ¿Cuál es el número del casillero?",
+      "enunciado": "El número del casillero de Maripaz tiene tres cifras, pero la del medio se borró: 5 ? 1. Ella recuerda que ese número es divisible por 3 y que la cifra borrada es mayor que 5 y menor que 8. ¿Cuál es el número del casillero?",
       "opciones": {
         "A": "531",
         "B": "561",
@@ -459,19 +459,19 @@
         "codigo": "N3.3",
         "texto": "Determina divisibilidad, divisor o factor de un número natural."
       },
-      "enunciado": "Josué asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Josué está equivocado?",
+      "enunciado": "Jeremy asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Jeremy está equivocado?",
       "opciones": {
-        "A": "19",
-        "B": "23",
+        "A": "9",
+        "B": "18",
         "C": "29",
         "D": "33"
       },
       "clave": "D",
-      "explicacion": "Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso es compuesto, y con él se demuestra que Josué se equivoca.",
+      "explicacion": "El 33 es impar y mayor que 15, pero se divide entre 3 y entre 11, porque 3 × 11 = 33; por eso es compuesto y demuestra que Jeremy se equivoca. El 9 y el 18 también son compuestos, pero el 9 no es mayor que 15 y el 18 es par.",
       "por_que": {
-        "A": "primo",
-        "B": "primo",
-        "C": "primo; quien no conoce bien los primos duda con los que terminan en 9 o en 3"
+        "A": "es compuesto, pero no es mayor que 15",
+        "B": "es compuesto, pero es par y la afirmación habla de impares",
+        "C": "es impar y mayor que 15, pero es primo"
       },
       "imagen": null
     },
@@ -495,14 +495,14 @@
         "A": "Es mayor que 48.",
         "B": "Es igual a 48.",
         "C": "Es menor que 48.",
-        "D": "Es menor que 0,75."
+        "D": "Es menor que 24."
       },
       "clave": "C",
-      "explicacion": "Multiplicar por un número menor que 1 es como tomar solo una parte, así que el resultado queda menor que el número inicial. Como 0,75 es menor que 1, el resultado es menor que 48; de hecho, da 36.",
+      "explicacion": "Multiplicar por un número menor que 1 es como tomar solo una parte, así que el resultado queda menor que 48. Pero 0,75 es más que la mitad, así que el resultado no baja de 24: de hecho, da 36.",
       "por_que": {
         "A": "cree que multiplicar siempre agranda",
         "B": "cree que multiplicar por un decimal no cambia la cantidad",
-        "D": "confunde el resultado con el número decimal"
+        "D": "cree que multiplicar por un decimal achica muchísimo el número"
       },
       "imagen": null
     },
@@ -552,7 +552,7 @@
         "codigo": "G3.6",
         "texto": "Reconoce prismas o algunos de sus elementos (caras, bases, altura) o propiedades."
       },
-      "enunciado": "Una caja de zapatos tiene forma de prisma rectangular. Andrés quiere pegar cinta sobre todas las aristas de la caja. ¿En cuántas aristas debe pegar cinta?",
+      "enunciado": "Una caja de zapatos tiene forma de prisma rectangular. Sebastián quiere pegar cinta sobre todas las aristas de la caja. ¿En cuántas aristas debe pegar cinta?",
       "opciones": {
         "A": "4",
         "B": "6",
@@ -583,19 +583,19 @@
         "codigo": "G1.3",
         "texto": "Reconoce propiedades de cuadriláteros referidas a los lados, los ángulos y las diagonales."
       },
-      "enunciado": "Fabián dibujó un cuadrilátero con sus cuatro ángulos rectos. Sus dos diagonales miden lo mismo, pero no son perpendiculares. ¿Qué cuadrilátero dibujó?",
+      "enunciado": "Fabián dibujó un cuadrilátero cuyas dos diagonales miden lo mismo y se cortan justo en la mitad de cada una, pero no son perpendiculares. ¿Qué cuadrilátero dibujó?",
       "opciones": {
         "A": "Cuadrado",
-        "B": "Trapezoide",
+        "B": "Romboide",
         "C": "Rectángulo",
-        "D": "Romboide"
+        "D": "Trapecio"
       },
       "clave": "C",
-      "explicacion": "Con cuatro ángulos rectos solo puede ser un cuadrado o un rectángulo, y en los dos las diagonales miden lo mismo. En el cuadrado las diagonales además son perpendiculares; como aquí no lo son, es un rectángulo.",
+      "explicacion": "Si las diagonales se cortan en la mitad de cada una, la figura es un paralelogramo, y si además miden lo mismo, es un rectángulo o un cuadrado. En el cuadrado las diagonales también son perpendiculares; como aquí no lo son, es un rectángulo.",
       "por_que": {
-        "A": "ve los ángulos rectos y las diagonales iguales, pero olvida que en el cuadrado son perpendiculares",
-        "B": "no relaciona los ángulos rectos con ningún cuadrilátero y escoge uno sin lados paralelos",
-        "D": "no toma en cuenta los ángulos rectos"
+        "A": "ve las diagonales iguales y olvida que en el cuadrado son perpendiculares",
+        "B": "se fija en que se cortan en la mitad, pero en el romboide no miden lo mismo",
+        "D": "se fija en que miden lo mismo, como en algunos trapecios, pero en ellos no se cortan en la mitad"
       },
       "imagen": null
     },
@@ -605,7 +605,7 @@
       "materia": "matematicas",
       "tema": "Geometría",
       "subtema": "Elementos del cilindro",
-      "nivel": "alto",
+      "nivel": "intermedio",
       "afirmacion": {
         "codigo": "G3",
         "texto": "Determina cuerpos sólidos, sus elementos o propiedades."
@@ -769,7 +769,7 @@
         "codigo": "G4.3",
         "texto": "Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros."
       },
-      "enunciado": "Un terreno rectangular tiene un perímetro de 54 m, y su largo mide 15 m. Se quiere sembrar zacate en todo el terreno, y el metro cuadrado de zacate cuesta ₡2500. ¿Cuánto cuesta el zacate?",
+      "enunciado": "Un terreno rectangular tiene un perímetro de 54 m, y su largo mide 15 m. Se quiere sembrar zacate en todo el terreno, y el metro cuadrado de zacate cuesta ₡2500. De acuerdo con la información anterior, ¿cuánto cuesta el zacate?",
       "opciones": {
         "A": "₡135 000",
         "B": "₡450 000",
@@ -853,7 +853,7 @@
       "materia": "matematicas",
       "tema": "Geometría",
       "subtema": "Perímetro de triángulos y cuadriláteros",
-      "nivel": "intermedio",
+      "nivel": "alto",
       "afirmacion": {
         "codigo": "G4",
         "texto": "Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos."
@@ -1048,7 +1048,7 @@
         "codigo": "M1.3",
         "texto": "Determina conversiones entre medidas de tiempo (años, meses, semanas, horas, minutos o segundos)."
       },
-      "enunciado": "Un partido de fútbol entre dos escuelas empezó a las 2:50 p. m. Tuvo dos tiempos de 35 minutos cada uno y un descanso de 15 minutos entre ellos. ¿A qué hora terminó el partido?",
+      "enunciado": "Un partido de fútbol entre dos escuelas empezó a las 2:50 p. m. Tuvo dos tiempos de 35 minutos cada uno y un descanso de 15 minutos entre ellos. De acuerdo con la información anterior, ¿a qué hora terminó el partido?",
       "opciones": {
         "A": "3:40 p. m.",
         "B": "4:00 p. m.",
@@ -1084,14 +1084,14 @@
         "A": "10:38 a. m.",
         "B": "10:58 a. m.",
         "C": "11:10 a. m.",
-        "D": "11:20 a. m."
+        "D": "11:23 a. m."
       },
       "clave": "C",
-      "explicacion": "El tanque tarda 1200 ÷ 15 = 80 minutos, que es 1 hora y 20 minutos. A las 9:50 a. m. se le suma 1 hora y llegamos a las 10:50; con 20 minutos más son las 11:10 a. m.",
+      "explicacion": "El tanque tarda 1200 ÷ 15 = 80 minutos, que es 1 hora y 20 minutos. A las 9:50 a. m. se le suma 1 hora y son las 10:50 a. m.; con 20 minutos más son las 11:10 a. m.",
       "por_que": {
         "A": "toma 80 minutos como 0,8 horas, o sea 48 minutos",
         "B": "toma 80 minutos como 1 hora y 8 minutos",
-        "D": "confunde 80 minutos con 1 hora y 30 minutos (9:50 + 1:30)"
+        "D": "divide 80 ÷ 60 = 1,33 y lo lee como 1 hora y 33 minutos"
       },
       "imagen": null
     },
@@ -1110,7 +1110,7 @@
         "codigo": "M1.4",
         "texto": "Resuelve problemas relacionados con la conversión entre distintas medidas (longitud, peso, tiempo, superficie, capacidad, temperatura)."
       },
-      "enunciado": "Fabián camina 750 m de su casa a la escuela y la misma distancia de regreso, de lunes a viernes. ¿Cuántos kilómetros camina en total durante esos cinco días?",
+      "enunciado": "Yeiner camina 750 m de su casa a la escuela y la misma distancia de regreso, de lunes a viernes. ¿Cuántos kilómetros camina en total durante esos cinco días?",
       "opciones": {
         "A": "0,75 km",
         "B": "1,5 km",
@@ -1153,7 +1153,7 @@
       "por_que": {
         "A": "multiplica por 100, como si fueran metros de longitud (1 m = 100 cm)",
         "B": "multiplica por 1000: se le corre un cero",
-        "D": "se pasa de ceros"
+        "D": "multiplica por 100 000, se pasa de ceros"
       },
       "imagen": null
     },
@@ -1203,7 +1203,7 @@
         "codigo": "M1.2",
         "texto": "Determina conversiones de mediciones de temperatura entre las escalas Celsius y Fahrenheit."
       },
-      "enunciado": "En un viaje, Valeria vio en un termómetro que la temperatura era de 77 °F. Para pasar de grados Fahrenheit a grados Celsius se usa la regla °C = (°F − 32) × 5 ÷ 9. ¿Cuál era la temperatura en grados Celsius?",
+      "enunciado": "En un viaje, Fiorella vio en un termómetro que la temperatura era de 77 °F. Para pasar de grados Fahrenheit a grados Celsius se usa la regla °C = (°F − 32) × 5 ÷ 9. ¿Cuál era la temperatura en grados Celsius?",
       "opciones": {
         "A": "25 °C",
         "B": "45 °C",
@@ -1265,7 +1265,7 @@
         "codigo": "M2.2",
         "texto": "Resuelve problemas que involucren el sistema monetario nacional."
       },
-      "enunciado": "En la caja de la soda escolar hay 3 billetes de ₡5000, 4 billetes de ₡2000 y 9 monedas de ₡500. ¿Cuánto dinero hay en total en la caja?",
+      "enunciado": "En la siguiente tabla se muestra el dinero que hay en la caja de la soda escolar al final del día:\n\n| Billete o moneda | Cantidad |\n| --- | --- |\n| Billete de ₡5000 | 3 |\n| Billete de ₡2000 | 4 |\n| Moneda de ₡500 | 9 |\n\nDe acuerdo con la información anterior, ¿cuánto dinero hay en total en la caja?",
       "opciones": {
         "A": "₡7500",
         "B": "₡23 000",
@@ -1296,7 +1296,7 @@
         "codigo": "R2.3",
         "texto": "Reconoce relaciones entre dos cantidades, presentadas mediante tablas, que varían simultáneamente."
       },
-      "enunciado": "La tabla muestra lo que cuestan las entradas al festival de la escuela.\n\n| Cantidad de entradas | Costo total (en colones) |\n| --- | --- |\n| 2 | 3000 |\n| 3 | 4500 |\n| 5 | 7500 |\n| 8 | 12 000 |\n\n¿Cuál de las siguientes afirmaciones describe la relación entre las dos cantidades?",
+      "enunciado": "La siguiente tabla muestra el costo total, en colones, según la cantidad de entradas que se compren para el festival de la escuela:\n\n| Cantidad de entradas | Costo total (en colones) |\n| --- | --- |\n| 2 | 3000 |\n| 3 | 4500 |\n| 5 | 7500 |\n| 8 | 12 000 |\n\nDe acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones describe la relación entre las dos cantidades?",
       "opciones": {
         "A": "Cada entrada cuesta ₡3000.",
         "B": "Cada entrada nueva duplica el costo.",
@@ -1327,7 +1327,7 @@
         "codigo": "R2.3",
         "texto": "Reconoce relaciones entre dos cantidades, presentadas mediante tablas, que varían simultáneamente."
       },
-      "enunciado": "En una tortillería, la cantidad de tortillas es proporcional a la cantidad de masa que se usa. La tabla muestra algunos datos.\n\n| Masa (en kg) | Cantidad de tortillas |\n| --- | --- |\n| 3 | 48 |\n| 6 | 96 |\n| 5 | ? |\n\n¿Cuántas tortillas se hacen con 5 kg de masa?",
+      "enunciado": "En una tortillería, la cantidad de tortillas es proporcional a la cantidad de masa que se usa. La siguiente tabla muestra algunos datos:\n\n| Masa (en kg) | Cantidad de tortillas |\n| --- | --- |\n| 3 | 48 |\n| 6 | 96 |\n| 5 | ? |\n\nDe acuerdo con la información anterior, ¿cuántas tortillas se hacen con 5 kg de masa?",
       "opciones": {
         "A": "50",
         "B": "64",
@@ -1389,19 +1389,19 @@
         "codigo": "R1.2",
         "texto": "Resuelve problemas que involucren patrones en sucesiones numéricas o tablas con números naturales menores que 1 000 000."
       },
-      "enunciado": "En una sucesión, el primer término es 5 y cada término siguiente se obtiene sumándole 4 al anterior. ¿Cuál es el término número 20?",
+      "enunciado": "Para un proyecto de reciclaje, un grupo de sexto anota el total de botellas que ha recogido al final de cada semana. La siguiente tabla muestra los datos de las primeras semanas:\n\n| Semana | Total de botellas |\n| --- | --- |\n| 1 | 7 |\n| 2 | 11 |\n| 3 | 15 |\n| 4 | 19 |\n\nDe acuerdo con la información anterior, si el total sigue aumentando de la misma forma, ¿en cuál semana el total llegará a 83 botellas?",
       "opciones": {
-        "A": "80",
-        "B": "81",
-        "C": "85",
-        "D": "100"
+        "A": "19",
+        "B": "20",
+        "C": "21",
+        "D": "76"
       },
       "clave": "B",
-      "explicacion": "Del primer término al vigésimo hay 19 saltos de 4, o sea 19 × 4 = 76. Entonces el término 20 es 5 + 76 = 81.",
+      "explicacion": "Cada semana el total aumenta 4 botellas. De 7 a 83 faltan 83 − 7 = 76 botellas, o sea 76 ÷ 4 = 19 aumentos, y como se empieza en la semana 1, se llega a 83 en la semana 20.",
       "por_que": {
-        "A": "multiplica 4 × 20 y olvida el primer término",
-        "C": "cuenta 20 saltos en vez de 19",
-        "D": "multiplica el primer término por 20"
+        "A": "cuenta los aumentos y olvida que se empieza en la semana 1",
+        "C": "divide 83 ÷ 4 = 20,75 y redondea hacia arriba",
+        "D": "se queda en la resta 83 − 7"
       },
       "imagen": null
     },
@@ -1513,7 +1513,7 @@
         "codigo": "R1.1",
         "texto": "Resuelve problemas que involucren patrones en sucesiones con figuras o representaciones geométricas."
       },
-      "enunciado": "Con palillos se forman las figuras que se muestran: la figura 1 tiene un cuadrado, la figura 2 tiene dos cuadrados unidos y la figura 3 tiene tres.\n\n[[figura]]\n\nSi se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15?",
+      "enunciado": "Con palillos se forman las figuras que se muestran: la figura 1 tiene un cuadrado, la figura 2 tiene dos cuadrados unidos y la figura 3 tiene tres.\n\n[[figura]]\n\nDe acuerdo con la información anterior, si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15?",
       "opciones": {
         "A": "45",
         "B": "46",
@@ -1581,19 +1581,19 @@
         "codigo": "R3.2",
         "texto": "Determina el valor desconocido (letra) en una ecuación matemática dada."
       },
-      "enunciado": "El doble de la edad de Sofía, aumentado en 5 años, da 31 años. En la siguiente ecuación, «e» representa la edad de Sofía: 2 × e + 5 = 31. De acuerdo con la información anterior, ¿cuántos años tiene Sofía?",
+      "enunciado": "Melissa tenía ahorrada cierta cantidad de dinero. Gastó ₡850 en un cuaderno y luego su abuela le regaló ₡1200. Ahora tiene ₡3000. En la siguiente ecuación, «d» representa el dinero que Melissa tenía ahorrado al inicio:\n\n$d - 850 + 1200 = 3000$\n\nDe acuerdo con la información anterior, ¿cuánto dinero tenía ahorrado Melissa al inicio?",
       "opciones": {
-        "A": "13",
-        "B": "18",
-        "C": "26",
-        "D": "36"
+        "A": "₡2650",
+        "B": "₡3350",
+        "C": "₡3850",
+        "D": "₡5050"
       },
       "clave": "A",
-      "explicacion": "Se deshacen las operaciones al revés: primero se resta 5, 31 − 5 = 26, y después se divide entre 2, 26 ÷ 2 = 13. Sofía tiene 13 años, y se comprueba con 2 × 13 + 5 = 31.",
+      "explicacion": "Se deshacen los pasos al revés: antes del regalo tenía 3000 − 1200 = ₡1800, y antes de gastar tenía 1800 + 850 = ₡2650. Se comprueba: 2650 − 850 + 1200 = 3000.",
       "por_que": {
-        "B": "suma 5 en vez de restarlo: (31 + 5) ÷ 2",
-        "C": "resta 5 y se olvida de dividir entre 2",
-        "D": "suma 31 + 5"
+        "B": "deshace con los signos cambiados: 3000 + 1200 − 850",
+        "C": "solo deshace el gasto y se olvida del regalo",
+        "D": "suma todas las cantidades"
       },
       "imagen": null
     },
@@ -1612,7 +1612,7 @@
         "codigo": "R3.1",
         "texto": "Reconoce el número que falta en una expresión matemática que contiene representaciones gráficas (figuras o tablas)."
       },
-      "enunciado": "La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg.\n\n[[figura]]\n\n¿Cuánto pesa cada caja?",
+      "enunciado": "La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg.\n\n[[figura]]\n\nDe acuerdo con la información anterior, ¿cuánto pesa cada caja?",
       "opciones": {
         "A": "4 kg",
         "B": "6 kg",
@@ -1637,7 +1637,7 @@
       "materia": "matematicas",
       "tema": "Relaciones y Álgebra",
       "subtema": "Expresiones matemáticas con dos cantidades",
-      "nivel": "alto",
+      "nivel": "intermedio",
       "afirmacion": {
         "codigo": "R2",
         "texto": "Resuelve problemas que involucran relaciones entre dos cantidades, en una expresión matemática."
@@ -1677,7 +1677,7 @@
         "codigo": "E1.3",
         "texto": "Reconoce el recorrido de un grupo de datos como la diferencia entre el máximo y el mínimo."
       },
-      "enunciado": "Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?",
+      "enunciado": "La siguiente tabla muestra la cantidad de lluvia, en milímetros, que registró el pluviómetro de una escuela durante cinco días:\n\n| Día | Lluvia (en milímetros) |\n| --- | --- |\n| Lunes | 12 |\n| Martes | 15 |\n| Miércoles | 9 |\n| Jueves | 15 |\n| Viernes | 14 |\n\nDe acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?",
       "opciones": {
         "A": "La moda es 15 y el recorrido es 15.",
         "B": "La moda es 2 y el recorrido es 6.",
@@ -1708,19 +1708,19 @@
         "codigo": "E1.4",
         "texto": "Reconoce el concepto de población o muestra."
       },
-      "enunciado": "Para conocer cuánta agua gastan por mes los 600 hogares de un distrito, la municipalidad escogió al azar 3 hogares de cada uno de sus 20 barrios, o sea, 60 hogares, y les aplicó una encuesta. En ese estudio, ¿cuál es la población?",
+      "enunciado": "Una municipalidad quiere saber cuántos kilogramos de basura produce por semana cada una de las 1200 casas de un distrito. Para eso, escogió al azar 150 de esas casas y pesó su basura durante una semana. En ese estudio, ¿cuál es la población?",
       "opciones": {
-        "A": "Todos los hogares del distrito.",
-        "B": "Los 60 hogares que fueron encuestados.",
-        "C": "Los 20 barrios del distrito.",
-        "D": "La cantidad de agua que gasta cada hogar encuestado."
+        "A": "Todas las casas del distrito.",
+        "B": "Las 150 casas escogidas al azar.",
+        "C": "Los kilogramos de basura de cada casa.",
+        "D": "Las personas que recogen la basura del distrito."
       },
       "clave": "A",
-      "explicacion": "La población es el grupo completo que se quiere estudiar: los 600 hogares del distrito. Los 60 hogares que respondieron la encuesta son solo una parte, que se llama muestra.",
+      "explicacion": "La población es el grupo completo que se quiere estudiar: las 1200 casas del distrito. Las 150 casas escogidas al azar son solo una parte, y esa parte se llama muestra.",
       "por_que": {
         "B": "confunde la población con la muestra",
-        "C": "confunde los barrios con los hogares que se estudian",
-        "D": "confunde la población con el dato que se quiere medir"
+        "C": "confunde la población con el dato que se mide",
+        "D": "piensa en quienes trabajan en el servicio y no en lo que se estudia"
       },
       "imagen": null
     },
@@ -1739,7 +1739,7 @@
         "codigo": "E1.1",
         "texto": "Interpreta información que ha sido resumida en dibujos, diagramas, cuadros o gráficos."
       },
-      "enunciado": "El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg.\n\n[[figura]]\n\n¿Cuántos kilogramos más de mango que de papaya se vendieron?",
+      "enunciado": "El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg.\n\n[[figura]]\n\nDe acuerdo con la información anterior, ¿cuántos kilogramos más de mango que de papaya se vendieron?",
       "opciones": {
         "A": "1,5 kg",
         "B": "6 kg",
@@ -1804,7 +1804,7 @@
         "codigo": "E1.2",
         "texto": "Interpreta las medidas de posición (moda, media aritmética, máximo o mínimo) de un grupo de datos presentados en tablas o gráficos con frecuencias absolutas."
       },
-      "enunciado": "La tabla muestra cuántos goles anotó el equipo de la escuela en sus partidos del campeonato.\n\n| Goles en el partido | Cantidad de partidos |\n| --- | --- |\n| 0 | 2 |\n| 1 | 3 |\n| 2 | 4 |\n| 3 | 1 |\n\n¿Cuál fue el promedio (media aritmética) de goles por partido?",
+      "enunciado": "La tabla muestra cuántos goles anotó el equipo de la escuela en sus partidos del campeonato.\n\n| Goles en el partido | Cantidad de partidos |\n| --- | --- |\n| 0 | 2 |\n| 1 | 3 |\n| 2 | 4 |\n| 3 | 1 |\n\nDe acuerdo con la información anterior, ¿cuál fue el promedio (media aritmética) de goles por partido?",
       "opciones": {
         "A": "1,4",
         "B": "1,5",
@@ -1835,7 +1835,7 @@
         "codigo": "E1.5",
         "texto": "Interpreta la frecuencia porcentual de datos presentados en representaciones (tablas o gráficos) con frecuencias absolutas."
       },
-      "enunciado": "El gráfico muestra la cantidad de libros que leyó cada grupo de sexto durante un mes.\n\n[[figura]]\n\n¿Qué porcentaje del total de libros leyó el grupo 6-4?",
+      "enunciado": "El gráfico muestra la cantidad de libros que leyó cada grupo de sexto durante un mes.\n\n[[figura]]\n\nDe acuerdo con la información anterior, ¿qué porcentaje del total de libros leyó el grupo 6-4?",
       "opciones": {
         "A": "25 %",
         "B": "28 %",
