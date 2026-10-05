@@ -32,7 +32,7 @@
       "enunciado": "Según el texto anterior, ¿qué muestra esa experiencia sobre la importancia de los Estudios Sociales y la Educación Cívica para la convivencia?",
       "opciones": {
         "A": "Sirven sobre todo para conocer cómo se fundó y creció el barrio.",
-        "B": "Enseñan que las reglas municipales resuelven solas cualquier problema.",
+        "B": "Enseñan que las reglas municipales resuelven por sí mismas los problemas.",
         "C": "Ayudan a entender un problema común y a acordar cómo resolverlo.",
         "D": "Permiten que la escuela decida por las familias cómo usar el parque."
       },
@@ -63,8 +63,8 @@
       },
       "verbo": "inferir",
       "tipo_contexto": "cívico-político",
-      "contexto": "Considere la siguiente información:\n\nAntes de las elecciones del gobierno estudiantil, Daniela leyó en un chat que uno de los partidos iba a eliminar el recreo largo. En Educación Cívica había aprendido a revisar de dónde viene una noticia. Le preguntó al Tribunal Electoral Estudiantil y leyó el plan de trabajo del partido: la noticia era falsa. Luego lo explicó con respeto en el mismo chat.",
-      "enunciado": "A partir de la información anterior, ¿qué actitud ciudadana promovió en Daniela la Educación Cívica?",
+      "contexto": "Considere la siguiente información:\n\nAntes de las elecciones del gobierno estudiantil, Daniela leyó en un chat que uno de los partidos iba a eliminar el recreo largo. Le preguntó al Tribunal Electoral Estudiantil y leyó el plan de trabajo del partido: la noticia era falsa. Luego lo explicó con respeto en el mismo chat.",
+      "enunciado": "A partir de la información anterior, ¿qué actitud ciudadana, de las que promueve la Educación Cívica, mostró Daniela?",
       "opciones": {
         "A": "Confirmar si un dato es cierto y aclararlo sin ofender a nadie.",
         "B": "Apoyar al partido contrario para que el recreo largo se mantenga.",
@@ -136,17 +136,17 @@
       "contexto": "Lea el siguiente texto:\n\nCosta Rica tiene costas en el mar Caribe y en el océano Pacífico, y forma parte de un istmo angosto entre dos grandes masas continentales. Por eso, plantas y animales del norte y del sur se encontraron en su territorio. Pero esa misma posición la deja en la ruta de algunas tormentas tropicales y sobre placas de la corteza terrestre que se mueven.",
       "enunciado": "Según el texto anterior, ¿cuál opción presenta una ventaja y una desventaja de la posición geográfica de Costa Rica?",
       "opciones": {
-        "A": "Ventaja: riesgo de sismos. Desventaja: gran variedad de especies.",
+        "A": "Ventaja: salida a dos mares. Desventaja: riesgo de sequías.",
         "B": "Ventaja: gran variedad de especies. Desventaja: riesgo de sismos.",
-        "C": "Ventaja: salida a dos mares. Desventaja: gran variedad de especies.",
-        "D": "Ventaja: paso de tormentas. Desventaja: salida a dos mares."
+        "C": "Ventaja: suelos buenos para el café. Desventaja: paso de tormentas.",
+        "D": "Ventaja: clima frío en las costas. Desventaja: paso de tormentas."
       },
       "clave": "B",
       "explicacion": "Que se encuentren especies del norte y del sur es una ventaja: por eso el país tiene tanta biodiversidad. Estar sobre placas que se mueven es una desventaja, porque trae sismos.",
       "por_que": {
-        "A": "invierte la ventaja y la desventaja",
-        "C": "toma la biodiversidad, que es una ventaja, como si fuera un problema",
-        "D": "confunde un riesgo natural con un beneficio y al revés"
+        "A": "toma una ventaja del texto, pero agrega una desventaja que el texto no menciona",
+        "C": "agrega una ventaja que el texto no atribuye a la posición",
+        "D": "inventa una ventaja falsa: las costas del país son cálidas"
       },
       "imagen": null
     },
@@ -171,15 +171,15 @@
       "contexto": "Lea el siguiente texto:\n\nCuando un huracán afecta a un país de Centroamérica, los gobiernos vecinos suelen coordinar el envío de ayuda por carretera, porque las fronteras están cerca y comparten rutas. Los países del istmo también se reúnen en el Sistema de la Integración Centroamericana para tomar acuerdos sobre comercio, salud y protección ante desastres.",
       "enunciado": "De acuerdo con el texto anterior, ¿cómo favorece la posición geográfica de Costa Rica sus relaciones con la región?",
       "opciones": {
-        "A": "La cercanía hace que los países vecinos compartan un mismo gobierno.",
-        "B": "La cercanía facilita que los países cooperen entre sí.",
+        "A": "La cercanía facilita que los países cooperen entre sí.",
+        "B": "La cercanía hace que los países vecinos compartan un mismo gobierno.",
         "C": "Estar entre dos mares hace innecesario el comercio con los vecinos.",
-        "D": "Los acuerdos se deben solo al idioma común y no a la cercanía."
+        "D": "Los acuerdos se deben al idioma común más que a la cercanía."
       },
-      "clave": "B",
+      "clave": "A",
       "explicacion": "Los países del istmo están cerca y comparten fronteras y rutas, y eso les permite ayudarse y tomar acuerdos. Cada país mantiene su propio gobierno: lo que comparten es la cooperación.",
       "por_que": {
-        "A": "confunde la integración regional con unirse en un solo país",
+        "B": "confunde la integración regional con unirse en un solo país",
         "C": "confunde la ventaja marítima con no necesitar a la región",
         "D": "ignora el factor geográfico que señala el texto"
       },
@@ -204,18 +204,18 @@
       "verbo": "reconocer",
       "tipo_contexto": "espacial",
       "contexto": "Lea el siguiente texto:\n\nDurante una gira al volcán Irazú, Keylor observó desde lo alto una larga cadena de montañas y volcanes, unidos unos con otros, que se extendía por muchos kilómetros. El guía explicó que esa formación separa las aguas que corren hacia el mar Caribe de las que bajan hacia el océano Pacífico.",
-      "enunciado": "La forma de relieve que observó Keylor corresponde a una",
+      "enunciado": "La forma de relieve que observó Keylor se conoce como",
       "opciones": {
         "A": "cordillera.",
-        "B": "llanura.",
-        "C": "valle fluvial.",
+        "B": "valle.",
+        "C": "llanura costera.",
         "D": "meseta."
       },
       "clave": "A",
       "explicacion": "Una cadena larga de montañas y volcanes unidos es una cordillera. La del Irazú es la Cordillera Volcánica Central, que reparte las aguas entre las dos vertientes del país.",
       "por_que": {
-        "B": "confunde una zona plana y baja con una cadena de montañas",
-        "C": "confunde la zona baja entre montañas, por donde corre un río, con las montañas mismas",
+        "B": "confunde la zona baja entre montañas con las montañas mismas",
+        "C": "confunde una zona plana junto al mar con una cadena de montañas",
         "D": "confunde una zona alta y plana con una cadena de montañas y volcanes"
       },
       "imagen": null
@@ -241,17 +241,17 @@
       "contexto": "Considere la siguiente información:\n\nEn una clase de Estudios Sociales, el grupo de Randall comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:\n\n| Característica | Costa 1 | Costa 2 |\n| --- | --- | --- |\n| Forma del litoral | Muy recortada, con golfos y penínsulas | Casi recta, con pocas entradas del mar |\n| Extensión | Más larga | Más corta |",
       "enunciado": "De acuerdo con la información anterior, ¿cuál opción distingue correctamente las dos costas de Costa Rica?",
       "opciones": {
-        "A": "La costa 1 es la del Pacífico y la costa 2 es la del Caribe.",
-        "B": "La costa 1 es la del Caribe y la costa 2 es la del Pacífico.",
-        "C": "Las dos son del Pacífico: la costa 1 al norte y la 2 al sur.",
-        "D": "Las dos son del Caribe: la costa 1 al norte y la 2 al sur."
+        "A": "La costa 1 es la del Caribe, con la península de Osa.",
+        "B": "La costa 2 es la del Pacífico, con el golfo de Nicoya.",
+        "C": "La costa 2 es la del Caribe, con la península de Nicoya.",
+        "D": "La costa 1 es la del Pacífico, con el golfo Dulce."
       },
-      "clave": "A",
+      "clave": "D",
       "explicacion": "La costa del Pacífico es larga y muy recortada, con golfos como el de Nicoya y penínsulas como la de Osa. La del Caribe es más corta y casi recta.",
       "por_que": {
-        "B": "invierte las características de las dos costas",
-        "C": "cree que las diferencias son de una sola costa",
-        "D": "cree que las diferencias son de una sola costa y además la equivoca"
+        "A": "invierte las costas y además ubica en el Caribe una península del Pacífico",
+        "B": "invierte las costas: la casi recta es la del Caribe",
+        "C": "acierta que la costa 2 es la del Caribe, pero le pone una península del Pacífico"
       },
       "imagen": null
     },
@@ -279,14 +279,14 @@
         "A": "Las partes altas atraen más gente, porque el frío ayuda al cultivo de café.",
         "B": "El relieve no influye: los poblados crecen donde hubo erupciones recientes.",
         "C": "Los terrenos poco empinados y de buen suelo facilitan poblar y sembrar.",
-        "D": "Las montañas impiden cualquier actividad humana en todo el país."
+        "D": "Las ciudades y carreteras hicieron que el clima del valle sea templado."
       },
       "clave": "C",
       "explicacion": "En el Valle Central el terreno, el suelo y el clima ayudan a vivir y a sembrar, por eso ahí hay tantas ciudades y cafetales. En las partes altas y empinadas de Talamanca es más difícil, y hay menos poblados.",
       "por_que": {
         "A": "invierte la relación entre altura, clima y población",
         "B": "confunde el origen del suelo con una causa de la población",
-        "D": "generaliza a partir de las partes más altas"
+        "D": "confunde la consecuencia con la causa"
       },
       "imagen": null
     },
@@ -343,20 +343,20 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "espacial",
-      "contexto": "Lea la siguiente información:\n\nDos estudiantes discuten en clase. Camila asegura que una región siempre tiene los mismos límites que una provincia. Esteban dice que los límites de una región dependen de las características que se escojan para delimitarla, como el clima, el relieve o las actividades económicas de la zona.",
+      "contexto": "Lea la siguiente información:\n\nDos estudiantes discuten en clase. Camila asegura que una región siempre tiene los mismos límites que una provincia. Esteban dice que una región solo se puede delimitar según el clima de la zona, sin tomar en cuenta el relieve ni las actividades de la gente.",
       "enunciado": "De acuerdo con la información anterior, ¿cuál afirmación sobre el concepto de región es correcta?",
       "opciones": {
-        "A": "Camila acierta, porque una región coincide con una provincia.",
-        "B": "Esteban acierta: una región se define por rasgos en común.",
-        "C": "Esteban acierta, pero solo si el rasgo escogido es el clima.",
-        "D": "Ninguno acierta, porque las regiones no tienen ningún límite."
+        "A": "Camila acierta, porque las regiones siguen los límites provinciales.",
+        "B": "Ninguno acierta: los rasgos escogidos marcan los límites.",
+        "C": "Esteban acierta, porque el clima es lo único que define una región.",
+        "D": "Los dos aciertan, porque cada uno usa un criterio distinto."
       },
       "clave": "B",
-      "explicacion": "Una región se delimita por las características que comparten sus partes, y esas pueden ser naturales o económicas. Por eso no tiene que coincidir con una provincia.",
+      "explicacion": "Una región se delimita con las características que se escojan: el clima, el relieve o las actividades económicas, entre otras. Por eso no tiene que coincidir con una provincia ni depender solo del clima.",
       "por_que": {
         "A": "confunde la región con una división administrativa",
         "C": "reduce las características de una región a una sola",
-        "D": "cree que una región no se puede delimitar"
+        "D": "cree que los dos tienen razón, cuando los dos se equivocan"
       },
       "imagen": null
     },
@@ -437,7 +437,7 @@
       "bloque": "Costa Rica: un espacio socio geográfico de integración",
       "tema": "Derechos y ambiente",
       "subtema": "Instituciones que promueven los derechos de las personas estudiantes",
-      "nivel": "alto",
+      "nivel": "intermedio",
       "afirmacion": {
         "codigo": "1.5",
         "texto": "Comprende la importancia de las instituciones promotoras de los derechos de las personas estudiantes: MEP, PANI, Ebais, Defensoría de los Habitantes e IMAS."
@@ -486,17 +486,17 @@
       "contexto": "Lea el siguiente texto:\n\nEn una comunidad de Upala, el Ebais organizó una feria de salud en la escuela. Revisaron las vacunas, el peso y la talla de los niños, y una enfermera explicó cómo lavarse bien las manos. Al final, el comité estudiantil propuso hacer carteles para que toda la escuela practicara lo aprendido.",
       "enunciado": "De acuerdo con el texto anterior, ¿por qué es importante conocer el derecho a la salud para actuar como ciudadanos?",
       "opciones": {
-        "A": "Porque la salud depende solo del trabajo del personal médico.",
-        "B": "Porque ayuda a cuidarse y a cuidar a los demás.",
-        "C": "Porque así se evita ir al Ebais cuando alguien se enferma.",
-        "D": "Porque el derecho a la salud protege sobre todo a los adultos."
+        "A": "Porque permite exigir que lo atiendan antes que a los demás.",
+        "B": "Porque lleva a cuidarse uno mismo y a cuidar a los demás.",
+        "C": "Porque ese derecho consiste en recibir vacunas y controles.",
+        "D": "Porque cuidar la salud es tarea del Ebais y no de la escuela."
       },
       "clave": "B",
       "explicacion": "El derecho a la salud no es solo recibir atención: también es aprender a cuidarse. Los estudiantes que hicieron carteles usaron lo aprendido para ayudar a toda la escuela, y eso es actuar como ciudadanos.",
       "por_que": {
-        "A": "deja toda la responsabilidad en el Ebais y olvida la de cada persona",
-        "C": "confunde prevenir con dejar de buscar atención",
-        "D": "no ve que la feria era para la niñez de la escuela"
+        "A": "confunde un derecho con un privilegio",
+        "C": "reduce el derecho a la salud a recibir un servicio",
+        "D": "deja toda la responsabilidad en el Ebais y olvida la de cada persona"
       },
       "imagen": null
     },
@@ -521,17 +521,17 @@
       "contexto": "Lea el siguiente texto:\n\nEn Cañas, Guanacaste, la familia de Yerlin recoge agua de lluvia entre mayo y noviembre, porque de diciembre a abril casi no llueve, los potreros se secan y muchos árboles botan sus hojas. En cambio, su prima, que vive en Limón, cuenta que allá llueve en casi todos los meses del año.",
       "enunciado": "Según el texto anterior, ¿cómo influye el clima en la vida de la familia de Yerlin?",
       "opciones": {
-        "A": "Viven igual todo el año, porque en todo el país llueve siempre.",
-        "B": "Siembran solo en diciembre, cuando hay menos lluvias.",
+        "A": "Viven igual todo el año, porque en Guanacaste llueve como en Limón.",
+        "B": "Siembran en diciembre, cuando hay menos lluvias.",
         "C": "Ajustan sus tareas a la época seca y a la lluviosa.",
-        "D": "Los árboles botan sus hojas por el frío del invierno."
+        "D": "Recogen agua de diciembre a abril, cuando más llueve."
       },
       "clave": "C",
       "explicacion": "En Guanacaste hay una época seca muy marcada, así que la familia guarda agua cuando llueve para tenerla en los meses secos. El clima cambia lo que hacen durante el año, y también a las plantas: los árboles botan las hojas para ahorrar agua.",
       "por_que": {
         "A": "generaliza el clima de Limón a Guanacaste",
         "B": "invierte la época que conviene para sembrar",
-        "D": "confunde la época seca de Guanacaste con un invierno frío de otros países"
+        "D": "confunde la época seca con la lluviosa"
       },
       "imagen": null
     },
@@ -559,14 +559,14 @@
         "A": "La humedad del lugar 1 favorece plantas que necesitan mucha agua.",
         "B": "El calor del lugar 2 hace que sus árboles conserven las hojas todo el año.",
         "C": "La ganadería del lugar 2 es la causa de que su clima sea cálido.",
-        "D": "La neblina del lugar 1 impide cualquier actividad humana allí."
+        "D": "El lugar 2 tiene más especies de plantas porque es más cálido."
       },
       "clave": "A",
       "explicacion": "Los musgos, helechos y orquídeas necesitan humedad casi todo el año, y eso es lo que tiene el lugar 1. En el lugar 2, los meses secos hacen que los árboles boten las hojas para ahorrar agua.",
       "por_que": {
         "B": "invierte lo que dice la tabla sobre los árboles del lugar 2",
         "C": "confunde una actividad humana con la causa del clima",
-        "D": "olvida que la tabla menciona la observación de aves"
+        "D": "saca una conclusión que la tabla no permite"
       },
       "imagen": null
     },
@@ -591,16 +591,16 @@
       "contexto": "Lea el siguiente texto:\n\nEn una cuenca, varias fincas cortaron los árboles que crecían a la orilla del río para sembrar hasta el borde. Con los años, los vecinos notaron que en verano el río llevaba menos agua, que con los aguaceros el agua bajaba turbia y que ya casi no se veían los peces ni las nutrias de antes.",
       "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre el efecto de esa actividad humana?",
       "opciones": {
-        "A": "Los peces se fueron porque el río llevaba más agua en verano.",
-        "B": "Sembrar hasta la orilla aumentó las especies que viven en el río.",
+        "A": "Los peces se fueron y por eso el río lleva menos agua en verano.",
+        "B": "Los cultivos junto al río protegen el suelo igual que los árboles.",
         "C": "Quitar el bosque junto al río dañó el hogar de muchas especies.",
-        "D": "El agua turbia se debe solo a los aguaceros, no a las fincas."
+        "D": "El agua turbia viene de los aguaceros y no tiene que ver con las fincas."
       },
       "clave": "C",
       "explicacion": "Los árboles de la orilla protegen el suelo y dan sombra y alimento a los animales del río. Al cortarlos, la tierra cae al agua, el río se seca más en verano y las especies pierden su hogar.",
       "por_que": {
-        "A": "lee al revés lo que pasó con el caudal",
-        "B": "invierte el efecto que describe el texto",
+        "A": "confunde la causa con la consecuencia",
+        "B": "cree que cualquier planta cumple la función del bosque de la orilla",
         "D": "no relaciona la tierra suelta sin árboles con el agua turbia"
       },
       "imagen": null
@@ -661,16 +661,16 @@
       "contexto": "Lea el siguiente texto:\n\nEn una playa del Pacífico, los vecinos, los dueños de restaurantes y los pescadores firmaron un acuerdo: no dejar basura en la arena, recoger cada sábado lo que trae la marea y no usar pajillas de plástico. Al año siguiente, la playa recibió la Bandera Azul Ecológica y llegaron más visitantes.",
       "enunciado": "Según el texto anterior, ¿por qué fue importante el acuerdo entre los distintos grupos?",
       "opciones": {
-        "A": "Porque así cada grupo limpiaba solo el frente de su negocio.",
-        "B": "Porque la Bandera Azul obliga a cerrar la playa a los turistas.",
+        "A": "Porque su fin principal era que llegaran más turistas a los negocios.",
+        "B": "Porque una ley obligaba a cada grupo a limpiar su parte de la playa.",
         "C": "Porque los pescadores eran los únicos que ensuciaban la playa.",
         "D": "Porque cuidarla juntos benefició a la naturaleza y al pueblo."
       },
       "clave": "D",
       "explicacion": "El acuerdo funcionó porque todos se comprometieron a lo mismo. La playa quedó limpia, se protegió la vida del mar y la comunidad ganó con más visitantes.",
       "por_que": {
-        "A": "cambia un compromiso común por esfuerzos aislados",
-        "B": "contradice el texto, que habla de más visitantes",
+        "A": "reduce el acuerdo a su efecto económico",
+        "B": "confunde un acuerdo voluntario con una obligación legal",
         "C": "busca un culpable en vez de ver la responsabilidad compartida"
       },
       "imagen": null
@@ -696,17 +696,17 @@
       "contexto": "Lea el siguiente texto:\n\nPara la feria científica, el grupo de Allan investigó qué hacen las familias de su barrio con los residuos. Encontraron que algunas queman las hojas secas y los plásticos en el patio, otras entierran las latas y otras separan lo reciclable y hacen abono con las cáscaras de las frutas.",
       "enunciado": "De acuerdo con el texto anterior, ¿cuál práctica contribuye a la conservación ambiental?",
       "opciones": {
-        "A": "Quemar las cáscaras y las hojas para no atraer moscas.",
-        "B": "Enterrar las latas para que no se vean en el patio.",
-        "C": "Juntar todo en una sola bolsa para el camión.",
-        "D": "Transformar los restos orgánicos en tierra fértil."
+        "A": "Transformar los restos orgánicos en tierra fértil.",
+        "B": "Quemar las cáscaras y las hojas para no atraer moscas.",
+        "C": "Enterrar las latas para que no se vean en el patio.",
+        "D": "Juntar todo en una sola bolsa para el camión."
       },
-      "clave": "D",
+      "clave": "A",
       "explicacion": "Quemar o enterrar residuos contamina el aire y el suelo. Convertir los restos de comida en abono reduce la basura y le devuelve nutrientes a la tierra.",
       "por_que": {
-        "A": "cree que quemar elimina el problema, pero contamina el aire",
-        "B": "esconde el residuo en vez de aprovecharlo",
-        "C": "no separa lo que se puede reciclar o aprovechar"
+        "B": "cree que quemar elimina el problema, pero contamina el aire",
+        "C": "esconde el residuo en vez de aprovecharlo",
+        "D": "no separa lo que se puede reciclar o aprovechar"
       },
       "imagen": null
     },
@@ -732,16 +732,16 @@
       "enunciado": "¿Cuál es el orden de esos momentos de la historia antigua de Costa Rica, del más antiguo al más reciente?",
       "opciones": {
         "A": "1, 2 y 3",
-        "B": "2, 3 y 1",
+        "B": "1, 3 y 2",
         "C": "2, 1 y 3",
-        "D": "3, 1 y 2"
+        "D": "2, 3 y 1"
       },
       "clave": "C",
       "explicacion": "Primero hubo grupos que se movían para cazar y recolectar. Después, al aprender a sembrar, formaron aldeas, y más tarde surgieron los cacicazgos, con jefes y grandes obras como las de Guayabo.",
       "por_que": {
         "A": "cree que primero vinieron las aldeas y después la vida en movimiento",
-        "B": "pone los cacicazgos antes de que existieran las aldeas agrícolas",
-        "D": "invierte el orden y pone primero la forma de vida más compleja"
+        "B": "cree que la vida en movimiento fue la más reciente",
+        "D": "pone los cacicazgos antes de que existieran las aldeas agrícolas"
       },
       "imagen": null
     },
@@ -768,15 +768,15 @@
       "opciones": {
         "A": "Huetar",
         "B": "Cabécar",
-        "C": "Chorotega",
-        "D": "Maleku"
+        "C": "Maleku",
+        "D": "Chorotega"
       },
-      "clave": "C",
+      "clave": "D",
       "explicacion": "Los chorotegas vivieron en la península de Nicoya y el resto de Guanacaste, y son conocidos por su cerámica de varios colores. Los huetares vivían en el centro del país, los cabécares en Talamanca y los malekus en las llanuras del norte.",
       "por_que": {
         "A": "ubica en el noroeste a un pueblo que vivía en el centro del país",
         "B": "ubica en el noroeste a un pueblo de Talamanca y el Caribe sur",
-        "D": "ubica en la península de Nicoya a un pueblo de las llanuras del norte"
+        "C": "ubica en la península de Nicoya a un pueblo de las llanuras del norte"
       },
       "imagen": null
     },
@@ -801,17 +801,17 @@
       "contexto": "Lea el siguiente texto:\n\nPara muchos pueblos de la Costa Rica antigua, la naturaleza tenía un valor sagrado: animales como el jaguar, el cocodrilo o el águila representaban fuerza y protección. Por eso los tallaban en piedra o los pintaban en la cerámica que se usaba en ceremonias, y algunos jefes llevaban adornos con esas figuras.",
       "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre la cosmovisión de esos pueblos?",
       "opciones": {
-        "A": "Tallaban animales solo para decorar, sin ningún significado especial.",
-        "B": "La naturaleza era vista solo como fuente de alimento y materiales.",
-        "C": "Los animales tallados mostraban las especies que criaban en las aldeas.",
-        "D": "Sus creencias se reflejaban en su arte y en sus formas de autoridad."
+        "A": "Los jefes eran quienes tallaban las figuras de animales en piedra.",
+        "B": "Tallaban animales para enseñar a los jóvenes a cazarlos.",
+        "C": "Sus creencias se reflejaban en su arte y en sus formas de autoridad.",
+        "D": "Los animales tallados mostraban las especies que criaban en las aldeas."
       },
-      "clave": "D",
+      "clave": "C",
       "explicacion": "Los animales tallados y pintados no eran solo adornos: representaban fuerza y protección. Por eso aparecían en objetos de ceremonia y en los adornos de los jefes, lo que muestra cómo sus creencias se unían con su vida social.",
       "por_que": {
-        "A": "reduce el arte a un adorno y olvida su sentido sagrado",
-        "B": "contradice el valor sagrado que describe el texto",
-        "C": "confunde el símbolo con la crianza de animales"
+        "A": "agrega una regla que el texto no menciona",
+        "B": "confunde el sentido sagrado con un uso práctico",
+        "D": "confunde el símbolo con la crianza de animales"
       },
       "imagen": null
     },
@@ -833,20 +833,20 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "sociocultural",
-      "contexto": "Analice la siguiente tabla:\n\n| Aporte | Ejemplo en la Costa Rica de hoy |\n| --- | --- |\n| 1 | El rice and beans, el patí y el calipso de Limón |\n| 2 | La chicha de maíz, el uso ceremonial del cacao y el saber sobre plantas medicinales |\n| 3 | El arroz cantonés y el chop suey, que se comen en todo el país |",
+      "contexto": "Analice la siguiente tabla:\n\n| Aporte | Ejemplo en la Costa Rica de hoy |\n| --- | --- |\n| 1 | El rice and beans, el patí y el pan bon de Limón |\n| 2 | La chicha de maíz, el uso ceremonial del cacao y el saber sobre plantas medicinales |\n| 3 | El arroz cantonés y el chop suey, que se comen en todo el país |",
       "enunciado": "¿Cuál opción relaciona correctamente cada aporte con la población que lo hizo?",
       "opciones": {
         "A": "1 pueblos originarios, 2 afrodescendiente y 3 asiática",
         "B": "1 afrodescendiente, 2 asiática y 3 pueblos originarios",
-        "C": "1 asiática, 2 pueblos originarios y 3 afrodescendiente",
-        "D": "1 afrodescendiente, 2 pueblos originarios y 3 asiática"
+        "C": "1 afrodescendiente, 2 pueblos originarios y 3 asiática",
+        "D": "1 asiática, 2 pueblos originarios y 3 afrodescendiente"
       },
-      "clave": "D",
-      "explicacion": "El rice and beans, el patí y el calipso vienen de la población afrodescendiente de Limón. La chicha de maíz y el saber sobre plantas son de los pueblos originarios, y el arroz cantonés llegó con la población china.",
+      "clave": "C",
+      "explicacion": "El rice and beans, el patí y el pan bon vienen de la población afrodescendiente de Limón. La chicha de maíz y el saber sobre plantas son de los pueblos originarios, y el arroz cantonés llegó con la población china.",
       "por_que": {
         "A": "confunde los aportes de la población afrodescendiente con los de los pueblos originarios",
         "B": "confunde los aportes de los pueblos originarios con los de la población china",
-        "C": "confunde la comida afrocaribeña con la de origen chino"
+        "D": "confunde la comida afrocaribeña con la de origen chino"
       },
       "imagen": null
     },
@@ -871,17 +871,17 @@
       "contexto": "Lea el siguiente texto:\n\nEn Talamanca, algunas familias bribris siembran cacao bajo la sombra de otros árboles, junto con plátano y frutales, sin cortar el bosque. Ese saber, que pasa de abuelas y abuelos a nietos, hoy interesa a productores de otras zonas que buscan cultivar sin dañar los suelos ni los ríos.",
       "enunciado": "Según el texto anterior, ¿cómo contribuye ese conocimiento bribri al desarrollo del país?",
       "opciones": {
-        "A": "Ofrece una forma de producir que protege la naturaleza.",
-        "B": "Demuestra que el cacao solo se puede cultivar en Talamanca.",
-        "C": "Reemplaza el trabajo de las personas productoras de otras zonas.",
-        "D": "Sirve sobre todo para vender más cacao en el extranjero."
+        "A": "Demuestra que el mejor cacao del país se cultiva en Talamanca.",
+        "B": "Reemplaza el trabajo de las personas productoras de otras zonas.",
+        "C": "Sirve sobre todo para vender más cacao en el extranjero.",
+        "D": "Ofrece una forma de producir que protege la naturaleza."
       },
-      "clave": "A",
+      "clave": "D",
       "explicacion": "Sembrar cacao bajo la sombra del bosque permite producir sin destruirlo. Por eso ese saber ancestral sirve de ejemplo a otras personas productoras y fortalece la identidad del país.",
       "por_que": {
-        "B": "generaliza a partir de un ejemplo de un lugar",
-        "C": "confunde compartir un saber con quitarle el trabajo a otros",
-        "D": "reduce el aporte a lo comercial y olvida el cuidado del ambiente"
+        "A": "generaliza a partir de un ejemplo de un lugar",
+        "B": "confunde compartir un saber con quitarle el trabajo a otros",
+        "C": "reduce el aporte a lo comercial y olvida el cuidado del ambiente"
       },
       "imagen": null
     },
@@ -903,20 +903,20 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "sociocultural",
-      "contexto": "Lea el siguiente texto:\n\nEn una comunidad cabécar de la zona de Chirripó, los estudiantes caminan varias horas por senderos de montaña para llegar a la escuela. Cuando llueve fuerte, los ríos crecen y no pueden cruzarlos. El centro de salud más cercano queda a medio día de camino.",
-      "enunciado": "Según el texto anterior, ¿cuál desafío enfrenta esa comunidad?",
+      "contexto": "Lea el siguiente texto:\n\nEn un territorio boruca, muchas familias hacen máscaras de madera y tejidos teñidos con plantas. Un comerciante les compra cada máscara a un precio bajo y luego la vende cara en San José. Además, en algunas tiendas se venden copias hechas en fábrica como si fueran piezas borucas.",
+      "enunciado": "De acuerdo con el texto anterior, ¿cuál desafío enfrenta esa comunidad?",
       "opciones": {
-        "A": "La pérdida de su lengua por el uso del español en la escuela.",
-        "B": "El difícil acceso a servicios básicos de educación y salud.",
-        "C": "La falta de interés de las familias por la salud y el estudio.",
-        "D": "La gran cantidad de turistas que visitan la montaña."
+        "A": "El poco pago por sus artesanías y las imitaciones.",
+        "B": "La pérdida de su lengua por el uso del español en la escuela.",
+        "C": "La falta de interés de los jóvenes por aprender el oficio.",
+        "D": "La escasez de plantas para teñir lo que tejen."
       },
-      "clave": "B",
-      "explicacion": "El texto habla de caminos largos, ríos que crecen y un centro de salud lejano. El desafío es el acceso: llegar a la escuela o a una consulta cuesta mucho, y eso afecta el bienestar de la comunidad.",
+      "clave": "A",
+      "explicacion": "El comerciante paga poco por las máscaras y otras tiendas venden imitaciones. Eso le quita a la comunidad el fruto de su trabajo y afecta su bienestar.",
       "por_que": {
-        "A": "menciona un reto real de otros casos, pero el texto no habla de él",
-        "C": "culpa a la comunidad cuando el problema es el acceso",
-        "D": "agrega un problema que el texto no plantea"
+        "B": "menciona un reto real de otros casos, pero el texto no habla de él",
+        "C": "agrega un problema que el texto no plantea",
+        "D": "confunde un material del oficio con el problema que describe el texto"
       },
       "imagen": null
     },
@@ -941,17 +941,17 @@
       "contexto": "Lea el siguiente texto:\n\nEn varios territorios indígenas, personas que no pertenecen a esos pueblos ocupan tierras que la ley reserva para ellos. Algunas comunidades también piden que en sus escuelas se enseñe su propia lengua y que las decisiones sobre su territorio se tomen consultándoles.",
       "enunciado": "A partir del texto anterior, ¿cuál es un reto para la sociedad costarricense?",
       "opciones": {
-        "A": "Trasladar a las comunidades a las ciudades para darles servicios.",
-        "B": "Enseñar solo español para que todos aprendan lo mismo.",
-        "C": "Repartir sus tierras entre todas las personas que viven ahí.",
-        "D": "Respetar sus tierras y escucharlos en lo que les afecta."
+        "A": "Darles más ayudas económicas sin atender quién ocupa sus tierras.",
+        "B": "Hacer cumplir la ley que los protege y tomar en cuenta su voz.",
+        "C": "Enseñarles en español para que puedan reclamar sus derechos.",
+        "D": "Dejar que cada comunidad resuelva sola los conflictos de tierras."
       },
-      "clave": "D",
+      "clave": "B",
       "explicacion": "Garantizar los derechos de los pueblos originarios significa respetar sus tierras, su lengua y su derecho a ser consultados. Ese es un reto de todo el país, no solo de ellos.",
       "por_que": {
-        "A": "propone sacarlas de su territorio en vez de respetarlo",
-        "B": "contradice el pedido de enseñar su propia lengua",
-        "C": "contradice que esas tierras están reservadas para los pueblos originarios"
+        "A": "atiende una necesidad, pero deja sin resolver lo de las tierras",
+        "C": "cree que quitarles su lengua los ayuda, cuando ellos piden lo contrario",
+        "D": "pasa a las comunidades una responsabilidad de toda la sociedad"
       },
       "imagen": null
     },
@@ -1012,16 +1012,16 @@
       "enunciado": "Según el texto anterior, ¿qué aporta esa diversidad de lenguas a la identidad nacional?",
       "opciones": {
         "A": "Complica la identidad, porque un país debe tener una sola lengua.",
-        "B": "Tiene valor nada más en las comunidades donde se habla cada una.",
-        "C": "Muestra que el país se forma con muchos pueblos que conviven.",
-        "D": "Sirve sobre todo para atraer a turistas de otros países."
+        "B": "Tiene valor sobre todo en las comunidades donde se habla cada una.",
+        "C": "Sirve sobre todo para atraer a turistas de otros países.",
+        "D": "Muestra que el país se forma con muchos pueblos que conviven."
       },
-      "clave": "C",
+      "clave": "D",
       "explicacion": "Que se hablen varias lenguas muestra que Costa Rica es un país multiétnico y plurilingüe. Enseñarlas en las escuelas ayuda a que esas culturas sigan vivas y sean parte de la identidad de todos.",
       "por_que": {
         "A": "cree que la identidad exige que todos hablen igual",
         "B": "no ve que esas lenguas son parte de la identidad de todo el país",
-        "D": "reduce la diversidad a un uso económico"
+        "C": "reduce la diversidad a un uso económico"
       },
       "imagen": null
     },
@@ -1043,7 +1043,7 @@
       },
       "verbo": "reconocer",
       "tipo_contexto": "temporal",
-      "contexto": "Analice la siguiente información:\n\n| Año | Hecho |\n| --- | --- |\n| 1502 | Cristóbal Colón llega a la costa caribeña, cerca de lo que hoy es Limón. |\n| 1524 | Se funda Villa Bruselas, cerca del golfo de Nicoya. |\n| 1563 | Juan Vázquez de Coronado funda Cartago, en el valle del Guarco. |\n\nEstos hechos muestran cómo los españoles fueron recorriendo y ocupando el territorio.",
+      "contexto": "Analice la siguiente información:\n\n| Año | Hecho |\n| --- | --- |\n| 1502 | Cristóbal Colón llega a la costa caribeña, cerca de lo que hoy es Limón. |\n| 1524 | Se funda Villa Bruselas, cerca del golfo de Nicoya. |\n| 1563 | Juan Vázquez de Coronado funda Cartago, en el valle del Guarco. |\n\nLa tabla resume tres hechos ocurridos en lo que hoy es el territorio de Costa Rica.",
       "enunciado": "De acuerdo con la información anterior, ¿qué proceso de la historia de Costa Rica se ubica en esas fechas y lugares?",
       "opciones": {
         "A": "El periodo colonial",
@@ -1151,16 +1151,16 @@
       "contexto": "Lea el siguiente texto:\n\nValentina dibujó el centro de su pueblo: una plaza en el medio, la iglesia frente a ella y las calles cruzándose en ángulo recto, formando cuadras. Su abuelo le contó que muchos pueblos de Costa Rica se trazaron así desde hace siglos, siguiendo las normas que España usaba en sus colonias.",
       "enunciado": "Según el texto anterior, ¿qué aporte del periodo colonial se mantiene en la actualidad?",
       "opciones": {
-        "A": "La división del territorio en siete provincias.",
-        "B": "El cultivo de café alrededor de las ciudades.",
-        "C": "La organización de los poblados en torno a una plaza.",
+        "A": "El trazado en cuadrícula con un espacio central.",
+        "B": "La división del territorio en siete provincias.",
+        "C": "El cultivo de café alrededor de las ciudades.",
         "D": "La costumbre de hacer ferias en la plaza cada domingo."
       },
-      "clave": "C",
+      "clave": "A",
       "explicacion": "Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias son de la vida republicana, y el café, aunque llegó al final de la colonia, se extendió después de la independencia.",
       "por_que": {
-        "A": "confunde un aporte colonial con una organización de la vida republicana",
-        "B": "ubica en la colonia un cultivo que se extendió después de la independencia",
+        "B": "confunde un aporte colonial con una organización de la vida republicana",
+        "C": "ubica en la colonia un cultivo que se extendió después de la independencia",
         "D": "confunde un uso actual de la plaza con la forma colonial de trazar el pueblo"
       },
       "imagen": null
@@ -1172,7 +1172,7 @@
       "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
       "tema": "Conquista y colonia",
       "subtema": "Características y aportes de la colonia",
-      "nivel": "alto",
+      "nivel": "intermedio",
       "afirmacion": {
         "codigo": "2.8",
         "texto": "Reconoce las principales características de la colonia en Costa Rica y sus aportes a la sociedad actual."
@@ -1187,16 +1187,16 @@
       "enunciado": "De acuerdo con el texto anterior, ¿qué característica de la economía colonial se puede reconocer?",
       "opciones": {
         "A": "Se basaba en fábricas que exportaban chocolate a Europa.",
-        "B": "Usaba monedas de oro acuñadas en la ciudad de Cartago.",
-        "C": "Tenía al café como el producto más vendido de la provincia.",
-        "D": "Tenía cultivos que se sostenían con mano de obra forzada."
+        "B": "Tenía cultivos que se sostenían con mano de obra forzada.",
+        "C": "Usaba monedas de oro acuñadas en la ciudad de Cartago.",
+        "D": "Tenía al café como el producto más vendido de la provincia."
       },
-      "clave": "D",
+      "clave": "B",
       "explicacion": "El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café se volvió el producto principal hasta después de la independencia.",
       "por_que": {
         "A": "imagina una industria que no existía en la provincia",
-        "B": "no ve que el texto dice que se usaban semillas como moneda",
-        "C": "ubica en el siglo XVIII un cultivo que se volvió el principal hasta después de la independencia"
+        "C": "no ve que el texto dice que se usaban semillas como moneda",
+        "D": "ubica en el siglo XVIII un cultivo que se volvió el principal hasta después de la independencia"
       },
       "imagen": null
     },
@@ -1222,16 +1222,16 @@
       "enunciado": "La información anterior describe una sociedad en la que",
       "opciones": {
         "A": "todas las personas tenían los mismos derechos ante la ley.",
-        "B": "el trabajo de cada quien dependía solo de su propio esfuerzo.",
-        "C": "el origen de cada persona definía sus derechos.",
-        "D": "los cargos de gobierno se escogían por votación de todos."
+        "B": "el trabajo de cada quien dependía de su propio esfuerzo.",
+        "C": "los cargos de gobierno se escogían por votación de todos.",
+        "D": "el origen de cada persona definía sus derechos y su labor."
       },
-      "clave": "C",
+      "clave": "D",
       "explicacion": "En la colonia, nacer español, mestizo, indígena o africano decidía qué podía hacer cada persona. A eso se le llama estratificación social: una sociedad dividida en grupos con derechos desiguales.",
       "por_que": {
         "A": "contradice las diferencias entre grupos que describe el texto",
         "B": "no ve que el origen decidía qué podía hacer cada persona",
-        "D": "imagina en la colonia una forma de elegir que no existía"
+        "C": "imagina en la colonia una forma de elegir que no existía"
       },
       "imagen": null
     },
@@ -1291,16 +1291,16 @@
       "contexto": "Lea el siguiente texto:\n\nEl 15 de setiembre de 1821 se firmó en Guatemala el acta de independencia de Centroamérica. La noticia llegó a Cartago a mediados de octubre, y como la provincia no tenía un gobierno propio, los ayuntamientos de las ciudades tuvieron que reunirse para decidir cómo organizarse.",
       "enunciado": "Según el texto anterior, ¿cuál fue una consecuencia de la independencia para Costa Rica?",
       "opciones": {
-        "A": "La necesidad de crear sus propias formas de gobierno.",
-        "B": "La llegada de las ideas de libertad desde otros países.",
-        "C": "La firma del acta de independencia en Guatemala.",
+        "A": "La llegada de las ideas de libertad desde otros países.",
+        "B": "La firma del acta de independencia en Guatemala.",
+        "C": "La necesidad de crear sus propias formas de gobierno.",
         "D": "El regreso del gobierno de España a la provincia."
       },
-      "clave": "A",
+      "clave": "C",
       "explicacion": "Al independizarse, Costa Rica se quedó sin el gobierno español y tuvo que decidir cómo organizarse. Las ideas de libertad que venían de otros países fueron una causa, no una consecuencia.",
       "por_que": {
-        "B": "confunde una causa de la independencia con una consecuencia",
-        "C": "confunde el hecho mismo con lo que provocó después",
+        "A": "confunde una causa de la independencia con una consecuencia",
+        "B": "confunde el hecho mismo con lo que provocó después",
         "D": "contradice que la provincia quedó sin gobierno español"
       },
       "imagen": null
@@ -1326,17 +1326,17 @@
       "contexto": "Lea el siguiente texto:\n\nCon la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Más de doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.",
       "enunciado": "A partir del texto anterior, ¿cuáles principios de la independencia siguen vigentes en la escuela de Josué?",
       "opciones": {
-        "A": "La obediencia y la disciplina.",
-        "B": "La tradición y el respeto a los mayores.",
-        "C": "La libertad de comercio y la propiedad.",
-        "D": "La participación y la igualdad."
+        "A": "La participación y la igualdad.",
+        "B": "La obediencia y la disciplina.",
+        "C": "La tradición y el respeto a los mayores.",
+        "D": "La libertad de comercio y la propiedad."
       },
-      "clave": "D",
+      "clave": "A",
       "explicacion": "Votar es participar en las decisiones, y que todas las candidaturas tengan las mismas reglas es igualdad. Esos principios democráticos nacieron con la independencia y siguen vivos hoy.",
       "por_que": {
-        "A": "confunde el orden escolar con los principios democráticos",
-        "B": "confunde valores de convivencia con principios democráticos",
-        "C": "escoge ideas económicas que el texto no relaciona con la escuela"
+        "B": "confunde el orden escolar con los principios democráticos",
+        "C": "confunde valores de convivencia con principios democráticos",
+        "D": "escoge ideas económicas que el texto no relaciona con la escuela"
       },
       "imagen": null
     },
@@ -1356,22 +1356,22 @@
         "codigo": "2.11.1",
         "texto": "Reconoce la importancia del Pacto de Concordia, la negociación, el diálogo y el acuerdo como pilares del nuevo Estado Nación costarricense."
       },
-      "verbo": "reconocer",
+      "verbo": "inferir",
       "tipo_contexto": "cívico-político",
       "contexto": "Lea el siguiente texto:\n\nDespués de la independencia, los pueblos de Costa Rica no estaban de acuerdo: unos querían unirse a México y otros preferían gobernarse solos. Para evitar un enfrentamiento, enviaron representantes a una junta en la que discutieron y, el 1 de diciembre de 1821, firmaron el Pacto de Concordia, que organizó un gobierno provisional.",
-      "enunciado": "Según el texto anterior, ¿por qué el Pacto de Concordia es importante en la organización del Estado costarricense?",
+      "enunciado": "A partir del texto anterior, ¿qué enseñanza del Pacto de Concordia sigue siendo útil para la convivencia democrática?",
       "opciones": {
-        "A": "Unió de forma definitiva a Costa Rica con el Imperio mexicano.",
-        "B": "Le devolvió a España el gobierno de la provincia de Costa Rica.",
-        "C": "Creó un ejército para imponer una sola opinión en los pueblos.",
-        "D": "Mostró que las diferencias se podían resolver dialogando."
+        "A": "Aceptar lo que proponga el pueblo con más habitantes.",
+        "B": "Esperar que una autoridad de afuera decida por todos.",
+        "C": "Dejar que cada pueblo se gobierne aparte de los otros.",
+        "D": "Resolver las diferencias conversando y negociando."
       },
       "clave": "D",
       "explicacion": "Los pueblos pensaban distinto, pero en vez de pelear se sentaron a discutir y firmaron un pacto. Por eso el Pacto de Concordia es un ejemplo de diálogo y negociación en el nacimiento del Estado.",
       "por_que": {
-        "A": "confunde una de las posturas en discusión con lo que se acordó",
-        "B": "contradice que el pacto organizó un gobierno propio",
-        "C": "confunde el acuerdo con el uso de la fuerza"
+        "A": "confunde el acuerdo con imponer lo que quiere la mayoría",
+        "B": "confunde la autonomía con depender de México o de España",
+        "C": "confunde gobernarse con dividirse"
       },
       "imagen": null
     },
@@ -1397,16 +1397,16 @@
       "enunciado": "De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?",
       "opciones": {
         "A": "La salida al océano Pacífico por el golfo de Nicoya.",
-        "B": "Las expresiones musicales y de danza de esa zona.",
-        "C": "El aumento de las tierras para la ganadería del país.",
-        "D": "La firma de un acuerdo de límites con Nicaragua."
+        "B": "El aumento de las tierras para la ganadería del país.",
+        "C": "La firma de un acuerdo de límites con Nicaragua.",
+        "D": "Las expresiones musicales y de danza de esa zona."
       },
-      "clave": "B",
+      "clave": "D",
       "explicacion": "La música de marimba y los bailes tradicionales guanacastecos hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.",
       "por_que": {
         "A": "confunde un aporte geográfico con uno cultural",
-        "C": "confunde un aporte económico y territorial con uno cultural",
-        "D": "confunde la Anexión con un hecho político posterior"
+        "B": "confunde un aporte económico y territorial con uno cultural",
+        "C": "confunde la Anexión con un hecho político posterior"
       },
       "imagen": null
     },
@@ -1431,17 +1431,17 @@
       "contexto": "Lea la siguiente información:\n\nCada 25 de julio, en escuelas de todo el país se celebra la Anexión del Partido de Nicoya con bailes, comidas típicas y desfiles. En Guanacaste, la fecha se vive como una fiesta de su identidad regional, y en el resto del país se recuerda como el día en que el territorio nacional quedó más completo.",
       "enunciado": "A partir de la información anterior, ¿qué se puede inferir sobre la Anexión?",
       "opciones": {
-        "A": "Tiene importancia nada más para la identidad de Guanacaste.",
-        "B": "Separó a Guanacaste del resto del territorio nacional.",
-        "C": "Es una celebración que nació durante el periodo colonial.",
-        "D": "Une la identidad guanacasteca con la nacional."
+        "A": "Tiene importancia sobre todo para la identidad de Guanacaste.",
+        "B": "Hace que lo guanacasteco sea parte de lo costarricense.",
+        "C": "Separó a Guanacaste del resto del territorio nacional.",
+        "D": "Es una celebración que nació durante el periodo colonial."
       },
-      "clave": "D",
+      "clave": "B",
       "explicacion": "La Anexión se celebra en todo el país y en Guanacaste es una fiesta propia. Eso muestra que unió territorios y también identidades: lo guanacasteco es parte de lo costarricense.",
       "por_que": {
         "A": "no ve que la fecha se celebra en todo el país",
-        "B": "invierte el sentido de la Anexión",
-        "C": "ubica la Anexión en una época anterior a la independencia"
+        "C": "invierte el sentido de la Anexión",
+        "D": "ubica la Anexión en una época anterior a la independencia"
       },
       "imagen": null
     },
@@ -1466,16 +1466,16 @@
       "contexto": "Lea la siguiente información:\n\nEl Escudo Nacional muestra tres volcanes entre dos mares, con un barco navegando en cada uno. Al fondo sale el sol y arriba hay siete estrellas. Cuando Pablo lo dibujó para un trabajo, su maestra le pidió explicar qué parte del escudo representa la posición geográfica del país.",
       "enunciado": "¿Cuál parte del escudo debería señalar Pablo?",
       "opciones": {
-        "A": "Los dos mares",
-        "B": "Las siete estrellas",
-        "C": "Los tres volcanes",
+        "A": "Las siete estrellas",
+        "B": "Los tres volcanes",
+        "C": "Los dos mares",
         "D": "El sol que sale"
       },
-      "clave": "A",
+      "clave": "C",
       "explicacion": "Los dos mares del escudo son el Pacífico y el Caribe, y muestran que Costa Rica está entre dos océanos. Las estrellas representan las provincias y los volcanes, el relieve del país.",
       "por_que": {
-        "B": "confunde la posición del país con su división en provincias",
-        "C": "confunde el relieve con la posición entre dos océanos",
+        "A": "confunde la posición del país con su división en provincias",
+        "B": "confunde el relieve con la posición entre dos océanos",
         "D": "escoge un elemento que no representa la ubicación del país"
       },
       "imagen": null
@@ -1501,17 +1501,17 @@
       "contexto": "Lea el siguiente texto:\n\nEn 1856, el presidente Juan Rafael Mora llamó a defender el país del ejército filibustero de William Walker, que se había apoderado del gobierno de Nicaragua. Campesinos, artesanos y personas de todas las provincias se unieron al ejército. Al terminar la guerra, en 1857, Costa Rica había defendido su independencia.",
       "enunciado": "Según el texto anterior, ¿por qué la Campaña Nacional fue determinante en la consolidación del Estado costarricense?",
       "opciones": {
-        "A": "Porque Costa Rica ganó territorio nicaragüense al final de la guerra.",
-        "B": "Porque el ejército pasó a gobernar el país después de 1857.",
-        "C": "Porque las provincias se dividieron entre quienes apoyaban a Walker.",
-        "D": "Porque la defensa común del país unió a su gente."
+        "A": "Porque enfrentar juntos al invasor unió a la población del país.",
+        "B": "Porque Costa Rica ganó territorio nicaragüense al final de la guerra.",
+        "C": "Porque el ejército pasó a gobernar el país después de 1857.",
+        "D": "Porque después de la guerra se abolió el ejército en el país."
       },
-      "clave": "D",
+      "clave": "A",
       "explicacion": "Ante una amenaza externa, gente de todas las provincias luchó por el mismo país. Esa unión fortaleció el sentimiento de ser costarricenses y consolidó al Estado.",
       "por_que": {
-        "A": "inventa un resultado territorial que el texto no menciona",
-        "B": "confunde la defensa del país con un gobierno militar",
-        "C": "contradice la unión de todas las provincias que describe el texto"
+        "B": "inventa un resultado territorial que el texto no menciona",
+        "C": "confunde la defensa del país con un gobierno militar",
+        "D": "confunde la Campaña Nacional con un hecho de 1948"
       },
       "imagen": null
     },
@@ -1537,16 +1537,16 @@
       "enunciado": "La información anterior describe una consecuencia de la Campaña Nacional que fue",
       "opciones": {
         "A": "política, porque provocó un cambio de gobierno.",
-        "B": "social, porque cambió la vida de la población.",
-        "C": "territorial, porque el país perdió parte de su tierra.",
-        "D": "cultural, porque llegaron costumbres de otros lugares."
+        "B": "territorial, porque el país perdió parte de su tierra.",
+        "C": "cultural, porque llegaron costumbres de otros lugares.",
+        "D": "social, porque cambió la vida de la población."
       },
-      "clave": "B",
+      "clave": "D",
       "explicacion": "El cólera mató a miles de personas y dejó a muchas familias sin quien las sostuviera. Eso cambió la vida de la población: fue una consecuencia social de la guerra.",
       "por_que": {
         "A": "confunde el efecto en la población con un cambio de gobierno",
-        "C": "inventa una pérdida de territorio que el texto no menciona",
-        "D": "confunde el efecto de la epidemia con un cambio de costumbres"
+        "B": "inventa una pérdida de territorio que el texto no menciona",
+        "C": "confunde el efecto de la epidemia con un cambio de costumbres"
       },
       "imagen": null
     },
@@ -1606,15 +1606,15 @@
       "contexto": "Observe el siguiente esquema:\n\n[[figura]]\n\nEn la época de la Campaña Nacional, muchos viajeros cruzaban de un océano al otro por esta ruta: en barcos de vapor por el río y el lago, y en carretas por tierra. Por ella también le llegaban a Walker soldados y armas desde otros países.",
       "enunciado": "A partir de la información anterior, ¿por qué fue importante que el ejército costarricense tomara el control de la Vía del Tránsito?",
       "opciones": {
-        "A": "Porque así se cortaban los refuerzos para los filibusteros.",
-        "B": "Porque era el único camino entre San José y la capital de Nicaragua.",
+        "A": "Porque era el único camino entre San José y la capital de Nicaragua.",
+        "B": "Porque así se cortaban los refuerzos para los filibusteros.",
         "C": "Porque por esa ruta salía el café que Costa Rica vendía a Europa.",
         "D": "Porque de esa forma el río San Juan pasó a ser costarricense."
       },
-      "clave": "A",
+      "clave": "B",
       "explicacion": "Por la Vía del Tránsito llegaban soldados y armas para Walker. Al controlarla, Costa Rica le cortó la ayuda que venía de afuera y lo debilitó.",
       "por_que": {
-        "B": "confunde una ruta entre océanos con un camino entre capitales",
+        "A": "confunde una ruta entre océanos con un camino entre capitales",
         "C": "cambia el sentido militar de la ruta por uno comercial",
         "D": "confunde el control militar de la ruta con un cambio de fronteras"
       },
@@ -1644,17 +1644,17 @@
       "contexto": "Lea el siguiente texto:\n\nFrancisca Carrasco, conocida como Pancha Carrasco, marchó con el ejército durante la Campaña Nacional. En la batalla de Rivas atendió a soldados heridos, les llevó agua y alimentos y, según se cuenta, también tomó las armas para defender a sus compañeros.",
       "enunciado": "¿Cuál persona de la actualidad muestra un valor semejante al de Pancha Carrasco?",
       "opciones": {
-        "A": "Una deportista que gana una medalla en un torneo internacional.",
-        "B": "Una empresaria que abre una tienda nueva en su comunidad.",
-        "C": "Una cantante que compone canciones sobre la patria.",
-        "D": "Una socorrista que da primeros auxilios en una emergencia."
+        "A": "Una socorrista que da primeros auxilios en una emergencia.",
+        "B": "Una deportista que gana una medalla en un torneo internacional.",
+        "C": "Una empresaria que abre una tienda nueva en su comunidad.",
+        "D": "Una cantante que compone canciones sobre la patria."
       },
-      "clave": "D",
+      "clave": "A",
       "explicacion": "Pancha Carrasco se arriesgó para cuidar a otras personas en un momento difícil. Hoy, quienes dan primeros auxilios en una emergencia muestran ese mismo valor de servicio y solidaridad.",
       "por_que": {
-        "A": "confunde el servicio a los demás con el éxito personal",
-        "B": "confunde el servicio en un momento difícil con emprender un negocio",
-        "C": "confunde el amor por el país expresado en arte con ayudar en una emergencia"
+        "B": "confunde el servicio a los demás con el éxito personal",
+        "C": "confunde el servicio en un momento difícil con emprender un negocio",
+        "D": "confunde el amor por el país expresado en arte con ayudar en una emergencia"
       },
       "imagen": null
     },
@@ -1680,16 +1680,16 @@
       "enunciado": "¿Qué valor comparten Juan Santamaría y los bomberos de hoy?",
       "opciones": {
         "A": "La búsqueda de reconocimiento y fama.",
-        "B": "La entrega para proteger a los demás.",
-        "C": "La obediencia a cualquier orden recibida.",
-        "D": "El gusto por las situaciones de peligro."
+        "B": "La obediencia a las órdenes recibidas.",
+        "C": "El gusto por las situaciones de peligro.",
+        "D": "La entrega para proteger a los demás."
       },
-      "clave": "B",
+      "clave": "D",
       "explicacion": "Juan Santamaría arriesgó su vida por su país, y los bomberos se arriesgan para salvar a gente que ni conocen. Lo que los une es la entrega al servicio de los demás, no la fama ni el gusto por el peligro.",
       "por_que": {
         "A": "confunde el motivo de la acción con un posible resultado",
-        "C": "confunde la entrega voluntaria con solo obedecer",
-        "D": "confunde la valentía con buscar el riesgo por gusto"
+        "B": "confunde la entrega voluntaria con solo obedecer",
+        "C": "confunde la valentía con buscar el riesgo por gusto"
       },
       "imagen": null
     },
@@ -1711,20 +1711,20 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "temporal",
-      "contexto": "Lea el siguiente texto:\n\nEn 1886, el gobierno aprobó leyes para que la educación primaria quedara a cargo del Estado en todo el país. Se prepararon mejor los maestros, se abrieron nuevos colegios, como el Liceo de Costa Rica y el Colegio Superior de Señoritas, y se buscó que niñas y niños de todas las clases sociales pudieran estudiar.",
+      "contexto": "Lea el siguiente texto:\n\nEn 1886, el gobierno aprobó leyes para que las escuelas primarias de todo el país quedaran a cargo del Estado. Se prepararon mejor los maestros, se abrieron nuevos colegios, como el Liceo de Costa Rica y el Colegio Superior de Señoritas, y se buscó que niñas y niños de todas las clases sociales pudieran asistir a clases.",
       "enunciado": "La información anterior se refiere a la parte de las Reformas Liberales conocida como",
       "opciones": {
         "A": "leyes anticlericales.",
-        "B": "Constitución de 1871.",
-        "C": "garantías sociales.",
-        "D": "Reforma Educativa."
+        "B": "Reforma Educativa.",
+        "C": "Constitución de 1871.",
+        "D": "garantías sociales."
       },
-      "clave": "D",
+      "clave": "B",
       "explicacion": "Poner la educación en manos del Estado y abrir colegios fue la Reforma Educativa de 1886. Las garantías sociales son de la década de 1940, mucho después.",
       "por_que": {
         "A": "confunde los cambios en la educación con los cambios entre el Estado y la Iglesia",
-        "B": "confunde una ley sobre la educación con la constitución de la época",
-        "C": "ubica en el siglo XIX un logro de la década de 1940"
+        "C": "confunde una ley sobre la educación con la constitución de la época",
+        "D": "ubica en el siglo XIX un logro de la década de 1940"
       },
       "imagen": null
     },
@@ -1746,19 +1746,19 @@
       },
       "verbo": "inferir",
       "tipo_contexto": "cívico-político",
-      "contexto": "Lea el siguiente texto:\n\nA finales del siglo XIX, con las leyes anticlericales, el Estado costarricense asumió tareas que antes llevaba la Iglesia católica, como registrar los nacimientos, los matrimonios y las defunciones. Desde entonces, esos registros se hacen ante oficinas del Estado y valen para todas las personas, sin importar su religión.",
+      "contexto": "Lea el siguiente texto:\n\nEn la década de 1880, con las reformas liberales, el Estado costarricense asumió tareas que antes llevaba la Iglesia católica, como registrar los nacimientos, los matrimonios y las defunciones. Desde entonces, esos registros se hacen ante oficinas del Estado y valen para todas las personas, sin importar su religión.",
       "enunciado": "Según el texto anterior, ¿qué buscaban los gobiernos liberales con esas leyes?",
       "opciones": {
         "A": "Prohibir que las personas practicaran la religión católica.",
-        "B": "Devolverle a la Iglesia el control del gobierno del país.",
+        "B": "Cobrar un impuesto por cada nacimiento y matrimonio.",
         "C": "Unir al Estado y a la Iglesia en una sola institución.",
-        "D": "Que el Estado fuera la autoridad en los asuntos civiles."
+        "D": "Poner en manos civiles lo que hacía la Iglesia."
       },
       "clave": "D",
-      "explicacion": "Las leyes anticlericales pasaron al Estado tareas que antes hacía la Iglesia, como registrar a las personas. No prohibieron la religión: buscaban que el Estado fuera la autoridad en los asuntos civiles.",
+      "explicacion": "Las reformas liberales pasaron al Estado tareas que antes hacía la Iglesia, como registrar a las personas. No prohibieron la religión: buscaban que el Estado fuera la autoridad en los asuntos civiles.",
       "por_que": {
         "A": "exagera el cambio: las leyes no prohibían la religión",
-        "B": "invierte el propósito de las leyes",
+        "B": "confunde un trámite civil con un cobro, que el texto no menciona",
         "C": "confunde la separación de tareas con una fusión"
       },
       "imagen": null
@@ -1784,17 +1784,17 @@
       "contexto": "Lea el siguiente texto:\n\nLa mamá de Isaac trabaja en una empresa. Cada mes, una parte de su salario y un aporte de la empresa se pagan a la Caja. Gracias a eso, cuando Isaac se enfermó, lo atendieron en el Ebais y en el hospital sin que la familia tuviera que pagar la consulta.",
       "enunciado": "La situación anterior se relaciona con uno de los logros de la década de 1940, conocido como",
       "opciones": {
-        "A": "la seguridad social.",
-        "B": "la educación gratuita y obligatoria.",
-        "C": "el derecho al voto de las mujeres.",
-        "D": "la abolición del ejército."
+        "A": "la educación gratuita y obligatoria.",
+        "B": "el derecho al voto de las mujeres.",
+        "C": "la abolición del ejército.",
+        "D": "la seguridad social."
       },
-      "clave": "A",
+      "clave": "D",
       "explicacion": "La Caja Costarricense de Seguro Social, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.",
       "por_que": {
-        "B": "confunde la atención médica con un logro educativo anterior",
-        "C": "escoge un logro político que no tiene relación con la situación",
-        "D": "escoge un hecho político que no tiene relación con la salud"
+        "A": "confunde la atención médica con un logro educativo anterior",
+        "B": "escoge un logro político que no tiene relación con la situación",
+        "C": "escoge un hecho político que no tiene relación con la salud"
       },
       "imagen": null
     },
@@ -1816,18 +1816,18 @@
       },
       "verbo": "inferir",
       "tipo_contexto": "cívico-político",
-      "contexto": "Lea la siguiente información:\n\nDon Rodrigo trabaja en una construcción. Su contrato dice que su jornada es de ocho horas diarias, que tiene un día de descanso a la semana y que su salario no puede ser menor que el mínimo que fija la ley. Si lo despiden sin una causa justa, tiene derecho a una indemnización.",
+      "contexto": "Lea la siguiente información:\n\nDon Rodrigo trabaja para una empresa constructora privada. Su contrato dice que su jornada es de ocho horas diarias, que tiene un día de descanso a la semana y que su salario no puede ser menor que el mínimo que fija la ley. Si lo despiden sin una causa justa, tiene derecho a una indemnización.",
       "enunciado": "A partir de la información anterior, ¿qué impacto tienen hoy el Código de Trabajo y las garantías sociales de 1943?",
       "opciones": {
-        "A": "Permiten que cada patrono fije la jornada que prefiera.",
-        "B": "Ponen límites para que el empleo sea digno y justo.",
-        "C": "Protegen nada más a quienes trabajan para el Estado.",
-        "D": "Garantizan que a nadie se le pueda despedir nunca."
+        "A": "Ponen límites para que el empleo sea digno y justo.",
+        "B": "Permiten que cada patrono fije la jornada que prefiera.",
+        "C": "Protegen sobre todo a quienes trabajan para el Estado.",
+        "D": "Garantizan que a las personas no se les pueda despedir."
       },
-      "clave": "B",
+      "clave": "A",
       "explicacion": "La jornada máxima de ocho horas, el descanso semanal y el salario mínimo quedaron protegidos por las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.",
       "por_que": {
-        "A": "contradice el límite de ocho horas del contrato",
+        "B": "contradice el límite de ocho horas del contrato",
         "C": "no ve que don Rodrigo trabaja para una empresa privada",
         "D": "exagera: el despido existe, pero sin causa justa da derecho a indemnización"
       },
@@ -1854,17 +1854,17 @@
       "contexto": "Lea el siguiente texto:\n\nEn un barrio, la asociación de vecinos organizó un programa para que personas voluntarias visiten cada semana a señores y señoras de más de setenta años que viven solos. Les ayudan con las compras, conversan con ellos y avisan al Ebais si notan que alguno está enfermo.",
       "enunciado": "Según el texto anterior, ¿cuál derecho de la Constitución Política se está apoyando?",
       "opciones": {
-        "A": "La protección especial a las personas adultas mayores.",
-        "B": "La libertad de comercio de las personas de la comunidad.",
-        "C": "La igualdad de todas las personas ante la ley.",
-        "D": "El derecho a la educación de niñas y niños."
+        "A": "La libertad de comercio de las personas de la comunidad.",
+        "B": "La igualdad de todas las personas ante la ley.",
+        "C": "El derecho a la educación de niñas y niños.",
+        "D": "La protección especial a las personas adultas mayores."
       },
-      "clave": "A",
+      "clave": "D",
       "explicacion": "La Constitución dice que el Estado debe proteger de forma especial a las personas adultas mayores. El programa de los vecinos ayuda a cumplir ese derecho, cuidando a quienes viven solos.",
       "por_que": {
-        "B": "se fija en que los voluntarios ayudan con las compras, pero ese no es el derecho que se apoya",
-        "C": "escoge un derecho general que no describe la situación",
-        "D": "escoge un derecho de otro grupo de la población"
+        "A": "se fija en que los voluntarios ayudan con las compras, pero ese no es el derecho que se apoya",
+        "B": "escoge un derecho general que no describe la situación",
+        "C": "escoge un derecho de otro grupo de la población"
       },
       "imagen": null
     },
@@ -1889,17 +1889,17 @@
       "contexto": "Lea la siguiente información:\n\nEn una escuela, dos estudiantes tenían religiones distintas y otro compañero se burlaba de ellos. La directora reunió al grupo y explicó que en Costa Rica cada persona puede tener sus propias creencias y opiniones, y que nadie puede ser tratado de forma distinta por eso.",
       "enunciado": "¿Cuáles derechos fundamentales explicó la directora?",
       "opciones": {
-        "A": "La libertad de pensamiento y la igualdad ante la ley.",
-        "B": "El derecho a la vida y a recibir atención médica oportuna.",
-        "C": "La protección especial a la madre y a la niñez.",
-        "D": "El derecho a disfrutar del arte y de la cultura."
+        "A": "La libertad de reunión y el derecho a recibir educación gratuita.",
+        "B": "La libertad de pensamiento y la igualdad ante la ley.",
+        "C": "El derecho de petición y la protección especial a la niñez.",
+        "D": "La igualdad ante la ley y la libertad de reunión pacífica."
       },
-      "clave": "A",
+      "clave": "B",
       "explicacion": "Tener las propias creencias y opiniones es la libertad de pensamiento, y que nadie sea tratado distinto por eso es igualdad ante la ley. Los dos están en la Constitución de 1949.",
       "por_que": {
-        "B": "escoge derechos que no tienen relación con la situación",
+        "A": "se fija en que la directora reunió al grupo, no en lo que explicó",
         "C": "se fija en que son estudiantes y no en lo que se defendió",
-        "D": "escoge un derecho que la directora no mencionó"
+        "D": "acierta en la igualdad, pero confunde la reunión del grupo con el derecho explicado"
       },
       "imagen": null
     },
@@ -1924,7 +1924,7 @@
       "contexto": "Lea el siguiente texto:\n\nMariana publicó en el chat del grupo su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.",
       "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre la libertad de expresión?",
       "opciones": {
-        "A": "Permite publicar cualquier cosa cuando se hace en un chat.",
+        "A": "Permite publicar lo que uno quiera cuando se hace en un chat.",
         "B": "Tiene límites y no permite dañar la dignidad de otra persona.",
         "C": "Es un derecho de las personas adultas, no de los estudiantes.",
         "D": "Prohíbe dar opiniones sobre las decisiones de la escuela."
@@ -1956,18 +1956,18 @@
       },
       "verbo": "relacionar",
       "tipo_contexto": "cívico-político",
-      "contexto": "Lea la siguiente información:\n\nLos vecinos de una comunidad están preocupados porque el puente que usan los escolares está en mal estado. Algunos proponen escribir una carta a la municipalidad, firmada por todos, para pedir que lo reparen. Otros quieren organizar una reunión pacífica frente al edificio municipal para que los escuchen.",
+      "contexto": "Lea la siguiente información:\n\nLos vecinos de una comunidad están preocupados porque el puente que usan los escolares está en mal estado. Algunos proponen escribir una carta a la municipalidad, firmada por todos, para pedir que lo reparen. Otros quieren juntarse frente al edificio municipal, sin violencia, para que los escuchen.",
       "enunciado": "¿Qué derechos constitucionales están ejerciendo los vecinos?",
       "opciones": {
-        "A": "El de votar y el de elegir alcalde.",
-        "B": "El de petición y el de reunirse.",
+        "A": "El de petición y el de reunión.",
+        "B": "El de votar y el de elegir alcalde.",
         "C": "El de propiedad y el de comercio.",
         "D": "El de salud y el de educación."
       },
-      "clave": "B",
+      "clave": "A",
       "explicacion": "Pedir por escrito a una institución es el derecho de petición, y juntarse sin violencia para hacerse oír es el derecho de reunión. Los dos están en la Constitución y se usan en la vida diaria.",
       "por_que": {
-        "A": "confunde pedir algo a una institución con elegir autoridades",
+        "B": "confunde pedir algo a una institución con elegir autoridades",
         "C": "escoge derechos que no tienen relación con la situación",
         "D": "se fija en que el puente lo usan escolares y no en lo que hacen los vecinos"
       },
@@ -1994,15 +1994,15 @@
       "contexto": "Lea el siguiente texto:\n\nEn la escuela de Fabiola se hizo un simulacro de evacuación por terremoto. Cada grupo salió por la ruta señalada, sin correr, hasta la zona de seguridad de la cancha. Después, el comité de gestión del riesgo revisó cuánto tardaron y les pidió a las familias preparar en casa un plan con un punto de reunión.",
       "enunciado": "Según el texto anterior, ¿por qué la gestión del riesgo es un espacio de participación ciudadana?",
       "opciones": {
-        "A": "Porque estar preparados ante una emergencia es tarea de todos.",
-        "B": "Porque solo los bomberos deben saber qué hacer en un sismo.",
+        "A": "Porque saber qué hacer en un sismo es tarea de los bomberos.",
+        "B": "Porque estar preparados ante una emergencia es tarea de todos.",
         "C": "Porque los simulacros permiten saber cuándo habrá un terremoto.",
         "D": "Porque así la escuela cumple un requisito y no hace falta más."
       },
-      "clave": "A",
+      "clave": "B",
       "explicacion": "En un simulacro participan estudiantes, docentes y familias, y cada quien aprende qué hacer. Nadie puede predecir un terremoto, pero sí prepararse: por eso la gestión del riesgo es de todos.",
       "por_que": {
-        "B": "deja la responsabilidad solo en los cuerpos de socorro",
+        "A": "deja la responsabilidad solo en los cuerpos de socorro",
         "C": "confunde prepararse con predecir un sismo",
         "D": "reduce la gestión del riesgo a un trámite"
       },
@@ -2029,15 +2029,15 @@
       "contexto": "Lea el siguiente texto:\n\nAl comprar unos zapatos, el papá de Gabriel pidió la factura electrónica. El vendedor le ofreció un descuento si la compra se hacía sin factura. El papá no aceptó y le explicó a Gabriel que, con los impuestos de cada compra, el Estado paga escuelas, carreteras y hospitales.",
       "enunciado": "A partir del texto anterior, ¿qué actitud de cultura fiscal mostró el papá de Gabriel?",
       "opciones": {
-        "A": "Cuidar que los impuestos lleguen a servicios para todos.",
-        "B": "Ahorrar dinero aunque los impuestos de la compra no se paguen.",
-        "C": "Pagar nada más los impuestos que le parezcan justos.",
-        "D": "Pedir la factura únicamente en las compras muy grandes."
+        "A": "Ahorrar dinero aunque los impuestos de la compra no se paguen.",
+        "B": "Cuidar que los impuestos lleguen a servicios para todos.",
+        "C": "Pagar los impuestos que a cada quien le parezcan justos.",
+        "D": "Pedir la factura cuando la compra es muy grande."
       },
-      "clave": "A",
+      "clave": "B",
       "explicacion": "Pedir factura asegura que el impuesto de la compra llegue al Estado. Con ese dinero se pagan escuelas, carreteras y hospitales que usamos todas las personas.",
       "por_que": {
-        "B": "se queda con el descuento y no ve lo que se pierde",
+        "A": "se queda con el descuento y no ve lo que se pierde",
         "C": "confunde cumplir con los impuestos con escoger cuáles pagar",
         "D": "cree que las compras pequeñas no aportan"
       },
@@ -2064,15 +2064,15 @@
       "contexto": "Considere la siguiente información:\n\nUn grupo de sexto anotó algunos desafíos que enfrenta hoy la sociedad costarricense.\n\n| Desafío | Ejemplo |\n| --- | --- |\n| 1 | Muchas personas jóvenes buscan empleo y no lo encuentran. |\n| 2 | En las elecciones, una parte de las personas que pueden votar no lo hace. |\n| 3 | Algunos ríos de las ciudades reciben aguas sucias y basura. |",
       "enunciado": "¿Cuál opción clasifica correctamente esos desafíos?",
       "opciones": {
-        "A": "1 político, 2 económico y 3 ambiental",
-        "B": "1 económico, 2 político y 3 ambiental",
+        "A": "1 económico, 2 político y 3 ambiental",
+        "B": "1 político, 2 económico y 3 ambiental",
         "C": "1 económico, 2 ambiental y 3 político",
         "D": "1 ambiental, 2 político y 3 económico"
       },
-      "clave": "B",
+      "clave": "A",
       "explicacion": "La falta de empleo es un desafío económico, no ir a votar es un desafío político y la contaminación de los ríos es ambiental. Clasificarlos ayuda a pensar quién y cómo puede resolver cada uno.",
       "por_que": {
-        "A": "confunde el desempleo con un problema político",
+        "B": "confunde el desempleo con un problema político",
         "C": "confunde la contaminación con un problema político",
         "D": "confunde el desempleo con un problema ambiental"
       },
@@ -2099,17 +2099,17 @@
       "contexto": "Lea el siguiente texto:\n\nEn un cantón, muchas personas mayores se sentían solas y no sabían usar el celular para pedir sus citas médicas. Un grupo de colegiales y escolares propuso enseñarles los sábados en la biblioteca pública, y la municipalidad les prestó computadoras. Al cabo de unos meses, esos vecinos ya pedían sus citas sin ayuda.",
       "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre la solución de los desafíos sociales?",
       "opciones": {
-        "A": "Solo el Estado puede resolverlos, con leyes nuevas.",
-        "B": "La comunidad organizada puede ayudar a resolverlos.",
-        "C": "La gente joven no tiene ninguna responsabilidad en ellos.",
-        "D": "Se resuelven solos con el paso del tiempo."
+        "A": "El Estado es el que debe resolverlos con leyes nuevas.",
+        "B": "La comunidad organizada ayuda a resolverlos.",
+        "C": "Las personas mayores son las que deben buscar cómo resolverlos.",
+        "D": "La municipalidad los resuelve sin ayuda de los vecinos."
       },
       "clave": "B",
       "explicacion": "Los estudiantes vieron un problema, propusieron una solución y la municipalidad los apoyó. Así se ve que los desafíos sociales se pueden enfrentar con la participación de la comunidad.",
       "por_que": {
         "A": "no ve que la solución salió de la comunidad",
-        "C": "contradice que fueron estudiantes quienes propusieron la solución",
-        "D": "ignora que hizo falta una acción para resolverlo"
+        "C": "deja el problema en manos de quienes lo sufren",
+        "D": "confunde el apoyo municipal con resolver sola el problema"
       },
       "imagen": null
     }
