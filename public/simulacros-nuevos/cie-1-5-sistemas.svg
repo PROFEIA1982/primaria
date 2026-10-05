@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 780 390' width='780' height='390' role='img' font-family='Arial, Helvetica, sans-serif'>
+<title>Esquema de cómo pulmones, intestino delgado, corazón con vasos sanguíneos y músculos intercambian oxígeno, nutrientes y dióxido de carbono</title>
+<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#1f2937'/></marker></defs>
+<rect x='0' y='0' width='780' height='390' fill='#ffffff'/>
+<rect x='30' y='40' width='170' height='60' rx='10' fill='#e0f2fe' stroke='#1f2937' stroke-width='2'/>
+<text x='115.0' y='75.6' font-size='16' text-anchor='middle' font-weight='bold' fill='#1f2937'>Pulmones</text>
+<rect x='30' y='300' width='170' height='60' rx='10' fill='#fef3c7' stroke='#1f2937' stroke-width='2'/>
+<text x='115.0' y='325.6' font-size='16' text-anchor='middle' font-weight='bold' fill='#1f2937'>Intestino</text>
+<text x='115.0' y='345.6' font-size='16' text-anchor='middle' font-weight='bold' fill='#1f2937'>delgado</text>
+<rect x='300' y='160' width='200' height='80' rx='10' fill='#fee2e2' stroke='#1f2937' stroke-width='2'/>
+<text x='400.0' y='195.6' font-size='16' text-anchor='middle' font-weight='bold' fill='#1f2937'>Corazón y vasos</text>
+<text x='400.0' y='215.6' font-size='16' text-anchor='middle' font-weight='bold' fill='#1f2937'>sanguíneos</text>
+<rect x='600' y='160' width='150' height='80' rx='10' fill='#dcfce7' stroke='#1f2937' stroke-width='2'/>
+<text x='675.0' y='205.6' font-size='16' text-anchor='middle' font-weight='bold' fill='#1f2937'>Músculos</text>
+<line x1='200' y1='62' x2='330' y2='158' stroke='#1f2937' stroke-width='2.5' marker-end='url(#fl)'/>
+<text x='300' y='92' font-size='15' text-anchor='start' font-weight='normal' fill='#1f2937'>oxígeno</text>
+<line x1='318' y1='172' x2='186' y2='102' stroke='#1f2937' stroke-width='2.5' marker-end='url(#fl)'/>
+<text x='170' y='150' font-size='15' text-anchor='start' font-weight='normal' fill='#1f2937'>dióxido de carbono</text>
+<line x1='200' y1='325' x2='330' y2='242' stroke='#1f2937' stroke-width='2.5' marker-end='url(#fl)'/>
+<text x='275' y='300' font-size='15' text-anchor='start' font-weight='normal' fill='#1f2937'>nutrientes</text>
+<line x1='500' y1='183' x2='598' y2='183' stroke='#1f2937' stroke-width='2.5' marker-end='url(#fl)'/>
+<text x='550' y='150' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>oxígeno y</text>
+<text x='550' y='168' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>nutrientes</text>
+<line x1='600' y1='220' x2='502' y2='220' stroke='#1f2937' stroke-width='2.5' marker-end='url(#fl)'/>
+<text x='550' y='255' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>dióxido de</text>
+<text x='550' y='273' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>carbono</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 320' width='800' height='320' role='img' font-family='Arial, Helvetica, sans-serif'>
+<title>El Sol, la Tierra y la Luna alineados en ese orden; la Luna se encuentra dentro de la sombra de la Tierra</title>
+<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#1f2937'/></marker></defs>
+<rect x='0' y='0' width='800' height='320' fill='#ffffff'/>
+<polygon points='445,138 445,222 760,190 760,170' fill='#9ca3af' stroke='#1f2937' stroke-width='1.5' stroke-dasharray='6 4'/>
+<text x='600' y='245' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>sombra de la Tierra</text>
+<line x1='170' y1='110' x2='380' y2='145.0' stroke='#1f2937' stroke-width='2' marker-end='url(#fl)'/>
+<line x1='170' y1='180' x2='380' y2='180' stroke='#1f2937' stroke-width='2' marker-end='url(#fl)'/>
+<line x1='170' y1='250' x2='380' y2='215.0' stroke='#1f2937' stroke-width='2' marker-end='url(#fl)'/>
+<circle cx='100' cy='180' r='75' fill='#fde68a' stroke='#1f2937' stroke-width='2.5'/>
+<text x='100' y='186' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Sol</text>
+<circle cx='420' cy='180' r='42' fill='#bfdbfe' stroke='#1f2937' stroke-width='2.5'/>
+<text x='420' y='245' font-size='18' text-anchor='middle' font-weight='bold' fill='#1f2937'>Tierra</text>
+<circle cx='690' cy='180' r='16' fill='#6b7280' stroke='#1f2937' stroke-width='2.5'/>
+<text x='690' y='150' font-size='18' text-anchor='middle' font-weight='bold' fill='#1f2937'>Luna</text>
+<text x='400' y='300' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>Esquema sin escala</text>
+</svg>

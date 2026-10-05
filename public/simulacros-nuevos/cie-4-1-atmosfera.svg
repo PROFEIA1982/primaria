@@ -1,0 +1,26 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 515' width='640' height='515' role='img' font-family='Arial, Helvetica, sans-serif'>
+<title>Capas de la atmósfera numeradas del 1 al 4 según su altura: capa 1 hasta unos 12 km, capa 2 hasta unos 50 km, capa 3 hasta unos 80 km y capa 4 por encima</title>
+<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#1f2937'/></marker></defs>
+<rect x='0' y='0' width='640' height='515' fill='#ffffff'/>
+<line x1='170' y1='480' x2='170' y2='50' stroke='#1f2937' stroke-width='2'/>
+<rect x='180' y='432' width='420' height='48' fill='#dbeafe' stroke='#1f2937' stroke-width='2'/>
+<text x='390' y='464.0' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Capa 1</text>
+<rect x='180' y='280' width='420' height='152' fill='#e0e7ff' stroke='#1f2937' stroke-width='2'/>
+<text x='390' y='364.0' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Capa 2</text>
+<rect x='180' y='160' width='420' height='120' fill='#ede9fe' stroke='#1f2937' stroke-width='2'/>
+<text x='390' y='228.0' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Capa 3</text>
+<rect x='180' y='40' width='420' height='120' fill='#fae8ff' stroke='#1f2937' stroke-width='2'/>
+<text x='390' y='108.0' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Capa 4</text>
+<line x1='162' y1='480' x2='178' y2='480' stroke='#1f2937' stroke-width='2'/>
+<text x='150' y='486' font-size='16' text-anchor='end' font-weight='normal' fill='#1f2937'>0 km</text>
+<line x1='162' y1='432' x2='178' y2='432' stroke='#1f2937' stroke-width='2'/>
+<text x='150' y='438' font-size='16' text-anchor='end' font-weight='normal' fill='#1f2937'>unos 12 km</text>
+<line x1='162' y1='280' x2='178' y2='280' stroke='#1f2937' stroke-width='2'/>
+<text x='150' y='286' font-size='16' text-anchor='end' font-weight='normal' fill='#1f2937'>unos 50 km</text>
+<line x1='162' y1='160' x2='178' y2='160' stroke='#1f2937' stroke-width='2'/>
+<text x='150' y='166' font-size='16' text-anchor='end' font-weight='normal' fill='#1f2937'>unos 80 km</text>
+<text x='150' y='54' font-size='16' text-anchor='end' font-weight='normal' fill='#1f2937'>más arriba</text>
+<rect x='180' y='480' width='420' height='22' fill='#d6d3d1' stroke='#1f2937' stroke-width='2'/>
+<text x='390' y='497' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>superficie terrestre</text>
+<text x='210' y='22' font-size='16' text-anchor='start' font-weight='bold' fill='#1f2937'>Altura sobre la superficie</text>
+</svg>

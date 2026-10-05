@@ -1,0 +1,36 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 320' width='720' height='320' role='img' font-family='Arial, Helvetica, sans-serif'>
+<title>Tabla de distancia y tiempo de cuatro ciclistas: 1, 600 m en 100 s; 2, 800 m en 200 s; 3, 900 m en 180 s; 4, 300 m en 75 s</title>
+<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#1f2937'/></marker></defs>
+<rect x='0' y='0' width='720' height='320' fill='#ffffff'/>
+<text x='360' y='34' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Recorridos en bicicleta</text>
+<rect x='40' y='55' width='200' height='50' fill='#e5e7eb' stroke='#1f2937' stroke-width='2'/>
+<text x='140.0' y='87' font-size='18' text-anchor='middle' font-weight='bold' fill='#1f2937'>Ciclista</text>
+<rect x='240' y='55' width='240' height='50' fill='#e5e7eb' stroke='#1f2937' stroke-width='2'/>
+<text x='360.0' y='87' font-size='18' text-anchor='middle' font-weight='bold' fill='#1f2937'>Distancia recorrida</text>
+<rect x='480' y='55' width='200' height='50' fill='#e5e7eb' stroke='#1f2937' stroke-width='2'/>
+<text x='580.0' y='87' font-size='18' text-anchor='middle' font-weight='bold' fill='#1f2937'>Tiempo</text>
+<rect x='40' y='105' width='200' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='140.0' y='137' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>Ciclista 1</text>
+<rect x='240' y='105' width='240' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='360.0' y='137' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>600 m</text>
+<rect x='480' y='105' width='200' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='580.0' y='137' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>100 s</text>
+<rect x='40' y='155' width='200' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='140.0' y='187' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>Ciclista 2</text>
+<rect x='240' y='155' width='240' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='360.0' y='187' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>800 m</text>
+<rect x='480' y='155' width='200' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='580.0' y='187' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>200 s</text>
+<rect x='40' y='205' width='200' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='140.0' y='237' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>Ciclista 3</text>
+<rect x='240' y='205' width='240' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='360.0' y='237' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>900 m</text>
+<rect x='480' y='205' width='200' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='580.0' y='237' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>180 s</text>
+<rect x='40' y='255' width='200' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='140.0' y='287' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>Ciclista 4</text>
+<rect x='240' y='255' width='240' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='360.0' y='287' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>300 m</text>
+<rect x='480' y='255' width='200' height='50' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='580.0' y='287' font-size='18' text-anchor='middle' font-weight='normal' fill='#1f2937'>75 s</text>
+</svg>

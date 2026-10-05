@@ -1,0 +1,41 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 370' width='800' height='370' role='img' font-family='Arial, Helvetica, sans-serif'>
+<title>Tres situaciones de transmisión del calor: manos frente a una fogata sin tocarla, cuchara de metal en una bebida caliente y aire que sube y baja alrededor de un calentador</title>
+<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#1f2937'/></marker></defs>
+<rect x='0' y='0' width='800' height='370' fill='#ffffff'/>
+<rect x='20' y='20' width='240' height='330' rx='12' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='140' y='52' font-size='19' text-anchor='middle' font-weight='bold' fill='#1f2937'>Situación 1</text>
+<rect x='280' y='20' width='240' height='330' rx='12' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='400' y='52' font-size='19' text-anchor='middle' font-weight='bold' fill='#1f2937'>Situación 2</text>
+<rect x='540' y='20' width='240' height='330' rx='12' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
+<text x='660' y='52' font-size='19' text-anchor='middle' font-weight='bold' fill='#1f2937'>Situación 3</text>
+<polygon points='70,270 95,190 120,270' fill='#fdba74' stroke='#1f2937' stroke-width='2'/>
+<polygon points='85,270 100,215 115,270' fill='#fde68a' stroke='#1f2937' stroke-width='1.5'/>
+<line x1='60' y1='275' x2='130' y2='275' stroke='#1f2937' stroke-width='6'/>
+<path d='M135,205 q8,-8 16,0 t16,0 t16,0' fill='none' stroke='#1f2937' stroke-width='2'/>
+<path d='M135,230 q8,-8 16,0 t16,0 t16,0' fill='none' stroke='#1f2937' stroke-width='2'/>
+<path d='M135,255 q8,-8 16,0 t16,0 t16,0' fill='none' stroke='#1f2937' stroke-width='2'/>
+<rect x='190' y='195' width='45' height='70' rx='18' fill='#fde7d4' stroke='#1f2937' stroke-width='2'/>
+<text x='212' y='290' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>manos</text>
+<text x='140' y='318' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>Manos frente a la</text>
+<text x='140' y='337' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>fogata, sin tocarla</text>
+<path d='M330,170 L340,270 L430,270 L440,170 Z' fill='#e5e7eb' stroke='#1f2937' stroke-width='2'/>
+<path d='M440,190 q35,10 0,50' fill='none' stroke='#1f2937' stroke-width='3'/>
+<line x1='335' y1='185' x2='435' y2='185' stroke='#1f2937' stroke-width='1.5' stroke-dasharray='6 4'/>
+<text x='360' y='215' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>bebida</text>
+<text x='360' y='233' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>caliente</text>
+<line x1='400' y1='240' x2='480' y2='90' stroke='#1f2937' stroke-width='7' stroke-linecap='round'/>
+<text x='480' y='80' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>mango</text>
+<line x1='420' y1='175' x2='465' y2='98' stroke='#1f2937' stroke-width='2.5' marker-end='url(#fl)'/>
+<text x='400' y='318' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>Cuchara de metal en</text>
+<text x='400' y='337' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>una bebida caliente</text>
+<rect x='625' y='245' width='70' height='35' rx='5' fill='#fca5a5' stroke='#1f2937' stroke-width='2'/>
+<text x='660' y='268' font-size='14' text-anchor='middle' font-weight='normal' fill='#1f2937'>calentador</text>
+<line x1='660' y1='240' x2='660' y2='95' stroke='#1f2937' stroke-width='3' marker-end='url(#fl)'/>
+<text x='660' y='82' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>aire caliente</text>
+<line x1='575' y1='95' x2='575' y2='240' stroke='#1f2937' stroke-width='3' marker-end='url(#fl)' stroke-dasharray='8 5'/>
+<line x1='745' y1='95' x2='745' y2='240' stroke='#1f2937' stroke-width='3' marker-end='url(#fl)' stroke-dasharray='8 5'/>
+<text x='600' y='160' font-size='15' text-anchor='start' font-weight='normal' fill='#1f2937'>aire</text>
+<text x='600' y='178' font-size='15' text-anchor='start' font-weight='normal' fill='#1f2937'>frío</text>
+<text x='660' y='318' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>Aire alrededor de un</text>
+<text x='660' y='337' font-size='15' text-anchor='middle' font-weight='normal' fill='#1f2937'>calentador encendido</text>
+</svg>

@@ -1,0 +1,2138 @@
+{
+  "simulacro": {
+    "slug": "nuevo-ciencias-1",
+    "materia": "ciencias",
+    "numero": 1,
+    "titulo": "Simulacro nuevo 1",
+    "preguntas": 60,
+    "segundos_por_item": 180,
+    "barajar_opciones": false,
+    "version": "2026-10-05"
+  },
+  "items": [
+    {
+      "id": "cie-1-1-a",
+      "orden": 1,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Niveles de organización del cuerpo humano",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.1",
+        "texto": "Analiza los niveles de organización del cuerpo humano, para la comprensión de su funcionamiento integral."
+      },
+      "evidencia": {
+        "codigo": "1.1.1",
+        "texto": "Identifica la definición y función de las partes de la célula."
+      },
+      "verbo": "identificar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Lea la siguiente información:\n\nEn una feria científica, un grupo de sexto año comparó una célula del cuerpo humano con una ciudad rodeada por una muralla. Explicaron que la muralla tiene portones vigilados: permite que entren el agua y los nutrientes que la ciudad necesita y que salgan los desechos, pero impide el paso de sustancias que podrían dañarla. Así, la muralla separa lo que está dentro de la ciudad de lo que está afuera.",
+      "enunciado": "En la comparación anterior, la muralla con portones vigilados representa",
+      "opciones": {
+        "A": "el núcleo de la célula.",
+        "B": "el citoplasma.",
+        "C": "la pared celular.",
+        "D": "la membrana celular."
+      },
+      "clave": "D",
+      "explicacion": "La membrana celular rodea a la célula y regula qué entra y qué sale, igual que una muralla con portones vigilados. Por eso deja pasar agua y nutrientes, deja salir desechos y frena lo que podría hacerle daño.",
+      "por_que": {
+        "A": "Confunde la parte que dirige las actividades de la célula y guarda la información hereditaria con la que controla el paso de sustancias.",
+        "B": "Confunde el material interno donde se encuentran los organelos con el límite que rodea a la célula.",
+        "C": "La pared celular es una cubierta rígida de las células vegetales; las células humanas no la tienen."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-1-b",
+      "orden": 2,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Niveles de organización del cuerpo humano",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.1",
+        "texto": "Analiza los niveles de organización del cuerpo humano, para la comprensión de su funcionamiento integral."
+      },
+      "evidencia": {
+        "codigo": "1.1.3",
+        "texto": "Comprende los niveles de organización del cuerpo humano según su funcionamiento."
+      },
+      "verbo": "comprender",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Analice la siguiente tabla:\n\n| Elemento | Descripción |\n|---|---|\n| P | Conjunto de órganos que trabajan juntos para transformar el alimento y aprovecharlo. |\n| Q | Unidad más pequeña con vida que forma parte de la pared del estómago. |\n| R | Grupo de células parecidas que se contraen para mezclar el alimento. |\n| S | Estructura en forma de bolsa, formada por varios tejidos, donde continúa la digestión. |",
+      "enunciado": "¿Cuál opción ordena los elementos de la tabla desde el nivel de organización más simple hasta el más complejo?",
+      "opciones": {
+        "A": "R, Q, S y P",
+        "B": "Q, R, S y P",
+        "C": "Q, S, R y P",
+        "D": "P, S, R y Q"
+      },
+      "clave": "B",
+      "explicacion": "La célula es la unidad más pequeña con vida; varias células parecidas forman un tejido, varios tejidos forman un órgano como el estómago y varios órganos forman el sistema digestivo. Por eso el orden correcto es Q, R, S y P.",
+      "por_que": {
+        "A": "Cree que el tejido es más simple que la célula, cuando el tejido está formado por muchas células.",
+        "C": "Coloca el órgano antes que el tejido, sin notar que el órgano está formado por varios tejidos.",
+        "D": "Ordena del nivel más complejo al más simple, al revés de lo que se pide."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-1-c",
+      "orden": 3,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Niveles de organización del cuerpo humano",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.1",
+        "texto": "Analiza los niveles de organización del cuerpo humano, para la comprensión de su funcionamiento integral."
+      },
+      "evidencia": {
+        "codigo": "1.1.2",
+        "texto": "Describe las características y funciones de tejidos, órganos y sistemas, según los niveles de organización del cuerpo humano."
+      },
+      "verbo": "describir",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nMariela estira el brazo para alcanzar una guayaba del árbol. Para lograrlo, un grupo de células alargadas del brazo se acorta y jala los huesos; esas células forman un tejido que trabaja cuando recibe una orden del cerebro. Al mismo tiempo, otro tejido, duro y rico en calcio, mantiene firme el brazo para que no se doble mientras sostiene la fruta.",
+      "enunciado": "Según la información anterior, ¿qué función cumplen, en orden, los dos tejidos descritos?",
+      "opciones": {
+        "A": "Contraerse para mover y servir de soporte.",
+        "B": "Transmitir mensajes y servir de soporte.",
+        "C": "Contraerse para mover y cubrir el cuerpo.",
+        "D": "Servir de soporte y contraerse para mover."
+      },
+      "clave": "A",
+      "explicacion": "El tejido muscular se acorta, es decir, se contrae, y así jala los huesos para mover el brazo. El tejido óseo es duro gracias al calcio y sirve de soporte para que el cuerpo no se doble.",
+      "por_que": {
+        "B": "Confunde el tejido muscular con el nervioso, que lleva los mensajes pero no jala los huesos.",
+        "C": "Confunde el tejido óseo con el de la piel, que recubre el cuerpo pero no lo sostiene.",
+        "D": "Invierte el orden: el primer tejido descrito es el muscular y el segundo, el óseo."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-2-a",
+      "orden": 4,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Tejido sanguíneo e inmunidad",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.2",
+        "texto": "Analiza la función inmunológica de los componentes del tejido sanguíneo."
+      },
+      "evidencia": {
+        "codigo": "1.2.2",
+        "texto": "Comprende las funciones de los componentes del tejido sanguíneo que se relacionan directamente con la función inmunológica."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nFiorella se raspó la rodilla al caer de la bicicleta. A los pocos minutos la herida dejó de sangrar, porque unos fragmentos de células de la sangre se pegaron entre sí y formaron un tapón que después se convirtió en costra. Al día siguiente, alrededor del raspón la piel estaba roja y un poco hinchada: hasta ese lugar habían llegado otras células de la sangre que rodeaban y destruían a los microbios que entraron por la herida.",
+      "enunciado": "¿Cuáles componentes del tejido sanguíneo actuaron en cada momento, en el orden en que se describen?",
+      "opciones": {
+        "A": "Las plaquetas y luego los glóbulos blancos.",
+        "B": "Los glóbulos blancos y luego las plaquetas.",
+        "C": "Los glóbulos rojos y luego los glóbulos blancos.",
+        "D": "Las plaquetas y luego los glóbulos rojos."
+      },
+      "clave": "A",
+      "explicacion": "Las plaquetas se unen y forman el tapón que detiene el sangrado, y luego los glóbulos blancos llegan a la herida para atacar a los microbios. Por eso la zona se pone roja e hinchada mientras el cuerpo se defiende.",
+      "por_que": {
+        "B": "Invierte las funciones: las plaquetas forman el tapón y los glóbulos blancos atacan a los microbios.",
+        "C": "Atribuye el tapón a los glóbulos rojos, cuya función es transportar oxígeno.",
+        "D": "Cree que los glóbulos rojos defienden al cuerpo, cuando su función es llevar oxígeno."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-2-b",
+      "orden": 5,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Tejido sanguíneo e inmunidad",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.2",
+        "texto": "Analiza la función inmunológica de los componentes del tejido sanguíneo."
+      },
+      "evidencia": {
+        "codigo": "1.2.3",
+        "texto": "Distingue los diferentes tipos de inmunidad."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nLa inmunidad es activa cuando el propio cuerpo fabrica sus anticuerpos después de tener contacto con un microbio o con una vacuna. Es pasiva cuando la persona recibe anticuerpos que ya fueron fabricados por otro organismo.\n\nCaso 1: Mauricio tuvo varicela cuando era pequeño y su cuerpo produjo defensas contra ese virus.\n\nCaso 2: En Costa Rica, a las personas mordidas por serpientes venenosas se les aplica un suero con anticuerpos obtenidos de caballos.",
+      "enunciado": "De acuerdo con la información, ¿qué tipo de inmunidad se presenta en cada caso?",
+      "opciones": {
+        "A": "En el 1 es pasiva y en el 2 es activa.",
+        "B": "En ambos casos la inmunidad es activa.",
+        "C": "En ambos casos la inmunidad es pasiva.",
+        "D": "En el 1 es activa y en el 2 es pasiva."
+      },
+      "clave": "D",
+      "explicacion": "Mauricio fabricó sus propios anticuerpos cuando tuvo varicela, por eso su inmunidad es activa. La persona que recibe el suero obtiene anticuerpos ya hechos por los caballos, y eso es inmunidad pasiva.",
+      "por_que": {
+        "A": "Invierte los conceptos: en el caso 1 el cuerpo de Mauricio fabricó sus propias defensas.",
+        "B": "Cree que todo anticuerpo que actúa en el cuerpo lo fabricó la misma persona.",
+        "C": "No reconoce que, al enfermarse, el cuerpo de Mauricio produjo sus propios anticuerpos."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-2-c",
+      "orden": 6,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Tejido sanguíneo e inmunidad",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.2",
+        "texto": "Analiza la función inmunológica de los componentes del tejido sanguíneo."
+      },
+      "evidencia": {
+        "codigo": "1.2.1",
+        "texto": "Identifica el concepto y la importancia de la función inmunológica."
+      },
+      "verbo": "comprender",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "El siguiente texto se relaciona con la función inmunológica:\n\nCada día entran al cuerpo virus, bacterias y hongos por la nariz, la boca o pequeñas heridas. El cuerpo cuenta con un conjunto de defensas que reconoce a esos invasores como extraños, los ataca y además guarda un registro de cómo vencerlos si vuelven a entrar. Gracias a ese trabajo constante, muchas veces la persona ni se entera de que estuvo en contacto con ellos.",
+      "enunciado": "La información anterior permite concluir que la función inmunológica es importante porque",
+      "opciones": {
+        "A": "evita que los microbios dañen la salud.",
+        "B": "lleva oxígeno a todas las células del cuerpo.",
+        "C": "detiene el sangrado de las heridas pequeñas.",
+        "D": "elimina por la orina los desechos de la sangre."
+      },
+      "clave": "A",
+      "explicacion": "La función inmunológica reconoce y ataca a los microbios que entran al cuerpo, y además recuerda cómo vencerlos. Así evita que enfermen a la persona y protege su salud.",
+      "por_que": {
+        "B": "Confunde la defensa del cuerpo con el transporte de oxígeno, que realizan los glóbulos rojos.",
+        "C": "Confunde la defensa contra microbios con la coagulación, que realizan las plaquetas.",
+        "D": "Confunde la función inmunológica con la función excretora de los riñones."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-3-a",
+      "orden": 7,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Vacunas",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.3",
+        "texto": "Analiza la función e importancia de las vacunas para la prevención de enfermedades infectocontagiosas."
+      },
+      "evidencia": {
+        "codigo": "1.3.2",
+        "texto": "Comprende conceptos, funciones e importancia de las vacunas en la prevención de enfermedades infectocontagiosas."
+      },
+      "verbo": "comprender",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nEn la escuela de Josué hacen simulacros de evacuación varias veces al año. Aunque no haya un temblor real, los estudiantes practican qué hacer y por dónde salir. Así, cuando ocurre un temblor de verdad, reaccionan con rapidez y orden. La maestra explicó que una vacuna funciona de manera parecida: presenta al cuerpo un microbio debilitado o inactivo, o solo una parte de él, que no causa la enfermedad.",
+      "enunciado": "Según la comparación, la vacuna se parece a un simulacro porque",
+      "opciones": {
+        "A": "elimina de inmediato al microbio que ya causó la enfermedad.",
+        "B": "entrena las defensas para actuar pronto ante el microbio verdadero.",
+        "C": "le da al cuerpo los anticuerpos listos sin que tenga que fabricarlos.",
+        "D": "debilita al microbio verdadero cuando este entra en el cuerpo."
+      },
+      "clave": "B",
+      "explicacion": "La vacuna muestra al cuerpo un microbio debilitado, inactivo o solo una parte de él, y el cuerpo aprende a fabricar defensas sin enfermarse. Si después llega el microbio verdadero, las defensas ya están listas, igual que los estudiantes después de practicar.",
+      "por_que": {
+        "A": "Cree que la vacuna cura una enfermedad que ya está presente, cuando su función es prevenirla.",
+        "C": "Confunde la vacuna con un suero que trae anticuerpos ya fabricados.",
+        "D": "Cree que la vacuna actúa sobre el microbio que llega después, cuando en realidad prepara las defensas del cuerpo."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-3-b",
+      "orden": 8,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Vacunas",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.3",
+        "texto": "Analiza la función e importancia de las vacunas para la prevención de enfermedades infectocontagiosas."
+      },
+      "evidencia": {
+        "codigo": "1.3.3",
+        "texto": "Distingue los beneficios e importancia de la vacunación."
+      },
+      "verbo": "determinar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Analice la siguiente tabla:\n\nEn dos comunidades imaginarias con la misma cantidad de habitantes apareció una persona con una enfermedad contagiosa que se puede prevenir con una vacuna.\n\n| Comunidad | Personas vacunadas | Personas que se contagiaron después |\n|---|---|---|\n| Las Brisas | 9 de cada 10 | 3 |\n| El Roble | 4 de cada 10 | 85 |\n\nEn Las Brisas también se libraron del contagio dos bebés que todavía no podían vacunarse.",
+      "enunciado": "¿Qué beneficio de la vacunación muestran los datos?",
+      "opciones": {
+        "A": "Si alguien ya se enfermó, la vacuna lo cura en pocos días.",
+        "B": "Con pocas personas vacunadas, toda la comunidad queda igual de protegida.",
+        "C": "Si la mayoría recibe la vacuna, se protege a quienes no la tienen.",
+        "D": "Las vacunas protegen solo a quien las recibe y a nadie más."
+      },
+      "clave": "C",
+      "explicacion": "En Las Brisas casi todas las personas estaban vacunadas y la enfermedad casi no pudo pasar de una persona a otra, por eso hasta los bebés quedaron protegidos. Cuando la mayoría se vacuna, se cuida también a quienes todavía no pueden recibir la vacuna.",
+      "por_que": {
+        "A": "Cree que la vacuna cura; su función es prevenir antes del contagio.",
+        "B": "Contradice la tabla: en El Roble, con menos personas vacunadas, hubo muchos más contagios.",
+        "D": "Ignora que los bebés sin vacunar de Las Brisas también se libraron del contagio."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-3-c",
+      "orden": 9,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Vacunas",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.3",
+        "texto": "Analiza la función e importancia de las vacunas para la prevención de enfermedades infectocontagiosas."
+      },
+      "evidencia": {
+        "codigo": "1.3.3",
+        "texto": "Distingue los beneficios e importancia de la vacunación."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Lea la siguiente información:\n\nLa viruela fue una enfermedad contagiosa que durante siglos afectó a personas de todos los continentes. Como el virus solo podía pasar de una persona a otra, se organizaron campañas para vacunar a la población de muchísimos países. Poco a poco el virus dejó de encontrar personas a quienes contagiar, y hoy esa enfermedad ya no circula en ningún lugar del planeta.",
+      "enunciado": "Del caso de la viruela se concluye que la vacunación",
+      "opciones": {
+        "A": "cura a las personas que ya tienen la enfermedad en su cuerpo.",
+        "B": "solo puede proteger a la persona vacunada por pocos días.",
+        "C": "puede eliminar una enfermedad si se aplica en todo el mundo.",
+        "D": "hace que los virus se vuelvan más fuertes y peligrosos."
+      },
+      "clave": "C",
+      "explicacion": "Al vacunar a tanta gente, el virus de la viruela ya no encontró a quién contagiar y desapareció del planeta. Esto muestra el gran poder de la vacunación cuando se hace en muchos países a la vez.",
+      "por_que": {
+        "A": "Confunde prevenir con curar: la vacuna prepara las defensas antes del contagio.",
+        "B": "Desconoce que la protección de muchas personas juntas cortó el contagio hasta hacerlo desaparecer.",
+        "D": "Es una idea equivocada; el texto muestra que el virus desapareció gracias a la vacunación."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-4-a",
+      "orden": 10,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Órganos, sistemas y salud",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.4",
+        "texto": "Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud."
+      },
+      "evidencia": {
+        "codigo": "1.4.2",
+        "texto": "Distingue las funciones de órganos y sistemas del cuerpo humano."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Lea la siguiente información:\n\nUn órgano del sistema digestivo mide varios metros de largo y está doblado muchas veces dentro del abdomen. Su pared interna tiene millones de pliegues diminutos, parecidos a dedos, que aumentan la superficie en contacto con el alimento ya digerido. Por dentro de cada pliegue pasan vasos sanguíneos muy delgados.",
+      "enunciado": "Por sus características, la función principal de ese órgano es",
+      "opciones": {
+        "A": "absorber el agua que sobra para formar las heces.",
+        "B": "triturar el alimento y mezclarlo con jugos.",
+        "C": "producir la bilis que ayuda a digerir grasas.",
+        "D": "absorber los nutrientes y pasarlos a la sangre."
+      },
+      "clave": "D",
+      "explicacion": "Los pliegues parecidos a dedos aumentan la superficie para que los nutrientes del alimento digerido pasen a los vasos sanguíneos. Así trabaja el intestino delgado, que absorbe los nutrientes y los entrega a la sangre.",
+      "por_que": {
+        "A": "Corresponde al intestino grueso, que absorbe agua pero no se encarga de absorber los nutrientes.",
+        "B": "Describe el trabajo de la boca y del estómago, que preparan el alimento antes de que se absorba.",
+        "C": "Corresponde al hígado, que fabrica bilis pero no absorbe nutrientes."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-4-b",
+      "orden": 11,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Órganos, sistemas y salud",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.4",
+        "texto": "Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud."
+      },
+      "evidencia": {
+        "codigo": "1.4.3",
+        "texto": "Reconoce hábitos positivos y negativos que influyen en el funcionamiento de los sistemas del cuerpo humano."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Analice la siguiente tabla:\n\nAndrés anotó algunos de sus hábitos durante una semana.\n\n| Hábito | Frecuencia |\n|---|---|\n| Dormir nueve horas | Todas las noches |\n| Jugar fútbol en el recreo | Cuatro días |\n| Cargar el bulto en un hombro | Todos los días |\n| Tomar agua en lugar de refresco | Casi siempre |",
+      "enunciado": "¿Cuál hábito de la tabla puede afectar de forma negativa a los huesos y músculos de la espalda?",
+      "opciones": {
+        "A": "Cargar el bulto en un hombro",
+        "B": "Jugar fútbol en el recreo",
+        "C": "Dormir nueve horas",
+        "D": "Tomar agua en lugar de refresco"
+      },
+      "clave": "A",
+      "explicacion": "Cargar todo el peso del bulto en un solo hombro inclina la espalda hacia un lado y obliga a huesos y músculos a trabajar de forma desigual. Lo recomendable es usar los dos tirantes y llevar solo lo necesario.",
+      "por_que": {
+        "B": "El ejercicio frecuente fortalece músculos y huesos; es un hábito positivo.",
+        "C": "Dormir lo suficiente ayuda a que el cuerpo se recupere; es un hábito positivo.",
+        "D": "Es un hábito positivo que favorece el trabajo de los riñones y de todo el cuerpo."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-4-c",
+      "orden": 12,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Órganos, sistemas y salud",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.4",
+        "texto": "Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud."
+      },
+      "evidencia": {
+        "codigo": "1.4.5",
+        "texto": "Analiza la importancia de acciones comunales e institucionales que fomenten la buena salud y funcionamiento de los sistemas del cuerpo humano."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn un cantón del país, la municipalidad cierra al tránsito una calle principal cada domingo en la mañana para que las familias caminen, patinen o anden en bicicleta. Por su parte, la asociación de desarrollo de un barrio instaló aparatos para ejercitarse en el parque, y el comité de deportes organiza clases gratuitas de baile para personas adultas mayores.",
+      "enunciado": "¿Por qué estas acciones comunales e institucionales favorecen la salud de los sistemas del cuerpo?",
+      "opciones": {
+        "A": "Reemplazan la necesidad de comer de forma variada y sana.",
+        "B": "Fomentan el ejercicio, que fortalece corazón y pulmones.",
+        "C": "Evitan que las personas se contagien de cualquier microbio.",
+        "D": "Sustituyen las horas de descanso que el cuerpo necesita."
+      },
+      "clave": "B",
+      "explicacion": "Caminar, patinar, andar en bicicleta o bailar mantienen el cuerpo en movimiento, y eso fortalece el corazón, los pulmones, los músculos y los huesos. Cuando la comunidad y las instituciones abren estos espacios, a más personas les resulta fácil mantenerse activas.",
+      "por_que": {
+        "A": "Cree que el ejercicio sustituye una alimentación balanceada; ambos hábitos se necesitan.",
+        "C": "Confunde los beneficios del ejercicio con los de las vacunas y la higiene.",
+        "D": "Cree que el ejercicio reemplaza el sueño, cuando ambos son necesarios."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-4-d",
+      "orden": 13,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Órganos, sistemas y salud",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.4",
+        "texto": "Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud."
+      },
+      "evidencia": {
+        "codigo": "1.4.1",
+        "texto": "Reconoce conceptos y características de los órganos y los sistemas del cuerpo humano."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Considere la siguiente información:\n\nDespués de jugar bajo el sol, Isaac nota que su camiseta está mojada y que en su frente quedan gotitas con sabor salado. El sudor sale por pequeños poros de la piel y, al evaporarse, ayuda a enfriar el cuerpo. Ese líquido contiene agua, sales y pequeñas cantidades de urea, una sustancia de desecho que el cuerpo no necesita.",
+      "enunciado": "Además de regular la temperatura, el sudor muestra que la piel participa en la función de",
+      "opciones": {
+        "A": "excretar residuos que el cuerpo no usa.",
+        "B": "absorber agua y sales desde fuera del cuerpo.",
+        "C": "transportar oxígeno hacia los músculos.",
+        "D": "digerir las grasas que se acumulan en ella."
+      },
+      "clave": "A",
+      "explicacion": "El sudor lleva agua, sales y un poco de urea, que el cuerpo no necesita. Al expulsar esas sustancias, la piel ayuda al sistema excretor, además de refrescar el cuerpo.",
+      "por_que": {
+        "B": "Invierte la dirección: el sudor sale del cuerpo, no entra en él.",
+        "C": "Confunde la función de la piel con la del sistema circulatorio.",
+        "D": "Confunde la función de la piel con la del sistema digestivo."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-5-a",
+      "orden": 14,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Interrelación de los sistemas",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.5",
+        "texto": "Analiza las interrelaciones entre los sistemas del cuerpo humano que permiten comprender el funcionamiento y cuidado de la salud."
+      },
+      "evidencia": {
+        "codigo": "1.5.1",
+        "texto": "Reconoce las formas en las que se relacionan los órganos y sistemas del cuerpo humano."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEl esquema representa cómo se relacionan algunos órganos cuando Esteban corre durante la clase de Educación Física. Mientras corre, sus músculos trabajan más y necesitan más oxígeno; Esteban respira más rápido y su corazón late con más fuerza y rapidez.",
+      "enunciado": "Según el esquema, ¿por qué aumentan al mismo tiempo la respiración y los latidos de Esteban?",
+      "opciones": {
+        "A": "Los pulmones toman más oxígeno y la sangre lo lleva a los músculos.",
+        "B": "Los pulmones toman más nutrientes y la sangre los lleva a los músculos.",
+        "C": "Los músculos producen oxígeno y la sangre lo lleva a los pulmones.",
+        "D": "El corazón produce oxígeno y los pulmones lo llevan a los músculos."
+      },
+      "clave": "A",
+      "explicacion": "Al correr, los músculos gastan más oxígeno. Por eso los pulmones trabajan más rápido para tomarlo del aire y el corazón late con más fuerza para que la sangre lo lleve a los músculos.",
+      "por_que": {
+        "B": "Los nutrientes llegan a la sangre desde el intestino, no desde los pulmones.",
+        "C": "Invierte el recorrido: los músculos gastan oxígeno y producen dióxido de carbono.",
+        "D": "El corazón no fabrica oxígeno; bombea la sangre que lo transporta."
+      },
+      "imagen": {
+        "archivo": "cie-1-5-sistemas.svg",
+        "alt": "Esquema con flechas. Los pulmones envían oxígeno al corazón y los vasos sanguíneos. El intestino delgado envía nutrientes al corazón y los vasos sanguíneos. El corazón y los vasos sanguíneos llevan oxígeno y nutrientes a los músculos. Los músculos devuelven dióxido de carbono al corazón y los vasos sanguíneos, que lo llevan a los pulmones para expulsarlo."
+      }
+    },
+    {
+      "id": "cie-1-5-b",
+      "orden": 15,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Interrelación de los sistemas",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1.5",
+        "texto": "Analiza las interrelaciones entre los sistemas del cuerpo humano que permiten comprender el funcionamiento y cuidado de la salud."
+      },
+      "evidencia": {
+        "codigo": "1.5.2",
+        "texto": "Distingue acciones compartidas entre órganos para el funcionamiento integral de los sistemas del cuerpo humano."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nHazel se rió a carcajadas mientras comía arroz y empezó a toser con fuerza. Su abuela le explicó que en la garganta hay un conducto por el que pasan tanto el aire como los alimentos. Al tragar, una pequeña tapa cierra el camino hacia la tráquea para que la comida siga hacia el esófago; si una persona habla o se ríe al tragar, esa tapa puede no cerrarse a tiempo.",
+      "enunciado": "La situación muestra una acción que comparten los sistemas",
+      "opciones": {
+        "A": "digestivo y circulatorio.",
+        "B": "nervioso y circulatorio.",
+        "C": "digestivo y respiratorio.",
+        "D": "respiratorio y excretor."
+      },
+      "clave": "C",
+      "explicacion": "La faringe es un conducto que usan el sistema respiratorio, para el paso del aire, y el sistema digestivo, para el paso de los alimentos. La pequeña tapa llamada epiglotis se cierra al tragar para que la comida vaya al esófago y no a la tráquea.",
+      "por_que": {
+        "A": "Por ese conducto pasan aire y alimento, no sangre.",
+        "B": "Ninguno de esos sistemas usa el conducto por el que pasan el aire y los alimentos.",
+        "D": "El esófago, hacia donde va la comida, es parte del sistema digestivo y no del excretor."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-1-5-c",
+      "orden": 16,
+      "materia": "ciencias",
+      "bloque": "Cuerpo humano",
+      "tema": "Cuerpo humano",
+      "subtema": "Interrelación de los sistemas",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1.5",
+        "texto": "Analiza las interrelaciones entre los sistemas del cuerpo humano que permiten comprender el funcionamiento y cuidado de la salud."
+      },
+      "evidencia": {
+        "codigo": "1.5.3",
+        "texto": "Analiza la importancia de las interrelaciones de los sistemas del cuerpo humano para mantener la salud integral."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Lea la siguiente información:\n\nEn un día muy caluroso, el cuerpo pierde mucha agua por el sudor. Cuando eso ocurre, el encéfalo detecta el cambio y produce la sensación de sed. Al mismo tiempo, se envían señales a los riñones para que eliminen menos agua, por lo que la orina sale en menor cantidad y de color más oscuro. Al beber líquido, la sangre recupera la cantidad de agua que necesita.",
+      "enunciado": "¿Qué conclusión se obtiene de la información anterior?",
+      "opciones": {
+        "A": "Los riñones controlan el agua del cuerpo sin ayuda de otros órganos.",
+        "B": "Varios sistemas actúan coordinados para mantener el agua del cuerpo.",
+        "C": "El sistema nervioso solo participa cuando el cuerpo está en movimiento.",
+        "D": "El sudor y la orina son procesos que no tienen relación entre sí."
+      },
+      "clave": "B",
+      "explicacion": "El sistema nervioso detecta la falta de agua y provoca la sed, el sistema excretor ahorra agua al producir menos orina y el circulatorio la reparte cuando se bebe. Todos trabajan juntos para mantener la salud del cuerpo.",
+      "por_que": {
+        "A": "Ignora que el encéfalo envía las señales y que la sangre transporta el agua.",
+        "C": "Contradice el texto: el encéfalo detecta la falta de agua y provoca la sed.",
+        "D": "Ignora que los dos dependen de la cantidad de agua que hay en el cuerpo."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-1-a",
+      "orden": 17,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Biodiversidad y adaptaciones",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.1",
+        "texto": "Comprende conceptos básicos relacionados con la biodiversidad para el mejoramiento del entorno natural."
+      },
+      "evidencia": {
+        "codigo": "2.1.1",
+        "texto": "Reconoce los conceptos básicos relacionados con la biodiversidad."
+      },
+      "verbo": "comprender",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nLa biodiversidad se puede observar en tres niveles: la variedad de genes dentro de una misma especie, la variedad de especies que habitan un lugar y la variedad de ecosistemas de una región. Costa Rica, con un territorio pequeño, reúne bosques lluviosos, bosques nubosos, manglares, páramos y arrecifes de coral, entre otros ambientes.",
+      "enunciado": "Según la información, ¿cuál opción es un ejemplo de diversidad de especies?",
+      "opciones": {
+        "A": "Mazorcas de maíz de distintos colores en una misma finca.",
+        "B": "Un manglar y un páramo dentro del mismo país.",
+        "C": "El crecimiento de un mismo colibrí desde que nace.",
+        "D": "Varias clases de colibríes que visitan un mismo jardín."
+      },
+      "clave": "D",
+      "explicacion": "La diversidad de especies se refiere a las distintas clases de seres vivos que hay en un lugar, como varias especies de colibríes en un mismo jardín. Las mazorcas de colores muestran diversidad genética y el manglar con el páramo, diversidad de ecosistemas.",
+      "por_que": {
+        "A": "Muestra variedad dentro de una sola especie, el maíz; eso es diversidad genética.",
+        "B": "Muestra lugares con condiciones muy distintas; eso es diversidad de ecosistemas.",
+        "C": "Describe los cambios de un solo individuo, no la variedad de especies."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-1-b",
+      "orden": 18,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Biodiversidad y adaptaciones",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.1",
+        "texto": "Comprende conceptos básicos relacionados con la biodiversidad para el mejoramiento del entorno natural."
+      },
+      "evidencia": {
+        "codigo": "2.1.2",
+        "texto": "Reconoce los tipos de adaptaciones que realizan los seres vivos y ejemplos de estos."
+      },
+      "verbo": "clasificar",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn el Refugio de Vida Silvestre Ostional, en Guanacaste, ocurre un fenómeno llamado arribada: durante algunas noches, miles de hembras de tortuga lora salen del mar casi al mismo tiempo para poner sus huevos en la arena. Al llegar tantas juntas, los depredadores no logran comerse todos los huevos y muchas crías sobreviven.",
+      "enunciado": "La arribada es un ejemplo de adaptación",
+      "opciones": {
+        "A": "estructural, porque depende de la forma del caparazón.",
+        "B": "fisiológica, porque ocurre dentro del cuerpo de la hembra.",
+        "C": "conductual, porque es una forma de actuar en grupo.",
+        "D": "estructural, porque las aletas les permiten cavar nidos."
+      },
+      "clave": "C",
+      "explicacion": "Llegar todas juntas a la playa es un comportamiento, por eso la arribada es una adaptación conductual. Gracias a esa conducta, muchas crías logran sobrevivir aunque haya depredadores.",
+      "por_que": {
+        "A": "Confunde un comportamiento con una característica del cuerpo.",
+        "B": "La arribada es un comportamiento que se observa, no un proceso interno del cuerpo.",
+        "D": "Las aletas sí son una adaptación estructural, pero no explican la llegada de miles de hembras al mismo tiempo."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-1-c",
+      "orden": 19,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Biodiversidad y adaptaciones",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.1",
+        "texto": "Comprende conceptos básicos relacionados con la biodiversidad para el mejoramiento del entorno natural."
+      },
+      "evidencia": {
+        "codigo": "2.1.3",
+        "texto": "Reconoce las funciones vitales de los seres vivos."
+      },
+      "verbo": "identificar",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn los potreros y a la orilla de muchos caminos de Costa Rica crece la dormilona, una planta pequeña de hojas divididas en muchas hojitas. Cuando Gabriel pasa la mano sobre ella, las hojitas se cierran en pocos segundos y el tallo de la hoja se dobla hacia abajo. Al rato, si nada la toca, las hojas vuelven a abrirse.",
+      "enunciado": "La reacción de la dormilona es un ejemplo de la función vital de",
+      "opciones": {
+        "A": "nutrición, porque así fabrica su propio alimento.",
+        "B": "reproducción, porque así protege sus semillas.",
+        "C": "relación, porque responde a un estímulo del entorno.",
+        "D": "relación, porque así se comunica con las otras plantas."
+      },
+      "clave": "C",
+      "explicacion": "La dormilona percibe el roce de la mano como un estímulo y responde cerrando sus hojitas. Percibir cambios del entorno y reaccionar ante ellos es la función vital de relación.",
+      "por_que": {
+        "A": "Confunde la respuesta al roce con la fotosíntesis, que es parte de la nutrición.",
+        "B": "Cerrar las hojas no produce nuevos individuos.",
+        "D": "Sí es función de relación, pero la razón es incorrecta: la planta responde a un estímulo, no se comunica con otras."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-1-d",
+      "orden": 20,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Biodiversidad y adaptaciones",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.1",
+        "texto": "Comprende conceptos básicos relacionados con la biodiversidad para el mejoramiento del entorno natural."
+      },
+      "evidencia": {
+        "codigo": "2.1.4",
+        "texto": "Identifica causas, importancia y amenazas a la biodiversidad en Costa Rica."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Lea la siguiente información:\n\nEl pez león es originario del océano Índico y del oeste del océano Pacífico, pero desde hace algunos años se encuentra en el mar Caribe, incluidas las costas de Costa Rica. Allí se alimenta de muchos peces pequeños nativos y casi ningún animal lo depreda. Además, se reproduce con gran rapidez y puede ocupar arrecifes y manglares.",
+      "enunciado": "La situación del pez león en el Caribe representa una amenaza para la biodiversidad causada por",
+      "opciones": {
+        "A": "la tala de los bosques cercanos a las playas.",
+        "B": "la invasión de una especie de otra región.",
+        "C": "la cacería ilegal de especies en peligro.",
+        "D": "la contaminación del agua por desechos plásticos."
+      },
+      "clave": "B",
+      "explicacion": "El pez león llegó desde otros océanos, come peces nativos y casi no tiene enemigos que controlen su población. Las especies que invaden lugares donde no son originarias alteran el equilibrio y ponen en riesgo a las especies nativas.",
+      "por_que": {
+        "A": "Es una amenaza real, pero no es la que se describe en el texto.",
+        "C": "El pez león no es cazado ilegalmente; es él quien consume a los peces nativos.",
+        "D": "Es una amenaza real, pero distinta de la que se describe en el texto."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-2-a",
+      "orden": 21,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Clasificación de los seres vivos",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.2",
+        "texto": "Clasifica los organismos de acuerdo con sus adaptaciones, características, complejidad (unicelulares y pluricelulares), vertebrados e invertebrados, tipos de alimentación, respiración, reproducción, medio en el que se desarrollan y reinos biológicos al que pertenecen."
+      },
+      "evidencia": {
+        "codigo": "2.2.1",
+        "texto": "Diferencia entre organismos unicelulares y pluricelulares, vertebrados e invertebrados, tipos de alimentación, respiración, reproducción, medio en el que se desarrollan, así como ejemplos de cada uno de ellos."
+      },
+      "verbo": "clasificar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Analice la siguiente tabla:\n\n| Animal | ¿Tiene columna vertebral? | ¿Cómo respira? |\n|---|---|---|\n| 1 | Sí | Por branquias durante toda su vida |\n| 2 | No | Por pequeños tubos que llevan el aire por dentro del cuerpo |\n| 3 | Sí | Por pulmones; su piel tiene escamas secas |\n| 4 | No | A través de su piel, que siempre se mantiene húmeda |",
+      "enunciado": "¿Cuáles animales podrían corresponder, en ese orden, a los números 2 y 4?",
+      "opciones": {
+        "A": "Un saltamontes y una lombriz de tierra.",
+        "B": "Una lombriz de tierra y un saltamontes.",
+        "C": "Un saltamontes y un sapo.",
+        "D": "Un cangrejo y una lombriz de tierra."
+      },
+      "clave": "A",
+      "explicacion": "El saltamontes es invertebrado y respira por tráqueas, que son tubitos que llevan el aire por dentro del cuerpo. La lombriz de tierra también es invertebrada y respira a través de su piel húmeda.",
+      "por_que": {
+        "B": "Invierte los animales: la lombriz respira por la piel y el saltamontes, por tubitos llamados tráqueas.",
+        "C": "El sapo también respira por la piel, pero tiene columna vertebral.",
+        "D": "El cangrejo es invertebrado, pero respira por branquias y no por tubitos."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-2-b",
+      "orden": 22,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Clasificación de los seres vivos",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.2",
+        "texto": "Clasifica los organismos de acuerdo con sus adaptaciones, características, complejidad (unicelulares y pluricelulares), vertebrados e invertebrados, tipos de alimentación, respiración, reproducción, medio en el que se desarrollan y reinos biológicos al que pertenecen."
+      },
+      "evidencia": {
+        "codigo": "2.2.2",
+        "texto": "Clasifica los reinos biológicos según sus características y ejemplos."
+      },
+      "verbo": "comparar",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nPara hacer pan casero, la abuela de Sofía mezcla la harina con levadura. Le explicó que la levadura está formada por hongos diminutos de una sola célula, distintos de los hongos grandes que crecen sobre los troncos podridos. Las células de la levadura tienen núcleo y se nutren de los azúcares de la masa; al hacerlo, liberan un gas que hace que el pan quede esponjoso.",
+      "enunciado": "¿Qué característica comparten la levadura y los hongos de los troncos, que permite ubicarlos en el mismo reino?",
+      "opciones": {
+        "A": "Ambos están formados por una sola célula.",
+        "B": "Ninguno de los dos produce su propio alimento.",
+        "C": "Ambos fabrican su alimento con la luz del sol.",
+        "D": "Ninguno de los dos tiene núcleo en sus células."
+      },
+      "clave": "B",
+      "explicacion": "Tanto la levadura como los hongos de los troncos obtienen su alimento de otros materiales, porque no pueden fabricarlo. Esa forma de nutrirse, junto con tener células con núcleo, los ubica en el reino Fungi, aunque unos tengan una sola célula y otros muchas.",
+      "por_que": {
+        "A": "Solo la levadura es unicelular; los hongos de los troncos están formados por muchas células.",
+        "C": "Confunde a los hongos con las plantas; los hongos no realizan fotosíntesis.",
+        "D": "Los hongos sí tienen núcleo; los organismos sin núcleo definido forman el reino Monera."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-2-c",
+      "orden": 23,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Clasificación de los seres vivos",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.2",
+        "texto": "Clasifica los organismos de acuerdo con sus adaptaciones, características, complejidad (unicelulares y pluricelulares), vertebrados e invertebrados, tipos de alimentación, respiración, reproducción, medio en el que se desarrollan y reinos biológicos al que pertenecen."
+      },
+      "evidencia": {
+        "codigo": "2.2.1",
+        "texto": "Diferencia entre organismos unicelulares y pluricelulares, vertebrados e invertebrados, tipos de alimentación, respiración, reproducción, medio en el que se desarrollan, así como ejemplos de cada uno de ellos."
+      },
+      "verbo": "clasificar",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn los bosques húmedos de Costa Rica viven las ranas de vidrio, llamadas así porque en algunas se pueden ver órganos a través de la piel del vientre. Las hembras colocan sus huevos sobre hojas que cuelgan encima de las quebradas. Al nacer, los renacuajos caen al agua, donde respiran por branquias; ya adultas, las ranas viven en la vegetación cercana y respiran por pulmones y por la piel.",
+      "enunciado": "Según la información, la rana de vidrio se clasifica como un animal",
+      "opciones": {
+        "A": "vivíparo, que pasa su vida entre el agua y la tierra.",
+        "B": "ovíparo, que pasa toda su vida dentro del agua.",
+        "C": "vivíparo, que pasa toda su vida fuera del agua.",
+        "D": "ovíparo, que pasa su vida entre el agua y la tierra."
+      },
+      "clave": "D",
+      "explicacion": "La rana de vidrio nace de huevos, por eso es ovípara. Cuando es renacuajo vive en el agua y respira por branquias, y de adulta vive fuera del agua, como muchos anfibios.",
+      "por_que": {
+        "A": "Las crías nacen de huevos, no se desarrollan dentro del vientre de la madre.",
+        "B": "Olvida que las ranas adultas viven en la vegetación, fuera del agua.",
+        "C": "Las crías salen de huevos y los renacuajos viven en el agua."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-2-d",
+      "orden": 24,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Clasificación de los seres vivos",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.2",
+        "texto": "Clasifica los organismos de acuerdo con sus adaptaciones, características, complejidad (unicelulares y pluricelulares), vertebrados e invertebrados, tipos de alimentación, respiración, reproducción, medio en el que se desarrollan y reinos biológicos al que pertenecen."
+      },
+      "evidencia": {
+        "codigo": "2.2.1",
+        "texto": "Diferencia entre organismos unicelulares y pluricelulares, vertebrados e invertebrados, tipos de alimentación, respiración, reproducción, medio en el que se desarrollan, así como ejemplos de cada uno de ellos."
+      },
+      "verbo": "diferenciar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Considere la siguiente información:\n\nEn todos los continentes, menos en la Antártida, hay murciélagos. Algunos comen insectos, otros frutos o néctar, y ayudan a controlar plagas, dispersar semillas y polinizar flores. Muchas personas creen que los murciélagos son aves porque vuelan; sin embargo, se clasifican en el mismo grupo que los perros, los delfines y los seres humanos.",
+      "enunciado": "¿Cuál característica de los murciélagos justifica que no se clasifiquen como aves?",
+      "opciones": {
+        "A": "Tienen alas que les permiten volar.",
+        "B": "Ponen sus huevos dentro de cuevas.",
+        "C": "Comen frutos, insectos o néctar.",
+        "D": "Alimentan a sus crías con leche."
+      },
+      "clave": "D",
+      "explicacion": "Los murciélagos tienen pelo y alimentan a sus crías con leche, igual que los perros, los delfines y las personas, por eso son mamíferos. Volar no basta para ser ave, porque las aves tienen plumas y nacen de huevos.",
+      "por_que": {
+        "A": "Es una característica que comparten con las aves, por eso no sirve para diferenciarlos.",
+        "B": "Los murciélagos no ponen huevos: sus crías se desarrollan en el vientre de la madre.",
+        "C": "Muchas aves también comen esos alimentos, así que no los diferencia."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-3-a",
+      "orden": 25,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Relaciones entre seres vivos",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.3",
+        "texto": "Clasifica las relaciones de interdependencia entre los seres vivos y su importancia en el equilibrio ecológico."
+      },
+      "evidencia": {
+        "codigo": "2.3.1",
+        "texto": "Reconoce las relaciones intraespecíficas de competencia, por alimentación, reproducción y territorio."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEl venado cola blanca es uno de los símbolos nacionales de Costa Rica. Durante la época de apareamiento, los machos de esta especie se enfrentan entre sí: bajan la cabeza, chocan sus astas y empujan con fuerza hasta que uno de ellos se retira. El ganador tiene más oportunidades de aparearse con las hembras del grupo.",
+      "enunciado": "La relación entre los machos descrita en el texto corresponde a una",
+      "opciones": {
+        "A": "competencia interespecífica por la reproducción.",
+        "B": "competencia intraespecífica por el alimento.",
+        "C": "competencia intraespecífica por la reproducción.",
+        "D": "depredación entre individuos de la misma especie."
+      },
+      "clave": "C",
+      "explicacion": "Los machos son de la misma especie y se enfrentan para tener la oportunidad de aparearse, por eso es una competencia intraespecífica por la reproducción. Este tipo de competencia favorece que se reproduzcan los individuos más fuertes.",
+      "por_que": {
+        "A": "Los dos machos son de la misma especie, por eso la relación es intraespecífica.",
+        "B": "Los machos no se enfrentan por comida, sino por aparearse.",
+        "D": "Ninguno de los machos se come al otro; solo compiten."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-3-b",
+      "orden": 26,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Relaciones entre seres vivos",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.3",
+        "texto": "Clasifica las relaciones de interdependencia entre los seres vivos y su importancia en el equilibrio ecológico."
+      },
+      "evidencia": {
+        "codigo": "2.3.3",
+        "texto": "Distingue conceptos, ejemplos, importancia y características de las relaciones intraespecíficas e interespecíficas en los ecosistemas."
+      },
+      "verbo": "clasificar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEn una clase de Ciencias, Tatiana elaboró este esquema para representar tres relaciones entre especies. Usó el signo más (+) cuando una especie se beneficia, el signo menos (−) cuando se perjudica y el cero (0) cuando no se beneficia ni se perjudica.",
+      "enunciado": "¿Cuál opción clasifica correctamente las relaciones 1, 2 y 3 del esquema?",
+      "opciones": {
+        "A": "Mutualismo, parasitismo y comensalismo.",
+        "B": "Comensalismo, parasitismo y mutualismo.",
+        "C": "Comensalismo, depredación y mutualismo.",
+        "D": "Parasitismo, comensalismo y mutualismo."
+      },
+      "clave": "B",
+      "explicacion": "En la pareja 1 la rémora se beneficia y el tiburón no se afecta, y eso es comensalismo. La pulga se beneficia y perjudica al perro, que es parasitismo, y el colibrí y la flor se benefician los dos, que es mutualismo.",
+      "por_que": {
+        "A": "Confunde comensalismo con mutualismo: en la pareja 1 solo una especie se beneficia.",
+        "C": "La pulga se alimenta del perro sin matarlo; eso es parasitismo, no depredación.",
+        "D": "Confunde las parejas 1 y 2: el tiburón no se perjudica y el perro sí."
+      },
+      "imagen": {
+        "archivo": "cie-2-3-relaciones.svg",
+        "alt": "Esquema de tres parejas de especies con signos. Pareja 1: rémora con signo más y tiburón con cero. Pareja 2: pulga con signo más y perro con signo menos. Pareja 3: colibrí con signo más y flor con signo más."
+      }
+    },
+    {
+      "id": "cie-2-3-c",
+      "orden": 27,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Relaciones entre seres vivos",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.3",
+        "texto": "Clasifica las relaciones de interdependencia entre los seres vivos y su importancia en el equilibrio ecológico."
+      },
+      "evidencia": {
+        "codigo": "2.3.3",
+        "texto": "Distingue conceptos, ejemplos, importancia y características de las relaciones intraespecíficas e interespecíficas en los ecosistemas."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nEn la finca del abuelo de Joseph hay un granero donde viven varias lechuzas. Cada noche, ellas cazan ratones que se comen el maíz almacenado y los granos de los cultivos. Un vecino propuso ahuyentar a las lechuzas porque le dan miedo. El abuelo le respondió que eso podría causar un problema en la finca.",
+      "enunciado": "¿Cuál problema es más probable que ocurra si las lechuzas se van del granero?",
+      "opciones": {
+        "A": "Los ratones desaparecerían por falta de depredadores.",
+        "B": "Las plantas de maíz producirían más mazorcas.",
+        "C": "Los ratones dejarían de reproducirse en la finca.",
+        "D": "Los ratones aumentarían y dañarían más cosechas."
+      },
+      "clave": "D",
+      "explicacion": "Las lechuzas son depredadoras de los ratones y ayudan a mantener su población bajo control. Si se van, los ratones se multiplicarían y dañarían más granos, por eso la depredación ayuda al equilibrio ecológico.",
+      "por_que": {
+        "A": "Es al revés: sin depredadores, la población de ratones crece.",
+        "B": "Habría más ratones comiendo el grano, así que la cosecha no aumentaría.",
+        "C": "Los ratones no necesitan a las lechuzas para reproducirse; sin ellas se multiplicarían más."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-3-d",
+      "orden": 28,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Relaciones entre seres vivos",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.3",
+        "texto": "Clasifica las relaciones de interdependencia entre los seres vivos y su importancia en el equilibrio ecológico."
+      },
+      "evidencia": {
+        "codigo": "2.3.2",
+        "texto": "Reconoce las relaciones interespecíficas tales como mutualismo, comensalismo, parasitismo y depredación."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn los bosques secos de Guanacaste crece el cornizuelo, un arbusto con espinas grandes y huecas. Dentro de esas espinas viven colonias de hormigas que se alimentan de un néctar y de unas pequeñas bolitas nutritivas que produce la planta. Las hormigas, a cambio, atacan a los insectos que se comen las hojas y cortan las enredaderas que crecen alrededor del arbusto.",
+      "enunciado": "La relación entre el cornizuelo y las hormigas se clasifica como",
+      "opciones": {
+        "A": "comensalismo, porque solo las hormigas salen ganando.",
+        "B": "parasitismo, porque las hormigas viven dentro de la planta.",
+        "C": "mutualismo, porque ambas especies salen ganando.",
+        "D": "depredación, porque las hormigas atacan a otros insectos."
+      },
+      "clave": "C",
+      "explicacion": "La planta da casa y alimento a las hormigas, y las hormigas protegen a la planta de insectos y enredaderas. Como las dos especies se benefician, la relación es de mutualismo.",
+      "por_que": {
+        "A": "Ignora que la planta también recibe protección de las hormigas.",
+        "B": "Vivir dentro de otro ser vivo no siempre es parasitismo; aquí la planta no se perjudica.",
+        "D": "Eso ocurre, pero no describe la relación entre la planta y las hormigas."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-2-4-a",
+      "orden": 29,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Fotosíntesis",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2.4",
+        "texto": "Comprende los aspectos relacionados con la fotosíntesis para la vida en la Tierra."
+      },
+      "evidencia": {
+        "codigo": "2.4.2",
+        "texto": "Reconoce los componentes iniciales y finales del proceso de la fotosíntesis."
+      },
+      "verbo": "identificar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEl esquema muestra las sustancias que entran a la hoja de una planta y las que salen de ella mientras realiza fotosíntesis durante el día. El agua llega desde las raíces y la luz proviene del Sol; en la hoja se forma un azúcar que la planta usa como alimento.",
+      "enunciado": "¿Qué sustancias representan las letras X y Y del esquema, respectivamente?",
+      "opciones": {
+        "A": "Oxígeno y dióxido de carbono.",
+        "B": "Nitrógeno y oxígeno.",
+        "C": "Vapor de agua y oxígeno.",
+        "D": "Dióxido de carbono y oxígeno."
+      },
+      "clave": "D",
+      "explicacion": "Durante la fotosíntesis, la hoja toma dióxido de carbono del aire, que es la X, y con agua y luz fabrica azúcar. Como resultado, libera oxígeno al aire, que es la Y.",
+      "por_que": {
+        "A": "Invierte el proceso: confunde la fotosíntesis con la respiración.",
+        "B": "Cree que el nitrógeno del aire es el gas que la planta toma para la fotosíntesis.",
+        "C": "Confunde el agua, que entra por las raíces, con el gas que la hoja toma del aire."
+      },
+      "imagen": {
+        "archivo": "cie-2-4-fotosintesis.svg",
+        "alt": "Dibujo de una planta iluminada por el Sol. Una flecha rotulada luz va del Sol a la hoja. Una flecha rotulada agua sube desde las raíces. Una flecha rotulada X entra a la hoja desde el aire. Una flecha rotulada Y sale de la hoja hacia el aire. Dentro de la hoja se lee azúcar."
+      }
+    },
+    {
+      "id": "cie-2-4-b",
+      "orden": 30,
+      "materia": "ciencias",
+      "bloque": "Biodiversidad",
+      "tema": "Biodiversidad",
+      "subtema": "Fotosíntesis",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2.4",
+        "texto": "Comprende los aspectos relacionados con la fotosíntesis para la vida en la Tierra."
+      },
+      "evidencia": {
+        "codigo": "2.4.1",
+        "texto": "Identifica el concepto, importancia y características del proceso de fotosíntesis."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "El siguiente texto se relaciona con la fotosíntesis:\n\nEn los océanos flotan millones de algas microscópicas que forman el fitoplancton. Como tienen clorofila, aprovechan la luz que penetra en las capas superiores del agua. Pequeños animales marinos se alimentan de ellas, y estos a su vez sirven de alimento a peces más grandes. Una parte importante del oxígeno de la atmósfera proviene de estas algas.",
+      "enunciado": "Según la información, ¿por qué la fotosíntesis del fitoplancton es importante para la vida en el planeta?",
+      "opciones": {
+        "A": "Elimina por completo el dióxido de carbono del aire.",
+        "B": "Sostiene las cadenas alimentarias y renueva el aire.",
+        "C": "Calienta el agua del mar para que vivan los peces.",
+        "D": "Permite que los peces respiren sin necesitar oxígeno."
+      },
+      "clave": "B",
+      "explicacion": "Las algas del fitoplancton usan la luz para fabricar su alimento y, al hacerlo, liberan oxígeno. Así alimentan a muchos animales marinos y ayudan a mantener el oxígeno del aire que respiran los seres vivos.",
+      "por_que": {
+        "A": "Exagera: la fotosíntesis consume parte del dióxido de carbono, no todo.",
+        "C": "Confunde la fotosíntesis con un proceso que produce calor.",
+        "D": "Contradice la información: los peces sí necesitan oxígeno para vivir."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-1-a",
+      "orden": 31,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Tipos, clases y transformaciones de la energía",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.1",
+        "texto": "Clasifica la energía por sus características según tipos, clases, fuentes, transformaciones y aplicaciones que se dan en el entorno."
+      },
+      "evidencia": {
+        "codigo": "3.1.3",
+        "texto": "Reconoce ejemplos de transformaciones de energía cinética a potencial y viceversa."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nRandall lanza una bola de fútbol hacia arriba en el patio de su casa. Al principio la bola sube muy rápido, pero cada vez avanza más despacio hasta que se detiene por un instante en el punto más alto. Luego empieza a caer y va cada vez más rápido hasta llegar a las manos de Randall.",
+      "enunciado": "Mientras la bola sube, ¿qué ocurre con su energía?",
+      "opciones": {
+        "A": "La potencial se transforma en cinética.",
+        "B": "La cinética y la potencial aumentan juntas.",
+        "C": "La cinética se transforma en potencial.",
+        "D": "La potencial disminuye hasta desaparecer."
+      },
+      "clave": "C",
+      "explicacion": "Al subir, la bola pierde rapidez y gana altura, así que su energía cinética se va transformando en energía potencial. En el punto más alto casi toda la energía es potencial, y al caer ocurre lo contrario.",
+      "por_que": {
+        "A": "Esa transformación ocurre cuando la bola cae, no cuando sube.",
+        "B": "Al subir la bola pierde rapidez, por eso su energía cinética disminuye.",
+        "D": "Al ganar altura, la energía potencial aumenta."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-1-b",
+      "orden": 32,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Tipos, clases y transformaciones de la energía",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.1",
+        "texto": "Clasifica la energía por sus características según tipos, clases, fuentes, transformaciones y aplicaciones que se dan en el entorno."
+      },
+      "evidencia": {
+        "codigo": "3.1.2",
+        "texto": "Distingue entre objetos que tienen mayor o menor energía cinética o potencial en situaciones cotidianas."
+      },
+      "verbo": "determinar",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Analice la siguiente tabla:\n\nXimena acomodó cuatro cajas en los estantes de la bodega de su casa.\n\n| Caja | Masa | Altura del estante |\n|---|---|---|\n| 1 | 2 kg | 1 m |\n| 2 | 1 kg | 3 m |\n| 3 | 3 kg | 2 m |\n| 4 | 4 kg | 1 m |\n\nLa energía potencial de un objeto es mayor cuanto más masa tiene y cuanto más alto se encuentra.",
+      "enunciado": "¿Cuál caja tiene mayor energía potencial?",
+      "opciones": {
+        "A": "La caja 1",
+        "B": "La caja 2",
+        "C": "La caja 3",
+        "D": "La caja 4"
+      },
+      "clave": "C",
+      "explicacion": "Hay que tomar en cuenta la masa y la altura al mismo tiempo. Si se multiplica la masa por la altura, la caja 3 da 6, más que las cajas 1, 2 y 4, que dan 2, 3 y 4.",
+      "por_que": {
+        "A": "Tiene poca masa y está en el estante más bajo.",
+        "B": "Está en el estante más alto, pero su masa es la menor de todas; se fija solo en la altura.",
+        "D": "Es la de mayor masa, pero está en el estante más bajo; se fija solo en la masa."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-1-c",
+      "orden": 33,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Tipos, clases y transformaciones de la energía",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.1",
+        "texto": "Clasifica la energía por sus características según tipos, clases, fuentes, transformaciones y aplicaciones que se dan en el entorno."
+      },
+      "evidencia": {
+        "codigo": "3.1.4",
+        "texto": "Diferencia conceptos, fuentes y características de las clases de energía (geotérmica, eólica, sonora, lumínica, magnética, eléctrica, nuclear, hidroeléctrica, química, entre otras) en el entorno natural, así como sus aplicaciones en la vida diaria."
+      },
+      "verbo": "diferenciar",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn algunas zonas de Guanacaste cercanas a volcanes se perforan pozos profundos de donde sale vapor muy caliente que proviene del interior de la Tierra; ese vapor mueve turbinas que generan electricidad. En cambio, en las colinas de Tilarán se aprovechan las corrientes de aire, que son fuertes y constantes durante buena parte del año, para hacer girar grandes aspas.",
+      "enunciado": "¿Qué clases de energía se aprovechan, en orden, en los dos lugares descritos?",
+      "opciones": {
+        "A": "Hidroeléctrica y eólica.",
+        "B": "Geotérmica y magnética.",
+        "C": "Química y eólica.",
+        "D": "Geotérmica y eólica."
+      },
+      "clave": "D",
+      "explicacion": "La energía geotérmica aprovecha el calor del interior de la Tierra, como el vapor de los pozos cercanos a volcanes. La energía eólica aprovecha la fuerza del viento, como en las colinas de Tilarán.",
+      "por_que": {
+        "A": "El vapor sale del subsuelo caliente, no de la fuerza del agua de un río.",
+        "B": "Las aspas giran por la fuerza del viento, no por la acción de un imán.",
+        "C": "El vapor no proviene de quemar combustibles, sino del calor interno de la Tierra."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-1-d",
+      "orden": 34,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Tipos, clases y transformaciones de la energía",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.1",
+        "texto": "Clasifica la energía por sus características según tipos, clases, fuentes, transformaciones y aplicaciones que se dan en el entorno."
+      },
+      "evidencia": {
+        "codigo": "3.1.5",
+        "texto": "Distingue entre fuentes de energía limpia y contaminante."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Lea la siguiente información:\n\nEn algunas regiones del mundo, la electricidad se produce en plantas que queman carbón mineral; el humo que sale de sus chimeneas lleva gases y partículas que ensucian el aire y aumentan el calentamiento del planeta. En otras regiones se instalan campos con paneles que convierten la luz del Sol en electricidad.",
+      "enunciado": "La segunda forma de producir electricidad se considera energía limpia porque",
+      "opciones": {
+        "A": "funciona igual durante el día y durante la noche.",
+        "B": "no contamina la atmósfera al generar corriente.",
+        "C": "se obtiene de restos de seres vivos muy antiguos.",
+        "D": "produce más electricidad que cualquier otra fuente."
+      },
+      "clave": "B",
+      "explicacion": "Los paneles solares transforman la luz del Sol en electricidad sin quemar nada, por eso no echan humo ni gases contaminantes. En cambio, quemar carbón ensucia el aire y calienta el planeta.",
+      "por_que": {
+        "A": "Los paneles no producen electricidad sin luz solar; además, eso no define si una energía es limpia.",
+        "C": "Eso describe a los combustibles fósiles, como el carbón, que contaminan.",
+        "D": "La cantidad de electricidad producida no define si una energía es limpia."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-1-e",
+      "orden": 35,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Tipos, clases y transformaciones de la energía",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.1",
+        "texto": "Clasifica la energía por sus características según tipos, clases, fuentes, transformaciones y aplicaciones que se dan en el entorno."
+      },
+      "evidencia": {
+        "codigo": "3.1.6",
+        "texto": "Reconoce ejemplos de transformaciones entre las clases de energía."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nDurante un apagón, Kendall usa una linterna que no tiene baterías. Para encenderla, gira con la mano una manivela durante un minuto. Al girar, la manivela mueve un pequeño generador que produce electricidad, y esa electricidad hace brillar el bombillo de la linterna.",
+      "enunciado": "¿Cuál es la secuencia de transformaciones de energía que ocurre en la linterna?",
+      "opciones": {
+        "A": "De eléctrica a cinética y de cinética a lumínica.",
+        "B": "De cinética a eléctrica y de eléctrica a lumínica.",
+        "C": "De química a eléctrica y de eléctrica a lumínica.",
+        "D": "De cinética a lumínica y de lumínica a eléctrica."
+      },
+      "clave": "B",
+      "explicacion": "Al girar la manivela se produce movimiento, que es energía cinética, y el generador la transforma en energía eléctrica. Luego el bombillo transforma esa electricidad en energía lumínica.",
+      "por_que": {
+        "A": "Invierte el orden: primero hay movimiento y después electricidad.",
+        "C": "Así funciona una linterna de baterías, pero esta no tiene baterías.",
+        "D": "La luz es el resultado final; no es la que produce la electricidad."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-1-f",
+      "orden": 36,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Tipos, clases y transformaciones de la energía",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.1",
+        "texto": "Clasifica la energía por sus características según tipos, clases, fuentes, transformaciones y aplicaciones que se dan en el entorno."
+      },
+      "evidencia": {
+        "codigo": "3.1.7",
+        "texto": "Identifica el uso de la energía en la vida cotidiana."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Considere la siguiente información:\n\nEn muchos países se están cambiando los bombillos incandescentes por bombillos LED. Un bombillo incandescente se pone tan caliente que no se puede tocar después de un rato encendido; en cambio, un bombillo LED apenas se entibia. Para alumbrar un cuarto con la misma intensidad, el bombillo LED consume mucha menos electricidad.",
+      "enunciado": "¿Por qué el bombillo LED consume menos electricidad que el incandescente?",
+      "opciones": {
+        "A": "Transforma la electricidad en calor y no en luz.",
+        "B": "Funciona con energía química en lugar de eléctrica.",
+        "C": "Desperdicia menos energía en forma de calor.",
+        "D": "Produce una luz más débil que la del otro bombillo."
+      },
+      "clave": "C",
+      "explicacion": "El bombillo incandescente gasta gran parte de la electricidad en producir calor, por eso se calienta tanto. El LED pierde mucho menos energía en calor, así que con menos electricidad da la misma luz.",
+      "por_que": {
+        "A": "Es al revés: el que convierte mucha electricidad en calor es el incandescente.",
+        "B": "Los dos bombillos funcionan con electricidad.",
+        "D": "El texto indica que alumbra con la misma intensidad."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-2-a",
+      "orden": 37,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Manifestaciones de la energía",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.2",
+        "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
+      },
+      "evidencia": {
+        "codigo": "3.2.3",
+        "texto": "Compara la rapidez de dos o más objetos en relación con la distancia recorrida y el tiempo en situaciones cotidianas."
+      },
+      "verbo": "comparar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEn una actividad de Educación Física, cuatro estudiantes recorrieron en bicicleta distintas distancias en un terreno plano y midieron el tiempo que tardó cada uno. Cada estudiante mantuvo la misma rapidez durante todo su recorrido. Los datos se anotaron en la tabla de la imagen.",
+      "enunciado": "¿Cuál ciclista tuvo la mayor rapidez?",
+      "opciones": {
+        "A": "Ciclista 1",
+        "B": "Ciclista 2",
+        "C": "Ciclista 3",
+        "D": "Ciclista 4"
+      },
+      "clave": "A",
+      "explicacion": "La rapidez se obtiene al dividir la distancia entre el tiempo. Ciclista 1 recorrió 600 m en 100 s, es decir, 6 m/s, la mayor rapidez del grupo.",
+      "por_que": {
+        "B": "Recorrió 800 m, pero tardó 200 s: su rapidez fue de 4 m/s.",
+        "C": "Recorrió la mayor distancia, pero tardó 180 s: su rapidez fue de 5 m/s.",
+        "D": "Tardó el menor tiempo, pero recorrió poca distancia: su rapidez fue de 4 m/s."
+      },
+      "imagen": {
+        "archivo": "cie-3-2-rapidez.svg",
+        "alt": "Tabla de cuatro ciclistas. Ciclista 1: 600 metros en 100 segundos. Ciclista 2: 800 metros en 200 segundos. Ciclista 3: 900 metros en 180 segundos. Ciclista 4: 300 metros en 75 segundos."
+      }
+    },
+    {
+      "id": "cie-3-2-b",
+      "orden": 38,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Manifestaciones de la energía",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.2",
+        "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
+      },
+      "evidencia": {
+        "codigo": "3.2.2",
+        "texto": "Reconoce las características básicas de movimiento para un mejor entendimiento del entorno físico."
+      },
+      "verbo": "determinar",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn el Parque Metropolitano La Sabana, en San José, Priscilla entrena para una competencia de atletismo. Su entrenadora le pidió correr un tramo recto de 100 m manteniendo siempre una rapidez de 5 m/s. Mientras tanto, la entrenadora toma el tiempo con un cronómetro desde la salida hasta la llegada.",
+      "enunciado": "¿Cuánto tiempo tardará Priscilla en recorrer el tramo completo?",
+      "opciones": {
+        "A": "0,05 s",
+        "B": "20 s",
+        "C": "95 s",
+        "D": "500 s"
+      },
+      "clave": "B",
+      "explicacion": "Si Priscilla avanza 5 m en cada segundo, para recorrer 100 m necesita 100 ÷ 5 = 20 segundos. Para hallar el tiempo se divide la distancia entre la rapidez.",
+      "por_que": {
+        "A": "Divide la rapidez entre la distancia (5 ÷ 100), al revés de lo correcto.",
+        "C": "Resta la rapidez a la distancia (100 − 5), y esa operación no da el tiempo.",
+        "D": "Multiplica la distancia por la rapidez (100 × 5), cuando hay que dividir."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-2-c",
+      "orden": 39,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Manifestaciones de la energía",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.2",
+        "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
+      },
+      "evidencia": {
+        "codigo": "3.2.5",
+        "texto": "Distingue cada una de las formas de transmisión del calor (conducción, radiación, convección) y sus características por medio de situaciones cotidianas."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEn la clase de Ciencias se presentaron tres situaciones de la vida diaria en las que el calor pasa de un cuerpo más caliente a otro más frío. La docente explicó que en cada situación el calor se transmite de una manera diferente y pidió identificar cuál es cada una.",
+      "enunciado": "¿Cuál opción indica la forma de transmisión del calor en las situaciones 1, 2 y 3, respectivamente?",
+      "opciones": {
+        "A": "Radiación, convección y conducción.",
+        "B": "Conducción, radiación y convección.",
+        "C": "Convección, conducción y radiación.",
+        "D": "Radiación, conducción y convección."
+      },
+      "clave": "D",
+      "explicacion": "Las manos se calientan sin tocar la fogata, y eso es radiación. El mango de la cuchara se calienta por contacto con la bebida, que es conducción, y el aire caliente sube y el frío baja alrededor del calentador, que es convección.",
+      "por_que": {
+        "A": "Confunde conducción con convección: en la cuchara el calor pasa por contacto a través del metal.",
+        "B": "Las manos no tocan la fogata; el calor les llega por radiación.",
+        "C": "Confunde la radiación de la fogata con el movimiento del aire caliente."
+      },
+      "imagen": {
+        "archivo": "cie-3-2-calor.svg",
+        "alt": "Tres escenas numeradas. Situación 1: unas manos frente a una fogata, sin tocarla. Situación 2: una cuchara de metal dentro de una taza con bebida caliente; el mango que queda afuera se calienta. Situación 3: un calentador en el piso de un cuarto; flechas muestran el aire caliente que sube y el aire frío que baja."
+      }
+    },
+    {
+      "id": "cie-3-2-d",
+      "orden": 40,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Manifestaciones de la energía",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.2",
+        "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
+      },
+      "evidencia": {
+        "codigo": "3.2.7",
+        "texto": "Distingue los tipos de materiales según el paso de la luz (transparentes, translúcidos y opacos)."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nAllison y su papá van a cambiar el techo del gallinero. Quieren un material que deje pasar parte de la claridad del día, para que las gallinas no queden a oscuras, pero que no permita ver con nitidez lo que hay del otro lado, para que las aves estén tranquilas. En la ferretería les ofrecen varias opciones.",
+      "enunciado": "¿Qué tipo de material necesitan y cuál es un ejemplo?",
+      "opciones": {
+        "A": "Translúcido, como una lámina de plástico lechoso.",
+        "B": "Transparente, como una lámina de vidrio sin color.",
+        "C": "Opaco, como una lámina de zinc.",
+        "D": "Opaco, como una lámina de plástico lechoso."
+      },
+      "clave": "A",
+      "explicacion": "Un material translúcido deja pasar parte de la luz, pero no permite ver con claridad lo que hay detrás, como el plástico lechoso. Así las gallinas tienen claridad y a la vez están tranquilas.",
+      "por_que": {
+        "B": "El vidrio sin color deja ver con claridad lo que hay del otro lado.",
+        "C": "El zinc no deja pasar la luz y el gallinero quedaría a oscuras.",
+        "D": "El plástico lechoso deja pasar parte de la luz, por eso no es opaco."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-2-e",
+      "orden": 41,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Manifestaciones de la energía",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.2",
+        "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
+      },
+      "evidencia": {
+        "codigo": "3.2.8",
+        "texto": "Distingue por sus características y ejemplos los fenómenos de refracción y reflexión de la luz."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nUn domingo, Dylan visitó un río con su familia.\n\n1. Al mirar el fondo de una poza de agua clara, le pareció poco profunda; pero cuando entró, el agua le llegó más arriba de la cintura.\n\n2. En una parte donde el agua estaba muy quieta, vio sobre la superficie la imagen de los árboles de la orilla, como en un espejo.",
+      "enunciado": "¿Qué fenómenos de la luz se presentan en las situaciones 1 y 2, respectivamente?",
+      "opciones": {
+        "A": "Reflexión y refracción.",
+        "B": "Refracción y refracción.",
+        "C": "Refracción y reflexión.",
+        "D": "Reflexión y reflexión."
+      },
+      "clave": "C",
+      "explicacion": "En la poza, la luz se desvía al pasar del agua al aire, y eso hace que el fondo parezca más cerca: es refracción. En el agua quieta, la luz rebota en la superficie y forma una imagen como en un espejo: es reflexión.",
+      "por_que": {
+        "A": "Invierte los fenómenos: en la situación 1 la luz se desvía al pasar del agua al aire.",
+        "B": "En la situación 2 la luz rebota en la superficie; no cambia de medio.",
+        "D": "En la situación 1 la luz pasa del agua al aire y se desvía."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-2-f",
+      "orden": 42,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Manifestaciones de la energía",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.2",
+        "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
+      },
+      "evidencia": {
+        "codigo": "3.2.9",
+        "texto": "Reconoce las características básicas y formas de transmisión del sonido."
+      },
+      "verbo": "determinar",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nDurante una tormenta, Emanuel ve un relámpago y empieza a contar los segundos hasta escuchar el trueno: cuenta 3 segundos. Su hermana le explica que la luz del relámpago llega casi al instante, mientras que el sonido del trueno viaja por el aire con una rapidez aproximada de 340 m/s.",
+      "enunciado": "¿A qué distancia aproximada de Emanuel se produjo el relámpago?",
+      "opciones": {
+        "A": "113 m",
+        "B": "337 m",
+        "C": "343 m",
+        "D": "1020 m"
+      },
+      "clave": "D",
+      "explicacion": "El sonido avanza unos 340 m en cada segundo, así que en 3 segundos recorre 340 × 3 = 1020 m. Por eso el relámpago ocurrió a poco más de un kilómetro de Emanuel.",
+      "por_que": {
+        "A": "Divide la rapidez entre el tiempo (340 ÷ 3), cuando hay que multiplicar.",
+        "B": "Resta el tiempo a la rapidez (340 − 3), y esa operación no da la distancia.",
+        "C": "Suma la rapidez y el tiempo (340 + 3), y esa operación no da la distancia."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-2-g",
+      "orden": 43,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Manifestaciones de la energía",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.2",
+        "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
+      },
+      "evidencia": {
+        "codigo": "3.2.10",
+        "texto": "Diferencia ejemplos de ruido y sonido por sus características."
+      },
+      "verbo": "diferenciar",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn un festival de un pueblo de Guanacaste, un grupo interpretó piezas tradicionales con la marimba, instrumento nacional de Costa Rica. Sus teclas de madera vibran de forma ordenada y producen notas agradables. Mientras tanto, en una finca cercana, un trabajador cortaba un árbol caído con una motosierra, que producía un zumbido fuerte, desordenado y molesto para el público.",
+      "enunciado": "¿Qué característica permite clasificar el sonido de la motosierra como ruido?",
+      "opciones": {
+        "A": "No produce vibraciones que viajen por el aire.",
+        "B": "Viaja más despacio por el aire que la música.",
+        "C": "Tiene un volumen más bajo que la música.",
+        "D": "Vibra de manera irregular y desagradable."
+      },
+      "clave": "D",
+      "explicacion": "El ruido es un sonido producido por vibraciones irregulares, sin orden, que resulta molesto. La marimba, en cambio, produce vibraciones ordenadas que se escuchan como notas agradables.",
+      "por_que": {
+        "A": "Todo sonido, incluido el ruido, se produce por vibraciones que viajan por un medio.",
+        "B": "En el aire, todos los sonidos viajan con la misma rapidez.",
+        "C": "El volumen no define al ruido; además, el zumbido era fuerte."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-2-h",
+      "orden": 44,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Manifestaciones de la energía",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.2",
+        "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
+      },
+      "evidencia": {
+        "codigo": "3.2.11",
+        "texto": "Reconoce los efectos negativos y positivos de la luz y el sonido en ambientes naturales y de ciudad."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Considere la siguiente información:\n\nEn muchas playas del mundo donde anidan tortugas marinas, las crías salen del nido por la noche y se orientan hacia el horizonte del mar, que suele ser la zona más clara. Cuando cerca de la playa hay hoteles, casas o calles muy iluminadas, muchas crías caminan tierra adentro y no logran llegar al agua.",
+      "enunciado": "¿Qué efecto de la luz en el ambiente se describe?",
+      "opciones": {
+        "A": "La luz de la luna impide que las crías salgan de los nidos.",
+        "B": "La luz artificial altera la orientación de algunas especies.",
+        "C": "El calor de los bombillos seca la arena de los nidos.",
+        "D": "La luz de las ciudades ayuda a las crías a encontrar el mar."
+      },
+      "clave": "B",
+      "explicacion": "Las crías de tortuga buscan la zona más clara para llegar al mar. Las luces de hoteles, casas y calles las confunden y las llevan en la dirección equivocada, por eso la luz artificial puede dañar a la fauna.",
+      "por_que": {
+        "A": "La claridad natural sobre el mar es la que guía a las crías; el problema es la luz artificial.",
+        "C": "El texto habla de la dirección que toman las crías, no del calor.",
+        "D": "Es al revés: la luz artificial las aleja del mar."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-3-a",
+      "orden": 45,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Electricidad y magnetismo",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.3",
+        "texto": "Determina las características de la electricidad, el magnetismo, la corriente eléctrica, los circuitos y la conductividad en fenómenos cotidianos."
+      },
+      "evidencia": {
+        "codigo": "3.3.4",
+        "texto": "Reconoce las partes, características y clasificación de los circuitos eléctricos en serie y en paralelo."
+      },
+      "verbo": "determinar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nNicole armó dos circuitos con una batería, cables y tres bombillos iguales en cada uno. En ambos circuitos, el bombillo marcado con una X se fundió, es decir, su filamento se rompió y la corriente ya no puede pasar a través de él. Los demás bombillos están en buen estado.",
+      "enunciado": "¿Qué ocurre con los demás bombillos de cada circuito después de que se funde el bombillo marcado?",
+      "opciones": {
+        "A": "En el 1 siguen encendidos y en el 2 se apagan.",
+        "B": "En el 1 se apagan y en el 2 siguen encendidos.",
+        "C": "En los dos circuitos se apagan todos.",
+        "D": "En los dos circuitos siguen encendidos."
+      },
+      "clave": "B",
+      "explicacion": "En el circuito 1 los bombillos están en serie, uno detrás de otro, y si uno se funde se corta el único camino de la corriente. En el circuito 2 están en paralelo, así que la corriente sigue por los otros caminos y esos bombillos siguen encendidos.",
+      "por_que": {
+        "A": "Confunde los circuitos: el 1 tiene un solo camino para la corriente y el 2 tiene varios.",
+        "C": "En el circuito en paralelo la corriente sigue por los otros caminos.",
+        "D": "En el circuito en serie, al fundirse un bombillo, se interrumpe el único camino."
+      },
+      "imagen": {
+        "archivo": "cie-3-3-circuitos.svg",
+        "alt": "Dos circuitos con una batería y tres bombillos cada uno. Circuito 1: los tres bombillos están uno detrás de otro en un solo camino; el bombillo del centro tiene una X. Circuito 2: cada bombillo está en su propio camino conectado a la batería; el bombillo del centro tiene una X."
+      }
+    },
+    {
+      "id": "cie-3-3-b",
+      "orden": 46,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Electricidad y magnetismo",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.3",
+        "texto": "Determina las características de la electricidad, el magnetismo, la corriente eléctrica, los circuitos y la conductividad en fenómenos cotidianos."
+      },
+      "evidencia": {
+        "codigo": "3.3.3",
+        "texto": "Diferencia materiales conductores y aislantes según su conductividad"
+      },
+      "verbo": "clasificar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Analice la siguiente tabla:\n\nEn el laboratorio, Brandon probó varios objetos en un circuito con una batería y un bombillo. Colocó cada objeto entre los extremos de dos cables y observó si el bombillo encendía.\n\n| Objeto | ¿Encendió el bombillo? |\n|---|---|\n| Clip de metal | Sí |\n| Borrador | No |\n| Mina de lápiz | Sí |\n| Palito de madera | No |",
+      "enunciado": "Según los resultados, ¿cuál opción reúne solo materiales aislantes?",
+      "opciones": {
+        "A": "El borrador y el palito de madera.",
+        "B": "El clip de metal y el borrador.",
+        "C": "La mina de lápiz y el palito de madera.",
+        "D": "El clip de metal y la mina de lápiz."
+      },
+      "clave": "A",
+      "explicacion": "Los materiales aislantes no dejan pasar la corriente eléctrica, por eso con ellos el bombillo no encendió. En la prueba de Brandon, eso ocurrió con el borrador y con el palito de madera.",
+      "por_que": {
+        "B": "El clip encendió el bombillo, por eso es conductor.",
+        "C": "La mina de lápiz sí dejó pasar la corriente, aunque no sea de metal.",
+        "D": "Son los conductores: los dos permitieron que el bombillo encendiera."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-3-c",
+      "orden": 47,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Electricidad y magnetismo",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3.3",
+        "texto": "Determina las características de la electricidad, el magnetismo, la corriente eléctrica, los circuitos y la conductividad en fenómenos cotidianos."
+      },
+      "evidencia": {
+        "codigo": "3.3.2",
+        "texto": "Reconoce características de la electricidad, los procesos de atracción-repulsión, usos, ejemplos y manifestaciones de los tipos de carga eléctrica."
+      },
+      "verbo": "determinar",
+      "tipo_contexto": "científico-escolar",
+      "contexto": "Lea la siguiente información:\n\nEn la clase de Ciencias, Rebeca frotó dos tiras de plástico iguales con el mismo paño de lana. Luego las sostuvo de un extremo y las acercó, sin que se tocaran. Las tiras se separaron una de la otra. Después acercó una de las tiras a pedacitos de papel, y los pedacitos se pegaron a la tira.",
+      "enunciado": "¿Qué explica que las dos tiras se separaran?",
+      "opciones": {
+        "A": "Quedaron con cargas de distinto tipo y se repelen.",
+        "B": "Quedaron sin carga después de frotarlas con el paño.",
+        "C": "Quedaron con cargas del mismo tipo y se repelen.",
+        "D": "Quedaron con cargas del mismo tipo y se atraen."
+      },
+      "clave": "C",
+      "explicacion": "Como las dos tiras se frotaron con el mismo paño, quedaron con el mismo tipo de carga eléctrica. Las cargas iguales se repelen, por eso las tiras se alejaron una de la otra.",
+      "por_que": {
+        "A": "Las cargas de distinto tipo se atraen, no se repelen.",
+        "B": "Al frotarlas ganan carga; por eso atraen los pedacitos de papel.",
+        "D": "Las cargas del mismo tipo se repelen; por eso las tiras se alejaron."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-3-3-d",
+      "orden": 48,
+      "materia": "ciencias",
+      "bloque": "Energía",
+      "tema": "Energía",
+      "subtema": "Electricidad y magnetismo",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3.3",
+        "texto": "Determina las características de la electricidad, el magnetismo, la corriente eléctrica, los circuitos y la conductividad en fenómenos cotidianos."
+      },
+      "evidencia": {
+        "codigo": "3.3.5",
+        "texto": "Reconoce las características del magnetismo, polos magnéticos, ejemplos, manifestaciones y usos en la vida cotidiana, así como su relación con la energía eléctrica (electroimanes)."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "personal-cotidiano",
+      "contexto": "Lea la siguiente información:\n\nEn un centro de reciclaje, una grúa tiene en su extremo un disco grande formado por una bobina de alambre enrollado alrededor de un núcleo de hierro. Cuando el operario activa el interruptor, el disco levanta piezas de chatarra de hierro. Al llegar al contenedor, el operario apaga el interruptor y la chatarra cae.",
+      "enunciado": "¿Qué característica del disco permite soltar la chatarra en el contenedor?",
+      "opciones": {
+        "A": "Su magnetismo depende de que pase corriente eléctrica.",
+        "B": "Su magnetismo es permanente, como el de un imán común.",
+        "C": "El hierro pierde su peso cuando se apaga la grúa.",
+        "D": "Atrae solo materiales de aluminio, como las latas."
+      },
+      "clave": "A",
+      "explicacion": "La grúa usa un electroimán, que es una bobina con corriente eléctrica que se comporta como un imán. Al apagar el interruptor deja de pasar la corriente, el disco pierde su magnetismo y la chatarra cae.",
+      "por_que": {
+        "B": "Si fuera permanente, la chatarra no caería al apagar el interruptor.",
+        "C": "El hierro siempre tiene peso; lo que cambia es la atracción magnética.",
+        "D": "Los imanes atraen el hierro, no el aluminio, y el disco levanta chatarra de hierro."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-1-a",
+      "orden": 49,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Estructura de la Tierra, clima y relieve",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4.1",
+        "texto": "Distingue la estructura interna y externa del planeta Tierra, así como los agentes externos e internos que modifican esas estructuras."
+      },
+      "evidencia": {
+        "codigo": "4.1.4",
+        "texto": "Identifica las partes de la atmósfera según su temperatura: troposfera, estratosfera (capa de ozono), mesosfera e ionosfera."
+      },
+      "verbo": "identificar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nLa imagen representa las capas de la atmósfera ordenadas según su altura sobre la superficie terrestre. Los límites entre una capa y otra son aproximados, porque cambian un poco según el lugar del planeta y la época del año. En cada capa la temperatura se comporta de manera distinta.",
+      "enunciado": "¿Qué ocurre en la capa marcada con el número 2?",
+      "opciones": {
+        "A": "Se forman las nubes, la lluvia y casi todo el viento.",
+        "B": "Se queman muchos meteoroides al entrar a la atmósfera.",
+        "C": "Se reflejan las ondas de radio que viajan por el planeta.",
+        "D": "El ozono filtra parte de los rayos ultravioleta del Sol."
+      },
+      "clave": "D",
+      "explicacion": "La capa 2 es la estratosfera, donde se encuentra la capa de ozono. El ozono filtra parte de los rayos ultravioleta del Sol y así protege a los seres vivos.",
+      "por_que": {
+        "A": "Eso ocurre en la capa 1, la más cercana a la superficie.",
+        "B": "Eso ocurre en la capa 3, la mesosfera.",
+        "C": "Eso ocurre en la capa 4, la ionosfera."
+      },
+      "imagen": {
+        "archivo": "cie-4-1-atmosfera.svg",
+        "alt": "Columna de la atmósfera dividida en cuatro capas numeradas desde la superficie. Capa 1: de 0 a unos 12 kilómetros. Capa 2: de unos 12 a unos 50 kilómetros. Capa 3: de unos 50 a unos 80 kilómetros. Capa 4: por encima de unos 80 kilómetros."
+      }
+    },
+    {
+      "id": "cie-4-1-b",
+      "orden": 50,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Estructura de la Tierra, clima y relieve",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4.1",
+        "texto": "Distingue la estructura interna y externa del planeta Tierra, así como los agentes externos e internos que modifican esas estructuras."
+      },
+      "evidencia": {
+        "codigo": "4.1.5",
+        "texto": "Distingue los conceptos de clima y tiempo atmosférico (estado del tiempo)."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nDurante una semana, Karla anotó dos frases que escuchó en su casa:\n\n1. «En Guanacaste, de diciembre a abril casi no llueve y hace mucho calor; así ha sido durante muchísimos años».\n\n2. «Esta tarde, en Cartago, cayó un fuerte aguacero con granizo y luego salió el sol».",
+      "enunciado": "¿A qué concepto se refiere cada frase, en ese orden?",
+      "opciones": {
+        "A": "Al tiempo atmosférico y al clima.",
+        "B": "Al clima en las dos frases.",
+        "C": "Al clima y al tiempo atmosférico.",
+        "D": "Al tiempo atmosférico en las dos frases."
+      },
+      "clave": "C",
+      "explicacion": "El clima describe las condiciones que se repiten en un lugar durante muchos años, como la época seca de Guanacaste. El tiempo atmosférico es lo que ocurre en un momento corto, como el aguacero de una tarde en Cartago.",
+      "por_que": {
+        "A": "Invierte los conceptos: la frase 1 describe lo que se repite durante muchos años.",
+        "B": "La frase 2 describe lo que ocurrió en una sola tarde.",
+        "D": "La frase 1 habla de condiciones que se repiten año tras año."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-1-c",
+      "orden": 51,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Estructura de la Tierra, clima y relieve",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4.1",
+        "texto": "Distingue la estructura interna y externa del planeta Tierra, así como los agentes externos e internos que modifican esas estructuras."
+      },
+      "evidencia": {
+        "codigo": "4.1.6",
+        "texto": "Distingue los efectos producidos en el relieve terrestre provocados por agentes externos e internos y su influencia en las actividades humanas."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn las faldas de varios volcanes del Valle Central de Costa Rica, la ceniza y otros materiales expulsados en erupciones de hace mucho tiempo se acumularon capa tras capa y formaron suelos muy fértiles. Hoy esas tierras se aprovechan para cultivar hortalizas, papas y café.",
+      "enunciado": "¿Qué tipo de agente modificó ese relieve y qué influencia tiene en las actividades humanas?",
+      "opciones": {
+        "A": "Un agente externo, que favoreció la agricultura de la zona.",
+        "B": "Un agente interno, que favoreció la agricultura de la zona.",
+        "C": "Un agente interno, que impidió la agricultura de la zona.",
+        "D": "Un agente externo, que impidió la agricultura de la zona."
+      },
+      "clave": "B",
+      "explicacion": "Las erupciones volcánicas se originan en el interior de la Tierra, por eso son un agente interno que modifica el relieve. En este caso, la ceniza formó suelos fértiles que favorecen la agricultura.",
+      "por_que": {
+        "A": "Las erupciones volcánicas nacen del interior de la Tierra, por eso son un agente interno.",
+        "C": "El texto muestra que esos suelos se aprovechan para cultivar.",
+        "D": "Equivoca el tipo de agente y también su efecto en la agricultura."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-1-d",
+      "orden": 52,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Estructura de la Tierra, clima y relieve",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4.1",
+        "texto": "Distingue la estructura interna y externa del planeta Tierra, así como los agentes externos e internos que modifican esas estructuras."
+      },
+      "evidencia": {
+        "codigo": "4.1.2",
+        "texto": "Identifica las partes de la geosfera (corteza, manto, núcleo, litosfera)."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "local-nacional",
+      "contexto": "El siguiente texto se relaciona con la geosfera:\n\nCosta Rica se ubica en una zona donde la placa del Coco se hunde lentamente debajo de la placa Caribe. Esas placas son grandes pedazos de la capa rígida exterior de la Tierra, que está formada por la corteza y por la parte más alta del manto. Debajo de ella, el manto es más caliente y sus materiales se pueden mover muy despacio.",
+      "enunciado": "Según la información, ¿cuál afirmación describe correctamente la capa que forma las placas?",
+      "opciones": {
+        "A": "Es la corteza, que también abarca todo el manto terrestre.",
+        "B": "Es el manto, que forma una capa sólida y rígida.",
+        "C": "Es la litosfera, que está formada solo por la corteza terrestre.",
+        "D": "Es la litosfera, que abarca la corteza y el manto superior."
+      },
+      "clave": "D",
+      "explicacion": "Las placas son pedazos de la litosfera, la capa rígida que abarca la corteza y la parte superior del manto. Por eso la litosfera no es lo mismo que la corteza: es un poco más gruesa.",
+      "por_que": {
+        "A": "Confunde la corteza con la litosfera y además le agrega todo el manto.",
+        "B": "El manto que está debajo es más caliente y sus materiales se mueven; no forma las placas.",
+        "C": "Olvida que la litosfera también incluye la parte superior del manto."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-1-e",
+      "orden": 53,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Estructura de la Tierra, clima y relieve",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4.1",
+        "texto": "Distingue la estructura interna y externa del planeta Tierra, así como los agentes externos e internos que modifican esas estructuras."
+      },
+      "evidencia": {
+        "codigo": "4.1.3",
+        "texto": "Identifica las partes de la hidrosfera (mares, océanos, ríos, aguas subterráneas, hielo, nubes)."
+      },
+      "verbo": "clasificar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Lea la siguiente información:\n\nEl agua del planeta se encuentra en lugares muy distintos. Una parte forma los océanos y mares; otra corre por ríos y quebradas; otra está congelada en los polos y en las cumbres de montañas muy altas. También hay agua en las nubes y en el vapor del aire, y una gran cantidad se acumula bajo el suelo, entre las rocas.",
+      "enunciado": "¿Cuál conclusión sobre la hidrosfera es correcta?",
+      "opciones": {
+        "A": "Incluye el agua en estado sólido, líquido y gaseoso.",
+        "B": "Está formada solo por el agua salada de los océanos.",
+        "C": "Abarca únicamente el agua que se ve en la superficie.",
+        "D": "Excluye el hielo porque este forma parte de la geosfera."
+      },
+      "clave": "A",
+      "explicacion": "La hidrosfera reúne toda el agua del planeta: la líquida de mares, ríos y aguas subterráneas, la sólida del hielo y la gaseosa del vapor. Por eso incluye el agua en sus tres estados.",
+      "por_que": {
+        "B": "Deja fuera los ríos, el hielo, las nubes y las aguas subterráneas.",
+        "C": "Olvida el agua subterránea y la del aire.",
+        "D": "El hielo es agua en estado sólido y sí forma parte de la hidrosfera."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-2-a",
+      "orden": 54,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Movimientos de la Tierra y la Luna",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4.2",
+        "texto": "Clasifica los movimientos de la Tierra y la Luna, así como los efectos que producen (eclipses, fases de la luna, estaciones del año)"
+      },
+      "evidencia": {
+        "codigo": "4.2.1",
+        "texto": "Reconoce los movimientos de la Luna y la Tierra (rotación y traslación)."
+      },
+      "verbo": "reconocer",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Lea la siguiente información:\n\nMelany vive en Costa Rica y tiene una prima que vive en Japón. Un día, a las doce del mediodía en Costa Rica, Melany la llamó por videollamada: su prima ya estaba en pijama porque allá era de madrugada del día siguiente. Esta diferencia de horario ocurre todos los días del año.",
+      "enunciado": "¿Cuál movimiento explica que en ambos países sea de día y de noche en momentos distintos?",
+      "opciones": {
+        "A": "La rotación de la Tierra sobre su propio eje.",
+        "B": "La traslación de la Tierra alrededor del Sol.",
+        "C": "La rotación de la Luna sobre su propio eje.",
+        "D": "La traslación de la Luna alrededor de la Tierra."
+      },
+      "clave": "A",
+      "explicacion": "La Tierra gira sobre su eje y tarda un día en dar una vuelta completa. Mientras un lado mira hacia el Sol y tiene día, el lado opuesto, como Japón en ese momento, tiene noche.",
+      "por_que": {
+        "B": "La traslación explica el año y las estaciones, no el día y la noche.",
+        "C": "El movimiento de la Luna no produce el día y la noche en la Tierra.",
+        "D": "El viaje de la Luna alrededor de la Tierra produce las fases lunares, no el día y la noche."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-2-b",
+      "orden": 55,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Movimientos de la Tierra y la Luna",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4.2",
+        "texto": "Clasifica los movimientos de la Tierra y la Luna, así como los efectos que producen (eclipses, fases de la luna, estaciones del año)"
+      },
+      "evidencia": {
+        "codigo": "4.2.2",
+        "texto": "Distingue los efectos que producen los movimientos de la Tierra y la Luna (eclipses solares, lunares, fases de la luna, mareas, estaciones del año)."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEl esquema, que no está dibujado a escala, muestra la posición del Sol, la Tierra y la Luna durante un fenómeno que muchas personas observaron desde el lado de la Tierra donde era de noche. En ese momento, los tres astros estaban alineados.",
+      "enunciado": "¿Qué fenómeno representa el esquema y en qué fase se encontraba la Luna?",
+      "opciones": {
+        "A": "Un eclipse solar, con la Luna en fase nueva.",
+        "B": "Un eclipse lunar, con la Luna en fase llena.",
+        "C": "Un eclipse lunar, con la Luna en fase nueva.",
+        "D": "Un eclipse solar, con la Luna en fase llena."
+      },
+      "clave": "B",
+      "explicacion": "Cuando la Tierra queda entre el Sol y la Luna, su sombra cae sobre la Luna y se produce un eclipse lunar. En esa posición la Luna está del lado opuesto al Sol, por eso este eclipse ocurre en fase de luna llena.",
+      "por_que": {
+        "A": "En un eclipse solar la Luna queda entre el Sol y la Tierra, y aquí está detrás de la Tierra.",
+        "C": "En fase nueva la Luna está entre el Sol y la Tierra; aquí está del lado opuesto al Sol.",
+        "D": "Confunde el tipo de eclipse: aquí la Tierra es la que tapa la luz que llega a la Luna."
+      },
+      "imagen": {
+        "archivo": "cie-4-2-eclipse.svg",
+        "alt": "Esquema sin escala con el Sol a la izquierda, la Tierra en el centro y la Luna a la derecha, en línea recta. La Luna está dentro de la sombra que proyecta la Tierra."
+      }
+    },
+    {
+      "id": "cie-4-2-c",
+      "orden": 56,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Movimientos de la Tierra y la Luna",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4.2",
+        "texto": "Clasifica los movimientos de la Tierra y la Luna, así como los efectos que producen (eclipses, fases de la luna, estaciones del año)"
+      },
+      "evidencia": {
+        "codigo": "4.2.2",
+        "texto": "Distingue los efectos que producen los movimientos de la Tierra y la Luna (eclipses solares, lunares, fases de la luna, mareas, estaciones del año)."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "local-nacional",
+      "contexto": "Lea la siguiente información:\n\nEn Puntarenas, los pescadores artesanales revisan cada día una tabla de mareas antes de salir en sus botes. Saben que el nivel del mar sube y baja dos veces al día y que, en ciertos momentos, la marea baja deja al descubierto parte del estero. Por eso planifican la salida y el regreso según esos cambios.",
+      "enunciado": "¿Cuál es la causa principal de los cambios que observan los pescadores?",
+      "opciones": {
+        "A": "El viento que sopla con fuerza desde la costa hacia el mar.",
+        "B": "La lluvia que aumenta el caudal de los ríos que llegan al mar.",
+        "C": "La atracción que ejerce la Luna sobre el agua de los océanos.",
+        "D": "La rotación de la Luna sobre su eje cada día."
+      },
+      "clave": "C",
+      "explicacion": "La Luna atrae el agua de los océanos con su fuerza de gravedad, y eso hace que el nivel del mar suba y baje. Como la Tierra gira, cada costa pasa por esos cambios dos veces al día.",
+      "por_que": {
+        "A": "El viento forma olas, pero no causa la subida y bajada regular del nivel del mar.",
+        "B": "La lluvia no produce cambios que se repiten dos veces al día.",
+        "D": "Confunde el movimiento: la marea se debe a la atracción de la Luna, no a su giro sobre sí misma."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-2-d",
+      "orden": 57,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Movimientos de la Tierra y la Luna",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4.2",
+        "texto": "Clasifica los movimientos de la Tierra y la Luna, así como los efectos que producen (eclipses, fases de la luna, estaciones del año)"
+      },
+      "evidencia": {
+        "codigo": "4.2.2",
+        "texto": "Distingue los efectos que producen los movimientos de la Tierra y la Luna (eclipses solares, lunares, fases de la luna, mareas, estaciones del año)."
+      },
+      "verbo": "analizar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Lea la siguiente información:\n\nEn diciembre, en Argentina las familias van a la playa porque es verano, mientras que en Canadá cae nieve porque es invierno. En junio ocurre lo contrario. Durante todo el año, la Tierra está casi a la misma distancia del Sol; de hecho, en enero está un poco más cerca que en julio.",
+      "enunciado": "¿Qué explica que las estaciones estén invertidas en esos dos países?",
+      "opciones": {
+        "A": "La mayor cercanía de la Tierra al Sol en algunos meses.",
+        "B": "La rotación de la Tierra sobre su eje cada día.",
+        "C": "El eje inclinado de la Tierra en su traslación.",
+        "D": "La posición de la Luna con respecto a la Tierra."
+      },
+      "clave": "C",
+      "explicacion": "El eje de la Tierra está inclinado y, mientras la Tierra viaja alrededor del Sol, cada hemisferio recibe los rayos solares de forma más directa en distintos meses. Por eso, cuando en Argentina es verano, en Canadá es invierno.",
+      "por_que": {
+        "A": "El texto muestra que la distancia casi no cambia y que en enero, más cerca del Sol, Canadá está en invierno.",
+        "B": "La rotación produce el día y la noche, no las estaciones.",
+        "D": "La Luna produce fases y mareas, no las estaciones."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-3-a",
+      "orden": 58,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Sistema Solar y Universo",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4.3",
+        "texto": "Distingue los componentes Sistema Solar, el Universo y los alcances científico-tecnológicos de la exploración espacial."
+      },
+      "evidencia": {
+        "codigo": "4.3.1",
+        "texto": "Reconoce las características y ubicación de los planetas del Sistema Solar."
+      },
+      "verbo": "comparar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "El siguiente texto se relaciona con el Sistema Solar:\n\nEntre las órbitas de Marte y Júpiter hay una gran cantidad de asteroides que forman un cinturón. Ese cinturón sirve como referencia para separar los ocho planetas del Sistema Solar en dos grupos: los cuatro que están antes del cinturón, más cercanos al Sol, y los cuatro que están después, más alejados.",
+      "enunciado": "¿Qué característica diferencia a los planetas del grupo más alejado del Sol?",
+      "opciones": {
+        "A": "Son gigantes formados sobre todo por gases.",
+        "B": "Son pequeños y tienen una superficie rocosa.",
+        "C": "No tienen ningún satélite natural a su alrededor.",
+        "D": "Tienen las temperaturas más altas del sistema."
+      },
+      "clave": "A",
+      "explicacion": "Júpiter, Saturno, Urano y Neptuno están después del cinturón de asteroides y son planetas gigantes formados en su mayor parte por gases. Los cuatro más cercanos al Sol, en cambio, son pequeños y rocosos.",
+      "por_que": {
+        "B": "Esa es la característica de los planetas más cercanos al Sol.",
+        "C": "Esos planetas tienen muchos satélites naturales.",
+        "D": "Al estar más lejos del Sol, son planetas muy fríos."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-3-b",
+      "orden": 59,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Sistema Solar y Universo",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4.3",
+        "texto": "Distingue los componentes Sistema Solar, el Universo y los alcances científico-tecnológicos de la exploración espacial."
+      },
+      "evidencia": {
+        "codigo": "4.3.2",
+        "texto": "Distingue las características del Sol y su ubicación en la Vía Láctea."
+      },
+      "verbo": "distinguir",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Lea la siguiente información:\n\nEn una noche despejada, lejos de las luces de la ciudad, se observa en el cielo una franja blanquecina formada por miles de millones de estrellas. Esa franja es parte de la galaxia en la que se encuentra el Sistema Solar. El Sol, que ilumina y calienta la Tierra, es solo una de las estrellas de esa galaxia.",
+      "enunciado": "¿Cuál opción describe correctamente al Sol y su ubicación?",
+      "opciones": {
+        "A": "Es una estrella mediana ubicada en un brazo de la Vía Láctea.",
+        "B": "Es una estrella gigante ubicada en el centro de la Vía Láctea.",
+        "C": "Es un planeta brillante ubicado en el centro del Sistema Solar.",
+        "D": "Es la estrella más grande ubicada en una galaxia vecina."
+      },
+      "clave": "A",
+      "explicacion": "El Sol es una estrella de tamaño mediano que se encuentra en uno de los brazos de la Vía Láctea, lejos de su centro. Parece tan grande y brillante porque está mucho más cerca de la Tierra que las demás estrellas.",
+      "por_que": {
+        "B": "El Sol es una estrella mediana y está lejos del centro de la galaxia.",
+        "C": "El Sol es una estrella, no un planeta.",
+        "D": "El Sol está en la Vía Láctea y no es la estrella más grande."
+      },
+      "imagen": null
+    },
+    {
+      "id": "cie-4-3-c",
+      "orden": 60,
+      "materia": "ciencias",
+      "bloque": "Geofísica",
+      "tema": "Geofísica",
+      "subtema": "Sistema Solar y Universo",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4.3",
+        "texto": "Distingue los componentes Sistema Solar, el Universo y los alcances científico-tecnológicos de la exploración espacial."
+      },
+      "evidencia": {
+        "codigo": "4.3.4",
+        "texto": "Reconoce los aportes científico-tecnológicos que contribuyen a la investigación espacial (satélites artificiales, sondas, transbordadores espaciales, estaciones)."
+      },
+      "verbo": "clasificar",
+      "tipo_contexto": "global-planetario",
+      "contexto": "Lea la siguiente información:\n\n1. Nave sin tripulación que viaja durante años hacia otros planetas y envía fotografías y datos a la Tierra.\n\n2. Laboratorio que gira alrededor de la Tierra, donde astronautas viven varios meses y hacen experimentos.\n\n3. Aparato que gira alrededor de la Tierra y transmite imágenes de las nubes para pronosticar el tiempo.",
+      "enunciado": "¿Cuál opción nombra correctamente, en orden, los aportes tecnológicos descritos?",
+      "opciones": {
+        "A": "Satélite artificial, estación espacial y sonda espacial.",
+        "B": "Sonda espacial, satélite artificial y estación espacial.",
+        "C": "Estación espacial, sonda espacial y satélite artificial.",
+        "D": "Sonda espacial, estación espacial y satélite artificial."
+      },
+      "clave": "D",
+      "explicacion": "La sonda viaja lejos sin tripulación para estudiar otros planetas, la estación espacial es un laboratorio en órbita donde viven astronautas y el satélite artificial gira alrededor de la Tierra enviando información. Cada uno aporta datos distintos para conocer el espacio y nuestro planeta.",
+      "por_que": {
+        "A": "Confunde la sonda, que viaja a otros planetas, con el satélite, que gira alrededor de la Tierra.",
+        "B": "La estación espacial es la que tiene astronautas viviendo en ella.",
+        "C": "La estación no viaja a otros planetas; la que lo hace es la sonda."
+      },
+      "imagen": null
+    }
+  ]
+}
