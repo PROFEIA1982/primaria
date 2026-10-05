@@ -989,7 +989,7 @@ Un taxi cobra ₡700 por subirse y ₡650 por cada kilómetro recorrido. El cobr
 **Evidencia E1.3:** Reconoce el recorrido de un grupo de datos como la diferencia entre el máximo y el mínimo.  
 **Subtema:** Moda y recorrido
 
-La siguiente tabla muestra la cantidad de lluvia, en milímetros, que registró el pluviómetro de una escuela durante cinco días: (tabla) De acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?
+Durante un aguacero, cinco estaciones meteorológicas de una misma región midieron la lluvia que cayó. Los datos se muestran en la siguiente tabla: (tabla) De acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
