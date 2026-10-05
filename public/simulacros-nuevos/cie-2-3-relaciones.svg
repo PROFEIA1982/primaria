@@ -1,46 +1,46 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 405' width='800' height='405' role='img' font-family='Arial, Helvetica, sans-serif'>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 545' width='480' height='545' role='img' font-family='Arial, Helvetica, sans-serif'>
 <title>Tres parejas de especies con signos: rémora más y tiburón cero; pulga más y perro menos; colibrí más y flor más</title>
-<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#1f2937'/></marker></defs>
-<rect x='0' y='0' width='800' height='405' fill='#ffffff'/>
-<text x='400' y='34' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Relaciones entre especies</text>
-<text x='70' y='107' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Pareja 1</text>
-<rect x='150' y='70' width='190' height='60' rx='10' fill='#f3f4f6' stroke='#1f2937' stroke-width='2'/>
-<text x='245.0' y='105.95' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Rémora</text>
-<line x1='340' y1='100' x2='470' y2='100' stroke='#1f2937' stroke-width='2.5'/>
-<rect x='470' y='70' width='190' height='60' rx='10' fill='#f3f4f6' stroke='#1f2937' stroke-width='2'/>
-<text x='565.0' y='105.95' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Tiburón</text>
-<circle cx='375' cy='100' r='18' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
-<text x='375' y='108' font-size='22' text-anchor='middle' font-weight='bold' fill='#1f2937'>+</text>
-<circle cx='435' cy='100' r='18' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
-<text x='435' y='108' font-size='22' text-anchor='middle' font-weight='bold' fill='#1f2937'>0</text>
-<text x='375' y='140' font-size='14' text-anchor='middle' font-weight='normal' fill='#1f2937'>rémora</text>
-<text x='435' y='140' font-size='14' text-anchor='middle' font-weight='normal' fill='#1f2937'>tiburón</text>
-<text x='70' y='197' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Pareja 2</text>
-<rect x='150' y='160' width='190' height='60' rx='10' fill='#f3f4f6' stroke='#1f2937' stroke-width='2'/>
-<text x='245.0' y='195.95' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Pulga</text>
-<line x1='340' y1='190' x2='470' y2='190' stroke='#1f2937' stroke-width='2.5'/>
-<rect x='470' y='160' width='190' height='60' rx='10' fill='#f3f4f6' stroke='#1f2937' stroke-width='2'/>
-<text x='565.0' y='195.95' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Perro</text>
-<circle cx='375' cy='190' r='18' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
-<text x='375' y='198' font-size='22' text-anchor='middle' font-weight='bold' fill='#1f2937'>+</text>
-<circle cx='435' cy='190' r='18' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
-<text x='435' y='198' font-size='22' text-anchor='middle' font-weight='bold' fill='#1f2937'>−</text>
-<text x='375' y='230' font-size='14' text-anchor='middle' font-weight='normal' fill='#1f2937'>pulga</text>
-<text x='435' y='230' font-size='14' text-anchor='middle' font-weight='normal' fill='#1f2937'>perro</text>
-<text x='70' y='287' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Pareja 3</text>
-<rect x='150' y='250' width='190' height='60' rx='10' fill='#f3f4f6' stroke='#1f2937' stroke-width='2'/>
-<text x='245.0' y='285.95' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Colibrí</text>
-<line x1='340' y1='280' x2='470' y2='280' stroke='#1f2937' stroke-width='2.5'/>
-<rect x='470' y='250' width='190' height='60' rx='10' fill='#f3f4f6' stroke='#1f2937' stroke-width='2'/>
-<text x='565.0' y='285.95' font-size='17' text-anchor='middle' font-weight='bold' fill='#1f2937'>Flor</text>
-<circle cx='375' cy='280' r='18' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
-<text x='375' y='288' font-size='22' text-anchor='middle' font-weight='bold' fill='#1f2937'>+</text>
-<circle cx='435' cy='280' r='18' fill='#ffffff' stroke='#1f2937' stroke-width='2'/>
-<text x='435' y='288' font-size='22' text-anchor='middle' font-weight='bold' fill='#1f2937'>+</text>
-<text x='375' y='320' font-size='14' text-anchor='middle' font-weight='normal' fill='#1f2937'>colibrí</text>
-<text x='435' y='320' font-size='14' text-anchor='middle' font-weight='normal' fill='#1f2937'>flor</text>
-<rect x='60' y='345' width='680' height='46' rx='8' fill='#ffffff' stroke='#1f2937' stroke-width='1.5'/>
-<text x='85' y='374' font-size='16' text-anchor='start' font-weight='normal' fill='#1f2937'>+ se beneficia</text>
-<text x='255' y='374' font-size='16' text-anchor='start' font-weight='normal' fill='#1f2937'>− se perjudica</text>
-<text x='425' y='374' font-size='16' text-anchor='start' font-weight='normal' fill='#1f2937'>0 no se beneficia ni se perjudica</text>
+<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#111827'/></marker></defs>
+<rect x='0' y='0' width='480' height='545' fill='#ffffff'/>
+<text x='240' y='36' font-size='22' text-anchor='middle' font-weight='bold' fill='#111827'>Relaciones entre especies</text>
+<text x='15' y='80' font-size='20' text-anchor='start' font-weight='bold' fill='#111827'>Pareja 1</text>
+<line x1='205' y1='124' x2='275' y2='124' stroke='#111827' stroke-width='3'/>
+<rect x='15' y='92' width='195' height='64' rx='10' fill='#f3f4f6' stroke='#111827' stroke-width='2'/>
+<text x='90' y='131' font-size='20' text-anchor='middle' font-weight='bold' fill='#111827'>Rémora</text>
+<circle cx='178' cy='124' r='19' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='178' y='133.36' font-size='26' text-anchor='middle' font-weight='bold' fill='#111827'>+</text>
+<rect x='270' y='92' width='195' height='64' rx='10' fill='#f3f4f6' stroke='#111827' stroke-width='2'/>
+<circle cx='302' cy='124' r='19' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='302' y='133.36' font-size='26' text-anchor='middle' font-weight='bold' fill='#111827'>0</text>
+<text x='390' y='131' font-size='20' text-anchor='middle' font-weight='bold' fill='#111827'>Tiburón</text>
+<text x='15' y='192' font-size='20' text-anchor='start' font-weight='bold' fill='#111827'>Pareja 2</text>
+<line x1='205' y1='236' x2='275' y2='236' stroke='#111827' stroke-width='3'/>
+<rect x='15' y='204' width='195' height='64' rx='10' fill='#f3f4f6' stroke='#111827' stroke-width='2'/>
+<text x='90' y='243' font-size='20' text-anchor='middle' font-weight='bold' fill='#111827'>Pulga</text>
+<circle cx='178' cy='236' r='19' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='178' y='245.36' font-size='26' text-anchor='middle' font-weight='bold' fill='#111827'>+</text>
+<rect x='270' y='204' width='195' height='64' rx='10' fill='#f3f4f6' stroke='#111827' stroke-width='2'/>
+<circle cx='302' cy='236' r='19' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='302' y='245.36' font-size='26' text-anchor='middle' font-weight='bold' fill='#111827'>−</text>
+<text x='390' y='243' font-size='20' text-anchor='middle' font-weight='bold' fill='#111827'>Perro</text>
+<text x='15' y='304' font-size='20' text-anchor='start' font-weight='bold' fill='#111827'>Pareja 3</text>
+<line x1='205' y1='348' x2='275' y2='348' stroke='#111827' stroke-width='3'/>
+<rect x='15' y='316' width='195' height='64' rx='10' fill='#f3f4f6' stroke='#111827' stroke-width='2'/>
+<text x='90' y='355' font-size='20' text-anchor='middle' font-weight='bold' fill='#111827'>Colibrí</text>
+<circle cx='178' cy='348' r='19' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='178' y='357.36' font-size='26' text-anchor='middle' font-weight='bold' fill='#111827'>+</text>
+<rect x='270' y='316' width='195' height='64' rx='10' fill='#f3f4f6' stroke='#111827' stroke-width='2'/>
+<circle cx='302' cy='348' r='19' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='302' y='357.36' font-size='26' text-anchor='middle' font-weight='bold' fill='#111827'>+</text>
+<text x='390' y='355' font-size='20' text-anchor='middle' font-weight='bold' fill='#111827'>Flor</text>
+<rect x='15' y='398' width='450' height='132' rx='8' fill='#ffffff' stroke='#111827' stroke-width='1.5'/>
+<circle cx='48' cy='428' r='15' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='48' y='435.92' font-size='22' text-anchor='middle' font-weight='bold' fill='#111827'>+</text>
+<text x='76' y='434.5' font-size='18' text-anchor='start' font-weight='normal' fill='#111827'>se beneficia</text>
+<circle cx='48' cy='466' r='15' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='48' y='473.92' font-size='22' text-anchor='middle' font-weight='bold' fill='#111827'>−</text>
+<text x='76' y='472.5' font-size='18' text-anchor='start' font-weight='normal' fill='#111827'>se perjudica</text>
+<circle cx='48' cy='504' r='15' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<text x='48' y='511.92' font-size='22' text-anchor='middle' font-weight='bold' fill='#111827'>0</text>
+<text x='76' y='510.5' font-size='18' text-anchor='start' font-weight='normal' fill='#111827'>no se beneficia ni se perjudica</text>
 </svg>
