@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 250" width="460" height="250" role="img" aria-labelledby="t">
+  <title id="t">Mapa con dos pueblos, A y B, unidos por una línea que mide 7,5 cm. Abajo, una barra de escala indica que 1 cm del mapa equivale a 5 km en la realidad.</title>
+  <rect x="1" y="1" width="458" height="248" rx="14" fill="#ffffff" stroke="#c9d3dd" stroke-width="2"/>
+  <rect x="16" y="16" width="428" height="150" rx="10" fill="#eef6ea" stroke="#b9cfb0" stroke-width="1.5"/>
+  <path d="M30,140 C120,120 160,150 250,125 S380,95 430,110" fill="none" stroke="#9cc3ea" stroke-width="10" stroke-linecap="round"/>
+  <line x1="80" y1="70" x2="380" y2="70" stroke="#1b3a5b" stroke-width="3" stroke-dasharray="10 6"/>
+  <circle cx="80" cy="70" r="11" fill="#d94f2c" stroke="#1b3a5b" stroke-width="2.5"/>
+  <circle cx="380" cy="70" r="11" fill="#d94f2c" stroke="#1b3a5b" stroke-width="2.5"/>
+  <g font-family="'Segoe UI', Nunito, Arial, sans-serif" font-weight="800" fill="#1a1a1a">
+    <text x="80" y="104" text-anchor="middle" font-size="18">Pueblo A</text>
+    <text x="380" y="104" text-anchor="middle" font-size="18">Pueblo B</text>
+    <rect x="190" y="44" width="80" height="24" rx="6" fill="#ffffff"/>
+    <text x="230" y="62" text-anchor="middle" font-size="18">7,5 cm</text>
+  </g>
+  <g stroke="#1b3a5b" stroke-width="3">
+    <line x1="40" y1="205" x2="80" y2="205"/>
+    <line x1="40" y1="195" x2="40" y2="215"/>
+    <line x1="80" y1="195" x2="80" y2="215"/>
+  </g>
+  <text x="96" y="211" font-family="'Segoe UI', Nunito, Arial, sans-serif" font-size="18" font-weight="800" fill="#1a1a1a">Escala: 1 cm del mapa = 5 km</text>
+</svg>

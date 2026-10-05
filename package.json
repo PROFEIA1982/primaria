@@ -9,7 +9,11 @@
     "preview": "vite preview",
     "lint": "oxlint",
     "verificar:items": "node --env-file-if-exists=.env.local scripts/verificar-items.mjs",
-    "probar:revisiones": "node scripts/revisiones.prueba.mjs"
+    "probar:revisiones": "node scripts/revisiones.prueba.mjs",
+    "inventario:simulacros-nuevos": "node scripts/simulacros-nuevos/inventario.mjs",
+    "verificar:simulacros-nuevos": "node scripts/simulacros-nuevos/verificar.mjs",
+    "generar:simulacros-nuevos": "node scripts/simulacros-nuevos/generar-migracion.mjs",
+    "tabla:simulacros-nuevos": "node scripts/simulacros-nuevos/tabla-revision.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.112.4",

@@ -214,6 +214,22 @@
   #nav-principal .nav-lista { flex-wrap: wrap; }
 }
 
+/* "Simulacros nuevos" es el rotulo mas largo del menu. En escritorio se
+   parte en dos lineas DENTRO de su propio boton, que sigue midiendo 48 px
+   de alto: medido con Nunito, en una sola linea mandaba el menu entero a
+   un segundo renglon desde 1141 px, donde antes cabia sin problema. Asi el
+   menu queda en un renglon desde 1060 px, igual que antes de este enlace;
+   de 900 a 1080 ya se partia en dos por la regla de arriba. */
+@media (min-width: 900px) {
+  #nav-principal .nav-lista a[href="/simulacros-nuevos"] {
+    max-width: 6.6em;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    line-height: 1.12;
+    text-align: center;
+  }
+}
+
 @media (forced-colors: active) {
   #nav-principal .nav-lista a.active { box-shadow: inset 0 -3px 0 ButtonText; }
   #nav-principal .nav-sim-boton[data-activo="si"] { box-shadow: inset 0 -3px 0 ButtonText; }

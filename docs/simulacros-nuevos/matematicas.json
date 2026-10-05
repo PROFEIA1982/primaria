@@ -1,0 +1,1889 @@
+{
+  "simulacro": {
+    "slug": "nuevo-matematicas-1",
+    "materia": "matematicas",
+    "numero": 1,
+    "titulo": "Simulacro nuevo 1",
+    "preguntas": 60,
+    "segundos_por_item": 180,
+    "barajar_opciones": false,
+    "version": "2026-10-05"
+  },
+  "items": [
+    {
+      "id": "mat-n07",
+      "orden": 1,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Números decimales y fracciones",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N6",
+        "texto": "Reconoce propiedades o representaciones de números naturales, decimales o fraccionarios."
+      },
+      "evidencia": {
+        "codigo": "N6.3",
+        "texto": "Reconoce un número decimal con expansión decimal finita como una fracción y viceversa."
+      },
+      "enunciado": "Para un experimento de Ciencias, el grupo de Keylor necesita 0,75 L de agua. La maestra solo tiene recipientes marcados con fracciones de litro. ¿Cuál fracción de litro corresponde a 0,75 L?",
+      "opciones": {
+        "A": "$\\frac{1}{4}$",
+        "B": "$\\frac{3}{4}$",
+        "C": "$\\frac{7}{5}$",
+        "D": "$\\frac{75}{10}$"
+      },
+      "clave": "B",
+      "explicacion": "0,75 se lee «setenta y cinco centésimos», o sea 75/100. Si se simplifica dividiendo entre 25, queda 3/4. Por eso 0,75 L son tres cuartos de litro.",
+      "por_que": {
+        "A": "da lo que le falta para completar el litro: 1 − 0,75",
+        "C": "toma el 7 y el 5 como numerador y denominador",
+        "D": "escribe 75 décimos, que es 7,5"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n05",
+      "orden": 2,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Suma y resta de fracciones",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "N5",
+        "texto": "Resuelve problemas relacionados con el concepto, los tipos o representaciones de fracciones."
+      },
+      "evidencia": {
+        "codigo": "N5.3",
+        "texto": "Resuelve problemas que involucren fracciones propias."
+      },
+      "enunciado": "Valeria pintó $\\frac{2}{5}$ de un mural de la escuela el lunes y $\\frac{1}{3}$ del mismo mural el martes. ¿Qué fracción del mural le falta por pintar?",
+      "opciones": {
+        "A": "$\\frac{4}{15}$",
+        "B": "$\\frac{3}{8}$",
+        "C": "$\\frac{5}{8}$",
+        "D": "$\\frac{11}{15}$"
+      },
+      "clave": "A",
+      "explicacion": "Para sumar fracciones con distinto denominador se buscan equivalentes: 2/5 = 6/15 y 1/3 = 5/15, así que ya pintó 11/15. El mural completo es 15/15, entonces le falta 15/15 − 11/15 = 4/15.",
+      "por_que": {
+        "B": "suma numeradores y denominadores: 3/8 y lo toma como lo que falta",
+        "C": "suma mal (3/8) y le resta eso al entero",
+        "D": "da lo pintado, no lo que falta"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n08",
+      "orden": 3,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Operaciones con números decimales",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N4",
+        "texto": "Resuelve problemas relacionados con las operaciones aritméticas de números en sus distintas representaciones."
+      },
+      "evidencia": {
+        "codigo": "N4.2",
+        "texto": "Resuelve problemas que involucren la combinación de operaciones suma, resta, multiplicación o división de números naturales o con decimales."
+      },
+      "enunciado": "En la feria del agricultor, Andrés compró 2,5 kg de papas a ₡840 el kilogramo y 1,25 kg de zanahorias a ₡720 el kilogramo. ¿Cuánto pagó en total?",
+      "opciones": {
+        "A": "₡2100",
+        "B": "₡2400",
+        "C": "₡2820",
+        "D": "₡3000"
+      },
+      "clave": "D",
+      "explicacion": "Las papas cuestan 2,5 × 840 = 2100 colones y las zanahorias 1,25 × 720 = 900 colones. Sumando, 2100 + 900 = 3000. Por eso Andrés pagó ₡3000 en total.",
+      "por_que": {
+        "A": "solo las papas",
+        "B": "ignora los decimales: 2 × 840 + 1 × 720",
+        "C": "ignora el 0,25 de las zanahorias"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n21",
+      "orden": 4,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Multiplicación por 10, 100 y 1000",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N4",
+        "texto": "Resuelve problemas relacionados con las operaciones aritméticas de números en sus distintas representaciones."
+      },
+      "evidencia": {
+        "codigo": "N4.3",
+        "texto": "Determina la multiplicación de un número, con o sin expansión decimal, por 10, 100, 1000 o 10 000."
+      },
+      "enunciado": "Un centro de acopio de la comunidad recibió 100 paquetes de arroz para familias afectadas por una inundación, y cada paquete pesa 2,35 kg. ¿Cuántos kilogramos de arroz recibió en total?",
+      "opciones": {
+        "A": "0,0235 kg",
+        "B": "2,35 kg",
+        "C": "23,5 kg",
+        "D": "235 kg"
+      },
+      "clave": "D",
+      "explicacion": "Multiplicar por 100 es correr la coma dos lugares a la derecha: 2,35 × 100 = 235. El centro de acopio recibió 235 kg de arroz.",
+      "por_que": {
+        "A": "divide entre 100 en vez de multiplicar",
+        "B": "da el peso de un solo paquete",
+        "C": "corre la coma un solo lugar, como si multiplicara por 10"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n19",
+      "orden": 5,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Valor posicional en números naturales",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N1",
+        "texto": "Reconoce las distintas representaciones de números naturales o decimales."
+      },
+      "evidencia": {
+        "codigo": "N1.1",
+        "texto": "Reconoce las distintas representaciones de un número natural mayor o igual que 100 000."
+      },
+      "enunciado": "Una empresa de buses informó que durante un año transportó 2 607 045 pasajeros. De acuerdo con la información anterior, ¿cuál es el valor de la cifra 6 en ese número?",
+      "opciones": {
+        "A": "600",
+        "B": "60 000",
+        "C": "600 000",
+        "D": "6 000 000"
+      },
+      "clave": "C",
+      "explicacion": "Si se separa el número en grupos de tres cifras desde la derecha, queda 2 | 607 | 045. El 6 está en las centenas de millar, así que vale 600 000.",
+      "por_que": {
+        "A": "confunde las centenas de millar con las centenas",
+        "B": "cuenta una posición de menos",
+        "D": "cuenta una posición de más"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n13",
+      "orden": 6,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Fracción de una cantidad",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N5",
+        "texto": "Resuelve problemas relacionados con el concepto, los tipos o representaciones de fracciones."
+      },
+      "evidencia": {
+        "codigo": "N5.3",
+        "texto": "Resuelve problemas que involucren fracciones propias."
+      },
+      "enunciado": "Josué tenía ₡12 000. Gastó $\\frac{1}{4}$ de ese dinero en un cuaderno y $\\frac{1}{3}$ de ese mismo dinero en un libro. ¿Cuánto dinero le quedó?",
+      "opciones": {
+        "A": "₡5000",
+        "B": "₡6000",
+        "C": "₡7000",
+        "D": "₡9000"
+      },
+      "clave": "A",
+      "explicacion": "Un cuarto de 12 000 es 3000 y un tercio de 12 000 es 4000, así que gastó 3000 + 4000 = 7000 colones. Le quedaron 12 000 − 7000 = 5000 colones.",
+      "por_que": {
+        "B": "saca el tercio de lo que le quedaba y no del dinero inicial",
+        "C": "da lo que gastó, no lo que le quedó",
+        "D": "solo le resta lo del cuaderno"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n02",
+      "orden": 7,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Múltiplos de un número",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "N3",
+        "texto": "Resuelve problemas relacionados con los conceptos básicos de la teoría de números."
+      },
+      "evidencia": {
+        "codigo": "N3.1",
+        "texto": "Determina los conceptos de múltiplo de un número natural, números pares o impares."
+      },
+      "enunciado": "Desde la terminal de buses de Guápiles salen dos rutas a las 6:00 a. m. La ruta 1 sale cada 12 minutos y la ruta 2 sale cada 18 minutos. ¿A qué hora vuelven a salir juntas por primera vez?",
+      "opciones": {
+        "A": "6:06 a. m.",
+        "B": "6:24 a. m.",
+        "C": "6:30 a. m.",
+        "D": "6:36 a. m."
+      },
+      "clave": "D",
+      "explicacion": "La ruta 1 sale a los 12, 24, 36… minutos y la ruta 2 a los 18, 36… minutos. El primer número que está en las dos listas es 36, así que vuelven a salir juntas 36 minutos después, a las 6:36 a. m.",
+      "por_que": {
+        "A": "usa un divisor común de 12 y 18 (el 6) en vez de un múltiplo común",
+        "B": "se queda con un múltiplo de 12 que no es múltiplo de 18",
+        "C": "suma 12 + 18"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n03",
+      "orden": 8,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Divisores de un número",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "N3",
+        "texto": "Resuelve problemas relacionados con los conceptos básicos de la teoría de números."
+      },
+      "evidencia": {
+        "codigo": "N3.3",
+        "texto": "Determina divisibilidad, divisor o factor de un número natural."
+      },
+      "enunciado": "Para la huerta escolar, don Rafael tiene 48 matas de chile dulce y 72 matas de tomate. Las va a sembrar en filas, sin mezclar chile con tomate. Todas las filas deben tener la misma cantidad de matas, y esa cantidad debe ser la mayor posible. De acuerdo con la información anterior, ¿cuántas filas tendrá en total?",
+      "opciones": {
+        "A": "5 filas",
+        "B": "10 filas",
+        "C": "24 filas",
+        "D": "144 filas"
+      },
+      "clave": "A",
+      "explicacion": "Cada fila debe llevar una cantidad que divida exacto a 48 y también a 72, y la mayor que sirve es 24. Así quedan 48 ÷ 24 = 2 filas de chile y 72 ÷ 24 = 3 filas de tomate, o sea 5 filas en total.",
+      "por_que": {
+        "B": "reparte de 12 en 12, un divisor común que no es el mayor",
+        "C": "da las matas de cada fila, no la cantidad de filas",
+        "D": "usa un múltiplo común (144) en vez de un divisor"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n14",
+      "orden": 9,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Operaciones combinadas con números naturales",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N4",
+        "texto": "Resuelve problemas relacionados con las operaciones aritméticas de números en sus distintas representaciones."
+      },
+      "evidencia": {
+        "codigo": "N4.2",
+        "texto": "Resuelve problemas que involucren la combinación de operaciones suma, resta, multiplicación o división de números naturales o con decimales."
+      },
+      "enunciado": "Ocho compañeros compraron un queque de ₡9600 y 8 refrescos de ₡650 cada uno. Si dividen el gasto total en partes iguales, ¿cuánto paga cada uno?",
+      "opciones": {
+        "A": "₡1200",
+        "B": "₡1850",
+        "C": "₡6400",
+        "D": "₡14 800"
+      },
+      "clave": "B",
+      "explicacion": "Los refrescos cuestan 8 × 650 = ₡5200, y con el queque el gasto total es 9600 + 5200 = ₡14 800. Al repartirlo entre 8, cada uno paga 14 800 ÷ 8 = ₡1850.",
+      "por_que": {
+        "A": "reparte solo el queque",
+        "C": "divide solo el queque entre 8 y le suma los ₡5200 de refrescos sin repartirlos",
+        "D": "da el gasto total sin repartirlo"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n06",
+      "orden": 10,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Fracción de una cantidad",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "N5",
+        "texto": "Resuelve problemas relacionados con el concepto, los tipos o representaciones de fracciones."
+      },
+      "evidencia": {
+        "codigo": "N5.3",
+        "texto": "Resuelve problemas que involucren fracciones propias."
+      },
+      "enunciado": "En un grupo de sexto hay 30 estudiantes. Las $\\frac{2}{3}$ partes del grupo participan en la feria científica y, de quienes participan, $\\frac{3}{5}$ presentan un proyecto sobre el agua. ¿Cuántos estudiantes presentan un proyecto sobre el agua?",
+      "opciones": {
+        "A": "8 estudiantes",
+        "B": "12 estudiantes",
+        "C": "18 estudiantes",
+        "D": "20 estudiantes"
+      },
+      "clave": "B",
+      "explicacion": "Primero se calcula cuántos participan: 2/3 de 30 es 20. Después se saca 3/5 de esos 20, que da 12. Ojo: el 3/5 se aplica a quienes participan, no a todo el grupo.",
+      "por_que": {
+        "A": "resta: 20 − 12, los que participan sin proyecto",
+        "C": "aplica 3/5 a los 30 del grupo",
+        "D": "se queda en el primer paso (2/3 de 30)"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n12",
+      "orden": 11,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Comparación de fracciones",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "N2",
+        "texto": "Compara números naturales, decimales o fraccionarios."
+      },
+      "evidencia": {
+        "codigo": "N2.2",
+        "texto": "Compara fracciones mediante los símbolos <, > o =."
+      },
+      "enunciado": "Tres amigas compraron una pizza cada una, todas del mismo tamaño. Sofía comió $\\frac{3}{8}$ de su pizza, Jimena comió $\\frac{2}{5}$ de la suya y Yerlin comió $\\frac{1}{3}$ de la suya. ¿Cuál es el orden correcto, de la que comió más a la que comió menos?",
+      "opciones": {
+        "A": "Sofía, Jimena y Yerlin",
+        "B": "Yerlin, Jimena y Sofía",
+        "C": "Yerlin, Sofía y Jimena",
+        "D": "Jimena, Sofía y Yerlin"
+      },
+      "clave": "D",
+      "explicacion": "Para comparar se pueden pasar a decimales: 3/8 = 0,375; 2/5 = 0,4 y 1/3 = 0,333…, que es el menor. Por eso Jimena comió más, luego Sofía y de última Yerlin. Hay que fijarse en que el numerador más grande no siempre gana.",
+      "por_que": {
+        "A": "ordena por el numerador",
+        "B": "cree que el denominador menor siempre gana",
+        "C": "ordena al revés, de menor a mayor"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n18",
+      "orden": 12,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Comparación de números decimales",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N2",
+        "texto": "Compara números naturales, decimales o fraccionarios."
+      },
+      "evidencia": {
+        "codigo": "N2.3",
+        "texto": "Compara números en su representación decimal."
+      },
+      "enunciado": "En el festival deportivo de la escuela, cuatro estudiantes participaron en salto largo. En la siguiente tabla se muestra la distancia que saltó cada uno:\n\n| Estudiante | Distancia (en metros) |\n| --- | --- |\n| Ariana | 2,08 |\n| Brenda | 2,8 |\n| Camila | 2,75 |\n| Diego | 2,705 |\n\nDe acuerdo con la información anterior, ¿quién saltó más lejos?",
+      "opciones": {
+        "A": "Ariana",
+        "B": "Camila",
+        "C": "Diego",
+        "D": "Brenda"
+      },
+      "clave": "D",
+      "explicacion": "Para comparar decimales conviene igualar las cifras: 2,080; 2,800; 2,750 y 2,705. El mayor es 2,800, o sea, el salto de Brenda. Tener más cifras después de la coma no hace más grande al número.",
+      "por_que": {
+        "A": "cree que el 0 después de la coma no cambia nada y lee 2,08 como si fuera 2,8",
+        "B": "cree que 75 es más que 8 porque tiene más cifras",
+        "C": "escoge el número con más cifras decimales"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n22",
+      "orden": 13,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "División con residuo",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "N4",
+        "texto": "Resuelve problemas relacionados con las operaciones aritméticas de números en sus distintas representaciones."
+      },
+      "evidencia": {
+        "codigo": "N4.1",
+        "texto": "Resuelve problemas que involucren el algoritmo de la división de números naturales."
+      },
+      "enunciado": "Para una gira, viajarán 220 estudiantes y 20 docentes en buses de 45 asientos cada uno. Si nadie puede viajar de pie, ¿cuántos buses se necesitan como mínimo?",
+      "opciones": {
+        "A": "5",
+        "B": "6",
+        "C": "15",
+        "D": "240"
+      },
+      "clave": "B",
+      "explicacion": "En total viajan 220 + 20 = 240 personas. Al dividir, 240 ÷ 45 da 5 y sobran 15 personas, que también tienen que viajar, así que hace falta un bus más: 6 buses.",
+      "por_que": {
+        "A": "divide bien, pero deja por fuera a las 15 personas que sobran",
+        "C": "responde con el residuo de la división",
+        "D": "se queda en el primer paso: el total de personas"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n16",
+      "orden": 14,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Reglas de divisibilidad",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "N3",
+        "texto": "Resuelve problemas relacionados con los conceptos básicos de la teoría de números."
+      },
+      "evidencia": {
+        "codigo": "N3.2",
+        "texto": "Determina si un número natural es divisible por 2, 3, 5 o 10, mediante la aplicación de las reglas de divisibilidad."
+      },
+      "enunciado": "El número del casillero de Maripaz tiene tres cifras, pero la del medio se borró: 5 ? 1. Ella recuerda que ese número es divisible por 3 y que la cifra borrada es mayor que 5 y menor que 8. ¿Cuál es el número del casillero?",
+      "opciones": {
+        "A": "531",
+        "B": "561",
+        "C": "571",
+        "D": "591"
+      },
+      "clave": "B",
+      "explicacion": "Un número es divisible por 3 cuando la suma de sus cifras es divisible por 3. De las cifras mayores que 5 y menores que 8 (el 6 y el 7), solo el 6 sirve: 5 + 6 + 1 = 12. El casillero es el 561.",
+      "por_que": {
+        "A": "es divisible por 3, pero la cifra 3 no es mayor que 5",
+        "C": "cumple con la cifra entre 5 y 8, pero 5 + 7 + 1 = 13 no es divisible por 3",
+        "D": "es divisible por 3, pero la cifra 9 no es menor que 8"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n04",
+      "orden": 15,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Números primos y compuestos",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N3",
+        "texto": "Resuelve problemas relacionados con los conceptos básicos de la teoría de números."
+      },
+      "evidencia": {
+        "codigo": "N3.3",
+        "texto": "Determina divisibilidad, divisor o factor de un número natural."
+      },
+      "enunciado": "Jeremy asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Jeremy está equivocado?",
+      "opciones": {
+        "A": "9",
+        "B": "18",
+        "C": "29",
+        "D": "33"
+      },
+      "clave": "D",
+      "explicacion": "El 33 es impar y mayor que 15, pero se divide entre 3 y entre 11, porque 3 × 11 = 33; por eso es compuesto y demuestra que Jeremy se equivoca. El 9 y el 18 también son compuestos, pero el 9 no es mayor que 15 y el 18 es par.",
+      "por_que": {
+        "A": "es compuesto, pero no es mayor que 15",
+        "B": "es compuesto, pero es par y la afirmación habla de impares",
+        "C": "es impar y mayor que 15, pero es primo"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n20",
+      "orden": 16,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Multiplicación por un número menor que uno",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N4",
+        "texto": "Resuelve problemas relacionados con las operaciones aritméticas de números en sus distintas representaciones."
+      },
+      "evidencia": {
+        "codigo": "N4.5",
+        "texto": "Reconoce características del resultado que se obtiene de multiplicar o dividir por números mayores o menores que uno."
+      },
+      "enunciado": "Doña Ana tiene 48 kg de café y va a vender 0,75 de esa cantidad. Sin hacer la multiplicación 48 × 0,75, ¿qué se puede asegurar del resultado?",
+      "opciones": {
+        "A": "Es mayor que 48.",
+        "B": "Es igual a 48.",
+        "C": "Es menor que 48.",
+        "D": "Es menor que 24."
+      },
+      "clave": "C",
+      "explicacion": "Multiplicar por un número menor que 1 es como tomar solo una parte, así que el resultado queda menor que 48. Pero 0,75 es más que la mitad, así que el resultado no baja de 24: de hecho, da 36.",
+      "por_que": {
+        "A": "cree que multiplicar siempre agranda",
+        "B": "cree que multiplicar por un decimal no cambia la cantidad",
+        "D": "cree que multiplicar por un decimal achica muchísimo el número"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-n01",
+      "orden": 17,
+      "materia": "matematicas",
+      "tema": "Números",
+      "subtema": "Operaciones combinadas con números naturales",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "N4",
+        "texto": "Resuelve problemas relacionados con las operaciones aritméticas de números en sus distintas representaciones."
+      },
+      "evidencia": {
+        "codigo": "N4.2",
+        "texto": "Resuelve problemas que involucren la combinación de operaciones suma, resta, multiplicación o división de números naturales o con decimales."
+      },
+      "enunciado": "En la soda de la escuela, Mariela compró 3 empanadas de ₡650 cada una y 2 refrescos naturales de ₡450 cada uno. Pagó con un billete de ₡5000. ¿Cuánto dinero le devolvieron?",
+      "opciones": {
+        "A": "₡1700",
+        "B": "₡2150",
+        "C": "₡2350",
+        "D": "₡2850"
+      },
+      "clave": "B",
+      "explicacion": "Primero se calcula lo que gastó: 3 × 650 = 1950 y 2 × 450 = 900, en total ₡2850. Después se resta del billete: 5000 − 2850 = 2150. Ese es el vuelto.",
+      "por_que": {
+        "A": "multiplica por 3 también los refrescos: (650 + 450) × 3",
+        "C": "cambia las cantidades: 2 empanadas y 3 refrescos",
+        "D": "da lo que gastó, no el vuelto"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g04",
+      "orden": 18,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Elementos de los prismas",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G3",
+        "texto": "Determina cuerpos sólidos, sus elementos o propiedades."
+      },
+      "evidencia": {
+        "codigo": "G3.6",
+        "texto": "Reconoce prismas o algunos de sus elementos (caras, bases, altura) o propiedades."
+      },
+      "enunciado": "Una caja de zapatos tiene forma de prisma rectangular. Sebastián quiere pegar cinta sobre todas las aristas de la caja. ¿En cuántas aristas debe pegar cinta?",
+      "opciones": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "12"
+      },
+      "clave": "D",
+      "explicacion": "Un prisma rectangular tiene 4 aristas en la base de abajo, 4 en la de arriba y 4 que unen las dos bases. En total son 4 + 4 + 4 = 12 aristas.",
+      "por_que": {
+        "A": "cuenta solo las aristas de una cara",
+        "B": "cuenta las caras",
+        "C": "cuenta los vértices"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g14",
+      "orden": 19,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Propiedades de los cuadriláteros",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "G1",
+        "texto": "Reconoce figuras geométricas planas, sus elementos o propiedades."
+      },
+      "evidencia": {
+        "codigo": "G1.3",
+        "texto": "Reconoce propiedades de cuadriláteros referidas a los lados, los ángulos y las diagonales."
+      },
+      "enunciado": "Fabián dibujó un cuadrilátero cuyas dos diagonales miden lo mismo y se cortan justo en la mitad de cada una, pero no son perpendiculares. ¿Qué cuadrilátero dibujó?",
+      "opciones": {
+        "A": "Cuadrado",
+        "B": "Romboide",
+        "C": "Rectángulo",
+        "D": "Trapecio"
+      },
+      "clave": "C",
+      "explicacion": "Si las diagonales se cortan en la mitad de cada una, la figura es un paralelogramo, y si además miden lo mismo, es un rectángulo o un cuadrado. En el cuadrado las diagonales también son perpendiculares; como aquí no lo son, es un rectángulo.",
+      "por_que": {
+        "A": "ve las diagonales iguales y olvida que en el cuadrado son perpendiculares",
+        "B": "se fija en que se cortan en la mitad, pero en el romboide no miden lo mismo",
+        "D": "se fija en que miden lo mismo, como en algunos trapecios, pero en ellos no se cortan en la mitad"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g05",
+      "orden": 20,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Elementos del cilindro",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G3",
+        "texto": "Determina cuerpos sólidos, sus elementos o propiedades."
+      },
+      "evidencia": {
+        "codigo": "G3.7",
+        "texto": "Reconoce cilindros o algunos de sus elementos (bases, superficie lateral, eje, altura, radio y diámetro de la base) o propiedades."
+      },
+      "enunciado": "Una lata de leche en polvo tiene forma de cilindro. La distancia entre los centros de sus dos bases es 12 cm, y el diámetro de cada base mide 8 cm. ¿Cuáles son el radio de la base y la altura de esa lata?",
+      "opciones": {
+        "A": "Radio de 4 cm y altura de 12 cm",
+        "B": "Radio de 6 cm y altura de 8 cm",
+        "C": "Radio de 8 cm y altura de 12 cm",
+        "D": "Radio de 12 cm y altura de 4 cm"
+      },
+      "clave": "A",
+      "explicacion": "El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm. La altura del cilindro es la distancia entre sus dos bases, o sea 12 cm.",
+      "por_que": {
+        "B": "toma el diámetro como altura y saca la mitad de 12",
+        "C": "confunde el radio con el diámetro",
+        "D": "cambia de lugar los datos"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g17",
+      "orden": 21,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Ubicación en el sistema de coordenadas",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G6",
+        "texto": "Reconoce la ubicación de puntos o figuras en un sistema de coordenadas, así como figuras que se obtienen mediante traslación de otras."
+      },
+      "evidencia": {
+        "codigo": "G6.1",
+        "texto": "Identifica la ubicación de puntos o figuras, mediante un sistema de coordenadas en el primer cuadrante."
+      },
+      "enunciado": "En un plano de la comunidad, la escuela está en el punto (2, 3). Para ir a la biblioteca, Dayana camina 4 unidades hacia la derecha y 1 unidad hacia arriba. ¿En qué punto está la biblioteca?",
+      "opciones": {
+        "A": "(3, 7)",
+        "B": "(4, 6)",
+        "C": "(6, 2)",
+        "D": "(6, 4)"
+      },
+      "clave": "D",
+      "explicacion": "La primera coordenada dice cuánto se avanza hacia la derecha y la segunda cuánto hacia arriba. Al moverse 4 a la derecha queda 2 + 4 = 6, y al subir 1 queda 3 + 1 = 4: la biblioteca está en (6, 4).",
+      "por_que": {
+        "A": "suma el 4 a la segunda coordenada y el 1 a la primera",
+        "B": "escribe el punto correcto con las coordenadas invertidas",
+        "C": "resta al subir en vez de sumar"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g03",
+      "orden": 22,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Clasificación de cuadriláteros",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G2",
+        "texto": "Clasifica figuras geométricas planas de acuerdo con sus elementos o propiedades."
+      },
+      "evidencia": {
+        "codigo": "G2.4",
+        "texto": "Clasifica paralelogramos en cuadrado, rectángulo, rombo y romboide."
+      },
+      "enunciado": "Un cuadrilátero tiene dos pares de lados paralelos, sus cuatro lados miden lo mismo y ninguno de sus ángulos es recto. ¿Qué cuadrilátero es?",
+      "opciones": {
+        "A": "Rombo",
+        "B": "Cuadrado",
+        "C": "Romboide",
+        "D": "Rectángulo"
+      },
+      "clave": "A",
+      "explicacion": "Tener los cuatro lados iguales deja por fuera al romboide y al rectángulo. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.",
+      "por_que": {
+        "B": "se fija en los lados iguales y olvida que no hay ángulos rectos",
+        "C": "se fija en los lados paralelos y en los ángulos, y olvida que los cuatro lados son iguales",
+        "D": "se fija en los dos pares de lados paralelos y olvida que no tiene ángulos rectos"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g06",
+      "orden": 23,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Área de figuras compuestas",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "G4",
+        "texto": "Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos."
+      },
+      "evidencia": {
+        "codigo": "G4.2",
+        "texto": "Determina perímetros y áreas de figuras planas compuestas por triángulos, cuadrados, rectángulos, paralelogramos o trapecios."
+      },
+      "enunciado": "El piso del comedor de una escuela tiene forma de rectángulo de 10 m de largo y 8 m de ancho, pero en una esquina hay una bodega rectangular de 4 m por 3 m que no forma parte del comedor. ¿Cuál es el área del piso del comedor, sin contar la bodega?",
+      "opciones": {
+        "A": "36 m²",
+        "B": "68 m²",
+        "C": "80 m²",
+        "D": "92 m²"
+      },
+      "clave": "B",
+      "explicacion": "El rectángulo completo mide 10 × 8 = 80 m² y la bodega mide 4 × 3 = 12 m². Como la bodega no es parte del comedor, se resta: 80 − 12 = 68 m².",
+      "por_que": {
+        "A": "da el perímetro del rectángulo grande",
+        "C": "no le quita la bodega",
+        "D": "suma la bodega en vez de restarla"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g18",
+      "orden": 24,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Área del paralelogramo",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G4",
+        "texto": "Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos."
+      },
+      "evidencia": {
+        "codigo": "G4.3",
+        "texto": "Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros."
+      },
+      "enunciado": "Un parqueo tiene forma de paralelogramo. Uno de sus lados mide 20 m, y la distancia perpendicular entre ese lado y el lado opuesto, que es la altura, mide 12 m. ¿Cuál es el área del parqueo?",
+      "opciones": {
+        "A": "32 m²",
+        "B": "64 m²",
+        "C": "120 m²",
+        "D": "240 m²"
+      },
+      "clave": "D",
+      "explicacion": "El área de un paralelogramo es base por altura: 20 × 12 = 240 m². No se divide entre 2; eso se hace solo en el triángulo.",
+      "por_que": {
+        "A": "suma la base y la altura",
+        "B": "calcula 2 × (20 + 12), como si fuera un perímetro",
+        "C": "divide entre 2, como en el área del triángulo"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g12",
+      "orden": 25,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Perímetro y área del rectángulo",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "G4",
+        "texto": "Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos."
+      },
+      "evidencia": {
+        "codigo": "G4.3",
+        "texto": "Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros."
+      },
+      "enunciado": "Un terreno rectangular tiene un perímetro de 54 m, y su largo mide 15 m. Se quiere sembrar zacate en todo el terreno, y el metro cuadrado de zacate cuesta ₡2500. De acuerdo con la información anterior, ¿cuánto cuesta el zacate?",
+      "opciones": {
+        "A": "₡135 000",
+        "B": "₡450 000",
+        "C": "₡900 000",
+        "D": "₡1 462 500"
+      },
+      "clave": "B",
+      "explicacion": "Los dos largos suman 15 + 15 = 30 m, así que los dos anchos suman 54 − 30 = 24 m y cada uno mide 12 m. El área es 15 × 12 = 180 m², y el zacate cuesta 180 × 2500 = ₡450 000.",
+      "por_que": {
+        "A": "multiplica el perímetro por el precio",
+        "C": "olvida dividir entre 2 y usa 24 m de ancho",
+        "D": "le resta un solo largo al perímetro y usa 39 m de ancho"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g15",
+      "orden": 26,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Clasificación de triángulos según sus ángulos",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G2",
+        "texto": "Clasifica figuras geométricas planas de acuerdo con sus elementos o propiedades."
+      },
+      "evidencia": {
+        "codigo": "G2.1",
+        "texto": "Clasifica triángulos de acuerdo con las medidas de sus ángulos."
+      },
+      "enunciado": "Un pedazo de cartulina tiene forma de triángulo, y sus ángulos miden 35°, 40° y 105°. ¿Cómo se clasifica ese triángulo según sus ángulos?",
+      "opciones": {
+        "A": "Acutángulo",
+        "B": "Rectángulo",
+        "C": "Obtusángulo",
+        "D": "No se puede clasificar"
+      },
+      "clave": "C",
+      "explicacion": "Un triángulo con un ángulo mayor que 90° es obtusángulo. Aquí el ángulo de 105° es obtuso, así que el triángulo es obtusángulo, aunque los otros dos ángulos sean agudos.",
+      "por_que": {
+        "A": "se fija en que dos de los ángulos son agudos",
+        "B": "cree que 105° está tan cerca de 90° que cuenta como recto",
+        "D": "cree que si los tres ángulos son distintos el triángulo no se puede clasificar"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g11",
+      "orden": 27,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Clasificación de triángulos",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G2",
+        "texto": "Clasifica figuras geométricas planas de acuerdo con sus elementos o propiedades."
+      },
+      "evidencia": {
+        "codigo": "G2.2",
+        "texto": "Clasifica triángulos de acuerdo con las medidas de sus lados."
+      },
+      "enunciado": "Un triángulo tiene un ángulo de 90° y dos de sus lados miden lo mismo. ¿Cómo se clasifica este triángulo?",
+      "opciones": {
+        "A": "Rectángulo isósceles",
+        "B": "Rectángulo escaleno",
+        "C": "Acutángulo isósceles",
+        "D": "Obtusángulo isósceles"
+      },
+      "clave": "A",
+      "explicacion": "Por tener un ángulo de 90°, el triángulo es rectángulo. Por tener dos lados iguales, es isósceles. Juntando las dos cosas, es un triángulo rectángulo isósceles.",
+      "por_que": {
+        "B": "acierta con el ángulo pero olvida los dos lados iguales",
+        "C": "acierta con los lados pero confunde el ángulo recto con uno agudo",
+        "D": "cree que 90° es un ángulo obtuso"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g08",
+      "orden": 28,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Perímetro de triángulos y cuadriláteros",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "G4",
+        "texto": "Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos."
+      },
+      "evidencia": {
+        "codigo": "G4.3",
+        "texto": "Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros."
+      },
+      "enunciado": "Con un alambre, Allan formó un triángulo equilátero de 20 cm de lado. Después lo desarmó y, con todo el alambre, formó un cuadrado. ¿Cuánto mide cada lado del cuadrado?",
+      "opciones": {
+        "A": "10 cm",
+        "B": "15 cm",
+        "C": "19 cm",
+        "D": "20 cm"
+      },
+      "clave": "B",
+      "explicacion": "El alambre mide lo mismo que el perímetro del triángulo: 3 × 20 = 60 cm. Al repartir esos 60 cm en los 4 lados iguales del cuadrado, cada lado mide 60 ÷ 4 = 15 cm.",
+      "por_que": {
+        "A": "le quita un lado de 20 al alambre y reparte el resto: 40 ÷ 4",
+        "C": "cree que con un lado más se pierde 1 cm",
+        "D": "cree que los lados no cambian"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g07",
+      "orden": 29,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Área del triángulo",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G4",
+        "texto": "Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos."
+      },
+      "evidencia": {
+        "codigo": "G4.3",
+        "texto": "Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros."
+      },
+      "enunciado": "Para la fiesta de la escuela se van a coser 12 banderines con forma de triángulo. Cada banderín tiene 30 cm de base y 40 cm de altura. ¿Cuánta tela se necesita para los 12 banderines, sin contar desperdicios?",
+      "opciones": {
+        "A": "600 cm²",
+        "B": "840 cm²",
+        "C": "7200 cm²",
+        "D": "14 400 cm²"
+      },
+      "clave": "C",
+      "explicacion": "El área de un triángulo es base por altura entre 2: 30 × 40 ÷ 2 = 600 cm² por banderín. Para 12 banderines se necesitan 600 × 12 = 7200 cm².",
+      "por_que": {
+        "A": "un solo banderín",
+        "B": "suma base y altura y multiplica por 12",
+        "D": "olvida dividir entre 2"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g16",
+      "orden": 30,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Ejes de simetría",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G5",
+        "texto": "Reconoce figuras simétricas o elementos relacionados a estas."
+      },
+      "evidencia": {
+        "codigo": "G5.1",
+        "texto": "Identifica los ejes de simetría de una figura."
+      },
+      "enunciado": "La puerta de un aula tiene forma de rectángulo: mide 2 m de alto y 1 m de ancho. Sin tomar en cuenta la cerradura ni las bisagras, ¿cuántos ejes de simetría tiene esa forma?",
+      "opciones": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "4"
+      },
+      "clave": "C",
+      "explicacion": "Un rectángulo que no es cuadrado tiene 2 ejes de simetría: uno vertical y otro horizontal, que pasan por la mitad de sus lados. Las diagonales no son ejes, porque al doblar por ahí las dos mitades no calzan.",
+      "por_que": {
+        "A": "cree que solo las figuras con todos los lados iguales tienen simetría",
+        "B": "solo ve el eje vertical",
+        "D": "le da al rectángulo los ejes del cuadrado, contando las diagonales"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-g13",
+      "orden": 31,
+      "materia": "matematicas",
+      "tema": "Geometría",
+      "subtema": "Clasificación de cuadriláteros",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "G2",
+        "texto": "Clasifica figuras geométricas planas de acuerdo con sus elementos o propiedades."
+      },
+      "evidencia": {
+        "codigo": "G2.5",
+        "texto": "Clasifica los cuadriláteros no paralelogramos en trapecios y trapezoides."
+      },
+      "enunciado": "La superficie de una mesa de trabajo tiene cuatro lados, y solo dos de esos lados son paralelos entre sí. ¿Cómo se llama esa figura?",
+      "opciones": {
+        "A": "Paralelogramo",
+        "B": "Trapezoide",
+        "C": "Romboide",
+        "D": "Trapecio"
+      },
+      "clave": "D",
+      "explicacion": "Un cuadrilátero con un solo par de lados paralelos es un trapecio. Si tuviera dos pares sería un paralelogramo, y si no tuviera ninguno sería un trapezoide.",
+      "por_que": {
+        "A": "cree que basta un par de lados paralelos para ser paralelogramo",
+        "B": "confunde el trapecio con el trapezoide, que no tiene lados paralelos",
+        "C": "piensa en una figura inclinada, pero el romboide tiene dos pares de lados paralelos"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m03",
+      "orden": 32,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Medidas de capacidad",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.4",
+        "texto": "Resuelve problemas relacionados con la conversión entre distintas medidas (longitud, peso, tiempo, superficie, capacidad, temperatura)."
+      },
+      "enunciado": "Una pichinga tiene 3 L de agua. Con ella se llenan 8 vasos de 250 mL cada uno. ¿Cuántos mililitros de agua quedan en la pichinga?",
+      "opciones": {
+        "A": "1000 mL",
+        "B": "2000 mL",
+        "C": "2750 mL",
+        "D": "2800 mL"
+      },
+      "clave": "A",
+      "explicacion": "3 L son 3000 mL. Los 8 vasos usan 8 × 250 = 2000 mL. Quedan 3000 − 2000 = 1000 mL, que es lo mismo que 1 litro.",
+      "por_que": {
+        "B": "da lo que se sirvió",
+        "C": "resta un solo vaso",
+        "D": "calcula 8 × 250 como 200"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m02",
+      "orden": 33,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Conversión de medidas de masa",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.4",
+        "texto": "Resuelve problemas relacionados con la conversión entre distintas medidas (longitud, peso, tiempo, superficie, capacidad, temperatura)."
+      },
+      "enunciado": "Doña Lucía empaca 3,6 kg de frijoles en bolsas de 450 g cada una. ¿Cuántas bolsas llena?",
+      "opciones": {
+        "A": "8 bolsas",
+        "B": "80 bolsas",
+        "C": "125 bolsas",
+        "D": "800 bolsas"
+      },
+      "clave": "A",
+      "explicacion": "Primero se pasa todo a la misma unidad: 3,6 kg son 3600 g. Luego se reparte: 3600 ÷ 450 = 8 bolsas.",
+      "por_que": {
+        "B": "se le corre un cero al convertir (36 000 g)",
+        "C": "divide al revés: 450 entre 3,6",
+        "D": "divide 3600 entre 4,5"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m04",
+      "orden": 34,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Medidas de tiempo",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.3",
+        "texto": "Determina conversiones entre medidas de tiempo (años, meses, semanas, horas, minutos o segundos)."
+      },
+      "enunciado": "Un partido de fútbol entre dos escuelas empezó a las 2:50 p. m. Tuvo dos tiempos de 35 minutos cada uno y un descanso de 15 minutos entre ellos. De acuerdo con la información anterior, ¿a qué hora terminó el partido?",
+      "opciones": {
+        "A": "3:40 p. m.",
+        "B": "4:00 p. m.",
+        "C": "4:15 p. m.",
+        "D": "4:30 p. m."
+      },
+      "clave": "C",
+      "explicacion": "El partido duró 35 + 15 + 35 = 85 minutos, que es 1 hora y 25 minutos. Si a las 2:50 p. m. se le suma 1 hora, son las 3:50 p. m., y con 25 minutos más son las 4:15 p. m.",
+      "por_que": {
+        "A": "cuenta un solo tiempo y el descanso",
+        "B": "olvida el descanso",
+        "D": "cuenta dos descansos"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m08",
+      "orden": 35,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Medidas de tiempo",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.3",
+        "texto": "Determina conversiones entre medidas de tiempo (años, meses, semanas, horas, minutos o segundos)."
+      },
+      "enunciado": "Un tanque de 1200 L se llena con una manguera que echa 15 L de agua por minuto. Si empezó a llenarse a las 9:50 a. m., ¿a qué hora termina de llenarse?",
+      "opciones": {
+        "A": "10:38 a. m.",
+        "B": "10:58 a. m.",
+        "C": "11:10 a. m.",
+        "D": "11:23 a. m."
+      },
+      "clave": "C",
+      "explicacion": "El tanque tarda 1200 ÷ 15 = 80 minutos, que es 1 hora y 20 minutos. A las 9:50 a. m. se le suma 1 hora y son las 10:50 a. m.; con 20 minutos más son las 11:10 a. m.",
+      "por_que": {
+        "A": "toma 80 minutos como 0,8 horas, o sea 48 minutos",
+        "B": "toma 80 minutos como 1 hora y 8 minutos",
+        "D": "divide 80 ÷ 60 = 1,33 y lo lee como 1 hora y 33 minutos"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m06",
+      "orden": 36,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Problemas con medidas de longitud",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.4",
+        "texto": "Resuelve problemas relacionados con la conversión entre distintas medidas (longitud, peso, tiempo, superficie, capacidad, temperatura)."
+      },
+      "enunciado": "Yeiner camina 750 m de su casa a la escuela y la misma distancia de regreso, de lunes a viernes. ¿Cuántos kilómetros camina en total durante esos cinco días?",
+      "opciones": {
+        "A": "0,75 km",
+        "B": "1,5 km",
+        "C": "3,75 km",
+        "D": "7,5 km"
+      },
+      "clave": "D",
+      "explicacion": "Cada día camina 750 + 750 = 1500 m. En cinco días son 1500 × 5 = 7500 m. Como 1 km tiene 1000 m, eso es 7,5 km.",
+      "por_que": {
+        "A": "un solo viaje de un día",
+        "B": "ida y vuelta de un solo día",
+        "C": "olvida el regreso"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m05",
+      "orden": 37,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Medidas de superficie",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.1",
+        "texto": "Determina conversiones entre medidas de superficie (metro cuadrado, sus múltiplos y submúltiplos)."
+      },
+      "enunciado": "El piso de un aula mide 8 m de largo y 6 m de ancho. ¿Cuál es el área del piso en centímetros cuadrados?",
+      "opciones": {
+        "A": "4800 cm²",
+        "B": "48 000 cm²",
+        "C": "480 000 cm²",
+        "D": "4 800 000 cm²"
+      },
+      "clave": "C",
+      "explicacion": "El área es 8 × 6 = 48 m². Cada metro cuadrado es un cuadro de 100 cm por 100 cm, o sea 10 000 cm². Entonces el piso mide 48 × 10 000 = 480 000 cm².",
+      "por_que": {
+        "A": "multiplica por 100, como si fueran metros de longitud (1 m = 100 cm)",
+        "B": "multiplica por 1000: se le corre un cero",
+        "D": "multiplica por 100 000, se pasa de ceros"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m09",
+      "orden": 38,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Conversión de medidas de masa",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.4",
+        "texto": "Resuelve problemas relacionados con la conversión entre distintas medidas (longitud, peso, tiempo, superficie, capacidad, temperatura)."
+      },
+      "enunciado": "Una receta de arroz con pollo para 4 personas lleva 750 g de pollo. ¿Cuántos kilogramos de pollo se necesitan para 10 personas?",
+      "opciones": {
+        "A": "1,875 kg",
+        "B": "3 kg",
+        "C": "7,5 kg",
+        "D": "18,75 kg"
+      },
+      "clave": "A",
+      "explicacion": "Para una persona se necesitan 750 ÷ 4 = 187,5 g, y para 10 personas 187,5 × 10 = 1875 g. Como 1 kg tiene 1000 g, eso es 1,875 kg.",
+      "por_que": {
+        "B": "multiplica los 750 g por las 4 personas de la receta",
+        "C": "multiplica 750 g por 10 sin repartir antes entre 4",
+        "D": "hace bien la cuenta pero corre mal la coma"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m11",
+      "orden": 39,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Conversión de temperatura",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.2",
+        "texto": "Determina conversiones de mediciones de temperatura entre las escalas Celsius y Fahrenheit."
+      },
+      "enunciado": "En un viaje, Fiorella vio en un termómetro que la temperatura era de 77 °F. Para pasar de grados Fahrenheit a grados Celsius se usa la regla °C = (°F − 32) × 5 ÷ 9. ¿Cuál era la temperatura en grados Celsius?",
+      "opciones": {
+        "A": "25 °C",
+        "B": "45 °C",
+        "C": "81 °C",
+        "D": "109 °C"
+      },
+      "clave": "A",
+      "explicacion": "Primero se resta: 77 − 32 = 45. Después se multiplica por 5 y se divide entre 9: 45 × 5 = 225 y 225 ÷ 9 = 25 °C.",
+      "por_que": {
+        "B": "solo resta 32 y se olvida del resto de la regla",
+        "C": "multiplica por 9 y divide entre 5, al revés",
+        "D": "suma 32 en vez de restarlo y no aplica el resto de la regla (77 + 32 = 109)"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m10",
+      "orden": 40,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Conversión de medidas de longitud",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "M1",
+        "texto": "Resuelve problemas relacionados con la conversión entre unidades del sistema métrico decimal."
+      },
+      "evidencia": {
+        "codigo": "M1.4",
+        "texto": "Resuelve problemas relacionados con la conversión entre distintas medidas (longitud, peso, tiempo, superficie, capacidad, temperatura)."
+      },
+      "enunciado": "Un pasillo mide 6 m de largo. Se van a poner baldosas cuadradas de 25 cm de lado, una seguida de otra, a lo largo del pasillo. ¿Cuántas baldosas caben en una fila?",
+      "opciones": {
+        "A": "2,4",
+        "B": "24",
+        "C": "150",
+        "D": "240"
+      },
+      "clave": "B",
+      "explicacion": "Primero se pasa todo a centímetros: 6 m son 600 cm. Después se reparte: 600 ÷ 25 = 24 baldosas.",
+      "por_que": {
+        "A": "convierte 6 m en 60 cm",
+        "C": "multiplica 6 × 25 en vez de dividir",
+        "D": "convierte 6 m en 6000 cm"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-m12",
+      "orden": 41,
+      "materia": "matematicas",
+      "tema": "Medidas",
+      "subtema": "Sistema monetario nacional",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "M2",
+        "texto": "Resuelve problemas relacionados con los sistemas monetarios."
+      },
+      "evidencia": {
+        "codigo": "M2.2",
+        "texto": "Resuelve problemas que involucren el sistema monetario nacional."
+      },
+      "enunciado": "En la siguiente tabla se muestra el dinero que hay en la caja de la soda escolar al final del día:\n\n| Billete o moneda | Cantidad |\n| --- | --- |\n| Billete de ₡5000 | 3 |\n| Billete de ₡2000 | 4 |\n| Moneda de ₡500 | 9 |\n\nDe acuerdo con la información anterior, ¿cuánto dinero hay en total en la caja?",
+      "opciones": {
+        "A": "₡7500",
+        "B": "₡23 000",
+        "C": "₡23 450",
+        "D": "₡27 500"
+      },
+      "clave": "D",
+      "explicacion": "Los billetes de ₡5000 suman ₡15 000, los de ₡2000 suman ₡8000 y las monedas suman 9 × 500 = ₡4500. En total hay 15 000 + 8000 + 4500 = ₡27 500.",
+      "por_que": {
+        "A": "suma un billete o una moneda de cada tipo",
+        "B": "se olvida de las monedas",
+        "C": "calcula 9 × 500 como 450"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r12",
+      "orden": 42,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Relaciones entre cantidades en tablas",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "R2",
+        "texto": "Resuelve problemas que involucran relaciones entre dos cantidades, en una expresión matemática."
+      },
+      "evidencia": {
+        "codigo": "R2.3",
+        "texto": "Reconoce relaciones entre dos cantidades, presentadas mediante tablas, que varían simultáneamente."
+      },
+      "enunciado": "La siguiente tabla muestra el costo total, en colones, según la cantidad de entradas que se compren para el festival de la escuela:\n\n| Cantidad de entradas | Costo total (en colones) |\n| --- | --- |\n| 2 | 3000 |\n| 3 | 4500 |\n| 5 | 7500 |\n| 8 | 12 000 |\n\nDe acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones describe la relación entre las dos cantidades?",
+      "opciones": {
+        "A": "Cada entrada cuesta ₡3000.",
+        "B": "Cada entrada nueva duplica el costo.",
+        "C": "El costo aumenta ₡1500 por fila.",
+        "D": "Cada entrada cuesta ₡1500."
+      },
+      "clave": "D",
+      "explicacion": "Si se divide el costo entre la cantidad de entradas, siempre da lo mismo: 3000 ÷ 2 = 1500, 4500 ÷ 3 = 1500, y así con todas. Por eso cada entrada cuesta ₡1500, y las dos cantidades aumentan juntas, en proporción.",
+      "por_que": {
+        "A": "toma el primer costo de la tabla como el precio de una entrada",
+        "B": "cree que el costo se duplica al pasar de una fila a otra",
+        "C": "mira la diferencia entre las dos primeras filas y la aplica a toda la tabla"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r03",
+      "orden": 43,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Proporcionalidad directa",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "R2",
+        "texto": "Resuelve problemas que involucran relaciones entre dos cantidades, en una expresión matemática."
+      },
+      "evidencia": {
+        "codigo": "R2.3",
+        "texto": "Reconoce relaciones entre dos cantidades, presentadas mediante tablas, que varían simultáneamente."
+      },
+      "enunciado": "En una tortillería, la cantidad de tortillas es proporcional a la cantidad de masa que se usa. La siguiente tabla muestra algunos datos:\n\n| Masa (en kg) | Cantidad de tortillas |\n| --- | --- |\n| 3 | 48 |\n| 6 | 96 |\n| 5 | ? |\n\nDe acuerdo con la información anterior, ¿cuántas tortillas se hacen con 5 kg de masa?",
+      "opciones": {
+        "A": "50",
+        "B": "64",
+        "C": "80",
+        "D": "240"
+      },
+      "clave": "C",
+      "explicacion": "Según la tabla, con 3 kg salen 48 tortillas, así que con 1 kg salen 48 ÷ 3 = 16. Con 5 kg salen 16 × 5 = 80 tortillas.",
+      "por_que": {
+        "A": "suma la diferencia de kilos a las tortillas",
+        "B": "suma solo un kilo más de tortillas",
+        "D": "multiplica 48 por 5"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r02",
+      "orden": 44,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Valor desconocido",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "R3",
+        "texto": "Resuelve problemas relacionados con el valor desconocido en una expresión dada."
+      },
+      "evidencia": {
+        "codigo": "R3.2",
+        "texto": "Determina el valor desconocido (letra) en una ecuación matemática dada."
+      },
+      "enunciado": "Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. En la siguiente ecuación, «n» representa el número que pensó Daniela: 4 × n − 7 = 33. De acuerdo con la información anterior, ¿qué número pensó Daniela?",
+      "opciones": {
+        "A": "6,5",
+        "B": "10",
+        "C": "40",
+        "D": "125"
+      },
+      "clave": "B",
+      "explicacion": "Se deshacen los pasos al revés: si al restarle 7 quedó 33, antes era 33 + 7 = 40. Y si 40 salió de multiplicar por 4, el número era 40 ÷ 4 = 10. Comprobación: 10 × 4 − 7 = 33.",
+      "por_que": {
+        "A": "resta el 7 en vez de sumarlo",
+        "C": "se queda en el primer paso",
+        "D": "hace las operaciones hacia adelante con el 33"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r08",
+      "orden": 45,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Sucesiones numéricas",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "R1",
+        "texto": "Resuelve problemas relacionados con patrones en sucesiones."
+      },
+      "evidencia": {
+        "codigo": "R1.2",
+        "texto": "Resuelve problemas que involucren patrones en sucesiones numéricas o tablas con números naturales menores que 1 000 000."
+      },
+      "enunciado": "Para un proyecto de reciclaje, un grupo de sexto anota el total de botellas que ha recogido al final de cada semana. La siguiente tabla muestra los datos de las primeras semanas:\n\n| Semana | Total de botellas |\n| --- | --- |\n| 1 | 7 |\n| 2 | 11 |\n| 3 | 15 |\n| 4 | 19 |\n\nDe acuerdo con la información anterior, si el total sigue aumentando de la misma forma, ¿en cuál semana el total llegará a 83 botellas?",
+      "opciones": {
+        "A": "19",
+        "B": "20",
+        "C": "21",
+        "D": "76"
+      },
+      "clave": "B",
+      "explicacion": "Cada semana el total aumenta 4 botellas. De 7 a 83 faltan 83 − 7 = 76 botellas, o sea 76 ÷ 4 = 19 aumentos, y como se empieza en la semana 1, se llega a 83 en la semana 20.",
+      "por_que": {
+        "A": "cuenta los aumentos y olvida que se empieza en la semana 1",
+        "C": "divide 83 ÷ 4 = 20,75 y redondea hacia arriba",
+        "D": "se queda en la resta 83 − 7"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r04",
+      "orden": 46,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Expresiones matemáticas con dos cantidades",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "R2",
+        "texto": "Resuelve problemas que involucran relaciones entre dos cantidades, en una expresión matemática."
+      },
+      "evidencia": {
+        "codigo": "R2.2",
+        "texto": "Determina relaciones entre dos cantidades variables en una expresión matemática."
+      },
+      "enunciado": "En una librería, un cuaderno cuesta $c$ colones y un lapicero cuesta ₡300 menos que un cuaderno. ¿Cuál expresión representa lo que se paga por 2 cuadernos y 3 lapiceros?",
+      "opciones": {
+        "A": "$2 \\times c + 3 \\times (c - 300)$",
+        "B": "$2 \\times c + 3 \\times c - 300$",
+        "C": "$2 \\times (c - 300) + 3 \\times c$",
+        "D": "$5 \\times (c - 300)$"
+      },
+      "clave": "A",
+      "explicacion": "Cada lapicero cuesta c − 300 colones, así que los 3 lapiceros cuestan 3 × (c − 300): el paréntesis dice que se multiplica el precio completo del lapicero. A eso se le suma lo de los 2 cuadernos, que es 2 × c.",
+      "por_que": {
+        "B": "le resta los 300 una sola vez y no a cada lapicero",
+        "C": "le resta los 300 a los cuadernos en vez de a los lapiceros",
+        "D": "le resta los 300 a los cinco artículos"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r05",
+      "orden": 47,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Sucesiones numéricas",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "R1",
+        "texto": "Resuelve problemas relacionados con patrones en sucesiones."
+      },
+      "evidencia": {
+        "codigo": "R1.2",
+        "texto": "Resuelve problemas que involucren patrones en sucesiones numéricas o tablas con números naturales menores que 1 000 000."
+      },
+      "enunciado": "En la sucesión 3, 8, 15, 24, 35, …, ¿cuál es el número que sigue?",
+      "opciones": {
+        "A": "46",
+        "B": "47",
+        "C": "48",
+        "D": "70"
+      },
+      "clave": "C",
+      "explicacion": "De un número al siguiente se suma 5, luego 7, luego 9 y luego 11: lo que se suma crece de 2 en 2. Lo próximo es sumar 13, así que sigue 35 + 13 = 48.",
+      "por_que": {
+        "A": "repite la última suma (+11)",
+        "B": "hace crecer lo que se suma de 1 en 1 y no de 2 en 2",
+        "D": "duplica el último número"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r07",
+      "orden": 48,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Cantidades variables y constantes",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "R2",
+        "texto": "Resuelve problemas que involucran relaciones entre dos cantidades, en una expresión matemática."
+      },
+      "evidencia": {
+        "codigo": "R2.1",
+        "texto": "Reconoce cantidades variables o constantes."
+      },
+      "enunciado": "En la soda de una escuela, el almuerzo cuesta ₡2200 todos los días, la soda abre 5 días por semana y cada día llega una cantidad distinta de clientes. ¿Cuál de las siguientes cantidades es constante?",
+      "opciones": {
+        "A": "El dinero que se recibe cada día.",
+        "B": "Los clientes que piden almuerzo cada día.",
+        "C": "El precio de cada almuerzo.",
+        "D": "Las ventas totales de cada semana."
+      },
+      "clave": "C",
+      "explicacion": "Una cantidad es constante cuando no cambia. El precio del almuerzo es el mismo todos los días, así que es constante. Los clientes, el dinero que entra y las ventas de cada semana cambian: son variables.",
+      "por_que": {
+        "A": "no ve que el dinero cambia cuando cambian las ventas",
+        "B": "cree que los clientes son fijos porque la soda abre los mismos días",
+        "D": "cree que las ventas se repiten igual todas las semanas"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r01",
+      "orden": 49,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Patrones y sucesiones con figuras",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "R1",
+        "texto": "Resuelve problemas relacionados con patrones en sucesiones."
+      },
+      "evidencia": {
+        "codigo": "R1.1",
+        "texto": "Resuelve problemas que involucren patrones en sucesiones con figuras o representaciones geométricas."
+      },
+      "enunciado": "Con palillos se forman las figuras que se muestran: la figura 1 tiene un cuadrado, la figura 2 tiene dos cuadrados unidos y la figura 3 tiene tres.\n\n[[figura]]\n\nDe acuerdo con la información anterior, si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15?",
+      "opciones": {
+        "A": "45",
+        "B": "46",
+        "C": "49",
+        "D": "60"
+      },
+      "clave": "B",
+      "explicacion": "La figura 1 usa 4 palillos y cada cuadrado nuevo agrega solo 3, porque comparte un lado con el anterior. Así, la figura 15 usa 4 + 3 × 14 = 46 palillos.",
+      "por_que": {
+        "A": "3 × 15, olvida el primer palillo",
+        "C": "4 + 3 × 15, se pasa de un cuadrado",
+        "D": "cuenta 4 palillos por cuadrado"
+      },
+      "imagen": {
+        "archivo": "mat-r01-palillos.svg",
+        "alt": "Tres figuras hechas con palillos. Figura 1: un cuadrado de 4 palillos. Figura 2: dos cuadrados unidos por un lado, 7 palillos. Figura 3: tres cuadrados en fila, 10 palillos."
+      }
+    },
+    {
+      "id": "mat-r10",
+      "orden": 50,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Escalas y proporcionalidad",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "R2",
+        "texto": "Resuelve problemas que involucran relaciones entre dos cantidades, en una expresión matemática."
+      },
+      "evidencia": {
+        "codigo": "R2.4",
+        "texto": "Determina relaciones entre dos cantidades, dadas en una escala en figuras gráficas."
+      },
+      "enunciado": "El mapa muestra la ubicación de dos pueblos y la escala que se usó para dibujarlo.\n\n[[figura]]\n\nDe acuerdo con la información anterior, ¿cuál es la distancia real entre los dos pueblos?",
+      "opciones": {
+        "A": "1,5 km",
+        "B": "12,5 km",
+        "C": "37,5 km",
+        "D": "375 km"
+      },
+      "clave": "C",
+      "explicacion": "Si 1 cm del mapa son 5 km, entonces 7,5 cm son 7,5 × 5 = 37,5 km. Es una relación proporcional: el doble de centímetros, el doble de kilómetros.",
+      "por_que": {
+        "A": "divide en vez de multiplicar",
+        "B": "suma 7,5 + 5",
+        "D": "multiplica bien pero corre mal la coma"
+      },
+      "imagen": {
+        "archivo": "mat-r10-mapa.svg",
+        "alt": "Mapa con dos pueblos, A y B, unidos por una línea que mide 7,5 cm. Abajo, una barra de escala indica que 1 cm del mapa equivale a 5 km en la realidad."
+      }
+    },
+    {
+      "id": "mat-r09",
+      "orden": 51,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Valor desconocido en una ecuación",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "R3",
+        "texto": "Resuelve problemas relacionados con el valor desconocido en una expresión dada."
+      },
+      "evidencia": {
+        "codigo": "R3.2",
+        "texto": "Determina el valor desconocido (letra) en una ecuación matemática dada."
+      },
+      "enunciado": "En una campaña de reforestación, los árboles que donó un vivero se repartieron en partes iguales entre 4 comunidades. Además, la municipalidad le entregó 15 árboles más a cada comunidad. Al final, cada comunidad recibió 40 árboles en total. En la siguiente ecuación, «a» representa la cantidad de árboles que donó el vivero:\n\n$a \\div 4 + 15 = 40$\n\nDe acuerdo con la información anterior, ¿cuántos árboles donó el vivero?",
+      "opciones": {
+        "A": "100",
+        "B": "145",
+        "C": "160",
+        "D": "220"
+      },
+      "clave": "A",
+      "explicacion": "Primero se quitan los 15 árboles que dio la municipalidad: 40 − 15 = 25. Esos 25 árboles son lo que le tocó a cada comunidad cuando se repartió entre 4 lo del vivero, así que el vivero donó 25 × 4 = 100 árboles. Se comprueba: 100 ÷ 4 + 15 = 25 + 15 = 40.",
+      "por_que": {
+        "B": "multiplica primero y resta después: 40 × 4 − 15",
+        "C": "multiplica 40 × 4 y se olvida de los 15 árboles de la municipalidad",
+        "D": "suma los 15 en vez de quitarlos: (40 + 15) × 4"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-r06",
+      "orden": 52,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Número que falta en una representación gráfica",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "R3",
+        "texto": "Resuelve problemas relacionados con el valor desconocido en una expresión dada."
+      },
+      "evidencia": {
+        "codigo": "R3.1",
+        "texto": "Reconoce el número que falta en una expresión matemática que contiene representaciones gráficas (figuras o tablas)."
+      },
+      "enunciado": "La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg.\n\n[[figura]]\n\nDe acuerdo con la información anterior, ¿cuánto pesa cada caja?",
+      "opciones": {
+        "A": "4 kg",
+        "B": "6 kg",
+        "C": "12 kg",
+        "D": "16 kg"
+      },
+      "clave": "A",
+      "explicacion": "Si se quitan 2 kg de cada lado, la balanza sigue en equilibrio: las 3 cajas pesan 14 − 2 = 12 kg. Entonces cada caja pesa 12 ÷ 3 = 4 kg.",
+      "por_que": {
+        "B": "reparte los 12 kg entre los dos platillos",
+        "C": "da el peso de las tres cajas juntas",
+        "D": "suma la pesa de 2 kg en vez de quitarla y no reparte entre las 3 cajas: 14 + 2 = 16"
+      },
+      "imagen": {
+        "archivo": "mat-r06-balanza.svg",
+        "alt": "Balanza de dos platillos, nivelada. En el platillo izquierdo hay tres cajas iguales y una pesa de 2 kg. En el platillo derecho hay una pesa de 14 kg."
+      }
+    },
+    {
+      "id": "mat-r11",
+      "orden": 53,
+      "materia": "matematicas",
+      "tema": "Relaciones y Álgebra",
+      "subtema": "Expresiones matemáticas con dos cantidades",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "R2",
+        "texto": "Resuelve problemas que involucran relaciones entre dos cantidades, en una expresión matemática."
+      },
+      "evidencia": {
+        "codigo": "R2.2",
+        "texto": "Determina relaciones entre dos cantidades variables en una expresión matemática."
+      },
+      "enunciado": "Un taxi cobra ₡700 por subirse y ₡650 por cada kilómetro recorrido. El cobro total, en colones, se calcula con la expresión 700 + 650 × k, donde k es la cantidad de kilómetros. ¿Cuánto se paga por un viaje de 6 km?",
+      "opciones": {
+        "A": "₡3900",
+        "B": "₡4600",
+        "C": "₡4850",
+        "D": "₡8100"
+      },
+      "clave": "B",
+      "explicacion": "Primero se multiplica: 650 × 6 = ₡3900 por los kilómetros. Después se suman los ₡700 de subirse: 700 + 3900 = ₡4600.",
+      "por_que": {
+        "A": "se olvida de los ₡700 de subirse",
+        "C": "intercambia los papeles: cobra 700 por kilómetro y 650 de entrada",
+        "D": "suma 700 + 650 antes de multiplicar"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-e07",
+      "orden": 54,
+      "materia": "matematicas",
+      "tema": "Estadística y Probabilidad",
+      "subtema": "Moda y recorrido",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "E1",
+        "texto": "Resuelve problemas relacionados con conceptos estadísticos, medidas de posición o de variabilidad."
+      },
+      "evidencia": {
+        "codigo": "E1.3",
+        "texto": "Reconoce el recorrido de un grupo de datos como la diferencia entre el máximo y el mínimo."
+      },
+      "enunciado": "Durante un aguacero, cinco estaciones meteorológicas de una misma región midieron la lluvia que cayó. Los datos se muestran en la siguiente tabla:\n\n| Estación | Lluvia (en milímetros) |\n| --- | --- |\n| Estación 1 | 12 |\n| Estación 2 | 15 |\n| Estación 3 | 9 |\n| Estación 4 | 15 |\n| Estación 5 | 14 |\n\nDe acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?",
+      "opciones": {
+        "A": "La moda es 15 y el recorrido es 15.",
+        "B": "La moda es 2 y el recorrido es 6.",
+        "C": "La moda es 15 y el recorrido es 6.",
+        "D": "La moda es 6 y el recorrido es 15."
+      },
+      "clave": "C",
+      "explicacion": "La moda es el dato que más se repite: el 15 aparece dos veces. El recorrido es la diferencia entre el dato mayor y el menor: 15 − 9 = 6.",
+      "por_que": {
+        "A": "confunde el recorrido con el dato mayor",
+        "B": "da cuántas veces se repite el 15 en vez del dato",
+        "D": "cambia de lugar la moda y el recorrido"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-e11",
+      "orden": 55,
+      "materia": "matematicas",
+      "tema": "Estadística y Probabilidad",
+      "subtema": "Población y muestra",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "E1",
+        "texto": "Resuelve problemas relacionados con conceptos estadísticos, medidas de posición o de variabilidad."
+      },
+      "evidencia": {
+        "codigo": "E1.4",
+        "texto": "Reconoce el concepto de población o muestra."
+      },
+      "enunciado": "Una municipalidad quiere saber cuántos kilogramos de basura produce por semana cada una de las 1200 casas de un distrito. Para eso, escogió al azar 150 de esas casas y pesó su basura durante una semana. En ese estudio, ¿cuál es la población?",
+      "opciones": {
+        "A": "Todas las casas del distrito.",
+        "B": "Las 150 casas escogidas al azar.",
+        "C": "Los kilogramos de basura de cada casa.",
+        "D": "Las personas que recogen la basura del distrito."
+      },
+      "clave": "A",
+      "explicacion": "La población es el grupo completo que se quiere estudiar: las 1200 casas del distrito. Las 150 casas escogidas al azar son solo una parte, y esa parte se llama muestra.",
+      "por_que": {
+        "B": "confunde la población con la muestra",
+        "C": "confunde la población con el dato que se mide",
+        "D": "piensa en quienes trabajan en el servicio y no en lo que se estudia"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-e06",
+      "orden": 56,
+      "materia": "matematicas",
+      "tema": "Estadística y Probabilidad",
+      "subtema": "Pictogramas",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "E1",
+        "texto": "Resuelve problemas relacionados con conceptos estadísticos, medidas de posición o de variabilidad."
+      },
+      "evidencia": {
+        "codigo": "E1.1",
+        "texto": "Interpreta información que ha sido resumida en dibujos, diagramas, cuadros o gráficos."
+      },
+      "enunciado": "El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg.\n\n[[figura]]\n\nDe acuerdo con la información anterior, ¿cuántos kilogramos más de mango que de papaya se vendieron?",
+      "opciones": {
+        "A": "1,5 kg",
+        "B": "6 kg",
+        "C": "9 kg",
+        "D": "15 kg"
+      },
+      "clave": "C",
+      "explicacion": "Mango tiene 4 círculos, o sea 4 × 6 = 24 kg. Papaya tiene 2 círculos y medio: 2,5 × 6 = 15 kg. La diferencia es 24 − 15 = 9 kg.",
+      "por_que": {
+        "A": "responde en círculos, no en kilos",
+        "B": "cuenta el medio círculo como uno entero",
+        "D": "da lo que se vendió de papaya"
+      },
+      "imagen": {
+        "archivo": "mat-e06-frutas.svg",
+        "alt": "Pictograma de fruta vendida, donde cada círculo completo vale 6 kg. Mango: 4 círculos. Papaya: 2 círculos y medio círculo. Piña: 3 círculos."
+      }
+    },
+    {
+      "id": "mat-e04",
+      "orden": 57,
+      "materia": "matematicas",
+      "tema": "Estadística y Probabilidad",
+      "subtema": "Eventos más y menos probables",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "E2",
+        "texto": "Resuelve problemas relacionados con situaciones aleatorias."
+      },
+      "evidencia": {
+        "codigo": "E2.3",
+        "texto": "Determina eventos más probables, igualmente probables o menos probables de acuerdo con la frecuencia de sus resultados simples."
+      },
+      "enunciado": "En una bolsa hay 5 bolitas rojas, 3 azules y 4 verdes, todas del mismo tamaño. Se agregan 2 bolitas azules más. Si después se saca una bolita sin ver, ¿cuál de las siguientes afirmaciones es correcta?",
+      "opciones": {
+        "A": "Solo el rojo es el más probable.",
+        "B": "Solo el azul es el más probable.",
+        "C": "Los tres colores son igual de probables.",
+        "D": "Rojo y azul son igual de probables."
+      },
+      "clave": "D",
+      "explicacion": "Después de agregar las 2 azules quedan 5 rojas, 5 azules y 4 verdes. Como hay la misma cantidad de rojas que de azules, sacar una roja o una azul es igual de probable, y la verde es la menos probable.",
+      "por_que": {
+        "A": "no suma las bolitas que se agregaron",
+        "B": "cree que el color que se agregó pasa a ser el más probable",
+        "C": "cree que todos los colores siempre tienen la misma probabilidad"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-e09",
+      "orden": 58,
+      "materia": "matematicas",
+      "tema": "Estadística y Probabilidad",
+      "subtema": "Media aritmética con tabla de frecuencias",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "E1",
+        "texto": "Resuelve problemas relacionados con conceptos estadísticos, medidas de posición o de variabilidad."
+      },
+      "evidencia": {
+        "codigo": "E1.2",
+        "texto": "Interpreta las medidas de posición (moda, media aritmética, máximo o mínimo) de un grupo de datos presentados en tablas o gráficos con frecuencias absolutas."
+      },
+      "enunciado": "La tabla muestra cuántos goles anotó el equipo de la escuela en sus partidos del campeonato.\n\n| Goles en el partido | Cantidad de partidos |\n| --- | --- |\n| 0 | 2 |\n| 1 | 3 |\n| 2 | 4 |\n| 3 | 1 |\n\nDe acuerdo con la información anterior, ¿cuál fue el promedio (media aritmética) de goles por partido?",
+      "opciones": {
+        "A": "1,4",
+        "B": "1,5",
+        "C": "2,5",
+        "D": "3,5"
+      },
+      "clave": "A",
+      "explicacion": "En total se jugaron 2 + 3 + 4 + 1 = 10 partidos y se anotaron 0 × 2 + 1 × 3 + 2 × 4 + 3 × 1 = 14 goles. El promedio es 14 ÷ 10 = 1,4 goles por partido.",
+      "por_que": {
+        "B": "saca el promedio de 0, 1, 2 y 3 sin fijarse cuántas veces pasó cada uno",
+        "C": "saca el promedio de la columna de partidos",
+        "D": "divide los 14 goles entre las 4 filas de la tabla"
+      },
+      "imagen": null
+    },
+    {
+      "id": "mat-e02",
+      "orden": 59,
+      "materia": "matematicas",
+      "tema": "Estadística y Probabilidad",
+      "subtema": "Frecuencia porcentual",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "E1",
+        "texto": "Resuelve problemas relacionados con conceptos estadísticos, medidas de posición o de variabilidad."
+      },
+      "evidencia": {
+        "codigo": "E1.5",
+        "texto": "Interpreta la frecuencia porcentual de datos presentados en representaciones (tablas o gráficos) con frecuencias absolutas."
+      },
+      "enunciado": "El gráfico muestra la cantidad de libros que leyó cada grupo de sexto durante un mes.\n\n[[figura]]\n\nDe acuerdo con la información anterior, ¿qué porcentaje del total de libros leyó el grupo 6-4?",
+      "opciones": {
+        "A": "25 %",
+        "B": "28 %",
+        "C": "56 %",
+        "D": "72 %"
+      },
+      "clave": "B",
+      "explicacion": "Entre los cuatro grupos leyeron 48 + 60 + 36 + 56 = 200 libros. El grupo 6-4 leyó 56 de esos 200, que es lo mismo que 28 de cada 100, o sea, el 28 %. Ojo: 56 es la cantidad de libros, no el porcentaje.",
+      "por_que": {
+        "A": "reparte el total en cuatro partes iguales",
+        "C": "confunde la cantidad de libros con el porcentaje",
+        "D": "da el porcentaje de los otros tres grupos"
+      },
+      "imagen": {
+        "archivo": "mat-e02-libros.svg",
+        "alt": "Gráfico de barras de los libros leídos en un mes por cada grupo de sexto: 6-1 leyó 48, 6-2 leyó 60, 6-3 leyó 36 y 6-4 leyó 56."
+      }
+    },
+    {
+      "id": "mat-e10",
+      "orden": 60,
+      "materia": "matematicas",
+      "tema": "Estadística y Probabilidad",
+      "subtema": "Eventos más y menos probables",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "E2",
+        "texto": "Resuelve problemas relacionados con situaciones aleatorias."
+      },
+      "evidencia": {
+        "codigo": "E2.3",
+        "texto": "Determina eventos más probables, igualmente probables o menos probables de acuerdo con la frecuencia de sus resultados simples."
+      },
+      "enunciado": "Una ruleta está dividida en 8 partes iguales: 4 son rojas, 3 son azules y 1 es verde. Si se hace girar una vez, ¿cuál de las siguientes afirmaciones es correcta?",
+      "opciones": {
+        "A": "Azul es más probable que rojo.",
+        "B": "Es imposible que salga verde.",
+        "C": "Es seguro que salga rojo o que salga azul.",
+        "D": "Verde es menos probable que azul."
+      },
+      "clave": "D",
+      "explicacion": "El color con más partes es el más probable. El verde tiene 1 parte y el azul tiene 3, así que es menos probable que salga verde. Pero no es imposible, porque sí hay una parte verde.",
+      "por_que": {
+        "A": "no compara la cantidad de partes de cada color",
+        "B": "confunde poco probable con imposible",
+        "C": "olvida que la parte verde también puede salir"
+      },
+      "imagen": null
+    }
+  ]
+}

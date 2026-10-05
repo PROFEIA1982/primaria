@@ -8,7 +8,8 @@ import "./Nav.css";
 // Navegacion. En celular se abre con la hamburguesa; en pantalla grande
 // siempre esta a la vista, porque un nino no deberia tener que buscarla.
 //
-// Menu: Inicio · Español · Sociales · Ciencias · Matemáticas · Contacto.
+// Menu: Inicio · Español · Sociales · Ciencias · Matemáticas · Simulacros
+// nuevos · Mi rincón.
 // Accesibilidad ya no vive aca. En pantalla grande esta en el boton
 // flotante de abajo a la izquierda; en celular y tablet, en la barra fija
 // de abajo. Dentro de la hamburguesa el panel se salia de la pantalla y el
@@ -73,6 +74,12 @@ export default function Nav() {
                 </NavLink>
               </li>
             ))}
+            {/* Los examenes nuevos van aparte de las materias: son una
+                sola pagina con las cuatro, y quien llega buscandolos no
+                tiene que adivinar dentro de cual materia estan. */}
+            <li>
+              <NavLink to="/simulacros-nuevos" onClick={() => setAbierto(false)}>Simulacros nuevos</NavLink>
+            </li>
             <li>
               <NavLink to="/rincon" onClick={() => setAbierto(false)}>Mi rincón</NavLink>
             </li>

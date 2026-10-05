@@ -18,6 +18,7 @@ const ContactoPage = lazy(() => import("./pages/ContactoPage"));
 const NoEncontradaPage = lazy(() => import("./pages/NoEncontradaPage"));
 const RinconPage = lazy(() => import("./pages/RinconPage"));
 const MaestrasPage = lazy(() => import("./pages/MaestrasPage"));
+const SimulacrosNuevosPage = lazy(() => import("./pages/SimulacrosNuevosPage"));
 
 // La ruta vieja /anuncios manda a contacto y le avisa a esa pagina que baje
 // hasta el aviso. No se hace el scroll aca: en cuanto se navega, este
@@ -86,6 +87,9 @@ function Armazon() {
             <Route path="/simulacros/estudios-sociales" element={<SimulacrosPage materia="estudios-sociales" />} />
             <Route path="/simulacros/ciencias" element={<SimulacrosPage materia="ciencias" />} />
             <Route path="/simulacros/matematicas" element={<SimulacrosPage materia="matematicas" />} />
+            {/* Los examenes nuevos: un simulacro por materia, con preguntas
+                que no estan en la practica. Tablas propias en la base. */}
+            <Route path="/simulacros-nuevos" element={<SimulacrosNuevosPage />} />
             <Route path="/contacto" element={<ContactoPage />} />
             <Route path="/rincon" element={<RinconPage />} />
             <Route path="/maestras" element={<MaestrasPage />} />
