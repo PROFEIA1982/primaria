@@ -342,7 +342,7 @@ cross join (values
     ('mat-n01', 17, 'Números', 'Operaciones combinadas con números naturales', 'intermedio', 'En la soda de la escuela, Mariela compró 3 empanadas de ₡650 cada una y 2 refrescos naturales de ₡450 cada uno. Pagó con un billete de ₡5000. ¿Cuánto dinero le devolvieron?', 'Primero se calcula lo que gastó: 3 × 650 = 1950 y 2 × 450 = 900, en total ₡2850. Después se resta del billete: 5000 − 2850 = 2150. Ese es el vuelto.', false),
     ('mat-g04', 18, 'Geometría', 'Elementos de los prismas', 'intermedio', 'Una caja de zapatos tiene forma de prisma rectangular. Andrés quiere pegar cinta sobre todas las aristas de la caja. ¿En cuántas aristas debe pegar cinta?', 'Un prisma rectangular tiene 4 aristas en la base de abajo, 4 en la de arriba y 4 que unen las dos bases. En total son 4 + 4 + 4 = 12 aristas.', false),
     ('mat-g14', 19, 'Geometría', 'Propiedades de los cuadriláteros', 'alto', 'Fabián dibujó un cuadrilátero con sus cuatro ángulos rectos. Sus dos diagonales miden lo mismo, pero no son perpendiculares. ¿Qué cuadrilátero dibujó?', 'Con cuatro ángulos rectos solo puede ser un cuadrado o un rectángulo, y en los dos las diagonales miden lo mismo. En el cuadrado las diagonales además son perpendiculares; como aquí no lo son, es un rectángulo.', false),
-    ('mat-g05', 20, 'Geometría', 'Elementos del cilindro', 'alto', 'Una lata de leche en polvo tiene forma de cilindro. La distancia entre los centros de sus dos bases es 12 cm, y el diámetro de cada base mide 8 cm. ¿Cuáles son la altura y el radio de la base de esa lata?', 'La altura del cilindro es la distancia entre sus dos bases, o sea 12 cm. El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm.', false),
+    ('mat-g05', 20, 'Geometría', 'Elementos del cilindro', 'alto', 'Una lata de leche en polvo tiene forma de cilindro. La distancia entre los centros de sus dos bases es 12 cm, y el diámetro de cada base mide 8 cm. ¿Cuáles son el radio de la base y la altura de esa lata?', 'El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm. La altura del cilindro es la distancia entre sus dos bases, o sea 12 cm.', false),
     ('mat-g17', 21, 'Geometría', 'Ubicación en el sistema de coordenadas', 'intermedio', 'En un plano de la comunidad, la escuela está en el punto (2, 3). Para ir a la biblioteca, Dayana camina 4 unidades hacia la derecha y 1 unidad hacia arriba. ¿En qué punto está la biblioteca?', 'La primera coordenada dice cuánto se avanza hacia la derecha y la segunda cuánto hacia arriba. Al moverse 4 a la derecha queda 2 + 4 = 6, y al subir 1 queda 3 + 1 = 4: la biblioteca está en (6, 4).', false),
     ('mat-g03', 22, 'Geometría', 'Clasificación de cuadriláteros', 'intermedio', 'Un cuadrilátero tiene dos pares de lados paralelos, sus cuatro lados miden lo mismo y ninguno de sus ángulos es recto. ¿Qué cuadrilátero es?', 'Tener los cuatro lados iguales deja por fuera al romboide y al rectángulo. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.', false),
     ('mat-g06', 23, 'Geometría', 'Área de figuras compuestas', 'alto', 'El piso del comedor de una escuela tiene forma de rectángulo de 10 m de largo y 8 m de ancho, pero en una esquina hay una bodega rectangular de 4 m por 3 m que no forma parte del comedor. ¿Cuál es el área del piso del comedor, sin contar la bodega?', 'El rectángulo completo mide 10 × 8 = 80 m² y la bodega mide 4 × 3 = 12 m². Como la bodega no es parte del comedor, se resta: 80 − 12 = 68 m².', false),
@@ -350,7 +350,7 @@ cross join (values
     ('mat-g12', 25, 'Geometría', 'Perímetro y área del rectángulo', 'alto', 'Un terreno rectangular tiene un perímetro de 54 m, y su largo mide 15 m. Se quiere sembrar zacate en todo el terreno, y el metro cuadrado de zacate cuesta ₡2500. ¿Cuánto cuesta el zacate?', 'Los dos largos suman 15 + 15 = 30 m, así que los dos anchos suman 54 − 30 = 24 m y cada uno mide 12 m. El área es 15 × 12 = 180 m², y el zacate cuesta 180 × 2500 = ₡450 000.', false),
     ('mat-g15', 26, 'Geometría', 'Clasificación de triángulos según sus ángulos', 'intermedio', 'Un pedazo de cartulina tiene forma de triángulo, y sus ángulos miden 35°, 40° y 105°. ¿Cómo se clasifica ese triángulo según sus ángulos?', 'Un triángulo con un ángulo mayor que 90° es obtusángulo. Aquí el ángulo de 105° es obtuso, así que el triángulo es obtusángulo, aunque los otros dos ángulos sean agudos.', false),
     ('mat-g11', 27, 'Geometría', 'Clasificación de triángulos', 'intermedio', 'Un triángulo tiene un ángulo de 90° y dos de sus lados miden lo mismo. ¿Cómo se clasifica este triángulo?', 'Por tener un ángulo de 90°, el triángulo es rectángulo. Por tener dos lados iguales, es isósceles. Juntando las dos cosas, es un triángulo rectángulo isósceles.', false),
-    ('mat-g08', 28, 'Geometría', 'Perímetro de polígonos regulares', 'intermedio', 'Con un alambre, Allan formó un pentágono regular de 18 cm de lado. Después lo desarmó y, con todo el alambre, formó un hexágono regular. ¿Cuánto mide cada lado del hexágono?', 'El alambre mide lo mismo que el perímetro del pentágono: 5 × 18 = 90 cm. Al repartir esos 90 cm en los 6 lados iguales del hexágono, cada lado mide 90 ÷ 6 = 15 cm.', false),
+    ('mat-g08', 28, 'Geometría', 'Perímetro de triángulos y cuadriláteros', 'intermedio', 'Con un alambre, Allan formó un triángulo equilátero de 20 cm de lado. Después lo desarmó y, con todo el alambre, formó un cuadrado. ¿Cuánto mide cada lado del cuadrado?', 'El alambre mide lo mismo que el perímetro del triángulo: 3 × 20 = 60 cm. Al repartir esos 60 cm en los 4 lados iguales del cuadrado, cada lado mide 60 ÷ 4 = 15 cm.', false),
     ('mat-g07', 29, 'Geometría', 'Área del triángulo', 'intermedio', 'Para la fiesta de la escuela se van a coser 12 banderines con forma de triángulo. Cada banderín tiene 30 cm de base y 40 cm de altura. ¿Cuánta tela se necesita para los 12 banderines, sin contar desperdicios?', 'El área de un triángulo es base por altura entre 2: 30 × 40 ÷ 2 = 600 cm² por banderín. Para 12 banderines se necesitan 600 × 12 = 7200 cm².', false),
     ('mat-g16', 30, 'Geometría', 'Ejes de simetría', 'intermedio', 'La puerta de un aula tiene forma de rectángulo: mide 2 m de alto y 1 m de ancho. Sin tomar en cuenta la cerradura ni las bisagras, ¿cuántos ejes de simetría tiene esa forma?', 'Un rectángulo que no es cuadrado tiene 2 ejes de simetría: uno vertical y otro horizontal, que pasan por la mitad de sus lados. Las diagonales no son ejes, porque al doblar por ahí las dos mitades no calzan.', false),
     ('mat-g13', 31, 'Geometría', 'Clasificación de cuadriláteros', 'intermedio', 'La superficie de una mesa de trabajo tiene cuatro lados, y solo dos de esos lados son paralelos entre sí. ¿Cómo se llama esa figura?', 'Un cuadrilátero con un solo par de lados paralelos es un trapecio. Si tuviera dos pares sería un paralelogramo, y si no tuviera ninguno sería un trapezoide.', false),
@@ -374,18 +374,30 @@ cross join (values
 | 8 | 12 000 |
 
 ¿Cuál de las siguientes afirmaciones describe la relación entre las dos cantidades?', 'Si se divide el costo entre la cantidad de entradas, siempre da lo mismo: 3000 ÷ 2 = 1500, 4500 ÷ 3 = 1500, y así con todas. Por eso cada entrada cuesta ₡1500, y las dos cantidades aumentan juntas, en proporción.', false),
-    ('mat-r03', 43, 'Relaciones y Álgebra', 'Proporcionalidad directa', 'intermedio', 'En una tortillería, con 3 kg de masa se hacen 48 tortillas. Si la cantidad de tortillas es proporcional a la masa, ¿cuántas tortillas se hacen con 5 kg de masa?', 'Primero se averigua cuántas salen con 1 kg: 48 ÷ 3 = 16 tortillas. Con 5 kg salen 16 × 5 = 80 tortillas.', false),
-    ('mat-r02', 44, 'Relaciones y Álgebra', 'Valor desconocido', 'intermedio', 'Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. ¿Qué número pensó Daniela?', 'Se deshacen los pasos al revés: si al restarle 7 quedó 33, antes era 33 + 7 = 40. Y si 40 salió de multiplicar por 4, el número era 40 ÷ 4 = 10. Comprobación: 10 × 4 − 7 = 33.', false),
+    ('mat-r03', 43, 'Relaciones y Álgebra', 'Proporcionalidad directa', 'intermedio', 'En una tortillería, la cantidad de tortillas es proporcional a la cantidad de masa que se usa. La tabla muestra algunos datos.
+
+| Masa (en kg) | Cantidad de tortillas |
+| --- | --- |
+| 3 | 48 |
+| 6 | 96 |
+| 5 | ? |
+
+¿Cuántas tortillas se hacen con 5 kg de masa?', 'Según la tabla, con 3 kg salen 48 tortillas, así que con 1 kg salen 48 ÷ 3 = 16. Con 5 kg salen 16 × 5 = 80 tortillas.', false),
+    ('mat-r02', 44, 'Relaciones y Álgebra', 'Valor desconocido', 'intermedio', 'Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. En la siguiente ecuación, «n» representa el número que pensó Daniela: 4 × n − 7 = 33. De acuerdo con la información anterior, ¿qué número pensó Daniela?', 'Se deshacen los pasos al revés: si al restarle 7 quedó 33, antes era 33 + 7 = 40. Y si 40 salió de multiplicar por 4, el número era 40 ÷ 4 = 10. Comprobación: 10 × 4 − 7 = 33.', false),
     ('mat-r08', 45, 'Relaciones y Álgebra', 'Sucesiones numéricas', 'alto', 'En una sucesión, el primer término es 5 y cada término siguiente se obtiene sumándole 4 al anterior. ¿Cuál es el término número 20?', 'Del primer término al vigésimo hay 19 saltos de 4, o sea 19 × 4 = 76. Entonces el término 20 es 5 + 76 = 81.', false),
     ('mat-r04', 46, 'Relaciones y Álgebra', 'Expresiones matemáticas con dos cantidades', 'alto', 'En una librería, un cuaderno cuesta $c$ colones y un lapicero cuesta ₡300 menos que un cuaderno. ¿Cuál expresión representa lo que se paga por 2 cuadernos y 3 lapiceros?', 'Cada lapicero cuesta c − 300 colones, así que los 3 lapiceros cuestan 3 × (c − 300): el paréntesis dice que se multiplica el precio completo del lapicero. A eso se le suma lo de los 2 cuadernos, que es 2 × c.', true),
     ('mat-r05', 47, 'Relaciones y Álgebra', 'Sucesiones numéricas', 'alto', 'En la sucesión 3, 8, 15, 24, 35, …, ¿cuál es el número que sigue?', 'De un número al siguiente se suma 5, luego 7, luego 9 y luego 11: lo que se suma crece de 2 en 2. Lo próximo es sumar 13, así que sigue 35 + 13 = 48.', false),
-    ('mat-r07', 48, 'Relaciones y Álgebra', 'Cantidades variables y constantes', 'intermedio', 'En la soda de una escuela, el casado cuesta ₡2200 todos los días, la soda abre 5 días por semana y cada día se vende una cantidad distinta de casados. ¿Cuál de las siguientes cantidades es variable?', 'Una cantidad es variable cuando puede cambiar. Como cada día se vende una cantidad distinta de casados, el dinero que entra también cambia de un día a otro. El precio del casado y los días que abre la soda se mantienen iguales: son constantes.', false),
+    ('mat-r07', 48, 'Relaciones y Álgebra', 'Cantidades variables y constantes', 'intermedio', 'En la soda de una escuela, el almuerzo cuesta ₡2200 todos los días, la soda abre 5 días por semana y cada día llega una cantidad distinta de clientes. ¿Cuál de las siguientes cantidades es constante?', 'Una cantidad es constante cuando no cambia. El precio del almuerzo es el mismo todos los días, así que es constante. Los clientes, el dinero que entra y las ventas de cada semana cambian: son variables.', false),
     ('mat-r01', 49, 'Relaciones y Álgebra', 'Patrones y sucesiones con figuras', 'alto', 'Con palillos se forman las figuras que se muestran: la figura 1 tiene un cuadrado, la figura 2 tiene dos cuadrados unidos y la figura 3 tiene tres.
 
 ![Tres figuras hechas con palillos. Figura 1: un cuadrado de 4 palillos. Figura 2: dos cuadrados unidos por un lado, 7 palillos. Figura 3: tres cuadrados en fila, 10 palillos.](/simulacros-nuevos/mat-r01-palillos.svg)
 
 Si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15?', 'La figura 1 usa 4 palillos y cada cuadrado nuevo agrega solo 3, porque comparte un lado con el anterior. Así, la figura 15 usa 4 + 3 × 14 = 46 palillos.', false),
-    ('mat-r10', 50, 'Relaciones y Álgebra', 'Escalas y proporcionalidad', 'intermedio', 'En un mapa, cada centímetro representa 5 km en la realidad. Dos pueblos están a 7,5 cm de distancia en el mapa. ¿Cuál es la distancia real entre los dos pueblos?', 'Si 1 cm del mapa son 5 km, entonces 7,5 cm son 7,5 × 5 = 37,5 km. Es una relación proporcional: el doble de centímetros, el doble de kilómetros.', false),
+    ('mat-r10', 50, 'Relaciones y Álgebra', 'Escalas y proporcionalidad', 'intermedio', 'El mapa muestra la ubicación de dos pueblos y la escala que se usó para dibujarlo.
+
+![Mapa con dos pueblos, A y B, unidos por una línea que mide 7,5 cm. Abajo, una barra de escala indica que 1 cm del mapa equivale a 5 km en la realidad.](/simulacros-nuevos/mat-r10-mapa.svg)
+
+De acuerdo con la información anterior, ¿cuál es la distancia real entre los dos pueblos?', 'Si 1 cm del mapa son 5 km, entonces 7,5 cm son 7,5 × 5 = 37,5 km. Es una relación proporcional: el doble de centímetros, el doble de kilómetros.', false),
     ('mat-r09', 51, 'Relaciones y Álgebra', 'Valor desconocido en una ecuación', 'alto', 'El doble de la edad de Sofía, aumentado en 5 años, da 31 años. En la siguiente ecuación, «e» representa la edad de Sofía: 2 × e + 5 = 31. De acuerdo con la información anterior, ¿cuántos años tiene Sofía?', 'Se deshacen las operaciones al revés: primero se resta 5, 31 − 5 = 26, y después se divide entre 2, 26 ÷ 2 = 13. Sofía tiene 13 años, y se comprueba con 2 × 13 + 5 = 31.', false),
     ('mat-r06', 52, 'Relaciones y Álgebra', 'Número que falta en una representación gráfica', 'intermedio', 'La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg.
 
@@ -394,7 +406,7 @@ Si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15
 ¿Cuánto pesa cada caja?', 'Si se quitan 2 kg de cada lado, la balanza sigue en equilibrio: las 3 cajas pesan 14 − 2 = 12 kg. Entonces cada caja pesa 12 ÷ 3 = 4 kg.', false),
     ('mat-r11', 53, 'Relaciones y Álgebra', 'Expresiones matemáticas con dos cantidades', 'alto', 'Un taxi cobra ₡700 por subirse y ₡650 por cada kilómetro recorrido. El cobro total, en colones, se calcula con la expresión 700 + 650 × k, donde k es la cantidad de kilómetros. ¿Cuánto se paga por un viaje de 6 km?', 'Primero se multiplica: 650 × 6 = ₡3900 por los kilómetros. Después se suman los ₡700 de subirse: 700 + 3900 = ₡4600.', false),
     ('mat-e07', 54, 'Estadística y Probabilidad', 'Moda y recorrido', 'intermedio', 'Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?', 'La moda es el dato que más se repite: el 15 aparece dos veces. El recorrido es la diferencia entre el dato mayor y el menor: 15 − 9 = 6.', false),
-    ('mat-e11', 55, 'Estadística y Probabilidad', 'Población y muestra', 'intermedio', 'Para saber cuál deporte prefieren los 600 estudiantes de una escuela, se escogió al azar a 3 estudiantes de cada uno de los 20 grupos, o sea, a 60 estudiantes, y se les hizo una encuesta. En ese estudio, ¿cuál es la población?', 'La población es el grupo completo que se quiere estudiar: los 600 estudiantes de la escuela. Los 60 que respondieron la encuesta son solo una parte, que se llama muestra.', false),
+    ('mat-e11', 55, 'Estadística y Probabilidad', 'Población y muestra', 'intermedio', 'Para conocer cuánta agua gastan por mes los 600 hogares de un distrito, la municipalidad escogió al azar 3 hogares de cada uno de sus 20 barrios, o sea, 60 hogares, y les aplicó una encuesta. En ese estudio, ¿cuál es la población?', 'La población es el grupo completo que se quiere estudiar: los 600 hogares del distrito. Los 60 hogares que respondieron la encuesta son solo una parte, que se llama muestra.', false),
     ('mat-e06', 56, 'Estadística y Probabilidad', 'Pictogramas', 'alto', 'El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg.
 
 ![Pictograma de fruta vendida, donde cada círculo completo vale 6 kg. Mango: 4 círculos. Papaya: 2 círculos y medio círculo. Piña: 3 círculos.](/simulacros-nuevos/mat-e06-frutas.svg)
@@ -517,13 +529,13 @@ from (values
     ('mat-g14', 'B', 'Trapezoide', false),
     ('mat-g14', 'C', 'Rectángulo', true),
     ('mat-g14', 'D', 'Romboide', false),
-    ('mat-g05', 'A', 'Altura de 12 cm y radio de 4 cm', true),
-    ('mat-g05', 'B', 'Altura de 12 cm y radio de 8 cm', false),
-    ('mat-g05', 'C', 'Altura de 8 cm y radio de 6 cm', false),
-    ('mat-g05', 'D', 'Altura de 4 cm y radio de 12 cm', false),
+    ('mat-g05', 'A', 'Radio de 4 cm y altura de 12 cm', true),
+    ('mat-g05', 'B', 'Radio de 6 cm y altura de 8 cm', false),
+    ('mat-g05', 'C', 'Radio de 8 cm y altura de 12 cm', false),
+    ('mat-g05', 'D', 'Radio de 12 cm y altura de 4 cm', false),
     ('mat-g17', 'A', '(3, 7)', false),
-    ('mat-g17', 'B', '(6, 2)', false),
-    ('mat-g17', 'C', '(7, 3)', false),
+    ('mat-g17', 'B', '(4, 6)', false),
+    ('mat-g17', 'C', '(6, 2)', false),
     ('mat-g17', 'D', '(6, 4)', true),
     ('mat-g03', 'A', 'Rombo', true),
     ('mat-g03', 'B', 'Cuadrado', false),
@@ -544,15 +556,15 @@ from (values
     ('mat-g15', 'A', 'Acutángulo', false),
     ('mat-g15', 'B', 'Rectángulo', false),
     ('mat-g15', 'C', 'Obtusángulo', true),
-    ('mat-g15', 'D', 'Equilátero', false),
+    ('mat-g15', 'D', 'No se puede clasificar', false),
     ('mat-g11', 'A', 'Rectángulo isósceles', true),
     ('mat-g11', 'B', 'Rectángulo escaleno', false),
     ('mat-g11', 'C', 'Acutángulo isósceles', false),
     ('mat-g11', 'D', 'Obtusángulo isósceles', false),
-    ('mat-g08', 'A', '12 cm', false),
+    ('mat-g08', 'A', '10 cm', false),
     ('mat-g08', 'B', '15 cm', true),
-    ('mat-g08', 'C', '17 cm', false),
-    ('mat-g08', 'D', '18 cm', false),
+    ('mat-g08', 'C', '19 cm', false),
+    ('mat-g08', 'D', '20 cm', false),
     ('mat-g07', 'A', '600 cm²', false),
     ('mat-g07', 'B', '840 cm²', false),
     ('mat-g07', 'C', '7200 cm²', true),
@@ -629,10 +641,10 @@ from (values
     ('mat-r05', 'B', '47', false),
     ('mat-r05', 'C', '48', true),
     ('mat-r05', 'D', '70', false),
-    ('mat-r07', 'A', 'El precio de cada casado.', false),
-    ('mat-r07', 'B', 'La cantidad de días que abre por semana.', false),
-    ('mat-r07', 'C', 'El dinero que se recibe cada día.', true),
-    ('mat-r07', 'D', 'La cantidad de días de una semana.', false),
+    ('mat-r07', 'A', 'El dinero que se recibe cada día.', false),
+    ('mat-r07', 'B', 'Los clientes que piden almuerzo cada día.', false),
+    ('mat-r07', 'C', 'El precio de cada almuerzo.', true),
+    ('mat-r07', 'D', 'Las ventas totales de cada semana.', false),
     ('mat-r01', 'A', '45', false),
     ('mat-r01', 'B', '46', true),
     ('mat-r01', 'C', '49', false),
@@ -657,10 +669,10 @@ from (values
     ('mat-e07', 'B', 'La moda es 2 y el recorrido es 6.', false),
     ('mat-e07', 'C', 'La moda es 15 y el recorrido es 6.', true),
     ('mat-e07', 'D', 'La moda es 6 y el recorrido es 15.', false),
-    ('mat-e11', 'A', 'Todo el estudiantado del centro educativo.', true),
-    ('mat-e11', 'B', 'Las 60 personas que fueron encuestadas.', false),
-    ('mat-e11', 'C', 'Los 20 grupos que hay en total.', false),
-    ('mat-e11', 'D', 'Los deportes preferidos del grupo encuestado.', false),
+    ('mat-e11', 'A', 'Todos los hogares del distrito.', true),
+    ('mat-e11', 'B', 'Los 60 hogares que fueron encuestados.', false),
+    ('mat-e11', 'C', 'Los 20 barrios del distrito.', false),
+    ('mat-e11', 'D', 'La cantidad de agua que gasta cada hogar encuestado.', false),
     ('mat-e06', 'A', '1,5 kg', false),
     ('mat-e06', 'B', '6 kg', false),
     ('mat-e06', 'C', '9 kg', true),

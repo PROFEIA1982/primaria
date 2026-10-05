@@ -40,7 +40,7 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | 25 | mat-g12 | Geometría | G4.3 | Perímetro y área del rectángulo | alto | B |
 | 26 | mat-g15 | Geometría | G2.1 | Clasificación de triángulos según sus ángulos | intermedio | C |
 | 27 | mat-g11 | Geometría | G2.2 | Clasificación de triángulos | intermedio | A |
-| 28 | mat-g08 | Geometría | G1.4 | Perímetro de polígonos regulares | intermedio | B |
+| 28 | mat-g08 | Geometría | G4.3 | Perímetro de triángulos y cuadriláteros | intermedio | B |
 | 29 | mat-g07 | Geometría | G4.3 | Área del triángulo | intermedio | C |
 | 30 | mat-g16 | Geometría | G5.1 | Ejes de simetría | intermedio | C |
 | 31 | mat-g13 | Geometría | G2.5 | Clasificación de cuadriláteros | intermedio | D |
@@ -273,7 +273,7 @@ En el festival deportivo de la escuela, cuatro estudiantes hicieron salto largo.
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Ariana | cree que 08 es más que 8 |
+| A | Ariana | cree que el 0 después de la coma no cambia nada y lee 2,08 como si fuera 2,8 |
 | B | Camila | cree que 75 es más que 8 porque tiene más cifras |
 | C | Diego | escoge el número con más cifras decimales |
 | D | Brenda | **Correcta** |
@@ -405,16 +405,16 @@ Fabián dibujó un cuadrilátero con sus cuatro ángulos rectos. Sus dos diagona
 **Evidencia G3.7:** Reconoce cilindros o algunos de sus elementos (bases, superficie lateral, eje, altura, radio y diámetro de la base) o propiedades.  
 **Subtema:** Elementos del cilindro
 
-Una lata de leche en polvo tiene forma de cilindro. La distancia entre los centros de sus dos bases es 12 cm, y el diámetro de cada base mide 8 cm. ¿Cuáles son la altura y el radio de la base de esa lata?
+Una lata de leche en polvo tiene forma de cilindro. La distancia entre los centros de sus dos bases es 12 cm, y el diámetro de cada base mide 8 cm. ¿Cuáles son el radio de la base y la altura de esa lata?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Altura de 12 cm y radio de 4 cm | **Correcta** |
-| B | Altura de 12 cm y radio de 8 cm | confunde el radio con el diámetro |
-| C | Altura de 8 cm y radio de 6 cm | toma el diámetro como altura y saca la mitad de 12 |
-| D | Altura de 4 cm y radio de 12 cm | cambia de lugar los datos |
+| A | Radio de 4 cm y altura de 12 cm | **Correcta** |
+| B | Radio de 6 cm y altura de 8 cm | toma el diámetro como altura y saca la mitad de 12 |
+| C | Radio de 8 cm y altura de 12 cm | confunde el radio con el diámetro |
+| D | Radio de 12 cm y altura de 4 cm | cambia de lugar los datos |
 
-**Resolución:** La altura del cilindro es la distancia entre sus dos bases, o sea 12 cm. El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm.
+**Resolución:** El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm. La altura del cilindro es la distancia entre sus dos bases, o sea 12 cm.
 
 ### 21. mat-g17 · Geometría · intermedio
 
@@ -427,8 +427,8 @@ En un plano de la comunidad, la escuela está en el punto (2, 3). Para ir a la b
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | (3, 7) | suma el 4 a la segunda coordenada y el 1 a la primera |
-| B | (6, 2) | resta al subir en vez de sumar |
-| C | (7, 3) | suma los dos movimientos a la primera coordenada |
+| B | (4, 6) | escribe el punto correcto con las coordenadas invertidas |
+| C | (6, 2) | resta al subir en vez de sumar |
 | D | (6, 4) | **Correcta** |
 
 **Resolución:** La primera coordenada dice cuánto se avanza hacia la derecha y la segunda cuánto hacia arriba. Al moverse 4 a la derecha queda 2 + 4 = 6, y al subir 1 queda 3 + 1 = 4: la biblioteca está en (6, 4).
@@ -514,7 +514,7 @@ Un pedazo de cartulina tiene forma de triángulo, y sus ángulos miden 35°, 40�
 | A | Acutángulo | se fija en que dos de los ángulos son agudos |
 | B | Rectángulo | cree que 105° está tan cerca de 90° que cuenta como recto |
 | C | Obtusángulo | **Correcta** |
-| D | Equilátero | mezcla la clasificación por lados con la de ángulos |
+| D | No se puede clasificar | cree que si los tres ángulos son distintos el triángulo no se puede clasificar |
 
 **Resolución:** Un triángulo con un ángulo mayor que 90° es obtusángulo. Aquí el ángulo de 105° es obtuso, así que el triángulo es obtusángulo, aunque los otros dos ángulos sean agudos.
 
@@ -537,20 +537,20 @@ Un triángulo tiene un ángulo de 90° y dos de sus lados miden lo mismo. ¿Cóm
 
 ### 28. mat-g08 · Geometría · intermedio
 
-**Afirmación G1:** Reconoce figuras geométricas planas, sus elementos o propiedades.  
-**Evidencia G1.4:** Reconoce en dibujos u objetos del entorno polígonos regulares e irregulares.  
-**Subtema:** Perímetro de polígonos regulares
+**Afirmación G4:** Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos.  
+**Evidencia G4.3:** Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros.  
+**Subtema:** Perímetro de triángulos y cuadriláteros
 
-Con un alambre, Allan formó un pentágono regular de 18 cm de lado. Después lo desarmó y, con todo el alambre, formó un hexágono regular. ¿Cuánto mide cada lado del hexágono?
+Con un alambre, Allan formó un triángulo equilátero de 20 cm de lado. Después lo desarmó y, con todo el alambre, formó un cuadrado. ¿Cuánto mide cada lado del cuadrado?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | 12 cm | le quita un lado de 18 al alambre: 72 ÷ 6 |
+| A | 10 cm | le quita un lado de 20 al alambre y reparte el resto: 40 ÷ 4 |
 | B | 15 cm | **Correcta** |
-| C | 17 cm | cree que con un lado más se pierde 1 cm |
-| D | 18 cm | cree que los lados no cambian |
+| C | 19 cm | cree que con un lado más se pierde 1 cm |
+| D | 20 cm | cree que los lados no cambian |
 
-**Resolución:** El alambre mide lo mismo que el perímetro del pentágono: 5 × 18 = 90 cm. Al repartir esos 90 cm en los 6 lados iguales del hexágono, cada lado mide 90 ÷ 6 = 15 cm.
+**Resolución:** El alambre mide lo mismo que el perímetro del triángulo: 3 × 20 = 60 cm. Al repartir esos 60 cm en los 4 lados iguales del cuadrado, cada lado mide 60 ÷ 4 = 15 cm.
 
 ### 29. mat-g07 · Geometría · intermedio
 
@@ -667,7 +667,7 @@ Un tanque de 1200 L se llena con una manguera que echa 15 L de agua por minuto. 
 | A | 10:38 a. m. | toma 80 minutos como 0,8 horas, o sea 48 minutos |
 | B | 10:58 a. m. | toma 80 minutos como 1 hora y 8 minutos |
 | C | 11:10 a. m. | **Correcta** |
-| D | 11:20 a. m. | suma 50 + 80 = 130 y lo lee como 1 hora y 30 minutos |
+| D | 11:20 a. m. | confunde 80 minutos con 1 hora y 30 minutos (9:50 + 1:30) |
 
 **Resolución:** El tanque tarda 1200 ÷ 15 = 80 minutos, que es 1 hora y 20 minutos. A las 9:50 a. m. se le suma 1 hora y llegamos a las 10:50; con 20 minutos más son las 11:10 a. m.
 
@@ -698,8 +698,8 @@ El piso de un aula mide 8 m de largo y 6 m de ancho. ¿Cuál es el área del pis
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | 4800 cm² | convierte m² multiplicando por 10 |
-| B | 48 000 cm² | convierte m² multiplicando por 100, como si fueran metros |
+| A | 4800 cm² | multiplica por 100, como si fueran metros de longitud (1 m = 100 cm) |
+| B | 48 000 cm² | multiplica por 1000: se le corre un cero |
 | C | 480 000 cm² | **Correcta** |
 | D | 4 800 000 cm² | se pasa de ceros |
 
@@ -735,7 +735,7 @@ En un viaje, Valeria vio en un termómetro que la temperatura era de 77 °F. Par
 | A | 25 °C | **Correcta** |
 | B | 45 °C | solo resta 32 y se olvida del resto de la regla |
 | C | 81 °C | multiplica por 9 y divide entre 5, al revés |
-| D | 109 °C | suma 32 en vez de restarlo |
+| D | 109 °C | suma 32 en vez de restarlo y no aplica el resto de la regla (77 + 32 = 109) |
 
 **Resolución:** Primero se resta: 77 − 32 = 45. Después se multiplica por 5 y se divide entre 9: 45 × 5 = 225 y 225 ÷ 9 = 25 °C.
 
@@ -796,7 +796,7 @@ La tabla muestra lo que cuestan las entradas al festival de la escuela. (tabla) 
 **Evidencia R2.3:** Reconoce relaciones entre dos cantidades, presentadas mediante tablas, que varían simultáneamente.  
 **Subtema:** Proporcionalidad directa
 
-En una tortillería, con 3 kg de masa se hacen 48 tortillas. Si la cantidad de tortillas es proporcional a la masa, ¿cuántas tortillas se hacen con 5 kg de masa?
+En una tortillería, la cantidad de tortillas es proporcional a la cantidad de masa que se usa. La tabla muestra algunos datos. (tabla) ¿Cuántas tortillas se hacen con 5 kg de masa?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -805,7 +805,7 @@ En una tortillería, con 3 kg de masa se hacen 48 tortillas. Si la cantidad de t
 | C | 80 | **Correcta** |
 | D | 240 | multiplica 48 por 5 |
 
-**Resolución:** Primero se averigua cuántas salen con 1 kg: 48 ÷ 3 = 16 tortillas. Con 5 kg salen 16 × 5 = 80 tortillas.
+**Resolución:** Según la tabla, con 3 kg salen 48 tortillas, así que con 1 kg salen 48 ÷ 3 = 16. Con 5 kg salen 16 × 5 = 80 tortillas.
 
 ### 44. mat-r02 · Relaciones y Álgebra · intermedio
 
@@ -813,7 +813,7 @@ En una tortillería, con 3 kg de masa se hacen 48 tortillas. Si la cantidad de t
 **Evidencia R3.2:** Determina el valor desconocido (letra) en una ecuación matemática dada.  
 **Subtema:** Valor desconocido
 
-Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. ¿Qué número pensó Daniela?
+Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. En la siguiente ecuación, «n» representa el número que pensó Daniela: 4 × n − 7 = 33. De acuerdo con la información anterior, ¿qué número pensó Daniela?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -881,16 +881,16 @@ En la sucesión 3, 8, 15, 24, 35, …, ¿cuál es el número que sigue?
 **Evidencia R2.1:** Reconoce cantidades variables o constantes.  
 **Subtema:** Cantidades variables y constantes
 
-En la soda de una escuela, el casado cuesta ₡2200 todos los días, la soda abre 5 días por semana y cada día se vende una cantidad distinta de casados. ¿Cuál de las siguientes cantidades es variable?
+En la soda de una escuela, el almuerzo cuesta ₡2200 todos los días, la soda abre 5 días por semana y cada día llega una cantidad distinta de clientes. ¿Cuál de las siguientes cantidades es constante?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | El precio de cada casado. | cree que el precio cambia porque las ventas cambian |
-| B | La cantidad de días que abre por semana. | confunde algo que se repite cada semana con algo que cambia |
-| C | El dinero que se recibe cada día. | **Correcta** |
-| D | La cantidad de días de una semana. | no distingue entre una cantidad fija del calendario y una que cambia |
+| A | El dinero que se recibe cada día. | no ve que el dinero cambia cuando cambian las ventas |
+| B | Los clientes que piden almuerzo cada día. | cree que los clientes son fijos porque la soda abre los mismos días |
+| C | El precio de cada almuerzo. | **Correcta** |
+| D | Las ventas totales de cada semana. | cree que las ventas se repiten igual todas las semanas |
 
-**Resolución:** Una cantidad es variable cuando puede cambiar. Como cada día se vende una cantidad distinta de casados, el dinero que entra también cambia de un día a otro. El precio del casado y los días que abre la soda se mantienen iguales: son constantes.
+**Resolución:** Una cantidad es constante cuando no cambia. El precio del almuerzo es el mismo todos los días, así que es constante. Los clientes, el dinero que entra y las ventas de cada semana cambian: son variables.
 
 ### 49. mat-r01 · Relaciones y Álgebra · alto
 
@@ -917,7 +917,9 @@ Figura `mat-r01-palillos.svg`. Texto alternativo: Tres figuras hechas con palill
 **Evidencia R2.4:** Determina relaciones entre dos cantidades, dadas en una escala en figuras gráficas.  
 **Subtema:** Escalas y proporcionalidad
 
-En un mapa, cada centímetro representa 5 km en la realidad. Dos pueblos están a 7,5 cm de distancia en el mapa. ¿Cuál es la distancia real entre los dos pueblos?
+El mapa muestra la ubicación de dos pueblos y la escala que se usó para dibujarlo. (figura) De acuerdo con la información anterior, ¿cuál es la distancia real entre los dos pueblos?
+
+Figura `mat-r10-mapa.svg`. Texto alternativo: Mapa con dos pueblos, A y B, unidos por una línea que mide 7,5 cm. Abajo, una barra de escala indica que 1 cm del mapa equivale a 5 km en la realidad.
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -960,7 +962,7 @@ Figura `mat-r06-balanza.svg`. Texto alternativo: Balanza de dos platillos, nivel
 | A | 4 kg | **Correcta** |
 | B | 6 kg | reparte los 12 kg entre los dos platillos |
 | C | 12 kg | da el peso de las tres cajas juntas |
-| D | 16 kg | suma la pesa de 2 kg en vez de quitarla |
+| D | 16 kg | suma la pesa de 2 kg en vez de quitarla y no reparte entre las 3 cajas: 14 + 2 = 16 |
 
 **Resolución:** Si se quitan 2 kg de cada lado, la balanza sigue en equilibrio: las 3 cajas pesan 14 − 2 = 12 kg. Entonces cada caja pesa 12 ÷ 3 = 4 kg.
 
@@ -1004,16 +1006,16 @@ Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, m
 **Evidencia E1.4:** Reconoce el concepto de población o muestra.  
 **Subtema:** Población y muestra
 
-Para saber cuál deporte prefieren los 600 estudiantes de una escuela, se escogió al azar a 3 estudiantes de cada uno de los 20 grupos, o sea, a 60 estudiantes, y se les hizo una encuesta. En ese estudio, ¿cuál es la población?
+Para conocer cuánta agua gastan por mes los 600 hogares de un distrito, la municipalidad escogió al azar 3 hogares de cada uno de sus 20 barrios, o sea, 60 hogares, y les aplicó una encuesta. En ese estudio, ¿cuál es la población?
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Todo el estudiantado del centro educativo. | **Correcta** |
-| B | Las 60 personas que fueron encuestadas. | confunde la población con la muestra |
-| C | Los 20 grupos que hay en total. | confunde los grupos de la escuela con las personas que se estudian |
-| D | Los deportes preferidos del grupo encuestado. | confunde la población con lo que se pregunta |
+| A | Todos los hogares del distrito. | **Correcta** |
+| B | Los 60 hogares que fueron encuestados. | confunde la población con la muestra |
+| C | Los 20 barrios del distrito. | confunde los barrios con los hogares que se estudian |
+| D | La cantidad de agua que gasta cada hogar encuestado. | confunde la población con el dato que se quiere medir |
 
-**Resolución:** La población es el grupo completo que se quiere estudiar: los 600 estudiantes de la escuela. Los 60 que respondieron la encuesta son solo una parte, que se llama muestra.
+**Resolución:** La población es el grupo completo que se quiere estudiar: los 600 hogares del distrito. Los 60 hogares que respondieron la encuesta son solo una parte, que se llama muestra.
 
 ### 56. mat-e06 · Estadística y Probabilidad · alto
 

@@ -376,7 +376,7 @@
       "clave": "D",
       "explicacion": "Para comparar decimales conviene igualar las cifras: 2,080; 2,800; 2,750 y 2,705. El mayor es 2,800, o sea, el salto de Brenda. Tener más cifras después de la coma no hace más grande al número.",
       "por_que": {
-        "A": "cree que 08 es más que 8",
+        "A": "cree que el 0 después de la coma no cambia nada y lee 2,08 como si fuera 2,8",
         "B": "cree que 75 es más que 8 porque tiene más cifras",
         "C": "escoge el número con más cifras decimales"
       },
@@ -614,18 +614,18 @@
         "codigo": "G3.7",
         "texto": "Reconoce cilindros o algunos de sus elementos (bases, superficie lateral, eje, altura, radio y diámetro de la base) o propiedades."
       },
-      "enunciado": "Una lata de leche en polvo tiene forma de cilindro. La distancia entre los centros de sus dos bases es 12 cm, y el diámetro de cada base mide 8 cm. ¿Cuáles son la altura y el radio de la base de esa lata?",
+      "enunciado": "Una lata de leche en polvo tiene forma de cilindro. La distancia entre los centros de sus dos bases es 12 cm, y el diámetro de cada base mide 8 cm. ¿Cuáles son el radio de la base y la altura de esa lata?",
       "opciones": {
-        "A": "Altura de 12 cm y radio de 4 cm",
-        "B": "Altura de 12 cm y radio de 8 cm",
-        "C": "Altura de 8 cm y radio de 6 cm",
-        "D": "Altura de 4 cm y radio de 12 cm"
+        "A": "Radio de 4 cm y altura de 12 cm",
+        "B": "Radio de 6 cm y altura de 8 cm",
+        "C": "Radio de 8 cm y altura de 12 cm",
+        "D": "Radio de 12 cm y altura de 4 cm"
       },
       "clave": "A",
-      "explicacion": "La altura del cilindro es la distancia entre sus dos bases, o sea 12 cm. El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm.",
+      "explicacion": "El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm. La altura del cilindro es la distancia entre sus dos bases, o sea 12 cm.",
       "por_que": {
-        "B": "confunde el radio con el diámetro",
-        "C": "toma el diámetro como altura y saca la mitad de 12",
+        "B": "toma el diámetro como altura y saca la mitad de 12",
+        "C": "confunde el radio con el diámetro",
         "D": "cambia de lugar los datos"
       },
       "imagen": null
@@ -648,16 +648,16 @@
       "enunciado": "En un plano de la comunidad, la escuela está en el punto (2, 3). Para ir a la biblioteca, Dayana camina 4 unidades hacia la derecha y 1 unidad hacia arriba. ¿En qué punto está la biblioteca?",
       "opciones": {
         "A": "(3, 7)",
-        "B": "(6, 2)",
-        "C": "(7, 3)",
+        "B": "(4, 6)",
+        "C": "(6, 2)",
         "D": "(6, 4)"
       },
       "clave": "D",
       "explicacion": "La primera coordenada dice cuánto se avanza hacia la derecha y la segunda cuánto hacia arriba. Al moverse 4 a la derecha queda 2 + 4 = 6, y al subir 1 queda 3 + 1 = 4: la biblioteca está en (6, 4).",
       "por_que": {
         "A": "suma el 4 a la segunda coordenada y el 1 a la primera",
-        "B": "resta al subir en vez de sumar",
-        "C": "suma los dos movimientos a la primera coordenada"
+        "B": "escribe el punto correcto con las coordenadas invertidas",
+        "C": "resta al subir en vez de sumar"
       },
       "imagen": null
     },
@@ -805,14 +805,14 @@
         "A": "Acutángulo",
         "B": "Rectángulo",
         "C": "Obtusángulo",
-        "D": "Equilátero"
+        "D": "No se puede clasificar"
       },
       "clave": "C",
       "explicacion": "Un triángulo con un ángulo mayor que 90° es obtusángulo. Aquí el ángulo de 105° es obtuso, así que el triángulo es obtusángulo, aunque los otros dos ángulos sean agudos.",
       "por_que": {
         "A": "se fija en que dos de los ángulos son agudos",
         "B": "cree que 105° está tan cerca de 90° que cuenta como recto",
-        "D": "mezcla la clasificación por lados con la de ángulos"
+        "D": "cree que si los tres ángulos son distintos el triángulo no se puede clasificar"
       },
       "imagen": null
     },
@@ -852,27 +852,27 @@
       "orden": 28,
       "materia": "matematicas",
       "tema": "Geometría",
-      "subtema": "Perímetro de polígonos regulares",
+      "subtema": "Perímetro de triángulos y cuadriláteros",
       "nivel": "intermedio",
       "afirmacion": {
-        "codigo": "G1",
-        "texto": "Reconoce figuras geométricas planas, sus elementos o propiedades."
+        "codigo": "G4",
+        "texto": "Resuelve problemas relacionados con el perímetro o área de triángulos, cuadriláteros o polígonos."
       },
       "evidencia": {
-        "codigo": "G1.4",
-        "texto": "Reconoce en dibujos u objetos del entorno polígonos regulares e irregulares."
+        "codigo": "G4.3",
+        "texto": "Resuelve problemas que involucren el cálculo de perímetros o áreas de triángulos o cuadriláteros."
       },
-      "enunciado": "Con un alambre, Allan formó un pentágono regular de 18 cm de lado. Después lo desarmó y, con todo el alambre, formó un hexágono regular. ¿Cuánto mide cada lado del hexágono?",
+      "enunciado": "Con un alambre, Allan formó un triángulo equilátero de 20 cm de lado. Después lo desarmó y, con todo el alambre, formó un cuadrado. ¿Cuánto mide cada lado del cuadrado?",
       "opciones": {
-        "A": "12 cm",
+        "A": "10 cm",
         "B": "15 cm",
-        "C": "17 cm",
-        "D": "18 cm"
+        "C": "19 cm",
+        "D": "20 cm"
       },
       "clave": "B",
-      "explicacion": "El alambre mide lo mismo que el perímetro del pentágono: 5 × 18 = 90 cm. Al repartir esos 90 cm en los 6 lados iguales del hexágono, cada lado mide 90 ÷ 6 = 15 cm.",
+      "explicacion": "El alambre mide lo mismo que el perímetro del triángulo: 3 × 20 = 60 cm. Al repartir esos 60 cm en los 4 lados iguales del cuadrado, cada lado mide 60 ÷ 4 = 15 cm.",
       "por_que": {
-        "A": "le quita un lado de 18 al alambre: 72 ÷ 6",
+        "A": "le quita un lado de 20 al alambre y reparte el resto: 40 ÷ 4",
         "C": "cree que con un lado más se pierde 1 cm",
         "D": "cree que los lados no cambian"
       },
@@ -1091,7 +1091,7 @@
       "por_que": {
         "A": "toma 80 minutos como 0,8 horas, o sea 48 minutos",
         "B": "toma 80 minutos como 1 hora y 8 minutos",
-        "D": "suma 50 + 80 = 130 y lo lee como 1 hora y 30 minutos"
+        "D": "confunde 80 minutos con 1 hora y 30 minutos (9:50 + 1:30)"
       },
       "imagen": null
     },
@@ -1151,8 +1151,8 @@
       "clave": "C",
       "explicacion": "El área es 8 × 6 = 48 m². Cada metro cuadrado es un cuadro de 100 cm por 100 cm, o sea 10 000 cm². Entonces el piso mide 48 × 10 000 = 480 000 cm².",
       "por_que": {
-        "A": "convierte m² multiplicando por 10",
-        "B": "convierte m² multiplicando por 100, como si fueran metros",
+        "A": "multiplica por 100, como si fueran metros de longitud (1 m = 100 cm)",
+        "B": "multiplica por 1000: se le corre un cero",
         "D": "se pasa de ceros"
       },
       "imagen": null
@@ -1215,7 +1215,7 @@
       "por_que": {
         "B": "solo resta 32 y se olvida del resto de la regla",
         "C": "multiplica por 9 y divide entre 5, al revés",
-        "D": "suma 32 en vez de restarlo"
+        "D": "suma 32 en vez de restarlo y no aplica el resto de la regla (77 + 32 = 109)"
       },
       "imagen": null
     },
@@ -1327,7 +1327,7 @@
         "codigo": "R2.3",
         "texto": "Reconoce relaciones entre dos cantidades, presentadas mediante tablas, que varían simultáneamente."
       },
-      "enunciado": "En una tortillería, con 3 kg de masa se hacen 48 tortillas. Si la cantidad de tortillas es proporcional a la masa, ¿cuántas tortillas se hacen con 5 kg de masa?",
+      "enunciado": "En una tortillería, la cantidad de tortillas es proporcional a la cantidad de masa que se usa. La tabla muestra algunos datos.\n\n| Masa (en kg) | Cantidad de tortillas |\n| --- | --- |\n| 3 | 48 |\n| 6 | 96 |\n| 5 | ? |\n\n¿Cuántas tortillas se hacen con 5 kg de masa?",
       "opciones": {
         "A": "50",
         "B": "64",
@@ -1335,7 +1335,7 @@
         "D": "240"
       },
       "clave": "C",
-      "explicacion": "Primero se averigua cuántas salen con 1 kg: 48 ÷ 3 = 16 tortillas. Con 5 kg salen 16 × 5 = 80 tortillas.",
+      "explicacion": "Según la tabla, con 3 kg salen 48 tortillas, así que con 1 kg salen 48 ÷ 3 = 16. Con 5 kg salen 16 × 5 = 80 tortillas.",
       "por_que": {
         "A": "suma la diferencia de kilos a las tortillas",
         "B": "suma solo un kilo más de tortillas",
@@ -1358,7 +1358,7 @@
         "codigo": "R3.2",
         "texto": "Determina el valor desconocido (letra) en una ecuación matemática dada."
       },
-      "enunciado": "Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. ¿Qué número pensó Daniela?",
+      "enunciado": "Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. En la siguiente ecuación, «n» representa el número que pensó Daniela: 4 × n − 7 = 33. De acuerdo con la información anterior, ¿qué número pensó Daniela?",
       "opciones": {
         "A": "6,5",
         "B": "10",
@@ -1482,19 +1482,19 @@
         "codigo": "R2.1",
         "texto": "Reconoce cantidades variables o constantes."
       },
-      "enunciado": "En la soda de una escuela, el casado cuesta ₡2200 todos los días, la soda abre 5 días por semana y cada día se vende una cantidad distinta de casados. ¿Cuál de las siguientes cantidades es variable?",
+      "enunciado": "En la soda de una escuela, el almuerzo cuesta ₡2200 todos los días, la soda abre 5 días por semana y cada día llega una cantidad distinta de clientes. ¿Cuál de las siguientes cantidades es constante?",
       "opciones": {
-        "A": "El precio de cada casado.",
-        "B": "La cantidad de días que abre por semana.",
-        "C": "El dinero que se recibe cada día.",
-        "D": "La cantidad de días de una semana."
+        "A": "El dinero que se recibe cada día.",
+        "B": "Los clientes que piden almuerzo cada día.",
+        "C": "El precio de cada almuerzo.",
+        "D": "Las ventas totales de cada semana."
       },
       "clave": "C",
-      "explicacion": "Una cantidad es variable cuando puede cambiar. Como cada día se vende una cantidad distinta de casados, el dinero que entra también cambia de un día a otro. El precio del casado y los días que abre la soda se mantienen iguales: son constantes.",
+      "explicacion": "Una cantidad es constante cuando no cambia. El precio del almuerzo es el mismo todos los días, así que es constante. Los clientes, el dinero que entra y las ventas de cada semana cambian: son variables.",
       "por_que": {
-        "A": "cree que el precio cambia porque las ventas cambian",
-        "B": "confunde algo que se repite cada semana con algo que cambia",
-        "D": "no distingue entre una cantidad fija del calendario y una que cambia"
+        "A": "no ve que el dinero cambia cuando cambian las ventas",
+        "B": "cree que los clientes son fijos porque la soda abre los mismos días",
+        "D": "cree que las ventas se repiten igual todas las semanas"
       },
       "imagen": null
     },
@@ -1547,7 +1547,7 @@
         "codigo": "R2.4",
         "texto": "Determina relaciones entre dos cantidades, dadas en una escala en figuras gráficas."
       },
-      "enunciado": "En un mapa, cada centímetro representa 5 km en la realidad. Dos pueblos están a 7,5 cm de distancia en el mapa. ¿Cuál es la distancia real entre los dos pueblos?",
+      "enunciado": "El mapa muestra la ubicación de dos pueblos y la escala que se usó para dibujarlo.\n\n[[figura]]\n\nDe acuerdo con la información anterior, ¿cuál es la distancia real entre los dos pueblos?",
       "opciones": {
         "A": "1,5 km",
         "B": "12,5 km",
@@ -1561,7 +1561,10 @@
         "B": "suma 7,5 + 5",
         "D": "multiplica bien pero corre mal la coma"
       },
-      "imagen": null
+      "imagen": {
+        "archivo": "mat-r10-mapa.svg",
+        "alt": "Mapa con dos pueblos, A y B, unidos por una línea que mide 7,5 cm. Abajo, una barra de escala indica que 1 cm del mapa equivale a 5 km en la realidad."
+      }
     },
     {
       "id": "mat-r09",
@@ -1621,7 +1624,7 @@
       "por_que": {
         "B": "reparte los 12 kg entre los dos platillos",
         "C": "da el peso de las tres cajas juntas",
-        "D": "suma la pesa de 2 kg en vez de quitarla"
+        "D": "suma la pesa de 2 kg en vez de quitarla y no reparte entre las 3 cajas: 14 + 2 = 16"
       },
       "imagen": {
         "archivo": "mat-r06-balanza.svg",
@@ -1705,19 +1708,19 @@
         "codigo": "E1.4",
         "texto": "Reconoce el concepto de población o muestra."
       },
-      "enunciado": "Para saber cuál deporte prefieren los 600 estudiantes de una escuela, se escogió al azar a 3 estudiantes de cada uno de los 20 grupos, o sea, a 60 estudiantes, y se les hizo una encuesta. En ese estudio, ¿cuál es la población?",
+      "enunciado": "Para conocer cuánta agua gastan por mes los 600 hogares de un distrito, la municipalidad escogió al azar 3 hogares de cada uno de sus 20 barrios, o sea, 60 hogares, y les aplicó una encuesta. En ese estudio, ¿cuál es la población?",
       "opciones": {
-        "A": "Todo el estudiantado del centro educativo.",
-        "B": "Las 60 personas que fueron encuestadas.",
-        "C": "Los 20 grupos que hay en total.",
-        "D": "Los deportes preferidos del grupo encuestado."
+        "A": "Todos los hogares del distrito.",
+        "B": "Los 60 hogares que fueron encuestados.",
+        "C": "Los 20 barrios del distrito.",
+        "D": "La cantidad de agua que gasta cada hogar encuestado."
       },
       "clave": "A",
-      "explicacion": "La población es el grupo completo que se quiere estudiar: los 600 estudiantes de la escuela. Los 60 que respondieron la encuesta son solo una parte, que se llama muestra.",
+      "explicacion": "La población es el grupo completo que se quiere estudiar: los 600 hogares del distrito. Los 60 hogares que respondieron la encuesta son solo una parte, que se llama muestra.",
       "por_que": {
         "B": "confunde la población con la muestra",
-        "C": "confunde los grupos de la escuela con las personas que se estudian",
-        "D": "confunde la población con lo que se pregunta"
+        "C": "confunde los barrios con los hogares que se estudian",
+        "D": "confunde la población con el dato que se quiere medir"
       },
       "imagen": null
     },
