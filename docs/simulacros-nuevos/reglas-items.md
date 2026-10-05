@@ -102,6 +102,44 @@ y Estudios Sociales. Las reglas son las mismas del piloto de Matemáticas
 }
 ```
 
+### Materias con contexto (Estudios Sociales, Ciencias)
+
+Siguen el marco 2026 al pie de la letra: cada ítem trae un contexto aparte y
+el enunciado es solo la pregunta. En la base van juntos, el contexto primero.
+Además de los campos de arriba, cada ítem lleva:
+
+```json
+{
+  "bloque": "Costa Rica: su construcción histórica, geográfica y ciudadana",
+  "afirmacion": { "codigo": "2.15", "texto": "…" },   // bloque 2, afirmación 15
+  "evidencia":  { "codigo": "2.15.2", "texto": "…" },
+  "verbo": "relacionar",                 // los verbos de la Tabla 1 del marco
+  "tipo_contexto": "espacial",           // los tipos de contexto del marco
+  "contexto": "Lea el siguiente texto:\n\nTexto original de 40 a 90 palabras…",
+  "enunciado": "Según el texto anterior, ¿…?"
+}
+```
+
+- La primera línea del contexto es la apertura del MEP ("Lea el siguiente
+  texto:", "Analice la siguiente tabla:", "Observe el siguiente esquema:").
+- Los contextos son originales: nada de "Adaptado de" ni "Tomado de". El
+  verificador lo revisa.
+- La clave no repite palabras del contexto (el verificador mira contexto y
+  enunciado juntos).
+- Cada materia define en `scripts/simulacros-nuevos/verificar.mjs` sus verbos,
+  sus tipos de contexto y el largo del contexto.
+
+La carga de estas materias se genera como migración propia, dentro de una
+transacción y con una copia para pegar en el editor SQL de Supabase:
+
+```bash
+pnpm generar:simulacros-nuevos estudios-sociales --nombre simulacro_estudios_sociales \
+  --copia docs/simulacros-nuevos/cargar-estudios-sociales.sql --banco-archivo <respaldo>.json
+```
+
+`--banco-archivo` compara contra un respaldo del banco cuando no hay acceso a
+Supabase; si se vuelve a generar, se reescribe la misma migración.
+
 El bloque `simulacro` del archivo trae `slug`, `materia`, `numero`, `titulo`,
 `preguntas`, `segundos_por_item`, `barajar_opciones` (false: las opciones salen en el orden
 A-D con que se balancearon las claves) y `version`.

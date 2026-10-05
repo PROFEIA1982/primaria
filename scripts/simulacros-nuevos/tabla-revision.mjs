@@ -44,14 +44,37 @@ L.push(`Generada desde \`${materia}.json\`, que es la fuente. No se edita a mano
 L.push(`- **${items.length} ítems**, ${Math.round(s.segundos_por_item / 60)} minutos por ítem.`);
 L.push(`- **Claves:** ${items.map((i) => i.clave).join('')} (${LETRAS.map((l) => `${l} ${items.filter((i) => i.clave === l).length}`).join(', ')}).`);
 L.push(`- **Bloques:** ${cuenta((i) => i.tema).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
-L.push(`- **Niveles:** ${cuenta((i) => i.nivel).map(([t, n]) => `${t} ${n}`).join(' · ')}.\n`);
+L.push(`- **Niveles:** ${cuenta((i) => i.nivel).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
+if (items.some((i) => i.verbo)) {
+  L.push(`- **Verbos:** ${cuenta((i) => i.verbo).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
+  L.push(`- **Tipos de contexto:** ${cuenta((i) => i.tipo_contexto).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
+}
+L.push('');
+if (items.some((i) => i.contexto)) {
+  L.push('## Conteo por afirmación\n');
+  L.push('| Afirmación | Ítems | Texto |');
+  L.push('| --- | ---: | --- |');
+  for (const [cod, n] of cuenta((i) => i.afirmacion?.codigo)) {
+    const af = items.find((i) => i.afirmacion?.codigo === cod).afirmacion;
+    L.push(`| ${cod} | ${n} | ${celda(af.texto)} |`);
+  }
+  L.push('');
+}
 L.push('Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa que recalcula el resultado y comprueba que coincide con una sola opción.\n');
 
 L.push('## Resumen\n');
-L.push('| # | Id | Bloque | Evidencia | Subtema | Nivel | Clave |');
-L.push('| ---: | --- | --- | --- | --- | --- | :---: |');
-for (const it of items) {
-  L.push(`| ${it.orden} | ${it.id} | ${it.tema} | ${it.evidencia?.codigo ?? '—'} | ${celda(it.subtema)} | ${it.nivel} | ${it.clave} |`);
+if (items.some((i) => i.contexto)) {
+  L.push('| # | Id | Tema | Evidencia | Verbo | Contexto | Nivel | Clave |');
+  L.push('| ---: | --- | --- | --- | --- | --- | --- | :---: |');
+  for (const it of items) {
+    L.push(`| ${it.orden} | ${it.id} | ${it.tema} | ${it.evidencia?.codigo ?? '—'} | ${it.verbo} | ${it.tipo_contexto} | ${it.nivel} | ${it.clave} |`);
+  }
+} else {
+  L.push('| # | Id | Bloque | Evidencia | Subtema | Nivel | Clave |');
+  L.push('| ---: | --- | --- | --- | --- | --- | :---: |');
+  for (const it of items) {
+    L.push(`| ${it.orden} | ${it.id} | ${it.tema} | ${it.evidencia?.codigo ?? '—'} | ${celda(it.subtema)} | ${it.nivel} | ${it.clave} |`);
+  }
 }
 
 L.push('\n## Ítem por ítem\n');
@@ -59,8 +82,17 @@ for (const it of items) {
   L.push(`### ${it.orden}. ${it.id} · ${it.tema} · ${it.nivel}\n`);
   if (it.afirmacion) L.push(`**Afirmación ${it.afirmacion.codigo}:** ${it.afirmacion.texto}  `);
   if (it.evidencia) L.push(`**Evidencia ${it.evidencia.codigo}:** ${it.evidencia.texto}  `);
-  L.push(`**Subtema:** ${it.subtema}\n`);
-  L.push(`${corto(it.enunciado)}\n`);
+  if (it.bloque) L.push(`**Bloque:** ${it.bloque}  `);
+  if (it.verbo) L.push(`**Verbo:** ${it.verbo} · **Tipo de contexto:** ${it.tipo_contexto}  `);
+  L.push(it.contexto ? `**Tema:** ${it.tema} · **Subtema:** ${it.subtema}\n` : `**Subtema:** ${it.subtema}\n`);
+  if (it.contexto) {
+    // El contexto va completo y tal cual, fuera de cualquier tabla: puede
+    // traer su propia tabla en Markdown.
+    L.push(`${it.contexto.replace(MARCA_FIGURA, it.imagen ? `(figura: ${it.imagen.archivo})` : '(figura)')}\n`);
+    L.push(`**${celda(it.enunciado)}**\n`);
+  } else {
+    L.push(`${corto(it.enunciado)}\n`);
+  }
   if (it.imagen) L.push(`Figura \`${it.imagen.archivo}\`. Texto alternativo: ${it.imagen.alt}\n`);
   L.push('| Opción | Texto | Qué revela |');
   L.push('| :---: | --- | --- |');

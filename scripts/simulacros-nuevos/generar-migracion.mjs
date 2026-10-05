@@ -8,6 +8,13 @@
  *         una migracion nueva SOLO con datos. Es lo normal para cada
  *         materia que se agregue: el esquema ya existe.
  *
+ *     pnpm generar:simulacros-nuevos ciencias --nombre simulacro_ciencias \
+ *       --copia docs/simulacros-nuevos/cargar-ciencias.sql --banco-archivo respaldo/items.json
+ *         Lo mismo, con el nombre de archivo que se escoja, una copia para
+ *         pegar a mano en el editor SQL de Supabase (con su explicacion al
+ *         inicio y consultas de verificacion al final) y la comparacion
+ *         contra el banco hecha con un respaldo en vez de Supabase.
+ *
  *     pnpm generar:simulacros-nuevos matematicas --en supabase/migrations/20261005210000_simulacros_nuevos.sql
  *         Reescribe el bloque de datos de una migracion que ya existe,
  *         entre las marcas ">>> datos generados" y "<<< datos generados".
@@ -36,10 +43,19 @@ import { fileURLToPath } from 'node:url';
 import { LETRAS, RAIZ, enunciadoFinal, leerExamen, tieneLatex } from './comun.mjs';
 
 const args = process.argv.slice(2);
-const materia = args.find((a) => !a.startsWith('--'));
+const conValor = new Set(['--en', '--nombre', '--copia', '--banco-archivo'].map((b) => args.indexOf(b) + 1).filter((i) => i > 0));
+const materia = args.find((a, i) => !a.startsWith('--') && !conValor.has(i));
 const iEn = args.indexOf('--en');
 const destinoExistente = iEn >= 0 ? args[iEn + 1] : null;
 const sinBanco = args.includes('--sin-banco');
+const valor = (bandera) => { const i = args.indexOf(bandera); return i >= 0 ? args[i + 1] : null; };
+const nombre = valor('--nombre');
+const copia = valor('--copia');
+const bancoArchivo = valor('--banco-archivo');
+if (nombre && !/^[a-z0-9_]+$/.test(nombre)) {
+  console.error('--nombre solo puede llevar minusculas, numeros y guion bajo.');
+  process.exit(2);
+}
 
 if (!materia) {
   console.error('Falta la materia. Ejemplo: pnpm generar:simulacros-nuevos espanol');
@@ -50,7 +66,7 @@ if (!materia) {
 const verificador = path.join(path.dirname(fileURLToPath(import.meta.url)), 'verificar.mjs');
 const v = spawnSync(
   process.execPath,
-  [verificador, materia, ...(sinBanco ? [] : ['--exigir-banco'])],
+  [verificador, materia, ...(sinBanco ? [] : ['--exigir-banco']), ...(bancoArchivo ? ['--banco-archivo', bancoArchivo] : [])],
   { stdio: 'inherit' },
 );
 if (v.status !== 0) {
@@ -84,7 +100,7 @@ const codigos = examen.items.map((it) => q(it.id)).join(', ');
 
 const sql = `-- ${comentario(s.titulo)} de ${materia}: ${examen.items.length} items.
 -- Generado desde docs/simulacros-nuevos/${materia}.json (version ${comentario(s.version ?? 'sin fecha')}).
-${sinBanco ? '-- OJO: generado con --sin-banco. NO se comparo contra el banco publicado:\n-- antes de aplicar, corra pnpm verificar:simulacros-nuevos con la llave de Supabase.\n' : ''}
+${sinBanco ? '-- OJO: generado con --sin-banco. NO se comparo contra el banco publicado:\n-- antes de aplicar, corra pnpm verificar:simulacros-nuevos con la llave de Supabase.\n' : ''}${bancoArchivo ? `-- Comparado contra el banco de ${comentario(path.basename(bancoArchivo))} antes de generar.\n` : ''}
 -- Entra como borrador. Lo publica la revision del final, solo si todo calza.
 insert into public.simulacros_nuevos
   (slug, materia_slug, numero, titulo, segundos_por_item, barajar_opciones, estado)
@@ -201,11 +217,93 @@ if (destinoExistente) {
     `${dos(f.getUTCHours())}${dos(f.getUTCMinutes())}${dos(f.getUTCSeconds())}`;
   const deMarca = (m) => new Date(Date.UTC(+m.slice(0, 4), +m.slice(4, 6) - 1, +m.slice(6, 8), +m.slice(8, 10), +m.slice(10, 12), +m.slice(12, 14)));
   const dirMig = path.join(RAIZ, 'supabase', 'migrations');
-  const ultima = fs.readdirSync(dirMig).map((f) => f.slice(0, 14)).filter((m) => /^\d{14}$/.test(m)).sort().pop();
-  let fecha = new Date();
-  if (ultima && deMarca(ultima) >= fecha) fecha = new Date(deMarca(ultima).getTime() + 1000);
-  const marca = aMarca(fecha);
-  const ruta = path.join(RAIZ, 'supabase', 'migrations', `${marca}_simulacros_nuevos_${materia.replace(/-/g, '_')}.sql`);
-  fs.writeFileSync(ruta, sql);
-  console.log(`\nMigracion creada: ${path.relative(RAIZ, ruta)}. Revisela y apliquela en Supabase.`);
+  const sufijo = nombre ?? `simulacros_nuevos_${materia.replace(/-/g, '_')}`;
+  // Si ya existe una migracion con este nombre, se reescribe ESA y conserva
+  // su fecha: volver a generar no tiene que dejar dos cargas del mismo examen.
+  const previa = fs.readdirSync(dirMig).find((f) => f.endsWith(`_${sufijo}.sql`) && /^\d{14}_/.test(f));
+  let marca;
+  if (previa) {
+    marca = previa.slice(0, 14);
+  } else {
+    const ultima = fs.readdirSync(dirMig).map((f) => f.slice(0, 14)).filter((m) => /^\d{14}$/.test(m)).sort().pop();
+    let fecha = new Date();
+    if (ultima && deMarca(ultima) >= fecha) fecha = new Date(deMarca(ultima).getTime() + 1000);
+    marca = aMarca(fecha);
+  }
+  const ruta = path.join(dirMig, `${marca}_${sufijo}.sql`);
+
+  // Todo o nada: la carga va en una transaccion, y antes de tocar nada se
+  // revisa que el esquema de los simulacros nuevos ya este en la base.
+  const cuerpo = `begin;
+
+-- El esquema lo crea la migracion del piloto (20261005210000_simulacros_nuevos.sql).
+-- Sin esas tablas no hay donde cargar: mejor un mensaje claro que un error raro.
+do $esquema$
+begin
+  if to_regclass('public.simulacros_nuevos') is null
+     or to_regclass('public.simulacro_nuevo_items') is null
+     or to_regclass('public.simulacro_nuevo_opciones') is null then
+    raise exception 'Falta el esquema de los simulacros nuevos: aplique primero la migracion 20261005210000_simulacros_nuevos.sql';
+  end if;
+end
+$esquema$;
+
+${sql}
+commit;
+`;
+  fs.writeFileSync(ruta, cuerpo);
+  console.log(`\nMigracion ${previa ? 'reescrita' : 'creada'}: ${path.relative(RAIZ, ruta)}. Revisela y apliquela en Supabase.`);
+
+  if (copia) {
+    const nombreMateria = s.titulo ? `${s.titulo} de ${materia}` : materia;
+    const encabezado = `-- ============================================================
+-- Carga del ${nombreMateria} (${examen.items.length} items) para /simulacros-nuevos.
+--
+-- QUE HACE
+--   Crea o actualiza el examen "${comentario(s.slug)}" con sus ${examen.items.length} preguntas y
+--   sus cuatro opciones cada una. Es idempotente: si se corre dos veces, no
+--   duplica nada; actualiza por el slug del examen y por el codigo de cada
+--   item, y borra los items que ya no esten en el archivo.
+--   Todo va dentro de una transaccion: si algo falla, no queda nada a medias.
+--   El examen entra como borrador y solo se publica al final, si cada item
+--   tiene cuatro opciones y exactamente una correcta.
+--
+-- ANTES DE CORRERLO
+--   Tiene que estar aplicado el esquema de los simulacros nuevos
+--   (supabase/migrations/20261005210000_simulacros_nuevos.sql). Si falta,
+--   este archivo se detiene con un mensaje y no cambia nada.
+--
+-- COMO SE USA
+--   Se pega completo en el editor SQL de Supabase y se ejecuta. Las dos
+--   consultas del final muestran cuantos items quedaron y cuantas veces es
+--   clave cada letra.
+--
+-- Es una copia de supabase/migrations/${path.basename(ruta)}.
+-- Se genera con: pnpm generar:simulacros-nuevos ${materia} --copia ...
+-- No se edita a mano: se corrige el JSON y se vuelve a generar.
+-- ============================================================
+
+`;
+    const verificacion = `
+-- ------------------------------------------------------------
+-- Verificacion: cuantos items quedaron y si el examen se publico.
+select s.slug, s.estado, count(i.id) as items
+from public.simulacros_nuevos s
+left join public.simulacro_nuevo_items i on i.simulacro_id = s.id
+where s.slug = ${slug}
+group by s.slug, s.estado;
+
+-- Verificacion: cuantas veces es clave cada letra (deben salir ${examen.items.length / 4} de cada una).
+select o.letra, count(*) as veces_clave
+from public.simulacro_nuevo_opciones o
+join public.simulacro_nuevo_items i on i.id = o.item_id
+join public.simulacros_nuevos s on s.id = i.simulacro_id
+where s.slug = ${slug} and o.es_correcta
+group by o.letra
+order by o.letra;
+`;
+    const rutaCopia = path.resolve(RAIZ, copia);
+    fs.writeFileSync(rutaCopia, encabezado + cuerpo + verificacion);
+    console.log(`Copia para el editor SQL: ${path.relative(RAIZ, rutaCopia)}.`);
+  }
 }
