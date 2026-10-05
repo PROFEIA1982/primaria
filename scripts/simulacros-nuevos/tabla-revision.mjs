@@ -47,7 +47,8 @@ L.push(`- **Bloques:** ${cuenta((i) => i.tema).map(([t, n]) => `${t} ${n}`).join
 L.push(`- **Niveles:** ${cuenta((i) => i.nivel).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
 if (items.some((i) => i.verbo)) {
   L.push(`- **Verbos:** ${cuenta((i) => i.verbo).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
-  L.push(`- **Tipos de contexto:** ${cuenta((i) => i.tipo_contexto).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
+  if (items.some((i) => i.tipo_contexto)) L.push(`- **Tipos de contexto:** ${cuenta((i) => i.tipo_contexto).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
+  if (items.some((i) => i.genero)) L.push(`- **Géneros:** ${cuenta((i) => i.genero).map(([t, n]) => `${t} ${n}`).join(' · ')}.`);
 }
 L.push('');
 if (items.some((i) => i.contexto)) {
@@ -69,7 +70,7 @@ if (items.some((i) => i.contexto)) {
   L.push('| # | Id | Tema | Evidencia | Verbo | Contexto | Nivel | Clave |');
   L.push('| ---: | --- | --- | --- | --- | --- | --- | :---: |');
   for (const it of items) {
-    L.push(`| ${it.orden} | ${it.id} | ${it.tema} | ${it.evidencia?.codigo ?? '—'} | ${it.verbo} | ${it.tipo_contexto} | ${it.nivel} | ${it.clave} |`);
+    L.push(`| ${it.orden} | ${it.id} | ${it.tema} | ${it.evidencia?.codigo ?? '—'} | ${it.verbo} | ${it.tipo_contexto ?? it.genero} | ${it.nivel} | ${it.clave} |`);
   }
 } else {
   L.push('| # | Id | Bloque | Evidencia | Subtema | Nivel | Clave |');
@@ -85,7 +86,8 @@ for (const it of items) {
   if (it.afirmacion) L.push(`**Afirmación ${it.afirmacion.codigo}:** ${it.afirmacion.texto}  `);
   if (it.evidencia) L.push(`**Evidencia ${it.evidencia.codigo}:** ${it.evidencia.texto}  `);
   if (it.bloque) L.push(`**Bloque:** ${it.bloque}  `);
-  if (it.verbo) L.push(`**Verbo:** ${it.verbo} · **Tipo de contexto:** ${it.tipo_contexto}  `);
+  if (it.verbo && it.tipo_contexto) L.push(`**Verbo:** ${it.verbo} · **Tipo de contexto:** ${it.tipo_contexto}  `);
+  if (it.genero) L.push(`**Verbo:** ${it.verbo} · **Texto:** ${it.tipo_texto}, ${it.genero}${it.titulo ? ` («${it.titulo}»)` : ''} · **Palabras:** ${it.palabras_texto}  `);
   L.push(it.contexto ? `**Tema:** ${it.tema} · **Subtema:** ${it.subtema}\n` : `**Subtema:** ${it.subtema}\n`);
   if (it.contexto) {
     // El contexto va completo y tal cual, fuera de cualquier tabla: puede
@@ -102,6 +104,7 @@ for (const it of items) {
     const revela = l === it.clave ? '**Correcta**' : celda(it.por_que?.[l] ?? '—');
     L.push(`| ${l} | ${celda(it.opciones[l])} | ${revela} |`);
   }
+  if (it.evidencia_textual) L.push(`\n**Evidencia textual:** «${celda(it.evidencia_textual)}»`);
   L.push(`\n**Resolución:** ${celda(it.explicacion)}\n`);
 }
 

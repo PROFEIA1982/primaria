@@ -129,6 +129,27 @@ Además de los campos de arriba, cada ítem lleva:
 - Cada materia define en `scripts/simulacros-nuevos/verificar.mjs` sus verbos,
   sus tipos de contexto y el largo del contexto.
 
+### Español (comprensión lectora)
+
+Sigue el cuadernillo del MEP, que manda sobre algunas reglas de arriba:
+
+- **Un texto original por ítem** (`texto`), de 50 a 150 palabras, con su
+  `genero`, `tipo_texto` (literario o no literario) y `palabras_texto`. El
+  contexto es «Lea el siguiente texto:» y el texto entre comillas angulares.
+- **Opciones de la más corta a la más larga.** La clave puede quedar en
+  cualquier posición, también la última; las claves se balancean diseñando
+  el largo de cada opción. La más larga no supera en más de un tercio a la
+  más corta. Por eso aquí no aplica «la correcta no puede ser la más larga».
+- **Ninguna opción copia una frase del texto** (seis palabras seguidas iguales
+  ya es copia); se parafrasea. No se mide el eco de palabras, porque la
+  respuesta sale del texto.
+- **Orden en ciclos** por las ocho afirmaciones (1 a 8, 1 a 8…), y el examen
+  no empieza ni termina con ítems de nivel alto.
+- `evidencia_textual` (la parte del texto que sostiene la clave) queda solo
+  en los archivos de revisión; no se carga a la base.
+- `node scripts/revisar-espanol.mjs` revisa todo lo anterior e imprime un
+  informe.
+
 La carga de estas materias se genera como migración propia, dentro de una
 transacción y con una copia para pegar en el editor SQL de Supabase:
 
