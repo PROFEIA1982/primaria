@@ -1,43 +1,38 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 335' width='800' height='335' role='img' font-family='Arial, Helvetica, sans-serif'>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 620' width='480' height='620' role='img' font-family='Arial, Helvetica, sans-serif'>
 <title>Dos circuitos con una batería y tres bombillos: en el circuito 1 los bombillos están en un solo camino; en el circuito 2 cada bombillo tiene su propio camino. En ambos, el bombillo del centro está marcado con X</title>
-<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#1f2937'/></marker></defs>
-<rect x='0' y='0' width='800' height='335' fill='#ffffff'/>
-<text x='190' y='32' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Circuito 1</text>
-<path d='M60,140 L60,70 L320,70 L320,240 L60,240 L60,220' stroke='#1f2937' stroke-width='3' fill='none'/>
-<rect x='40' y='140' width='40' height='80' fill='#e5e7eb' stroke='#1f2937' stroke-width='2.5'/>
-<rect x='52' y='132' width='16' height='8' fill='#1f2937'/>
-<text x='60' y='168' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>+</text>
-<text x='60' y='206' font-size='22' text-anchor='middle' font-weight='bold' fill='#1f2937'>−</text>
-<rect x='98' y='60' width='44' height='20' fill='#ffffff'/>
-<circle cx='120' cy='70' r='20' fill='#fef9c3' stroke='#1f2937' stroke-width='2.5'/>
-<path d='M111,76 q4,-16 9,0 q5,-16 9,0' fill='none' stroke='#1f2937' stroke-width='2'/>
-<rect x='168' y='60' width='44' height='20' fill='#ffffff'/>
-<circle cx='190' cy='70' r='20' fill='#fef9c3' stroke='#1f2937' stroke-width='2.5'/>
-<path d='M181,76 q4,-16 9,0 q5,-16 9,0' fill='none' stroke='#1f2937' stroke-width='2'/>
-<line x1='164' y1='44' x2='216' y2='96' stroke='#1f2937' stroke-width='4'/>
-<line x1='216' y1='44' x2='164' y2='96' stroke='#1f2937' stroke-width='4'/>
-<rect x='238' y='60' width='44' height='20' fill='#ffffff'/>
-<circle cx='260' cy='70' r='20' fill='#fef9c3' stroke='#1f2937' stroke-width='2.5'/>
-<path d='M251,76 q4,-16 9,0 q5,-16 9,0' fill='none' stroke='#1f2937' stroke-width='2'/>
-<text x='590' y='32' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>Circuito 2</text>
-<path d='M460,140 L460,70 L740,70 M460,220 L460,270 L740,270' stroke='#1f2937' stroke-width='3' fill='none'/>
-<rect x='440' y='140' width='40' height='80' fill='#e5e7eb' stroke='#1f2937' stroke-width='2.5'/>
-<rect x='452' y='132' width='16' height='8' fill='#1f2937'/>
-<text x='460' y='168' font-size='20' text-anchor='middle' font-weight='bold' fill='#1f2937'>+</text>
-<text x='460' y='206' font-size='22' text-anchor='middle' font-weight='bold' fill='#1f2937'>−</text>
-<line x1='560' y1='70' x2='560' y2='270' stroke='#1f2937' stroke-width='3'/>
-<rect x='538' y='150' width='44' height='40' fill='#ffffff'/>
-<circle cx='560' cy='170' r='20' fill='#fef9c3' stroke='#1f2937' stroke-width='2.5'/>
-<path d='M551,176 q4,-16 9,0 q5,-16 9,0' fill='none' stroke='#1f2937' stroke-width='2'/>
-<line x1='650' y1='70' x2='650' y2='270' stroke='#1f2937' stroke-width='3'/>
-<rect x='628' y='150' width='44' height='40' fill='#ffffff'/>
-<circle cx='650' cy='170' r='20' fill='#fef9c3' stroke='#1f2937' stroke-width='2.5'/>
-<path d='M641,176 q4,-16 9,0 q5,-16 9,0' fill='none' stroke='#1f2937' stroke-width='2'/>
-<line x1='624' y1='144' x2='676' y2='196' stroke='#1f2937' stroke-width='4'/>
-<line x1='676' y1='144' x2='624' y2='196' stroke='#1f2937' stroke-width='4'/>
-<line x1='740' y1='70' x2='740' y2='270' stroke='#1f2937' stroke-width='3'/>
-<rect x='718' y='150' width='44' height='40' fill='#ffffff'/>
-<circle cx='740' cy='170' r='20' fill='#fef9c3' stroke='#1f2937' stroke-width='2.5'/>
-<path d='M731,176 q4,-16 9,0 q5,-16 9,0' fill='none' stroke='#1f2937' stroke-width='2'/>
-<text x='400' y='315' font-size='16' text-anchor='middle' font-weight='normal' fill='#1f2937'>El bombillo con X está fundido.</text>
+<defs><marker id='fl' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#111827'/></marker></defs>
+<rect x='0' y='0' width='480' height='620' fill='#ffffff'/>
+<text x='240' y='34' font-size='22' text-anchor='middle' font-weight='bold' fill='#111827'>Circuito 1</text>
+<path d='M60,140 L60,84 L420,84 L420,262 L60,262 L60,224' stroke='#111827' stroke-width='3' fill='none'/>
+<rect x='38' y='140' width='44' height='84' fill='#e5e7eb' stroke='#111827' stroke-width='2.5'/>
+<rect x='51' y='131' width='18' height='9' fill='#111827'/>
+<text x='60' y='170' font-size='24' text-anchor='middle' font-weight='bold' fill='#111827'>+</text>
+<text x='60' y='212' font-size='26' text-anchor='middle' font-weight='bold' fill='#111827'>−</text>
+<circle cx='160' cy='84' r='23' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<path d='M149,91 q5,-19 11,0 q6,-19 11,0' fill='none' stroke='#111827' stroke-width='2.2'/>
+<circle cx='260' cy='84' r='23' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<path d='M249,91 q5,-19 11,0 q6,-19 11,0' fill='none' stroke='#111827' stroke-width='2.2'/>
+<line x1='230' y1='54' x2='290' y2='114' stroke='#111827' stroke-width='4.5'/>
+<line x1='290' y1='54' x2='230' y2='114' stroke='#111827' stroke-width='4.5'/>
+<circle cx='360' cy='84' r='23' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<path d='M349,91 q5,-19 11,0 q6,-19 11,0' fill='none' stroke='#111827' stroke-width='2.2'/>
+<line x1='15' y1='293' x2='465' y2='293' stroke='#111827' stroke-width='1.5' stroke-dasharray='4 6'/>
+<text x='240' y='330' font-size='22' text-anchor='middle' font-weight='bold' fill='#111827'>Circuito 2</text>
+<path d='M60,436 L60,380 L420,380 M60,520 L60,560 L420,560' stroke='#111827' stroke-width='3' fill='none'/>
+<rect x='38' y='436' width='44' height='84' fill='#e5e7eb' stroke='#111827' stroke-width='2.5'/>
+<rect x='51' y='427' width='18' height='9' fill='#111827'/>
+<text x='60' y='466' font-size='24' text-anchor='middle' font-weight='bold' fill='#111827'>+</text>
+<text x='60' y='508' font-size='26' text-anchor='middle' font-weight='bold' fill='#111827'>−</text>
+<line x1='180' y1='380' x2='180' y2='560' stroke='#111827' stroke-width='3'/>
+<circle cx='180' cy='470' r='23' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<path d='M169,477 q5,-19 11,0 q6,-19 11,0' fill='none' stroke='#111827' stroke-width='2.2'/>
+<line x1='300' y1='380' x2='300' y2='560' stroke='#111827' stroke-width='3'/>
+<circle cx='300' cy='470' r='23' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<path d='M289,477 q5,-19 11,0 q6,-19 11,0' fill='none' stroke='#111827' stroke-width='2.2'/>
+<line x1='270' y1='440' x2='330' y2='500' stroke='#111827' stroke-width='4.5'/>
+<line x1='330' y1='440' x2='270' y2='500' stroke='#111827' stroke-width='4.5'/>
+<line x1='420' y1='380' x2='420' y2='560' stroke='#111827' stroke-width='3'/>
+<circle cx='420' cy='470' r='23' fill='#ffffff' stroke='#111827' stroke-width='2.5'/>
+<path d='M409,477 q5,-19 11,0 q6,-19 11,0' fill='none' stroke='#111827' stroke-width='2.2'/>
+<text x='240' y='603' font-size='18' text-anchor='middle' font-weight='normal' fill='#111827'>El bombillo con X está fundido.</text>
 </svg>

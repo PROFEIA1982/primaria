@@ -3,10 +3,10 @@
 Generada desde `ciencias.json`, que es la fuente. No se edita a mano: se corrige el JSON y se corre `pnpm tabla:simulacros-nuevos ciencias`.
 
 - **60 ítems**, 3 minutos por ítem.
-- **Claves:** DBAADABCCDABAACBDCCBABDDCBDCDBCCDBBCABDACDDBBACADCBDAABCCAAD (A 15, B 15, C 15, D 15).
+- **Claves:** DBAADABCCDABAACBDCCBABDDCBDCDBCCDBBCADACDDBDACADCBDAABCCABBA (A 15, B 15, C 15, D 15).
 - **Bloques:** Cuerpo humano 16 · Biodiversidad 14 · Energía 18 · Geofísica 12.
 - **Niveles:** intermedio 30 · alto 30.
-- **Verbos:** identificar 4 · comprender 4 · describir 1 · distinguir 13 · determinar 6 · analizar 12 · reconocer 7 · clasificar 7 · comparar 3 · diferenciar 3.
+- **Verbos:** identificar 5 · comprender 5 · describir 1 · distinguir 13 · determinar 6 · analizar 11 · reconocer 7 · clasificar 6 · comparar 3 · diferenciar 3.
 - **Tipos de contexto:** científico-escolar 15 · personal-cotidiano 15 · local-nacional 15 · global-planetario 15.
 
 ## Conteo por afirmación
@@ -29,7 +29,7 @@ Generada desde `ciencias.json`, que es la fuente. No se edita a mano: se corrige
 | 4.2 | 4 | Clasifica los movimientos de la Tierra y la Luna, así como los efectos que producen (eclipses, fases de la luna, estaciones del año) |
 | 4.3 | 3 | Distingue los componentes Sistema Solar, el Universo y los alcances científico-tecnológicos de la exploración espacial. |
 
-Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa que recalcula el resultado y comprueba que coincide con una sola opción.
+Cada clave se revisó a mano contra el contexto y el programa de estudio, y pasó por dos auditorías independientes: una de contenido y otra psicométrica.
 
 ## Resumen
 
@@ -39,22 +39,22 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | 2 | cie-1-1-b | Cuerpo humano | 1.1.3 | comprender | científico-escolar | alto | B |
 | 3 | cie-1-1-c | Cuerpo humano | 1.1.2 | describir | personal-cotidiano | intermedio | A |
 | 4 | cie-1-2-a | Cuerpo humano | 1.2.2 | distinguir | personal-cotidiano | alto | A |
-| 5 | cie-1-2-b | Cuerpo humano | 1.2.3 | distinguir | local-nacional | alto | D |
+| 5 | cie-1-2-b | Cuerpo humano | 1.2.3 | distinguir | local-nacional | intermedio | D |
 | 6 | cie-1-2-c | Cuerpo humano | 1.2.1 | comprender | científico-escolar | intermedio | A |
 | 7 | cie-1-3-a | Cuerpo humano | 1.3.2 | comprender | personal-cotidiano | intermedio | B |
 | 8 | cie-1-3-b | Cuerpo humano | 1.3.3 | determinar | científico-escolar | alto | C |
-| 9 | cie-1-3-c | Cuerpo humano | 1.3.3 | analizar | global-planetario | intermedio | C |
+| 9 | cie-1-3-c | Cuerpo humano | 1.3.3 | analizar | global-planetario | alto | C |
 | 10 | cie-1-4-a | Cuerpo humano | 1.4.2 | distinguir | científico-escolar | alto | D |
-| 11 | cie-1-4-b | Cuerpo humano | 1.4.3 | reconocer | personal-cotidiano | intermedio | A |
-| 12 | cie-1-4-c | Cuerpo humano | 1.4.5 | analizar | local-nacional | alto | B |
-| 13 | cie-1-4-d | Cuerpo humano | 1.4.1 | reconocer | personal-cotidiano | intermedio | A |
+| 11 | cie-1-4-b | Cuerpo humano | 1.4.3 | reconocer | personal-cotidiano | alto | A |
+| 12 | cie-1-4-c | Cuerpo humano | 1.4.5 | analizar | local-nacional | intermedio | B |
+| 13 | cie-1-4-d | Cuerpo humano | 1.4.1 | reconocer | personal-cotidiano | alto | A |
 | 14 | cie-1-5-a | Cuerpo humano | 1.5.1 | analizar | científico-escolar | intermedio | A |
 | 15 | cie-1-5-b | Cuerpo humano | 1.5.2 | distinguir | personal-cotidiano | intermedio | C |
 | 16 | cie-1-5-c | Cuerpo humano | 1.5.3 | analizar | científico-escolar | alto | B |
 | 17 | cie-2-1-a | Biodiversidad | 2.1.1 | comprender | local-nacional | intermedio | D |
 | 18 | cie-2-1-b | Biodiversidad | 2.1.2 | clasificar | local-nacional | alto | C |
 | 19 | cie-2-1-c | Biodiversidad | 2.1.3 | identificar | local-nacional | intermedio | C |
-| 20 | cie-2-1-d | Biodiversidad | 2.1.4 | analizar | global-planetario | alto | B |
+| 20 | cie-2-1-d | Biodiversidad | 2.1.4 | reconocer | global-planetario | intermedio | B |
 | 21 | cie-2-2-a | Biodiversidad | 2.2.1 | clasificar | científico-escolar | alto | A |
 | 22 | cie-2-2-b | Biodiversidad | 2.2.2 | comparar | personal-cotidiano | alto | B |
 | 23 | cie-2-2-c | Biodiversidad | 2.2.1 | clasificar | local-nacional | intermedio | D |
@@ -72,29 +72,29 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | 35 | cie-3-1-e | Energía | 3.1.6 | reconocer | personal-cotidiano | intermedio | B |
 | 36 | cie-3-1-f | Energía | 3.1.7 | analizar | global-planetario | alto | C |
 | 37 | cie-3-2-a | Energía | 3.2.3 | comparar | científico-escolar | alto | A |
-| 38 | cie-3-2-b | Energía | 3.2.2 | determinar | local-nacional | alto | B |
-| 39 | cie-3-2-c | Energía | 3.2.5 | distinguir | científico-escolar | alto | D |
-| 40 | cie-3-2-d | Energía | 3.2.7 | distinguir | personal-cotidiano | intermedio | A |
-| 41 | cie-3-2-e | Energía | 3.2.8 | distinguir | personal-cotidiano | intermedio | C |
+| 38 | cie-3-2-b | Energía | 3.2.6 | determinar | local-nacional | alto | D |
+| 39 | cie-3-2-c | Energía | 3.2.5 | distinguir | científico-escolar | alto | A |
+| 40 | cie-3-2-d | Energía | 3.2.7 | distinguir | personal-cotidiano | intermedio | C |
+| 41 | cie-3-2-e | Energía | 3.2.8 | distinguir | personal-cotidiano | intermedio | D |
 | 42 | cie-3-2-f | Energía | 3.2.9 | determinar | personal-cotidiano | alto | D |
-| 43 | cie-3-2-g | Energía | 3.2.10 | diferenciar | local-nacional | intermedio | D |
-| 44 | cie-3-2-h | Energía | 3.2.11 | analizar | global-planetario | alto | B |
-| 45 | cie-3-3-a | Energía | 3.3.4 | determinar | científico-escolar | alto | B |
-| 46 | cie-3-3-b | Energía | 3.3.3 | clasificar | científico-escolar | intermedio | A |
-| 47 | cie-3-3-c | Energía | 3.3.2 | determinar | científico-escolar | alto | C |
-| 48 | cie-3-3-d | Energía | 3.3.5 | reconocer | personal-cotidiano | intermedio | A |
-| 49 | cie-4-1-a | Geofísica | 4.1.4 | identificar | global-planetario | intermedio | D |
-| 50 | cie-4-1-b | Geofísica | 4.1.5 | distinguir | local-nacional | alto | C |
-| 51 | cie-4-1-c | Geofísica | 4.1.6 | analizar | local-nacional | alto | B |
-| 52 | cie-4-1-d | Geofísica | 4.1.2 | distinguir | local-nacional | alto | D |
-| 53 | cie-4-1-e | Geofísica | 4.1.3 | clasificar | global-planetario | intermedio | A |
-| 54 | cie-4-2-a | Geofísica | 4.2.1 | reconocer | global-planetario | intermedio | A |
-| 55 | cie-4-2-b | Geofísica | 4.2.2 | analizar | global-planetario | alto | B |
+| 43 | cie-3-2-g | Energía | 3.2.10 | diferenciar | local-nacional | intermedio | B |
+| 44 | cie-3-2-h | Energía | 3.2.11 | identificar | global-planetario | intermedio | D |
+| 45 | cie-3-3-a | Energía | 3.3.4 | determinar | científico-escolar | alto | A |
+| 46 | cie-3-3-b | Energía | 3.3.3 | clasificar | científico-escolar | intermedio | C |
+| 47 | cie-3-3-c | Energía | 3.3.2 | determinar | científico-escolar | alto | A |
+| 48 | cie-3-3-d | Energía | 3.3.6 | analizar | personal-cotidiano | intermedio | D |
+| 49 | cie-4-1-a | Geofísica | 4.1.4 | identificar | global-planetario | intermedio | C |
+| 50 | cie-4-1-b | Geofísica | 4.1.5 | distinguir | local-nacional | alto | B |
+| 51 | cie-4-1-c | Geofísica | 4.1.6 | analizar | local-nacional | alto | D |
+| 52 | cie-4-1-d | Geofísica | 4.1.2 | distinguir | local-nacional | alto | A |
+| 53 | cie-4-1-e | Geofísica | 4.1.3 | comprender | global-planetario | intermedio | A |
+| 54 | cie-4-2-a | Geofísica | 4.2.1 | reconocer | global-planetario | intermedio | B |
+| 55 | cie-4-2-b | Geofísica | 4.2.2 | analizar | global-planetario | alto | C |
 | 56 | cie-4-2-c | Geofísica | 4.2.2 | distinguir | local-nacional | intermedio | C |
-| 57 | cie-4-2-d | Geofísica | 4.2.2 | analizar | global-planetario | alto | C |
-| 58 | cie-4-3-a | Geofísica | 4.3.1 | comparar | global-planetario | intermedio | A |
-| 59 | cie-4-3-b | Geofísica | 4.3.2 | distinguir | global-planetario | intermedio | A |
-| 60 | cie-4-3-c | Geofísica | 4.3.4 | clasificar | global-planetario | alto | D |
+| 57 | cie-4-2-d | Geofísica | 4.2.2 | analizar | global-planetario | alto | A |
+| 58 | cie-4-3-a | Geofísica | 4.3.1 | comparar | global-planetario | intermedio | B |
+| 59 | cie-4-3-b | Geofísica | 4.3.2 | distinguir | global-planetario | alto | B |
+| 60 | cie-4-3-c | Geofísica | 4.3.4 | clasificar | global-planetario | alto | A |
 
 ## Ítem por ítem
 
@@ -108,7 +108,7 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 
 Lea la siguiente información:
 
-En una feria científica, un grupo de sexto año comparó una célula del cuerpo humano con una ciudad rodeada por una muralla. Explicaron que la muralla tiene portones vigilados: permite que entren el agua y los nutrientes que la ciudad necesita y que salgan los desechos, pero impide el paso de sustancias que podrían dañarla. Así, la muralla separa lo que está dentro de la ciudad de lo que está afuera.
+En una feria científica, un grupo de sexto grado comparó una célula del cuerpo humano con una ciudad rodeada por una muralla. Explicaron que la muralla tiene portones vigilados: permite que entren el agua y los nutrientes que la ciudad necesita y que salgan los desechos, pero impide el paso de sustancias que podrían dañarla. Así, la muralla separa lo que está dentro de la ciudad de lo que está afuera.
 
 **En la comparación anterior, la muralla con portones vigilados representa**
 
@@ -180,7 +180,7 @@ Mariela estira el brazo para alcanzar una guayaba del árbol. Para lograrlo, un 
 **Verbo:** distinguir · **Tipo de contexto:** personal-cotidiano  
 **Tema:** Cuerpo humano · **Subtema:** Tejido sanguíneo e inmunidad
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 Fiorella se raspó la rodilla al caer de la bicicleta. A los pocos minutos la herida dejó de sangrar, porque unos fragmentos de células de la sangre se pegaron entre sí y formaron un tapón que después se convirtió en costra. Al día siguiente, alrededor del raspón la piel estaba roja y un poco hinchada: hasta ese lugar habían llegado otras células de la sangre que rodeaban y destruían a los microbios que entraron por la herida.
 
@@ -191,11 +191,11 @@ Fiorella se raspó la rodilla al caer de la bicicleta. A los pocos minutos la he
 | A | Las plaquetas y luego los glóbulos blancos. | **Correcta** |
 | B | Los glóbulos blancos y luego las plaquetas. | Invierte las funciones: las plaquetas forman el tapón y los glóbulos blancos atacan a los microbios. |
 | C | Los glóbulos rojos y luego los glóbulos blancos. | Atribuye el tapón a los glóbulos rojos, cuya función es transportar oxígeno. |
-| D | Las plaquetas y luego los glóbulos rojos. | Cree que los glóbulos rojos defienden al cuerpo, cuando su función es llevar oxígeno. |
+| D | Los glóbulos blancos y luego los glóbulos rojos. | Invierte las funciones y le atribuye a los glóbulos rojos la defensa contra los microbios. |
 
 **Resolución:** Las plaquetas se unen y forman el tapón que detiene el sangrado, y luego los glóbulos blancos llegan a la herida para atacar a los microbios. Por eso la zona se pone roja e hinchada mientras el cuerpo se defiende.
 
-### 5. cie-1-2-b · Cuerpo humano · alto
+### 5. cie-1-2-b · Cuerpo humano · intermedio
 
 **Afirmación 1.2:** Analiza la función inmunológica de los componentes del tejido sanguíneo.  
 **Evidencia 1.2.3:** Distingue los diferentes tipos de inmunidad.  
@@ -238,10 +238,10 @@ Cada día entran al cuerpo virus, bacterias y hongos por la nariz, la boca o peq
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | evita que los microbios dañen la salud. | **Correcta** |
+| A | protege la salud frente a los microbios. | **Correcta** |
 | B | lleva oxígeno a todas las células del cuerpo. | Confunde la defensa del cuerpo con el transporte de oxígeno, que realizan los glóbulos rojos. |
 | C | detiene el sangrado de las heridas pequeñas. | Confunde la defensa contra microbios con la coagulación, que realizan las plaquetas. |
-| D | elimina por la orina los desechos de la sangre. | Confunde la función inmunológica con la función excretora de los riñones. |
+| D | actúa solo cuando la persona ya se siente enferma. | Contradice el texto: las defensas actúan aunque la persona ni se entere del contacto con los microbios. |
 
 **Resolución:** La función inmunológica reconoce y ataca a los microbios que entran al cuerpo, y además recuerda cómo vencerlos. Así evita que enfermen a la persona y protege su salud.
 
@@ -298,7 +298,7 @@ En Las Brisas también se libraron del contagio dos bebés que todavía no podí
 
 **Resolución:** En Las Brisas casi todas las personas estaban vacunadas y la enfermedad casi no pudo pasar de una persona a otra, por eso hasta los bebés quedaron protegidos. Cuando la mayoría se vacuna, se cuida también a quienes todavía no pueden recibir la vacuna.
 
-### 9. cie-1-3-c · Cuerpo humano · intermedio
+### 9. cie-1-3-c · Cuerpo humano · alto
 
 **Afirmación 1.3:** Analiza la función e importancia de las vacunas para la prevención de enfermedades infectocontagiosas.  
 **Evidencia 1.3.3:** Distingue los beneficios e importancia de la vacunación.  
@@ -314,10 +314,10 @@ La viruela fue una enfermedad contagiosa que durante siglos afectó a personas d
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | cura a las personas que ya tienen la enfermedad en su cuerpo. | Confunde prevenir con curar: la vacuna prepara las defensas antes del contagio. |
+| A | elimina la enfermedad aunque se vacune a pocas personas. | Ignora que la enfermedad desapareció porque se vacunó a gran parte de la población de muchos países. |
 | B | solo puede proteger a la persona vacunada por pocos días. | Desconoce que la protección de muchas personas juntas cortó el contagio hasta hacerlo desaparecer. |
 | C | puede eliminar una enfermedad si se aplica en todo el mundo. | **Correcta** |
-| D | hace que los virus se vuelvan más fuertes y peligrosos. | Es una idea equivocada; el texto muestra que el virus desapareció gracias a la vacunación. |
+| D | sirve nada más en los niños, porque los adultos ya tienen defensas. | Cree que solo los niños se benefician; la campaña vacunó a la población en general. |
 
 **Resolución:** Al vacunar a tanta gente, el virus de la viruela ya no encontró a quién contagiar y desapareció del planeta. Esto muestra el gran poder de la vacunación cuando se hace en muchos países a la vez.
 
@@ -329,7 +329,7 @@ La viruela fue una enfermedad contagiosa que durante siglos afectó a personas d
 **Verbo:** distinguir · **Tipo de contexto:** científico-escolar  
 **Tema:** Cuerpo humano · **Subtema:** Órganos, sistemas y salud
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 Un órgano del sistema digestivo mide varios metros de largo y está doblado muchas veces dentro del abdomen. Su pared interna tiene millones de pliegues diminutos, parecidos a dedos, que aumentan la superficie en contacto con el alimento ya digerido. Por dentro de cada pliegue pasan vasos sanguíneos muy delgados.
 
@@ -344,7 +344,7 @@ Un órgano del sistema digestivo mide varios metros de largo y está doblado muc
 
 **Resolución:** Los pliegues parecidos a dedos aumentan la superficie para que los nutrientes del alimento digerido pasen a los vasos sanguíneos. Así trabaja el intestino delgado, que absorbe los nutrientes y los entrega a la sangre.
 
-### 11. cie-1-4-b · Cuerpo humano · intermedio
+### 11. cie-1-4-b · Cuerpo humano · alto
 
 **Afirmación 1.4:** Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud.  
 **Evidencia 1.4.3:** Reconoce hábitos positivos y negativos que influyen en el funcionamiento de los sistemas del cuerpo humano.  
@@ -363,18 +363,18 @@ Andrés anotó algunos de sus hábitos durante una semana.
 | Cargar el bulto en un hombro | Todos los días |
 | Tomar agua en lugar de refresco | Casi siempre |
 
-**¿Cuál hábito de la tabla puede afectar de forma negativa a los huesos y músculos de la espalda?**
+**¿Cuál hábito de la tabla conviene cambiar para cuidar los huesos y los músculos, y por qué?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Cargar el bulto en un hombro | **Correcta** |
-| B | Jugar fútbol en el recreo | El ejercicio frecuente fortalece músculos y huesos; es un hábito positivo. |
-| C | Dormir nueve horas | Dormir lo suficiente ayuda a que el cuerpo se recupere; es un hábito positivo. |
-| D | Tomar agua en lugar de refresco | Es un hábito positivo que favorece el trabajo de los riñones y de todo el cuerpo. |
+| A | Cargar el bulto en un hombro, porque inclina la espalda hacia un lado. | **Correcta** |
+| B | Jugar fútbol en el recreo, porque correr mucho desgasta los huesos. | Cree que el ejercicio daña los huesos, cuando en realidad los fortalece. |
+| C | Dormir nueve horas, porque los músculos se debilitan al no moverse. | Confunde el descanso, que el cuerpo necesita, con falta de actividad. |
+| D | Cargar el bulto en un hombro, porque cansa nada más los músculos del brazo. | Escoge el hábito correcto, pero el daño principal está en la espalda, que se inclina hacia un lado. |
 
 **Resolución:** Cargar todo el peso del bulto en un solo hombro inclina la espalda hacia un lado y obliga a huesos y músculos a trabajar de forma desigual. Lo recomendable es usar los dos tirantes y llevar solo lo necesario.
 
-### 12. cie-1-4-c · Cuerpo humano · alto
+### 12. cie-1-4-c · Cuerpo humano · intermedio
 
 **Afirmación 1.4:** Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud.  
 **Evidencia 1.4.5:** Analiza la importancia de acciones comunales e institucionales que fomenten la buena salud y funcionamiento de los sistemas del cuerpo humano.  
@@ -382,7 +382,7 @@ Andrés anotó algunos de sus hábitos durante una semana.
 **Verbo:** analizar · **Tipo de contexto:** local-nacional  
 **Tema:** Cuerpo humano · **Subtema:** Órganos, sistemas y salud
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 En un cantón del país, la municipalidad cierra al tránsito una calle principal cada domingo en la mañana para que las familias caminen, patinen o anden en bicicleta. Por su parte, la asociación de desarrollo de un barrio instaló aparatos para ejercitarse en el parque, y el comité de deportes organiza clases gratuitas de baile para personas adultas mayores.
 
@@ -390,14 +390,14 @@ En un cantón del país, la municipalidad cierra al tránsito una calle principa
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Reemplazan la necesidad de comer de forma variada y sana. | Cree que el ejercicio sustituye una alimentación balanceada; ambos hábitos se necesitan. |
-| B | Fomentan el ejercicio, que fortalece corazón y pulmones. | **Correcta** |
-| C | Evitan que las personas se contagien de cualquier microbio. | Confunde los beneficios del ejercicio con los de las vacunas y la higiene. |
-| D | Sustituyen las horas de descanso que el cuerpo necesita. | Cree que el ejercicio reemplaza el sueño, cuando ambos son necesarios. |
+| A | Promueven la actividad física, que reemplaza una dieta variada. | Cree que el ejercicio sustituye a la alimentación sana, cuando los dos se necesitan. |
+| B | Promueven la actividad física, que fortalece corazón y músculos. | **Correcta** |
+| C | Promueven la actividad física, que impide contagiarse de microbios. | Exagera: el ejercicio ayuda a la salud, pero no impide los contagios. |
+| D | Promueven la actividad física, que sustituye las horas de sueño. | Confunde la actividad con el descanso, que el cuerpo también necesita. |
 
-**Resolución:** Caminar, patinar, andar en bicicleta o bailar mantienen el cuerpo en movimiento, y eso fortalece el corazón, los pulmones, los músculos y los huesos. Cuando la comunidad y las instituciones abren estos espacios, a más personas les resulta fácil mantenerse activas.
+**Resolución:** Caminar, patinar, andar en bicicleta o bailar mantienen el cuerpo en movimiento, y eso fortalece el corazón, los músculos y los huesos, y mejora la respiración. Cuando la comunidad y las instituciones abren estos espacios, a más personas les resulta fácil mantenerse activas.
 
-### 13. cie-1-4-d · Cuerpo humano · intermedio
+### 13. cie-1-4-d · Cuerpo humano · alto
 
 **Afirmación 1.4:** Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud.  
 **Evidencia 1.4.1:** Reconoce conceptos y características de los órganos y los sistemas del cuerpo humano.  
@@ -407,7 +407,7 @@ En un cantón del país, la municipalidad cierra al tránsito una calle principa
 
 Considere la siguiente información:
 
-Después de jugar bajo el sol, Isaac nota que su camiseta está mojada y que en su frente quedan gotitas con sabor salado. El sudor sale por pequeños poros de la piel y, al evaporarse, ayuda a enfriar el cuerpo. Ese líquido contiene agua, sales y pequeñas cantidades de urea, una sustancia de desecho que el cuerpo no necesita.
+Después de jugar bajo el sol, Isaac nota que su camiseta está mojada y que en su frente quedan gotitas con sabor salado. El sudor sale por pequeños poros de la piel y, al evaporarse, ayuda a enfriar el cuerpo. Ese líquido contiene agua, sales y pequeñas cantidades de urea, la misma sustancia que se encuentra en la orina.
 
 **Además de regular la temperatura, el sudor muestra que la piel participa en la función de**
 
@@ -457,7 +457,7 @@ Figura `cie-1-5-sistemas.svg`. Texto alternativo: Esquema con flechas. Los pulmo
 
 Lea la siguiente información:
 
-Hazel se rió a carcajadas mientras comía arroz y empezó a toser con fuerza. Su abuela le explicó que en la garganta hay un conducto por el que pasan tanto el aire como los alimentos. Al tragar, una pequeña tapa cierra el camino hacia la tráquea para que la comida siga hacia el esófago; si una persona habla o se ríe al tragar, esa tapa puede no cerrarse a tiempo.
+Hazel se rio a carcajadas mientras comía arroz y empezó a toser con fuerza. Su abuela le explicó que en la garganta hay un conducto por el que pasan tanto el aire como los alimentos. Al tragar, una pequeña tapa cierra el camino hacia la tráquea para que la comida siga hacia el esófago; si una persona habla o se ríe al tragar, esa tapa puede no cerrarse a tiempo.
 
 **La situación muestra una acción que comparten los sistemas**
 
@@ -478,7 +478,7 @@ Hazel se rió a carcajadas mientras comía arroz y empezó a toser con fuerza. S
 **Verbo:** analizar · **Tipo de contexto:** científico-escolar  
 **Tema:** Cuerpo humano · **Subtema:** Interrelación de los sistemas
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 En un día muy caluroso, el cuerpo pierde mucha agua por el sudor. Cuando eso ocurre, el encéfalo detecta el cambio y produce la sensación de sed. Al mismo tiempo, se envían señales a los riñones para que eliminen menos agua, por lo que la orina sale en menor cantidad y de color más oscuro. Al beber líquido, la sangre recupera la cantidad de agua que necesita.
 
@@ -489,7 +489,7 @@ En un día muy caluroso, el cuerpo pierde mucha agua por el sudor. Cuando eso oc
 | A | Los riñones controlan el agua del cuerpo sin ayuda de otros órganos. | Ignora que el encéfalo envía las señales y que la sangre transporta el agua. |
 | B | Varios sistemas actúan coordinados para mantener el agua del cuerpo. | **Correcta** |
 | C | El sistema nervioso solo participa cuando el cuerpo está en movimiento. | Contradice el texto: el encéfalo detecta la falta de agua y provoca la sed. |
-| D | El sudor y la orina son procesos que no tienen relación entre sí. | Ignora que los dos dependen de la cantidad de agua que hay en el cuerpo. |
+| D | La sed aparece después de que la sangre ya recuperó el agua que perdió. | Invierte el orden: la sed aparece cuando falta agua, y beber es lo que la recupera. |
 
 **Resolución:** El sistema nervioso detecta la falta de agua y provoca la sed, el sistema excretor ahorra agua al producir menos orina y el circulatorio la reparte cuando se bebe. Todos trabajan juntos para mantener la salud del cuerpo.
 
@@ -511,7 +511,7 @@ La biodiversidad se puede observar en tres niveles: la variedad de genes dentro 
 | :---: | --- | --- |
 | A | Mazorcas de maíz de distintos colores en una misma finca. | Muestra variedad dentro de una sola especie, el maíz; eso es diversidad genética. |
 | B | Un manglar y un páramo dentro del mismo país. | Muestra lugares con condiciones muy distintas; eso es diversidad de ecosistemas. |
-| C | El crecimiento de un mismo colibrí desde que nace. | Describe los cambios de un solo individuo, no la variedad de especies. |
+| C | Muchos colibríes de una sola especie en un mismo jardín. | Confunde la cantidad de individuos con la variedad de especies. |
 | D | Varias clases de colibríes que visitan un mismo jardín. | **Correcta** |
 
 **Resolución:** La diversidad de especies se refiere a las distintas clases de seres vivos que hay en un lugar, como varias especies de colibríes en un mismo jardín. Las mazorcas de colores muestran diversidad genética y el manglar con el páramo, diversidad de ecosistemas.
@@ -524,9 +524,9 @@ La biodiversidad se puede observar en tres niveles: la variedad de genes dentro 
 **Verbo:** clasificar · **Tipo de contexto:** local-nacional  
 **Tema:** Biodiversidad · **Subtema:** Biodiversidad y adaptaciones
 
-Lea la siguiente información:
+Considere la siguiente información:
 
-En el Refugio de Vida Silvestre Ostional, en Guanacaste, ocurre un fenómeno llamado arribada: durante algunas noches, miles de hembras de tortuga lora salen del mar casi al mismo tiempo para poner sus huevos en la arena. Al llegar tantas juntas, los depredadores no logran comerse todos los huevos y muchas crías sobreviven.
+En el Refugio Nacional de Vida Silvestre Ostional, en Guanacaste, ocurre un fenómeno llamado arribada: durante algunas noches, miles de hembras de tortuga lora salen del mar casi al mismo tiempo para poner sus huevos en la arena. Al llegar tantas juntas, los depredadores no logran comerse todos los huevos y muchas crías sobreviven.
 
 **La arribada es un ejemplo de adaptación**
 
@@ -562,15 +562,15 @@ En los potreros y a la orilla de muchos caminos de Costa Rica crece la dormilona
 
 **Resolución:** La dormilona percibe el roce de la mano como un estímulo y responde cerrando sus hojitas. Percibir cambios del entorno y reaccionar ante ellos es la función vital de relación.
 
-### 20. cie-2-1-d · Biodiversidad · alto
+### 20. cie-2-1-d · Biodiversidad · intermedio
 
 **Afirmación 2.1:** Comprende conceptos básicos relacionados con la biodiversidad para el mejoramiento del entorno natural.  
 **Evidencia 2.1.4:** Identifica causas, importancia y amenazas a la biodiversidad en Costa Rica.  
 **Bloque:** Biodiversidad  
-**Verbo:** analizar · **Tipo de contexto:** global-planetario  
+**Verbo:** reconocer · **Tipo de contexto:** global-planetario  
 **Tema:** Biodiversidad · **Subtema:** Biodiversidad y adaptaciones
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 El pez león es originario del océano Índico y del oeste del océano Pacífico, pero desde hace algunos años se encuentra en el mar Caribe, incluidas las costas de Costa Rica. Allí se alimenta de muchos peces pequeños nativos y casi ningún animal lo depreda. Además, se reproduce con gran rapidez y puede ocupar arrecifes y manglares.
 
@@ -578,9 +578,9 @@ El pez león es originario del océano Índico y del oeste del océano Pacífico
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | la tala de los bosques cercanos a las playas. | Es una amenaza real, pero no es la que se describe en el texto. |
+| A | la destrucción de los arrecifes y los manglares. | Los arrecifes y manglares aparecen como lugares que el pez ocupa, no como lugares destruidos. |
 | B | la invasión de una especie de otra región. | **Correcta** |
-| C | la cacería ilegal de especies en peligro. | El pez león no es cazado ilegalmente; es él quien consume a los peces nativos. |
+| C | la pesca excesiva de los peces pequeños nativos. | Los peces nativos disminuyen porque el pez león se los come, no por la pesca. |
 | D | la contaminación del agua por desechos plásticos. | Es una amenaza real, pero distinta de la que se describe en el texto. |
 
 **Resolución:** El pez león llegó desde otros océanos, come peces nativos y casi no tiene enemigos que controlen su población. Las especies que invaden lugares donde no son originarias alteran el equilibrio y ponen en riesgo a las especies nativas.
@@ -608,7 +608,7 @@ Analice la siguiente tabla:
 | :---: | --- | --- |
 | A | Un saltamontes y una lombriz de tierra. | **Correcta** |
 | B | Una lombriz de tierra y un saltamontes. | Invierte los animales: la lombriz respira por la piel y el saltamontes, por tubitos llamados tráqueas. |
-| C | Un saltamontes y un sapo. | El sapo también respira por la piel, pero tiene columna vertebral. |
+| C | Un saltamontes y un sapo común. | El sapo también respira por la piel, pero tiene columna vertebral. |
 | D | Un cangrejo y una lombriz de tierra. | El cangrejo es invertebrado, pero respira por branquias y no por tubitos. |
 
 **Resolución:** El saltamontes es invertebrado y respira por tráqueas, que son tubitos que llevan el aire por dentro del cuerpo. La lombriz de tierra también es invertebrada y respira a través de su piel húmeda.
@@ -621,7 +621,7 @@ Analice la siguiente tabla:
 **Verbo:** comparar · **Tipo de contexto:** personal-cotidiano  
 **Tema:** Biodiversidad · **Subtema:** Clasificación de los seres vivos
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 Para hacer pan casero, la abuela de Sofía mezcla la harina con levadura. Le explicó que la levadura está formada por hongos diminutos de una sola célula, distintos de los hongos grandes que crecen sobre los troncos podridos. Las células de la levadura tienen núcleo y se nutren de los azúcares de la masa; al hacerlo, liberan un gas que hace que el pan quede esponjoso.
 
@@ -630,7 +630,7 @@ Para hacer pan casero, la abuela de Sofía mezcla la harina con levadura. Le exp
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | Ambos están formados por una sola célula. | Solo la levadura es unicelular; los hongos de los troncos están formados por muchas células. |
-| B | Ninguno de los dos produce su propio alimento. | **Correcta** |
+| B | Ambos absorben su alimento de lo que los rodea. | **Correcta** |
 | C | Ambos fabrican su alimento con la luz del sol. | Confunde a los hongos con las plantas; los hongos no realizan fotosíntesis. |
 | D | Ninguno de los dos tiene núcleo en sus células. | Los hongos sí tienen núcleo; los organismos sin núcleo definido forman el reino Monera. |
 
@@ -742,9 +742,9 @@ Figura `cie-2-3-relaciones.svg`. Texto alternativo: Esquema de tres parejas de e
 
 Lea la siguiente información:
 
-En la finca del abuelo de Joseph hay un granero donde viven varias lechuzas. Cada noche, ellas cazan ratones que se comen el maíz almacenado y los granos de los cultivos. Un vecino propuso ahuyentar a las lechuzas porque le dan miedo. El abuelo le respondió que eso podría causar un problema en la finca.
+En la finca del abuelo de Joseph hay un granero donde viven varias lechuzas. Cada noche, ellas cazan ratones que se comen el maíz almacenado y los granos de los cultivos. Un vecino propuso ahuyentar a las lechuzas porque le dan miedo. El abuelo le respondió que antes debían pensar qué pasaría con los demás seres vivos de la finca.
 
-**¿Cuál problema es más probable que ocurra si las lechuzas se van del granero?**
+**¿Qué es más probable que ocurra en la finca si las lechuzas se van del granero?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -763,7 +763,7 @@ En la finca del abuelo de Joseph hay un granero donde viven varias lechuzas. Cad
 **Verbo:** distinguir · **Tipo de contexto:** local-nacional  
 **Tema:** Biodiversidad · **Subtema:** Relaciones entre seres vivos
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 En los bosques secos de Guanacaste crece el cornizuelo, un arbusto con espinas grandes y huecas. Dentro de esas espinas viven colonias de hormigas que se alimentan de un néctar y de unas pequeñas bolitas nutritivas que produce la planta. Las hormigas, a cambio, atacan a los insectos que se comen las hojas y cortan las enredaderas que crecen alrededor del arbusto.
 
@@ -823,8 +823,8 @@ En los océanos flotan millones de algas microscópicas que forman el fitoplanct
 | :---: | --- | --- |
 | A | Elimina por completo el dióxido de carbono del aire. | Exagera: la fotosíntesis consume parte del dióxido de carbono, no todo. |
 | B | Sostiene las cadenas alimentarias y renueva el aire. | **Correcta** |
-| C | Calienta el agua del mar para que vivan los peces. | Confunde la fotosíntesis con un proceso que produce calor. |
-| D | Permite que los peces respiren sin necesitar oxígeno. | Contradice la información: los peces sí necesitan oxígeno para vivir. |
+| C | Transforma el oxígeno del agua en dióxido de carbono. | Invierte el proceso: la fotosíntesis toma dióxido de carbono y libera oxígeno. |
+| D | Es la forma en que las algas respiran bajo el agua. | Confunde la fotosíntesis, que fabrica alimento, con la respiración. |
 
 **Resolución:** Las algas del fitoplancton usan la luz para fabricar su alimento y, al hacerlo, liberan oxígeno. Así alimentan a muchos animales marinos y ayudan a mantener el oxígeno del aire que respiran los seres vivos.
 
@@ -870,7 +870,7 @@ Ximena acomodó cuatro cajas en los estantes de la bodega de su casa.
 | 3 | 3 kg | 2 m |
 | 4 | 4 kg | 1 m |
 
-La energía potencial de un objeto es mayor cuanto más masa tiene y cuanto más alto se encuentra.
+Para comparar la energía potencial de objetos en reposo, se multiplica la masa de cada uno por la altura a la que se encuentra: cuanto mayor es ese resultado, mayor es su energía potencial.
 
 **¿Cuál caja tiene mayor energía potencial?**
 
@@ -914,7 +914,7 @@ En algunas zonas de Guanacaste cercanas a volcanes se perforan pozos profundos d
 **Verbo:** distinguir · **Tipo de contexto:** global-planetario  
 **Tema:** Energía · **Subtema:** Tipos, clases y transformaciones de la energía
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 En algunas regiones del mundo, la electricidad se produce en plantas que queman carbón mineral; el humo que sale de sus chimeneas lleva gases y partículas que ensucian el aire y aumentan el calentamiento del planeta. En otras regiones se instalan campos con paneles que convierten la luz del Sol en electricidad.
 
@@ -939,16 +939,16 @@ En algunas regiones del mundo, la electricidad se produce en plantas que queman 
 
 Lea la siguiente información:
 
-Durante un apagón, Kendall usa una linterna que no tiene baterías. Para encenderla, gira con la mano una manivela durante un minuto. Al girar, la manivela mueve un pequeño generador que produce electricidad, y esa electricidad hace brillar el bombillo de la linterna.
+Durante un apagón, Kendall usa una linterna que no tiene baterías. Para encenderla, gira con la mano una manivela sin detenerse. Al girar, la manivela mueve un pequeño generador que produce electricidad, y esa electricidad hace brillar el bombillo de la linterna.
 
 **¿Cuál es la secuencia de transformaciones de energía que ocurre en la linterna?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | De eléctrica a cinética y de cinética a lumínica. | Invierte el orden: primero hay movimiento y después electricidad. |
-| B | De cinética a eléctrica y de eléctrica a lumínica. | **Correcta** |
-| C | De química a eléctrica y de eléctrica a lumínica. | Así funciona una linterna de baterías, pero esta no tiene baterías. |
-| D | De cinética a lumínica y de lumínica a eléctrica. | La luz es el resultado final; no es la que produce la electricidad. |
+| A | De eléctrica a cinética y luego a lumínica. | Invierte el orden: primero está el movimiento de la manivela, que se convierte en electricidad. |
+| B | De cinética a eléctrica y luego a lumínica. | **Correcta** |
+| C | De química a eléctrica y luego a lumínica. | Piensa en una linterna de baterías, pero esta no tiene baterías: la energía viene del movimiento. |
+| D | De cinética a lumínica y después a eléctrica. | Pone la luz antes que la electricidad, cuando el bombillo brilla gracias a la electricidad. |
 
 **Resolución:** Al girar la manivela se produce movimiento, que es energía cinética, y el generador la transforma en energía eléctrica. Luego el bombillo transforma esa electricidad en energía lumínica.
 
@@ -1000,30 +1000,30 @@ Figura `cie-3-2-rapidez.svg`. Texto alternativo: Tabla de cuatro ciclistas. Cicl
 | C | Ciclista 3 | Recorrió la mayor distancia, pero tardó 180 s: su rapidez fue de 5 m/s. |
 | D | Ciclista 4 | Tardó el menor tiempo, pero recorrió poca distancia: su rapidez fue de 4 m/s. |
 
-**Resolución:** La rapidez se obtiene al dividir la distancia entre el tiempo. Ciclista 1 recorrió 600 m en 100 s, es decir, 6 m/s, la mayor rapidez del grupo.
+**Resolución:** La rapidez se obtiene al dividir la distancia entre el tiempo. El ciclista 1 recorrió 600 m en 100 s, es decir, 6 m/s, la mayor rapidez del grupo.
 
 ### 38. cie-3-2-b · Energía · alto
 
 **Afirmación 3.2:** Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas.  
-**Evidencia 3.2.2:** Reconoce las características básicas de movimiento para un mejor entendimiento del entorno físico.  
+**Evidencia 3.2.6:** Reconoce las características básicas de la luz, así como los fenómenos de la visión, existencia de colores, composición y descomposición de la luz blanca.  
 **Bloque:** Energía  
 **Verbo:** determinar · **Tipo de contexto:** local-nacional  
 **Tema:** Energía · **Subtema:** Manifestaciones de la energía
 
-Lea la siguiente información:
+Considere la siguiente información:
 
-En el Parque Metropolitano La Sabana, en San José, Priscilla entrena para una competencia de atletismo. Su entrenadora le pidió correr un tramo recto de 100 m manteniendo siempre una rapidez de 5 m/s. Mientras tanto, la entrenadora toma el tiempo con un cronómetro desde la salida hasta la llegada.
+En la Feria Nacional de Ciencia y Tecnología, un grupo de estudiantes iluminó un cuarto oscuro solo con luz roja. Valeria entró con una camiseta blanca, una gorra verde y un pantalón negro. Los expositores le explicaron que un objeto se ve de cierto color porque refleja la luz de ese color y absorbe las demás; lo blanco refleja todos los colores y lo negro no refleja ninguno.
 
-**¿Cuánto tiempo tardará Priscilla en recorrer el tramo completo?**
+**Dentro del cuarto, ¿de qué color se verán la camiseta y la gorra de Valeria, en ese orden?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | 0,05 s | Divide la rapidez entre la distancia (5 ÷ 100), al revés de lo correcto. |
-| B | 20 s | **Correcta** |
-| C | 95 s | Resta la rapidez a la distancia (100 − 5), y esa operación no da el tiempo. |
-| D | 500 s | Multiplica la distancia por la rapidez (100 × 5), cuando hay que dividir. |
+| A | Blanca y verde. | Cree que los objetos conservan su color aunque cambie la luz que los ilumina. |
+| B | Roja y verde. | Olvida que la gorra verde absorbe la luz roja y, sin luz verde que reflejar, se ve negra. |
+| C | Blanca y negra. | Olvida que la camiseta blanca refleja la luz roja que le llega. |
+| D | Roja y negra. | **Correcta** |
 
-**Resolución:** Si Priscilla avanza 5 m en cada segundo, para recorrer 100 m necesita 100 ÷ 5 = 20 segundos. Para hallar el tiempo se divide la distancia entre la rapidez.
+**Resolución:** Bajo luz roja, la camiseta blanca refleja esa luz y se ve roja. La gorra verde absorbe la luz roja y no tiene luz verde que reflejar, por eso se ve negra.
 
 ### 39. cie-3-2-c · Energía · alto
 
@@ -1041,14 +1041,14 @@ En la clase de Ciencias se presentaron tres situaciones de la vida diaria en las
 
 **¿Cuál opción indica la forma de transmisión del calor en las situaciones 1, 2 y 3, respectivamente?**
 
-Figura `cie-3-2-calor.svg`. Texto alternativo: Tres escenas numeradas. Situación 1: unas manos frente a una fogata, sin tocarla. Situación 2: una cuchara de metal dentro de una taza con bebida caliente; el mango que queda afuera se calienta. Situación 3: un calentador en el piso de un cuarto; flechas muestran el aire caliente que sube y el aire frío que baja.
+Figura `cie-3-2-calor.svg`. Texto alternativo: Tres escenas numeradas. Situación 1: unas manos frente a una fogata, sin tocarla. Situación 2: una cuchara de metal dentro de una taza con bebida caliente; el mango que queda afuera se calienta. Situación 3: un calentador encendido; flechas muestran el aire caliente que sube y el aire frío que baja.
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Radiación, convección y conducción. | Confunde conducción con convección: en la cuchara el calor pasa por contacto a través del metal. |
-| B | Conducción, radiación y convección. | Las manos no tocan la fogata; el calor les llega por radiación. |
-| C | Convección, conducción y radiación. | Confunde la radiación de la fogata con el movimiento del aire caliente. |
-| D | Radiación, conducción y convección. | **Correcta** |
+| A | Radiación, conducción y convección. | **Correcta** |
+| B | Radiación, convección y conducción. | Confunde conducción con convección: en la cuchara el calor pasa por contacto a través del metal. |
+| C | Conducción, radiación y convección. | Las manos no tocan la fogata; el calor les llega por radiación. |
+| D | Convección, conducción y radiación. | Confunde la radiación de la fogata con el movimiento del aire caliente. |
 
 **Resolución:** Las manos se calientan sin tocar la fogata, y eso es radiación. El mango de la cuchara se calienta por contacto con la bebida, que es conducción, y el aire caliente sube y el frío baja alrededor del calentador, que es convección.
 
@@ -1060,7 +1060,7 @@ Figura `cie-3-2-calor.svg`. Texto alternativo: Tres escenas numeradas. Situació
 **Verbo:** distinguir · **Tipo de contexto:** personal-cotidiano  
 **Tema:** Energía · **Subtema:** Manifestaciones de la energía
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 Allison y su papá van a cambiar el techo del gallinero. Quieren un material que deje pasar parte de la claridad del día, para que las gallinas no queden a oscuras, pero que no permita ver con nitidez lo que hay del otro lado, para que las aves estén tranquilas. En la ferretería les ofrecen varias opciones.
 
@@ -1068,9 +1068,9 @@ Allison y su papá van a cambiar el techo del gallinero. Quieren un material que
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Translúcido, como una lámina de plástico lechoso. | **Correcta** |
-| B | Transparente, como una lámina de vidrio sin color. | El vidrio sin color deja ver con claridad lo que hay del otro lado. |
-| C | Opaco, como una lámina de zinc. | El zinc no deja pasar la luz y el gallinero quedaría a oscuras. |
+| A | Transparente, como una lámina de vidrio sin color. | El vidrio sin color deja ver con claridad lo que hay del otro lado. |
+| B | Opaco, como una lámina de zinc ondulado. | El zinc no deja pasar la luz y el gallinero quedaría a oscuras. |
+| C | Translúcido, como una lámina de plástico lechoso. | **Correcta** |
 | D | Opaco, como una lámina de plástico lechoso. | El plástico lechoso deja pasar parte de la luz, por eso no es opaco. |
 
 **Resolución:** Un material translúcido deja pasar parte de la luz, pero no permite ver con claridad lo que hay detrás, como el plástico lechoso. Así las gallinas tienen claridad y a la vez están tranquilas.
@@ -1097,8 +1097,8 @@ Un domingo, Dylan visitó un río con su familia.
 | :---: | --- | --- |
 | A | Reflexión y refracción. | Invierte los fenómenos: en la situación 1 la luz se desvía al pasar del agua al aire. |
 | B | Refracción y refracción. | En la situación 2 la luz rebota en la superficie; no cambia de medio. |
-| C | Refracción y reflexión. | **Correcta** |
-| D | Reflexión y reflexión. | En la situación 1 la luz pasa del agua al aire y se desvía. |
+| C | Reflexión y reflexión. | En la situación 1 la luz pasa del agua al aire y se desvía. |
+| D | Refracción y reflexión. | **Correcta** |
 
 **Resolución:** En la poza, la luz se desvía al pasar del agua al aire, y eso hace que el fondo parezca más cerca: es refracción. En el agua quieta, la luz rebota en la superficie y forma una imagen como en un espejo: es reflexión.
 
@@ -1110,7 +1110,7 @@ Un domingo, Dylan visitó un río con su familia.
 **Verbo:** determinar · **Tipo de contexto:** personal-cotidiano  
 **Tema:** Energía · **Subtema:** Manifestaciones de la energía
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 Durante una tormenta, Emanuel ve un relámpago y empieza a contar los segundos hasta escuchar el trueno: cuenta 3 segundos. Su hermana le explica que la luz del relámpago llega casi al instante, mientras que el sonido del trueno viaja por el aire con una rapidez aproximada de 340 m/s.
 
@@ -1119,7 +1119,7 @@ Durante una tormenta, Emanuel ve un relámpago y empieza a contar los segundos h
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | 113 m | Divide la rapidez entre el tiempo (340 ÷ 3), cuando hay que multiplicar. |
-| B | 337 m | Resta el tiempo a la rapidez (340 − 3), y esa operación no da la distancia. |
+| B | 340 m | Toma la rapidez del sonido como si fuera la distancia, sin usar los 3 segundos. |
 | C | 343 m | Suma la rapidez y el tiempo (340 + 3), y esa operación no da la distancia. |
 | D | 1020 m | **Correcta** |
 
@@ -1142,18 +1142,18 @@ En un festival de un pueblo de Guanacaste, un grupo interpretó piezas tradicion
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | No produce vibraciones que viajen por el aire. | Todo sonido, incluido el ruido, se produce por vibraciones que viajan por un medio. |
-| B | Viaja más despacio por el aire que la música. | En el aire, todos los sonidos viajan con la misma rapidez. |
-| C | Tiene un volumen más bajo que la música. | El volumen no define al ruido; además, el zumbido era fuerte. |
-| D | Vibra de manera irregular y desagradable. | **Correcta** |
+| B | Vibra de manera irregular y desagradable. | **Correcta** |
+| C | Viaja más despacio por el aire que la música. | En el aire, todos los sonidos viajan con la misma rapidez. |
+| D | Tiene un volumen más bajo que la música. | El volumen no define al ruido; además, el zumbido era fuerte. |
 
 **Resolución:** El ruido es un sonido producido por vibraciones irregulares, sin orden, que resulta molesto. La marimba, en cambio, produce vibraciones ordenadas que se escuchan como notas agradables.
 
-### 44. cie-3-2-h · Energía · alto
+### 44. cie-3-2-h · Energía · intermedio
 
 **Afirmación 3.2:** Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas.  
 **Evidencia 3.2.11:** Reconoce los efectos negativos y positivos de la luz y el sonido en ambientes naturales y de ciudad.  
 **Bloque:** Energía  
-**Verbo:** analizar · **Tipo de contexto:** global-planetario  
+**Verbo:** identificar · **Tipo de contexto:** global-planetario  
 **Tema:** Energía · **Subtema:** Manifestaciones de la energía
 
 Considere la siguiente información:
@@ -1165,9 +1165,9 @@ En muchas playas del mundo donde anidan tortugas marinas, las crías salen del n
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | La luz de la luna impide que las crías salgan de los nidos. | La claridad natural sobre el mar es la que guía a las crías; el problema es la luz artificial. |
-| B | La luz artificial altera la orientación de algunas especies. | **Correcta** |
-| C | El calor de los bombillos seca la arena de los nidos. | El texto habla de la dirección que toman las crías, no del calor. |
-| D | La luz de las ciudades ayuda a las crías a encontrar el mar. | Es al revés: la luz artificial las aleja del mar. |
+| B | El calor de los bombillos seca la arena de los nidos. | El texto habla de la dirección que toman las crías, no del calor. |
+| C | La luz de las ciudades ayuda a las crías a encontrar el mar. | Es al revés: la luz artificial las aleja del mar. |
+| D | La luz artificial desvía a algunos animales de su ruta. | **Correcta** |
 
 **Resolución:** Las crías de tortuga buscan la zona más clara para llegar al mar. Las luces de hoteles, casas y calles las confunden y las llevan en la dirección equivocada, por eso la luz artificial puede dañar a la fauna.
 
@@ -1191,8 +1191,8 @@ Figura `cie-3-3-circuitos.svg`. Texto alternativo: Dos circuitos con una baterí
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | En el 1 siguen encendidos y en el 2 se apagan. | Confunde los circuitos: el 1 tiene un solo camino para la corriente y el 2 tiene varios. |
-| B | En el 1 se apagan y en el 2 siguen encendidos. | **Correcta** |
+| A | En el 1 se apagan y en el 2 siguen encendidos. | **Correcta** |
+| B | En el 1 siguen encendidos y en el 2 se apagan. | Confunde los circuitos: el 1 tiene un solo camino para la corriente y el 2 tiene varios. |
 | C | En los dos circuitos se apagan todos. | En el circuito en paralelo la corriente sigue por los otros caminos. |
 | D | En los dos circuitos siguen encendidos. | En el circuito en serie, al fundirse un bombillo, se interrumpe el único camino. |
 
@@ -1221,9 +1221,9 @@ En el laboratorio, Brandon probó varios objetos en un circuito con una batería
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | El borrador y el palito de madera. | **Correcta** |
-| B | El clip de metal y el borrador. | El clip encendió el bombillo, por eso es conductor. |
-| C | La mina de lápiz y el palito de madera. | La mina de lápiz sí dejó pasar la corriente, aunque no sea de metal. |
+| A | El clip de metal y el borrador. | El clip encendió el bombillo, por eso es conductor. |
+| B | La mina de lápiz y el palito de madera. | La mina de lápiz sí dejó pasar la corriente, aunque no sea de metal. |
+| C | El borrador y el palito de madera. | **Correcta** |
 | D | El clip de metal y la mina de lápiz. | Son los conductores: los dos permitieron que el bombillo encendiera. |
 
 **Resolución:** Los materiales aislantes no dejan pasar la corriente eléctrica, por eso con ellos el bombillo no encendió. En la prueba de Brandon, eso ocurrió con el borrador y con el palito de madera.
@@ -1244,9 +1244,9 @@ En la clase de Ciencias, Rebeca frotó dos tiras de plástico iguales con el mis
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Quedaron con cargas de distinto tipo y se repelen. | Las cargas de distinto tipo se atraen, no se repelen. |
-| B | Quedaron sin carga después de frotarlas con el paño. | Al frotarlas ganan carga; por eso atraen los pedacitos de papel. |
-| C | Quedaron con cargas del mismo tipo y se repelen. | **Correcta** |
+| A | Quedaron con cargas del mismo tipo y se repelen. | **Correcta** |
+| B | Quedaron con cargas de distinto tipo y se repelen. | Las cargas de distinto tipo se atraen, no se repelen. |
+| C | Quedaron sin carga después de frotarlas con el paño. | Al frotarlas ganan carga; por eso atraen los pedacitos de papel. |
 | D | Quedaron con cargas del mismo tipo y se atraen. | Las cargas del mismo tipo se repelen; por eso las tiras se alejaron. |
 
 **Resolución:** Como las dos tiras se frotaron con el mismo paño, quedaron con el mismo tipo de carga eléctrica. Las cargas iguales se repelen, por eso las tiras se alejaron una de la otra.
@@ -1254,25 +1254,25 @@ En la clase de Ciencias, Rebeca frotó dos tiras de plástico iguales con el mis
 ### 48. cie-3-3-d · Energía · intermedio
 
 **Afirmación 3.3:** Determina las características de la electricidad, el magnetismo, la corriente eléctrica, los circuitos y la conductividad en fenómenos cotidianos.  
-**Evidencia 3.3.5:** Reconoce las características del magnetismo, polos magnéticos, ejemplos, manifestaciones y usos en la vida cotidiana, así como su relación con la energía eléctrica (electroimanes).  
+**Evidencia 3.3.6:** Reconoce materiales magnéticos y el funcionamiento de la brújula.  
 **Bloque:** Energía  
-**Verbo:** reconocer · **Tipo de contexto:** personal-cotidiano  
+**Verbo:** analizar · **Tipo de contexto:** personal-cotidiano  
 **Tema:** Energía · **Subtema:** Electricidad y magnetismo
 
-Lea la siguiente información:
+Considere la siguiente información:
 
-En un centro de reciclaje, una grúa tiene en su extremo un disco grande formado por una bobina de alambre enrollado alrededor de un núcleo de hierro. Cuando el operario activa el interruptor, el disco levanta piezas de chatarra de hierro. Al llegar al contenedor, el operario apaga el interruptor y la chatarra cae.
+En una gira al cerro Chirripó, Daniel lleva una brújula para orientarse. La aguja de la brújula es un pequeño imán que puede girar libremente; uno de sus extremos apunta hacia el norte de la Tierra. Durante un descanso, Daniel coloca la brújula junto a su linterna, que tiene un imán en la base, y nota que la aguja deja de señalar el norte y apunta hacia la linterna.
 
-**¿Qué característica del disco permite soltar la chatarra en el contenedor?**
+**¿Qué explica el cambio en la dirección de la aguja?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Su magnetismo depende de que pase corriente eléctrica. | **Correcta** |
-| B | Su magnetismo es permanente, como el de un imán común. | Si fuera permanente, la chatarra no caería al apagar el interruptor. |
-| C | El hierro pierde su peso cuando se apaga la grúa. | El hierro siempre tiene peso; lo que cambia es la atracción magnética. |
-| D | Atrae solo materiales de aluminio, como las latas. | Los imanes atraen el hierro, no el aluminio, y el disco levanta chatarra de hierro. |
+| A | La linterna gasta la carga eléctrica de la aguja. | Confunde el magnetismo con la electricidad: la aguja es un imán, no guarda carga eléctrica. |
+| B | El norte de la Tierra cambia de lugar durante el día. | Los polos de la Tierra no cambian de lugar en un día, y la aguja apuntó hacia la linterna. |
+| C | El imán de la aguja pierde su fuerza al quedar quieto. | Si la aguja perdiera su fuerza, no apuntaría hacia la linterna. |
+| D | Otro imán cercano atrae la aguja más que la Tierra. | **Correcta** |
 
-**Resolución:** La grúa usa un electroimán, que es una bobina con corriente eléctrica que se comporta como un imán. Al apagar el interruptor deja de pasar la corriente, el disco pierde su magnetismo y la chatarra cae.
+**Resolución:** La aguja de la brújula es un imán que normalmente se orienta hacia el norte de la Tierra. Si se acerca otro imán, este la atrae con más fuerza y la aguja apunta hacia él; por eso las brújulas se usan lejos de los imanes.
 
 ### 49. cie-4-1-a · Geofísica · intermedio
 
@@ -1296,8 +1296,8 @@ Figura `cie-4-1-atmosfera.svg`. Texto alternativo: Columna de la atmósfera divi
 | :---: | --- | --- |
 | A | Se forman las nubes, la lluvia y casi todo el viento. | Eso ocurre en la capa 1, la más cercana a la superficie. |
 | B | Se queman muchos meteoroides al entrar a la atmósfera. | Eso ocurre en la capa 3, la mesosfera. |
-| C | Se reflejan las ondas de radio que viajan por el planeta. | Eso ocurre en la capa 4, la ionosfera. |
-| D | El ozono filtra parte de los rayos ultravioleta del Sol. | **Correcta** |
+| C | El ozono filtra parte de los rayos ultravioleta del Sol. | **Correcta** |
+| D | Se reflejan las ondas de radio que viajan por el planeta. | Eso ocurre en la capa 4, la ionosfera. |
 
 **Resolución:** La capa 2 es la estratosfera, donde se encuentra la capa de ozono. El ozono filtra parte de los rayos ultravioleta del Sol y así protege a los seres vivos.
 
@@ -1309,7 +1309,7 @@ Figura `cie-4-1-atmosfera.svg`. Texto alternativo: Columna de la atmósfera divi
 **Verbo:** distinguir · **Tipo de contexto:** local-nacional  
 **Tema:** Geofísica · **Subtema:** Estructura de la Tierra, clima y relieve
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 Durante una semana, Karla anotó dos frases que escuchó en su casa:
 
@@ -1322,8 +1322,8 @@ Durante una semana, Karla anotó dos frases que escuchó en su casa:
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | Al tiempo atmosférico y al clima. | Invierte los conceptos: la frase 1 describe lo que se repite durante muchos años. |
-| B | Al clima en las dos frases. | La frase 2 describe lo que ocurrió en una sola tarde. |
-| C | Al clima y al tiempo atmosférico. | **Correcta** |
+| B | Al clima y al tiempo atmosférico. | **Correcta** |
+| C | Al clima en las dos frases. | La frase 2 describe lo que ocurrió en una sola tarde. |
 | D | Al tiempo atmosférico en las dos frases. | La frase 1 habla de condiciones que se repiten año tras año. |
 
 **Resolución:** El clima describe las condiciones que se repiten en un lugar durante muchos años, como la época seca de Guanacaste. El tiempo atmosférico es lo que ocurre en un momento corto, como el aguacero de una tarde en Cartago.
@@ -1338,16 +1338,16 @@ Durante una semana, Karla anotó dos frases que escuchó en su casa:
 
 Lea la siguiente información:
 
-En las faldas de varios volcanes del Valle Central de Costa Rica, la ceniza y otros materiales expulsados en erupciones de hace mucho tiempo se acumularon capa tras capa y formaron suelos muy fértiles. Hoy esas tierras se aprovechan para cultivar hortalizas, papas y café.
+En las faldas de los volcanes que rodean el Valle Central de Costa Rica, la ceniza y otros materiales expulsados en erupciones de hace mucho tiempo se acumularon capa tras capa y formaron suelos muy fértiles. Hoy esas tierras se aprovechan para cultivar hortalizas, papas y café.
 
-**¿Qué tipo de agente modificó ese relieve y qué influencia tiene en las actividades humanas?**
+**¿Qué tipo de agente formó esos suelos y por qué se clasifica así?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Un agente externo, que favoreció la agricultura de la zona. | Las erupciones volcánicas nacen del interior de la Tierra, por eso son un agente interno. |
-| B | Un agente interno, que favoreció la agricultura de la zona. | **Correcta** |
-| C | Un agente interno, que impidió la agricultura de la zona. | El texto muestra que esos suelos se aprovechan para cultivar. |
-| D | Un agente externo, que impidió la agricultura de la zona. | Equivoca el tipo de agente y también su efecto en la agricultura. |
+| A | Un agente externo, porque la lluvia y el viento formaron el suelo. | Confunde la ceniza volcánica con la acción de la lluvia y el viento, que son agentes externos. |
+| B | Un agente externo, porque la ceniza se fue acumulando con el tiempo. | Se fija en la acumulación, pero el material salió del interior de la Tierra en erupciones. |
+| C | Un agente interno, porque los cultivos cambiaron la forma del terreno. | Acierta en el tipo de agente, pero los cultivos son una actividad humana, no el origen del suelo. |
+| D | Un agente interno, porque se originó en el interior del planeta. | **Correcta** |
 
 **Resolución:** Las erupciones volcánicas se originan en el interior de la Tierra, por eso son un agente interno que modifica el relieve. En este caso, la ceniza formó suelos fértiles que favorecen la agricultura.
 
@@ -1361,16 +1361,16 @@ En las faldas de varios volcanes del Valle Central de Costa Rica, la ceniza y ot
 
 El siguiente texto se relaciona con la geosfera:
 
-Costa Rica se ubica en una zona donde la placa del Coco se hunde lentamente debajo de la placa Caribe. Esas placas son grandes pedazos de la capa rígida exterior de la Tierra, que está formada por la corteza y por la parte más alta del manto. Debajo de ella, el manto es más caliente y sus materiales se pueden mover muy despacio.
+Costa Rica se ubica en una zona donde la placa del Coco se hunde lentamente debajo de otras placas. Esas placas son grandes pedazos de la capa rígida exterior de la Tierra, y sus choques producen muchos de los sismos del país. Debajo de esa capa, el manto es más caliente y sus materiales se pueden mover muy despacio.
 
 **Según la información, ¿cuál afirmación describe correctamente la capa que forma las placas?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Es la corteza, que también abarca todo el manto terrestre. | Confunde la corteza con la litosfera y además le agrega todo el manto. |
-| B | Es el manto, que forma una capa sólida y rígida. | El manto que está debajo es más caliente y sus materiales se mueven; no forma las placas. |
-| C | Es la litosfera, que está formada solo por la corteza terrestre. | Olvida que la litosfera también incluye la parte superior del manto. |
-| D | Es la litosfera, que abarca la corteza y el manto superior. | **Correcta** |
+| A | Es la litosfera, que abarca la corteza y el manto superior. | **Correcta** |
+| B | Es la corteza, que también abarca todo el manto terrestre. | Confunde la corteza con la litosfera y además le agrega todo el manto. |
+| C | Es el manto, que forma una capa sólida y rígida. | El manto que está debajo es más caliente y sus materiales se mueven; no forma las placas. |
+| D | Es la litosfera, que está formada solo por la corteza terrestre. | Olvida que la litosfera también incluye la parte superior del manto. |
 
 **Resolución:** Las placas son pedazos de la litosfera, la capa rígida que abarca la corteza y la parte superior del manto. Por eso la litosfera no es lo mismo que la corteza: es un poco más gruesa.
 
@@ -1379,7 +1379,7 @@ Costa Rica se ubica en una zona donde la placa del Coco se hunde lentamente deba
 **Afirmación 4.1:** Distingue la estructura interna y externa del planeta Tierra, así como los agentes externos e internos que modifican esas estructuras.  
 **Evidencia 4.1.3:** Identifica las partes de la hidrosfera (mares, océanos, ríos, aguas subterráneas, hielo, nubes).  
 **Bloque:** Geofísica  
-**Verbo:** clasificar · **Tipo de contexto:** global-planetario  
+**Verbo:** comprender · **Tipo de contexto:** global-planetario  
 **Tema:** Geofísica · **Subtema:** Estructura de la Tierra, clima y relieve
 
 Lea la siguiente información:
@@ -1405,7 +1405,7 @@ El agua del planeta se encuentra en lugares muy distintos. Una parte forma los o
 **Verbo:** reconocer · **Tipo de contexto:** global-planetario  
 **Tema:** Geofísica · **Subtema:** Movimientos de la Tierra y la Luna
 
-Lea la siguiente información:
+Considere la siguiente información:
 
 Melany vive en Costa Rica y tiene una prima que vive en Japón. Un día, a las doce del mediodía en Costa Rica, Melany la llamó por videollamada: su prima ya estaba en pijama porque allá era de madrugada del día siguiente. Esta diferencia de horario ocurre todos los días del año.
 
@@ -1413,8 +1413,8 @@ Melany vive en Costa Rica y tiene una prima que vive en Japón. Un día, a las d
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La rotación de la Tierra sobre su propio eje. | **Correcta** |
-| B | La traslación de la Tierra alrededor del Sol. | La traslación explica el año y las estaciones, no el día y la noche. |
+| A | La traslación de la Tierra alrededor del Sol. | La traslación explica el año y las estaciones, no el día y la noche. |
+| B | La rotación de la Tierra sobre su propio eje. | **Correcta** |
 | C | La rotación de la Luna sobre su propio eje. | El movimiento de la Luna no produce el día y la noche en la Tierra. |
 | D | La traslación de la Luna alrededor de la Tierra. | El viaje de la Luna alrededor de la Tierra produce las fases lunares, no el día y la noche. |
 
@@ -1432,7 +1432,7 @@ Observe la siguiente imagen:
 
 (figura: cie-4-2-eclipse.svg)
 
-El esquema, que no está dibujado a escala, muestra la posición del Sol, la Tierra y la Luna durante un fenómeno que muchas personas observaron desde el lado de la Tierra donde era de noche. En ese momento, los tres astros estaban alineados.
+El esquema, que no está dibujado a escala, muestra la posición del Sol, la Tierra y la Luna durante un fenómeno astronómico. En ese momento, los tres astros estaban alineados. Fenómenos como este se repiten a lo largo de los años y se pueden predecir con mucha anticipación.
 
 **¿Qué fenómeno representa el esquema y en qué fase se encontraba la Luna?**
 
@@ -1441,8 +1441,8 @@ Figura `cie-4-2-eclipse.svg`. Texto alternativo: Esquema sin escala con el Sol a
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | Un eclipse solar, con la Luna en fase nueva. | En un eclipse solar la Luna queda entre el Sol y la Tierra, y aquí está detrás de la Tierra. |
-| B | Un eclipse lunar, con la Luna en fase llena. | **Correcta** |
-| C | Un eclipse lunar, con la Luna en fase nueva. | En fase nueva la Luna está entre el Sol y la Tierra; aquí está del lado opuesto al Sol. |
+| B | Un eclipse lunar, con la Luna en fase nueva. | En fase nueva la Luna está entre el Sol y la Tierra; aquí está del lado opuesto al Sol. |
+| C | Un eclipse lunar, con la Luna en fase llena. | **Correcta** |
 | D | Un eclipse solar, con la Luna en fase llena. | Confunde el tipo de eclipse: aquí la Tierra es la que tapa la luz que llega a la Luna. |
 
 **Resolución:** Cuando la Tierra queda entre el Sol y la Luna, su sombra cae sobre la Luna y se produce un eclipse lunar. En esa posición la Luna está del lado opuesto al Sol, por eso este eclipse ocurre en fase de luna llena.
@@ -1466,7 +1466,7 @@ En Puntarenas, los pescadores artesanales revisan cada día una tabla de mareas 
 | A | El viento que sopla con fuerza desde la costa hacia el mar. | El viento forma olas, pero no causa la subida y bajada regular del nivel del mar. |
 | B | La lluvia que aumenta el caudal de los ríos que llegan al mar. | La lluvia no produce cambios que se repiten dos veces al día. |
 | C | La atracción que ejerce la Luna sobre el agua de los océanos. | **Correcta** |
-| D | La rotación de la Luna sobre su eje cada día. | Confunde el movimiento: la marea se debe a la atracción de la Luna, no a su giro sobre sí misma. |
+| D | El movimiento de rotación de la Luna sobre su propio eje. | Confunde la atracción de la Luna con su rotación, que no mueve el agua de la Tierra. |
 
 **Resolución:** La Luna atrae el agua de los océanos con su fuerza de gravedad, y eso hace que el nivel del mar suba y baje. Como la Tierra gira, cada costa pasa por esos cambios dos veces al día.
 
@@ -1486,9 +1486,9 @@ En diciembre, en Argentina las familias van a la playa porque es verano, mientra
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La mayor cercanía de la Tierra al Sol en algunos meses. | El texto muestra que la distancia casi no cambia y que en enero, más cerca del Sol, Canadá está en invierno. |
-| B | La rotación de la Tierra sobre su eje cada día. | La rotación produce el día y la noche, no las estaciones. |
-| C | El eje inclinado de la Tierra en su traslación. | **Correcta** |
+| A | El eje inclinado de la Tierra en su traslación. | **Correcta** |
+| B | La mayor cercanía de la Tierra al Sol en algunos meses. | El texto muestra que la distancia casi no cambia y que en enero, más cerca del Sol, Canadá está en invierno. |
+| C | La rotación de la Tierra sobre su eje cada día. | La rotación produce el día y la noche, no las estaciones. |
 | D | La posición de la Luna con respecto a la Tierra. | La Luna produce fases y mareas, no las estaciones. |
 
 **Resolución:** El eje de la Tierra está inclinado y, mientras la Tierra viaja alrededor del Sol, cada hemisferio recibe los rayos solares de forma más directa en distintos meses. Por eso, cuando en Argentina es verano, en Canadá es invierno.
@@ -1503,20 +1503,20 @@ En diciembre, en Argentina las familias van a la playa porque es verano, mientra
 
 El siguiente texto se relaciona con el Sistema Solar:
 
-Entre las órbitas de Marte y Júpiter hay una gran cantidad de asteroides que forman un cinturón. Ese cinturón sirve como referencia para separar los ocho planetas del Sistema Solar en dos grupos: los cuatro que están antes del cinturón, más cercanos al Sol, y los cuatro que están después, más alejados.
+Entre las órbitas de Marte y Júpiter hay una gran cantidad de asteroides que forman un cinturón. Ese cinturón sirve como referencia para separar los ocho planetas del Sistema Solar en dos grupos: los cuatro que están antes del cinturón, más cercanos al Sol, y los cuatro que están después, más alejados. Los cuatro primeros tienen una superficie sólida donde una nave podría posarse. Los cuatro que siguen son mucho más grandes y no tienen una superficie firme donde aterrizar.
 
 **¿Qué característica diferencia a los planetas del grupo más alejado del Sol?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Son gigantes formados sobre todo por gases. | **Correcta** |
-| B | Son pequeños y tienen una superficie rocosa. | Esa es la característica de los planetas más cercanos al Sol. |
+| A | Son pequeños y tienen una superficie rocosa. | Esa es la característica de los planetas más cercanos al Sol. |
+| B | Son gigantes con gruesas capas de gases. | **Correcta** |
 | C | No tienen ningún satélite natural a su alrededor. | Esos planetas tienen muchos satélites naturales. |
 | D | Tienen las temperaturas más altas del sistema. | Al estar más lejos del Sol, son planetas muy fríos. |
 
-**Resolución:** Júpiter, Saturno, Urano y Neptuno están después del cinturón de asteroides y son planetas gigantes formados en su mayor parte por gases. Los cuatro más cercanos al Sol, en cambio, son pequeños y rocosos.
+**Resolución:** Júpiter, Saturno, Urano y Neptuno están después del cinturón de asteroides y son planetas gigantes con gruesas capas de gases. Los cuatro más cercanos al Sol, en cambio, son pequeños y rocosos.
 
-### 59. cie-4-3-b · Geofísica · intermedio
+### 59. cie-4-3-b · Geofísica · alto
 
 **Afirmación 4.3:** Distingue los componentes Sistema Solar, el Universo y los alcances científico-tecnológicos de la exploración espacial.  
 **Evidencia 4.3.2:** Distingue las características del Sol y su ubicación en la Vía Láctea.  
@@ -1526,16 +1526,16 @@ Entre las órbitas de Marte y Júpiter hay una gran cantidad de asteroides que f
 
 Lea la siguiente información:
 
-En una noche despejada, lejos de las luces de la ciudad, se observa en el cielo una franja blanquecina formada por miles de millones de estrellas. Esa franja es parte de la galaxia en la que se encuentra el Sistema Solar. El Sol, que ilumina y calienta la Tierra, es solo una de las estrellas de esa galaxia.
+En una noche despejada, lejos de las luces de la ciudad, se observa en el cielo una franja blanquecina formada por miles de millones de estrellas. Esa franja es parte de la galaxia en la que se encuentra el Sistema Solar. El Sol es solo una de sus estrellas: hay otras cientos de veces más grandes y otras mucho más pequeñas, y el Sistema Solar no está en el centro de la galaxia, sino en uno de sus brazos.
 
 **¿Cuál opción describe correctamente al Sol y su ubicación?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Es una estrella mediana ubicada en un brazo de la Vía Láctea. | **Correcta** |
-| B | Es una estrella gigante ubicada en el centro de la Vía Láctea. | El Sol es una estrella mediana y está lejos del centro de la galaxia. |
+| A | Es una estrella gigante ubicada en el centro de la Vía Láctea. | El Sol es una estrella mediana y está lejos del centro de la galaxia. |
+| B | Es una estrella mediana ubicada en un brazo de la Vía Láctea. | **Correcta** |
 | C | Es un planeta brillante ubicado en el centro del Sistema Solar. | El Sol es una estrella, no un planeta. |
-| D | Es la estrella más grande ubicada en una galaxia vecina. | El Sol está en la Vía Láctea y no es la estrella más grande. |
+| D | Es la estrella más grande, ubicada en un brazo de una galaxia vecina. | Contradice el texto: hay estrellas mucho más grandes que el Sol, y el Sistema Solar está en la Vía Láctea. |
 
 **Resolución:** El Sol es una estrella de tamaño mediano que se encuentra en uno de los brazos de la Vía Láctea, lejos de su centro. Parece tan grande y brillante porque está mucho más cerca de la Tierra que las demás estrellas.
 
@@ -1559,9 +1559,9 @@ Lea la siguiente información:
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Satélite artificial, estación espacial y sonda espacial. | Confunde la sonda, que viaja a otros planetas, con el satélite, que gira alrededor de la Tierra. |
-| B | Sonda espacial, satélite artificial y estación espacial. | La estación espacial es la que tiene astronautas viviendo en ella. |
-| C | Estación espacial, sonda espacial y satélite artificial. | La estación no viaja a otros planetas; la que lo hace es la sonda. |
-| D | Sonda espacial, estación espacial y satélite artificial. | **Correcta** |
+| A | Sonda espacial, estación espacial y satélite artificial. | **Correcta** |
+| B | Satélite artificial, estación espacial y sonda espacial. | Confunde la sonda, que viaja a otros planetas, con el satélite, que gira alrededor de la Tierra. |
+| C | Sonda espacial, satélite artificial y estación espacial. | La estación espacial es la que tiene astronautas viviendo en ella. |
+| D | Estación espacial, sonda espacial y satélite artificial. | La estación no viaja a otros planetas; la que lo hace es la sonda. |
 
 **Resolución:** La sonda viaja lejos sin tripulación para estudiar otros planetas, la estación espacial es un laboratorio en órbita donde viven astronautas y el satélite artificial gira alrededor de la Tierra enviando información. Cada uno aporta datos distintos para conocer el espacio y nuestro planeta.

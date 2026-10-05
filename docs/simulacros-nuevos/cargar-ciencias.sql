@@ -70,7 +70,7 @@ from public.simulacros_nuevos s
 cross join (values
     ('cie-1-1-a', 1, 'Cuerpo humano', 'Niveles de organización del cuerpo humano', 'intermedio', 'Lea la siguiente información:
 
-En una feria científica, un grupo de sexto año comparó una célula del cuerpo humano con una ciudad rodeada por una muralla. Explicaron que la muralla tiene portones vigilados: permite que entren el agua y los nutrientes que la ciudad necesita y que salgan los desechos, pero impide el paso de sustancias que podrían dañarla. Así, la muralla separa lo que está dentro de la ciudad de lo que está afuera.
+En una feria científica, un grupo de sexto grado comparó una célula del cuerpo humano con una ciudad rodeada por una muralla. Explicaron que la muralla tiene portones vigilados: permite que entren el agua y los nutrientes que la ciudad necesita y que salgan los desechos, pero impide el paso de sustancias que podrían dañarla. Así, la muralla separa lo que está dentro de la ciudad de lo que está afuera.
 
 En la comparación anterior, la muralla con portones vigilados representa', 'La membrana celular rodea a la célula y regula qué entra y qué sale, igual que una muralla con portones vigilados. Por eso deja pasar agua y nutrientes, deja salir desechos y frena lo que podría hacerle daño.', false),
     ('cie-1-1-b', 2, 'Cuerpo humano', 'Niveles de organización del cuerpo humano', 'alto', 'Analice la siguiente tabla:
@@ -88,12 +88,12 @@ En la comparación anterior, la muralla con portones vigilados representa', 'La 
 Mariela estira el brazo para alcanzar una guayaba del árbol. Para lograrlo, un grupo de células alargadas del brazo se acorta y jala los huesos; esas células forman un tejido que trabaja cuando recibe una orden del cerebro. Al mismo tiempo, otro tejido, duro y rico en calcio, mantiene firme el brazo para que no se doble mientras sostiene la fruta.
 
 Según la información anterior, ¿qué función cumplen, en orden, los dos tejidos descritos?', 'El tejido muscular se acorta, es decir, se contrae, y así jala los huesos para mover el brazo. El tejido óseo es duro gracias al calcio y sirve de soporte para que el cuerpo no se doble.', false),
-    ('cie-1-2-a', 4, 'Cuerpo humano', 'Tejido sanguíneo e inmunidad', 'alto', 'Lea la siguiente información:
+    ('cie-1-2-a', 4, 'Cuerpo humano', 'Tejido sanguíneo e inmunidad', 'alto', 'Considere la siguiente información:
 
 Fiorella se raspó la rodilla al caer de la bicicleta. A los pocos minutos la herida dejó de sangrar, porque unos fragmentos de células de la sangre se pegaron entre sí y formaron un tapón que después se convirtió en costra. Al día siguiente, alrededor del raspón la piel estaba roja y un poco hinchada: hasta ese lugar habían llegado otras células de la sangre que rodeaban y destruían a los microbios que entraron por la herida.
 
 ¿Cuáles componentes del tejido sanguíneo actuaron en cada momento, en el orden en que se describen?', 'Las plaquetas se unen y forman el tapón que detiene el sangrado, y luego los glóbulos blancos llegan a la herida para atacar a los microbios. Por eso la zona se pone roja e hinchada mientras el cuerpo se defiende.', false),
-    ('cie-1-2-b', 5, 'Cuerpo humano', 'Tejido sanguíneo e inmunidad', 'alto', 'Lea la siguiente información:
+    ('cie-1-2-b', 5, 'Cuerpo humano', 'Tejido sanguíneo e inmunidad', 'intermedio', 'Lea la siguiente información:
 
 La inmunidad es activa cuando el propio cuerpo fabrica sus anticuerpos después de tener contacto con un microbio o con una vacuna. Es pasiva cuando la persona recibe anticuerpos que ya fueron fabricados por otro organismo.
 
@@ -124,17 +124,17 @@ En dos comunidades imaginarias con la misma cantidad de habitantes apareció una
 En Las Brisas también se libraron del contagio dos bebés que todavía no podían vacunarse.
 
 ¿Qué beneficio de la vacunación muestran los datos?', 'En Las Brisas casi todas las personas estaban vacunadas y la enfermedad casi no pudo pasar de una persona a otra, por eso hasta los bebés quedaron protegidos. Cuando la mayoría se vacuna, se cuida también a quienes todavía no pueden recibir la vacuna.', false),
-    ('cie-1-3-c', 9, 'Cuerpo humano', 'Vacunas', 'intermedio', 'Lea la siguiente información:
+    ('cie-1-3-c', 9, 'Cuerpo humano', 'Vacunas', 'alto', 'Lea la siguiente información:
 
 La viruela fue una enfermedad contagiosa que durante siglos afectó a personas de todos los continentes. Como el virus solo podía pasar de una persona a otra, se organizaron campañas para vacunar a la población de muchísimos países. Poco a poco el virus dejó de encontrar personas a quienes contagiar, y hoy esa enfermedad ya no circula en ningún lugar del planeta.
 
 Del caso de la viruela se concluye que la vacunación', 'Al vacunar a tanta gente, el virus de la viruela ya no encontró a quién contagiar y desapareció del planeta. Esto muestra el gran poder de la vacunación cuando se hace en muchos países a la vez.', false),
-    ('cie-1-4-a', 10, 'Cuerpo humano', 'Órganos, sistemas y salud', 'alto', 'Lea la siguiente información:
+    ('cie-1-4-a', 10, 'Cuerpo humano', 'Órganos, sistemas y salud', 'alto', 'Considere la siguiente información:
 
 Un órgano del sistema digestivo mide varios metros de largo y está doblado muchas veces dentro del abdomen. Su pared interna tiene millones de pliegues diminutos, parecidos a dedos, que aumentan la superficie en contacto con el alimento ya digerido. Por dentro de cada pliegue pasan vasos sanguíneos muy delgados.
 
 Por sus características, la función principal de ese órgano es', 'Los pliegues parecidos a dedos aumentan la superficie para que los nutrientes del alimento digerido pasen a los vasos sanguíneos. Así trabaja el intestino delgado, que absorbe los nutrientes y los entrega a la sangre.', false),
-    ('cie-1-4-b', 11, 'Cuerpo humano', 'Órganos, sistemas y salud', 'intermedio', 'Analice la siguiente tabla:
+    ('cie-1-4-b', 11, 'Cuerpo humano', 'Órganos, sistemas y salud', 'alto', 'Analice la siguiente tabla:
 
 Andrés anotó algunos de sus hábitos durante una semana.
 
@@ -145,15 +145,15 @@ Andrés anotó algunos de sus hábitos durante una semana.
 | Cargar el bulto en un hombro | Todos los días |
 | Tomar agua en lugar de refresco | Casi siempre |
 
-¿Cuál hábito de la tabla puede afectar de forma negativa a los huesos y músculos de la espalda?', 'Cargar todo el peso del bulto en un solo hombro inclina la espalda hacia un lado y obliga a huesos y músculos a trabajar de forma desigual. Lo recomendable es usar los dos tirantes y llevar solo lo necesario.', false),
-    ('cie-1-4-c', 12, 'Cuerpo humano', 'Órganos, sistemas y salud', 'alto', 'Lea la siguiente información:
+¿Cuál hábito de la tabla conviene cambiar para cuidar los huesos y los músculos, y por qué?', 'Cargar todo el peso del bulto en un solo hombro inclina la espalda hacia un lado y obliga a huesos y músculos a trabajar de forma desigual. Lo recomendable es usar los dos tirantes y llevar solo lo necesario.', false),
+    ('cie-1-4-c', 12, 'Cuerpo humano', 'Órganos, sistemas y salud', 'intermedio', 'Considere la siguiente información:
 
 En un cantón del país, la municipalidad cierra al tránsito una calle principal cada domingo en la mañana para que las familias caminen, patinen o anden en bicicleta. Por su parte, la asociación de desarrollo de un barrio instaló aparatos para ejercitarse en el parque, y el comité de deportes organiza clases gratuitas de baile para personas adultas mayores.
 
-¿Por qué estas acciones comunales e institucionales favorecen la salud de los sistemas del cuerpo?', 'Caminar, patinar, andar en bicicleta o bailar mantienen el cuerpo en movimiento, y eso fortalece el corazón, los pulmones, los músculos y los huesos. Cuando la comunidad y las instituciones abren estos espacios, a más personas les resulta fácil mantenerse activas.', false),
-    ('cie-1-4-d', 13, 'Cuerpo humano', 'Órganos, sistemas y salud', 'intermedio', 'Considere la siguiente información:
+¿Por qué estas acciones comunales e institucionales favorecen la salud de los sistemas del cuerpo?', 'Caminar, patinar, andar en bicicleta o bailar mantienen el cuerpo en movimiento, y eso fortalece el corazón, los músculos y los huesos, y mejora la respiración. Cuando la comunidad y las instituciones abren estos espacios, a más personas les resulta fácil mantenerse activas.', false),
+    ('cie-1-4-d', 13, 'Cuerpo humano', 'Órganos, sistemas y salud', 'alto', 'Considere la siguiente información:
 
-Después de jugar bajo el sol, Isaac nota que su camiseta está mojada y que en su frente quedan gotitas con sabor salado. El sudor sale por pequeños poros de la piel y, al evaporarse, ayuda a enfriar el cuerpo. Ese líquido contiene agua, sales y pequeñas cantidades de urea, una sustancia de desecho que el cuerpo no necesita.
+Después de jugar bajo el sol, Isaac nota que su camiseta está mojada y que en su frente quedan gotitas con sabor salado. El sudor sale por pequeños poros de la piel y, al evaporarse, ayuda a enfriar el cuerpo. Ese líquido contiene agua, sales y pequeñas cantidades de urea, la misma sustancia que se encuentra en la orina.
 
 Además de regular la temperatura, el sudor muestra que la piel participa en la función de', 'El sudor lleva agua, sales y un poco de urea, que el cuerpo no necesita. Al expulsar esas sustancias, la piel ayuda al sistema excretor, además de refrescar el cuerpo.', false),
     ('cie-1-5-a', 14, 'Cuerpo humano', 'Interrelación de los sistemas', 'intermedio', 'Observe la siguiente imagen:
@@ -165,10 +165,10 @@ El esquema representa cómo se relacionan algunos órganos cuando Esteban corre 
 Según el esquema, ¿por qué aumentan al mismo tiempo la respiración y los latidos de Esteban?', 'Al correr, los músculos gastan más oxígeno. Por eso los pulmones trabajan más rápido para tomarlo del aire y el corazón late con más fuerza para que la sangre lo lleve a los músculos.', false),
     ('cie-1-5-b', 15, 'Cuerpo humano', 'Interrelación de los sistemas', 'intermedio', 'Lea la siguiente información:
 
-Hazel se rió a carcajadas mientras comía arroz y empezó a toser con fuerza. Su abuela le explicó que en la garganta hay un conducto por el que pasan tanto el aire como los alimentos. Al tragar, una pequeña tapa cierra el camino hacia la tráquea para que la comida siga hacia el esófago; si una persona habla o se ríe al tragar, esa tapa puede no cerrarse a tiempo.
+Hazel se rio a carcajadas mientras comía arroz y empezó a toser con fuerza. Su abuela le explicó que en la garganta hay un conducto por el que pasan tanto el aire como los alimentos. Al tragar, una pequeña tapa cierra el camino hacia la tráquea para que la comida siga hacia el esófago; si una persona habla o se ríe al tragar, esa tapa puede no cerrarse a tiempo.
 
 La situación muestra una acción que comparten los sistemas', 'La faringe es un conducto que usan el sistema respiratorio, para el paso del aire, y el sistema digestivo, para el paso de los alimentos. La pequeña tapa llamada epiglotis se cierra al tragar para que la comida vaya al esófago y no a la tráquea.', false),
-    ('cie-1-5-c', 16, 'Cuerpo humano', 'Interrelación de los sistemas', 'alto', 'Lea la siguiente información:
+    ('cie-1-5-c', 16, 'Cuerpo humano', 'Interrelación de los sistemas', 'alto', 'Considere la siguiente información:
 
 En un día muy caluroso, el cuerpo pierde mucha agua por el sudor. Cuando eso ocurre, el encéfalo detecta el cambio y produce la sensación de sed. Al mismo tiempo, se envían señales a los riñones para que eliminen menos agua, por lo que la orina sale en menor cantidad y de color más oscuro. Al beber líquido, la sangre recupera la cantidad de agua que necesita.
 
@@ -178,9 +178,9 @@ En un día muy caluroso, el cuerpo pierde mucha agua por el sudor. Cuando eso oc
 La biodiversidad se puede observar en tres niveles: la variedad de genes dentro de una misma especie, la variedad de especies que habitan un lugar y la variedad de ecosistemas de una región. Costa Rica, con un territorio pequeño, reúne bosques lluviosos, bosques nubosos, manglares, páramos y arrecifes de coral, entre otros ambientes.
 
 Según la información, ¿cuál opción es un ejemplo de diversidad de especies?', 'La diversidad de especies se refiere a las distintas clases de seres vivos que hay en un lugar, como varias especies de colibríes en un mismo jardín. Las mazorcas de colores muestran diversidad genética y el manglar con el páramo, diversidad de ecosistemas.', false),
-    ('cie-2-1-b', 18, 'Biodiversidad', 'Biodiversidad y adaptaciones', 'alto', 'Lea la siguiente información:
+    ('cie-2-1-b', 18, 'Biodiversidad', 'Biodiversidad y adaptaciones', 'alto', 'Considere la siguiente información:
 
-En el Refugio de Vida Silvestre Ostional, en Guanacaste, ocurre un fenómeno llamado arribada: durante algunas noches, miles de hembras de tortuga lora salen del mar casi al mismo tiempo para poner sus huevos en la arena. Al llegar tantas juntas, los depredadores no logran comerse todos los huevos y muchas crías sobreviven.
+En el Refugio Nacional de Vida Silvestre Ostional, en Guanacaste, ocurre un fenómeno llamado arribada: durante algunas noches, miles de hembras de tortuga lora salen del mar casi al mismo tiempo para poner sus huevos en la arena. Al llegar tantas juntas, los depredadores no logran comerse todos los huevos y muchas crías sobreviven.
 
 La arribada es un ejemplo de adaptación', 'Llegar todas juntas a la playa es un comportamiento, por eso la arribada es una adaptación conductual. Gracias a esa conducta, muchas crías logran sobrevivir aunque haya depredadores.', false),
     ('cie-2-1-c', 19, 'Biodiversidad', 'Biodiversidad y adaptaciones', 'intermedio', 'Lea la siguiente información:
@@ -188,7 +188,7 @@ La arribada es un ejemplo de adaptación', 'Llegar todas juntas a la playa es un
 En los potreros y a la orilla de muchos caminos de Costa Rica crece la dormilona, una planta pequeña de hojas divididas en muchas hojitas. Cuando Gabriel pasa la mano sobre ella, las hojitas se cierran en pocos segundos y el tallo de la hoja se dobla hacia abajo. Al rato, si nada la toca, las hojas vuelven a abrirse.
 
 La reacción de la dormilona es un ejemplo de la función vital de', 'La dormilona percibe el roce de la mano como un estímulo y responde cerrando sus hojitas. Percibir cambios del entorno y reaccionar ante ellos es la función vital de relación.', false),
-    ('cie-2-1-d', 20, 'Biodiversidad', 'Biodiversidad y adaptaciones', 'alto', 'Lea la siguiente información:
+    ('cie-2-1-d', 20, 'Biodiversidad', 'Biodiversidad y adaptaciones', 'intermedio', 'Considere la siguiente información:
 
 El pez león es originario del océano Índico y del oeste del océano Pacífico, pero desde hace algunos años se encuentra en el mar Caribe, incluidas las costas de Costa Rica. Allí se alimenta de muchos peces pequeños nativos y casi ningún animal lo depreda. Además, se reproduce con gran rapidez y puede ocupar arrecifes y manglares.
 
@@ -203,7 +203,7 @@ La situación del pez león en el Caribe representa una amenaza para la biodiver
 | 4 | No | A través de su piel, que siempre se mantiene húmeda |
 
 ¿Cuáles animales podrían corresponder, en ese orden, a los números 2 y 4?', 'El saltamontes es invertebrado y respira por tráqueas, que son tubitos que llevan el aire por dentro del cuerpo. La lombriz de tierra también es invertebrada y respira a través de su piel húmeda.', false),
-    ('cie-2-2-b', 22, 'Biodiversidad', 'Clasificación de los seres vivos', 'alto', 'Lea la siguiente información:
+    ('cie-2-2-b', 22, 'Biodiversidad', 'Clasificación de los seres vivos', 'alto', 'Considere la siguiente información:
 
 Para hacer pan casero, la abuela de Sofía mezcla la harina con levadura. Le explicó que la levadura está formada por hongos diminutos de una sola célula, distintos de los hongos grandes que crecen sobre los troncos podridos. Las células de la levadura tienen núcleo y se nutren de los azúcares de la masa; al hacerlo, liberan un gas que hace que el pan quede esponjoso.
 
@@ -232,10 +232,10 @@ En una clase de Ciencias, Tatiana elaboró este esquema para representar tres re
 ¿Cuál opción clasifica correctamente las relaciones 1, 2 y 3 del esquema?', 'En la pareja 1 la rémora se beneficia y el tiburón no se afecta, y eso es comensalismo. La pulga se beneficia y perjudica al perro, que es parasitismo, y el colibrí y la flor se benefician los dos, que es mutualismo.', false),
     ('cie-2-3-c', 27, 'Biodiversidad', 'Relaciones entre seres vivos', 'alto', 'Lea la siguiente información:
 
-En la finca del abuelo de Joseph hay un granero donde viven varias lechuzas. Cada noche, ellas cazan ratones que se comen el maíz almacenado y los granos de los cultivos. Un vecino propuso ahuyentar a las lechuzas porque le dan miedo. El abuelo le respondió que eso podría causar un problema en la finca.
+En la finca del abuelo de Joseph hay un granero donde viven varias lechuzas. Cada noche, ellas cazan ratones que se comen el maíz almacenado y los granos de los cultivos. Un vecino propuso ahuyentar a las lechuzas porque le dan miedo. El abuelo le respondió que antes debían pensar qué pasaría con los demás seres vivos de la finca.
 
-¿Cuál problema es más probable que ocurra si las lechuzas se van del granero?', 'Las lechuzas son depredadoras de los ratones y ayudan a mantener su población bajo control. Si se van, los ratones se multiplicarían y dañarían más granos, por eso la depredación ayuda al equilibrio ecológico.', false),
-    ('cie-2-3-d', 28, 'Biodiversidad', 'Relaciones entre seres vivos', 'intermedio', 'Lea la siguiente información:
+¿Qué es más probable que ocurra en la finca si las lechuzas se van del granero?', 'Las lechuzas son depredadoras de los ratones y ayudan a mantener su población bajo control. Si se van, los ratones se multiplicarían y dañarían más granos, por eso la depredación ayuda al equilibrio ecológico.', false),
+    ('cie-2-3-d', 28, 'Biodiversidad', 'Relaciones entre seres vivos', 'intermedio', 'Considere la siguiente información:
 
 En los bosques secos de Guanacaste crece el cornizuelo, un arbusto con espinas grandes y huecas. Dentro de esas espinas viven colonias de hormigas que se alimentan de un néctar y de unas pequeñas bolitas nutritivas que produce la planta. Las hormigas, a cambio, atacan a los insectos que se comen las hojas y cortan las enredaderas que crecen alrededor del arbusto.
 
@@ -268,7 +268,7 @@ Ximena acomodó cuatro cajas en los estantes de la bodega de su casa.
 | 3 | 3 kg | 2 m |
 | 4 | 4 kg | 1 m |
 
-La energía potencial de un objeto es mayor cuanto más masa tiene y cuanto más alto se encuentra.
+Para comparar la energía potencial de objetos en reposo, se multiplica la masa de cada uno por la altura a la que se encuentra: cuanto mayor es ese resultado, mayor es su energía potencial.
 
 ¿Cuál caja tiene mayor energía potencial?', 'Hay que tomar en cuenta la masa y la altura al mismo tiempo. Si se multiplica la masa por la altura, la caja 3 da 6, más que las cajas 1, 2 y 4, que dan 2, 3 y 4.', false),
     ('cie-3-1-c', 33, 'Energía', 'Tipos, clases y transformaciones de la energía', 'intermedio', 'Lea la siguiente información:
@@ -276,14 +276,14 @@ La energía potencial de un objeto es mayor cuanto más masa tiene y cuanto más
 En algunas zonas de Guanacaste cercanas a volcanes se perforan pozos profundos de donde sale vapor muy caliente que proviene del interior de la Tierra; ese vapor mueve turbinas que generan electricidad. En cambio, en las colinas de Tilarán se aprovechan las corrientes de aire, que son fuertes y constantes durante buena parte del año, para hacer girar grandes aspas.
 
 ¿Qué clases de energía se aprovechan, en orden, en los dos lugares descritos?', 'La energía geotérmica aprovecha el calor del interior de la Tierra, como el vapor de los pozos cercanos a volcanes. La energía eólica aprovecha la fuerza del viento, como en las colinas de Tilarán.', false),
-    ('cie-3-1-d', 34, 'Energía', 'Tipos, clases y transformaciones de la energía', 'intermedio', 'Lea la siguiente información:
+    ('cie-3-1-d', 34, 'Energía', 'Tipos, clases y transformaciones de la energía', 'intermedio', 'Considere la siguiente información:
 
 En algunas regiones del mundo, la electricidad se produce en plantas que queman carbón mineral; el humo que sale de sus chimeneas lleva gases y partículas que ensucian el aire y aumentan el calentamiento del planeta. En otras regiones se instalan campos con paneles que convierten la luz del Sol en electricidad.
 
 La segunda forma de producir electricidad se considera energía limpia porque', 'Los paneles solares transforman la luz del Sol en electricidad sin quemar nada, por eso no echan humo ni gases contaminantes. En cambio, quemar carbón ensucia el aire y calienta el planeta.', false),
     ('cie-3-1-e', 35, 'Energía', 'Tipos, clases y transformaciones de la energía', 'intermedio', 'Lea la siguiente información:
 
-Durante un apagón, Kendall usa una linterna que no tiene baterías. Para encenderla, gira con la mano una manivela durante un minuto. Al girar, la manivela mueve un pequeño generador que produce electricidad, y esa electricidad hace brillar el bombillo de la linterna.
+Durante un apagón, Kendall usa una linterna que no tiene baterías. Para encenderla, gira con la mano una manivela sin detenerse. Al girar, la manivela mueve un pequeño generador que produce electricidad, y esa electricidad hace brillar el bombillo de la linterna.
 
 ¿Cuál es la secuencia de transformaciones de energía que ocurre en la linterna?', 'Al girar la manivela se produce movimiento, que es energía cinética, y el generador la transforma en energía eléctrica. Luego el bombillo transforma esa electricidad en energía lumínica.', false),
     ('cie-3-1-f', 36, 'Energía', 'Tipos, clases y transformaciones de la energía', 'alto', 'Considere la siguiente información:
@@ -297,20 +297,20 @@ En muchos países se están cambiando los bombillos incandescentes por bombillos
 
 En una actividad de Educación Física, cuatro estudiantes recorrieron en bicicleta distintas distancias en un terreno plano y midieron el tiempo que tardó cada uno. Cada estudiante mantuvo la misma rapidez durante todo su recorrido. Los datos se anotaron en la tabla de la imagen.
 
-¿Cuál ciclista tuvo la mayor rapidez?', 'La rapidez se obtiene al dividir la distancia entre el tiempo. Ciclista 1 recorrió 600 m en 100 s, es decir, 6 m/s, la mayor rapidez del grupo.', false),
-    ('cie-3-2-b', 38, 'Energía', 'Manifestaciones de la energía', 'alto', 'Lea la siguiente información:
+¿Cuál ciclista tuvo la mayor rapidez?', 'La rapidez se obtiene al dividir la distancia entre el tiempo. El ciclista 1 recorrió 600 m en 100 s, es decir, 6 m/s, la mayor rapidez del grupo.', false),
+    ('cie-3-2-b', 38, 'Energía', 'Manifestaciones de la energía', 'alto', 'Considere la siguiente información:
 
-En el Parque Metropolitano La Sabana, en San José, Priscilla entrena para una competencia de atletismo. Su entrenadora le pidió correr un tramo recto de 100 m manteniendo siempre una rapidez de 5 m/s. Mientras tanto, la entrenadora toma el tiempo con un cronómetro desde la salida hasta la llegada.
+En la Feria Nacional de Ciencia y Tecnología, un grupo de estudiantes iluminó un cuarto oscuro solo con luz roja. Valeria entró con una camiseta blanca, una gorra verde y un pantalón negro. Los expositores le explicaron que un objeto se ve de cierto color porque refleja la luz de ese color y absorbe las demás; lo blanco refleja todos los colores y lo negro no refleja ninguno.
 
-¿Cuánto tiempo tardará Priscilla en recorrer el tramo completo?', 'Si Priscilla avanza 5 m en cada segundo, para recorrer 100 m necesita 100 ÷ 5 = 20 segundos. Para hallar el tiempo se divide la distancia entre la rapidez.', false),
+Dentro del cuarto, ¿de qué color se verán la camiseta y la gorra de Valeria, en ese orden?', 'Bajo luz roja, la camiseta blanca refleja esa luz y se ve roja. La gorra verde absorbe la luz roja y no tiene luz verde que reflejar, por eso se ve negra.', false),
     ('cie-3-2-c', 39, 'Energía', 'Manifestaciones de la energía', 'alto', 'Observe la siguiente imagen:
 
-![Tres escenas numeradas. Situación 1: unas manos frente a una fogata, sin tocarla. Situación 2: una cuchara de metal dentro de una taza con bebida caliente; el mango que queda afuera se calienta. Situación 3: un calentador en el piso de un cuarto; flechas muestran el aire caliente que sube y el aire frío que baja.](/simulacros-nuevos/cie-3-2-calor.svg)
+![Tres escenas numeradas. Situación 1: unas manos frente a una fogata, sin tocarla. Situación 2: una cuchara de metal dentro de una taza con bebida caliente; el mango que queda afuera se calienta. Situación 3: un calentador encendido; flechas muestran el aire caliente que sube y el aire frío que baja.](/simulacros-nuevos/cie-3-2-calor.svg)
 
 En la clase de Ciencias se presentaron tres situaciones de la vida diaria en las que el calor pasa de un cuerpo más caliente a otro más frío. La docente explicó que en cada situación el calor se transmite de una manera diferente y pidió identificar cuál es cada una.
 
 ¿Cuál opción indica la forma de transmisión del calor en las situaciones 1, 2 y 3, respectivamente?', 'Las manos se calientan sin tocar la fogata, y eso es radiación. El mango de la cuchara se calienta por contacto con la bebida, que es conducción, y el aire caliente sube y el frío baja alrededor del calentador, que es convección.', false),
-    ('cie-3-2-d', 40, 'Energía', 'Manifestaciones de la energía', 'intermedio', 'Lea la siguiente información:
+    ('cie-3-2-d', 40, 'Energía', 'Manifestaciones de la energía', 'intermedio', 'Considere la siguiente información:
 
 Allison y su papá van a cambiar el techo del gallinero. Quieren un material que deje pasar parte de la claridad del día, para que las gallinas no queden a oscuras, pero que no permita ver con nitidez lo que hay del otro lado, para que las aves estén tranquilas. En la ferretería les ofrecen varias opciones.
 
@@ -324,7 +324,7 @@ Un domingo, Dylan visitó un río con su familia.
 2. En una parte donde el agua estaba muy quieta, vio sobre la superficie la imagen de los árboles de la orilla, como en un espejo.
 
 ¿Qué fenómenos de la luz se presentan en las situaciones 1 y 2, respectivamente?', 'En la poza, la luz se desvía al pasar del agua al aire, y eso hace que el fondo parezca más cerca: es refracción. En el agua quieta, la luz rebota en la superficie y forma una imagen como en un espejo: es reflexión.', false),
-    ('cie-3-2-f', 42, 'Energía', 'Manifestaciones de la energía', 'alto', 'Lea la siguiente información:
+    ('cie-3-2-f', 42, 'Energía', 'Manifestaciones de la energía', 'alto', 'Considere la siguiente información:
 
 Durante una tormenta, Emanuel ve un relámpago y empieza a contar los segundos hasta escuchar el trueno: cuenta 3 segundos. Su hermana le explica que la luz del relámpago llega casi al instante, mientras que el sonido del trueno viaja por el aire con una rapidez aproximada de 340 m/s.
 
@@ -334,7 +334,7 @@ Durante una tormenta, Emanuel ve un relámpago y empieza a contar los segundos h
 En un festival de un pueblo de Guanacaste, un grupo interpretó piezas tradicionales con la marimba, instrumento nacional de Costa Rica. Sus teclas de madera vibran de forma ordenada y producen notas agradables. Mientras tanto, en una finca cercana, un trabajador cortaba un árbol caído con una motosierra, que producía un zumbido fuerte, desordenado y molesto para el público.
 
 ¿Qué característica permite clasificar el sonido de la motosierra como ruido?', 'El ruido es un sonido producido por vibraciones irregulares, sin orden, que resulta molesto. La marimba, en cambio, produce vibraciones ordenadas que se escuchan como notas agradables.', false),
-    ('cie-3-2-h', 44, 'Energía', 'Manifestaciones de la energía', 'alto', 'Considere la siguiente información:
+    ('cie-3-2-h', 44, 'Energía', 'Manifestaciones de la energía', 'intermedio', 'Considere la siguiente información:
 
 En muchas playas del mundo donde anidan tortugas marinas, las crías salen del nido por la noche y se orientan hacia el horizonte del mar, que suele ser la zona más clara. Cuando cerca de la playa hay hoteles, casas o calles muy iluminadas, muchas crías caminan tierra adentro y no logran llegar al agua.
 
@@ -363,11 +363,11 @@ Según los resultados, ¿cuál opción reúne solo materiales aislantes?', 'Los 
 En la clase de Ciencias, Rebeca frotó dos tiras de plástico iguales con el mismo paño de lana. Luego las sostuvo de un extremo y las acercó, sin que se tocaran. Las tiras se separaron una de la otra. Después acercó una de las tiras a pedacitos de papel, y los pedacitos se pegaron a la tira.
 
 ¿Qué explica que las dos tiras se separaran?', 'Como las dos tiras se frotaron con el mismo paño, quedaron con el mismo tipo de carga eléctrica. Las cargas iguales se repelen, por eso las tiras se alejaron una de la otra.', false),
-    ('cie-3-3-d', 48, 'Energía', 'Electricidad y magnetismo', 'intermedio', 'Lea la siguiente información:
+    ('cie-3-3-d', 48, 'Energía', 'Electricidad y magnetismo', 'intermedio', 'Considere la siguiente información:
 
-En un centro de reciclaje, una grúa tiene en su extremo un disco grande formado por una bobina de alambre enrollado alrededor de un núcleo de hierro. Cuando el operario activa el interruptor, el disco levanta piezas de chatarra de hierro. Al llegar al contenedor, el operario apaga el interruptor y la chatarra cae.
+En una gira al cerro Chirripó, Daniel lleva una brújula para orientarse. La aguja de la brújula es un pequeño imán que puede girar libremente; uno de sus extremos apunta hacia el norte de la Tierra. Durante un descanso, Daniel coloca la brújula junto a su linterna, que tiene un imán en la base, y nota que la aguja deja de señalar el norte y apunta hacia la linterna.
 
-¿Qué característica del disco permite soltar la chatarra en el contenedor?', 'La grúa usa un electroimán, que es una bobina con corriente eléctrica que se comporta como un imán. Al apagar el interruptor deja de pasar la corriente, el disco pierde su magnetismo y la chatarra cae.', false),
+¿Qué explica el cambio en la dirección de la aguja?', 'La aguja de la brújula es un imán que normalmente se orienta hacia el norte de la Tierra. Si se acerca otro imán, este la atrae con más fuerza y la aguja apunta hacia él; por eso las brújulas se usan lejos de los imanes.', false),
     ('cie-4-1-a', 49, 'Geofísica', 'Estructura de la Tierra, clima y relieve', 'intermedio', 'Observe la siguiente imagen:
 
 ![Columna de la atmósfera dividida en cuatro capas numeradas desde la superficie. Capa 1: de 0 a unos 12 kilómetros. Capa 2: de unos 12 a unos 50 kilómetros. Capa 3: de unos 50 a unos 80 kilómetros. Capa 4: por encima de unos 80 kilómetros.](/simulacros-nuevos/cie-4-1-atmosfera.svg)
@@ -375,7 +375,7 @@ En un centro de reciclaje, una grúa tiene en su extremo un disco grande formado
 La imagen representa las capas de la atmósfera ordenadas según su altura sobre la superficie terrestre. Los límites entre una capa y otra son aproximados, porque cambian un poco según el lugar del planeta y la época del año. En cada capa la temperatura se comporta de manera distinta.
 
 ¿Qué ocurre en la capa marcada con el número 2?', 'La capa 2 es la estratosfera, donde se encuentra la capa de ozono. El ozono filtra parte de los rayos ultravioleta del Sol y así protege a los seres vivos.', false),
-    ('cie-4-1-b', 50, 'Geofísica', 'Estructura de la Tierra, clima y relieve', 'alto', 'Lea la siguiente información:
+    ('cie-4-1-b', 50, 'Geofísica', 'Estructura de la Tierra, clima y relieve', 'alto', 'Considere la siguiente información:
 
 Durante una semana, Karla anotó dos frases que escuchó en su casa:
 
@@ -386,12 +386,12 @@ Durante una semana, Karla anotó dos frases que escuchó en su casa:
 ¿A qué concepto se refiere cada frase, en ese orden?', 'El clima describe las condiciones que se repiten en un lugar durante muchos años, como la época seca de Guanacaste. El tiempo atmosférico es lo que ocurre en un momento corto, como el aguacero de una tarde en Cartago.', false),
     ('cie-4-1-c', 51, 'Geofísica', 'Estructura de la Tierra, clima y relieve', 'alto', 'Lea la siguiente información:
 
-En las faldas de varios volcanes del Valle Central de Costa Rica, la ceniza y otros materiales expulsados en erupciones de hace mucho tiempo se acumularon capa tras capa y formaron suelos muy fértiles. Hoy esas tierras se aprovechan para cultivar hortalizas, papas y café.
+En las faldas de los volcanes que rodean el Valle Central de Costa Rica, la ceniza y otros materiales expulsados en erupciones de hace mucho tiempo se acumularon capa tras capa y formaron suelos muy fértiles. Hoy esas tierras se aprovechan para cultivar hortalizas, papas y café.
 
-¿Qué tipo de agente modificó ese relieve y qué influencia tiene en las actividades humanas?', 'Las erupciones volcánicas se originan en el interior de la Tierra, por eso son un agente interno que modifica el relieve. En este caso, la ceniza formó suelos fértiles que favorecen la agricultura.', false),
+¿Qué tipo de agente formó esos suelos y por qué se clasifica así?', 'Las erupciones volcánicas se originan en el interior de la Tierra, por eso son un agente interno que modifica el relieve. En este caso, la ceniza formó suelos fértiles que favorecen la agricultura.', false),
     ('cie-4-1-d', 52, 'Geofísica', 'Estructura de la Tierra, clima y relieve', 'alto', 'El siguiente texto se relaciona con la geosfera:
 
-Costa Rica se ubica en una zona donde la placa del Coco se hunde lentamente debajo de la placa Caribe. Esas placas son grandes pedazos de la capa rígida exterior de la Tierra, que está formada por la corteza y por la parte más alta del manto. Debajo de ella, el manto es más caliente y sus materiales se pueden mover muy despacio.
+Costa Rica se ubica en una zona donde la placa del Coco se hunde lentamente debajo de otras placas. Esas placas son grandes pedazos de la capa rígida exterior de la Tierra, y sus choques producen muchos de los sismos del país. Debajo de esa capa, el manto es más caliente y sus materiales se pueden mover muy despacio.
 
 Según la información, ¿cuál afirmación describe correctamente la capa que forma las placas?', 'Las placas son pedazos de la litosfera, la capa rígida que abarca la corteza y la parte superior del manto. Por eso la litosfera no es lo mismo que la corteza: es un poco más gruesa.', false),
     ('cie-4-1-e', 53, 'Geofísica', 'Estructura de la Tierra, clima y relieve', 'intermedio', 'Lea la siguiente información:
@@ -399,7 +399,7 @@ Según la información, ¿cuál afirmación describe correctamente la capa que f
 El agua del planeta se encuentra en lugares muy distintos. Una parte forma los océanos y mares; otra corre por ríos y quebradas; otra está congelada en los polos y en las cumbres de montañas muy altas. También hay agua en las nubes y en el vapor del aire, y una gran cantidad se acumula bajo el suelo, entre las rocas.
 
 ¿Cuál conclusión sobre la hidrosfera es correcta?', 'La hidrosfera reúne toda el agua del planeta: la líquida de mares, ríos y aguas subterráneas, la sólida del hielo y la gaseosa del vapor. Por eso incluye el agua en sus tres estados.', false),
-    ('cie-4-2-a', 54, 'Geofísica', 'Movimientos de la Tierra y la Luna', 'intermedio', 'Lea la siguiente información:
+    ('cie-4-2-a', 54, 'Geofísica', 'Movimientos de la Tierra y la Luna', 'intermedio', 'Considere la siguiente información:
 
 Melany vive en Costa Rica y tiene una prima que vive en Japón. Un día, a las doce del mediodía en Costa Rica, Melany la llamó por videollamada: su prima ya estaba en pijama porque allá era de madrugada del día siguiente. Esta diferencia de horario ocurre todos los días del año.
 
@@ -408,7 +408,7 @@ Melany vive en Costa Rica y tiene una prima que vive en Japón. Un día, a las d
 
 ![Esquema sin escala con el Sol a la izquierda, la Tierra en el centro y la Luna a la derecha, en línea recta. La Luna está dentro de la sombra que proyecta la Tierra.](/simulacros-nuevos/cie-4-2-eclipse.svg)
 
-El esquema, que no está dibujado a escala, muestra la posición del Sol, la Tierra y la Luna durante un fenómeno que muchas personas observaron desde el lado de la Tierra donde era de noche. En ese momento, los tres astros estaban alineados.
+El esquema, que no está dibujado a escala, muestra la posición del Sol, la Tierra y la Luna durante un fenómeno astronómico. En ese momento, los tres astros estaban alineados. Fenómenos como este se repiten a lo largo de los años y se pueden predecir con mucha anticipación.
 
 ¿Qué fenómeno representa el esquema y en qué fase se encontraba la Luna?', 'Cuando la Tierra queda entre el Sol y la Luna, su sombra cae sobre la Luna y se produce un eclipse lunar. En esa posición la Luna está del lado opuesto al Sol, por eso este eclipse ocurre en fase de luna llena.', false),
     ('cie-4-2-c', 56, 'Geofísica', 'Movimientos de la Tierra y la Luna', 'intermedio', 'Lea la siguiente información:
@@ -423,12 +423,12 @@ En diciembre, en Argentina las familias van a la playa porque es verano, mientra
 ¿Qué explica que las estaciones estén invertidas en esos dos países?', 'El eje de la Tierra está inclinado y, mientras la Tierra viaja alrededor del Sol, cada hemisferio recibe los rayos solares de forma más directa en distintos meses. Por eso, cuando en Argentina es verano, en Canadá es invierno.', false),
     ('cie-4-3-a', 58, 'Geofísica', 'Sistema Solar y Universo', 'intermedio', 'El siguiente texto se relaciona con el Sistema Solar:
 
-Entre las órbitas de Marte y Júpiter hay una gran cantidad de asteroides que forman un cinturón. Ese cinturón sirve como referencia para separar los ocho planetas del Sistema Solar en dos grupos: los cuatro que están antes del cinturón, más cercanos al Sol, y los cuatro que están después, más alejados.
+Entre las órbitas de Marte y Júpiter hay una gran cantidad de asteroides que forman un cinturón. Ese cinturón sirve como referencia para separar los ocho planetas del Sistema Solar en dos grupos: los cuatro que están antes del cinturón, más cercanos al Sol, y los cuatro que están después, más alejados. Los cuatro primeros tienen una superficie sólida donde una nave podría posarse. Los cuatro que siguen son mucho más grandes y no tienen una superficie firme donde aterrizar.
 
-¿Qué característica diferencia a los planetas del grupo más alejado del Sol?', 'Júpiter, Saturno, Urano y Neptuno están después del cinturón de asteroides y son planetas gigantes formados en su mayor parte por gases. Los cuatro más cercanos al Sol, en cambio, son pequeños y rocosos.', false),
-    ('cie-4-3-b', 59, 'Geofísica', 'Sistema Solar y Universo', 'intermedio', 'Lea la siguiente información:
+¿Qué característica diferencia a los planetas del grupo más alejado del Sol?', 'Júpiter, Saturno, Urano y Neptuno están después del cinturón de asteroides y son planetas gigantes con gruesas capas de gases. Los cuatro más cercanos al Sol, en cambio, son pequeños y rocosos.', false),
+    ('cie-4-3-b', 59, 'Geofísica', 'Sistema Solar y Universo', 'alto', 'Lea la siguiente información:
 
-En una noche despejada, lejos de las luces de la ciudad, se observa en el cielo una franja blanquecina formada por miles de millones de estrellas. Esa franja es parte de la galaxia en la que se encuentra el Sistema Solar. El Sol, que ilumina y calienta la Tierra, es solo una de las estrellas de esa galaxia.
+En una noche despejada, lejos de las luces de la ciudad, se observa en el cielo una franja blanquecina formada por miles de millones de estrellas. Esa franja es parte de la galaxia en la que se encuentra el Sistema Solar. El Sol es solo una de sus estrellas: hay otras cientos de veces más grandes y otras mucho más pequeñas, y el Sistema Solar no está en el centro de la galaxia, sino en uno de sus brazos.
 
 ¿Cuál opción describe correctamente al Sol y su ubicación?', 'El Sol es una estrella de tamaño mediano que se encuentra en uno de los brazos de la Vía Láctea, lejos de su centro. Parece tan grande y brillante porque está mucho más cerca de la Tierra que las demás estrellas.', false),
     ('cie-4-3-c', 60, 'Geofísica', 'Sistema Solar y Universo', 'alto', 'Lea la siguiente información:
@@ -479,15 +479,15 @@ from (values
     ('cie-1-2-a', 'A', 'Las plaquetas y luego los glóbulos blancos.', true),
     ('cie-1-2-a', 'B', 'Los glóbulos blancos y luego las plaquetas.', false),
     ('cie-1-2-a', 'C', 'Los glóbulos rojos y luego los glóbulos blancos.', false),
-    ('cie-1-2-a', 'D', 'Las plaquetas y luego los glóbulos rojos.', false),
+    ('cie-1-2-a', 'D', 'Los glóbulos blancos y luego los glóbulos rojos.', false),
     ('cie-1-2-b', 'A', 'En el 1 es pasiva y en el 2 es activa.', false),
     ('cie-1-2-b', 'B', 'En ambos casos la inmunidad es activa.', false),
     ('cie-1-2-b', 'C', 'En ambos casos la inmunidad es pasiva.', false),
     ('cie-1-2-b', 'D', 'En el 1 es activa y en el 2 es pasiva.', true),
-    ('cie-1-2-c', 'A', 'evita que los microbios dañen la salud.', true),
+    ('cie-1-2-c', 'A', 'protege la salud frente a los microbios.', true),
     ('cie-1-2-c', 'B', 'lleva oxígeno a todas las células del cuerpo.', false),
     ('cie-1-2-c', 'C', 'detiene el sangrado de las heridas pequeñas.', false),
-    ('cie-1-2-c', 'D', 'elimina por la orina los desechos de la sangre.', false),
+    ('cie-1-2-c', 'D', 'actúa solo cuando la persona ya se siente enferma.', false),
     ('cie-1-3-a', 'A', 'elimina de inmediato al microbio que ya causó la enfermedad.', false),
     ('cie-1-3-a', 'B', 'entrena las defensas para actuar pronto ante el microbio verdadero.', true),
     ('cie-1-3-a', 'C', 'le da al cuerpo los anticuerpos listos sin que tenga que fabricarlos.', false),
@@ -496,22 +496,22 @@ from (values
     ('cie-1-3-b', 'B', 'Con pocas personas vacunadas, toda la comunidad queda igual de protegida.', false),
     ('cie-1-3-b', 'C', 'Si la mayoría recibe la vacuna, se protege a quienes no la tienen.', true),
     ('cie-1-3-b', 'D', 'Las vacunas protegen solo a quien las recibe y a nadie más.', false),
-    ('cie-1-3-c', 'A', 'cura a las personas que ya tienen la enfermedad en su cuerpo.', false),
+    ('cie-1-3-c', 'A', 'elimina la enfermedad aunque se vacune a pocas personas.', false),
     ('cie-1-3-c', 'B', 'solo puede proteger a la persona vacunada por pocos días.', false),
     ('cie-1-3-c', 'C', 'puede eliminar una enfermedad si se aplica en todo el mundo.', true),
-    ('cie-1-3-c', 'D', 'hace que los virus se vuelvan más fuertes y peligrosos.', false),
+    ('cie-1-3-c', 'D', 'sirve nada más en los niños, porque los adultos ya tienen defensas.', false),
     ('cie-1-4-a', 'A', 'absorber el agua que sobra para formar las heces.', false),
     ('cie-1-4-a', 'B', 'triturar el alimento y mezclarlo con jugos.', false),
     ('cie-1-4-a', 'C', 'producir la bilis que ayuda a digerir grasas.', false),
     ('cie-1-4-a', 'D', 'absorber los nutrientes y pasarlos a la sangre.', true),
-    ('cie-1-4-b', 'A', 'Cargar el bulto en un hombro', true),
-    ('cie-1-4-b', 'B', 'Jugar fútbol en el recreo', false),
-    ('cie-1-4-b', 'C', 'Dormir nueve horas', false),
-    ('cie-1-4-b', 'D', 'Tomar agua en lugar de refresco', false),
-    ('cie-1-4-c', 'A', 'Reemplazan la necesidad de comer de forma variada y sana.', false),
-    ('cie-1-4-c', 'B', 'Fomentan el ejercicio, que fortalece corazón y pulmones.', true),
-    ('cie-1-4-c', 'C', 'Evitan que las personas se contagien de cualquier microbio.', false),
-    ('cie-1-4-c', 'D', 'Sustituyen las horas de descanso que el cuerpo necesita.', false),
+    ('cie-1-4-b', 'A', 'Cargar el bulto en un hombro, porque inclina la espalda hacia un lado.', true),
+    ('cie-1-4-b', 'B', 'Jugar fútbol en el recreo, porque correr mucho desgasta los huesos.', false),
+    ('cie-1-4-b', 'C', 'Dormir nueve horas, porque los músculos se debilitan al no moverse.', false),
+    ('cie-1-4-b', 'D', 'Cargar el bulto en un hombro, porque cansa nada más los músculos del brazo.', false),
+    ('cie-1-4-c', 'A', 'Promueven la actividad física, que reemplaza una dieta variada.', false),
+    ('cie-1-4-c', 'B', 'Promueven la actividad física, que fortalece corazón y músculos.', true),
+    ('cie-1-4-c', 'C', 'Promueven la actividad física, que impide contagiarse de microbios.', false),
+    ('cie-1-4-c', 'D', 'Promueven la actividad física, que sustituye las horas de sueño.', false),
     ('cie-1-4-d', 'A', 'excretar residuos que el cuerpo no usa.', true),
     ('cie-1-4-d', 'B', 'absorber agua y sales desde fuera del cuerpo.', false),
     ('cie-1-4-d', 'C', 'transportar oxígeno hacia los músculos.', false),
@@ -527,10 +527,10 @@ from (values
     ('cie-1-5-c', 'A', 'Los riñones controlan el agua del cuerpo sin ayuda de otros órganos.', false),
     ('cie-1-5-c', 'B', 'Varios sistemas actúan coordinados para mantener el agua del cuerpo.', true),
     ('cie-1-5-c', 'C', 'El sistema nervioso solo participa cuando el cuerpo está en movimiento.', false),
-    ('cie-1-5-c', 'D', 'El sudor y la orina son procesos que no tienen relación entre sí.', false),
+    ('cie-1-5-c', 'D', 'La sed aparece después de que la sangre ya recuperó el agua que perdió.', false),
     ('cie-2-1-a', 'A', 'Mazorcas de maíz de distintos colores en una misma finca.', false),
     ('cie-2-1-a', 'B', 'Un manglar y un páramo dentro del mismo país.', false),
-    ('cie-2-1-a', 'C', 'El crecimiento de un mismo colibrí desde que nace.', false),
+    ('cie-2-1-a', 'C', 'Muchos colibríes de una sola especie en un mismo jardín.', false),
     ('cie-2-1-a', 'D', 'Varias clases de colibríes que visitan un mismo jardín.', true),
     ('cie-2-1-b', 'A', 'estructural, porque depende de la forma del caparazón.', false),
     ('cie-2-1-b', 'B', 'fisiológica, porque ocurre dentro del cuerpo de la hembra.', false),
@@ -540,16 +540,16 @@ from (values
     ('cie-2-1-c', 'B', 'reproducción, porque así protege sus semillas.', false),
     ('cie-2-1-c', 'C', 'relación, porque responde a un estímulo del entorno.', true),
     ('cie-2-1-c', 'D', 'relación, porque así se comunica con las otras plantas.', false),
-    ('cie-2-1-d', 'A', 'la tala de los bosques cercanos a las playas.', false),
+    ('cie-2-1-d', 'A', 'la destrucción de los arrecifes y los manglares.', false),
     ('cie-2-1-d', 'B', 'la invasión de una especie de otra región.', true),
-    ('cie-2-1-d', 'C', 'la cacería ilegal de especies en peligro.', false),
+    ('cie-2-1-d', 'C', 'la pesca excesiva de los peces pequeños nativos.', false),
     ('cie-2-1-d', 'D', 'la contaminación del agua por desechos plásticos.', false),
     ('cie-2-2-a', 'A', 'Un saltamontes y una lombriz de tierra.', true),
     ('cie-2-2-a', 'B', 'Una lombriz de tierra y un saltamontes.', false),
-    ('cie-2-2-a', 'C', 'Un saltamontes y un sapo.', false),
+    ('cie-2-2-a', 'C', 'Un saltamontes y un sapo común.', false),
     ('cie-2-2-a', 'D', 'Un cangrejo y una lombriz de tierra.', false),
     ('cie-2-2-b', 'A', 'Ambos están formados por una sola célula.', false),
-    ('cie-2-2-b', 'B', 'Ninguno de los dos produce su propio alimento.', true),
+    ('cie-2-2-b', 'B', 'Ambos absorben su alimento de lo que los rodea.', true),
     ('cie-2-2-b', 'C', 'Ambos fabrican su alimento con la luz del sol.', false),
     ('cie-2-2-b', 'D', 'Ninguno de los dos tiene núcleo en sus células.', false),
     ('cie-2-2-c', 'A', 'vivíparo, que pasa su vida entre el agua y la tierra.', false),
@@ -582,8 +582,8 @@ from (values
     ('cie-2-4-a', 'D', 'Dióxido de carbono y oxígeno.', true),
     ('cie-2-4-b', 'A', 'Elimina por completo el dióxido de carbono del aire.', false),
     ('cie-2-4-b', 'B', 'Sostiene las cadenas alimentarias y renueva el aire.', true),
-    ('cie-2-4-b', 'C', 'Calienta el agua del mar para que vivan los peces.', false),
-    ('cie-2-4-b', 'D', 'Permite que los peces respiren sin necesitar oxígeno.', false),
+    ('cie-2-4-b', 'C', 'Transforma el oxígeno del agua en dióxido de carbono.', false),
+    ('cie-2-4-b', 'D', 'Es la forma en que las algas respiran bajo el agua.', false),
     ('cie-3-1-a', 'A', 'La potencial se transforma en cinética.', false),
     ('cie-3-1-a', 'B', 'La cinética y la potencial aumentan juntas.', false),
     ('cie-3-1-a', 'C', 'La cinética se transforma en potencial.', true),
@@ -600,10 +600,10 @@ from (values
     ('cie-3-1-d', 'B', 'no contamina la atmósfera al generar corriente.', true),
     ('cie-3-1-d', 'C', 'se obtiene de restos de seres vivos muy antiguos.', false),
     ('cie-3-1-d', 'D', 'produce más electricidad que cualquier otra fuente.', false),
-    ('cie-3-1-e', 'A', 'De eléctrica a cinética y de cinética a lumínica.', false),
-    ('cie-3-1-e', 'B', 'De cinética a eléctrica y de eléctrica a lumínica.', true),
-    ('cie-3-1-e', 'C', 'De química a eléctrica y de eléctrica a lumínica.', false),
-    ('cie-3-1-e', 'D', 'De cinética a lumínica y de lumínica a eléctrica.', false),
+    ('cie-3-1-e', 'A', 'De eléctrica a cinética y luego a lumínica.', false),
+    ('cie-3-1-e', 'B', 'De cinética a eléctrica y luego a lumínica.', true),
+    ('cie-3-1-e', 'C', 'De química a eléctrica y luego a lumínica.', false),
+    ('cie-3-1-e', 'D', 'De cinética a lumínica y después a eléctrica.', false),
     ('cie-3-1-f', 'A', 'Transforma la electricidad en calor y no en luz.', false),
     ('cie-3-1-f', 'B', 'Funciona con energía química en lugar de eléctrica.', false),
     ('cie-3-1-f', 'C', 'Desperdicia menos energía en forma de calor.', true),
@@ -612,98 +612,98 @@ from (values
     ('cie-3-2-a', 'B', 'Ciclista 2', false),
     ('cie-3-2-a', 'C', 'Ciclista 3', false),
     ('cie-3-2-a', 'D', 'Ciclista 4', false),
-    ('cie-3-2-b', 'A', '0,05 s', false),
-    ('cie-3-2-b', 'B', '20 s', true),
-    ('cie-3-2-b', 'C', '95 s', false),
-    ('cie-3-2-b', 'D', '500 s', false),
-    ('cie-3-2-c', 'A', 'Radiación, convección y conducción.', false),
-    ('cie-3-2-c', 'B', 'Conducción, radiación y convección.', false),
-    ('cie-3-2-c', 'C', 'Convección, conducción y radiación.', false),
-    ('cie-3-2-c', 'D', 'Radiación, conducción y convección.', true),
-    ('cie-3-2-d', 'A', 'Translúcido, como una lámina de plástico lechoso.', true),
-    ('cie-3-2-d', 'B', 'Transparente, como una lámina de vidrio sin color.', false),
-    ('cie-3-2-d', 'C', 'Opaco, como una lámina de zinc.', false),
+    ('cie-3-2-b', 'A', 'Blanca y verde.', false),
+    ('cie-3-2-b', 'B', 'Roja y verde.', false),
+    ('cie-3-2-b', 'C', 'Blanca y negra.', false),
+    ('cie-3-2-b', 'D', 'Roja y negra.', true),
+    ('cie-3-2-c', 'A', 'Radiación, conducción y convección.', true),
+    ('cie-3-2-c', 'B', 'Radiación, convección y conducción.', false),
+    ('cie-3-2-c', 'C', 'Conducción, radiación y convección.', false),
+    ('cie-3-2-c', 'D', 'Convección, conducción y radiación.', false),
+    ('cie-3-2-d', 'A', 'Transparente, como una lámina de vidrio sin color.', false),
+    ('cie-3-2-d', 'B', 'Opaco, como una lámina de zinc ondulado.', false),
+    ('cie-3-2-d', 'C', 'Translúcido, como una lámina de plástico lechoso.', true),
     ('cie-3-2-d', 'D', 'Opaco, como una lámina de plástico lechoso.', false),
     ('cie-3-2-e', 'A', 'Reflexión y refracción.', false),
     ('cie-3-2-e', 'B', 'Refracción y refracción.', false),
-    ('cie-3-2-e', 'C', 'Refracción y reflexión.', true),
-    ('cie-3-2-e', 'D', 'Reflexión y reflexión.', false),
+    ('cie-3-2-e', 'C', 'Reflexión y reflexión.', false),
+    ('cie-3-2-e', 'D', 'Refracción y reflexión.', true),
     ('cie-3-2-f', 'A', '113 m', false),
-    ('cie-3-2-f', 'B', '337 m', false),
+    ('cie-3-2-f', 'B', '340 m', false),
     ('cie-3-2-f', 'C', '343 m', false),
     ('cie-3-2-f', 'D', '1020 m', true),
     ('cie-3-2-g', 'A', 'No produce vibraciones que viajen por el aire.', false),
-    ('cie-3-2-g', 'B', 'Viaja más despacio por el aire que la música.', false),
-    ('cie-3-2-g', 'C', 'Tiene un volumen más bajo que la música.', false),
-    ('cie-3-2-g', 'D', 'Vibra de manera irregular y desagradable.', true),
+    ('cie-3-2-g', 'B', 'Vibra de manera irregular y desagradable.', true),
+    ('cie-3-2-g', 'C', 'Viaja más despacio por el aire que la música.', false),
+    ('cie-3-2-g', 'D', 'Tiene un volumen más bajo que la música.', false),
     ('cie-3-2-h', 'A', 'La luz de la luna impide que las crías salgan de los nidos.', false),
-    ('cie-3-2-h', 'B', 'La luz artificial altera la orientación de algunas especies.', true),
-    ('cie-3-2-h', 'C', 'El calor de los bombillos seca la arena de los nidos.', false),
-    ('cie-3-2-h', 'D', 'La luz de las ciudades ayuda a las crías a encontrar el mar.', false),
-    ('cie-3-3-a', 'A', 'En el 1 siguen encendidos y en el 2 se apagan.', false),
-    ('cie-3-3-a', 'B', 'En el 1 se apagan y en el 2 siguen encendidos.', true),
+    ('cie-3-2-h', 'B', 'El calor de los bombillos seca la arena de los nidos.', false),
+    ('cie-3-2-h', 'C', 'La luz de las ciudades ayuda a las crías a encontrar el mar.', false),
+    ('cie-3-2-h', 'D', 'La luz artificial desvía a algunos animales de su ruta.', true),
+    ('cie-3-3-a', 'A', 'En el 1 se apagan y en el 2 siguen encendidos.', true),
+    ('cie-3-3-a', 'B', 'En el 1 siguen encendidos y en el 2 se apagan.', false),
     ('cie-3-3-a', 'C', 'En los dos circuitos se apagan todos.', false),
     ('cie-3-3-a', 'D', 'En los dos circuitos siguen encendidos.', false),
-    ('cie-3-3-b', 'A', 'El borrador y el palito de madera.', true),
-    ('cie-3-3-b', 'B', 'El clip de metal y el borrador.', false),
-    ('cie-3-3-b', 'C', 'La mina de lápiz y el palito de madera.', false),
+    ('cie-3-3-b', 'A', 'El clip de metal y el borrador.', false),
+    ('cie-3-3-b', 'B', 'La mina de lápiz y el palito de madera.', false),
+    ('cie-3-3-b', 'C', 'El borrador y el palito de madera.', true),
     ('cie-3-3-b', 'D', 'El clip de metal y la mina de lápiz.', false),
-    ('cie-3-3-c', 'A', 'Quedaron con cargas de distinto tipo y se repelen.', false),
-    ('cie-3-3-c', 'B', 'Quedaron sin carga después de frotarlas con el paño.', false),
-    ('cie-3-3-c', 'C', 'Quedaron con cargas del mismo tipo y se repelen.', true),
+    ('cie-3-3-c', 'A', 'Quedaron con cargas del mismo tipo y se repelen.', true),
+    ('cie-3-3-c', 'B', 'Quedaron con cargas de distinto tipo y se repelen.', false),
+    ('cie-3-3-c', 'C', 'Quedaron sin carga después de frotarlas con el paño.', false),
     ('cie-3-3-c', 'D', 'Quedaron con cargas del mismo tipo y se atraen.', false),
-    ('cie-3-3-d', 'A', 'Su magnetismo depende de que pase corriente eléctrica.', true),
-    ('cie-3-3-d', 'B', 'Su magnetismo es permanente, como el de un imán común.', false),
-    ('cie-3-3-d', 'C', 'El hierro pierde su peso cuando se apaga la grúa.', false),
-    ('cie-3-3-d', 'D', 'Atrae solo materiales de aluminio, como las latas.', false),
+    ('cie-3-3-d', 'A', 'La linterna gasta la carga eléctrica de la aguja.', false),
+    ('cie-3-3-d', 'B', 'El norte de la Tierra cambia de lugar durante el día.', false),
+    ('cie-3-3-d', 'C', 'El imán de la aguja pierde su fuerza al quedar quieto.', false),
+    ('cie-3-3-d', 'D', 'Otro imán cercano atrae la aguja más que la Tierra.', true),
     ('cie-4-1-a', 'A', 'Se forman las nubes, la lluvia y casi todo el viento.', false),
     ('cie-4-1-a', 'B', 'Se queman muchos meteoroides al entrar a la atmósfera.', false),
-    ('cie-4-1-a', 'C', 'Se reflejan las ondas de radio que viajan por el planeta.', false),
-    ('cie-4-1-a', 'D', 'El ozono filtra parte de los rayos ultravioleta del Sol.', true),
+    ('cie-4-1-a', 'C', 'El ozono filtra parte de los rayos ultravioleta del Sol.', true),
+    ('cie-4-1-a', 'D', 'Se reflejan las ondas de radio que viajan por el planeta.', false),
     ('cie-4-1-b', 'A', 'Al tiempo atmosférico y al clima.', false),
-    ('cie-4-1-b', 'B', 'Al clima en las dos frases.', false),
-    ('cie-4-1-b', 'C', 'Al clima y al tiempo atmosférico.', true),
+    ('cie-4-1-b', 'B', 'Al clima y al tiempo atmosférico.', true),
+    ('cie-4-1-b', 'C', 'Al clima en las dos frases.', false),
     ('cie-4-1-b', 'D', 'Al tiempo atmosférico en las dos frases.', false),
-    ('cie-4-1-c', 'A', 'Un agente externo, que favoreció la agricultura de la zona.', false),
-    ('cie-4-1-c', 'B', 'Un agente interno, que favoreció la agricultura de la zona.', true),
-    ('cie-4-1-c', 'C', 'Un agente interno, que impidió la agricultura de la zona.', false),
-    ('cie-4-1-c', 'D', 'Un agente externo, que impidió la agricultura de la zona.', false),
-    ('cie-4-1-d', 'A', 'Es la corteza, que también abarca todo el manto terrestre.', false),
-    ('cie-4-1-d', 'B', 'Es el manto, que forma una capa sólida y rígida.', false),
-    ('cie-4-1-d', 'C', 'Es la litosfera, que está formada solo por la corteza terrestre.', false),
-    ('cie-4-1-d', 'D', 'Es la litosfera, que abarca la corteza y el manto superior.', true),
+    ('cie-4-1-c', 'A', 'Un agente externo, porque la lluvia y el viento formaron el suelo.', false),
+    ('cie-4-1-c', 'B', 'Un agente externo, porque la ceniza se fue acumulando con el tiempo.', false),
+    ('cie-4-1-c', 'C', 'Un agente interno, porque los cultivos cambiaron la forma del terreno.', false),
+    ('cie-4-1-c', 'D', 'Un agente interno, porque se originó en el interior del planeta.', true),
+    ('cie-4-1-d', 'A', 'Es la litosfera, que abarca la corteza y el manto superior.', true),
+    ('cie-4-1-d', 'B', 'Es la corteza, que también abarca todo el manto terrestre.', false),
+    ('cie-4-1-d', 'C', 'Es el manto, que forma una capa sólida y rígida.', false),
+    ('cie-4-1-d', 'D', 'Es la litosfera, que está formada solo por la corteza terrestre.', false),
     ('cie-4-1-e', 'A', 'Incluye el agua en estado sólido, líquido y gaseoso.', true),
     ('cie-4-1-e', 'B', 'Está formada solo por el agua salada de los océanos.', false),
     ('cie-4-1-e', 'C', 'Abarca únicamente el agua que se ve en la superficie.', false),
     ('cie-4-1-e', 'D', 'Excluye el hielo porque este forma parte de la geosfera.', false),
-    ('cie-4-2-a', 'A', 'La rotación de la Tierra sobre su propio eje.', true),
-    ('cie-4-2-a', 'B', 'La traslación de la Tierra alrededor del Sol.', false),
+    ('cie-4-2-a', 'A', 'La traslación de la Tierra alrededor del Sol.', false),
+    ('cie-4-2-a', 'B', 'La rotación de la Tierra sobre su propio eje.', true),
     ('cie-4-2-a', 'C', 'La rotación de la Luna sobre su propio eje.', false),
     ('cie-4-2-a', 'D', 'La traslación de la Luna alrededor de la Tierra.', false),
     ('cie-4-2-b', 'A', 'Un eclipse solar, con la Luna en fase nueva.', false),
-    ('cie-4-2-b', 'B', 'Un eclipse lunar, con la Luna en fase llena.', true),
-    ('cie-4-2-b', 'C', 'Un eclipse lunar, con la Luna en fase nueva.', false),
+    ('cie-4-2-b', 'B', 'Un eclipse lunar, con la Luna en fase nueva.', false),
+    ('cie-4-2-b', 'C', 'Un eclipse lunar, con la Luna en fase llena.', true),
     ('cie-4-2-b', 'D', 'Un eclipse solar, con la Luna en fase llena.', false),
     ('cie-4-2-c', 'A', 'El viento que sopla con fuerza desde la costa hacia el mar.', false),
     ('cie-4-2-c', 'B', 'La lluvia que aumenta el caudal de los ríos que llegan al mar.', false),
     ('cie-4-2-c', 'C', 'La atracción que ejerce la Luna sobre el agua de los océanos.', true),
-    ('cie-4-2-c', 'D', 'La rotación de la Luna sobre su eje cada día.', false),
-    ('cie-4-2-d', 'A', 'La mayor cercanía de la Tierra al Sol en algunos meses.', false),
-    ('cie-4-2-d', 'B', 'La rotación de la Tierra sobre su eje cada día.', false),
-    ('cie-4-2-d', 'C', 'El eje inclinado de la Tierra en su traslación.', true),
+    ('cie-4-2-c', 'D', 'El movimiento de rotación de la Luna sobre su propio eje.', false),
+    ('cie-4-2-d', 'A', 'El eje inclinado de la Tierra en su traslación.', true),
+    ('cie-4-2-d', 'B', 'La mayor cercanía de la Tierra al Sol en algunos meses.', false),
+    ('cie-4-2-d', 'C', 'La rotación de la Tierra sobre su eje cada día.', false),
     ('cie-4-2-d', 'D', 'La posición de la Luna con respecto a la Tierra.', false),
-    ('cie-4-3-a', 'A', 'Son gigantes formados sobre todo por gases.', true),
-    ('cie-4-3-a', 'B', 'Son pequeños y tienen una superficie rocosa.', false),
+    ('cie-4-3-a', 'A', 'Son pequeños y tienen una superficie rocosa.', false),
+    ('cie-4-3-a', 'B', 'Son gigantes con gruesas capas de gases.', true),
     ('cie-4-3-a', 'C', 'No tienen ningún satélite natural a su alrededor.', false),
     ('cie-4-3-a', 'D', 'Tienen las temperaturas más altas del sistema.', false),
-    ('cie-4-3-b', 'A', 'Es una estrella mediana ubicada en un brazo de la Vía Láctea.', true),
-    ('cie-4-3-b', 'B', 'Es una estrella gigante ubicada en el centro de la Vía Láctea.', false),
+    ('cie-4-3-b', 'A', 'Es una estrella gigante ubicada en el centro de la Vía Láctea.', false),
+    ('cie-4-3-b', 'B', 'Es una estrella mediana ubicada en un brazo de la Vía Láctea.', true),
     ('cie-4-3-b', 'C', 'Es un planeta brillante ubicado en el centro del Sistema Solar.', false),
-    ('cie-4-3-b', 'D', 'Es la estrella más grande ubicada en una galaxia vecina.', false),
-    ('cie-4-3-c', 'A', 'Satélite artificial, estación espacial y sonda espacial.', false),
-    ('cie-4-3-c', 'B', 'Sonda espacial, satélite artificial y estación espacial.', false),
-    ('cie-4-3-c', 'C', 'Estación espacial, sonda espacial y satélite artificial.', false),
-    ('cie-4-3-c', 'D', 'Sonda espacial, estación espacial y satélite artificial.', true)
+    ('cie-4-3-b', 'D', 'Es la estrella más grande, ubicada en un brazo de una galaxia vecina.', false),
+    ('cie-4-3-c', 'A', 'Sonda espacial, estación espacial y satélite artificial.', true),
+    ('cie-4-3-c', 'B', 'Satélite artificial, estación espacial y sonda espacial.', false),
+    ('cie-4-3-c', 'C', 'Sonda espacial, satélite artificial y estación espacial.', false),
+    ('cie-4-3-c', 'D', 'Estación espacial, sonda espacial y satélite artificial.', false)
 ) as v (codigo, letra, texto, es_correcta)
 join public.simulacro_nuevo_items i on i.codigo = v.codigo
 join public.simulacros_nuevos s on s.id = i.simulacro_id and s.slug = 'nuevo-ciencias-1'

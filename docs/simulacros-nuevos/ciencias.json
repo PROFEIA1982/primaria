@@ -28,7 +28,7 @@
       },
       "verbo": "identificar",
       "tipo_contexto": "científico-escolar",
-      "contexto": "Lea la siguiente información:\n\nEn una feria científica, un grupo de sexto año comparó una célula del cuerpo humano con una ciudad rodeada por una muralla. Explicaron que la muralla tiene portones vigilados: permite que entren el agua y los nutrientes que la ciudad necesita y que salgan los desechos, pero impide el paso de sustancias que podrían dañarla. Así, la muralla separa lo que está dentro de la ciudad de lo que está afuera.",
+      "contexto": "Lea la siguiente información:\n\nEn una feria científica, un grupo de sexto grado comparó una célula del cuerpo humano con una ciudad rodeada por una muralla. Explicaron que la muralla tiene portones vigilados: permite que entren el agua y los nutrientes que la ciudad necesita y que salgan los desechos, pero impide el paso de sustancias que podrían dañarla. Así, la muralla separa lo que está dentro de la ciudad de lo que está afuera.",
       "enunciado": "En la comparación anterior, la muralla con portones vigilados representa",
       "opciones": {
         "A": "el núcleo de la célula.",
@@ -133,20 +133,20 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Lea la siguiente información:\n\nFiorella se raspó la rodilla al caer de la bicicleta. A los pocos minutos la herida dejó de sangrar, porque unos fragmentos de células de la sangre se pegaron entre sí y formaron un tapón que después se convirtió en costra. Al día siguiente, alrededor del raspón la piel estaba roja y un poco hinchada: hasta ese lugar habían llegado otras células de la sangre que rodeaban y destruían a los microbios que entraron por la herida.",
+      "contexto": "Considere la siguiente información:\n\nFiorella se raspó la rodilla al caer de la bicicleta. A los pocos minutos la herida dejó de sangrar, porque unos fragmentos de células de la sangre se pegaron entre sí y formaron un tapón que después se convirtió en costra. Al día siguiente, alrededor del raspón la piel estaba roja y un poco hinchada: hasta ese lugar habían llegado otras células de la sangre que rodeaban y destruían a los microbios que entraron por la herida.",
       "enunciado": "¿Cuáles componentes del tejido sanguíneo actuaron en cada momento, en el orden en que se describen?",
       "opciones": {
         "A": "Las plaquetas y luego los glóbulos blancos.",
         "B": "Los glóbulos blancos y luego las plaquetas.",
         "C": "Los glóbulos rojos y luego los glóbulos blancos.",
-        "D": "Las plaquetas y luego los glóbulos rojos."
+        "D": "Los glóbulos blancos y luego los glóbulos rojos."
       },
       "clave": "A",
       "explicacion": "Las plaquetas se unen y forman el tapón que detiene el sangrado, y luego los glóbulos blancos llegan a la herida para atacar a los microbios. Por eso la zona se pone roja e hinchada mientras el cuerpo se defiende.",
       "por_que": {
         "B": "Invierte las funciones: las plaquetas forman el tapón y los glóbulos blancos atacan a los microbios.",
         "C": "Atribuye el tapón a los glóbulos rojos, cuya función es transportar oxígeno.",
-        "D": "Cree que los glóbulos rojos defienden al cuerpo, cuando su función es llevar oxígeno."
+        "D": "Invierte las funciones y le atribuye a los glóbulos rojos la defensa contra los microbios."
       },
       "imagen": null
     },
@@ -157,7 +157,7 @@
       "bloque": "Cuerpo humano",
       "tema": "Cuerpo humano",
       "subtema": "Tejido sanguíneo e inmunidad",
-      "nivel": "alto",
+      "nivel": "intermedio",
       "afirmacion": {
         "codigo": "1.2",
         "texto": "Analiza la función inmunológica de los componentes del tejido sanguíneo."
@@ -206,17 +206,17 @@
       "contexto": "El siguiente texto se relaciona con la función inmunológica:\n\nCada día entran al cuerpo virus, bacterias y hongos por la nariz, la boca o pequeñas heridas. El cuerpo cuenta con un conjunto de defensas que reconoce a esos invasores como extraños, los ataca y además guarda un registro de cómo vencerlos si vuelven a entrar. Gracias a ese trabajo constante, muchas veces la persona ni se entera de que estuvo en contacto con ellos.",
       "enunciado": "La información anterior permite concluir que la función inmunológica es importante porque",
       "opciones": {
-        "A": "evita que los microbios dañen la salud.",
+        "A": "protege la salud frente a los microbios.",
         "B": "lleva oxígeno a todas las células del cuerpo.",
         "C": "detiene el sangrado de las heridas pequeñas.",
-        "D": "elimina por la orina los desechos de la sangre."
+        "D": "actúa solo cuando la persona ya se siente enferma."
       },
       "clave": "A",
       "explicacion": "La función inmunológica reconoce y ataca a los microbios que entran al cuerpo, y además recuerda cómo vencerlos. Así evita que enfermen a la persona y protege su salud.",
       "por_que": {
         "B": "Confunde la defensa del cuerpo con el transporte de oxígeno, que realizan los glóbulos rojos.",
         "C": "Confunde la defensa contra microbios con la coagulación, que realizan las plaquetas.",
-        "D": "Confunde la función inmunológica con la función excretora de los riñones."
+        "D": "Contradice el texto: las defensas actúan aunque la persona ni se entere del contacto con los microbios."
       },
       "imagen": null
     },
@@ -297,7 +297,7 @@
       "bloque": "Cuerpo humano",
       "tema": "Cuerpo humano",
       "subtema": "Vacunas",
-      "nivel": "intermedio",
+      "nivel": "alto",
       "afirmacion": {
         "codigo": "1.3",
         "texto": "Analiza la función e importancia de las vacunas para la prevención de enfermedades infectocontagiosas."
@@ -311,17 +311,17 @@
       "contexto": "Lea la siguiente información:\n\nLa viruela fue una enfermedad contagiosa que durante siglos afectó a personas de todos los continentes. Como el virus solo podía pasar de una persona a otra, se organizaron campañas para vacunar a la población de muchísimos países. Poco a poco el virus dejó de encontrar personas a quienes contagiar, y hoy esa enfermedad ya no circula en ningún lugar del planeta.",
       "enunciado": "Del caso de la viruela se concluye que la vacunación",
       "opciones": {
-        "A": "cura a las personas que ya tienen la enfermedad en su cuerpo.",
+        "A": "elimina la enfermedad aunque se vacune a pocas personas.",
         "B": "solo puede proteger a la persona vacunada por pocos días.",
         "C": "puede eliminar una enfermedad si se aplica en todo el mundo.",
-        "D": "hace que los virus se vuelvan más fuertes y peligrosos."
+        "D": "sirve nada más en los niños, porque los adultos ya tienen defensas."
       },
       "clave": "C",
       "explicacion": "Al vacunar a tanta gente, el virus de la viruela ya no encontró a quién contagiar y desapareció del planeta. Esto muestra el gran poder de la vacunación cuando se hace en muchos países a la vez.",
       "por_que": {
-        "A": "Confunde prevenir con curar: la vacuna prepara las defensas antes del contagio.",
+        "A": "Ignora que la enfermedad desapareció porque se vacunó a gran parte de la población de muchos países.",
         "B": "Desconoce que la protección de muchas personas juntas cortó el contagio hasta hacerlo desaparecer.",
-        "D": "Es una idea equivocada; el texto muestra que el virus desapareció gracias a la vacunación."
+        "D": "Cree que solo los niños se benefician; la campaña vacunó a la población en general."
       },
       "imagen": null
     },
@@ -343,7 +343,7 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "científico-escolar",
-      "contexto": "Lea la siguiente información:\n\nUn órgano del sistema digestivo mide varios metros de largo y está doblado muchas veces dentro del abdomen. Su pared interna tiene millones de pliegues diminutos, parecidos a dedos, que aumentan la superficie en contacto con el alimento ya digerido. Por dentro de cada pliegue pasan vasos sanguíneos muy delgados.",
+      "contexto": "Considere la siguiente información:\n\nUn órgano del sistema digestivo mide varios metros de largo y está doblado muchas veces dentro del abdomen. Su pared interna tiene millones de pliegues diminutos, parecidos a dedos, que aumentan la superficie en contacto con el alimento ya digerido. Por dentro de cada pliegue pasan vasos sanguíneos muy delgados.",
       "enunciado": "Por sus características, la función principal de ese órgano es",
       "opciones": {
         "A": "absorber el agua que sobra para formar las heces.",
@@ -367,7 +367,7 @@
       "bloque": "Cuerpo humano",
       "tema": "Cuerpo humano",
       "subtema": "Órganos, sistemas y salud",
-      "nivel": "intermedio",
+      "nivel": "alto",
       "afirmacion": {
         "codigo": "1.4",
         "texto": "Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud."
@@ -379,19 +379,19 @@
       "verbo": "reconocer",
       "tipo_contexto": "personal-cotidiano",
       "contexto": "Analice la siguiente tabla:\n\nAndrés anotó algunos de sus hábitos durante una semana.\n\n| Hábito | Frecuencia |\n|---|---|\n| Dormir nueve horas | Todas las noches |\n| Jugar fútbol en el recreo | Cuatro días |\n| Cargar el bulto en un hombro | Todos los días |\n| Tomar agua en lugar de refresco | Casi siempre |",
-      "enunciado": "¿Cuál hábito de la tabla puede afectar de forma negativa a los huesos y músculos de la espalda?",
+      "enunciado": "¿Cuál hábito de la tabla conviene cambiar para cuidar los huesos y los músculos, y por qué?",
       "opciones": {
-        "A": "Cargar el bulto en un hombro",
-        "B": "Jugar fútbol en el recreo",
-        "C": "Dormir nueve horas",
-        "D": "Tomar agua en lugar de refresco"
+        "A": "Cargar el bulto en un hombro, porque inclina la espalda hacia un lado.",
+        "B": "Jugar fútbol en el recreo, porque correr mucho desgasta los huesos.",
+        "C": "Dormir nueve horas, porque los músculos se debilitan al no moverse.",
+        "D": "Cargar el bulto en un hombro, porque cansa nada más los músculos del brazo."
       },
       "clave": "A",
       "explicacion": "Cargar todo el peso del bulto en un solo hombro inclina la espalda hacia un lado y obliga a huesos y músculos a trabajar de forma desigual. Lo recomendable es usar los dos tirantes y llevar solo lo necesario.",
       "por_que": {
-        "B": "El ejercicio frecuente fortalece músculos y huesos; es un hábito positivo.",
-        "C": "Dormir lo suficiente ayuda a que el cuerpo se recupere; es un hábito positivo.",
-        "D": "Es un hábito positivo que favorece el trabajo de los riñones y de todo el cuerpo."
+        "B": "Cree que el ejercicio daña los huesos, cuando en realidad los fortalece.",
+        "C": "Confunde el descanso, que el cuerpo necesita, con falta de actividad.",
+        "D": "Escoge el hábito correcto, pero el daño principal está en la espalda, que se inclina hacia un lado."
       },
       "imagen": null
     },
@@ -402,7 +402,7 @@
       "bloque": "Cuerpo humano",
       "tema": "Cuerpo humano",
       "subtema": "Órganos, sistemas y salud",
-      "nivel": "alto",
+      "nivel": "intermedio",
       "afirmacion": {
         "codigo": "1.4",
         "texto": "Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud."
@@ -413,20 +413,20 @@
       },
       "verbo": "analizar",
       "tipo_contexto": "local-nacional",
-      "contexto": "Lea la siguiente información:\n\nEn un cantón del país, la municipalidad cierra al tránsito una calle principal cada domingo en la mañana para que las familias caminen, patinen o anden en bicicleta. Por su parte, la asociación de desarrollo de un barrio instaló aparatos para ejercitarse en el parque, y el comité de deportes organiza clases gratuitas de baile para personas adultas mayores.",
+      "contexto": "Considere la siguiente información:\n\nEn un cantón del país, la municipalidad cierra al tránsito una calle principal cada domingo en la mañana para que las familias caminen, patinen o anden en bicicleta. Por su parte, la asociación de desarrollo de un barrio instaló aparatos para ejercitarse en el parque, y el comité de deportes organiza clases gratuitas de baile para personas adultas mayores.",
       "enunciado": "¿Por qué estas acciones comunales e institucionales favorecen la salud de los sistemas del cuerpo?",
       "opciones": {
-        "A": "Reemplazan la necesidad de comer de forma variada y sana.",
-        "B": "Fomentan el ejercicio, que fortalece corazón y pulmones.",
-        "C": "Evitan que las personas se contagien de cualquier microbio.",
-        "D": "Sustituyen las horas de descanso que el cuerpo necesita."
+        "A": "Promueven la actividad física, que reemplaza una dieta variada.",
+        "B": "Promueven la actividad física, que fortalece corazón y músculos.",
+        "C": "Promueven la actividad física, que impide contagiarse de microbios.",
+        "D": "Promueven la actividad física, que sustituye las horas de sueño."
       },
       "clave": "B",
-      "explicacion": "Caminar, patinar, andar en bicicleta o bailar mantienen el cuerpo en movimiento, y eso fortalece el corazón, los pulmones, los músculos y los huesos. Cuando la comunidad y las instituciones abren estos espacios, a más personas les resulta fácil mantenerse activas.",
+      "explicacion": "Caminar, patinar, andar en bicicleta o bailar mantienen el cuerpo en movimiento, y eso fortalece el corazón, los músculos y los huesos, y mejora la respiración. Cuando la comunidad y las instituciones abren estos espacios, a más personas les resulta fácil mantenerse activas.",
       "por_que": {
-        "A": "Cree que el ejercicio sustituye una alimentación balanceada; ambos hábitos se necesitan.",
-        "C": "Confunde los beneficios del ejercicio con los de las vacunas y la higiene.",
-        "D": "Cree que el ejercicio reemplaza el sueño, cuando ambos son necesarios."
+        "A": "Cree que el ejercicio sustituye a la alimentación sana, cuando los dos se necesitan.",
+        "C": "Exagera: el ejercicio ayuda a la salud, pero no impide los contagios.",
+        "D": "Confunde la actividad con el descanso, que el cuerpo también necesita."
       },
       "imagen": null
     },
@@ -437,7 +437,7 @@
       "bloque": "Cuerpo humano",
       "tema": "Cuerpo humano",
       "subtema": "Órganos, sistemas y salud",
-      "nivel": "intermedio",
+      "nivel": "alto",
       "afirmacion": {
         "codigo": "1.4",
         "texto": "Analiza conceptos, funciones y características de los órganos y los sistemas del cuerpo humano para el mantenimiento de una buena salud."
@@ -448,7 +448,7 @@
       },
       "verbo": "reconocer",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Considere la siguiente información:\n\nDespués de jugar bajo el sol, Isaac nota que su camiseta está mojada y que en su frente quedan gotitas con sabor salado. El sudor sale por pequeños poros de la piel y, al evaporarse, ayuda a enfriar el cuerpo. Ese líquido contiene agua, sales y pequeñas cantidades de urea, una sustancia de desecho que el cuerpo no necesita.",
+      "contexto": "Considere la siguiente información:\n\nDespués de jugar bajo el sol, Isaac nota que su camiseta está mojada y que en su frente quedan gotitas con sabor salado. El sudor sale por pequeños poros de la piel y, al evaporarse, ayuda a enfriar el cuerpo. Ese líquido contiene agua, sales y pequeñas cantidades de urea, la misma sustancia que se encuentra en la orina.",
       "enunciado": "Además de regular la temperatura, el sudor muestra que la piel participa en la función de",
       "opciones": {
         "A": "excretar residuos que el cuerpo no usa.",
@@ -521,7 +521,7 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Lea la siguiente información:\n\nHazel se rió a carcajadas mientras comía arroz y empezó a toser con fuerza. Su abuela le explicó que en la garganta hay un conducto por el que pasan tanto el aire como los alimentos. Al tragar, una pequeña tapa cierra el camino hacia la tráquea para que la comida siga hacia el esófago; si una persona habla o se ríe al tragar, esa tapa puede no cerrarse a tiempo.",
+      "contexto": "Lea la siguiente información:\n\nHazel se rio a carcajadas mientras comía arroz y empezó a toser con fuerza. Su abuela le explicó que en la garganta hay un conducto por el que pasan tanto el aire como los alimentos. Al tragar, una pequeña tapa cierra el camino hacia la tráquea para que la comida siga hacia el esófago; si una persona habla o se ríe al tragar, esa tapa puede no cerrarse a tiempo.",
       "enunciado": "La situación muestra una acción que comparten los sistemas",
       "opciones": {
         "A": "digestivo y circulatorio.",
@@ -556,20 +556,20 @@
       },
       "verbo": "analizar",
       "tipo_contexto": "científico-escolar",
-      "contexto": "Lea la siguiente información:\n\nEn un día muy caluroso, el cuerpo pierde mucha agua por el sudor. Cuando eso ocurre, el encéfalo detecta el cambio y produce la sensación de sed. Al mismo tiempo, se envían señales a los riñones para que eliminen menos agua, por lo que la orina sale en menor cantidad y de color más oscuro. Al beber líquido, la sangre recupera la cantidad de agua que necesita.",
+      "contexto": "Considere la siguiente información:\n\nEn un día muy caluroso, el cuerpo pierde mucha agua por el sudor. Cuando eso ocurre, el encéfalo detecta el cambio y produce la sensación de sed. Al mismo tiempo, se envían señales a los riñones para que eliminen menos agua, por lo que la orina sale en menor cantidad y de color más oscuro. Al beber líquido, la sangre recupera la cantidad de agua que necesita.",
       "enunciado": "¿Qué conclusión se obtiene de la información anterior?",
       "opciones": {
         "A": "Los riñones controlan el agua del cuerpo sin ayuda de otros órganos.",
         "B": "Varios sistemas actúan coordinados para mantener el agua del cuerpo.",
         "C": "El sistema nervioso solo participa cuando el cuerpo está en movimiento.",
-        "D": "El sudor y la orina son procesos que no tienen relación entre sí."
+        "D": "La sed aparece después de que la sangre ya recuperó el agua que perdió."
       },
       "clave": "B",
       "explicacion": "El sistema nervioso detecta la falta de agua y provoca la sed, el sistema excretor ahorra agua al producir menos orina y el circulatorio la reparte cuando se bebe. Todos trabajan juntos para mantener la salud del cuerpo.",
       "por_que": {
         "A": "Ignora que el encéfalo envía las señales y que la sangre transporta el agua.",
         "C": "Contradice el texto: el encéfalo detecta la falta de agua y provoca la sed.",
-        "D": "Ignora que los dos dependen de la cantidad de agua que hay en el cuerpo."
+        "D": "Invierte el orden: la sed aparece cuando falta agua, y beber es lo que la recupera."
       },
       "imagen": null
     },
@@ -596,7 +596,7 @@
       "opciones": {
         "A": "Mazorcas de maíz de distintos colores en una misma finca.",
         "B": "Un manglar y un páramo dentro del mismo país.",
-        "C": "El crecimiento de un mismo colibrí desde que nace.",
+        "C": "Muchos colibríes de una sola especie en un mismo jardín.",
         "D": "Varias clases de colibríes que visitan un mismo jardín."
       },
       "clave": "D",
@@ -604,7 +604,7 @@
       "por_que": {
         "A": "Muestra variedad dentro de una sola especie, el maíz; eso es diversidad genética.",
         "B": "Muestra lugares con condiciones muy distintas; eso es diversidad de ecosistemas.",
-        "C": "Describe los cambios de un solo individuo, no la variedad de especies."
+        "C": "Confunde la cantidad de individuos con la variedad de especies."
       },
       "imagen": null
     },
@@ -626,7 +626,7 @@
       },
       "verbo": "clasificar",
       "tipo_contexto": "local-nacional",
-      "contexto": "Lea la siguiente información:\n\nEn el Refugio de Vida Silvestre Ostional, en Guanacaste, ocurre un fenómeno llamado arribada: durante algunas noches, miles de hembras de tortuga lora salen del mar casi al mismo tiempo para poner sus huevos en la arena. Al llegar tantas juntas, los depredadores no logran comerse todos los huevos y muchas crías sobreviven.",
+      "contexto": "Considere la siguiente información:\n\nEn el Refugio Nacional de Vida Silvestre Ostional, en Guanacaste, ocurre un fenómeno llamado arribada: durante algunas noches, miles de hembras de tortuga lora salen del mar casi al mismo tiempo para poner sus huevos en la arena. Al llegar tantas juntas, los depredadores no logran comerse todos los huevos y muchas crías sobreviven.",
       "enunciado": "La arribada es un ejemplo de adaptación",
       "opciones": {
         "A": "estructural, porque depende de la forma del caparazón.",
@@ -685,7 +685,7 @@
       "bloque": "Biodiversidad",
       "tema": "Biodiversidad",
       "subtema": "Biodiversidad y adaptaciones",
-      "nivel": "alto",
+      "nivel": "intermedio",
       "afirmacion": {
         "codigo": "2.1",
         "texto": "Comprende conceptos básicos relacionados con la biodiversidad para el mejoramiento del entorno natural."
@@ -694,21 +694,21 @@
         "codigo": "2.1.4",
         "texto": "Identifica causas, importancia y amenazas a la biodiversidad en Costa Rica."
       },
-      "verbo": "analizar",
+      "verbo": "reconocer",
       "tipo_contexto": "global-planetario",
-      "contexto": "Lea la siguiente información:\n\nEl pez león es originario del océano Índico y del oeste del océano Pacífico, pero desde hace algunos años se encuentra en el mar Caribe, incluidas las costas de Costa Rica. Allí se alimenta de muchos peces pequeños nativos y casi ningún animal lo depreda. Además, se reproduce con gran rapidez y puede ocupar arrecifes y manglares.",
+      "contexto": "Considere la siguiente información:\n\nEl pez león es originario del océano Índico y del oeste del océano Pacífico, pero desde hace algunos años se encuentra en el mar Caribe, incluidas las costas de Costa Rica. Allí se alimenta de muchos peces pequeños nativos y casi ningún animal lo depreda. Además, se reproduce con gran rapidez y puede ocupar arrecifes y manglares.",
       "enunciado": "La situación del pez león en el Caribe representa una amenaza para la biodiversidad causada por",
       "opciones": {
-        "A": "la tala de los bosques cercanos a las playas.",
+        "A": "la destrucción de los arrecifes y los manglares.",
         "B": "la invasión de una especie de otra región.",
-        "C": "la cacería ilegal de especies en peligro.",
+        "C": "la pesca excesiva de los peces pequeños nativos.",
         "D": "la contaminación del agua por desechos plásticos."
       },
       "clave": "B",
       "explicacion": "El pez león llegó desde otros océanos, come peces nativos y casi no tiene enemigos que controlen su población. Las especies que invaden lugares donde no son originarias alteran el equilibrio y ponen en riesgo a las especies nativas.",
       "por_que": {
-        "A": "Es una amenaza real, pero no es la que se describe en el texto.",
-        "C": "El pez león no es cazado ilegalmente; es él quien consume a los peces nativos.",
+        "A": "Los arrecifes y manglares aparecen como lugares que el pez ocupa, no como lugares destruidos.",
+        "C": "Los peces nativos disminuyen porque el pez león se los come, no por la pesca.",
         "D": "Es una amenaza real, pero distinta de la que se describe en el texto."
       },
       "imagen": null
@@ -736,7 +736,7 @@
       "opciones": {
         "A": "Un saltamontes y una lombriz de tierra.",
         "B": "Una lombriz de tierra y un saltamontes.",
-        "C": "Un saltamontes y un sapo.",
+        "C": "Un saltamontes y un sapo común.",
         "D": "Un cangrejo y una lombriz de tierra."
       },
       "clave": "A",
@@ -766,11 +766,11 @@
       },
       "verbo": "comparar",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Lea la siguiente información:\n\nPara hacer pan casero, la abuela de Sofía mezcla la harina con levadura. Le explicó que la levadura está formada por hongos diminutos de una sola célula, distintos de los hongos grandes que crecen sobre los troncos podridos. Las células de la levadura tienen núcleo y se nutren de los azúcares de la masa; al hacerlo, liberan un gas que hace que el pan quede esponjoso.",
+      "contexto": "Considere la siguiente información:\n\nPara hacer pan casero, la abuela de Sofía mezcla la harina con levadura. Le explicó que la levadura está formada por hongos diminutos de una sola célula, distintos de los hongos grandes que crecen sobre los troncos podridos. Las células de la levadura tienen núcleo y se nutren de los azúcares de la masa; al hacerlo, liberan un gas que hace que el pan quede esponjoso.",
       "enunciado": "¿Qué característica comparten la levadura y los hongos de los troncos, que permite ubicarlos en el mismo reino?",
       "opciones": {
         "A": "Ambos están formados por una sola célula.",
-        "B": "Ninguno de los dos produce su propio alimento.",
+        "B": "Ambos absorben su alimento de lo que los rodea.",
         "C": "Ambos fabrican su alimento con la luz del sol.",
         "D": "Ninguno de los dos tiene núcleo en sus células."
       },
@@ -944,8 +944,8 @@
       },
       "verbo": "analizar",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Lea la siguiente información:\n\nEn la finca del abuelo de Joseph hay un granero donde viven varias lechuzas. Cada noche, ellas cazan ratones que se comen el maíz almacenado y los granos de los cultivos. Un vecino propuso ahuyentar a las lechuzas porque le dan miedo. El abuelo le respondió que eso podría causar un problema en la finca.",
-      "enunciado": "¿Cuál problema es más probable que ocurra si las lechuzas se van del granero?",
+      "contexto": "Lea la siguiente información:\n\nEn la finca del abuelo de Joseph hay un granero donde viven varias lechuzas. Cada noche, ellas cazan ratones que se comen el maíz almacenado y los granos de los cultivos. Un vecino propuso ahuyentar a las lechuzas porque le dan miedo. El abuelo le respondió que antes debían pensar qué pasaría con los demás seres vivos de la finca.",
+      "enunciado": "¿Qué es más probable que ocurra en la finca si las lechuzas se van del granero?",
       "opciones": {
         "A": "Los ratones desaparecerían por falta de depredadores.",
         "B": "Las plantas de maíz producirían más mazorcas.",
@@ -979,7 +979,7 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "local-nacional",
-      "contexto": "Lea la siguiente información:\n\nEn los bosques secos de Guanacaste crece el cornizuelo, un arbusto con espinas grandes y huecas. Dentro de esas espinas viven colonias de hormigas que se alimentan de un néctar y de unas pequeñas bolitas nutritivas que produce la planta. Las hormigas, a cambio, atacan a los insectos que se comen las hojas y cortan las enredaderas que crecen alrededor del arbusto.",
+      "contexto": "Considere la siguiente información:\n\nEn los bosques secos de Guanacaste crece el cornizuelo, un arbusto con espinas grandes y huecas. Dentro de esas espinas viven colonias de hormigas que se alimentan de un néctar y de unas pequeñas bolitas nutritivas que produce la planta. Las hormigas, a cambio, atacan a los insectos que se comen las hojas y cortan las enredaderas que crecen alrededor del arbusto.",
       "enunciado": "La relación entre el cornizuelo y las hormigas se clasifica como",
       "opciones": {
         "A": "comensalismo, porque solo las hormigas salen ganando.",
@@ -1057,15 +1057,15 @@
       "opciones": {
         "A": "Elimina por completo el dióxido de carbono del aire.",
         "B": "Sostiene las cadenas alimentarias y renueva el aire.",
-        "C": "Calienta el agua del mar para que vivan los peces.",
-        "D": "Permite que los peces respiren sin necesitar oxígeno."
+        "C": "Transforma el oxígeno del agua en dióxido de carbono.",
+        "D": "Es la forma en que las algas respiran bajo el agua."
       },
       "clave": "B",
       "explicacion": "Las algas del fitoplancton usan la luz para fabricar su alimento y, al hacerlo, liberan oxígeno. Así alimentan a muchos animales marinos y ayudan a mantener el oxígeno del aire que respiran los seres vivos.",
       "por_que": {
         "A": "Exagera: la fotosíntesis consume parte del dióxido de carbono, no todo.",
-        "C": "Confunde la fotosíntesis con un proceso que produce calor.",
-        "D": "Contradice la información: los peces sí necesitan oxígeno para vivir."
+        "C": "Invierte el proceso: la fotosíntesis toma dióxido de carbono y libera oxígeno.",
+        "D": "Confunde la fotosíntesis, que fabrica alimento, con la respiración."
       },
       "imagen": null
     },
@@ -1122,7 +1122,7 @@
       },
       "verbo": "determinar",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Analice la siguiente tabla:\n\nXimena acomodó cuatro cajas en los estantes de la bodega de su casa.\n\n| Caja | Masa | Altura del estante |\n|---|---|---|\n| 1 | 2 kg | 1 m |\n| 2 | 1 kg | 3 m |\n| 3 | 3 kg | 2 m |\n| 4 | 4 kg | 1 m |\n\nLa energía potencial de un objeto es mayor cuanto más masa tiene y cuanto más alto se encuentra.",
+      "contexto": "Analice la siguiente tabla:\n\nXimena acomodó cuatro cajas en los estantes de la bodega de su casa.\n\n| Caja | Masa | Altura del estante |\n|---|---|---|\n| 1 | 2 kg | 1 m |\n| 2 | 1 kg | 3 m |\n| 3 | 3 kg | 2 m |\n| 4 | 4 kg | 1 m |\n\nPara comparar la energía potencial de objetos en reposo, se multiplica la masa de cada uno por la altura a la que se encuentra: cuanto mayor es ese resultado, mayor es su energía potencial.",
       "enunciado": "¿Cuál caja tiene mayor energía potencial?",
       "opciones": {
         "A": "La caja 1",
@@ -1192,7 +1192,7 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "global-planetario",
-      "contexto": "Lea la siguiente información:\n\nEn algunas regiones del mundo, la electricidad se produce en plantas que queman carbón mineral; el humo que sale de sus chimeneas lleva gases y partículas que ensucian el aire y aumentan el calentamiento del planeta. En otras regiones se instalan campos con paneles que convierten la luz del Sol en electricidad.",
+      "contexto": "Considere la siguiente información:\n\nEn algunas regiones del mundo, la electricidad se produce en plantas que queman carbón mineral; el humo que sale de sus chimeneas lleva gases y partículas que ensucian el aire y aumentan el calentamiento del planeta. En otras regiones se instalan campos con paneles que convierten la luz del Sol en electricidad.",
       "enunciado": "La segunda forma de producir electricidad se considera energía limpia porque",
       "opciones": {
         "A": "funciona igual durante el día y durante la noche.",
@@ -1227,20 +1227,20 @@
       },
       "verbo": "reconocer",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Lea la siguiente información:\n\nDurante un apagón, Kendall usa una linterna que no tiene baterías. Para encenderla, gira con la mano una manivela durante un minuto. Al girar, la manivela mueve un pequeño generador que produce electricidad, y esa electricidad hace brillar el bombillo de la linterna.",
+      "contexto": "Lea la siguiente información:\n\nDurante un apagón, Kendall usa una linterna que no tiene baterías. Para encenderla, gira con la mano una manivela sin detenerse. Al girar, la manivela mueve un pequeño generador que produce electricidad, y esa electricidad hace brillar el bombillo de la linterna.",
       "enunciado": "¿Cuál es la secuencia de transformaciones de energía que ocurre en la linterna?",
       "opciones": {
-        "A": "De eléctrica a cinética y de cinética a lumínica.",
-        "B": "De cinética a eléctrica y de eléctrica a lumínica.",
-        "C": "De química a eléctrica y de eléctrica a lumínica.",
-        "D": "De cinética a lumínica y de lumínica a eléctrica."
+        "A": "De eléctrica a cinética y luego a lumínica.",
+        "B": "De cinética a eléctrica y luego a lumínica.",
+        "C": "De química a eléctrica y luego a lumínica.",
+        "D": "De cinética a lumínica y después a eléctrica."
       },
       "clave": "B",
       "explicacion": "Al girar la manivela se produce movimiento, que es energía cinética, y el generador la transforma en energía eléctrica. Luego el bombillo transforma esa electricidad en energía lumínica.",
       "por_que": {
-        "A": "Invierte el orden: primero hay movimiento y después electricidad.",
-        "C": "Así funciona una linterna de baterías, pero esta no tiene baterías.",
-        "D": "La luz es el resultado final; no es la que produce la electricidad."
+        "A": "Invierte el orden: primero está el movimiento de la manivela, que se convierte en electricidad.",
+        "C": "Piensa en una linterna de baterías, pero esta no tiene baterías: la energía viene del movimiento.",
+        "D": "Pone la luz antes que la electricidad, cuando el bombillo brilla gracias a la electricidad."
       },
       "imagen": null
     },
@@ -1306,7 +1306,7 @@
         "D": "Ciclista 4"
       },
       "clave": "A",
-      "explicacion": "La rapidez se obtiene al dividir la distancia entre el tiempo. Ciclista 1 recorrió 600 m en 100 s, es decir, 6 m/s, la mayor rapidez del grupo.",
+      "explicacion": "La rapidez se obtiene al dividir la distancia entre el tiempo. El ciclista 1 recorrió 600 m en 100 s, es decir, 6 m/s, la mayor rapidez del grupo.",
       "por_que": {
         "B": "Recorrió 800 m, pero tardó 200 s: su rapidez fue de 4 m/s.",
         "C": "Recorrió la mayor distancia, pero tardó 180 s: su rapidez fue de 5 m/s.",
@@ -1330,25 +1330,25 @@
         "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
       },
       "evidencia": {
-        "codigo": "3.2.2",
-        "texto": "Reconoce las características básicas de movimiento para un mejor entendimiento del entorno físico."
+        "codigo": "3.2.6",
+        "texto": "Reconoce las características básicas de la luz, así como los fenómenos de la visión, existencia de colores, composición y descomposición de la luz blanca."
       },
       "verbo": "determinar",
       "tipo_contexto": "local-nacional",
-      "contexto": "Lea la siguiente información:\n\nEn el Parque Metropolitano La Sabana, en San José, Priscilla entrena para una competencia de atletismo. Su entrenadora le pidió correr un tramo recto de 100 m manteniendo siempre una rapidez de 5 m/s. Mientras tanto, la entrenadora toma el tiempo con un cronómetro desde la salida hasta la llegada.",
-      "enunciado": "¿Cuánto tiempo tardará Priscilla en recorrer el tramo completo?",
+      "contexto": "Considere la siguiente información:\n\nEn la Feria Nacional de Ciencia y Tecnología, un grupo de estudiantes iluminó un cuarto oscuro solo con luz roja. Valeria entró con una camiseta blanca, una gorra verde y un pantalón negro. Los expositores le explicaron que un objeto se ve de cierto color porque refleja la luz de ese color y absorbe las demás; lo blanco refleja todos los colores y lo negro no refleja ninguno.",
+      "enunciado": "Dentro del cuarto, ¿de qué color se verán la camiseta y la gorra de Valeria, en ese orden?",
       "opciones": {
-        "A": "0,05 s",
-        "B": "20 s",
-        "C": "95 s",
-        "D": "500 s"
+        "A": "Blanca y verde.",
+        "B": "Roja y verde.",
+        "C": "Blanca y negra.",
+        "D": "Roja y negra."
       },
-      "clave": "B",
-      "explicacion": "Si Priscilla avanza 5 m en cada segundo, para recorrer 100 m necesita 100 ÷ 5 = 20 segundos. Para hallar el tiempo se divide la distancia entre la rapidez.",
+      "clave": "D",
+      "explicacion": "Bajo luz roja, la camiseta blanca refleja esa luz y se ve roja. La gorra verde absorbe la luz roja y no tiene luz verde que reflejar, por eso se ve negra.",
       "por_que": {
-        "A": "Divide la rapidez entre la distancia (5 ÷ 100), al revés de lo correcto.",
-        "C": "Resta la rapidez a la distancia (100 − 5), y esa operación no da el tiempo.",
-        "D": "Multiplica la distancia por la rapidez (100 × 5), cuando hay que dividir."
+        "A": "Cree que los objetos conservan su color aunque cambie la luz que los ilumina.",
+        "B": "Olvida que la gorra verde absorbe la luz roja y, sin luz verde que reflejar, se ve negra.",
+        "C": "Olvida que la camiseta blanca refleja la luz roja que le llega."
       },
       "imagen": null
     },
@@ -1373,21 +1373,21 @@
       "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEn la clase de Ciencias se presentaron tres situaciones de la vida diaria en las que el calor pasa de un cuerpo más caliente a otro más frío. La docente explicó que en cada situación el calor se transmite de una manera diferente y pidió identificar cuál es cada una.",
       "enunciado": "¿Cuál opción indica la forma de transmisión del calor en las situaciones 1, 2 y 3, respectivamente?",
       "opciones": {
-        "A": "Radiación, convección y conducción.",
-        "B": "Conducción, radiación y convección.",
-        "C": "Convección, conducción y radiación.",
-        "D": "Radiación, conducción y convección."
+        "A": "Radiación, conducción y convección.",
+        "B": "Radiación, convección y conducción.",
+        "C": "Conducción, radiación y convección.",
+        "D": "Convección, conducción y radiación."
       },
-      "clave": "D",
+      "clave": "A",
       "explicacion": "Las manos se calientan sin tocar la fogata, y eso es radiación. El mango de la cuchara se calienta por contacto con la bebida, que es conducción, y el aire caliente sube y el frío baja alrededor del calentador, que es convección.",
       "por_que": {
-        "A": "Confunde conducción con convección: en la cuchara el calor pasa por contacto a través del metal.",
-        "B": "Las manos no tocan la fogata; el calor les llega por radiación.",
-        "C": "Confunde la radiación de la fogata con el movimiento del aire caliente."
+        "B": "Confunde conducción con convección: en la cuchara el calor pasa por contacto a través del metal.",
+        "C": "Las manos no tocan la fogata; el calor les llega por radiación.",
+        "D": "Confunde la radiación de la fogata con el movimiento del aire caliente."
       },
       "imagen": {
         "archivo": "cie-3-2-calor.svg",
-        "alt": "Tres escenas numeradas. Situación 1: unas manos frente a una fogata, sin tocarla. Situación 2: una cuchara de metal dentro de una taza con bebida caliente; el mango que queda afuera se calienta. Situación 3: un calentador en el piso de un cuarto; flechas muestran el aire caliente que sube y el aire frío que baja."
+        "alt": "Tres escenas numeradas. Situación 1: unas manos frente a una fogata, sin tocarla. Situación 2: una cuchara de metal dentro de una taza con bebida caliente; el mango que queda afuera se calienta. Situación 3: un calentador encendido; flechas muestran el aire caliente que sube y el aire frío que baja."
       }
     },
     {
@@ -1408,19 +1408,19 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Lea la siguiente información:\n\nAllison y su papá van a cambiar el techo del gallinero. Quieren un material que deje pasar parte de la claridad del día, para que las gallinas no queden a oscuras, pero que no permita ver con nitidez lo que hay del otro lado, para que las aves estén tranquilas. En la ferretería les ofrecen varias opciones.",
+      "contexto": "Considere la siguiente información:\n\nAllison y su papá van a cambiar el techo del gallinero. Quieren un material que deje pasar parte de la claridad del día, para que las gallinas no queden a oscuras, pero que no permita ver con nitidez lo que hay del otro lado, para que las aves estén tranquilas. En la ferretería les ofrecen varias opciones.",
       "enunciado": "¿Qué tipo de material necesitan y cuál es un ejemplo?",
       "opciones": {
-        "A": "Translúcido, como una lámina de plástico lechoso.",
-        "B": "Transparente, como una lámina de vidrio sin color.",
-        "C": "Opaco, como una lámina de zinc.",
+        "A": "Transparente, como una lámina de vidrio sin color.",
+        "B": "Opaco, como una lámina de zinc ondulado.",
+        "C": "Translúcido, como una lámina de plástico lechoso.",
         "D": "Opaco, como una lámina de plástico lechoso."
       },
-      "clave": "A",
+      "clave": "C",
       "explicacion": "Un material translúcido deja pasar parte de la luz, pero no permite ver con claridad lo que hay detrás, como el plástico lechoso. Así las gallinas tienen claridad y a la vez están tranquilas.",
       "por_que": {
-        "B": "El vidrio sin color deja ver con claridad lo que hay del otro lado.",
-        "C": "El zinc no deja pasar la luz y el gallinero quedaría a oscuras.",
+        "A": "El vidrio sin color deja ver con claridad lo que hay del otro lado.",
+        "B": "El zinc no deja pasar la luz y el gallinero quedaría a oscuras.",
         "D": "El plástico lechoso deja pasar parte de la luz, por eso no es opaco."
       },
       "imagen": null
@@ -1448,15 +1448,15 @@
       "opciones": {
         "A": "Reflexión y refracción.",
         "B": "Refracción y refracción.",
-        "C": "Refracción y reflexión.",
-        "D": "Reflexión y reflexión."
+        "C": "Reflexión y reflexión.",
+        "D": "Refracción y reflexión."
       },
-      "clave": "C",
+      "clave": "D",
       "explicacion": "En la poza, la luz se desvía al pasar del agua al aire, y eso hace que el fondo parezca más cerca: es refracción. En el agua quieta, la luz rebota en la superficie y forma una imagen como en un espejo: es reflexión.",
       "por_que": {
         "A": "Invierte los fenómenos: en la situación 1 la luz se desvía al pasar del agua al aire.",
         "B": "En la situación 2 la luz rebota en la superficie; no cambia de medio.",
-        "D": "En la situación 1 la luz pasa del agua al aire y se desvía."
+        "C": "En la situación 1 la luz pasa del agua al aire y se desvía."
       },
       "imagen": null
     },
@@ -1478,11 +1478,11 @@
       },
       "verbo": "determinar",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Lea la siguiente información:\n\nDurante una tormenta, Emanuel ve un relámpago y empieza a contar los segundos hasta escuchar el trueno: cuenta 3 segundos. Su hermana le explica que la luz del relámpago llega casi al instante, mientras que el sonido del trueno viaja por el aire con una rapidez aproximada de 340 m/s.",
+      "contexto": "Considere la siguiente información:\n\nDurante una tormenta, Emanuel ve un relámpago y empieza a contar los segundos hasta escuchar el trueno: cuenta 3 segundos. Su hermana le explica que la luz del relámpago llega casi al instante, mientras que el sonido del trueno viaja por el aire con una rapidez aproximada de 340 m/s.",
       "enunciado": "¿A qué distancia aproximada de Emanuel se produjo el relámpago?",
       "opciones": {
         "A": "113 m",
-        "B": "337 m",
+        "B": "340 m",
         "C": "343 m",
         "D": "1020 m"
       },
@@ -1490,7 +1490,7 @@
       "explicacion": "El sonido avanza unos 340 m en cada segundo, así que en 3 segundos recorre 340 × 3 = 1020 m. Por eso el relámpago ocurrió a poco más de un kilómetro de Emanuel.",
       "por_que": {
         "A": "Divide la rapidez entre el tiempo (340 ÷ 3), cuando hay que multiplicar.",
-        "B": "Resta el tiempo a la rapidez (340 − 3), y esa operación no da la distancia.",
+        "B": "Toma la rapidez del sonido como si fuera la distancia, sin usar los 3 segundos.",
         "C": "Suma la rapidez y el tiempo (340 + 3), y esa operación no da la distancia."
       },
       "imagen": null
@@ -1517,16 +1517,16 @@
       "enunciado": "¿Qué característica permite clasificar el sonido de la motosierra como ruido?",
       "opciones": {
         "A": "No produce vibraciones que viajen por el aire.",
-        "B": "Viaja más despacio por el aire que la música.",
-        "C": "Tiene un volumen más bajo que la música.",
-        "D": "Vibra de manera irregular y desagradable."
+        "B": "Vibra de manera irregular y desagradable.",
+        "C": "Viaja más despacio por el aire que la música.",
+        "D": "Tiene un volumen más bajo que la música."
       },
-      "clave": "D",
+      "clave": "B",
       "explicacion": "El ruido es un sonido producido por vibraciones irregulares, sin orden, que resulta molesto. La marimba, en cambio, produce vibraciones ordenadas que se escuchan como notas agradables.",
       "por_que": {
         "A": "Todo sonido, incluido el ruido, se produce por vibraciones que viajan por un medio.",
-        "B": "En el aire, todos los sonidos viajan con la misma rapidez.",
-        "C": "El volumen no define al ruido; además, el zumbido era fuerte."
+        "C": "En el aire, todos los sonidos viajan con la misma rapidez.",
+        "D": "El volumen no define al ruido; además, el zumbido era fuerte."
       },
       "imagen": null
     },
@@ -1537,7 +1537,7 @@
       "bloque": "Energía",
       "tema": "Energía",
       "subtema": "Manifestaciones de la energía",
-      "nivel": "alto",
+      "nivel": "intermedio",
       "afirmacion": {
         "codigo": "3.2",
         "texto": "Distingue las manifestaciones de la energía (movimiento, calor, luz, sonido) en situaciones cotidianas."
@@ -1546,22 +1546,22 @@
         "codigo": "3.2.11",
         "texto": "Reconoce los efectos negativos y positivos de la luz y el sonido en ambientes naturales y de ciudad."
       },
-      "verbo": "analizar",
+      "verbo": "identificar",
       "tipo_contexto": "global-planetario",
       "contexto": "Considere la siguiente información:\n\nEn muchas playas del mundo donde anidan tortugas marinas, las crías salen del nido por la noche y se orientan hacia el horizonte del mar, que suele ser la zona más clara. Cuando cerca de la playa hay hoteles, casas o calles muy iluminadas, muchas crías caminan tierra adentro y no logran llegar al agua.",
       "enunciado": "¿Qué efecto de la luz en el ambiente se describe?",
       "opciones": {
         "A": "La luz de la luna impide que las crías salgan de los nidos.",
-        "B": "La luz artificial altera la orientación de algunas especies.",
-        "C": "El calor de los bombillos seca la arena de los nidos.",
-        "D": "La luz de las ciudades ayuda a las crías a encontrar el mar."
+        "B": "El calor de los bombillos seca la arena de los nidos.",
+        "C": "La luz de las ciudades ayuda a las crías a encontrar el mar.",
+        "D": "La luz artificial desvía a algunos animales de su ruta."
       },
-      "clave": "B",
+      "clave": "D",
       "explicacion": "Las crías de tortuga buscan la zona más clara para llegar al mar. Las luces de hoteles, casas y calles las confunden y las llevan en la dirección equivocada, por eso la luz artificial puede dañar a la fauna.",
       "por_que": {
         "A": "La claridad natural sobre el mar es la que guía a las crías; el problema es la luz artificial.",
-        "C": "El texto habla de la dirección que toman las crías, no del calor.",
-        "D": "Es al revés: la luz artificial las aleja del mar."
+        "B": "El texto habla de la dirección que toman las crías, no del calor.",
+        "C": "Es al revés: la luz artificial las aleja del mar."
       },
       "imagen": null
     },
@@ -1586,15 +1586,15 @@
       "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nNicole armó dos circuitos con una batería, cables y tres bombillos iguales en cada uno. En ambos circuitos, el bombillo marcado con una X se fundió, es decir, su filamento se rompió y la corriente ya no puede pasar a través de él. Los demás bombillos están en buen estado.",
       "enunciado": "¿Qué ocurre con los demás bombillos de cada circuito después de que se funde el bombillo marcado?",
       "opciones": {
-        "A": "En el 1 siguen encendidos y en el 2 se apagan.",
-        "B": "En el 1 se apagan y en el 2 siguen encendidos.",
+        "A": "En el 1 se apagan y en el 2 siguen encendidos.",
+        "B": "En el 1 siguen encendidos y en el 2 se apagan.",
         "C": "En los dos circuitos se apagan todos.",
         "D": "En los dos circuitos siguen encendidos."
       },
-      "clave": "B",
+      "clave": "A",
       "explicacion": "En el circuito 1 los bombillos están en serie, uno detrás de otro, y si uno se funde se corta el único camino de la corriente. En el circuito 2 están en paralelo, así que la corriente sigue por los otros caminos y esos bombillos siguen encendidos.",
       "por_que": {
-        "A": "Confunde los circuitos: el 1 tiene un solo camino para la corriente y el 2 tiene varios.",
+        "B": "Confunde los circuitos: el 1 tiene un solo camino para la corriente y el 2 tiene varios.",
         "C": "En el circuito en paralelo la corriente sigue por los otros caminos.",
         "D": "En el circuito en serie, al fundirse un bombillo, se interrumpe el único camino."
       },
@@ -1624,16 +1624,16 @@
       "contexto": "Analice la siguiente tabla:\n\nEn el laboratorio, Brandon probó varios objetos en un circuito con una batería y un bombillo. Colocó cada objeto entre los extremos de dos cables y observó si el bombillo encendía.\n\n| Objeto | ¿Encendió el bombillo? |\n|---|---|\n| Clip de metal | Sí |\n| Borrador | No |\n| Mina de lápiz | Sí |\n| Palito de madera | No |",
       "enunciado": "Según los resultados, ¿cuál opción reúne solo materiales aislantes?",
       "opciones": {
-        "A": "El borrador y el palito de madera.",
-        "B": "El clip de metal y el borrador.",
-        "C": "La mina de lápiz y el palito de madera.",
+        "A": "El clip de metal y el borrador.",
+        "B": "La mina de lápiz y el palito de madera.",
+        "C": "El borrador y el palito de madera.",
         "D": "El clip de metal y la mina de lápiz."
       },
-      "clave": "A",
+      "clave": "C",
       "explicacion": "Los materiales aislantes no dejan pasar la corriente eléctrica, por eso con ellos el bombillo no encendió. En la prueba de Brandon, eso ocurrió con el borrador y con el palito de madera.",
       "por_que": {
-        "B": "El clip encendió el bombillo, por eso es conductor.",
-        "C": "La mina de lápiz sí dejó pasar la corriente, aunque no sea de metal.",
+        "A": "El clip encendió el bombillo, por eso es conductor.",
+        "B": "La mina de lápiz sí dejó pasar la corriente, aunque no sea de metal.",
         "D": "Son los conductores: los dos permitieron que el bombillo encendiera."
       },
       "imagen": null
@@ -1659,16 +1659,16 @@
       "contexto": "Lea la siguiente información:\n\nEn la clase de Ciencias, Rebeca frotó dos tiras de plástico iguales con el mismo paño de lana. Luego las sostuvo de un extremo y las acercó, sin que se tocaran. Las tiras se separaron una de la otra. Después acercó una de las tiras a pedacitos de papel, y los pedacitos se pegaron a la tira.",
       "enunciado": "¿Qué explica que las dos tiras se separaran?",
       "opciones": {
-        "A": "Quedaron con cargas de distinto tipo y se repelen.",
-        "B": "Quedaron sin carga después de frotarlas con el paño.",
-        "C": "Quedaron con cargas del mismo tipo y se repelen.",
+        "A": "Quedaron con cargas del mismo tipo y se repelen.",
+        "B": "Quedaron con cargas de distinto tipo y se repelen.",
+        "C": "Quedaron sin carga después de frotarlas con el paño.",
         "D": "Quedaron con cargas del mismo tipo y se atraen."
       },
-      "clave": "C",
+      "clave": "A",
       "explicacion": "Como las dos tiras se frotaron con el mismo paño, quedaron con el mismo tipo de carga eléctrica. Las cargas iguales se repelen, por eso las tiras se alejaron una de la otra.",
       "por_que": {
-        "A": "Las cargas de distinto tipo se atraen, no se repelen.",
-        "B": "Al frotarlas ganan carga; por eso atraen los pedacitos de papel.",
+        "B": "Las cargas de distinto tipo se atraen, no se repelen.",
+        "C": "Al frotarlas ganan carga; por eso atraen los pedacitos de papel.",
         "D": "Las cargas del mismo tipo se repelen; por eso las tiras se alejaron."
       },
       "imagen": null
@@ -1686,25 +1686,25 @@
         "texto": "Determina las características de la electricidad, el magnetismo, la corriente eléctrica, los circuitos y la conductividad en fenómenos cotidianos."
       },
       "evidencia": {
-        "codigo": "3.3.5",
-        "texto": "Reconoce las características del magnetismo, polos magnéticos, ejemplos, manifestaciones y usos en la vida cotidiana, así como su relación con la energía eléctrica (electroimanes)."
+        "codigo": "3.3.6",
+        "texto": "Reconoce materiales magnéticos y el funcionamiento de la brújula."
       },
-      "verbo": "reconocer",
+      "verbo": "analizar",
       "tipo_contexto": "personal-cotidiano",
-      "contexto": "Lea la siguiente información:\n\nEn un centro de reciclaje, una grúa tiene en su extremo un disco grande formado por una bobina de alambre enrollado alrededor de un núcleo de hierro. Cuando el operario activa el interruptor, el disco levanta piezas de chatarra de hierro. Al llegar al contenedor, el operario apaga el interruptor y la chatarra cae.",
-      "enunciado": "¿Qué característica del disco permite soltar la chatarra en el contenedor?",
+      "contexto": "Considere la siguiente información:\n\nEn una gira al cerro Chirripó, Daniel lleva una brújula para orientarse. La aguja de la brújula es un pequeño imán que puede girar libremente; uno de sus extremos apunta hacia el norte de la Tierra. Durante un descanso, Daniel coloca la brújula junto a su linterna, que tiene un imán en la base, y nota que la aguja deja de señalar el norte y apunta hacia la linterna.",
+      "enunciado": "¿Qué explica el cambio en la dirección de la aguja?",
       "opciones": {
-        "A": "Su magnetismo depende de que pase corriente eléctrica.",
-        "B": "Su magnetismo es permanente, como el de un imán común.",
-        "C": "El hierro pierde su peso cuando se apaga la grúa.",
-        "D": "Atrae solo materiales de aluminio, como las latas."
+        "A": "La linterna gasta la carga eléctrica de la aguja.",
+        "B": "El norte de la Tierra cambia de lugar durante el día.",
+        "C": "El imán de la aguja pierde su fuerza al quedar quieto.",
+        "D": "Otro imán cercano atrae la aguja más que la Tierra."
       },
-      "clave": "A",
-      "explicacion": "La grúa usa un electroimán, que es una bobina con corriente eléctrica que se comporta como un imán. Al apagar el interruptor deja de pasar la corriente, el disco pierde su magnetismo y la chatarra cae.",
+      "clave": "D",
+      "explicacion": "La aguja de la brújula es un imán que normalmente se orienta hacia el norte de la Tierra. Si se acerca otro imán, este la atrae con más fuerza y la aguja apunta hacia él; por eso las brújulas se usan lejos de los imanes.",
       "por_que": {
-        "B": "Si fuera permanente, la chatarra no caería al apagar el interruptor.",
-        "C": "El hierro siempre tiene peso; lo que cambia es la atracción magnética.",
-        "D": "Los imanes atraen el hierro, no el aluminio, y el disco levanta chatarra de hierro."
+        "A": "Confunde el magnetismo con la electricidad: la aguja es un imán, no guarda carga eléctrica.",
+        "B": "Los polos de la Tierra no cambian de lugar en un día, y la aguja apuntó hacia la linterna.",
+        "C": "Si la aguja perdiera su fuerza, no apuntaría hacia la linterna."
       },
       "imagen": null
     },
@@ -1731,15 +1731,15 @@
       "opciones": {
         "A": "Se forman las nubes, la lluvia y casi todo el viento.",
         "B": "Se queman muchos meteoroides al entrar a la atmósfera.",
-        "C": "Se reflejan las ondas de radio que viajan por el planeta.",
-        "D": "El ozono filtra parte de los rayos ultravioleta del Sol."
+        "C": "El ozono filtra parte de los rayos ultravioleta del Sol.",
+        "D": "Se reflejan las ondas de radio que viajan por el planeta."
       },
-      "clave": "D",
+      "clave": "C",
       "explicacion": "La capa 2 es la estratosfera, donde se encuentra la capa de ozono. El ozono filtra parte de los rayos ultravioleta del Sol y así protege a los seres vivos.",
       "por_que": {
         "A": "Eso ocurre en la capa 1, la más cercana a la superficie.",
         "B": "Eso ocurre en la capa 3, la mesosfera.",
-        "C": "Eso ocurre en la capa 4, la ionosfera."
+        "D": "Eso ocurre en la capa 4, la ionosfera."
       },
       "imagen": {
         "archivo": "cie-4-1-atmosfera.svg",
@@ -1764,19 +1764,19 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "local-nacional",
-      "contexto": "Lea la siguiente información:\n\nDurante una semana, Karla anotó dos frases que escuchó en su casa:\n\n1. «En Guanacaste, de diciembre a abril casi no llueve y hace mucho calor; así ha sido durante muchísimos años».\n\n2. «Esta tarde, en Cartago, cayó un fuerte aguacero con granizo y luego salió el sol».",
+      "contexto": "Considere la siguiente información:\n\nDurante una semana, Karla anotó dos frases que escuchó en su casa:\n\n1. «En Guanacaste, de diciembre a abril casi no llueve y hace mucho calor; así ha sido durante muchísimos años».\n\n2. «Esta tarde, en Cartago, cayó un fuerte aguacero con granizo y luego salió el sol».",
       "enunciado": "¿A qué concepto se refiere cada frase, en ese orden?",
       "opciones": {
         "A": "Al tiempo atmosférico y al clima.",
-        "B": "Al clima en las dos frases.",
-        "C": "Al clima y al tiempo atmosférico.",
+        "B": "Al clima y al tiempo atmosférico.",
+        "C": "Al clima en las dos frases.",
         "D": "Al tiempo atmosférico en las dos frases."
       },
-      "clave": "C",
+      "clave": "B",
       "explicacion": "El clima describe las condiciones que se repiten en un lugar durante muchos años, como la época seca de Guanacaste. El tiempo atmosférico es lo que ocurre en un momento corto, como el aguacero de una tarde en Cartago.",
       "por_que": {
         "A": "Invierte los conceptos: la frase 1 describe lo que se repite durante muchos años.",
-        "B": "La frase 2 describe lo que ocurrió en una sola tarde.",
+        "C": "La frase 2 describe lo que ocurrió en una sola tarde.",
         "D": "La frase 1 habla de condiciones que se repiten año tras año."
       },
       "imagen": null
@@ -1799,20 +1799,20 @@
       },
       "verbo": "analizar",
       "tipo_contexto": "local-nacional",
-      "contexto": "Lea la siguiente información:\n\nEn las faldas de varios volcanes del Valle Central de Costa Rica, la ceniza y otros materiales expulsados en erupciones de hace mucho tiempo se acumularon capa tras capa y formaron suelos muy fértiles. Hoy esas tierras se aprovechan para cultivar hortalizas, papas y café.",
-      "enunciado": "¿Qué tipo de agente modificó ese relieve y qué influencia tiene en las actividades humanas?",
+      "contexto": "Lea la siguiente información:\n\nEn las faldas de los volcanes que rodean el Valle Central de Costa Rica, la ceniza y otros materiales expulsados en erupciones de hace mucho tiempo se acumularon capa tras capa y formaron suelos muy fértiles. Hoy esas tierras se aprovechan para cultivar hortalizas, papas y café.",
+      "enunciado": "¿Qué tipo de agente formó esos suelos y por qué se clasifica así?",
       "opciones": {
-        "A": "Un agente externo, que favoreció la agricultura de la zona.",
-        "B": "Un agente interno, que favoreció la agricultura de la zona.",
-        "C": "Un agente interno, que impidió la agricultura de la zona.",
-        "D": "Un agente externo, que impidió la agricultura de la zona."
+        "A": "Un agente externo, porque la lluvia y el viento formaron el suelo.",
+        "B": "Un agente externo, porque la ceniza se fue acumulando con el tiempo.",
+        "C": "Un agente interno, porque los cultivos cambiaron la forma del terreno.",
+        "D": "Un agente interno, porque se originó en el interior del planeta."
       },
-      "clave": "B",
+      "clave": "D",
       "explicacion": "Las erupciones volcánicas se originan en el interior de la Tierra, por eso son un agente interno que modifica el relieve. En este caso, la ceniza formó suelos fértiles que favorecen la agricultura.",
       "por_que": {
-        "A": "Las erupciones volcánicas nacen del interior de la Tierra, por eso son un agente interno.",
-        "C": "El texto muestra que esos suelos se aprovechan para cultivar.",
-        "D": "Equivoca el tipo de agente y también su efecto en la agricultura."
+        "A": "Confunde la ceniza volcánica con la acción de la lluvia y el viento, que son agentes externos.",
+        "B": "Se fija en la acumulación, pero el material salió del interior de la Tierra en erupciones.",
+        "C": "Acierta en el tipo de agente, pero los cultivos son una actividad humana, no el origen del suelo."
       },
       "imagen": null
     },
@@ -1834,20 +1834,20 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "local-nacional",
-      "contexto": "El siguiente texto se relaciona con la geosfera:\n\nCosta Rica se ubica en una zona donde la placa del Coco se hunde lentamente debajo de la placa Caribe. Esas placas son grandes pedazos de la capa rígida exterior de la Tierra, que está formada por la corteza y por la parte más alta del manto. Debajo de ella, el manto es más caliente y sus materiales se pueden mover muy despacio.",
+      "contexto": "El siguiente texto se relaciona con la geosfera:\n\nCosta Rica se ubica en una zona donde la placa del Coco se hunde lentamente debajo de otras placas. Esas placas son grandes pedazos de la capa rígida exterior de la Tierra, y sus choques producen muchos de los sismos del país. Debajo de esa capa, el manto es más caliente y sus materiales se pueden mover muy despacio.",
       "enunciado": "Según la información, ¿cuál afirmación describe correctamente la capa que forma las placas?",
       "opciones": {
-        "A": "Es la corteza, que también abarca todo el manto terrestre.",
-        "B": "Es el manto, que forma una capa sólida y rígida.",
-        "C": "Es la litosfera, que está formada solo por la corteza terrestre.",
-        "D": "Es la litosfera, que abarca la corteza y el manto superior."
+        "A": "Es la litosfera, que abarca la corteza y el manto superior.",
+        "B": "Es la corteza, que también abarca todo el manto terrestre.",
+        "C": "Es el manto, que forma una capa sólida y rígida.",
+        "D": "Es la litosfera, que está formada solo por la corteza terrestre."
       },
-      "clave": "D",
+      "clave": "A",
       "explicacion": "Las placas son pedazos de la litosfera, la capa rígida que abarca la corteza y la parte superior del manto. Por eso la litosfera no es lo mismo que la corteza: es un poco más gruesa.",
       "por_que": {
-        "A": "Confunde la corteza con la litosfera y además le agrega todo el manto.",
-        "B": "El manto que está debajo es más caliente y sus materiales se mueven; no forma las placas.",
-        "C": "Olvida que la litosfera también incluye la parte superior del manto."
+        "B": "Confunde la corteza con la litosfera y además le agrega todo el manto.",
+        "C": "El manto que está debajo es más caliente y sus materiales se mueven; no forma las placas.",
+        "D": "Olvida que la litosfera también incluye la parte superior del manto."
       },
       "imagen": null
     },
@@ -1867,7 +1867,7 @@
         "codigo": "4.1.3",
         "texto": "Identifica las partes de la hidrosfera (mares, océanos, ríos, aguas subterráneas, hielo, nubes)."
       },
-      "verbo": "clasificar",
+      "verbo": "comprender",
       "tipo_contexto": "global-planetario",
       "contexto": "Lea la siguiente información:\n\nEl agua del planeta se encuentra en lugares muy distintos. Una parte forma los océanos y mares; otra corre por ríos y quebradas; otra está congelada en los polos y en las cumbres de montañas muy altas. También hay agua en las nubes y en el vapor del aire, y una gran cantidad se acumula bajo el suelo, entre las rocas.",
       "enunciado": "¿Cuál conclusión sobre la hidrosfera es correcta?",
@@ -1904,18 +1904,18 @@
       },
       "verbo": "reconocer",
       "tipo_contexto": "global-planetario",
-      "contexto": "Lea la siguiente información:\n\nMelany vive en Costa Rica y tiene una prima que vive en Japón. Un día, a las doce del mediodía en Costa Rica, Melany la llamó por videollamada: su prima ya estaba en pijama porque allá era de madrugada del día siguiente. Esta diferencia de horario ocurre todos los días del año.",
+      "contexto": "Considere la siguiente información:\n\nMelany vive en Costa Rica y tiene una prima que vive en Japón. Un día, a las doce del mediodía en Costa Rica, Melany la llamó por videollamada: su prima ya estaba en pijama porque allá era de madrugada del día siguiente. Esta diferencia de horario ocurre todos los días del año.",
       "enunciado": "¿Cuál movimiento explica que en ambos países sea de día y de noche en momentos distintos?",
       "opciones": {
-        "A": "La rotación de la Tierra sobre su propio eje.",
-        "B": "La traslación de la Tierra alrededor del Sol.",
+        "A": "La traslación de la Tierra alrededor del Sol.",
+        "B": "La rotación de la Tierra sobre su propio eje.",
         "C": "La rotación de la Luna sobre su propio eje.",
         "D": "La traslación de la Luna alrededor de la Tierra."
       },
-      "clave": "A",
+      "clave": "B",
       "explicacion": "La Tierra gira sobre su eje y tarda un día en dar una vuelta completa. Mientras un lado mira hacia el Sol y tiene día, el lado opuesto, como Japón en ese momento, tiene noche.",
       "por_que": {
-        "B": "La traslación explica el año y las estaciones, no el día y la noche.",
+        "A": "La traslación explica el año y las estaciones, no el día y la noche.",
         "C": "El movimiento de la Luna no produce el día y la noche en la Tierra.",
         "D": "El viaje de la Luna alrededor de la Tierra produce las fases lunares, no el día y la noche."
       },
@@ -1939,19 +1939,19 @@
       },
       "verbo": "analizar",
       "tipo_contexto": "global-planetario",
-      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEl esquema, que no está dibujado a escala, muestra la posición del Sol, la Tierra y la Luna durante un fenómeno que muchas personas observaron desde el lado de la Tierra donde era de noche. En ese momento, los tres astros estaban alineados.",
+      "contexto": "Observe la siguiente imagen:\n\n[[figura]]\n\nEl esquema, que no está dibujado a escala, muestra la posición del Sol, la Tierra y la Luna durante un fenómeno astronómico. En ese momento, los tres astros estaban alineados. Fenómenos como este se repiten a lo largo de los años y se pueden predecir con mucha anticipación.",
       "enunciado": "¿Qué fenómeno representa el esquema y en qué fase se encontraba la Luna?",
       "opciones": {
         "A": "Un eclipse solar, con la Luna en fase nueva.",
-        "B": "Un eclipse lunar, con la Luna en fase llena.",
-        "C": "Un eclipse lunar, con la Luna en fase nueva.",
+        "B": "Un eclipse lunar, con la Luna en fase nueva.",
+        "C": "Un eclipse lunar, con la Luna en fase llena.",
         "D": "Un eclipse solar, con la Luna en fase llena."
       },
-      "clave": "B",
+      "clave": "C",
       "explicacion": "Cuando la Tierra queda entre el Sol y la Luna, su sombra cae sobre la Luna y se produce un eclipse lunar. En esa posición la Luna está del lado opuesto al Sol, por eso este eclipse ocurre en fase de luna llena.",
       "por_que": {
         "A": "En un eclipse solar la Luna queda entre el Sol y la Tierra, y aquí está detrás de la Tierra.",
-        "C": "En fase nueva la Luna está entre el Sol y la Tierra; aquí está del lado opuesto al Sol.",
+        "B": "En fase nueva la Luna está entre el Sol y la Tierra; aquí está del lado opuesto al Sol.",
         "D": "Confunde el tipo de eclipse: aquí la Tierra es la que tapa la luz que llega a la Luna."
       },
       "imagen": {
@@ -1983,14 +1983,14 @@
         "A": "El viento que sopla con fuerza desde la costa hacia el mar.",
         "B": "La lluvia que aumenta el caudal de los ríos que llegan al mar.",
         "C": "La atracción que ejerce la Luna sobre el agua de los océanos.",
-        "D": "La rotación de la Luna sobre su eje cada día."
+        "D": "El movimiento de rotación de la Luna sobre su propio eje."
       },
       "clave": "C",
       "explicacion": "La Luna atrae el agua de los océanos con su fuerza de gravedad, y eso hace que el nivel del mar suba y baje. Como la Tierra gira, cada costa pasa por esos cambios dos veces al día.",
       "por_que": {
         "A": "El viento forma olas, pero no causa la subida y bajada regular del nivel del mar.",
         "B": "La lluvia no produce cambios que se repiten dos veces al día.",
-        "D": "Confunde el movimiento: la marea se debe a la atracción de la Luna, no a su giro sobre sí misma."
+        "D": "Confunde la atracción de la Luna con su rotación, que no mueve el agua de la Tierra."
       },
       "imagen": null
     },
@@ -2015,16 +2015,16 @@
       "contexto": "Lea la siguiente información:\n\nEn diciembre, en Argentina las familias van a la playa porque es verano, mientras que en Canadá cae nieve porque es invierno. En junio ocurre lo contrario. Durante todo el año, la Tierra está casi a la misma distancia del Sol; de hecho, en enero está un poco más cerca que en julio.",
       "enunciado": "¿Qué explica que las estaciones estén invertidas en esos dos países?",
       "opciones": {
-        "A": "La mayor cercanía de la Tierra al Sol en algunos meses.",
-        "B": "La rotación de la Tierra sobre su eje cada día.",
-        "C": "El eje inclinado de la Tierra en su traslación.",
+        "A": "El eje inclinado de la Tierra en su traslación.",
+        "B": "La mayor cercanía de la Tierra al Sol en algunos meses.",
+        "C": "La rotación de la Tierra sobre su eje cada día.",
         "D": "La posición de la Luna con respecto a la Tierra."
       },
-      "clave": "C",
+      "clave": "A",
       "explicacion": "El eje de la Tierra está inclinado y, mientras la Tierra viaja alrededor del Sol, cada hemisferio recibe los rayos solares de forma más directa en distintos meses. Por eso, cuando en Argentina es verano, en Canadá es invierno.",
       "por_que": {
-        "A": "El texto muestra que la distancia casi no cambia y que en enero, más cerca del Sol, Canadá está en invierno.",
-        "B": "La rotación produce el día y la noche, no las estaciones.",
+        "B": "El texto muestra que la distancia casi no cambia y que en enero, más cerca del Sol, Canadá está en invierno.",
+        "C": "La rotación produce el día y la noche, no las estaciones.",
         "D": "La Luna produce fases y mareas, no las estaciones."
       },
       "imagen": null
@@ -2047,18 +2047,18 @@
       },
       "verbo": "comparar",
       "tipo_contexto": "global-planetario",
-      "contexto": "El siguiente texto se relaciona con el Sistema Solar:\n\nEntre las órbitas de Marte y Júpiter hay una gran cantidad de asteroides que forman un cinturón. Ese cinturón sirve como referencia para separar los ocho planetas del Sistema Solar en dos grupos: los cuatro que están antes del cinturón, más cercanos al Sol, y los cuatro que están después, más alejados.",
+      "contexto": "El siguiente texto se relaciona con el Sistema Solar:\n\nEntre las órbitas de Marte y Júpiter hay una gran cantidad de asteroides que forman un cinturón. Ese cinturón sirve como referencia para separar los ocho planetas del Sistema Solar en dos grupos: los cuatro que están antes del cinturón, más cercanos al Sol, y los cuatro que están después, más alejados. Los cuatro primeros tienen una superficie sólida donde una nave podría posarse. Los cuatro que siguen son mucho más grandes y no tienen una superficie firme donde aterrizar.",
       "enunciado": "¿Qué característica diferencia a los planetas del grupo más alejado del Sol?",
       "opciones": {
-        "A": "Son gigantes formados sobre todo por gases.",
-        "B": "Son pequeños y tienen una superficie rocosa.",
+        "A": "Son pequeños y tienen una superficie rocosa.",
+        "B": "Son gigantes con gruesas capas de gases.",
         "C": "No tienen ningún satélite natural a su alrededor.",
         "D": "Tienen las temperaturas más altas del sistema."
       },
-      "clave": "A",
-      "explicacion": "Júpiter, Saturno, Urano y Neptuno están después del cinturón de asteroides y son planetas gigantes formados en su mayor parte por gases. Los cuatro más cercanos al Sol, en cambio, son pequeños y rocosos.",
+      "clave": "B",
+      "explicacion": "Júpiter, Saturno, Urano y Neptuno están después del cinturón de asteroides y son planetas gigantes con gruesas capas de gases. Los cuatro más cercanos al Sol, en cambio, son pequeños y rocosos.",
       "por_que": {
-        "B": "Esa es la característica de los planetas más cercanos al Sol.",
+        "A": "Esa es la característica de los planetas más cercanos al Sol.",
         "C": "Esos planetas tienen muchos satélites naturales.",
         "D": "Al estar más lejos del Sol, son planetas muy fríos."
       },
@@ -2071,7 +2071,7 @@
       "bloque": "Geofísica",
       "tema": "Geofísica",
       "subtema": "Sistema Solar y Universo",
-      "nivel": "intermedio",
+      "nivel": "alto",
       "afirmacion": {
         "codigo": "4.3",
         "texto": "Distingue los componentes Sistema Solar, el Universo y los alcances científico-tecnológicos de la exploración espacial."
@@ -2082,20 +2082,20 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "global-planetario",
-      "contexto": "Lea la siguiente información:\n\nEn una noche despejada, lejos de las luces de la ciudad, se observa en el cielo una franja blanquecina formada por miles de millones de estrellas. Esa franja es parte de la galaxia en la que se encuentra el Sistema Solar. El Sol, que ilumina y calienta la Tierra, es solo una de las estrellas de esa galaxia.",
+      "contexto": "Lea la siguiente información:\n\nEn una noche despejada, lejos de las luces de la ciudad, se observa en el cielo una franja blanquecina formada por miles de millones de estrellas. Esa franja es parte de la galaxia en la que se encuentra el Sistema Solar. El Sol es solo una de sus estrellas: hay otras cientos de veces más grandes y otras mucho más pequeñas, y el Sistema Solar no está en el centro de la galaxia, sino en uno de sus brazos.",
       "enunciado": "¿Cuál opción describe correctamente al Sol y su ubicación?",
       "opciones": {
-        "A": "Es una estrella mediana ubicada en un brazo de la Vía Láctea.",
-        "B": "Es una estrella gigante ubicada en el centro de la Vía Láctea.",
+        "A": "Es una estrella gigante ubicada en el centro de la Vía Láctea.",
+        "B": "Es una estrella mediana ubicada en un brazo de la Vía Láctea.",
         "C": "Es un planeta brillante ubicado en el centro del Sistema Solar.",
-        "D": "Es la estrella más grande ubicada en una galaxia vecina."
+        "D": "Es la estrella más grande, ubicada en un brazo de una galaxia vecina."
       },
-      "clave": "A",
+      "clave": "B",
       "explicacion": "El Sol es una estrella de tamaño mediano que se encuentra en uno de los brazos de la Vía Láctea, lejos de su centro. Parece tan grande y brillante porque está mucho más cerca de la Tierra que las demás estrellas.",
       "por_que": {
-        "B": "El Sol es una estrella mediana y está lejos del centro de la galaxia.",
+        "A": "El Sol es una estrella mediana y está lejos del centro de la galaxia.",
         "C": "El Sol es una estrella, no un planeta.",
-        "D": "El Sol está en la Vía Láctea y no es la estrella más grande."
+        "D": "Contradice el texto: hay estrellas mucho más grandes que el Sol, y el Sistema Solar está en la Vía Láctea."
       },
       "imagen": null
     },
@@ -2120,17 +2120,17 @@
       "contexto": "Lea la siguiente información:\n\n1. Nave sin tripulación que viaja durante años hacia otros planetas y envía fotografías y datos a la Tierra.\n\n2. Laboratorio que gira alrededor de la Tierra, donde astronautas viven varios meses y hacen experimentos.\n\n3. Aparato que gira alrededor de la Tierra y transmite imágenes de las nubes para pronosticar el tiempo.",
       "enunciado": "¿Cuál opción nombra correctamente, en orden, los aportes tecnológicos descritos?",
       "opciones": {
-        "A": "Satélite artificial, estación espacial y sonda espacial.",
-        "B": "Sonda espacial, satélite artificial y estación espacial.",
-        "C": "Estación espacial, sonda espacial y satélite artificial.",
-        "D": "Sonda espacial, estación espacial y satélite artificial."
+        "A": "Sonda espacial, estación espacial y satélite artificial.",
+        "B": "Satélite artificial, estación espacial y sonda espacial.",
+        "C": "Sonda espacial, satélite artificial y estación espacial.",
+        "D": "Estación espacial, sonda espacial y satélite artificial."
       },
-      "clave": "D",
+      "clave": "A",
       "explicacion": "La sonda viaja lejos sin tripulación para estudiar otros planetas, la estación espacial es un laboratorio en órbita donde viven astronautas y el satélite artificial gira alrededor de la Tierra enviando información. Cada uno aporta datos distintos para conocer el espacio y nuestro planeta.",
       "por_que": {
-        "A": "Confunde la sonda, que viaja a otros planetas, con el satélite, que gira alrededor de la Tierra.",
-        "B": "La estación espacial es la que tiene astronautas viviendo en ella.",
-        "C": "La estación no viaja a otros planetas; la que lo hace es la sonda."
+        "B": "Confunde la sonda, que viaja a otros planetas, con el satélite, que gira alrededor de la Tierra.",
+        "C": "La estación espacial es la que tiene astronautas viviendo en ella.",
+        "D": "La estación no viaja a otros planetas; la que lo hace es la sonda."
       },
       "imagen": null
     }
