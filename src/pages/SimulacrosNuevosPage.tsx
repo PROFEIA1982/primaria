@@ -346,6 +346,8 @@ const CONSEJO_GENERAL = "Hacelo con calma, en un lugar tranquilo y con agua a ma
 const CONSEJOS: Partial<Record<SlugMateria, string>> = {
   "estudios-sociales":
     "Hacelo en un lugar tranquilo y con agua a mano. Si tu familia lo permite, hacé una pausa corta a la mitad: el reloj sigue corriendo mientras tanto.",
+  ciencias:
+    "Es un simulacro de práctica más largo que la prueba oficial, para entrenar resistencia y ritmo. Hacelo en un lugar tranquilo, con agua a mano y, si tu familia lo permite, con una pausa corta a la mitad.",
 };
 
 function Consejo({ materia }: { materia: SlugMateria }) {
