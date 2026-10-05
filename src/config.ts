@@ -69,11 +69,21 @@ export const SEGUNDOS_ITEM_SIMULACRO_EXTRA = 240;
 // Los simulacros nuevos (/simulacros-nuevos) traen su tiempo por pregunta y
 // su cantidad de preguntas de la base, y la pagina muestra eso. Estos dos
 // numeros son solo el formato que se decidio para TODOS los examenes nuevos
-// en el piloto de octubre de 2026 (40 preguntas, 3 minutos cada una) y
-// sirven unicamente para describir las tarjetas que dicen "Proximamente",
-// que todavia no tienen nada en la base que leer.
-export const SIMULACRO_NUEVO_PREGUNTAS = 40;
+// (60 preguntas a 3 minutos cada una, igual que los cuadernillos de siempre;
+// decision del 5 de octubre de 2026) y sirven unicamente para describir las
+// tarjetas que dicen "Proximamente", que todavia no tienen nada en la base.
+export const SIMULACRO_NUEVO_PREGUNTAS = 60;
 export const SIMULACRO_NUEVO_SEGUNDOS_ITEM = 180;
+
+// Segundos por pregunta con la adecuacion de tiempo encendida. Con los tres
+// minutos de siempre da los cuatro de SEGUNDOS_ITEM_SIMULACRO_EXTRA. Si un
+// examen trae otro tiempo de la base, la adecuacion le da un tercio mas de
+// ESE tiempo, y nunca menos de cuatro minutos: con un valor fijo, un examen
+// de cinco minutos por pregunta daba MENOS tiempo con la adecuacion puesta.
+export function segundosConAdecuacion(segundos: number, tiempoExtra: boolean): number {
+  if (!tiempoExtra) return segundos;
+  return Math.max(SEGUNDOS_ITEM_SIMULACRO_EXTRA, Math.round((segundos * 4) / 3));
+}
 
 // Las cantidades que puede elegir el estudiante.
 export const CANTIDADES = [10, 20, 30, 60] as const;

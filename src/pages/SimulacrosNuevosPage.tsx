@@ -4,8 +4,8 @@ import {
   Microscope, PlayCircle, RotateCcw, Sparkles,
 } from "lucide-react";
 import {
-  MATERIAS, SEGUNDOS_ITEM_SIMULACRO_EXTRA, SIMULACRO_NUEVO_PREGUNTAS,
-  SIMULACRO_NUEVO_SEGUNDOS_ITEM, type SlugMateria,
+  MATERIAS, SIMULACRO_NUEVO_PREGUNTAS, SIMULACRO_NUEVO_SEGUNDOS_ITEM,
+  segundosConAdecuacion, type SlugMateria,
 } from "../config";
 import { listarSimulacrosNuevos, registrarResultadosNuevos, traerSimulacroNuevo } from "../lib/api";
 import { useTiempoExtra } from "../lib/apariencia";
@@ -151,7 +151,8 @@ function Tarjetas({ simulacros }: { simulacros: Simulacros }) {
   // da cuatro minutos por pregunta, y la tarjeta tiene que decirlo.
   const tiempoExtra = useTiempoExtra();
   const segPorItem = (s: SimulacroResumen) =>
-    tiempoExtra ? SEGUNDOS_ITEM_SIMULACRO_EXTRA : s.segundos_por_item ?? SIMULACRO_NUEVO_SEGUNDOS_ITEM;
+    segundosConAdecuacion(s.segundos_por_item ?? SIMULACRO_NUEVO_SEGUNDOS_ITEM, tiempoExtra);
+  const segProximo = segundosConAdecuacion(SIMULACRO_NUEVO_SEGUNDOS_ITEM, tiempoExtra);
 
   // Si falla la apertura, el foco vuelve al boton que se toco. El ultimo
   // tocado va en estado y no en una ref porque tambien decide, al pintar,
@@ -315,8 +316,8 @@ function Tarjetas({ simulacros }: { simulacros: Simulacros }) {
                   <div className="simn-examen">
                     <p className="simn-trae">
                       Lo estamos preparando. Va a traer {SIMULACRO_NUEVO_PREGUNTAS} preguntas
-                      nuevas de {m.nombre}, con {minutos(SIMULACRO_NUEVO_SEGUNDOS_ITEM)} por
-                      pregunta: {duracion(SIMULACRO_NUEVO_PREGUNTAS * SIMULACRO_NUEVO_SEGUNDOS_ITEM)} en
+                      nuevas de {m.nombre}, con {minutos(segProximo)} por
+                      pregunta: {duracion(SIMULACRO_NUEVO_PREGUNTAS * segProximo)} en
                       total.
                     </p>
                     <Consejo />

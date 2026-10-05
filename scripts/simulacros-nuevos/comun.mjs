@@ -41,7 +41,10 @@ export function leerExamen(materia) {
 export function enunciadoFinal(item) {
   if (!item.imagen) return item.enunciado;
   const alt = item.imagen.alt.replace(/[[\]]/g, '');
-  return item.enunciado.replace(MARCA_FIGURA, `![${alt}](${URL_FIGURAS}${item.imagen.archivo})`);
+  // Con funcion y no con cadena: en una cadena de reemplazo, "$&", "$'" o
+  // "$$" dentro del texto alternativo se interpretan como patrones y lo
+  // corrompen (paso en la auditoria con un precio escrito con signo de dolar).
+  return item.enunciado.replace(MARCA_FIGURA, () => `![${alt}](${URL_FIGURAS}${item.imagen.archivo})`);
 }
 
 /** Si el item trae formulas: el signo de dolar sin barra delante abre LaTeX. */

@@ -27,8 +27,11 @@
 -- SEGURIDAD (RLS en las cuatro tablas)
 --   · simulacros_nuevos: lectura publica de los publicados.
 --   · simulacro_nuevo_items: lectura publica de los items de un simulacro
---     publicado, por columna: la explicacion NO se puede leer de frente,
---     porque dice cual es la respuesta.
+--     publicado, por columna, sin la explicacion. OJO: esto no esconde la
+--     respuesta. traer_simulacro_nuevo la entrega (es_correcta y la
+--     explicacion) porque el motor califica en el aparato del estudiante,
+--     igual que traer_simulacro con los cuadernillos de siempre. Si algun
+--     dia la clave tiene que ser secreta, hay que calificar en el servidor.
 --   · simulacro_nuevo_opciones: cerrada. Tiene es_correcta.
 --   · simulacro_nuevo_stats: cerrada, igual que item_stats: abierta le
 --     diria al estudiante cuales items son los faciles.
@@ -124,6 +127,9 @@ revoke all on table
 from anon, authenticated;
 
 grant select on table public.simulacros_nuevos to anon, authenticated;
+-- La secuencia del id tambien recibe permisos por defecto. PostgREST no la
+-- expone, pero no hay razon para que el navegador la toque.
+revoke all on sequence public.simulacros_nuevos_id_seq from anon, authenticated;
 -- Por columna: todo menos la explicacion.
 grant select (id, simulacro_id, codigo, orden, tema, subtema, nivel, enunciado, tiene_latex)
   on table public.simulacro_nuevo_items to anon, authenticated;
@@ -287,117 +293,130 @@ grant execute on function public.registrar_resultados_simulacro_nuevo(jsonb) to 
 -- ------------------------------------------------------------
 
 -- >>> datos generados
--- Simulacro nuevo 1 de matematicas: 40 items.
+-- Simulacro nuevo 1 de matematicas: 60 items.
 -- Generado desde docs/simulacros-nuevos/matematicas.json (version 2026-10-05).
+-- OJO: generado con --sin-banco. NO se comparo contra el banco publicado:
+-- antes de aplicar, corra pnpm verificar:simulacros-nuevos con la llave de Supabase.
 
+-- Entra como borrador. Lo publica la revision del final, solo si todo calza.
 insert into public.simulacros_nuevos
   (slug, materia_slug, numero, titulo, segundos_por_item, barajar_opciones, estado)
 values
-  ('nuevo-matematicas-1', 'matematicas', 1, 'Simulacro nuevo 1', 180, false, 'publicado')
+  ('nuevo-matematicas-1', 'matematicas', 1, 'Simulacro nuevo 1', 180, false, 'borrador')
 on conflict (slug) do update set
   materia_slug      = excluded.materia_slug,
   numero            = excluded.numero,
   titulo            = excluded.titulo,
   segundos_por_item = excluded.segundos_por_item,
   barajar_opciones  = excluded.barajar_opciones,
-  estado            = excluded.estado;
+  estado            = 'borrador';
 
 -- Lo que ya no esta en el JSON se va, con sus opciones y estadisticas.
 delete from public.simulacro_nuevo_items i
 using public.simulacros_nuevos s
 where i.simulacro_id = s.id
   and s.slug = 'nuevo-matematicas-1'
-  and i.codigo <> all (array['mat-n09', 'mat-n10', 'mat-n08', 'mat-n11', 'mat-n03', 'mat-n02', 'mat-n01', 'mat-n05', 'mat-n04', 'mat-n06', 'mat-n07', 'mat-n12', 'mat-m01', 'mat-m07', 'mat-m03', 'mat-m04', 'mat-m06', 'mat-m05', 'mat-m02', 'mat-g06', 'mat-g01', 'mat-g07', 'mat-g05', 'mat-g02', 'mat-g03', 'mat-g08', 'mat-g04', 'mat-r06', 'mat-r01', 'mat-r04', 'mat-r05', 'mat-r02', 'mat-r03', 'mat-e04', 'mat-e07', 'mat-e06', 'mat-e02', 'mat-e01', 'mat-e03', 'mat-e05']);
+  and i.codigo <> all (array['mat-n07', 'mat-n05', 'mat-n08', 'mat-n21', 'mat-n19', 'mat-n13', 'mat-n02', 'mat-n03', 'mat-n14', 'mat-n06', 'mat-n12', 'mat-n18', 'mat-n22', 'mat-n16', 'mat-n04', 'mat-n20', 'mat-n01', 'mat-g04', 'mat-g14', 'mat-g05', 'mat-g17', 'mat-g03', 'mat-g06', 'mat-g18', 'mat-g12', 'mat-g15', 'mat-g11', 'mat-g08', 'mat-g07', 'mat-g16', 'mat-g13', 'mat-m03', 'mat-m02', 'mat-m04', 'mat-m08', 'mat-m06', 'mat-m05', 'mat-m09', 'mat-m11', 'mat-m10', 'mat-m12', 'mat-r12', 'mat-r03', 'mat-r02', 'mat-r08', 'mat-r04', 'mat-r05', 'mat-r07', 'mat-r01', 'mat-r10', 'mat-r09', 'mat-r06', 'mat-r11', 'mat-e07', 'mat-e11', 'mat-e06', 'mat-e04', 'mat-e09', 'mat-e02', 'mat-e10']);
 
 insert into public.simulacro_nuevo_items
   (simulacro_id, codigo, orden, tema, subtema, nivel, enunciado, explicacion, tiene_latex)
 select s.id, v.codigo, v.orden, v.tema, v.subtema, v.nivel, v.enunciado, v.explicacion, v.tiene_latex
 from public.simulacros_nuevos s
 cross join (values
-    ('mat-n09', 1, 'Números', 'Porcentajes', 'intermedio', 'Una camisa del uniforme cuesta ₡8500 y tiene un descuento del 20 %. ¿Cuánto se paga por la camisa con el descuento?', 'El 20 % de 8500 es 8500 × 20 ÷ 100 = 1700, y eso es lo que se rebaja. Entonces se paga 8500 − 1700 = 6800 colones.', false),
-    ('mat-n10', 2, 'Números', 'Operaciones combinadas con potencias', 'intermedio', '¿Cuál es el resultado de la siguiente operación?
-
-$$2^3 + 4 \times 3^2 - 10 \div 2$$', 'Primero van las potencias: 2³ = 8 y 3² = 9. Luego las multiplicaciones y divisiones: 4 × 9 = 36 y 10 ÷ 2 = 5. Por último, de izquierda a derecha: 8 + 36 − 5 = 39.', true),
+    ('mat-n07', 1, 'Números', 'Números decimales y fracciones', 'intermedio', 'Para un experimento de Ciencias, el grupo de Keylor necesita 0,75 L de agua. La maestra solo tiene recipientes marcados con fracciones de litro. ¿Cuál fracción de litro corresponde a 0,75 L?', '0,75 se lee «setenta y cinco centésimos», o sea 75/100. Si se simplifica dividiendo entre 25, queda 3/4. Por eso 0,75 L son tres cuartos de litro.', true),
+    ('mat-n05', 2, 'Números', 'Suma y resta de fracciones', 'intermedio', 'Valeria pintó $\frac{2}{5}$ de un mural de la escuela el lunes y $\frac{1}{3}$ del mismo mural el martes. ¿Qué fracción del mural le falta por pintar?', 'Para sumar fracciones con distinto denominador se buscan equivalentes: 2/5 = 6/15 y 1/3 = 5/15, así que ya pintó 11/15. El mural completo es 15/15, entonces le falta 15/15 − 11/15 = 4/15.', true),
     ('mat-n08', 3, 'Números', 'Operaciones con números decimales', 'intermedio', 'En la feria del agricultor, Andrés compró 2,5 kg de papas a ₡840 el kilogramo y 1,25 kg de zanahorias a ₡720 el kilogramo. ¿Cuánto pagó en total?', 'Las papas cuestan 2,5 × 840 = 2100 colones y las zanahorias 1,25 × 720 = 900 colones. Sumando, 2100 + 900 = 3000. El medio kilo y el cuarto de kilo también se pagan.', false),
-    ('mat-n11', 4, 'Números', 'Múltiplos y divisibilidad', 'alto', 'Keylor tiene entre 30 y 50 bolinchas. Si las acomoda en grupos de 6 no le sobra ninguna, y si las acomoda en grupos de 8 tampoco le sobra ninguna. ¿Cuántas bolinchas tiene?', 'La cantidad tiene que ser múltiplo de 6 y de 8 a la vez, o sea, múltiplo de 24. Entre 30 y 50 el único es 48: 48 ÷ 6 = 8 y 48 ÷ 8 = 6, sin que sobre nada.', false),
-    ('mat-n03', 5, 'Números', 'Máximo común divisor', 'alto', 'Para la huerta escolar, don Rafael tiene 48 matas de chile dulce y 72 matas de tomate. Quiere sembrarlas en filas que tengan todas la misma cantidad de matas, sin mezclar chile con tomate y con la mayor cantidad posible de matas en cada fila. ¿Cuántas filas tendrá en total?', 'El número más grande que divide exacto a 48 y a 72 es 24, su máximo común divisor: cada fila lleva 24 matas. Así quedan 48 ÷ 24 = 2 filas de chile y 72 ÷ 24 = 3 filas de tomate, o sea 5 filas en total.', false),
-    ('mat-n02', 6, 'Números', 'Mínimo común múltiplo', 'alto', 'Desde la terminal de buses de Guápiles salen dos rutas a las 6:00 a. m. La ruta 1 sale cada 12 minutos y la ruta 2 sale cada 18 minutos. ¿A qué hora vuelven a salir juntas por primera vez?', 'Hay que buscar el primer número que esté en la tabla del 12 y también en la del 18: ese es el mínimo común múltiplo, 36. Por eso las dos rutas vuelven a salir juntas 36 minutos después, a las 6:36 a. m.', false),
-    ('mat-n01', 7, 'Números', 'Operaciones combinadas con números naturales', 'intermedio', 'En la soda de la escuela, Mariela compró 3 empanadas de ₡650 cada una y 2 refrescos naturales de ₡450 cada uno. Pagó con un billete de ₡5000. ¿Cuánto dinero le devolvieron?', 'Primero se calcula lo que gastó: 3 × 650 = 1950 y 2 × 450 = 900, en total ₡2850. Después se resta del billete: 5000 − 2850 = 2150. Ese es el vuelto.', false),
-    ('mat-n05', 8, 'Números', 'Suma y resta de fracciones', 'intermedio', 'Valeria pintó $\frac{2}{5}$ de un mural de la escuela el lunes y $\frac{1}{3}$ del mismo mural el martes. ¿Qué fracción del mural le falta por pintar?', 'Para sumar fracciones con distinto denominador se buscan equivalentes: 2/5 = 6/15 y 1/3 = 5/15, así que ya pintó 11/15. El mural completo es 15/15, entonces le falta 15/15 − 11/15 = 4/15.', true),
-    ('mat-n04', 9, 'Números', 'Números primos y compuestos', 'intermedio', 'Josué asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Josué está equivocado?', 'Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso no es primo, y con él se demuestra que Josué se equivoca.', false),
+    ('mat-n21', 4, 'Números', 'Multiplicación por 10, 100 y 1000', 'intermedio', 'En una bodega hay 100 paquetes de arroz, y cada paquete pesa 2,35 kg. ¿Cuántos kilogramos de arroz hay en total?', 'Multiplicar por 100 es correr la coma dos lugares a la derecha: 2,35 × 100 = 235. En la bodega hay 235 kg de arroz.', false),
+    ('mat-n19', 5, 'Números', 'Valor posicional en números naturales', 'intermedio', 'Una empresa de buses informó que durante un año transportó 2 607 045 pasajeros. En ese número, ¿cuál es el valor de la cifra 6?', 'Si se separa el número en grupos de tres cifras desde la derecha, queda 2 | 607 | 045. El 6 está en las centenas de millar, así que vale 600 000.', false),
+    ('mat-n13', 6, 'Números', 'Fracción de una cantidad', 'intermedio', 'Josué tenía ₡12 000. Gastó $\frac{1}{4}$ de ese dinero en un cuaderno y $\frac{1}{3}$ de ese mismo dinero en un libro. ¿Cuánto dinero le quedó?', 'Un cuarto de 12 000 es 3000 y un tercio de 12 000 es 4000, así que gastó 3000 + 4000 = 7000 colones. Le quedaron 12 000 − 7000 = 5000 colones.', true),
+    ('mat-n02', 7, 'Números', 'Múltiplos de un número', 'alto', 'Desde la terminal de buses de Guápiles salen dos rutas a las 6:00 a. m. La ruta 1 sale cada 12 minutos y la ruta 2 sale cada 18 minutos. ¿A qué hora vuelven a salir juntas por primera vez?', 'La ruta 1 sale a los 12, 24, 36… minutos y la ruta 2 a los 18, 36… minutos. El primer número que está en las dos listas es 36, así que vuelven a salir juntas 36 minutos después, a las 6:36 a. m.', false),
+    ('mat-n03', 8, 'Números', 'Divisores de un número', 'alto', 'Para la huerta escolar, don Rafael tiene 48 matas de chile dulce y 72 matas de tomate. Las va a sembrar en filas, sin mezclar chile con tomate. Todas las filas deben tener la misma cantidad de matas, y esa cantidad debe ser la mayor posible. ¿Cuántas filas tendrá en total?', 'Cada fila debe llevar una cantidad que divida exacto a 48 y también a 72, y la mayor que sirve es 24. Así quedan 48 ÷ 24 = 2 filas de chile y 72 ÷ 24 = 3 filas de tomate, o sea 5 filas en total.', false),
+    ('mat-n14', 9, 'Números', 'Operaciones combinadas con números naturales', 'intermedio', 'Ocho compañeros compraron un queque de ₡9600 y 8 refrescos de ₡650 cada uno. Si dividen el gasto total en partes iguales, ¿cuánto paga cada uno?', 'Los refrescos cuestan 8 × 650 = ₡5200, y con el queque el gasto total es 9600 + 5200 = ₡14 800. Al repartirlo entre 8, cada uno paga 14 800 ÷ 8 = ₡1850.', false),
     ('mat-n06', 10, 'Números', 'Fracción de una cantidad', 'alto', 'En un grupo de sexto hay 30 estudiantes. Las $\frac{2}{3}$ partes del grupo participan en la feria científica y, de quienes participan, $\frac{3}{5}$ presentan un proyecto sobre el agua. ¿Cuántos estudiantes presentan un proyecto sobre el agua?', 'Primero se calcula cuántos participan: 2/3 de 30 es 20. Después se saca 3/5 de esos 20, que da 12. Ojo: el 3/5 se aplica a quienes participan, no a todo el grupo.', true),
-    ('mat-n07', 11, 'Números', 'División de fracciones', 'intermedio', 'Una botella tiene $\frac{2}{3}$ de litro de fresco de cas. Si se sirve en vasos de $\frac{1}{6}$ de litro cada uno, ¿cuántos vasos se llenan?', 'Hay que ver cuántas veces cabe 1/6 dentro de 2/3. Como 2/3 es lo mismo que 4/6, caben 4 vasos: 2/3 ÷ 1/6 = 4.', true),
-    ('mat-n12', 12, 'Números', 'Comparación de fracciones', 'alto', 'Tres amigas compraron una pizza cada una, todas del mismo tamaño. Sofía comió $\frac{3}{8}$ de su pizza, Jimena comió $\frac{2}{5}$ de la suya y Yerlin comió $\frac{1}{3}$ de la suya. ¿Cuál es el orden correcto, de la que comió más a la que comió menos?', 'Para comparar se pueden pasar a decimales: 3/8 = 0,375; 2/5 = 0,4 y 1/3 es casi 0,33. Por eso Jimena comió más, luego Sofía y de última Yerlin. Fijate que el numerador más grande no siempre gana.', true),
-    ('mat-m01', 13, 'Medidas', 'Conversión de medidas de longitud', 'intermedio', 'Para decorar el desfile del 15 de setiembre, la escuela necesita 4 cintas de 2,75 m cada una. Si compra un rollo de 12 m, ¿cuántos centímetros de cinta le sobran?', 'Las 4 cintas miden 4 × 2,75 = 11 m, así que sobra 12 − 11 = 1 m. Como 1 m tiene 100 cm, sobran 100 centímetros.', false),
-    ('mat-m07', 14, 'Medidas', 'Volumen de prismas rectangulares', 'alto', 'La caja de la figura tiene forma de prisma rectangular. Por dentro mide 20 cm de largo, 10 cm de ancho y 15 cm de alto.
+    ('mat-n12', 11, 'Números', 'Comparación de fracciones', 'alto', 'Tres amigas compraron una pizza cada una, todas del mismo tamaño. Sofía comió $\frac{3}{8}$ de su pizza, Jimena comió $\frac{2}{5}$ de la suya y Yerlin comió $\frac{1}{3}$ de la suya. ¿Cuál es el orden correcto, de la que comió más a la que comió menos?', 'Para comparar se pueden pasar a decimales: 3/8 = 0,375; 2/5 = 0,4 y 1/3 = 0,333…, que es el menor. Por eso Jimena comió más, luego Sofía y de última Yerlin. Fijate que el numerador más grande no siempre gana.', true),
+    ('mat-n18', 12, 'Números', 'Comparación de números decimales', 'intermedio', 'En el festival deportivo de la escuela, cuatro estudiantes hicieron salto largo. Ariana saltó 2,08 m; Brenda, 2,8 m; Camila, 2,75 m; y Diego, 2,705 m. ¿Quién saltó más lejos?', 'Para comparar decimales conviene igualar las cifras: 2,080; 2,800; 2,750 y 2,705. El mayor es 2,800, o sea, el salto de Brenda. Tener más cifras después de la coma no hace más grande al número.', false),
+    ('mat-n22', 13, 'Números', 'División con residuo', 'alto', 'Para una gira, 230 estudiantes van a viajar en buses de 45 asientos cada uno. Si nadie puede viajar de pie, ¿cuántos buses se necesitan como mínimo?', 'Al dividir, 230 ÷ 45 da 5 y sobran 5 estudiantes. Esos 5 también tienen que viajar, así que hace falta un bus más: 6 buses.', false),
+    ('mat-n16', 14, 'Números', 'Reglas de divisibilidad', 'alto', 'El número del casillero de Mariela tiene tres cifras, pero la del medio se borró: 5 ? 1. Ella recuerda que ese número es divisible por 3 y que la cifra borrada es mayor que 5 y menor que 8. ¿Cuál es el número del casillero?', 'Un número es divisible por 3 cuando la suma de sus cifras es divisible por 3. De las cifras mayores que 5 y menores que 8 (el 6 y el 7), solo el 6 sirve: 5 + 6 + 1 = 12. El casillero es el 561.', false),
+    ('mat-n04', 15, 'Números', 'Números primos y compuestos', 'intermedio', 'Josué asegura: «Todos los números impares mayores que 15 son primos». ¿Cuál de los siguientes números demuestra que Josué está equivocado?', 'Un número primo solo se divide exacto entre 1 y entre sí mismo. El 33 es impar y mayor que 15, pero también se divide entre 3 y entre 11, porque 3 × 11 = 33. Por eso es compuesto, y con él se demuestra que Josué se equivoca.', false),
+    ('mat-n20', 16, 'Números', 'Multiplicación por un número menor que uno', 'intermedio', 'Doña Ana tiene 48 kg de café y va a vender 0,75 de esa cantidad. Sin hacer la multiplicación 48 × 0,75, ¿qué se puede asegurar del resultado?', 'Multiplicar por un número menor que 1 es como tomar solo una parte, así que el resultado queda menor que el número inicial. Como 0,75 es menor que 1, el resultado es menor que 48; de hecho, da 36.', false),
+    ('mat-n01', 17, 'Números', 'Operaciones combinadas con números naturales', 'intermedio', 'En la soda de la escuela, Mariela compró 3 empanadas de ₡650 cada una y 2 refrescos naturales de ₡450 cada uno. Pagó con un billete de ₡5000. ¿Cuánto dinero le devolvieron?', 'Primero se calcula lo que gastó: 3 × 650 = 1950 y 2 × 450 = 900, en total ₡2850. Después se resta del billete: 5000 − 2850 = 2150. Ese es el vuelto.', false),
+    ('mat-g04', 18, 'Geometría', 'Elementos de los prismas', 'intermedio', 'Una caja de zapatos tiene forma de prisma rectangular. Andrés quiere pegar cinta sobre todas las aristas de la caja. ¿En cuántas aristas debe pegar cinta?', 'Un prisma rectangular tiene 4 aristas en la base de abajo, 4 en la de arriba y 4 que unen las dos bases. En total son 4 + 4 + 4 = 12 aristas.', false),
+    ('mat-g14', 19, 'Geometría', 'Propiedades de los cuadriláteros', 'alto', 'Fabián dibujó un cuadrilátero con sus cuatro ángulos rectos. Sus dos diagonales miden lo mismo, pero no son perpendiculares. ¿Qué cuadrilátero dibujó?', 'Con cuatro ángulos rectos solo puede ser un cuadrado o un rectángulo, y en los dos las diagonales miden lo mismo. En el cuadrado las diagonales además son perpendiculares; como aquí no lo son, es un rectángulo.', false),
+    ('mat-g05', 20, 'Geometría', 'Elementos del cilindro', 'alto', 'Una lata de leche en polvo tiene forma de cilindro. La distancia entre los centros de sus dos bases es 12 cm, y el diámetro de cada base mide 8 cm. ¿Cuáles son la altura y el radio de la base de esa lata?', 'La altura del cilindro es la distancia entre sus dos bases, o sea 12 cm. El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm.', false),
+    ('mat-g17', 21, 'Geometría', 'Ubicación en el sistema de coordenadas', 'intermedio', 'En un plano de la comunidad, la escuela está en el punto (2, 3). Para ir a la biblioteca, Dayana camina 4 unidades hacia la derecha y 1 unidad hacia arriba. ¿En qué punto está la biblioteca?', 'La primera coordenada dice cuánto se avanza hacia la derecha y la segunda cuánto hacia arriba. Al moverse 4 a la derecha queda 2 + 4 = 6, y al subir 1 queda 3 + 1 = 4: la biblioteca está en (6, 4).', false),
+    ('mat-g03', 22, 'Geometría', 'Clasificación de cuadriláteros', 'intermedio', 'Un cuadrilátero tiene dos pares de lados paralelos, sus cuatro lados miden lo mismo y ninguno de sus ángulos es recto. ¿Qué cuadrilátero es?', 'Tener los cuatro lados iguales deja por fuera al romboide y al rectángulo. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.', false),
+    ('mat-g06', 23, 'Geometría', 'Área de figuras compuestas', 'alto', 'El piso del comedor de una escuela tiene forma de rectángulo de 10 m de largo y 8 m de ancho, pero en una esquina hay una bodega rectangular de 4 m por 3 m que no forma parte del comedor. ¿Cuál es el área del piso del comedor, sin contar la bodega?', 'El rectángulo completo mide 10 × 8 = 80 m² y la bodega mide 4 × 3 = 12 m². Como la bodega no es parte del comedor, se resta: 80 − 12 = 68 m².', false),
+    ('mat-g18', 24, 'Geometría', 'Área del paralelogramo', 'intermedio', 'Un parqueo tiene forma de paralelogramo. Uno de sus lados mide 20 m, y la distancia perpendicular entre ese lado y el lado opuesto, que es la altura, mide 12 m. ¿Cuál es el área del parqueo?', 'El área de un paralelogramo es base por altura: 20 × 12 = 240 m². No se divide entre 2; eso se hace solo en el triángulo.', false),
+    ('mat-g12', 25, 'Geometría', 'Perímetro y área del rectángulo', 'alto', 'Un terreno rectangular tiene un perímetro de 54 m, y su largo mide 15 m. Se quiere sembrar zacate en todo el terreno, y el metro cuadrado de zacate cuesta ₡2500. ¿Cuánto cuesta el zacate?', 'Los dos largos suman 15 + 15 = 30 m, así que los dos anchos suman 54 − 30 = 24 m y cada uno mide 12 m. El área es 15 × 12 = 180 m², y el zacate cuesta 180 × 2500 = ₡450 000.', false),
+    ('mat-g15', 26, 'Geometría', 'Clasificación de triángulos según sus ángulos', 'intermedio', 'Un pedazo de cartulina tiene forma de triángulo, y sus ángulos miden 35°, 40° y 105°. ¿Cómo se clasifica ese triángulo según sus ángulos?', 'Un triángulo con un ángulo mayor que 90° es obtusángulo. Aquí el ángulo de 105° es obtuso, así que el triángulo es obtusángulo, aunque los otros dos ángulos sean agudos.', false),
+    ('mat-g11', 27, 'Geometría', 'Clasificación de triángulos', 'intermedio', 'Un triángulo tiene un ángulo de 90° y dos de sus lados miden lo mismo. ¿Cómo se clasifica este triángulo?', 'Por tener un ángulo de 90°, el triángulo es rectángulo. Por tener dos lados iguales, es isósceles. Juntando las dos cosas, es un triángulo rectángulo isósceles.', false),
+    ('mat-g08', 28, 'Geometría', 'Perímetro de polígonos regulares', 'intermedio', 'Con un alambre, Allan formó un pentágono regular de 18 cm de lado. Después lo desarmó y, con todo el alambre, formó un hexágono regular. ¿Cuánto mide cada lado del hexágono?', 'El alambre mide lo mismo que el perímetro del pentágono: 5 × 18 = 90 cm. Al repartir esos 90 cm en los 6 lados iguales del hexágono, cada lado mide 90 ÷ 6 = 15 cm.', false),
+    ('mat-g07', 29, 'Geometría', 'Área del triángulo', 'intermedio', 'Para la fiesta de la escuela se van a coser 12 banderines con forma de triángulo. Cada banderín tiene 30 cm de base y 40 cm de altura. ¿Cuánta tela se necesita para los 12 banderines, sin contar desperdicios?', 'El área de un triángulo es base por altura entre 2: 30 × 40 ÷ 2 = 600 cm² por banderín. Para 12 banderines se necesitan 600 × 12 = 7200 cm².', false),
+    ('mat-g16', 30, 'Geometría', 'Ejes de simetría', 'intermedio', 'La puerta de un aula tiene forma de rectángulo: mide 2 m de alto y 1 m de ancho. Sin tomar en cuenta la cerradura ni las bisagras, ¿cuántos ejes de simetría tiene esa forma?', 'Un rectángulo que no es cuadrado tiene 2 ejes de simetría: uno vertical y otro horizontal, que pasan por la mitad de sus lados. Las diagonales no son ejes, porque al doblar por ahí las dos mitades no calzan.', false),
+    ('mat-g13', 31, 'Geometría', 'Clasificación de cuadriláteros', 'intermedio', 'La superficie de una mesa de trabajo tiene cuatro lados, y solo dos de esos lados son paralelos entre sí. ¿Cómo se llama esa figura?', 'Un cuadrilátero con un solo par de lados paralelos es un trapecio. Si tuviera dos pares sería un paralelogramo, y si no tuviera ninguno sería un trapezoide.', false),
+    ('mat-m03', 32, 'Medidas', 'Medidas de capacidad', 'intermedio', 'Una pichinga tiene 3 L de agua. Con ella se llenan 8 vasos de 250 mL cada uno. ¿Cuántos mililitros de agua quedan en la pichinga?', '3 L son 3000 mL. Los 8 vasos usan 8 × 250 = 2000 mL. Quedan 3000 − 2000 = 1000 mL, que es lo mismo que 1 litro.', false),
+    ('mat-m02', 33, 'Medidas', 'Conversión de medidas de masa', 'intermedio', 'Doña Lucía empaca 3,6 kg de frijoles en bolsas de 450 g cada una. ¿Cuántas bolsas llena?', 'Primero se pasa todo a la misma unidad: 3,6 kg son 3600 g. Luego se reparte: 3600 ÷ 450 = 8 bolsas.', false),
+    ('mat-m04', 34, 'Medidas', 'Medidas de tiempo', 'alto', 'Un partido de fútbol entre dos escuelas empezó a las 2:50 p. m. Tuvo dos tiempos de 35 minutos cada uno y un descanso de 15 minutos entre ellos. ¿A qué hora terminó el partido?', 'El partido duró 35 + 15 + 35 = 85 minutos, que es 1 hora y 25 minutos. Si a las 2:50 p. m. se le suma 1 hora, son las 3:50 p. m., y con 25 minutos más son las 4:15 p. m.', false),
+    ('mat-m08', 35, 'Medidas', 'Medidas de tiempo', 'alto', 'Un tanque de 1200 L se llena con una manguera que echa 15 L de agua por minuto. Si empezó a llenarse a las 9:50 a. m., ¿a qué hora termina de llenarse?', 'El tanque tarda 1200 ÷ 15 = 80 minutos, que es 1 hora y 20 minutos. A las 9:50 a. m. se le suma 1 hora y llegamos a las 10:50; con 20 minutos más son las 11:10 a. m.', false),
+    ('mat-m06', 36, 'Medidas', 'Problemas con medidas de longitud', 'intermedio', 'Fabián camina 750 m de su casa a la escuela y la misma distancia de regreso, de lunes a viernes. ¿Cuántos kilómetros camina en total durante esos cinco días?', 'Cada día camina 750 + 750 = 1500 m. En cinco días son 1500 × 5 = 7500 m. Como 1 km tiene 1000 m, eso es 7,5 km.', false),
+    ('mat-m05', 37, 'Medidas', 'Medidas de superficie', 'alto', 'El piso de un aula mide 8 m de largo y 6 m de ancho. ¿Cuál es el área del piso en centímetros cuadrados?', 'El área es 8 × 6 = 48 m². Cada metro cuadrado es un cuadro de 100 cm por 100 cm, o sea 10 000 cm². Entonces el piso mide 48 × 10 000 = 480 000 cm².', false),
+    ('mat-m09', 38, 'Medidas', 'Conversión de medidas de masa', 'alto', 'Una receta de arroz con pollo para 4 personas lleva 750 g de pollo. ¿Cuántos kilogramos de pollo se necesitan para 10 personas?', 'Para una persona se necesitan 750 ÷ 4 = 187,5 g, y para 10 personas 187,5 × 10 = 1875 g. Como 1 kg tiene 1000 g, eso es 1,875 kg.', false),
+    ('mat-m11', 39, 'Medidas', 'Conversión de temperatura', 'intermedio', 'En un viaje, Valeria vio en un termómetro que la temperatura era de 77 °F. Para pasar de grados Fahrenheit a grados Celsius se usa la regla °C = (°F − 32) × 5 ÷ 9. ¿Cuál era la temperatura en grados Celsius?', 'Primero se resta: 77 − 32 = 45. Después se multiplica por 5 y se divide entre 9: 45 × 5 = 225 y 225 ÷ 9 = 25 °C.', false),
+    ('mat-m10', 40, 'Medidas', 'Conversión de medidas de longitud', 'intermedio', 'Un pasillo mide 6 m de largo. Se van a poner baldosas cuadradas de 25 cm de lado, una seguida de otra, a lo largo del pasillo. ¿Cuántas baldosas caben en una fila?', 'Primero se pasa todo a centímetros: 6 m son 600 cm. Después se reparte: 600 ÷ 25 = 24 baldosas.', false),
+    ('mat-m12', 41, 'Medidas', 'Sistema monetario nacional', 'intermedio', 'En la caja de la soda escolar hay 3 billetes de ₡5000, 4 billetes de ₡2000 y 9 monedas de ₡500. ¿Cuánto dinero hay en total en la caja?', 'Los billetes de ₡5000 suman ₡15 000, los de ₡2000 suman ₡8000 y las monedas suman 9 × 500 = ₡4500. En total hay 15 000 + 8000 + 4500 = ₡27 500.', false),
+    ('mat-r12', 42, 'Relaciones y Álgebra', 'Relaciones entre cantidades en tablas', 'intermedio', 'La tabla muestra lo que cuestan las entradas al festival de la escuela.
 
-![Caja con forma de prisma rectangular. Mide 20 cm de largo, 10 cm de ancho y 15 cm de alto. A un lado hay un cubito de 5 cm de arista.](/simulacros-nuevos/mat-m07-caja.svg)
+| Cantidad de entradas | Costo total (en colones) |
+| --- | --- |
+| 2 | 3000 |
+| 3 | 4500 |
+| 5 | 7500 |
+| 8 | 12 000 |
 
-¿Cuántos cubitos de 5 cm de arista caben dentro de la caja, sin que queden espacios?', 'A lo largo caben 20 ÷ 5 = 4 cubitos, a lo ancho 10 ÷ 5 = 2 y a lo alto 15 ÷ 5 = 3. En total son 4 × 2 × 3 = 24 cubitos. También sale dividiendo el volumen de la caja, 3000 cm³, entre el de un cubito, 125 cm³.', false),
-    ('mat-m03', 15, 'Medidas', 'Medidas de capacidad', 'intermedio', 'Una pichinga tiene 3 L de agua. Con ella se llenan 8 vasos de 250 mL cada uno. ¿Cuántos mililitros de agua quedan en la pichinga?', '3 L son 3000 mL. Los 8 vasos usan 8 × 250 = 2000 mL. Quedan 3000 − 2000 = 1000 mL, que es lo mismo que 1 litro.', false),
-    ('mat-m04', 16, 'Medidas', 'Medidas de tiempo', 'alto', 'Un partido de fútbol entre dos escuelas empezó a las 2:50 p. m. Tuvo dos tiempos de 35 minutos cada uno y un descanso de 15 minutos entre ellos. ¿A qué hora terminó el partido?', 'El partido duró 35 + 15 + 35 = 85 minutos, que es 1 hora y 25 minutos. A las 2:50 p. m. se le suma 1 hora y llegamos a las 3:50; con 25 minutos más son las 4:15 p. m.', false),
-    ('mat-m06', 17, 'Medidas', 'Problemas con medidas de longitud', 'intermedio', 'Fabián camina 750 m de su casa a la escuela y la misma distancia de regreso, de lunes a viernes. ¿Cuántos kilómetros camina en total durante esos cinco días?', 'Cada día camina 750 + 750 = 1500 m. En cinco días son 1500 × 5 = 7500 m. Como 1 km tiene 1000 m, eso es 7,5 km.', false),
-    ('mat-m05', 18, 'Medidas', 'Medidas de superficie', 'alto', 'El piso de un aula mide 8 m de largo y 6 m de ancho. ¿Cuál es el área del piso en centímetros cuadrados?', 'El área es 8 × 6 = 48 m². Cada metro cuadrado es un cuadro de 100 cm por 100 cm, o sea 10 000 cm². Entonces el piso mide 48 × 10 000 = 480 000 cm².', false),
-    ('mat-m02', 19, 'Medidas', 'Conversión de medidas de masa', 'intermedio', 'Doña Lucía empaca 3,6 kg de frijoles en bolsas de 450 g cada una. ¿Cuántas bolsas llena?', 'Primero se pasa todo a la misma unidad: 3,6 kg son 3600 g. Luego se reparte: 3600 ÷ 450 = 8 bolsas.', false),
-    ('mat-g06', 20, 'Geometría', 'Área de figuras compuestas', 'intermedio', 'La figura representa el terreno de una escuela, con sus medidas en metros.
-
-![Terreno con forma de L. Abajo mide 10 m y a la izquierda mide 8 m. Arriba mide 6 m; de ahí baja 3 m, sigue 4 m hacia la derecha y baja 5 m por el lado derecho hasta la base.](/simulacros-nuevos/mat-g06-terreno.svg)
-
-¿Cuál es el área del terreno?', 'Se puede partir en dos rectángulos: uno de 6 m por 8 m, que da 48 m², y otro de 4 m por 5 m, que da 20 m². Sumados son 48 + 20 = 68 m². También sale restando: 10 × 8 − 4 × 3 = 68.', false),
-    ('mat-g01', 21, 'Geometría', 'Longitud de la circunferencia', 'alto', 'La huerta de la escuela tiene forma de círculo y mide 10 m de diámetro, como se ve en la figura.
-
-![Círculo que representa la huerta. Una línea lo cruza por el centro, de un borde al otro, y está rotulada: diámetro 10 m.](/simulacros-nuevos/mat-g01-huerta.svg)
-
-Se quiere poner malla alrededor de toda la huerta y cada metro de malla cuesta ₡1500. Si se usa $\pi \approx 3{,}14$, ¿cuánto cuesta la malla?', 'La malla va por el borde del círculo, que se calcula con π × diámetro: 3,14 × 10 = 31,4 m. Después se multiplica por el precio: 31,4 × 1500 = 47 100 colones.', true),
-    ('mat-g07', 22, 'Geometría', 'Área del triángulo', 'intermedio', 'Para la fiesta de la escuela se van a coser 12 banderines con forma de triángulo. Cada banderín tiene 30 cm de base y 40 cm de altura. ¿Cuánta tela se necesita para los 12 banderines, sin contar desperdicios?', 'El área de un triángulo es base por altura entre 2: 30 × 40 ÷ 2 = 600 cm² por banderín. Para 12 banderines se necesitan 600 × 12 = 7200 cm².', false),
-    ('mat-g05', 23, 'Geometría', 'Desarrollo plano de cuerpos sólidos', 'intermedio', 'La figura muestra el patrón que Jimena recortó en cartulina.
-
-![Patrón de cartulina: tres rectángulos iguales en fila, uno al lado del otro, y un triángulo pegado arriba y otro abajo del rectángulo del centro. Las líneas donde se dobla están punteadas.](/simulacros-nuevos/mat-g05-patron.svg)
-
-Si lo dobla por las líneas punteadas y lo arma, ¿qué cuerpo sólido se forma?', 'Los dos triángulos iguales son las bases, una de cada lado, y los tres rectángulos forman las caras de alrededor. Un cuerpo con dos bases iguales y caras rectangulares es un prisma, y aquí sus bases son triángulos.', false),
-    ('mat-g02', 24, 'Geometría', 'Ángulos internos del triángulo', 'alto', 'Un triángulo isósceles tiene dos ángulos iguales y el ángulo distinto mide 40°. ¿Cuánto mide cada uno de los ángulos iguales?', 'Los tres ángulos de cualquier triángulo suman 180°. Si uno mide 40°, a los otros dos les quedan 180 − 40 = 140°, y como son iguales, cada uno mide 140 ÷ 2 = 70°.', false),
-    ('mat-g03', 25, 'Geometría', 'Clasificación de cuadriláteros', 'intermedio', 'Un cuadrilátero tiene dos pares de lados paralelos, sus cuatro lados miden lo mismo y ninguno de sus ángulos es recto. ¿Qué cuadrilátero es?', 'Tener los cuatro lados iguales deja por fuera al romboide y al trapecio. Entre el cuadrado y el rombo, la pista es que no tiene ángulos rectos: el cuadrado sí los tiene, así que la figura es un rombo.', false),
-    ('mat-g08', 26, 'Geometría', 'Perímetro de polígonos regulares', 'alto', 'Con un alambre, Esteban formó un pentágono regular de 18 cm de lado. Después lo desarmó y, con todo el alambre, formó un hexágono regular. ¿Cuánto mide cada lado del hexágono?', 'El alambre mide lo mismo que el perímetro del pentágono: 5 × 18 = 90 cm. Al repartir esos 90 cm en los 6 lados iguales del hexágono, cada lado mide 90 ÷ 6 = 15 cm.', false),
-    ('mat-g04', 27, 'Geometría', 'Elementos de los cuerpos sólidos', 'alto', 'Una pirámide tiene como base un hexágono. ¿Cuántas aristas tiene en total?', 'La base hexagonal tiene 6 aristas, y de cada vértice de la base sale una arista que sube hasta la punta: 6 más. En total son 6 + 6 = 12 aristas.', false),
-    ('mat-r06', 28, 'Relaciones y álgebra', 'Ecuaciones con balanzas', 'intermedio', 'La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg.
-
-![Balanza de dos platillos, nivelada. En el platillo izquierdo hay tres cajas iguales y una pesa de 2 kg. En el platillo derecho hay una pesa de 14 kg.](/simulacros-nuevos/mat-r06-balanza.svg)
-
-¿Cuánto pesa cada caja?', 'Si se quitan 2 kg de cada lado, la balanza sigue en equilibrio: las 3 cajas pesan 14 − 2 = 12 kg. Entonces cada caja pesa 12 ÷ 3 = 4 kg.', false),
-    ('mat-r01', 29, 'Relaciones y álgebra', 'Patrones y sucesiones con figuras', 'alto', 'Con palillos se forman las figuras que se muestran: la figura 1 tiene un cuadrado, la figura 2 tiene dos cuadrados unidos y la figura 3 tiene tres.
+¿Cuál de las siguientes afirmaciones describe la relación entre las dos cantidades?', 'Si se divide el costo entre la cantidad de entradas, siempre da lo mismo: 3000 ÷ 2 = 1500, 4500 ÷ 3 = 1500, y así con todas. Por eso cada entrada cuesta ₡1500, y las dos cantidades aumentan juntas, en proporción.', false),
+    ('mat-r03', 43, 'Relaciones y Álgebra', 'Proporcionalidad directa', 'intermedio', 'En una tortillería, con 3 kg de masa se hacen 48 tortillas. Si la cantidad de tortillas es proporcional a la masa, ¿cuántas tortillas se hacen con 5 kg de masa?', 'Primero se averigua cuántas salen con 1 kg: 48 ÷ 3 = 16 tortillas. Con 5 kg salen 16 × 5 = 80 tortillas.', false),
+    ('mat-r02', 44, 'Relaciones y Álgebra', 'Valor desconocido', 'intermedio', 'Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. ¿Qué número pensó Daniela?', 'Se deshacen los pasos al revés: si al restarle 7 quedó 33, antes era 33 + 7 = 40. Y si 40 salió de multiplicar por 4, el número era 40 ÷ 4 = 10. Comprobación: 10 × 4 − 7 = 33.', false),
+    ('mat-r08', 45, 'Relaciones y Álgebra', 'Sucesiones numéricas', 'alto', 'En una sucesión, el primer término es 5 y cada término siguiente se obtiene sumándole 4 al anterior. ¿Cuál es el término número 20?', 'Del primer término al vigésimo hay 19 saltos de 4, o sea 19 × 4 = 76. Entonces el término 20 es 5 + 76 = 81.', false),
+    ('mat-r04', 46, 'Relaciones y Álgebra', 'Expresiones matemáticas con dos cantidades', 'alto', 'En una librería, un cuaderno cuesta $c$ colones y un lapicero cuesta ₡300 menos que un cuaderno. ¿Cuál expresión representa lo que se paga por 2 cuadernos y 3 lapiceros?', 'Cada lapicero cuesta c − 300 colones, así que los 3 lapiceros cuestan 3 × (c − 300): el paréntesis dice que se multiplica el precio completo del lapicero. A eso se le suma lo de los 2 cuadernos, que es 2 × c.', true),
+    ('mat-r05', 47, 'Relaciones y Álgebra', 'Sucesiones numéricas', 'alto', 'En la sucesión 3, 8, 15, 24, 35, …, ¿cuál es el número que sigue?', 'De un número al siguiente se suma 5, luego 7, luego 9 y luego 11: lo que se suma crece de 2 en 2. Lo próximo es sumar 13, así que sigue 35 + 13 = 48.', false),
+    ('mat-r07', 48, 'Relaciones y Álgebra', 'Cantidades variables y constantes', 'intermedio', 'En la soda de una escuela, el casado cuesta ₡2200 todos los días, la soda abre 5 días por semana y cada día se vende una cantidad distinta de casados. ¿Cuál de las siguientes cantidades es variable?', 'Una cantidad es variable cuando puede cambiar. Como cada día se vende una cantidad distinta de casados, el dinero que entra también cambia de un día a otro. El precio del casado y los días que abre la soda se mantienen iguales: son constantes.', false),
+    ('mat-r01', 49, 'Relaciones y Álgebra', 'Patrones y sucesiones con figuras', 'alto', 'Con palillos se forman las figuras que se muestran: la figura 1 tiene un cuadrado, la figura 2 tiene dos cuadrados unidos y la figura 3 tiene tres.
 
 ![Tres figuras hechas con palillos. Figura 1: un cuadrado de 4 palillos. Figura 2: dos cuadrados unidos por un lado, 7 palillos. Figura 3: tres cuadrados en fila, 10 palillos.](/simulacros-nuevos/mat-r01-palillos.svg)
 
 Si se sigue el mismo patrón, ¿cuántos palillos se necesitan para la figura 15?', 'La figura 1 usa 4 palillos y cada cuadrado nuevo agrega solo 3, porque comparte un lado con el anterior. Así, la figura 15 usa 4 + 3 × 14 = 46 palillos.', false),
-    ('mat-r04', 30, 'Relaciones y álgebra', 'Expresiones con variables', 'alto', 'En una librería, un cuaderno cuesta $c$ colones y un lapicero cuesta ₡300 menos que un cuaderno. ¿Cuál expresión representa lo que se paga por 2 cuadernos y 3 lapiceros?', 'Cada lapicero cuesta c − 300. Los 2 cuadernos son 2c y los 3 lapiceros son 3 × (c − 300) = 3c − 900. Sumando todo: 2c + 3c − 900 = 5c − 900.', true),
-    ('mat-r05', 31, 'Relaciones y álgebra', 'Sucesiones numéricas', 'alto', 'En la sucesión 3, 7, 15, 31, 63, …, ¿cuál es el número que sigue?', 'Las diferencias entre un número y el siguiente se van duplicando: 4, 8, 16, 32. La próxima diferencia es 64, así que sigue 63 + 64 = 127. Otra forma de verlo: cada número es el anterior por 2, más 1.', false),
-    ('mat-r02', 32, 'Relaciones y álgebra', 'Ecuaciones', 'intermedio', 'Daniela pensó un número, lo multiplicó por 4 y al resultado le restó 7. Al final obtuvo 33. ¿Qué número pensó Daniela?', 'Se deshacen los pasos al revés: si al restarle 7 quedó 33, antes era 33 + 7 = 40. Y si 40 salió de multiplicar por 4, el número era 40 ÷ 4 = 10. Comprobación: 10 × 4 − 7 = 33.', false),
-    ('mat-r03', 33, 'Relaciones y álgebra', 'Proporcionalidad directa', 'intermedio', 'En una tortillería, con 3 kg de masa se hacen 48 tortillas. Si la cantidad de tortillas es proporcional a la masa, ¿cuántas tortillas se hacen con 5 kg de masa?', 'Primero se averigua cuántas salen con 1 kg: 48 ÷ 3 = 16 tortillas. Con 5 kg salen 16 × 5 = 80 tortillas.', false),
-    ('mat-e04', 34, 'Estadística y probabilidad', 'Probabilidad de un evento', 'intermedio', 'En una bolsa hay 5 bolitas rojas, 3 azules y 4 verdes, todas del mismo tamaño. Si se saca una bolita sin ver, ¿cuál es la probabilidad de que sea azul?', 'En total hay 5 + 3 + 4 = 12 bolitas y 3 son azules. La probabilidad es 3/12, que simplificada es 1/4.', true),
-    ('mat-e07', 35, 'Estadística y probabilidad', 'Promedio y moda', 'intermedio', 'Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?', 'La moda es el dato que más se repite: el 15 aparece dos veces. El promedio se saca sumando todo y dividiendo entre la cantidad de días: 65 ÷ 5 = 13.', false),
-    ('mat-e06', 36, 'Estadística y probabilidad', 'Pictogramas', 'alto', 'El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg.
+    ('mat-r10', 50, 'Relaciones y Álgebra', 'Escalas y proporcionalidad', 'intermedio', 'En un mapa, cada centímetro representa 5 km en la realidad. Dos pueblos están a 7,5 cm de distancia en el mapa. ¿Cuál es la distancia real entre los dos pueblos?', 'Si 1 cm del mapa son 5 km, entonces 7,5 cm son 7,5 × 5 = 37,5 km. Es una relación proporcional: el doble de centímetros, el doble de kilómetros.', false),
+    ('mat-r09', 51, 'Relaciones y Álgebra', 'Valor desconocido en una ecuación', 'alto', 'El doble de la edad de Sofía, aumentado en 5 años, da 31 años. En la siguiente ecuación, «e» representa la edad de Sofía: 2 × e + 5 = 31. De acuerdo con la información anterior, ¿cuántos años tiene Sofía?', 'Se deshacen las operaciones al revés: primero se resta 5, 31 − 5 = 26, y después se divide entre 2, 26 ÷ 2 = 13. Sofía tiene 13 años, y se comprueba con 2 × 13 + 5 = 31.', false),
+    ('mat-r06', 52, 'Relaciones y Álgebra', 'Número que falta en una representación gráfica', 'intermedio', 'La balanza de la figura está en equilibrio. En el platillo de la izquierda hay 3 cajas iguales y una pesa de 2 kg; en el de la derecha hay una pesa de 14 kg.
+
+![Balanza de dos platillos, nivelada. En el platillo izquierdo hay tres cajas iguales y una pesa de 2 kg. En el platillo derecho hay una pesa de 14 kg.](/simulacros-nuevos/mat-r06-balanza.svg)
+
+¿Cuánto pesa cada caja?', 'Si se quitan 2 kg de cada lado, la balanza sigue en equilibrio: las 3 cajas pesan 14 − 2 = 12 kg. Entonces cada caja pesa 12 ÷ 3 = 4 kg.', false),
+    ('mat-r11', 53, 'Relaciones y Álgebra', 'Expresiones matemáticas con dos cantidades', 'alto', 'Un taxi cobra ₡700 por subirse y ₡650 por cada kilómetro recorrido. El cobro total, en colones, se calcula con la expresión 700 + 650 × k, donde k es la cantidad de kilómetros. ¿Cuánto se paga por un viaje de 6 km?', 'Primero se multiplica: 650 × 6 = ₡3900 por los kilómetros. Después se suman los ₡700 de subirse: 700 + 3900 = ₡4600.', false),
+    ('mat-e07', 54, 'Estadística y Probabilidad', 'Moda y recorrido', 'intermedio', 'Durante cinco días, una pulpería vendió esta cantidad de helados: lunes 12, martes 15, miércoles 9, jueves 15 y viernes 14. ¿Cuál de las siguientes afirmaciones es verdadera?', 'La moda es el dato que más se repite: el 15 aparece dos veces. El recorrido es la diferencia entre el dato mayor y el menor: 15 − 9 = 6.', false),
+    ('mat-e11', 55, 'Estadística y Probabilidad', 'Población y muestra', 'intermedio', 'Para saber cuál deporte prefieren los 600 estudiantes de una escuela, se escogió al azar a 3 estudiantes de cada uno de los 20 grupos, o sea, a 60 estudiantes, y se les hizo una encuesta. En ese estudio, ¿cuál es la población?', 'La población es el grupo completo que se quiere estudiar: los 600 estudiantes de la escuela. Los 60 que respondieron la encuesta son solo una parte, que se llama muestra.', false),
+    ('mat-e06', 56, 'Estadística y Probabilidad', 'Pictogramas', 'alto', 'El pictograma muestra los kilogramos de fruta que vendió un puesto de la feria en una mañana. Cada círculo completo representa 6 kg.
 
 ![Pictograma de fruta vendida, donde cada círculo completo vale 6 kg. Mango: 4 círculos. Papaya: 2 círculos y medio círculo. Piña: 3 círculos.](/simulacros-nuevos/mat-e06-frutas.svg)
 
 ¿Cuántos kilogramos más de mango que de papaya se vendieron?', 'Mango tiene 4 círculos, o sea 4 × 6 = 24 kg. Papaya tiene 2 círculos y medio: 2,5 × 6 = 15 kg. La diferencia es 24 − 15 = 9 kg.', false),
-    ('mat-e02', 37, 'Estadística y probabilidad', 'Gráficos de barras', 'alto', 'El gráfico muestra la cantidad de libros que leyó cada grupo de sexto durante un mes.
+    ('mat-e04', 57, 'Estadística y Probabilidad', 'Eventos más y menos probables', 'intermedio', 'En una bolsa hay 5 bolitas rojas, 3 azules y 4 verdes, todas del mismo tamaño. Se agregan 2 bolitas azules más. Si después se saca una bolita sin ver, ¿cuál de las siguientes afirmaciones es correcta?', 'Después de agregar las 2 azules quedan 5 rojas, 5 azules y 4 verdes. Como hay la misma cantidad de rojas que de azules, sacar una roja o una azul es igual de probable, y la verde es la menos probable.', false),
+    ('mat-e09', 58, 'Estadística y Probabilidad', 'Media aritmética con tabla de frecuencias', 'alto', 'La tabla muestra cuántos goles anotó el equipo de la escuela en sus partidos del campeonato.
 
-![Gráfico de barras de los libros leídos en un mes por cada grupo de sexto: 6-1 leyó 24, 6-2 leyó 30, 6-3 leyó 18 y 6-4 leyó 28.](/simulacros-nuevos/mat-e02-libros.svg)
-
-¿Qué porcentaje del total de libros leyó el grupo 6-4?', 'Entre los cuatro grupos leyeron 24 + 30 + 18 + 28 = 100 libros. Como el total es 100, los 28 libros del grupo 6-4 son el 28 % del total.', false),
-    ('mat-e01', 38, 'Estadística y probabilidad', 'Promedio', 'alto', 'Las notas de Esteban en cinco pruebas cortas fueron 88, 90, 76, 94 y 82. ¿Qué nota necesita en la sexta prueba para que el promedio de las seis sea 87?', 'Para tener promedio 87 en seis pruebas, las seis notas deben sumar 87 × 6 = 522. Las cinco que ya tiene suman 430, así que en la sexta necesita 522 − 430 = 92.', false),
-    ('mat-e03', 39, 'Estadística y probabilidad', 'Moda', 'intermedio', 'La tabla muestra cuántos hermanos tienen los estudiantes de un grupo de sexto.
-
-| Cantidad de hermanos | Cantidad de estudiantes |
+| Goles en el partido | Cantidad de partidos |
 | --- | --- |
-| 0 | 3 |
-| 1 | 8 |
-| 2 | 6 |
-| 3 | 2 |
-| 4 | 1 |
+| 0 | 2 |
+| 1 | 3 |
+| 2 | 4 |
+| 3 | 1 |
 
-¿Cuál es la moda de la cantidad de hermanos?', 'La moda es el dato que más se repite. Tener 1 hermano es lo que más aparece, en 8 estudiantes. El 8 no es la moda: es cuántas veces se repite el dato.', false),
-    ('mat-e05', 40, 'Estadística y probabilidad', 'Comparación de probabilidades', 'alto', 'Para una rifa del comité de padres hay dos cajas. En la caja A hay 20 boletos y 4 tienen premio. En la caja B hay 12 boletos y 3 tienen premio. Si solo se puede sacar un boleto de una caja, ¿en cuál es más probable ganar y por qué?', 'Lo que importa es qué parte de cada caja tiene premio. En la A gana 4 de 20, o sea 1 de cada 5 boletos; en la B gana 3 de 12, o sea 1 de cada 4. Como 1/4 es mayor que 1/5, es más probable ganar sacando de la caja B.', false)
+¿Cuál fue el promedio (media aritmética) de goles por partido?', 'En total se jugaron 2 + 3 + 4 + 1 = 10 partidos y se anotaron 0 × 2 + 1 × 3 + 2 × 4 + 3 × 1 = 14 goles. El promedio es 14 ÷ 10 = 1,4 goles por partido.', false),
+    ('mat-e02', 59, 'Estadística y Probabilidad', 'Frecuencia porcentual', 'alto', 'El gráfico muestra la cantidad de libros que leyó cada grupo de sexto durante un mes.
+
+![Gráfico de barras de los libros leídos en un mes por cada grupo de sexto: 6-1 leyó 48, 6-2 leyó 60, 6-3 leyó 36 y 6-4 leyó 56.](/simulacros-nuevos/mat-e02-libros.svg)
+
+¿Qué porcentaje del total de libros leyó el grupo 6-4?', 'Entre los cuatro grupos leyeron 48 + 60 + 36 + 56 = 200 libros. El grupo 6-4 leyó 56 de esos 200, que es lo mismo que 28 de cada 100, o sea, el 28 %. Ojo: 56 es la cantidad de libros, no el porcentaje.', false),
+    ('mat-e10', 60, 'Estadística y Probabilidad', 'Eventos más y menos probables', 'intermedio', 'Una ruleta está dividida en 8 partes iguales: 4 son rojas, 3 son azules y 1 es verde. Si se hace girar una vez, ¿cuál de las siguientes afirmaciones es correcta?', 'El color con más partes es el más probable. El verde tiene 1 parte y el azul tiene 3, así que es menos probable que salga verde. Pero no es imposible, porque sí hay una parte verde.', false)
 ) as v (codigo, orden, tema, subtema, nivel, enunciado, explicacion, tiene_latex)
 where s.slug = 'nuevo-matematicas-1'
 on conflict (simulacro_id, codigo) do update set
@@ -422,70 +441,146 @@ where o.item_id = i.id
 insert into public.simulacro_nuevo_opciones (item_id, letra, texto, es_correcta)
 select i.id, v.letra, v.texto, v.es_correcta
 from (values
-    ('mat-n09', 'A', '₡1700', false),
-    ('mat-n09', 'B', '₡6800', true),
-    ('mat-n09', 'C', '₡8330', false),
-    ('mat-n09', 'D', '₡8480', false),
-    ('mat-n10', 'A', '25', false),
-    ('mat-n10', 'B', '27', false),
-    ('mat-n10', 'C', '39', true),
-    ('mat-n10', 'D', '49', false),
-    ('mat-n08', 'A', '₡2100', false),
-    ('mat-n08', 'B', '₡2400', false),
-    ('mat-n08', 'C', '₡2820', false),
-    ('mat-n08', 'D', '₡3000', true),
-    ('mat-n11', 'A', '32', false),
-    ('mat-n11', 'B', '36', false),
-    ('mat-n11', 'C', '40', false),
-    ('mat-n11', 'D', '48', true),
-    ('mat-n03', 'A', '5 filas', true),
-    ('mat-n03', 'B', '10 filas', false),
-    ('mat-n03', 'C', '24 filas', false),
-    ('mat-n03', 'D', '144 filas', false),
-    ('mat-n02', 'A', '6:06 a. m.', false),
-    ('mat-n02', 'B', '6:24 a. m.', false),
-    ('mat-n02', 'C', '6:30 a. m.', false),
-    ('mat-n02', 'D', '6:36 a. m.', true),
-    ('mat-n01', 'A', '₡1700', false),
-    ('mat-n01', 'B', '₡2150', true),
-    ('mat-n01', 'C', '₡2350', false),
-    ('mat-n01', 'D', '₡2850', false),
+    ('mat-n07', 'A', '$\frac{1}{4}$', false),
+    ('mat-n07', 'B', '$\frac{3}{4}$', true),
+    ('mat-n07', 'C', '$\frac{7}{5}$', false),
+    ('mat-n07', 'D', '$\frac{75}{10}$', false),
     ('mat-n05', 'A', '$\frac{4}{15}$', true),
     ('mat-n05', 'B', '$\frac{3}{8}$', false),
     ('mat-n05', 'C', '$\frac{5}{8}$', false),
     ('mat-n05', 'D', '$\frac{11}{15}$', false),
-    ('mat-n04', 'A', '19', false),
-    ('mat-n04', 'B', '23', false),
-    ('mat-n04', 'C', '29', false),
-    ('mat-n04', 'D', '33', true),
+    ('mat-n08', 'A', '₡2100', false),
+    ('mat-n08', 'B', '₡2400', false),
+    ('mat-n08', 'C', '₡2820', false),
+    ('mat-n08', 'D', '₡3000', true),
+    ('mat-n21', 'A', '0,0235 kg', false),
+    ('mat-n21', 'B', '2,35 kg', false),
+    ('mat-n21', 'C', '23,5 kg', false),
+    ('mat-n21', 'D', '235 kg', true),
+    ('mat-n19', 'A', '600', false),
+    ('mat-n19', 'B', '60 000', false),
+    ('mat-n19', 'C', '600 000', true),
+    ('mat-n19', 'D', '6 000 000', false),
+    ('mat-n13', 'A', '₡5000', true),
+    ('mat-n13', 'B', '₡6000', false),
+    ('mat-n13', 'C', '₡7000', false),
+    ('mat-n13', 'D', '₡9000', false),
+    ('mat-n02', 'A', '6:06 a. m.', false),
+    ('mat-n02', 'B', '6:24 a. m.', false),
+    ('mat-n02', 'C', '6:30 a. m.', false),
+    ('mat-n02', 'D', '6:36 a. m.', true),
+    ('mat-n03', 'A', '5 filas', true),
+    ('mat-n03', 'B', '10 filas', false),
+    ('mat-n03', 'C', '24 filas', false),
+    ('mat-n03', 'D', '144 filas', false),
+    ('mat-n14', 'A', '₡1200', false),
+    ('mat-n14', 'B', '₡1850', true),
+    ('mat-n14', 'C', '₡6400', false),
+    ('mat-n14', 'D', '₡14 800', false),
     ('mat-n06', 'A', '8 estudiantes', false),
     ('mat-n06', 'B', '12 estudiantes', true),
     ('mat-n06', 'C', '18 estudiantes', false),
     ('mat-n06', 'D', '20 estudiantes', false),
-    ('mat-n07', 'A', '2 vasos', false),
-    ('mat-n07', 'B', '3 vasos', false),
-    ('mat-n07', 'C', '4 vasos', true),
-    ('mat-n07', 'D', '6 vasos', false),
     ('mat-n12', 'A', 'Sofía, Jimena y Yerlin', false),
     ('mat-n12', 'B', 'Yerlin, Jimena y Sofía', false),
     ('mat-n12', 'C', 'Yerlin, Sofía y Jimena', false),
     ('mat-n12', 'D', 'Jimena, Sofía y Yerlin', true),
-    ('mat-m01', 'A', '1 cm', false),
-    ('mat-m01', 'B', '10 cm', false),
-    ('mat-m01', 'C', '100 cm', true),
-    ('mat-m01', 'D', '1000 cm', false),
-    ('mat-m07', 'A', '24 cubitos', true),
-    ('mat-m07', 'B', '120 cubitos', false),
-    ('mat-m07', 'C', '600 cubitos', false),
-    ('mat-m07', 'D', '3000 cubitos', false),
+    ('mat-n18', 'A', 'Ariana', false),
+    ('mat-n18', 'B', 'Camila', false),
+    ('mat-n18', 'C', 'Diego', false),
+    ('mat-n18', 'D', 'Brenda', true),
+    ('mat-n22', 'A', '5', false),
+    ('mat-n22', 'B', '6', true),
+    ('mat-n22', 'C', '185', false),
+    ('mat-n22', 'D', '275', false),
+    ('mat-n16', 'A', '531', false),
+    ('mat-n16', 'B', '561', true),
+    ('mat-n16', 'C', '571', false),
+    ('mat-n16', 'D', '591', false),
+    ('mat-n04', 'A', '19', false),
+    ('mat-n04', 'B', '23', false),
+    ('mat-n04', 'C', '29', false),
+    ('mat-n04', 'D', '33', true),
+    ('mat-n20', 'A', 'Es mayor que 48.', false),
+    ('mat-n20', 'B', 'Es igual a 48.', false),
+    ('mat-n20', 'C', 'Es menor que 48.', true),
+    ('mat-n20', 'D', 'Es menor que 0,75.', false),
+    ('mat-n01', 'A', '₡1700', false),
+    ('mat-n01', 'B', '₡2150', true),
+    ('mat-n01', 'C', '₡2350', false),
+    ('mat-n01', 'D', '₡2850', false),
+    ('mat-g04', 'A', '4', false),
+    ('mat-g04', 'B', '6', false),
+    ('mat-g04', 'C', '8', false),
+    ('mat-g04', 'D', '12', true),
+    ('mat-g14', 'A', 'Cuadrado', false),
+    ('mat-g14', 'B', 'Trapezoide', false),
+    ('mat-g14', 'C', 'Rectángulo', true),
+    ('mat-g14', 'D', 'Romboide', false),
+    ('mat-g05', 'A', 'Altura de 12 cm y radio de 4 cm', true),
+    ('mat-g05', 'B', 'Altura de 12 cm y radio de 8 cm', false),
+    ('mat-g05', 'C', 'Altura de 8 cm y radio de 6 cm', false),
+    ('mat-g05', 'D', 'Altura de 4 cm y radio de 12 cm', false),
+    ('mat-g17', 'A', '(3, 7)', false),
+    ('mat-g17', 'B', '(6, 2)', false),
+    ('mat-g17', 'C', '(7, 3)', false),
+    ('mat-g17', 'D', '(6, 4)', true),
+    ('mat-g03', 'A', 'Rombo', true),
+    ('mat-g03', 'B', 'Cuadrado', false),
+    ('mat-g03', 'C', 'Romboide', false),
+    ('mat-g03', 'D', 'Rectángulo', false),
+    ('mat-g06', 'A', '36 m²', false),
+    ('mat-g06', 'B', '68 m²', true),
+    ('mat-g06', 'C', '80 m²', false),
+    ('mat-g06', 'D', '92 m²', false),
+    ('mat-g18', 'A', '32 m²', false),
+    ('mat-g18', 'B', '64 m²', false),
+    ('mat-g18', 'C', '120 m²', false),
+    ('mat-g18', 'D', '240 m²', true),
+    ('mat-g12', 'A', '₡135 000', false),
+    ('mat-g12', 'B', '₡450 000', true),
+    ('mat-g12', 'C', '₡900 000', false),
+    ('mat-g12', 'D', '₡1 462 500', false),
+    ('mat-g15', 'A', 'Acutángulo', false),
+    ('mat-g15', 'B', 'Rectángulo', false),
+    ('mat-g15', 'C', 'Obtusángulo', true),
+    ('mat-g15', 'D', 'Equilátero', false),
+    ('mat-g11', 'A', 'Rectángulo isósceles', true),
+    ('mat-g11', 'B', 'Rectángulo escaleno', false),
+    ('mat-g11', 'C', 'Acutángulo isósceles', false),
+    ('mat-g11', 'D', 'Obtusángulo isósceles', false),
+    ('mat-g08', 'A', '12 cm', false),
+    ('mat-g08', 'B', '15 cm', true),
+    ('mat-g08', 'C', '17 cm', false),
+    ('mat-g08', 'D', '18 cm', false),
+    ('mat-g07', 'A', '600 cm²', false),
+    ('mat-g07', 'B', '840 cm²', false),
+    ('mat-g07', 'C', '7200 cm²', true),
+    ('mat-g07', 'D', '14 400 cm²', false),
+    ('mat-g16', 'A', '0', false),
+    ('mat-g16', 'B', '1', false),
+    ('mat-g16', 'C', '2', true),
+    ('mat-g16', 'D', '4', false),
+    ('mat-g13', 'A', 'Paralelogramo', false),
+    ('mat-g13', 'B', 'Trapezoide', false),
+    ('mat-g13', 'C', 'Romboide', false),
+    ('mat-g13', 'D', 'Trapecio', true),
     ('mat-m03', 'A', '1000 mL', true),
     ('mat-m03', 'B', '2000 mL', false),
     ('mat-m03', 'C', '2750 mL', false),
     ('mat-m03', 'D', '2800 mL', false),
-    ('mat-m04', 'A', '3:40 p. m.', false),
-    ('mat-m04', 'B', '4:00 p. m.', false),
-    ('mat-m04', 'C', '4:15 p. m.', true),
-    ('mat-m04', 'D', '4:30 p. m.', false),
+    ('mat-m02', 'A', '8 bolsas', true),
+    ('mat-m02', 'B', '80 bolsas', false),
+    ('mat-m02', 'C', '125 bolsas', false),
+    ('mat-m02', 'D', '800 bolsas', false),
+    ('mat-m04', 'A', '3:40 p. m.', false),
+    ('mat-m04', 'B', '4:00 p. m.', false),
+    ('mat-m04', 'C', '4:15 p. m.', true),
+    ('mat-m04', 'D', '4:30 p. m.', false),
+    ('mat-m08', 'A', '10:38 a. m.', false),
+    ('mat-m08', 'B', '10:58 a. m.', false),
+    ('mat-m08', 'C', '11:10 a. m.', true),
+    ('mat-m08', 'D', '11:20 a. m.', false),
     ('mat-m06', 'A', '0,75 km', false),
     ('mat-m06', 'B', '1,5 km', false),
     ('mat-m06', 'C', '3,75 km', false),
@@ -494,94 +589,98 @@ from (values
     ('mat-m05', 'B', '48 000 cm²', false),
     ('mat-m05', 'C', '480 000 cm²', true),
     ('mat-m05', 'D', '4 800 000 cm²', false),
-    ('mat-m02', 'A', '8 bolsas', true),
-    ('mat-m02', 'B', '80 bolsas', false),
-    ('mat-m02', 'C', '125 bolsas', false),
-    ('mat-m02', 'D', '800 bolsas', false),
-    ('mat-g06', 'A', '36 m²', false),
-    ('mat-g06', 'B', '68 m²', true),
-    ('mat-g06', 'C', '80 m²', false),
-    ('mat-g06', 'D', '92 m²', false),
-    ('mat-g01', 'A', '₡23 550', false),
-    ('mat-g01', 'B', '₡47 100', true),
-    ('mat-g01', 'C', '₡94 200', false),
-    ('mat-g01', 'D', '₡117 750', false),
-    ('mat-g07', 'A', '600 cm²', false),
-    ('mat-g07', 'B', '840 cm²', false),
-    ('mat-g07', 'C', '7200 cm²', true),
-    ('mat-g07', 'D', '14 400 cm²', false),
-    ('mat-g05', 'A', 'Pirámide de base triangular', false),
-    ('mat-g05', 'B', 'Pirámide de base cuadrada', false),
-    ('mat-g05', 'C', 'Prisma de base rectangular', false),
-    ('mat-g05', 'D', 'Prisma de base triangular', true),
-    ('mat-g02', 'A', '40°', false),
-    ('mat-g02', 'B', '50°', false),
-    ('mat-g02', 'C', '70°', true),
-    ('mat-g02', 'D', '140°', false),
-    ('mat-g03', 'A', 'Rombo', true),
-    ('mat-g03', 'B', 'Cuadrado', false),
-    ('mat-g03', 'C', 'Romboide', false),
-    ('mat-g03', 'D', 'Trapecio', false),
-    ('mat-g08', 'A', '12 cm', false),
-    ('mat-g08', 'B', '15 cm', true),
-    ('mat-g08', 'C', '17 cm', false),
-    ('mat-g08', 'D', '18 cm', false),
-    ('mat-g04', 'A', '6', false),
-    ('mat-g04', 'B', '7', false),
-    ('mat-g04', 'C', '12', true),
-    ('mat-g04', 'D', '18', false),
-    ('mat-r06', 'A', '4 kg', true),
-    ('mat-r06', 'B', '6 kg', false),
-    ('mat-r06', 'C', '12 kg', false),
-    ('mat-r06', 'D', '16 kg', false),
-    ('mat-r01', 'A', '45', false),
-    ('mat-r01', 'B', '46', true),
-    ('mat-r01', 'C', '49', false),
-    ('mat-r01', 'D', '60', false),
-    ('mat-r04', 'A', '$5c - 900$', true),
-    ('mat-r04', 'B', '$5c - 600$', false),
-    ('mat-r04', 'C', '$5c - 300$', false),
-    ('mat-r04', 'D', '$5c + 900$', false),
-    ('mat-r05', 'A', '67', false),
-    ('mat-r05', 'B', '95', false),
-    ('mat-r05', 'C', '126', false),
-    ('mat-r05', 'D', '127', true),
-    ('mat-r02', 'A', '6,5', false),
-    ('mat-r02', 'B', '10', true),
-    ('mat-r02', 'C', '40', false),
-    ('mat-r02', 'D', '125', false),
+    ('mat-m09', 'A', '1,875 kg', true),
+    ('mat-m09', 'B', '3 kg', false),
+    ('mat-m09', 'C', '7,5 kg', false),
+    ('mat-m09', 'D', '18,75 kg', false),
+    ('mat-m11', 'A', '25 °C', true),
+    ('mat-m11', 'B', '45 °C', false),
+    ('mat-m11', 'C', '81 °C', false),
+    ('mat-m11', 'D', '109 °C', false),
+    ('mat-m10', 'A', '2,4', false),
+    ('mat-m10', 'B', '24', true),
+    ('mat-m10', 'C', '150', false),
+    ('mat-m10', 'D', '240', false),
+    ('mat-m12', 'A', '₡7500', false),
+    ('mat-m12', 'B', '₡23 000', false),
+    ('mat-m12', 'C', '₡23 450', false),
+    ('mat-m12', 'D', '₡27 500', true),
+    ('mat-r12', 'A', 'Cada entrada cuesta ₡3000.', false),
+    ('mat-r12', 'B', 'Cada entrada nueva duplica el costo.', false),
+    ('mat-r12', 'C', 'El costo aumenta ₡1500 por fila.', false),
+    ('mat-r12', 'D', 'Cada entrada cuesta ₡1500.', true),
     ('mat-r03', 'A', '50', false),
     ('mat-r03', 'B', '64', false),
     ('mat-r03', 'C', '80', true),
     ('mat-r03', 'D', '240', false),
-    ('mat-e04', 'A', '$\frac{1}{12}$', false),
-    ('mat-e04', 'B', '$\frac{1}{4}$', true),
-    ('mat-e04', 'C', '$\frac{1}{3}$', false),
-    ('mat-e04', 'D', '$\frac{3}{4}$', false),
-    ('mat-e07', 'A', 'La moda es 15 y el promedio es 13.', true),
-    ('mat-e07', 'B', 'La moda es 15 y el promedio es 15.', false),
-    ('mat-e07', 'C', 'La moda es 2 y el promedio es 13.', false),
-    ('mat-e07', 'D', 'La moda es 13 y el promedio es 15.', false),
+    ('mat-r02', 'A', '6,5', false),
+    ('mat-r02', 'B', '10', true),
+    ('mat-r02', 'C', '40', false),
+    ('mat-r02', 'D', '125', false),
+    ('mat-r08', 'A', '80', false),
+    ('mat-r08', 'B', '81', true),
+    ('mat-r08', 'C', '85', false),
+    ('mat-r08', 'D', '100', false),
+    ('mat-r04', 'A', '$2 \times c + 3 \times (c - 300)$', true),
+    ('mat-r04', 'B', '$2 \times c + 3 \times c - 300$', false),
+    ('mat-r04', 'C', '$2 \times (c - 300) + 3 \times c$', false),
+    ('mat-r04', 'D', '$5 \times (c - 300)$', false),
+    ('mat-r05', 'A', '46', false),
+    ('mat-r05', 'B', '47', false),
+    ('mat-r05', 'C', '48', true),
+    ('mat-r05', 'D', '70', false),
+    ('mat-r07', 'A', 'El precio de cada casado.', false),
+    ('mat-r07', 'B', 'La cantidad de días que abre por semana.', false),
+    ('mat-r07', 'C', 'El dinero que se recibe cada día.', true),
+    ('mat-r07', 'D', 'La cantidad de días de una semana.', false),
+    ('mat-r01', 'A', '45', false),
+    ('mat-r01', 'B', '46', true),
+    ('mat-r01', 'C', '49', false),
+    ('mat-r01', 'D', '60', false),
+    ('mat-r10', 'A', '1,5 km', false),
+    ('mat-r10', 'B', '12,5 km', false),
+    ('mat-r10', 'C', '37,5 km', true),
+    ('mat-r10', 'D', '375 km', false),
+    ('mat-r09', 'A', '13', true),
+    ('mat-r09', 'B', '18', false),
+    ('mat-r09', 'C', '26', false),
+    ('mat-r09', 'D', '36', false),
+    ('mat-r06', 'A', '4 kg', true),
+    ('mat-r06', 'B', '6 kg', false),
+    ('mat-r06', 'C', '12 kg', false),
+    ('mat-r06', 'D', '16 kg', false),
+    ('mat-r11', 'A', '₡3900', false),
+    ('mat-r11', 'B', '₡4600', true),
+    ('mat-r11', 'C', '₡4850', false),
+    ('mat-r11', 'D', '₡8100', false),
+    ('mat-e07', 'A', 'La moda es 15 y el recorrido es 15.', false),
+    ('mat-e07', 'B', 'La moda es 2 y el recorrido es 6.', false),
+    ('mat-e07', 'C', 'La moda es 15 y el recorrido es 6.', true),
+    ('mat-e07', 'D', 'La moda es 6 y el recorrido es 15.', false),
+    ('mat-e11', 'A', 'Todo el estudiantado del centro educativo.', true),
+    ('mat-e11', 'B', 'Las 60 personas que fueron encuestadas.', false),
+    ('mat-e11', 'C', 'Los 20 grupos que hay en total.', false),
+    ('mat-e11', 'D', 'Los deportes preferidos del grupo encuestado.', false),
     ('mat-e06', 'A', '1,5 kg', false),
     ('mat-e06', 'B', '6 kg', false),
     ('mat-e06', 'C', '9 kg', true),
     ('mat-e06', 'D', '15 kg', false),
+    ('mat-e04', 'A', 'Solo el rojo es el más probable.', false),
+    ('mat-e04', 'B', 'Solo el azul es el más probable.', false),
+    ('mat-e04', 'C', 'Los tres colores son igual de probables.', false),
+    ('mat-e04', 'D', 'Rojo y azul son igual de probables.', true),
+    ('mat-e09', 'A', '1,4', true),
+    ('mat-e09', 'B', '1,5', false),
+    ('mat-e09', 'C', '2,5', false),
+    ('mat-e09', 'D', '3,5', false),
     ('mat-e02', 'A', '25 %', false),
     ('mat-e02', 'B', '28 %', true),
-    ('mat-e02', 'C', '30 %', false),
+    ('mat-e02', 'C', '56 %', false),
     ('mat-e02', 'D', '72 %', false),
-    ('mat-e01', 'A', '86', false),
-    ('mat-e01', 'B', '87', false),
-    ('mat-e01', 'C', '88', false),
-    ('mat-e01', 'D', '92', true),
-    ('mat-e03', 'A', '1 hermano', true),
-    ('mat-e03', 'B', '2 hermanos', false),
-    ('mat-e03', 'C', '4 hermanos', false),
-    ('mat-e03', 'D', '8 hermanos', false),
-    ('mat-e05', 'A', 'En la A, porque tiene más boletos con premio.', false),
-    ('mat-e05', 'B', 'En la A, porque gana 1 de cada 5 boletos.', false),
-    ('mat-e05', 'C', 'En las dos por igual, porque hay boletos con premio.', false),
-    ('mat-e05', 'D', 'En la B, porque gana 1 de cada 4 boletos.', true)
+    ('mat-e10', 'A', 'Azul es más probable que rojo.', false),
+    ('mat-e10', 'B', 'Es imposible que salga verde.', false),
+    ('mat-e10', 'C', 'Es seguro que salga rojo o que salga azul.', false),
+    ('mat-e10', 'D', 'Verde es menos probable que azul.', true)
 ) as v (codigo, letra, texto, es_correcta)
 join public.simulacro_nuevo_items i on i.codigo = v.codigo
 join public.simulacros_nuevos s on s.id = i.simulacro_id and s.slug = 'nuevo-matematicas-1'
@@ -610,12 +709,15 @@ begin
       or (select count(*) from public.simulacro_nuevo_opciones o where o.item_id = i.id and o.es_correcta) <> 1
     );
 
-  if v_items <> 40 then
-    raise exception 'nuevo-matematicas-1: quedaron % items y se esperaban 40', v_items;
+  if v_items <> 60 then
+    raise exception 'nuevo-matematicas-1: quedaron % items y se esperaban 60', v_items;
   end if;
   if v_malos > 0 then
     raise exception 'nuevo-matematicas-1: % items sin cuatro opciones o sin exactamente una correcta', v_malos;
   end if;
+
+  -- Todo calza: ahora si se publica.
+  update public.simulacros_nuevos set estado = 'publicado' where slug = 'nuevo-matematicas-1';
 end
 $revision$;
 -- <<< datos generados

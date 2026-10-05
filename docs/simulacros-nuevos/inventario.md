@@ -10,8 +10,10 @@ red del entorno rechazó la conexión al host del proyecto (y también al sitio
 publicado), y no estaban definidas `SUPABASE_URL` ni `SUPABASE_ANON_KEY`. El
 conector de Supabase disponible tampoco tiene ese proyecto en su lista.
 
-Por eso **este inventario no trae conteos del banco**. No hay números
-inventados: donde falta el dato, se dice. Para completarlo:
+Por eso **este inventario no trae conteos del banco publicado**. No hay
+números inventados: donde falta el dato, se dice. El reparto del examen se
+hizo con la prueba oficial que aportó el dueño (más abajo). Para completar los
+conteos del banco:
 
 ```sh
 # con VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY en .env.local
@@ -73,30 +75,38 @@ materia dice «Las 60 de corrido» y `config.ts` habla de «60 preguntas son 3
 horas». Sin la base no se puede saber cuál es la cantidad real hoy. No afecta
 a los simulacros nuevos, que traen su cantidad de la base.
 
-## Temas del piloto de Matemáticas (provisional)
+## Reparto del examen de Matemáticas (60 ítems)
 
-Sin los conteos del banco, el examen se repartió entre las cinco áreas del
-programa de estudio de Matemáticas del MEP para II Ciclo, con un peso mayor
-para Números por ser el área con más contenidos del grado. **Es criterio
-profesional, no proporción medida.**
+**Evidencia documental.** El 5 de octubre de 2026 el dueño del proyecto aportó
+la prueba de práctica oficial de Matemáticas para primaria (50 ítems, con su
+solucionario) y el *Marco de especificaciones de la Prueba Nacional
+Estandarizada Diagnóstica de Matemáticas 2026, primaria* (MEP, Dirección de
+Gestión y Evaluación de la Calidad, marzo de 2026). De ahí salen:
 
-| Tema | Ítems | Intermedio | Alto |
-| --- | ---: | ---: | ---: |
-| Números | 12 | 7 | 5 |
-| Medidas | 7 | 4 | 3 |
-| Geometría | 8 | 4 | 4 |
-| Relaciones y álgebra | 6 | 3 | 3 |
-| Estadística y probabilidad | 7 | 3 | 4 |
-| **Total** | **40** | **21** | **19** |
+- La proporción por bloque de los 50 oficiales: Números 14, Geometría 12,
+  Medidas 8, Relaciones y Álgebra 10, Estadística y Probabilidad 6.
+- Los nombres oficiales de los cinco bloques y las afirmaciones y evidencias
+  de la Tabla 2 del marco, a las que se ancla cada ítem.
 
-[VERIFICAR] Dos cosas, apenas haya acceso a la base:
+Llevada a 60 por resto mayor:
 
-1. Que los nombres de tema calcen con los de la tabla `temas` de Matemáticas.
-   Si el banco usa otros nombres, se cambian en el JSON para que el desglose
-   «¿Cómo te fue en cada tema?» hable el mismo idioma que la práctica.
-2. Que la proporción calce con la del banco. Si el inventario da otro reparto,
-   se cambian ítems de un tema a otro (manteniendo 10 claves por letra) y se
-   regenera la migración.
+| Bloque | Oficiales (50) | Simulacro (60) | Intermedio | Alto |
+| --- | ---: | ---: | ---: | ---: |
+| Números | 14 | 17 | 11 | 6 |
+| Geometría | 12 | 14 | 10 | 4 |
+| Medidas | 8 | 10 | 6 | 4 |
+| Relaciones y Álgebra | 10 | 12 | 6 | 6 |
+| Estadística y Probabilidad | 6 | 7 | 4 | 3 |
+| **Total** | **50** | **60** | **37** | **23** |
+
+La prueba diagnóstica 2026 tiene 40 ítems y dura 120 minutos, según el marco.
+El simulacro de la app es de 60 a 3 minutos cada uno, como los cuadernillos de
+siempre: más largo a propósito.
+
+**Lo que sigue pendiente.** La comparación contra el banco publicado en
+Supabase (que las preguntas no estén ya en la práctica de la app) no se pudo
+correr desde este entorno. Contra los 50 oficiales sí se comparó: el parecido
+más alto en frases fue 0,15, muy por debajo del umbral de 0,5.
 
 ## Español, Ciencias y Estudios Sociales
 

@@ -14,7 +14,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  SEGUNDOS_ITEM_SIMULACRO, SEGUNDOS_ITEM_SIMULACRO_EXTRA, type SlugMateria,
+  SEGUNDOS_ITEM_SIMULACRO, segundosConAdecuacion, type SlugMateria,
 } from "../../config";
 import { listarSimulacros, registrarResultados, traerSimulacro } from "../../lib/api";
 import type { Simulacro, SimulacroResumen } from "../../lib/tipos";
@@ -248,9 +248,10 @@ export function useSimulacros(
     // Si el cuadernillo trae su propio tiempo por pregunta (los simulacros
     // nuevos lo traen de la base), manda ese; los de siempre no lo traen y
     // siguen con la constante de config.ts, igual que antes.
-    const segPorItem = tiempoExtra
-      ? SEGUNDOS_ITEM_SIMULACRO_EXTRA
-      : cuadernillo.segundos_por_item ?? SEGUNDOS_ITEM_SIMULACRO;
+    const segPorItem = segundosConAdecuacion(
+      cuadernillo.segundos_por_item ?? SEGUNDOS_ITEM_SIMULACRO,
+      tiempoExtra,
+    );
     const total = sirve ? desde.total : n * segPorItem;
     setActual(cuadernillo);
     setRespuestas(sirve ? [...desde.respuestas] : new Array(n).fill(null));

@@ -4,17 +4,36 @@ Este documento lo leen las sesiones que armen los exámenes de Español, Ciencia
 y Estudios Sociales. Las reglas son las mismas del piloto de Matemáticas
 (octubre de 2026). Si una regla cambia, se cambia aquí primero.
 
+## Fuentes que mandan
+
+1. **Marco de especificaciones 2026 de la materia** (MEP, Dirección de Gestión y
+   Evaluación de la Calidad). Su Tabla 2 define los bloques, las afirmaciones y
+   las evidencias. Todo ítem se ancla a una evidencia de esa tabla; lo que la
+   tabla no incluye, no entra. En Matemáticas, por ejemplo, quedaron fuera
+   potencias, longitud de la circunferencia, suma de ángulos internos,
+   pirámides, volumen y razones.
+2. **Ítems oficiales de la materia** (la prueba de práctica del MEP). Dan el
+   estilo y la proporción por bloque. No se copian ni se parafrasean.
+3. Estas reglas.
+
 ## Formato de cada examen
 
-- **40 ítems** por examen, **3 minutos por ítem**: dos horas en total. El
-  tiempo vive en la base (`segundos_por_item`), no en el código.
-- Los 40 ítems se reparten entre los temas de la materia **en la misma
-  proporción que el banco actual** (ver `inventario.md` y el script de
-  inventario más abajo).
-- Orden: agrupados por tema, y cada bloque arranca con un ítem de nivel
-  intermedio.
-- **Claves balanceadas:** A, B, C y D son la clave exactamente 10 veces cada
-  una. Sin tres claves iguales seguidas, sin escaleras (ABCD, DCBA) y evitando
+- **60 ítems** por examen, **3 minutos por ítem**: tres horas en total, igual
+  que los cuadernillos de siempre. La cantidad va en el JSON
+  (`simulacro.preguntas`) y el tiempo en la base (`segundos_por_item`), no en
+  el código.
+  - Ojo: la prueba nacional diagnóstica 2026 es de 40 ítems en 120 minutos
+    (marco de especificaciones). Los simulacros de la app son más largos a
+    propósito, para practicar con holgura.
+- Los 60 ítems se reparten entre los bloques **en la misma proporción que los
+  ítems oficiales de la materia** (resto mayor, suma exacta 60). En
+  Matemáticas, con 50 oficiales (14 de Números, 12 de Geometría, 8 de Medidas,
+  10 de Relaciones y Álgebra y 6 de Estadística y Probabilidad), quedó en
+  17, 14, 10, 12 y 7.
+- Orden: agrupados por bloque en el orden del marco, y cada bloque arranca con
+  un ítem de nivel intermedio.
+- **Claves balanceadas:** A, B, C y D son la clave exactamente 15 veces cada
+  una. Sin tres claves iguales seguidas, sin escaleras (ABCD, DCBA) y sin
   vaivenes (ABAB).
 
 ## Reglas de redacción
@@ -37,11 +56,21 @@ y Estudios Sociales. Las reglas son las mismas del piloto de Matemáticas
   «todas las anteriores» y «ninguna de las anteriores».
 - Opciones numéricas en orden ascendente; la clave se acomoda escogiendo los
   distractores, no desordenando las opciones.
+- **Estilo oficial:** enunciados con datos completos y cierres como «De acuerdo
+  con la información anterior, …»; tablas cuando ordenan la información;
+  contextos variados (personal, ocupacional y productivo, comunitario,
+  científico, como define el marco). Nombres variados, sin repetir, con
+  equilibrio de género.
+- **Por qué de cada distractor:** en `por_que`, una frase con el error que
+  representa cada opción incorrecta. Si no se puede escribir, el distractor
+  no sirve.
 - **Explicación breve para niños:** dos o tres oraciones, cálidas y claras,
   que digan por qué la correcta es correcta. Va en **texto plano**: la revisión
   de resultados no dibuja LaTeX, así que se escribe 2/5, ×, ÷.
 - Vocabulario del sistema educativo costarricense. Nada de contenido de otros
   países.
+- **Geometría sin figuras** cuando la figura se puede describir con palabras
+  (decisión del 5 de octubre de 2026): se describe la forma y sus medidas.
 - **No se inventan datos** históricos, geográficos ni científicos. Si un dato
   no es seguro, se cambia el ítem. Los datos de un problema (precios,
   distancias) se dan en el enunciado como datos del problema, no como hechos
@@ -62,16 +91,19 @@ y Estudios Sociales. Las reglas son las mismas del piloto de Matemáticas
   "tema": "Números",
   "subtema": "Operaciones combinadas con números naturales",
   "nivel": "intermedio",       // intermedio | alto
+  "afirmacion": { "codigo": "N4", "texto": "…" },      // Tabla 2 del marco
+  "evidencia":  { "codigo": "N4.2", "texto": "…" },    // N4.2 = Números, afirmación 4, evidencia 2
   "enunciado": "… [[figura]] …",
   "opciones": { "A": "…", "B": "…", "C": "…", "D": "…" },
   "clave": "B",
   "explicacion": "Dos o tres oraciones.",
+  "por_que": { "A": "…", "C": "…", "D": "…" },      // solo los distractores
   "imagen": null               // o { "archivo": "mat-g01-huerta.svg", "alt": "…" }
 }
 ```
 
 El bloque `simulacro` del archivo trae `slug`, `materia`, `numero`, `titulo`,
-`segundos_por_item`, `barajar_opciones` (false: las opciones salen en el orden
+`preguntas`, `segundos_por_item`, `barajar_opciones` (false: las opciones salen en el orden
 A-D con que se balancearon las claves) y `version`.
 
 ## Imágenes
@@ -108,6 +140,8 @@ conviene usar LaTeX solo donde haga falta.
    crítico: dos respuestas defendibles, pistas por largo, cálculos que no dan,
    datos dudosos.
 5. `pnpm generar:simulacros-nuevos <materia>` crea una migración nueva **solo
-   con datos** en `supabase/migrations/`. El esquema ya existe.
+   con datos** en `supabase/migrations/`. El esquema ya existe. Exige la
+   comparación contra el banco; sin acceso a la base hay que pedirlo con
+   `--sin-banco`, y queda anotado en el SQL.
 6. Aplicar la migración en Supabase. La tarjeta de la materia pasa sola de
    «Próximamente» a «Listo para hacer»: no se toca código.
