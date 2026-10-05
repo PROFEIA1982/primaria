@@ -48,9 +48,9 @@ En la escuela de Santa Cruz, el grupo de sexto investigó por qué el parque del
 Según el texto anterior, ¿qué muestra esa experiencia sobre la importancia de los Estudios Sociales y la Educación Cívica para la convivencia?', 'El grupo estudió el problema desde varias miradas y después propuso una solución para acordarla con la comunidad. Eso es lo que aportan los Estudios Sociales y la Educación Cívica: entender lo que pasa y convivir mejor buscando acuerdos.', false),
     ('soc-1-1-b', 2, 'Estudios Sociales y geografía', 'Definición e importancia de los Estudios Sociales y la Educación Cívica', 'alto', 'Considere la siguiente información:
 
-Antes de las elecciones del gobierno estudiantil, Daniela leyó en un chat que uno de los partidos iba a eliminar el recreo largo. En Educación Cívica había aprendido a revisar de dónde viene una noticia. Le preguntó al Tribunal Electoral Estudiantil y leyó el plan de trabajo del partido: la noticia era falsa. Luego lo explicó con respeto en el mismo chat.
+Antes de las elecciones del gobierno estudiantil, Daniela leyó en un chat que uno de los partidos iba a eliminar el recreo largo. Le preguntó al Tribunal Electoral Estudiantil y leyó el plan de trabajo del partido: la noticia era falsa. Luego lo explicó con respeto en el mismo chat.
 
-A partir de la información anterior, ¿qué actitud ciudadana promovió en Daniela la Educación Cívica?', 'Daniela no se quedó con lo primero que leyó: buscó la fuente, comprobó y después aclaró con respeto. Esa es una acción ciudadana crítica y responsable, justo lo que busca la Educación Cívica.', false),
+A partir de la información anterior, ¿qué actitud ciudadana, de las que promueve la Educación Cívica, mostró Daniela?', 'Daniela no se quedó con lo primero que leyó: buscó la fuente, comprobó y después aclaró con respeto. Esa es una acción ciudadana crítica y responsable, justo lo que busca la Educación Cívica.', false),
     ('soc-1-2-a', 3, 'Estudios Sociales y geografía', 'Posición geográfica de Costa Rica', 'intermedio', 'Lea la siguiente información:
 
 Una estudiante de Japón le escribió a Mateo, que vive en Liberia, para preguntarle dónde queda Costa Rica. Mateo le contestó con tres pistas: el país está al norte de la línea del ecuador, está al oeste del meridiano de Greenwich y forma parte del istmo que une a América del Norte con América del Sur.
@@ -70,10 +70,10 @@ De acuerdo con el texto anterior, ¿cómo favorece la posición geográfica de C
 
 Durante una gira al volcán Irazú, Keylor observó desde lo alto una larga cadena de montañas y volcanes, unidos unos con otros, que se extendía por muchos kilómetros. El guía explicó que esa formación separa las aguas que corren hacia el mar Caribe de las que bajan hacia el océano Pacífico.
 
-La forma de relieve que observó Keylor corresponde a una', 'Una cadena larga de montañas y volcanes unidos es una cordillera. La del Irazú es la Cordillera Volcánica Central, que reparte las aguas entre las dos vertientes del país.', false),
+La forma de relieve que observó Keylor se conoce como', 'Una cadena larga de montañas y volcanes unidos es una cordillera. La del Irazú es la Cordillera Volcánica Central, que reparte las aguas entre las dos vertientes del país.', false),
     ('soc-1-3-b', 7, 'Estudios Sociales y geografía', 'Formas de relieve', 'alto', 'Considere la siguiente información:
 
-En una clase de Estudios Sociales, el grupo de Daniel comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:
+En una clase de Estudios Sociales, el grupo de Randall comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:
 
 | Característica | Costa 1 | Costa 2 |
 | --- | --- | --- |
@@ -93,9 +93,9 @@ Para un trabajo de clase, Ana Lucía pintó en un mapa de Costa Rica un área qu
 La información anterior hace referencia al concepto de', 'Una región es un espacio que se delimita porque sus partes comparten características, aunque sean de provincias distintas. Provincias, cantones y distritos son divisiones administrativas con límites fijos.', false),
     ('soc-1-4-b', 10, 'Estudios Sociales y geografía', 'Concepto de región y regionalización', 'alto', 'Lea la siguiente información:
 
-Dos estudiantes discuten en clase. Camila asegura que una región siempre tiene los mismos límites que una provincia. Esteban dice que los límites de una región dependen de las características que se escojan para delimitarla, como el clima, el relieve o las actividades económicas de la zona.
+Dos estudiantes discuten en clase. Camila asegura que una región siempre tiene los mismos límites que una provincia. Esteban dice que una región solo se puede delimitar según el clima de la zona, sin tomar en cuenta el relieve ni las actividades de la gente.
 
-De acuerdo con la información anterior, ¿cuál afirmación sobre el concepto de región es correcta?', 'Una región se delimita por las características que comparten sus partes, y esas pueden ser naturales o económicas. Por eso no tiene que coincidir con una provincia.', false),
+De acuerdo con la información anterior, ¿cuál afirmación sobre el concepto de región es correcta?', 'Una región se delimita con las características que se escojan: el clima, el relieve o las actividades económicas, entre otras. Por eso no tiene que coincidir con una provincia ni depender solo del clima.', false),
     ('soc-1-4-c', 11, 'Estudios Sociales y geografía', 'Concepto de región y regionalización', 'alto', 'Lea el siguiente texto:
 
 Costa Rica se organiza en seis regiones socioeconómicas, como la Chorotega, la Brunca y la Huetar Norte, para planificar su desarrollo. Suponga que en una de ellas se detecta que muchos jóvenes deben viajar lejos para estudiar una carrera técnica, y que por eso se abren nuevas opciones de formación técnica dentro de esa misma región.
@@ -103,10 +103,10 @@ Costa Rica se organiza en seis regiones socioeconómicas, como la Chorotega, la 
 A partir del texto anterior, ¿cómo favorece la regionalización el desarrollo del país?', 'Al dividir el país en regiones, se puede estudiar qué necesita cada una y tomar decisiones a su medida, como abrir estudios técnicos donde hacen falta. Las regiones no hacen leyes: sirven para planificar.', false),
     ('soc-1-5-a', 12, 'Derechos y ambiente', 'Instituciones que promueven los derechos de las personas estudiantes', 'intermedio', 'Lea la siguiente información:
 
-La maestra de Sebastián notó señales de que él estaba siendo maltratado y que tenía miedo de volver a su casa. Siguiendo el protocolo de la escuela, la directora reportó de inmediato la situación a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en peligro.
+La maestra de Sebastián notó que él llegaba triste, con miedo de volver a su casa, y que sus derechos podían estar en peligro. Siguiendo el protocolo de la escuela, la directora informó de inmediato a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en riesgo.
 
 ¿A cuál institución se refiere la información anterior?', 'El PANI es la institución que protege a niñas, niños y adolescentes cuando sus derechos están en riesgo, y la escuela tiene el deber de avisarle. La Defensoría vigila a las instituciones públicas y el IMAS da ayudas económicas.', false),
-    ('soc-1-5-b', 13, 'Derechos y ambiente', 'Instituciones que promueven los derechos de las personas estudiantes', 'alto', 'Lea el siguiente texto:
+    ('soc-1-5-b', 13, 'Derechos y ambiente', 'Instituciones que promueven los derechos de las personas estudiantes', 'intermedio', 'Lea el siguiente texto:
 
 Joselyn tiene doce años. Desde hace dos meses no va a la escuela, porque sus papás le pidieron que cuidara a sus hermanos pequeños mientras ellos trabajan todo el día en una finca. Ella dice que le gustaría volver a clases y que extraña a sus compañeros.
 
@@ -173,11 +173,11 @@ A partir del texto anterior, ¿qué se puede inferir sobre la cosmovisión de es
 
 | Aporte | Ejemplo en la Costa Rica de hoy |
 | --- | --- |
-| 1 | El rice and beans, el patí y el calipso de Limón |
+| 1 | El rice and beans, el patí y el pan bon de Limón |
 | 2 | La chicha de maíz, el uso ceremonial del cacao y el saber sobre plantas medicinales |
 | 3 | El arroz cantonés y el chop suey, que se comen en todo el país |
 
-¿Cuál opción relaciona correctamente cada aporte con la población que lo hizo?', 'El rice and beans, el patí y el calipso vienen de la población afrodescendiente de Limón. La chicha de maíz y el saber sobre plantas son de los pueblos originarios, y el arroz cantonés llegó con la población china.', false),
+¿Cuál opción relaciona correctamente cada aporte con la población que lo hizo?', 'El rice and beans, el patí y el pan bon vienen de la población afrodescendiente de Limón. La chicha de maíz y el saber sobre plantas son de los pueblos originarios, y el arroz cantonés llegó con la población china.', false),
     ('soc-2-3-b', 25, 'Costa Rica antigua y pueblos originarios', 'Pueblos originarios y aportes culturales', 'alto', 'Lea el siguiente texto:
 
 En Talamanca, algunas familias bribris siembran cacao bajo la sombra de otros árboles, junto con plátano y frutales, sin cortar el bosque. Ese saber, que pasa de abuelas y abuelos a nietos, hoy interesa a productores de otras zonas que buscan cultivar sin dañar los suelos ni los ríos.
@@ -185,9 +185,9 @@ En Talamanca, algunas familias bribris siembran cacao bajo la sombra de otros á
 Según el texto anterior, ¿cómo contribuye ese conocimiento bribri al desarrollo del país?', 'Sembrar cacao bajo la sombra del bosque permite producir sin destruirlo. Por eso ese saber ancestral sirve de ejemplo a otras personas productoras y fortalece la identidad del país.', false),
     ('soc-2-4-a', 26, 'Costa Rica antigua y pueblos originarios', 'Situación actual de los pueblos originarios', 'intermedio', 'Lea el siguiente texto:
 
-En una comunidad cabécar de la zona de Chirripó, los estudiantes caminan varias horas por senderos de montaña para llegar a la escuela. Cuando llueve fuerte, los ríos crecen y no pueden cruzarlos. El centro de salud más cercano queda a medio día de camino.
+En un territorio boruca, muchas familias hacen máscaras de madera y tejidos teñidos con plantas. Un comerciante les compra cada máscara a un precio bajo y luego la vende cara en San José. Además, en algunas tiendas se venden copias hechas en fábrica como si fueran piezas borucas.
 
-Según el texto anterior, ¿cuál desafío enfrenta esa comunidad?', 'El texto habla de caminos largos, ríos que crecen y un centro de salud lejano. El desafío es el acceso: llegar a la escuela o a una consulta cuesta mucho, y eso afecta el bienestar de la comunidad.', false),
+De acuerdo con el texto anterior, ¿cuál desafío enfrenta esa comunidad?', 'El comerciante paga poco por las máscaras y otras tiendas venden imitaciones. Eso le quita a la comunidad el fruto de su trabajo y afecta su bienestar.', false),
     ('soc-2-4-b', 27, 'Costa Rica antigua y pueblos originarios', 'Situación actual de los pueblos originarios', 'alto', 'Lea el siguiente texto:
 
 En varios territorios indígenas, personas que no pertenecen a esos pueblos ocupan tierras que la ley reserva para ellos. Algunas comunidades también piden que en sus escuelas se enseñe su propia lengua y que las decisiones sobre su territorio se tomen consultándoles.
@@ -211,7 +211,7 @@ Según el texto anterior, ¿qué aporta esa diversidad de lenguas a la identidad
 | 1524 | Se funda Villa Bruselas, cerca del golfo de Nicoya. |
 | 1563 | Juan Vázquez de Coronado funda Cartago, en el valle del Guarco. |
 
-Estos hechos muestran cómo los españoles fueron recorriendo y ocupando el territorio.
+La tabla resume tres hechos ocurridos en lo que hoy es el territorio de Costa Rica.
 
 De acuerdo con la información anterior, ¿qué proceso de la historia de Costa Rica se ubica en esas fechas y lugares?', 'La llegada de Colón y la fundación de las primeras poblaciones españolas marcan el tiempo de la conquista: los españoles exploraron el territorio y lo tomaron por la fuerza. La colonia vino después, cuando ya estaban asentados.', false),
     ('soc-2-6-b', 31, 'Conquista y colonia', 'Conquista española', 'alto', 'Lea el siguiente texto:
@@ -228,19 +228,19 @@ La información anterior describe una consecuencia de la conquista de tipo', 'Lo
 | 3 | De la década de 1570 a 1821 |
 | 4 | De 1821 en adelante |
 
-En una época de la historia de Costa Rica, el territorio era una provincia de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.
+En una época de la historia de Costa Rica, el territorio era una provincia de la Capitanía General de Guatemala, bajo el dominio de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.
 
-¿En cuál tramo se ubica la época descrita?', 'Esa época es la colonia: Costa Rica era una provincia de España y Cartago, su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.', false),
+¿En cuál tramo se ubica la época descrita?', 'Esa época es la colonia: Costa Rica era una provincia de la Capitanía General de Guatemala, bajo el dominio español, y Cartago era su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.', false),
     ('soc-2-8-a', 33, 'Conquista y colonia', 'Características y aportes de la colonia', 'intermedio', 'Lea el siguiente texto:
 
 Valentina dibujó el centro de su pueblo: una plaza en el medio, la iglesia frente a ella y las calles cruzándose en ángulo recto, formando cuadras. Su abuelo le contó que muchos pueblos de Costa Rica se trazaron así desde hace siglos, siguiendo las normas que España usaba en sus colonias.
 
-Según el texto anterior, ¿qué aporte del periodo colonial se mantiene en la actualidad?', 'Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias y el café llegaron después, en la vida republicana.', false),
-    ('soc-2-8-b', 34, 'Conquista y colonia', 'Características y aportes de la colonia', 'alto', 'Lea el siguiente texto:
+Según el texto anterior, ¿qué aporte del periodo colonial se mantiene en la actualidad?', 'Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias son de la vida republicana, y el café, aunque llegó al final de la colonia, se extendió después de la independencia.', false),
+    ('soc-2-8-b', 34, 'Conquista y colonia', 'Características y aportes de la colonia', 'intermedio', 'Lea el siguiente texto:
 
 En el siglo XVIII, algunos vecinos de Cartago tenían plantaciones de cacao en el valle de Matina, en el Caribe. Para trabajarlas usaban a personas africanas esclavizadas. El cacao era tan importante que, en la provincia, sus semillas se usaban como moneda para comprar y vender.
 
-De acuerdo con el texto anterior, ¿qué característica de la economía colonial se puede reconocer?', 'El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café llegó mucho después.', false),
+De acuerdo con el texto anterior, ¿qué característica de la economía colonial se puede reconocer?', 'El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café se volvió el producto principal hasta después de la independencia.', false),
     ('soc-2-9-a', 35, 'Conquista y colonia', 'Sociedad colonial y discriminación', 'intermedio', 'Lea la siguiente información:
 
 En la sociedad colonial, los cargos más importantes del gobierno local solo podían ocuparlos españoles y sus descendientes. Los mestizos se dedicaban a oficios y a la agricultura; los indígenas debían pagar tributo, y las personas africanas esclavizadas no tenían libertad.
@@ -264,19 +264,19 @@ El 15 de setiembre de 1821 se firmó en Guatemala el acta de independencia de Ce
 Según el texto anterior, ¿cuál fue una consecuencia de la independencia para Costa Rica?', 'Al independizarse, Costa Rica se quedó sin el gobierno español y tuvo que decidir cómo organizarse. Las ideas de libertad que venían de otros países fueron una causa, no una consecuencia.', false),
     ('soc-2-10-b', 38, 'Independencia y Estado', 'Independencia y principios democráticos', 'intermedio', 'Lea el siguiente texto:
 
-Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.
+Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Más de doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.
 
 A partir del texto anterior, ¿cuáles principios de la independencia siguen vigentes en la escuela de Josué?', 'Votar es participar en las decisiones, y que todas las candidaturas tengan las mismas reglas es igualdad. Esos principios democráticos nacieron con la independencia y siguen vivos hoy.', false),
     ('soc-2-11-a', 39, 'Independencia y Estado', 'Pacto de Concordia', 'alto', 'Lea el siguiente texto:
 
 Después de la independencia, los pueblos de Costa Rica no estaban de acuerdo: unos querían unirse a México y otros preferían gobernarse solos. Para evitar un enfrentamiento, enviaron representantes a una junta en la que discutieron y, el 1 de diciembre de 1821, firmaron el Pacto de Concordia, que organizó un gobierno provisional.
 
-Según el texto anterior, ¿por qué el Pacto de Concordia es importante en la organización del Estado costarricense?', 'Los pueblos pensaban distinto, pero en vez de pelear se sentaron a discutir y firmaron un pacto. Por eso el Pacto de Concordia es un ejemplo de diálogo y negociación en el nacimiento del Estado.', false),
+A partir del texto anterior, ¿qué enseñanza del Pacto de Concordia sigue siendo útil para la convivencia democrática?', 'Los pueblos pensaban distinto, pero en vez de pelear se sentaron a discutir y firmaron un pacto. Por eso el Pacto de Concordia es un ejemplo de diálogo y negociación en el nacimiento del Estado.', false),
     ('soc-2-12-a', 40, 'Independencia y Estado', 'Anexión del Partido de Nicoya', 'alto', 'Lea el siguiente texto:
 
-El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con el golfo y la península de Nicoya, y también tradiciones como la marimba, los bailes de punto y las comidas de maíz.
+El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con la península de Nicoya, y también tradiciones como la música de marimba, los bailes y las comidas de maíz de esa región.
 
-De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?', 'La marimba y los bailes de punto son tradiciones guanacastecas que hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.', false),
+De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?', 'La música de marimba y los bailes tradicionales guanacastecos hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.', false),
     ('soc-2-12-b', 41, 'Independencia y Estado', 'Anexión del Partido de Nicoya', 'alto', 'Lea la siguiente información:
 
 Cada 25 de julio, en escuelas de todo el país se celebra la Anexión del Partido de Nicoya con bailes, comidas típicas y desfiles. En Guanacaste, la fecha se vive como una fiesta de su identidad regional, y en el resto del país se recuerda como el día en que el territorio nacional quedó más completo.
@@ -294,7 +294,7 @@ En 1856, el presidente Juan Rafael Mora llamó a defender el país del ejército
 Según el texto anterior, ¿por qué la Campaña Nacional fue determinante en la consolidación del Estado costarricense?', 'Ante una amenaza externa, gente de todas las provincias luchó por el mismo país. Esa unión fortaleció el sentimiento de ser costarricenses y consolidó al Estado.', false),
     ('soc-2-14-b', 44, 'Campaña Nacional', 'Campaña Nacional y consolidación del Estado', 'alto', 'Lea el siguiente texto:
 
-Después de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas, entre ellas soldados, mujeres, niñas y niños, lo que dejó muchas familias sin sostén.
+Después de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas en todo el país, lo que dejó a muchas familias sin sostén.
 
 La información anterior describe una consecuencia de la Campaña Nacional que fue', 'El cólera mató a miles de personas y dejó a muchas familias sin quien las sostuviera. Eso cambió la vida de la población: fue una consecuencia social de la guerra.', false),
     ('soc-2-15-a', 45, 'Campaña Nacional', 'Escenarios y rutas de la Campaña Nacional', 'intermedio', 'Analice la siguiente tabla:
@@ -327,24 +327,24 @@ En la batalla de Rivas, Juan Santamaría, un joven de Alajuela, se ofreció a in
 ¿Qué valor comparten Juan Santamaría y los bomberos de hoy?', 'Juan Santamaría arriesgó su vida por su país, y los bomberos se arriesgan para salvar a gente que ni conocen. Lo que los une es la entrega al servicio de los demás, no la fama ni el gusto por el peligro.', false),
     ('soc-2-17-a', 49, 'Reformas y logros sociales', 'Reformas Liberales', 'intermedio', 'Lea el siguiente texto:
 
-En 1886, el gobierno aprobó leyes para que la educación primaria quedara a cargo del Estado en todo el país. Se prepararon mejor los maestros, se abrieron nuevos colegios, como el Liceo de Costa Rica y el Colegio Superior de Señoritas, y se buscó que niñas y niños de todas las clases sociales pudieran estudiar.
+En 1886, el gobierno aprobó leyes para que las escuelas primarias de todo el país quedaran a cargo del Estado. Se prepararon mejor los maestros, se abrieron nuevos colegios, como el Liceo de Costa Rica y el Colegio Superior de Señoritas, y se buscó que niñas y niños de todas las clases sociales pudieran asistir a clases.
 
 La información anterior se refiere a la parte de las Reformas Liberales conocida como', 'Poner la educación en manos del Estado y abrir colegios fue la Reforma Educativa de 1886. Las garantías sociales son de la década de 1940, mucho después.', false),
     ('soc-2-17-b', 50, 'Reformas y logros sociales', 'Reformas Liberales', 'alto', 'Lea el siguiente texto:
 
-A finales del siglo XIX, con las leyes anticlericales, el Estado costarricense asumió tareas que antes llevaba la Iglesia católica, como registrar los nacimientos, los matrimonios y las defunciones. Desde entonces, esos registros se hacen ante oficinas del Estado y valen para todas las personas, sin importar su religión.
+En la década de 1880, con las reformas liberales, el Estado costarricense asumió tareas que antes llevaba la Iglesia católica, como registrar los nacimientos, los matrimonios y las defunciones. Desde entonces, esos registros se hacen ante oficinas del Estado y valen para todas las personas, sin importar su religión.
 
-Según el texto anterior, ¿qué buscaban los gobiernos liberales con esas leyes?', 'Las leyes anticlericales pasaron al Estado tareas que antes hacía la Iglesia, como registrar a las personas. No prohibieron la religión: buscaban que el Estado fuera la autoridad en los asuntos civiles.', false),
+Según el texto anterior, ¿qué buscaban los gobiernos liberales con esas leyes?', 'Las reformas liberales pasaron al Estado tareas que antes hacía la Iglesia, como registrar a las personas. No prohibieron la religión: buscaban que el Estado fuera la autoridad en los asuntos civiles.', false),
     ('soc-2-18-a', 51, 'Reformas y logros sociales', 'Logros sociales de la década de 1940', 'intermedio', 'Lea el siguiente texto:
 
 La mamá de Isaac trabaja en una empresa. Cada mes, una parte de su salario y un aporte de la empresa se pagan a la Caja. Gracias a eso, cuando Isaac se enfermó, lo atendieron en el Ebais y en el hospital sin que la familia tuviera que pagar la consulta.
 
-La situación anterior se relaciona con uno de los logros de la década de 1940, conocido como', 'La Caja, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.', false),
+La situación anterior se relaciona con uno de los logros de la década de 1940, conocido como', 'La Caja Costarricense de Seguro Social, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.', false),
     ('soc-2-18-b', 52, 'Reformas y logros sociales', 'Logros sociales de la década de 1940', 'alto', 'Lea la siguiente información:
 
-Don Rodrigo trabaja en una construcción. Su contrato dice que su jornada es de ocho horas diarias, que tiene un día de descanso a la semana y que su salario no puede ser menor que el mínimo que fija la ley. Si lo despiden sin una causa justa, tiene derecho a una indemnización.
+Don Rodrigo trabaja para una empresa constructora privada. Su contrato dice que su jornada es de ocho horas diarias, que tiene un día de descanso a la semana y que su salario no puede ser menor que el mínimo que fija la ley. Si lo despiden sin una causa justa, tiene derecho a una indemnización.
 
-A partir de la información anterior, ¿qué impacto tienen hoy el Código de Trabajo y las garantías sociales de 1943?', 'La jornada de ocho horas, el descanso y el salario mínimo vienen de las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.', false),
+A partir de la información anterior, ¿qué impacto tienen hoy el Código de Trabajo y las garantías sociales de 1943?', 'La jornada máxima de ocho horas, el descanso semanal y el salario mínimo quedaron protegidos por las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.', false),
     ('soc-2-19-a', 53, 'Derechos y retos de hoy', 'Derechos fundamentales de la Constitución de 1949', 'intermedio', 'Lea el siguiente texto:
 
 En un barrio, la asociación de vecinos organizó un programa para que personas voluntarias visiten cada semana a señores y señoras de más de setenta años que viven solos. Les ayudan con las compras, conversan con ellos y avisan al Ebais si notan que alguno está enfermo.
@@ -357,12 +357,12 @@ En una escuela, dos estudiantes tenían religiones distintas y otro compañero s
 ¿Cuáles derechos fundamentales explicó la directora?', 'Tener las propias creencias y opiniones es la libertad de pensamiento, y que nadie sea tratado distinto por eso es igualdad ante la ley. Los dos están en la Constitución de 1949.', false),
     ('soc-2-20-a', 55, 'Derechos y retos de hoy', 'Derechos constitucionales en la vida cotidiana', 'alto', 'Lea el siguiente texto:
 
-Mariana publicó en una red social su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.
+Mariana publicó en el chat del grupo su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.
 
 A partir del texto anterior, ¿qué se puede inferir sobre la libertad de expresión?', 'Mariana usó su derecho a opinar con respeto. La libertad de expresión no da permiso para insultar ni burlarse de nadie: termina donde empieza la dignidad de los demás.', false),
     ('soc-2-20-b', 56, 'Derechos y retos de hoy', 'Derechos constitucionales en la vida cotidiana', 'intermedio', 'Lea la siguiente información:
 
-Los vecinos de una comunidad están preocupados porque el puente que usan los escolares está en mal estado. Algunos proponen escribir una carta a la municipalidad, firmada por todos, para pedir que lo reparen. Otros quieren organizar una reunión pacífica frente al edificio municipal para que los escuchen.
+Los vecinos de una comunidad están preocupados porque el puente que usan los escolares está en mal estado. Algunos proponen escribir una carta a la municipalidad, firmada por todos, para pedir que lo reparen. Otros quieren juntarse frente al edificio municipal, sin violencia, para que los escuchen.
 
 ¿Qué derechos constitucionales están ejerciendo los vecinos?', 'Pedir por escrito a una institución es el derecho de petición, y juntarse sin violencia para hacerse oír es el derecho de reunión. Los dos están en la Constitución y se usan en la vida diaria.', false),
     ('soc-2-21-a', 57, 'Derechos y retos de hoy', 'Retos actuales y participación ciudadana', 'intermedio', 'Lea el siguiente texto:
@@ -416,7 +416,7 @@ insert into public.simulacro_nuevo_opciones (item_id, letra, texto, es_correcta)
 select i.id, v.letra, v.texto, v.es_correcta
 from (values
     ('soc-1-1-a', 'A', 'Sirven sobre todo para conocer cómo se fundó y creció el barrio.', false),
-    ('soc-1-1-a', 'B', 'Enseñan que las reglas municipales resuelven solas cualquier problema.', false),
+    ('soc-1-1-a', 'B', 'Enseñan que las reglas municipales resuelven por sí mismas los problemas.', false),
     ('soc-1-1-a', 'C', 'Ayudan a entender un problema común y a acordar cómo resolverlo.', true),
     ('soc-1-1-a', 'D', 'Permiten que la escuela decida por las familias cómo usar el parque.', false),
     ('soc-1-1-b', 'A', 'Confirmar si un dato es cierto y aclararlo sin ofender a nadie.', true),
@@ -427,34 +427,34 @@ from (values
     ('soc-1-2-a', 'B', 'Hemisferios norte y oriental, en América Central.', false),
     ('soc-1-2-a', 'C', 'Hemisferios sur y occidental, en América del Sur.', false),
     ('soc-1-2-a', 'D', 'Hemisferios norte y occidental, en las islas Antillas.', false),
-    ('soc-1-2-b', 'A', 'Ventaja: riesgo de sismos. Desventaja: gran variedad de especies.', false),
+    ('soc-1-2-b', 'A', 'Ventaja: salida a dos mares. Desventaja: riesgo de sequías.', false),
     ('soc-1-2-b', 'B', 'Ventaja: gran variedad de especies. Desventaja: riesgo de sismos.', true),
-    ('soc-1-2-b', 'C', 'Ventaja: salida a dos mares. Desventaja: gran variedad de especies.', false),
-    ('soc-1-2-b', 'D', 'Ventaja: paso de tormentas. Desventaja: salida a dos mares.', false),
-    ('soc-1-2-c', 'A', 'La cercanía hace que los países vecinos compartan un mismo gobierno.', false),
-    ('soc-1-2-c', 'B', 'La cercanía facilita que los países cooperen entre sí.', true),
+    ('soc-1-2-b', 'C', 'Ventaja: suelos buenos para el café. Desventaja: paso de tormentas.', false),
+    ('soc-1-2-b', 'D', 'Ventaja: clima frío en las costas. Desventaja: paso de tormentas.', false),
+    ('soc-1-2-c', 'A', 'La cercanía facilita que los países cooperen entre sí.', true),
+    ('soc-1-2-c', 'B', 'La cercanía hace que los países vecinos compartan un mismo gobierno.', false),
     ('soc-1-2-c', 'C', 'Estar entre dos mares hace innecesario el comercio con los vecinos.', false),
-    ('soc-1-2-c', 'D', 'Los acuerdos se deben solo al idioma común y no a la cercanía.', false),
+    ('soc-1-2-c', 'D', 'Los acuerdos se deben al idioma común más que a la cercanía.', false),
     ('soc-1-3-a', 'A', 'cordillera.', true),
-    ('soc-1-3-a', 'B', 'llanura.', false),
-    ('soc-1-3-a', 'C', 'valle fluvial.', false),
+    ('soc-1-3-a', 'B', 'valle.', false),
+    ('soc-1-3-a', 'C', 'llanura costera.', false),
     ('soc-1-3-a', 'D', 'meseta.', false),
-    ('soc-1-3-b', 'A', 'La costa 1 es la del Pacífico y la costa 2 es la del Caribe.', true),
-    ('soc-1-3-b', 'B', 'La costa 1 es la del Caribe y la costa 2 es la del Pacífico.', false),
-    ('soc-1-3-b', 'C', 'Las dos son del Pacífico: la costa 1 al norte y la 2 al sur.', false),
-    ('soc-1-3-b', 'D', 'Las dos son del Caribe: la costa 1 al norte y la 2 al sur.', false),
+    ('soc-1-3-b', 'A', 'La costa 1 es la del Caribe, con la península de Osa.', false),
+    ('soc-1-3-b', 'B', 'La costa 2 es la del Pacífico, con el golfo de Nicoya.', false),
+    ('soc-1-3-b', 'C', 'La costa 2 es la del Caribe, con la península de Nicoya.', false),
+    ('soc-1-3-b', 'D', 'La costa 1 es la del Pacífico, con el golfo Dulce.', true),
     ('soc-1-3-c', 'A', 'Las partes altas atraen más gente, porque el frío ayuda al cultivo de café.', false),
     ('soc-1-3-c', 'B', 'El relieve no influye: los poblados crecen donde hubo erupciones recientes.', false),
     ('soc-1-3-c', 'C', 'Los terrenos poco empinados y de buen suelo facilitan poblar y sembrar.', true),
-    ('soc-1-3-c', 'D', 'Las montañas impiden cualquier actividad humana en todo el país.', false),
+    ('soc-1-3-c', 'D', 'Las ciudades y carreteras hicieron que el clima del valle sea templado.', false),
     ('soc-1-4-a', 'A', 'provincia.', false),
     ('soc-1-4-a', 'B', 'cantón.', false),
     ('soc-1-4-a', 'C', 'región.', true),
     ('soc-1-4-a', 'D', 'distrito.', false),
-    ('soc-1-4-b', 'A', 'Camila acierta, porque una región coincide con una provincia.', false),
-    ('soc-1-4-b', 'B', 'Esteban acierta: una región se define por rasgos en común.', true),
-    ('soc-1-4-b', 'C', 'Esteban acierta, pero solo si el rasgo escogido es el clima.', false),
-    ('soc-1-4-b', 'D', 'Ninguno acierta, porque las regiones no tienen ningún límite.', false),
+    ('soc-1-4-b', 'A', 'Camila acierta, porque las regiones siguen los límites provinciales.', false),
+    ('soc-1-4-b', 'B', 'Ninguno acierta: los rasgos escogidos marcan los límites.', true),
+    ('soc-1-4-b', 'C', 'Esteban acierta, porque el clima es lo único que define una región.', false),
+    ('soc-1-4-b', 'D', 'Los dos aciertan, porque cada uno usa un criterio distinto.', false),
     ('soc-1-4-c', 'A', 'Permite conocer las necesidades de cada zona y atenderlas mejor.', true),
     ('soc-1-4-c', 'B', 'Hace que cada región se gobierne sola, con sus propias leyes.', false),
     ('soc-1-4-c', 'C', 'Obliga a que todas las regiones reciban exactamente lo mismo.', false),
@@ -467,70 +467,70 @@ from (values
     ('soc-1-5-b', 'B', 'El derecho al trabajo.', false),
     ('soc-1-5-b', 'C', 'El derecho a la educación.', true),
     ('soc-1-5-b', 'D', 'El derecho a la libre expresión.', false),
-    ('soc-1-5-c', 'A', 'Porque la salud depende solo del trabajo del personal médico.', false),
-    ('soc-1-5-c', 'B', 'Porque ayuda a cuidarse y a cuidar a los demás.', true),
-    ('soc-1-5-c', 'C', 'Porque así se evita ir al Ebais cuando alguien se enferma.', false),
-    ('soc-1-5-c', 'D', 'Porque el derecho a la salud protege sobre todo a los adultos.', false),
-    ('soc-1-6-a', 'A', 'Viven igual todo el año, porque en todo el país llueve siempre.', false),
-    ('soc-1-6-a', 'B', 'Siembran solo en diciembre, cuando hay menos lluvias.', false),
+    ('soc-1-5-c', 'A', 'Porque permite exigir que lo atiendan antes que a los demás.', false),
+    ('soc-1-5-c', 'B', 'Porque lleva a cuidarse uno mismo y a cuidar a los demás.', true),
+    ('soc-1-5-c', 'C', 'Porque ese derecho consiste en recibir vacunas y controles.', false),
+    ('soc-1-5-c', 'D', 'Porque cuidar la salud es tarea del Ebais y no de la escuela.', false),
+    ('soc-1-6-a', 'A', 'Viven igual todo el año, porque en Guanacaste llueve como en Limón.', false),
+    ('soc-1-6-a', 'B', 'Siembran en diciembre, cuando hay menos lluvias.', false),
     ('soc-1-6-a', 'C', 'Ajustan sus tareas a la época seca y a la lluviosa.', true),
-    ('soc-1-6-a', 'D', 'Los árboles botan sus hojas por el frío del invierno.', false),
+    ('soc-1-6-a', 'D', 'Recogen agua de diciembre a abril, cuando más llueve.', false),
     ('soc-1-6-b', 'A', 'La humedad del lugar 1 favorece plantas que necesitan mucha agua.', true),
     ('soc-1-6-b', 'B', 'El calor del lugar 2 hace que sus árboles conserven las hojas todo el año.', false),
     ('soc-1-6-b', 'C', 'La ganadería del lugar 2 es la causa de que su clima sea cálido.', false),
-    ('soc-1-6-b', 'D', 'La neblina del lugar 1 impide cualquier actividad humana allí.', false),
-    ('soc-1-6-c', 'A', 'Los peces se fueron porque el río llevaba más agua en verano.', false),
-    ('soc-1-6-c', 'B', 'Sembrar hasta la orilla aumentó las especies que viven en el río.', false),
+    ('soc-1-6-b', 'D', 'El lugar 2 tiene más especies de plantas porque es más cálido.', false),
+    ('soc-1-6-c', 'A', 'Los peces se fueron y por eso el río lleva menos agua en verano.', false),
+    ('soc-1-6-c', 'B', 'Los cultivos junto al río protegen el suelo igual que los árboles.', false),
     ('soc-1-6-c', 'C', 'Quitar el bosque junto al río dañó el hogar de muchas especies.', true),
-    ('soc-1-6-c', 'D', 'El agua turbia se debe solo a los aguaceros, no a las fincas.', false),
+    ('soc-1-6-c', 'D', 'El agua turbia viene de los aguaceros y no tiene que ver con las fincas.', false),
     ('soc-1-7-a', 'A', 'Pagar el recibo a tiempo para no tener que pagar multas.', false),
     ('soc-1-7-a', 'B', 'Comprar agua embotellada para tomar durante el verano.', false),
     ('soc-1-7-a', 'C', 'Arreglar la fuga y usar un balde para lavar el carro.', true),
     ('soc-1-7-a', 'D', 'Lavar el carro de noche, cuando hace menos calor.', false),
-    ('soc-1-7-b', 'A', 'Porque así cada grupo limpiaba solo el frente de su negocio.', false),
-    ('soc-1-7-b', 'B', 'Porque la Bandera Azul obliga a cerrar la playa a los turistas.', false),
+    ('soc-1-7-b', 'A', 'Porque su fin principal era que llegaran más turistas a los negocios.', false),
+    ('soc-1-7-b', 'B', 'Porque una ley obligaba a cada grupo a limpiar su parte de la playa.', false),
     ('soc-1-7-b', 'C', 'Porque los pescadores eran los únicos que ensuciaban la playa.', false),
-    ('soc-1-7-b', 'D', 'Porque cuidarlo juntos benefició a la naturaleza y al pueblo.', true),
-    ('soc-1-7-c', 'A', 'Quemar las cáscaras y las hojas para no atraer moscas.', false),
-    ('soc-1-7-c', 'B', 'Enterrar las latas para que no se vean en el patio.', false),
-    ('soc-1-7-c', 'C', 'Juntar todo en una sola bolsa para el camión.', false),
-    ('soc-1-7-c', 'D', 'Transformar los restos orgánicos en tierra fértil.', true),
+    ('soc-1-7-b', 'D', 'Porque cuidarla juntos benefició a la naturaleza y al pueblo.', true),
+    ('soc-1-7-c', 'A', 'Transformar los restos orgánicos en tierra fértil.', true),
+    ('soc-1-7-c', 'B', 'Quemar las cáscaras y las hojas para no atraer moscas.', false),
+    ('soc-1-7-c', 'C', 'Enterrar las latas para que no se vean en el patio.', false),
+    ('soc-1-7-c', 'D', 'Juntar todo en una sola bolsa para el camión.', false),
     ('soc-2-1-a', 'A', '1, 2 y 3', false),
-    ('soc-2-1-a', 'B', '2, 3 y 1', false),
+    ('soc-2-1-a', 'B', '1, 3 y 2', false),
     ('soc-2-1-a', 'C', '2, 1 y 3', true),
-    ('soc-2-1-a', 'D', '3, 1 y 2', false),
+    ('soc-2-1-a', 'D', '2, 3 y 1', false),
     ('soc-2-2-a', 'A', 'Huetar', false),
     ('soc-2-2-a', 'B', 'Cabécar', false),
-    ('soc-2-2-a', 'C', 'Chorotega', true),
-    ('soc-2-2-a', 'D', 'Maleku', false),
-    ('soc-2-2-b', 'A', 'Tallaban animales solo para decorar, sin ningún significado especial.', false),
-    ('soc-2-2-b', 'B', 'La naturaleza era vista solo como fuente de alimento y materiales.', false),
-    ('soc-2-2-b', 'C', 'Los animales tallados mostraban las especies que criaban en las aldeas.', false),
-    ('soc-2-2-b', 'D', 'Sus creencias se reflejaban en su arte y en sus formas de autoridad.', true),
+    ('soc-2-2-a', 'C', 'Maleku', false),
+    ('soc-2-2-a', 'D', 'Chorotega', true),
+    ('soc-2-2-b', 'A', 'Los jefes eran quienes tallaban las figuras de animales en piedra.', false),
+    ('soc-2-2-b', 'B', 'Tallaban animales para enseñar a los jóvenes a cazarlos.', false),
+    ('soc-2-2-b', 'C', 'Sus creencias se reflejaban en su arte y en sus formas de autoridad.', true),
+    ('soc-2-2-b', 'D', 'Los animales tallados mostraban las especies que criaban en las aldeas.', false),
     ('soc-2-3-a', 'A', '1 pueblos originarios, 2 afrodescendiente y 3 asiática', false),
     ('soc-2-3-a', 'B', '1 afrodescendiente, 2 asiática y 3 pueblos originarios', false),
-    ('soc-2-3-a', 'C', '1 asiática, 2 pueblos originarios y 3 afrodescendiente', false),
-    ('soc-2-3-a', 'D', '1 afrodescendiente, 2 pueblos originarios y 3 asiática', true),
-    ('soc-2-3-b', 'A', 'Ofrece una forma de producir que protege la naturaleza.', true),
-    ('soc-2-3-b', 'B', 'Demuestra que el cacao solo se puede cultivar en Talamanca.', false),
-    ('soc-2-3-b', 'C', 'Reemplaza el trabajo de las personas productoras de otras zonas.', false),
-    ('soc-2-3-b', 'D', 'Sirve sobre todo para vender más cacao en el extranjero.', false),
-    ('soc-2-4-a', 'A', 'La pérdida de su lengua por el uso del español en la escuela.', false),
-    ('soc-2-4-a', 'B', 'El difícil acceso a servicios básicos de educación y salud.', true),
-    ('soc-2-4-a', 'C', 'La falta de interés de las familias por la salud y el estudio.', false),
-    ('soc-2-4-a', 'D', 'La gran cantidad de turistas que visitan la montaña.', false),
-    ('soc-2-4-b', 'A', 'Trasladar a las comunidades a las ciudades para darles servicios.', false),
-    ('soc-2-4-b', 'B', 'Enseñar solo español para que todos aprendan lo mismo.', false),
-    ('soc-2-4-b', 'C', 'Repartir sus tierras entre todas las personas que viven ahí.', false),
-    ('soc-2-4-b', 'D', 'Respetar sus tierras y escucharlos en lo que les afecta.', true),
+    ('soc-2-3-a', 'C', '1 afrodescendiente, 2 pueblos originarios y 3 asiática', true),
+    ('soc-2-3-a', 'D', '1 asiática, 2 pueblos originarios y 3 afrodescendiente', false),
+    ('soc-2-3-b', 'A', 'Demuestra que el mejor cacao del país se cultiva en Talamanca.', false),
+    ('soc-2-3-b', 'B', 'Reemplaza el trabajo de las personas productoras de otras zonas.', false),
+    ('soc-2-3-b', 'C', 'Sirve sobre todo para vender más cacao en el extranjero.', false),
+    ('soc-2-3-b', 'D', 'Ofrece una forma de producir que protege la naturaleza.', true),
+    ('soc-2-4-a', 'A', 'El poco pago por sus artesanías y las imitaciones.', true),
+    ('soc-2-4-a', 'B', 'La pérdida de su lengua por el uso del español en la escuela.', false),
+    ('soc-2-4-a', 'C', 'La falta de interés de los jóvenes por aprender el oficio.', false),
+    ('soc-2-4-a', 'D', 'La escasez de plantas para teñir lo que tejen.', false),
+    ('soc-2-4-b', 'A', 'Darles más ayudas económicas sin atender quién ocupa sus tierras.', false),
+    ('soc-2-4-b', 'B', 'Hacer cumplir la ley que los protege y tomar en cuenta su voz.', true),
+    ('soc-2-4-b', 'C', 'Enseñarles en español para que puedan reclamar sus derechos.', false),
+    ('soc-2-4-b', 'D', 'Dejar que cada comunidad resuelva sola los conflictos de tierras.', false),
     ('soc-2-5-a', 'A', 'El punto guanacasteco.', false),
     ('soc-2-5-a', 'B', 'El Juego de los Diablitos.', false),
     ('soc-2-5-a', 'C', 'El tope de caballos.', false),
     ('soc-2-5-a', 'D', 'El calipso limonense.', true),
     ('soc-2-5-b', 'A', 'Complica la identidad, porque un país debe tener una sola lengua.', false),
-    ('soc-2-5-b', 'B', 'Tiene valor nada más en las comunidades donde se habla cada una.', false),
-    ('soc-2-5-b', 'C', 'Muestra que el país se forma con muchos pueblos que conviven.', true),
-    ('soc-2-5-b', 'D', 'Sirve sobre todo para atraer a turistas de otros países.', false),
+    ('soc-2-5-b', 'B', 'Tiene valor sobre todo en las comunidades donde se habla cada una.', false),
+    ('soc-2-5-b', 'C', 'Sirve sobre todo para atraer a turistas de otros países.', false),
+    ('soc-2-5-b', 'D', 'Muestra que el país se forma con muchos pueblos que conviven.', true),
     ('soc-2-6-a', 'A', 'El periodo colonial', false),
     ('soc-2-6-a', 'B', 'La época de la independencia', false),
     ('soc-2-6-a', 'C', 'La conquista española', true),
@@ -543,118 +543,118 @@ from (values
     ('soc-2-7-a', 'B', 'Tramo 2', false),
     ('soc-2-7-a', 'C', 'Tramo 3', true),
     ('soc-2-7-a', 'D', 'Tramo 4', false),
-    ('soc-2-8-a', 'A', 'La división del territorio en siete provincias.', false),
-    ('soc-2-8-a', 'B', 'El cultivo de café alrededor de las ciudades.', false),
-    ('soc-2-8-a', 'C', 'La organización de los poblados en torno a una plaza.', true),
+    ('soc-2-8-a', 'A', 'El trazado en cuadrícula con un espacio central.', true),
+    ('soc-2-8-a', 'B', 'La división del territorio en siete provincias.', false),
+    ('soc-2-8-a', 'C', 'El cultivo de café alrededor de las ciudades.', false),
     ('soc-2-8-a', 'D', 'La costumbre de hacer ferias en la plaza cada domingo.', false),
     ('soc-2-8-b', 'A', 'Se basaba en fábricas que exportaban chocolate a Europa.', false),
-    ('soc-2-8-b', 'B', 'Usaba monedas de oro acuñadas en la ciudad de Cartago.', false),
-    ('soc-2-8-b', 'C', 'Tenía al café como el producto más vendido de la provincia.', false),
-    ('soc-2-8-b', 'D', 'Dependía de cultivos sostenidos con mano de obra forzada.', true),
+    ('soc-2-8-b', 'B', 'Tenía cultivos que se sostenían con mano de obra forzada.', true),
+    ('soc-2-8-b', 'C', 'Usaba monedas de oro acuñadas en la ciudad de Cartago.', false),
+    ('soc-2-8-b', 'D', 'Tenía al café como el producto más vendido de la provincia.', false),
     ('soc-2-9-a', 'A', 'todas las personas tenían los mismos derechos ante la ley.', false),
-    ('soc-2-9-a', 'B', 'el trabajo de cada quien dependía solo de su propio esfuerzo.', false),
-    ('soc-2-9-a', 'C', 'el origen de cada persona definía sus derechos.', true),
-    ('soc-2-9-a', 'D', 'los cargos de gobierno se escogían por votación de todos.', false),
+    ('soc-2-9-a', 'B', 'el trabajo de cada quien dependía de su propio esfuerzo.', false),
+    ('soc-2-9-a', 'C', 'los cargos de gobierno se escogían por votación de todos.', false),
+    ('soc-2-9-a', 'D', 'el origen de cada persona definía sus derechos y su labor.', true),
     ('soc-2-9-b', 'A', 'Podían votar, pero no ser elegidas para el gobierno local.', false),
     ('soc-2-9-b', 'B', 'Debían pagar tributo en productos a los encomenderos.', false),
     ('soc-2-9-b', 'C', 'No podían ocupar cargos públicos y pocas sabían leer.', true),
     ('soc-2-9-b', 'D', 'Tenían prohibido participar en las fiestas del pueblo.', false),
-    ('soc-2-10-a', 'A', 'La necesidad de crear sus propias formas de gobierno.', true),
-    ('soc-2-10-a', 'B', 'La llegada de las ideas de libertad desde otros países.', false),
-    ('soc-2-10-a', 'C', 'La firma del acta de independencia en Guatemala.', false),
+    ('soc-2-10-a', 'A', 'La llegada de las ideas de libertad desde otros países.', false),
+    ('soc-2-10-a', 'B', 'La firma del acta de independencia en Guatemala.', false),
+    ('soc-2-10-a', 'C', 'La necesidad de crear sus propias formas de gobierno.', true),
     ('soc-2-10-a', 'D', 'El regreso del gobierno de España a la provincia.', false),
-    ('soc-2-10-b', 'A', 'La obediencia y la disciplina.', false),
-    ('soc-2-10-b', 'B', 'La tradición y el respeto a los mayores.', false),
-    ('soc-2-10-b', 'C', 'La libertad de comercio y la propiedad.', false),
-    ('soc-2-10-b', 'D', 'La participación y la igualdad.', true),
-    ('soc-2-11-a', 'A', 'Unió de forma definitiva a Costa Rica con el Imperio mexicano.', false),
-    ('soc-2-11-a', 'B', 'Le devolvió a España el gobierno de la provincia de Costa Rica.', false),
-    ('soc-2-11-a', 'C', 'Creó un ejército para imponer una sola opinión en los pueblos.', false),
-    ('soc-2-11-a', 'D', 'Mostró que las diferencias se podían resolver dialogando.', true),
+    ('soc-2-10-b', 'A', 'La participación y la igualdad.', true),
+    ('soc-2-10-b', 'B', 'La obediencia y la disciplina.', false),
+    ('soc-2-10-b', 'C', 'La tradición y el respeto a los mayores.', false),
+    ('soc-2-10-b', 'D', 'La libertad de comercio y la propiedad.', false),
+    ('soc-2-11-a', 'A', 'Aceptar lo que proponga el pueblo con más habitantes.', false),
+    ('soc-2-11-a', 'B', 'Esperar que una autoridad de afuera decida por todos.', false),
+    ('soc-2-11-a', 'C', 'Dejar que cada pueblo se gobierne aparte de los otros.', false),
+    ('soc-2-11-a', 'D', 'Resolver las diferencias conversando y negociando.', true),
     ('soc-2-12-a', 'A', 'La salida al océano Pacífico por el golfo de Nicoya.', false),
-    ('soc-2-12-a', 'B', 'Las expresiones musicales y de danza de esa zona.', true),
-    ('soc-2-12-a', 'C', 'El aumento de las tierras para la ganadería del país.', false),
-    ('soc-2-12-a', 'D', 'La firma de un acuerdo de límites con Nicaragua.', false),
-    ('soc-2-12-b', 'A', 'Tiene importancia nada más para la identidad de Guanacaste.', false),
-    ('soc-2-12-b', 'B', 'Separó a Guanacaste del resto del territorio nacional.', false),
-    ('soc-2-12-b', 'C', 'Es una celebración que nació durante el periodo colonial.', false),
-    ('soc-2-12-b', 'D', 'Une la identidad guanacasteca con la nacional.', true),
-    ('soc-2-13-a', 'A', 'Los dos mares', true),
-    ('soc-2-13-a', 'B', 'Las siete estrellas', false),
-    ('soc-2-13-a', 'C', 'Los tres volcanes', false),
+    ('soc-2-12-a', 'B', 'El aumento de las tierras para la ganadería del país.', false),
+    ('soc-2-12-a', 'C', 'La firma de un acuerdo de límites con Nicaragua.', false),
+    ('soc-2-12-a', 'D', 'Las expresiones musicales y de danza de esa zona.', true),
+    ('soc-2-12-b', 'A', 'Tiene importancia sobre todo para la identidad de Guanacaste.', false),
+    ('soc-2-12-b', 'B', 'Hace que lo guanacasteco sea parte de lo costarricense.', true),
+    ('soc-2-12-b', 'C', 'Separó a Guanacaste del resto del territorio nacional.', false),
+    ('soc-2-12-b', 'D', 'Es una celebración que nació durante el periodo colonial.', false),
+    ('soc-2-13-a', 'A', 'Las siete estrellas', false),
+    ('soc-2-13-a', 'B', 'Los tres volcanes', false),
+    ('soc-2-13-a', 'C', 'Los dos mares', true),
     ('soc-2-13-a', 'D', 'El sol que sale', false),
-    ('soc-2-14-a', 'A', 'Porque Costa Rica ganó territorio nicaragüense al final de la guerra.', false),
-    ('soc-2-14-a', 'B', 'Porque el ejército pasó a gobernar el país después de 1857.', false),
-    ('soc-2-14-a', 'C', 'Porque las provincias se dividieron entre quienes apoyaban a Walker.', false),
-    ('soc-2-14-a', 'D', 'Porque la defensa común del país unió a su gente.', true),
+    ('soc-2-14-a', 'A', 'Porque enfrentar juntos al invasor unió a la población del país.', true),
+    ('soc-2-14-a', 'B', 'Porque Costa Rica ganó territorio nicaragüense al final de la guerra.', false),
+    ('soc-2-14-a', 'C', 'Porque el ejército pasó a gobernar el país después de 1857.', false),
+    ('soc-2-14-a', 'D', 'Porque después de la guerra se abolió el ejército en el país.', false),
     ('soc-2-14-b', 'A', 'política, porque provocó un cambio de gobierno.', false),
-    ('soc-2-14-b', 'B', 'social, porque cambió la vida de la población.', true),
-    ('soc-2-14-b', 'C', 'territorial, porque el país perdió parte de su tierra.', false),
-    ('soc-2-14-b', 'D', 'cultural, porque llegaron costumbres de otros lugares.', false),
+    ('soc-2-14-b', 'B', 'territorial, porque el país perdió parte de su tierra.', false),
+    ('soc-2-14-b', 'C', 'cultural, porque llegaron costumbres de otros lugares.', false),
+    ('soc-2-14-b', 'D', 'social, porque cambió la vida de la población.', true),
     ('soc-2-15-a', 'A', 'Rivas, Santa Rosa y Vía del Tránsito', false),
     ('soc-2-15-a', 'B', 'Santa Rosa, Rivas y Vía del Tránsito', true),
     ('soc-2-15-a', 'C', 'Santa Rosa, Vía del Tránsito y Rivas', false),
     ('soc-2-15-a', 'D', 'Vía del Tránsito, Rivas y Santa Rosa', false),
-    ('soc-2-15-b', 'A', 'Porque así se cortaban los refuerzos para los filibusteros.', true),
-    ('soc-2-15-b', 'B', 'Porque era el único camino entre San José y la capital de Nicaragua.', false),
+    ('soc-2-15-b', 'A', 'Porque era el único camino entre San José y la capital de Nicaragua.', false),
+    ('soc-2-15-b', 'B', 'Porque así se cortaban los refuerzos para los filibusteros.', true),
     ('soc-2-15-b', 'C', 'Porque por esa ruta salía el café que Costa Rica vendía a Europa.', false),
     ('soc-2-15-b', 'D', 'Porque de esa forma el río San Juan pasó a ser costarricense.', false),
-    ('soc-2-16-a', 'A', 'Una deportista que gana una medalla en un torneo internacional.', false),
-    ('soc-2-16-a', 'B', 'Una empresaria que abre una tienda nueva en su comunidad.', false),
-    ('soc-2-16-a', 'C', 'Una cantante que compone canciones sobre la patria.', false),
-    ('soc-2-16-a', 'D', 'Una socorrista que da primeros auxilios en una emergencia.', true),
+    ('soc-2-16-a', 'A', 'Una socorrista que da primeros auxilios en una emergencia.', true),
+    ('soc-2-16-a', 'B', 'Una deportista que gana una medalla en un torneo internacional.', false),
+    ('soc-2-16-a', 'C', 'Una empresaria que abre una tienda nueva en su comunidad.', false),
+    ('soc-2-16-a', 'D', 'Una cantante que compone canciones sobre la patria.', false),
     ('soc-2-16-b', 'A', 'La búsqueda de reconocimiento y fama.', false),
-    ('soc-2-16-b', 'B', 'La entrega para proteger a los demás.', true),
-    ('soc-2-16-b', 'C', 'La obediencia a cualquier orden recibida.', false),
-    ('soc-2-16-b', 'D', 'El gusto por las situaciones de peligro.', false),
+    ('soc-2-16-b', 'B', 'La obediencia a las órdenes recibidas.', false),
+    ('soc-2-16-b', 'C', 'El gusto por las situaciones de peligro.', false),
+    ('soc-2-16-b', 'D', 'La entrega para proteger a los demás.', true),
     ('soc-2-17-a', 'A', 'leyes anticlericales.', false),
-    ('soc-2-17-a', 'B', 'Constitución de 1871.', false),
-    ('soc-2-17-a', 'C', 'garantías sociales.', false),
-    ('soc-2-17-a', 'D', 'Reforma Educativa.', true),
+    ('soc-2-17-a', 'B', 'Reforma Educativa.', true),
+    ('soc-2-17-a', 'C', 'Constitución de 1871.', false),
+    ('soc-2-17-a', 'D', 'garantías sociales.', false),
     ('soc-2-17-b', 'A', 'Prohibir que las personas practicaran la religión católica.', false),
-    ('soc-2-17-b', 'B', 'Devolverle a la Iglesia el control del gobierno del país.', false),
+    ('soc-2-17-b', 'B', 'Cobrar un impuesto por cada nacimiento y matrimonio.', false),
     ('soc-2-17-b', 'C', 'Unir al Estado y a la Iglesia en una sola institución.', false),
-    ('soc-2-17-b', 'D', 'Que el Estado fuera la autoridad en los asuntos civiles.', true),
-    ('soc-2-18-a', 'A', 'la seguridad social.', true),
-    ('soc-2-18-a', 'B', 'la educación gratuita y obligatoria.', false),
-    ('soc-2-18-a', 'C', 'el derecho al voto de las mujeres.', false),
-    ('soc-2-18-a', 'D', 'la abolición del ejército.', false),
-    ('soc-2-18-b', 'A', 'Permiten que cada patrono fije la jornada que prefiera.', false),
-    ('soc-2-18-b', 'B', 'Ponen límites para que el empleo sea digno y justo.', true),
-    ('soc-2-18-b', 'C', 'Protegen nada más a quienes trabajan para el Estado.', false),
-    ('soc-2-18-b', 'D', 'Garantizan que a nadie se le pueda despedir nunca.', false),
-    ('soc-2-19-a', 'A', 'La protección especial a las personas adultas mayores.', true),
-    ('soc-2-19-a', 'B', 'La libertad de reunión de las personas de la comunidad.', false),
-    ('soc-2-19-a', 'C', 'La igualdad de todas las personas ante la ley.', false),
-    ('soc-2-19-a', 'D', 'El derecho a la educación de niñas y niños.', false),
-    ('soc-2-19-b', 'A', 'La libertad de pensamiento y la igualdad ante la ley.', true),
-    ('soc-2-19-b', 'B', 'El derecho a la vida y a recibir atención médica oportuna.', false),
-    ('soc-2-19-b', 'C', 'La protección especial a la madre y a la niñez.', false),
-    ('soc-2-19-b', 'D', 'El derecho a disfrutar del arte y de la cultura.', false),
-    ('soc-2-20-a', 'A', 'Permite publicar cualquier cosa cuando se hace en redes sociales.', false),
+    ('soc-2-17-b', 'D', 'Poner en manos civiles lo que hacía la Iglesia.', true),
+    ('soc-2-18-a', 'A', 'la educación gratuita y obligatoria.', false),
+    ('soc-2-18-a', 'B', 'el derecho al voto de las mujeres.', false),
+    ('soc-2-18-a', 'C', 'la abolición del ejército.', false),
+    ('soc-2-18-a', 'D', 'la seguridad social.', true),
+    ('soc-2-18-b', 'A', 'Ponen límites para que el empleo sea digno y justo.', true),
+    ('soc-2-18-b', 'B', 'Permiten que cada patrono fije la jornada que prefiera.', false),
+    ('soc-2-18-b', 'C', 'Protegen sobre todo a quienes trabajan para el Estado.', false),
+    ('soc-2-18-b', 'D', 'Garantizan que a las personas no se les pueda despedir.', false),
+    ('soc-2-19-a', 'A', 'La libertad de comercio de las personas de la comunidad.', false),
+    ('soc-2-19-a', 'B', 'La igualdad de todas las personas ante la ley.', false),
+    ('soc-2-19-a', 'C', 'El derecho a la educación de niñas y niños.', false),
+    ('soc-2-19-a', 'D', 'La protección especial a las personas adultas mayores.', true),
+    ('soc-2-19-b', 'A', 'La libertad de reunión y el derecho a recibir educación gratuita.', false),
+    ('soc-2-19-b', 'B', 'La libertad de pensamiento y la igualdad ante la ley.', true),
+    ('soc-2-19-b', 'C', 'El derecho de petición y la protección especial a la niñez.', false),
+    ('soc-2-19-b', 'D', 'La igualdad ante la ley y la libertad de reunión pacífica.', false),
+    ('soc-2-20-a', 'A', 'Permite publicar lo que uno quiera cuando se hace en un chat.', false),
     ('soc-2-20-a', 'B', 'Tiene límites y no permite dañar la dignidad de otra persona.', true),
     ('soc-2-20-a', 'C', 'Es un derecho de las personas adultas, no de los estudiantes.', false),
     ('soc-2-20-a', 'D', 'Prohíbe dar opiniones sobre las decisiones de la escuela.', false),
-    ('soc-2-20-b', 'A', 'El de votar y el de elegir alcalde.', false),
-    ('soc-2-20-b', 'B', 'El de petición y el de reunirse.', true),
+    ('soc-2-20-b', 'A', 'El de petición y el de reunión.', true),
+    ('soc-2-20-b', 'B', 'El de votar y el de elegir alcalde.', false),
     ('soc-2-20-b', 'C', 'El de propiedad y el de comercio.', false),
     ('soc-2-20-b', 'D', 'El de salud y el de educación.', false),
-    ('soc-2-21-a', 'A', 'Porque estar preparados ante una emergencia es tarea de todos.', true),
-    ('soc-2-21-a', 'B', 'Porque solo los bomberos deben saber qué hacer en un sismo.', false),
+    ('soc-2-21-a', 'A', 'Porque saber qué hacer en un sismo es tarea de los bomberos.', false),
+    ('soc-2-21-a', 'B', 'Porque estar preparados ante una emergencia es tarea de todos.', true),
     ('soc-2-21-a', 'C', 'Porque los simulacros permiten saber cuándo habrá un terremoto.', false),
     ('soc-2-21-a', 'D', 'Porque así la escuela cumple un requisito y no hace falta más.', false),
-    ('soc-2-21-b', 'A', 'Cuidar que los impuestos lleguen a servicios para todos.', true),
-    ('soc-2-21-b', 'B', 'Ahorrar dinero aunque los impuestos de la compra no se paguen.', false),
-    ('soc-2-21-b', 'C', 'Pagar nada más los impuestos que le parezcan justos.', false),
-    ('soc-2-21-b', 'D', 'Pedir la factura únicamente en las compras muy grandes.', false),
-    ('soc-2-22-a', 'A', '1 político, 2 económico y 3 ambiental', false),
-    ('soc-2-22-a', 'B', '1 económico, 2 político y 3 ambiental', true),
+    ('soc-2-21-b', 'A', 'Ahorrar dinero aunque los impuestos de la compra no se paguen.', false),
+    ('soc-2-21-b', 'B', 'Cuidar que los impuestos lleguen a servicios para todos.', true),
+    ('soc-2-21-b', 'C', 'Pagar los impuestos que a cada quien le parezcan justos.', false),
+    ('soc-2-21-b', 'D', 'Pedir la factura cuando la compra es muy grande.', false),
+    ('soc-2-22-a', 'A', '1 económico, 2 político y 3 ambiental', true),
+    ('soc-2-22-a', 'B', '1 político, 2 económico y 3 ambiental', false),
     ('soc-2-22-a', 'C', '1 económico, 2 ambiental y 3 político', false),
     ('soc-2-22-a', 'D', '1 ambiental, 2 político y 3 económico', false),
-    ('soc-2-22-b', 'A', 'Solo el Estado puede resolverlos, con leyes nuevas.', false),
-    ('soc-2-22-b', 'B', 'La comunidad organizada puede ayudar a resolverlos.', true),
-    ('soc-2-22-b', 'C', 'La gente joven no tiene ninguna responsabilidad en ellos.', false),
-    ('soc-2-22-b', 'D', 'Se resuelven solos con el paso del tiempo.', false)
+    ('soc-2-22-b', 'A', 'El Estado es el que debe resolverlos con leyes nuevas.', false),
+    ('soc-2-22-b', 'B', 'La comunidad organizada ayuda a resolverlos.', true),
+    ('soc-2-22-b', 'C', 'Las personas mayores son las que deben buscar cómo resolverlos.', false),
+    ('soc-2-22-b', 'D', 'La municipalidad los resuelve sin ayuda de los vecinos.', false)
 ) as v (codigo, letra, texto, es_correcta)
 join public.simulacro_nuevo_items i on i.codigo = v.codigo
 join public.simulacros_nuevos s on s.id = i.simulacro_id and s.slug = 'nuevo-estudios-sociales-1'

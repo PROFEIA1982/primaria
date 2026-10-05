@@ -3,10 +3,10 @@
 Generada desde `estudios-sociales.json`, que es la fuente. No se edita a mano: se corrige el JSON y se corre `pnpm tabla:simulacros-nuevos estudios-sociales`.
 
 - **60 ítems**, 3 minutos por ítem.
-- **Claves:** CAABBAACCBADCBCACCDDCCDDABDDCCBCCDCCADDBDADBBADBDDABAABBAABB (A 15, B 15, C 15, D 15).
+- **Claves:** CAABAADCCBADCBCACCDACDCCDABDDCBCABDCCADDBCADBBADBDDADBBABBAB (A 15, B 15, C 15, D 15).
 - **Bloques:** Estudios Sociales y geografía 11 · Derechos y ambiente 9 · Costa Rica antigua y pueblos originarios 9 · Conquista y colonia 7 · Independencia y Estado 6 · Campaña Nacional 6 · Reformas y logros sociales 4 · Derechos y retos de hoy 8.
-- **Niveles:** intermedio 28 · alto 32.
-- **Verbos:** distinguir 22 · inferir 17 · identificar 2 · reconocer 10 · comprender 1 · ubicar 2 · relacionar 6.
+- **Niveles:** intermedio 30 · alto 30.
+- **Verbos:** distinguir 22 · inferir 18 · identificar 2 · reconocer 10 · comprender 1 · ubicar 2 · relacionar 5.
 - **Tipos de contexto:** sociocultural 13 · cívico-político 21 · espacial 15 · temporal 11.
 
 ## Conteo por afirmación
@@ -43,7 +43,7 @@ Generada desde `estudios-sociales.json`, que es la fuente. No se edita a mano: s
 | 2.21 | 2 | Comprende los retos actuales como espacios de participación ciudadana: seguridad vial, gestión del riesgo, convivencia en redes sociales y cultura fiscal. |
 | 2.22 | 2 | Analiza desafíos contemporáneos de la sociedad costarricense y las responsabilidades y soluciones ciudadanas. |
 
-Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa que recalcula el resultado y comprueba que coincide con una sola opción.
+Cada clave se revisó a mano contra el contexto y el programa de estudio, y pasó por dos auditorías independientes: una de contenido y otra psicométrica.
 
 ## Resumen
 
@@ -53,61 +53,61 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | 2 | soc-1-1-b | Estudios Sociales y geografía | 1.1.3 | inferir | cívico-político | alto | A |
 | 3 | soc-1-2-a | Estudios Sociales y geografía | 1.2.1 | identificar | espacial | intermedio | A |
 | 4 | soc-1-2-b | Estudios Sociales y geografía | 1.2.2 | reconocer | espacial | intermedio | B |
-| 5 | soc-1-2-c | Estudios Sociales y geografía | 1.2.3 | distinguir | cívico-político | alto | B |
+| 5 | soc-1-2-c | Estudios Sociales y geografía | 1.2.3 | distinguir | cívico-político | alto | A |
 | 6 | soc-1-3-a | Estudios Sociales y geografía | 1.3.1 | reconocer | espacial | intermedio | A |
-| 7 | soc-1-3-b | Estudios Sociales y geografía | 1.3.2 | distinguir | espacial | alto | A |
+| 7 | soc-1-3-b | Estudios Sociales y geografía | 1.3.2 | distinguir | espacial | alto | D |
 | 8 | soc-1-3-c | Estudios Sociales y geografía | 1.3.3 | inferir | espacial | alto | C |
 | 9 | soc-1-4-a | Estudios Sociales y geografía | 1.4.1 | reconocer | espacial | intermedio | C |
 | 10 | soc-1-4-b | Estudios Sociales y geografía | 1.4.2 | distinguir | espacial | alto | B |
 | 11 | soc-1-4-c | Estudios Sociales y geografía | 1.4.3 | inferir | espacial | alto | A |
 | 12 | soc-1-5-a | Derechos y ambiente | 1.5.1 | reconocer | cívico-político | intermedio | D |
-| 13 | soc-1-5-b | Derechos y ambiente | 1.5.2 | distinguir | cívico-político | alto | C |
+| 13 | soc-1-5-b | Derechos y ambiente | 1.5.2 | distinguir | cívico-político | intermedio | C |
 | 14 | soc-1-5-c | Derechos y ambiente | 1.5.3 | comprender | cívico-político | intermedio | B |
 | 15 | soc-1-6-a | Derechos y ambiente | 1.6.1 | reconocer | espacial | intermedio | C |
 | 16 | soc-1-6-b | Derechos y ambiente | 1.6.2 | distinguir | espacial | alto | A |
 | 17 | soc-1-6-c | Derechos y ambiente | 1.6.3 | inferir | espacial | alto | C |
 | 18 | soc-1-7-a | Derechos y ambiente | 1.7.1 | distinguir | sociocultural | intermedio | C |
 | 19 | soc-1-7-b | Derechos y ambiente | 1.7.2 | inferir | cívico-político | alto | D |
-| 20 | soc-1-7-c | Derechos y ambiente | 1.7.1 | distinguir | sociocultural | intermedio | D |
+| 20 | soc-1-7-c | Derechos y ambiente | 1.7.1 | distinguir | sociocultural | intermedio | A |
 | 21 | soc-2-1-a | Costa Rica antigua y pueblos originarios | 2.1.1 | identificar | temporal | intermedio | C |
-| 22 | soc-2-2-a | Costa Rica antigua y pueblos originarios | 2.2.1 | reconocer | espacial | intermedio | C |
-| 23 | soc-2-2-b | Costa Rica antigua y pueblos originarios | 2.2.3 | inferir | temporal | alto | D |
-| 24 | soc-2-3-a | Costa Rica antigua y pueblos originarios | 2.3.2 | distinguir | sociocultural | alto | D |
-| 25 | soc-2-3-b | Costa Rica antigua y pueblos originarios | 2.3.3 | inferir | sociocultural | alto | A |
-| 26 | soc-2-4-a | Costa Rica antigua y pueblos originarios | 2.4.2 | distinguir | sociocultural | intermedio | B |
-| 27 | soc-2-4-b | Costa Rica antigua y pueblos originarios | 2.4.3 | inferir | cívico-político | alto | D |
+| 22 | soc-2-2-a | Costa Rica antigua y pueblos originarios | 2.2.1 | reconocer | espacial | intermedio | D |
+| 23 | soc-2-2-b | Costa Rica antigua y pueblos originarios | 2.2.3 | inferir | temporal | alto | C |
+| 24 | soc-2-3-a | Costa Rica antigua y pueblos originarios | 2.3.2 | distinguir | sociocultural | alto | C |
+| 25 | soc-2-3-b | Costa Rica antigua y pueblos originarios | 2.3.3 | inferir | sociocultural | alto | D |
+| 26 | soc-2-4-a | Costa Rica antigua y pueblos originarios | 2.4.2 | distinguir | sociocultural | intermedio | A |
+| 27 | soc-2-4-b | Costa Rica antigua y pueblos originarios | 2.4.3 | inferir | cívico-político | alto | B |
 | 28 | soc-2-5-a | Costa Rica antigua y pueblos originarios | 2.5.2 | distinguir | sociocultural | intermedio | D |
-| 29 | soc-2-5-b | Costa Rica antigua y pueblos originarios | 2.5.3 | inferir | sociocultural | alto | C |
+| 29 | soc-2-5-b | Costa Rica antigua y pueblos originarios | 2.5.3 | inferir | sociocultural | alto | D |
 | 30 | soc-2-6-a | Conquista y colonia | 2.6.1 | reconocer | temporal | intermedio | C |
 | 31 | soc-2-6-b | Conquista y colonia | 2.6.2 | distinguir | temporal | alto | B |
 | 32 | soc-2-7-a | Conquista y colonia | 2.7.1 | ubicar | espacial | intermedio | C |
-| 33 | soc-2-8-a | Conquista y colonia | 2.8.2 | distinguir | sociocultural | intermedio | C |
-| 34 | soc-2-8-b | Conquista y colonia | 2.8.1 | reconocer | temporal | alto | D |
-| 35 | soc-2-9-a | Conquista y colonia | 2.9.1 | reconocer | temporal | intermedio | C |
+| 33 | soc-2-8-a | Conquista y colonia | 2.8.2 | distinguir | sociocultural | intermedio | A |
+| 34 | soc-2-8-b | Conquista y colonia | 2.8.1 | reconocer | temporal | intermedio | B |
+| 35 | soc-2-9-a | Conquista y colonia | 2.9.1 | reconocer | temporal | intermedio | D |
 | 36 | soc-2-9-b | Conquista y colonia | 2.9.2 | distinguir | sociocultural | alto | C |
-| 37 | soc-2-10-a | Independencia y Estado | 2.10.2 | distinguir | temporal | alto | A |
-| 38 | soc-2-10-b | Independencia y Estado | 2.10.3 | inferir | cívico-político | intermedio | D |
-| 39 | soc-2-11-a | Independencia y Estado | 2.11.1 | reconocer | cívico-político | alto | D |
-| 40 | soc-2-12-a | Independencia y Estado | 2.12.2 | distinguir | espacial | alto | B |
-| 41 | soc-2-12-b | Independencia y Estado | 2.12.3 | inferir | cívico-político | alto | D |
-| 42 | soc-2-13-a | Independencia y Estado | 2.13.1 | relacionar | cívico-político | intermedio | A |
-| 43 | soc-2-14-a | Campaña Nacional | 2.14.1 | inferir | temporal | alto | D |
-| 44 | soc-2-14-b | Campaña Nacional | 2.14.2 | distinguir | temporal | alto | B |
+| 37 | soc-2-10-a | Independencia y Estado | 2.10.2 | distinguir | temporal | alto | C |
+| 38 | soc-2-10-b | Independencia y Estado | 2.10.3 | inferir | cívico-político | intermedio | A |
+| 39 | soc-2-11-a | Independencia y Estado | 2.11.1 | inferir | cívico-político | alto | D |
+| 40 | soc-2-12-a | Independencia y Estado | 2.12.2 | distinguir | espacial | alto | D |
+| 41 | soc-2-12-b | Independencia y Estado | 2.12.3 | inferir | cívico-político | alto | B |
+| 42 | soc-2-13-a | Independencia y Estado | 2.13.1 | reconocer | cívico-político | intermedio | C |
+| 43 | soc-2-14-a | Campaña Nacional | 2.14.1 | inferir | temporal | alto | A |
+| 44 | soc-2-14-b | Campaña Nacional | 2.14.2 | distinguir | temporal | alto | D |
 | 45 | soc-2-15-a | Campaña Nacional | 2.15.1 | ubicar | temporal | intermedio | B |
-| 46 | soc-2-15-b | Campaña Nacional | 2.15.2 | relacionar | espacial | alto | A |
-| 47 | soc-2-16-a | Campaña Nacional | 2.16.1 | relacionar | sociocultural | intermedio | D |
-| 48 | soc-2-16-b | Campaña Nacional | 2.16.1 | relacionar | cívico-político | alto | B |
-| 49 | soc-2-17-a | Reformas y logros sociales | 2.17.1 | distinguir | temporal | intermedio | D |
+| 46 | soc-2-15-b | Campaña Nacional | 2.15.2 | relacionar | espacial | alto | B |
+| 47 | soc-2-16-a | Campaña Nacional | 2.16.1 | relacionar | sociocultural | intermedio | A |
+| 48 | soc-2-16-b | Campaña Nacional | 2.16.1 | relacionar | cívico-político | alto | D |
+| 49 | soc-2-17-a | Reformas y logros sociales | 2.17.1 | distinguir | temporal | intermedio | B |
 | 50 | soc-2-17-b | Reformas y logros sociales | 2.17.2 | inferir | cívico-político | alto | D |
-| 51 | soc-2-18-a | Reformas y logros sociales | 2.18.1 | relacionar | sociocultural | intermedio | A |
-| 52 | soc-2-18-b | Reformas y logros sociales | 2.18.2 | inferir | cívico-político | alto | B |
-| 53 | soc-2-19-a | Derechos y retos de hoy | 2.19.1 | distinguir | cívico-político | intermedio | A |
-| 54 | soc-2-19-b | Derechos y retos de hoy | 2.19.1 | distinguir | cívico-político | alto | A |
+| 51 | soc-2-18-a | Reformas y logros sociales | 2.18.1 | relacionar | sociocultural | intermedio | D |
+| 52 | soc-2-18-b | Reformas y logros sociales | 2.18.2 | inferir | cívico-político | alto | A |
+| 53 | soc-2-19-a | Derechos y retos de hoy | 2.19.1 | distinguir | cívico-político | intermedio | D |
+| 54 | soc-2-19-b | Derechos y retos de hoy | 2.19.1 | distinguir | cívico-político | alto | B |
 | 55 | soc-2-20-a | Derechos y retos de hoy | 2.20.2 | inferir | cívico-político | alto | B |
-| 56 | soc-2-20-b | Derechos y retos de hoy | 2.20.1 | relacionar | cívico-político | intermedio | B |
-| 57 | soc-2-21-a | Derechos y retos de hoy | 2.21.1 | distinguir | cívico-político | intermedio | A |
-| 58 | soc-2-21-b | Derechos y retos de hoy | 2.21.2 | inferir | cívico-político | alto | A |
-| 59 | soc-2-22-a | Derechos y retos de hoy | 2.22.1 | distinguir | cívico-político | intermedio | B |
+| 56 | soc-2-20-b | Derechos y retos de hoy | 2.20.1 | relacionar | cívico-político | intermedio | A |
+| 57 | soc-2-21-a | Derechos y retos de hoy | 2.21.1 | distinguir | cívico-político | intermedio | B |
+| 58 | soc-2-21-b | Derechos y retos de hoy | 2.21.2 | inferir | cívico-político | alto | B |
+| 59 | soc-2-22-a | Derechos y retos de hoy | 2.22.1 | distinguir | cívico-político | intermedio | A |
 | 60 | soc-2-22-b | Derechos y retos de hoy | 2.22.2 | inferir | sociocultural | alto | B |
 
 ## Ítem por ítem
@@ -129,7 +129,7 @@ En la escuela de Santa Cruz, el grupo de sexto investigó por qué el parque del
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | Sirven sobre todo para conocer cómo se fundó y creció el barrio. | confunde una herramienta de la investigación, el pasado del lugar, con el propósito de convivir mejor |
-| B | Enseñan que las reglas municipales resuelven solas cualquier problema. | cree que basta con la norma, sin la participación de la comunidad |
+| B | Enseñan que las reglas municipales resuelven por sí mismas los problemas. | cree que basta con la norma, sin la participación de la comunidad |
 | C | Ayudan a entender un problema común y a acordar cómo resolverlo. | **Correcta** |
 | D | Permiten que la escuela decida por las familias cómo usar el parque. | confunde participar y proponer con imponer una decisión |
 
@@ -145,9 +145,9 @@ En la escuela de Santa Cruz, el grupo de sexto investigó por qué el parque del
 
 Considere la siguiente información:
 
-Antes de las elecciones del gobierno estudiantil, Daniela leyó en un chat que uno de los partidos iba a eliminar el recreo largo. En Educación Cívica había aprendido a revisar de dónde viene una noticia. Le preguntó al Tribunal Electoral Estudiantil y leyó el plan de trabajo del partido: la noticia era falsa. Luego lo explicó con respeto en el mismo chat.
+Antes de las elecciones del gobierno estudiantil, Daniela leyó en un chat que uno de los partidos iba a eliminar el recreo largo. Le preguntó al Tribunal Electoral Estudiantil y leyó el plan de trabajo del partido: la noticia era falsa. Luego lo explicó con respeto en el mismo chat.
 
-**A partir de la información anterior, ¿qué actitud ciudadana promovió en Daniela la Educación Cívica?**
+**A partir de la información anterior, ¿qué actitud ciudadana, de las que promueve la Educación Cívica, mostró Daniela?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
@@ -197,10 +197,10 @@ Costa Rica tiene costas en el mar Caribe y en el océano Pacífico, y forma part
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Ventaja: riesgo de sismos. Desventaja: gran variedad de especies. | invierte la ventaja y la desventaja |
+| A | Ventaja: salida a dos mares. Desventaja: riesgo de sequías. | toma una ventaja del texto, pero agrega una desventaja que el texto no menciona |
 | B | Ventaja: gran variedad de especies. Desventaja: riesgo de sismos. | **Correcta** |
-| C | Ventaja: salida a dos mares. Desventaja: gran variedad de especies. | toma la biodiversidad, que es una ventaja, como si fuera un problema |
-| D | Ventaja: paso de tormentas. Desventaja: salida a dos mares. | confunde un riesgo natural con un beneficio y al revés |
+| C | Ventaja: suelos buenos para el café. Desventaja: paso de tormentas. | agrega una ventaja que el texto no atribuye a la posición |
+| D | Ventaja: clima frío en las costas. Desventaja: paso de tormentas. | inventa una ventaja falsa: las costas del país son cálidas |
 
 **Resolución:** Que se encuentren especies del norte y del sur es una ventaja: por eso el país tiene tanta biodiversidad. Estar sobre placas que se mueven es una desventaja, porque trae sismos.
 
@@ -220,10 +220,10 @@ Cuando un huracán afecta a un país de Centroamérica, los gobiernos vecinos su
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La cercanía hace que los países vecinos compartan un mismo gobierno. | confunde la integración regional con unirse en un solo país |
-| B | La cercanía facilita que los países cooperen entre sí. | **Correcta** |
+| A | La cercanía facilita que los países cooperen entre sí. | **Correcta** |
+| B | La cercanía hace que los países vecinos compartan un mismo gobierno. | confunde la integración regional con unirse en un solo país |
 | C | Estar entre dos mares hace innecesario el comercio con los vecinos. | confunde la ventaja marítima con no necesitar a la región |
-| D | Los acuerdos se deben solo al idioma común y no a la cercanía. | ignora el factor geográfico que señala el texto |
+| D | Los acuerdos se deben al idioma común más que a la cercanía. | ignora el factor geográfico que señala el texto |
 
 **Resolución:** Los países del istmo están cerca y comparten fronteras y rutas, y eso les permite ayudarse y tomar acuerdos. Cada país mantiene su propio gobierno: lo que comparten es la cooperación.
 
@@ -239,13 +239,13 @@ Lea el siguiente texto:
 
 Durante una gira al volcán Irazú, Keylor observó desde lo alto una larga cadena de montañas y volcanes, unidos unos con otros, que se extendía por muchos kilómetros. El guía explicó que esa formación separa las aguas que corren hacia el mar Caribe de las que bajan hacia el océano Pacífico.
 
-**La forma de relieve que observó Keylor corresponde a una**
+**La forma de relieve que observó Keylor se conoce como**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | cordillera. | **Correcta** |
-| B | llanura. | confunde una zona plana y baja con una cadena de montañas |
-| C | valle fluvial. | confunde la zona baja entre montañas, por donde corre un río, con las montañas mismas |
+| B | valle. | confunde la zona baja entre montañas con las montañas mismas |
+| C | llanura costera. | confunde una zona plana junto al mar con una cadena de montañas |
 | D | meseta. | confunde una zona alta y plana con una cadena de montañas y volcanes |
 
 **Resolución:** Una cadena larga de montañas y volcanes unidos es una cordillera. La del Irazú es la Cordillera Volcánica Central, que reparte las aguas entre las dos vertientes del país.
@@ -260,7 +260,7 @@ Durante una gira al volcán Irazú, Keylor observó desde lo alto una larga cade
 
 Considere la siguiente información:
 
-En una clase de Estudios Sociales, el grupo de Daniel comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:
+En una clase de Estudios Sociales, el grupo de Randall comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:
 
 | Característica | Costa 1 | Costa 2 |
 | --- | --- | --- |
@@ -271,10 +271,10 @@ En una clase de Estudios Sociales, el grupo de Daniel comparó las dos costas de
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La costa 1 es la del Pacífico y la costa 2 es la del Caribe. | **Correcta** |
-| B | La costa 1 es la del Caribe y la costa 2 es la del Pacífico. | invierte las características de las dos costas |
-| C | Las dos son del Pacífico: la costa 1 al norte y la 2 al sur. | cree que las diferencias son de una sola costa |
-| D | Las dos son del Caribe: la costa 1 al norte y la 2 al sur. | cree que las diferencias son de una sola costa y además la equivoca |
+| A | La costa 1 es la del Caribe, con la península de Osa. | invierte las costas y además ubica en el Caribe una península del Pacífico |
+| B | La costa 2 es la del Pacífico, con el golfo de Nicoya. | invierte las costas: la casi recta es la del Caribe |
+| C | La costa 2 es la del Caribe, con la península de Nicoya. | acierta que la costa 2 es la del Caribe, pero le pone una península del Pacífico |
+| D | La costa 1 es la del Pacífico, con el golfo Dulce. | **Correcta** |
 
 **Resolución:** La costa del Pacífico es larga y muy recortada, con golfos como el de Nicoya y penínsulas como la de Osa. La del Caribe es más corta y casi recta.
 
@@ -297,7 +297,7 @@ En el Valle Central, rodeado de montañas, buena parte de los suelos se formó c
 | A | Las partes altas atraen más gente, porque el frío ayuda al cultivo de café. | invierte la relación entre altura, clima y población |
 | B | El relieve no influye: los poblados crecen donde hubo erupciones recientes. | confunde el origen del suelo con una causa de la población |
 | C | Los terrenos poco empinados y de buen suelo facilitan poblar y sembrar. | **Correcta** |
-| D | Las montañas impiden cualquier actividad humana en todo el país. | generaliza a partir de las partes más altas |
+| D | Las ciudades y carreteras hicieron que el clima del valle sea templado. | confunde la consecuencia con la causa |
 
 **Resolución:** En el Valle Central el terreno, el suelo y el clima ayudan a vivir y a sembrar, por eso ahí hay tantas ciudades y cafetales. En las partes altas y empinadas de Talamanca es más difícil, y hay menos poblados.
 
@@ -334,18 +334,18 @@ Para un trabajo de clase, Ana Lucía pintó en un mapa de Costa Rica un área qu
 
 Lea la siguiente información:
 
-Dos estudiantes discuten en clase. Camila asegura que una región siempre tiene los mismos límites que una provincia. Esteban dice que los límites de una región dependen de las características que se escojan para delimitarla, como el clima, el relieve o las actividades económicas de la zona.
+Dos estudiantes discuten en clase. Camila asegura que una región siempre tiene los mismos límites que una provincia. Esteban dice que una región solo se puede delimitar según el clima de la zona, sin tomar en cuenta el relieve ni las actividades de la gente.
 
 **De acuerdo con la información anterior, ¿cuál afirmación sobre el concepto de región es correcta?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Camila acierta, porque una región coincide con una provincia. | confunde la región con una división administrativa |
-| B | Esteban acierta: una región se define por rasgos en común. | **Correcta** |
-| C | Esteban acierta, pero solo si el rasgo escogido es el clima. | reduce las características de una región a una sola |
-| D | Ninguno acierta, porque las regiones no tienen ningún límite. | cree que una región no se puede delimitar |
+| A | Camila acierta, porque las regiones siguen los límites provinciales. | confunde la región con una división administrativa |
+| B | Ninguno acierta: los rasgos escogidos marcan los límites. | **Correcta** |
+| C | Esteban acierta, porque el clima es lo único que define una región. | reduce las características de una región a una sola |
+| D | Los dos aciertan, porque cada uno usa un criterio distinto. | cree que los dos tienen razón, cuando los dos se equivocan |
 
-**Resolución:** Una región se delimita por las características que comparten sus partes, y esas pueden ser naturales o económicas. Por eso no tiene que coincidir con una provincia.
+**Resolución:** Una región se delimita con las características que se escojan: el clima, el relieve o las actividades económicas, entre otras. Por eso no tiene que coincidir con una provincia ni depender solo del clima.
 
 ### 11. soc-1-4-c · Estudios Sociales y geografía · alto
 
@@ -380,7 +380,7 @@ Costa Rica se organiza en seis regiones socioeconómicas, como la Chorotega, la 
 
 Lea la siguiente información:
 
-La maestra de Sebastián notó señales de que él estaba siendo maltratado y que tenía miedo de volver a su casa. Siguiendo el protocolo de la escuela, la directora reportó de inmediato la situación a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en peligro.
+La maestra de Sebastián notó que él llegaba triste, con miedo de volver a su casa, y que sus derechos podían estar en peligro. Siguiendo el protocolo de la escuela, la directora informó de inmediato a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en riesgo.
 
 **¿A cuál institución se refiere la información anterior?**
 
@@ -393,7 +393,7 @@ La maestra de Sebastián notó señales de que él estaba siendo maltratado y qu
 
 **Resolución:** El PANI es la institución que protege a niñas, niños y adolescentes cuando sus derechos están en riesgo, y la escuela tiene el deber de avisarle. La Defensoría vigila a las instituciones públicas y el IMAS da ayudas económicas.
 
-### 13. soc-1-5-b · Derechos y ambiente · alto
+### 13. soc-1-5-b · Derechos y ambiente · intermedio
 
 **Afirmación 1.5:** Comprende la importancia de las instituciones promotoras de los derechos de las personas estudiantes: MEP, PANI, Ebais, Defensoría de los Habitantes e IMAS.  
 **Evidencia 1.5.2:** Distingue qué derechos se vulneran a partir de situaciones generales o específicas.  
@@ -432,10 +432,10 @@ En una comunidad de Upala, el Ebais organizó una feria de salud en la escuela. 
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Porque la salud depende solo del trabajo del personal médico. | deja toda la responsabilidad en el Ebais y olvida la de cada persona |
-| B | Porque ayuda a cuidarse y a cuidar a los demás. | **Correcta** |
-| C | Porque así se evita ir al Ebais cuando alguien se enferma. | confunde prevenir con dejar de buscar atención |
-| D | Porque el derecho a la salud protege sobre todo a los adultos. | no ve que la feria era para la niñez de la escuela |
+| A | Porque permite exigir que lo atiendan antes que a los demás. | confunde un derecho con un privilegio |
+| B | Porque lleva a cuidarse uno mismo y a cuidar a los demás. | **Correcta** |
+| C | Porque ese derecho consiste en recibir vacunas y controles. | reduce el derecho a la salud a recibir un servicio |
+| D | Porque cuidar la salud es tarea del Ebais y no de la escuela. | deja toda la responsabilidad en el Ebais y olvida la de cada persona |
 
 **Resolución:** El derecho a la salud no es solo recibir atención: también es aprender a cuidarse. Los estudiantes que hicieron carteles usaron lo aprendido para ayudar a toda la escuela, y eso es actuar como ciudadanos.
 
@@ -455,10 +455,10 @@ En Cañas, Guanacaste, la familia de Yerlin recoge agua de lluvia entre mayo y n
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Viven igual todo el año, porque en todo el país llueve siempre. | generaliza el clima de Limón a Guanacaste |
-| B | Siembran solo en diciembre, cuando hay menos lluvias. | invierte la época que conviene para sembrar |
+| A | Viven igual todo el año, porque en Guanacaste llueve como en Limón. | generaliza el clima de Limón a Guanacaste |
+| B | Siembran en diciembre, cuando hay menos lluvias. | invierte la época que conviene para sembrar |
 | C | Ajustan sus tareas a la época seca y a la lluviosa. | **Correcta** |
-| D | Los árboles botan sus hojas por el frío del invierno. | confunde la época seca de Guanacaste con un invierno frío de otros países |
+| D | Recogen agua de diciembre a abril, cuando más llueve. | confunde la época seca con la lluviosa |
 
 **Resolución:** En Guanacaste hay una época seca muy marcada, así que la familia guarda agua cuando llueve para tenerla en los meses secos. El clima cambia lo que hacen durante el año, y también a las plantas: los árboles botan las hojas para ahorrar agua.
 
@@ -485,7 +485,7 @@ Analice la siguiente información:
 | A | La humedad del lugar 1 favorece plantas que necesitan mucha agua. | **Correcta** |
 | B | El calor del lugar 2 hace que sus árboles conserven las hojas todo el año. | invierte lo que dice la tabla sobre los árboles del lugar 2 |
 | C | La ganadería del lugar 2 es la causa de que su clima sea cálido. | confunde una actividad humana con la causa del clima |
-| D | La neblina del lugar 1 impide cualquier actividad humana allí. | olvida que la tabla menciona la observación de aves |
+| D | El lugar 2 tiene más especies de plantas porque es más cálido. | saca una conclusión que la tabla no permite |
 
 **Resolución:** Los musgos, helechos y orquídeas necesitan humedad casi todo el año, y eso es lo que tiene el lugar 1. En el lugar 2, los meses secos hacen que los árboles boten las hojas para ahorrar agua.
 
@@ -505,10 +505,10 @@ En una cuenca, varias fincas cortaron los árboles que crecían a la orilla del 
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Los peces se fueron porque el río llevaba más agua en verano. | lee al revés lo que pasó con el caudal |
-| B | Sembrar hasta la orilla aumentó las especies que viven en el río. | invierte el efecto que describe el texto |
+| A | Los peces se fueron y por eso el río lleva menos agua en verano. | confunde la causa con la consecuencia |
+| B | Los cultivos junto al río protegen el suelo igual que los árboles. | cree que cualquier planta cumple la función del bosque de la orilla |
 | C | Quitar el bosque junto al río dañó el hogar de muchas especies. | **Correcta** |
-| D | El agua turbia se debe solo a los aguaceros, no a las fincas. | no relaciona la tierra suelta sin árboles con el agua turbia |
+| D | El agua turbia viene de los aguaceros y no tiene que ver con las fincas. | no relaciona la tierra suelta sin árboles con el agua turbia |
 
 **Resolución:** Los árboles de la orilla protegen el suelo y dan sombra y alimento a los animales del río. Al cortarlos, la tierra cae al agua, el río se seca más en verano y las especies pierden su hogar.
 
@@ -551,10 +551,10 @@ En una playa del Pacífico, los vecinos, los dueños de restaurantes y los pesca
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Porque así cada grupo limpiaba solo el frente de su negocio. | cambia un compromiso común por esfuerzos aislados |
-| B | Porque la Bandera Azul obliga a cerrar la playa a los turistas. | contradice el texto, que habla de más visitantes |
+| A | Porque su fin principal era que llegaran más turistas a los negocios. | reduce el acuerdo a su efecto económico |
+| B | Porque una ley obligaba a cada grupo a limpiar su parte de la playa. | confunde un acuerdo voluntario con una obligación legal |
 | C | Porque los pescadores eran los únicos que ensuciaban la playa. | busca un culpable en vez de ver la responsabilidad compartida |
-| D | Porque cuidarlo juntos benefició a la naturaleza y al pueblo. | **Correcta** |
+| D | Porque cuidarla juntos benefició a la naturaleza y al pueblo. | **Correcta** |
 
 **Resolución:** El acuerdo funcionó porque todos se comprometieron a lo mismo. La playa quedó limpia, se protegió la vida del mar y la comunidad ganó con más visitantes.
 
@@ -574,10 +574,10 @@ Para la feria científica, el grupo de Allan investigó qué hacen las familias 
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Quemar las cáscaras y las hojas para no atraer moscas. | cree que quemar elimina el problema, pero contamina el aire |
-| B | Enterrar las latas para que no se vean en el patio. | esconde el residuo en vez de aprovecharlo |
-| C | Juntar todo en una sola bolsa para el camión. | no separa lo que se puede reciclar o aprovechar |
-| D | Transformar los restos orgánicos en tierra fértil. | **Correcta** |
+| A | Transformar los restos orgánicos en tierra fértil. | **Correcta** |
+| B | Quemar las cáscaras y las hojas para no atraer moscas. | cree que quemar elimina el problema, pero contamina el aire |
+| C | Enterrar las latas para que no se vean en el patio. | esconde el residuo en vez de aprovecharlo |
+| D | Juntar todo en una sola bolsa para el camión. | no separa lo que se puede reciclar o aprovechar |
 
 **Resolución:** Quemar o enterrar residuos contamina el aire y el suelo. Convertir los restos de comida en abono reduce la basura y le devuelve nutrientes a la tierra.
 
@@ -602,9 +602,9 @@ Analice la siguiente información:
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | 1, 2 y 3 | cree que primero vinieron las aldeas y después la vida en movimiento |
-| B | 2, 3 y 1 | pone los cacicazgos antes de que existieran las aldeas agrícolas |
+| B | 1, 3 y 2 | cree que la vida en movimiento fue la más reciente |
 | C | 2, 1 y 3 | **Correcta** |
-| D | 3, 1 y 2 | invierte el orden y pone primero la forma de vida más compleja |
+| D | 2, 3 y 1 | pone los cacicazgos antes de que existieran las aldeas agrícolas |
 
 **Resolución:** Primero hubo grupos que se movían para cazar y recolectar. Después, al aprender a sembrar, formaron aldeas, y más tarde surgieron los cacicazgos, con jefes y grandes obras como las de Guayabo.
 
@@ -626,8 +626,8 @@ En un museo, el grupo de Ariana vio vasijas de cerámica pintada con varios colo
 | :---: | --- | --- |
 | A | Huetar | ubica en el noroeste a un pueblo que vivía en el centro del país |
 | B | Cabécar | ubica en el noroeste a un pueblo de Talamanca y el Caribe sur |
-| C | Chorotega | **Correcta** |
-| D | Maleku | ubica en la península de Nicoya a un pueblo de las llanuras del norte |
+| C | Maleku | ubica en la península de Nicoya a un pueblo de las llanuras del norte |
+| D | Chorotega | **Correcta** |
 
 **Resolución:** Los chorotegas vivieron en la península de Nicoya y el resto de Guanacaste, y son conocidos por su cerámica de varios colores. Los huetares vivían en el centro del país, los cabécares en Talamanca y los malekus en las llanuras del norte.
 
@@ -647,10 +647,10 @@ Para muchos pueblos de la Costa Rica antigua, la naturaleza tenía un valor sagr
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Tallaban animales solo para decorar, sin ningún significado especial. | reduce el arte a un adorno y olvida su sentido sagrado |
-| B | La naturaleza era vista solo como fuente de alimento y materiales. | contradice el valor sagrado que describe el texto |
-| C | Los animales tallados mostraban las especies que criaban en las aldeas. | confunde el símbolo con la crianza de animales |
-| D | Sus creencias se reflejaban en su arte y en sus formas de autoridad. | **Correcta** |
+| A | Los jefes eran quienes tallaban las figuras de animales en piedra. | agrega una regla que el texto no menciona |
+| B | Tallaban animales para enseñar a los jóvenes a cazarlos. | confunde el sentido sagrado con un uso práctico |
+| C | Sus creencias se reflejaban en su arte y en sus formas de autoridad. | **Correcta** |
+| D | Los animales tallados mostraban las especies que criaban en las aldeas. | confunde el símbolo con la crianza de animales |
 
 **Resolución:** Los animales tallados y pintados no eran solo adornos: representaban fuerza y protección. Por eso aparecían en objetos de ceremonia y en los adornos de los jefes, lo que muestra cómo sus creencias se unían con su vida social.
 
@@ -666,7 +666,7 @@ Analice la siguiente tabla:
 
 | Aporte | Ejemplo en la Costa Rica de hoy |
 | --- | --- |
-| 1 | El rice and beans, el patí y el calipso de Limón |
+| 1 | El rice and beans, el patí y el pan bon de Limón |
 | 2 | La chicha de maíz, el uso ceremonial del cacao y el saber sobre plantas medicinales |
 | 3 | El arroz cantonés y el chop suey, que se comen en todo el país |
 
@@ -676,10 +676,10 @@ Analice la siguiente tabla:
 | :---: | --- | --- |
 | A | 1 pueblos originarios, 2 afrodescendiente y 3 asiática | confunde los aportes de la población afrodescendiente con los de los pueblos originarios |
 | B | 1 afrodescendiente, 2 asiática y 3 pueblos originarios | confunde los aportes de los pueblos originarios con los de la población china |
-| C | 1 asiática, 2 pueblos originarios y 3 afrodescendiente | confunde la comida afrocaribeña con la de origen chino |
-| D | 1 afrodescendiente, 2 pueblos originarios y 3 asiática | **Correcta** |
+| C | 1 afrodescendiente, 2 pueblos originarios y 3 asiática | **Correcta** |
+| D | 1 asiática, 2 pueblos originarios y 3 afrodescendiente | confunde la comida afrocaribeña con la de origen chino |
 
-**Resolución:** El rice and beans, el patí y el calipso vienen de la población afrodescendiente de Limón. La chicha de maíz y el saber sobre plantas son de los pueblos originarios, y el arroz cantonés llegó con la población china.
+**Resolución:** El rice and beans, el patí y el pan bon vienen de la población afrodescendiente de Limón. La chicha de maíz y el saber sobre plantas son de los pueblos originarios, y el arroz cantonés llegó con la población china.
 
 ### 25. soc-2-3-b · Costa Rica antigua y pueblos originarios · alto
 
@@ -697,10 +697,10 @@ En Talamanca, algunas familias bribris siembran cacao bajo la sombra de otros á
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Ofrece una forma de producir que protege la naturaleza. | **Correcta** |
-| B | Demuestra que el cacao solo se puede cultivar en Talamanca. | generaliza a partir de un ejemplo de un lugar |
-| C | Reemplaza el trabajo de las personas productoras de otras zonas. | confunde compartir un saber con quitarle el trabajo a otros |
-| D | Sirve sobre todo para vender más cacao en el extranjero. | reduce el aporte a lo comercial y olvida el cuidado del ambiente |
+| A | Demuestra que el mejor cacao del país se cultiva en Talamanca. | generaliza a partir de un ejemplo de un lugar |
+| B | Reemplaza el trabajo de las personas productoras de otras zonas. | confunde compartir un saber con quitarle el trabajo a otros |
+| C | Sirve sobre todo para vender más cacao en el extranjero. | reduce el aporte a lo comercial y olvida el cuidado del ambiente |
+| D | Ofrece una forma de producir que protege la naturaleza. | **Correcta** |
 
 **Resolución:** Sembrar cacao bajo la sombra del bosque permite producir sin destruirlo. Por eso ese saber ancestral sirve de ejemplo a otras personas productoras y fortalece la identidad del país.
 
@@ -714,18 +714,18 @@ En Talamanca, algunas familias bribris siembran cacao bajo la sombra de otros á
 
 Lea el siguiente texto:
 
-En una comunidad cabécar de la zona de Chirripó, los estudiantes caminan varias horas por senderos de montaña para llegar a la escuela. Cuando llueve fuerte, los ríos crecen y no pueden cruzarlos. El centro de salud más cercano queda a medio día de camino.
+En un territorio boruca, muchas familias hacen máscaras de madera y tejidos teñidos con plantas. Un comerciante les compra cada máscara a un precio bajo y luego la vende cara en San José. Además, en algunas tiendas se venden copias hechas en fábrica como si fueran piezas borucas.
 
-**Según el texto anterior, ¿cuál desafío enfrenta esa comunidad?**
+**De acuerdo con el texto anterior, ¿cuál desafío enfrenta esa comunidad?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La pérdida de su lengua por el uso del español en la escuela. | menciona un reto real de otros casos, pero el texto no habla de él |
-| B | El difícil acceso a servicios básicos de educación y salud. | **Correcta** |
-| C | La falta de interés de las familias por la salud y el estudio. | culpa a la comunidad cuando el problema es el acceso |
-| D | La gran cantidad de turistas que visitan la montaña. | agrega un problema que el texto no plantea |
+| A | El poco pago por sus artesanías y las imitaciones. | **Correcta** |
+| B | La pérdida de su lengua por el uso del español en la escuela. | menciona un reto real de otros casos, pero el texto no habla de él |
+| C | La falta de interés de los jóvenes por aprender el oficio. | agrega un problema que el texto no plantea |
+| D | La escasez de plantas para teñir lo que tejen. | confunde un material del oficio con el problema que describe el texto |
 
-**Resolución:** El texto habla de caminos largos, ríos que crecen y un centro de salud lejano. El desafío es el acceso: llegar a la escuela o a una consulta cuesta mucho, y eso afecta el bienestar de la comunidad.
+**Resolución:** El comerciante paga poco por las máscaras y otras tiendas venden imitaciones. Eso le quita a la comunidad el fruto de su trabajo y afecta su bienestar.
 
 ### 27. soc-2-4-b · Costa Rica antigua y pueblos originarios · alto
 
@@ -743,10 +743,10 @@ En varios territorios indígenas, personas que no pertenecen a esos pueblos ocup
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Trasladar a las comunidades a las ciudades para darles servicios. | propone sacarlas de su territorio en vez de respetarlo |
-| B | Enseñar solo español para que todos aprendan lo mismo. | contradice el pedido de enseñar su propia lengua |
-| C | Repartir sus tierras entre todas las personas que viven ahí. | contradice que esas tierras están reservadas para los pueblos originarios |
-| D | Respetar sus tierras y escucharlos en lo que les afecta. | **Correcta** |
+| A | Darles más ayudas económicas sin atender quién ocupa sus tierras. | atiende una necesidad, pero deja sin resolver lo de las tierras |
+| B | Hacer cumplir la ley que los protege y tomar en cuenta su voz. | **Correcta** |
+| C | Enseñarles en español para que puedan reclamar sus derechos. | cree que quitarles su lengua los ayuda, cuando ellos piden lo contrario |
+| D | Dejar que cada comunidad resuelva sola los conflictos de tierras. | pasa a las comunidades una responsabilidad de toda la sociedad |
 
 **Resolución:** Garantizar los derechos de los pueblos originarios significa respetar sus tierras, su lengua y su derecho a ser consultados. Ese es un reto de todo el país, no solo de ellos.
 
@@ -790,9 +790,9 @@ En Costa Rica, además del español, se hablan lenguas indígenas como el bribri
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | Complica la identidad, porque un país debe tener una sola lengua. | cree que la identidad exige que todos hablen igual |
-| B | Tiene valor nada más en las comunidades donde se habla cada una. | no ve que esas lenguas son parte de la identidad de todo el país |
-| C | Muestra que el país se forma con muchos pueblos que conviven. | **Correcta** |
-| D | Sirve sobre todo para atraer a turistas de otros países. | reduce la diversidad a un uso económico |
+| B | Tiene valor sobre todo en las comunidades donde se habla cada una. | no ve que esas lenguas son parte de la identidad de todo el país |
+| C | Sirve sobre todo para atraer a turistas de otros países. | reduce la diversidad a un uso económico |
+| D | Muestra que el país se forma con muchos pueblos que conviven. | **Correcta** |
 
 **Resolución:** Que se hablen varias lenguas muestra que Costa Rica es un país multiétnico y plurilingüe. Enseñarlas en las escuelas ayuda a que esas culturas sigan vivas y sean parte de la identidad de todos.
 
@@ -812,14 +812,14 @@ Analice la siguiente información:
 | 1524 | Se funda Villa Bruselas, cerca del golfo de Nicoya. |
 | 1563 | Juan Vázquez de Coronado funda Cartago, en el valle del Guarco. |
 
-Estos hechos muestran cómo los españoles fueron recorriendo y ocupando el territorio.
+La tabla resume tres hechos ocurridos en lo que hoy es el territorio de Costa Rica.
 
 **De acuerdo con la información anterior, ¿qué proceso de la historia de Costa Rica se ubica en esas fechas y lugares?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | El periodo colonial | confunde la llegada y la toma del territorio con el periodo que vino después |
-| B | La época de la independencia | confunde la llegada de los españoles con el tiempo anterior a ella |
+| B | La época de la independencia | confunde la llegada de los españoles con un hecho que ocurrió casi tres siglos después |
 | C | La conquista española | **Correcta** |
 | D | La historia antigua | confunde la llegada de los españoles con el tiempo anterior a ella |
 
@@ -865,7 +865,7 @@ Analice la siguiente información:
 | 3 | De la década de 1570 a 1821 |
 | 4 | De 1821 en adelante |
 
-En una época de la historia de Costa Rica, el territorio era una provincia de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.
+En una época de la historia de Costa Rica, el territorio era una provincia de la Capitanía General de Guatemala, bajo el dominio de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.
 
 **¿En cuál tramo se ubica la época descrita?**
 
@@ -876,7 +876,7 @@ En una época de la historia de Costa Rica, el territorio era una provincia de E
 | C | Tramo 3 | **Correcta** |
 | D | Tramo 4 | ubica la época después de la independencia |
 
-**Resolución:** Esa época es la colonia: Costa Rica era una provincia de España y Cartago, su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.
+**Resolución:** Esa época es la colonia: Costa Rica era una provincia de la Capitanía General de Guatemala, bajo el dominio español, y Cartago era su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.
 
 ### 33. soc-2-8-a · Conquista y colonia · intermedio
 
@@ -894,14 +894,14 @@ Valentina dibujó el centro de su pueblo: una plaza en el medio, la iglesia fren
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La división del territorio en siete provincias. | confunde un aporte colonial con una organización de la vida republicana |
-| B | El cultivo de café alrededor de las ciudades. | ubica en la colonia un cultivo que se extendió después de la independencia |
-| C | La organización de los poblados en torno a una plaza. | **Correcta** |
+| A | El trazado en cuadrícula con un espacio central. | **Correcta** |
+| B | La división del territorio en siete provincias. | confunde un aporte colonial con una organización de la vida republicana |
+| C | El cultivo de café alrededor de las ciudades. | ubica en la colonia un cultivo que se extendió después de la independencia |
 | D | La costumbre de hacer ferias en la plaza cada domingo. | confunde un uso actual de la plaza con la forma colonial de trazar el pueblo |
 
-**Resolución:** Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias y el café llegaron después, en la vida republicana.
+**Resolución:** Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias son de la vida republicana, y el café, aunque llegó al final de la colonia, se extendió después de la independencia.
 
-### 34. soc-2-8-b · Conquista y colonia · alto
+### 34. soc-2-8-b · Conquista y colonia · intermedio
 
 **Afirmación 2.8:** Reconoce las principales características de la colonia en Costa Rica y sus aportes a la sociedad actual.  
 **Evidencia 2.8.1:** Reconoce las características económicas, sociales y culturales de la colonia en Costa Rica.  
@@ -918,11 +918,11 @@ En el siglo XVIII, algunos vecinos de Cartago tenían plantaciones de cacao en e
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | Se basaba en fábricas que exportaban chocolate a Europa. | imagina una industria que no existía en la provincia |
-| B | Usaba monedas de oro acuñadas en la ciudad de Cartago. | no ve que el texto dice que se usaban semillas como moneda |
-| C | Tenía al café como el producto más vendido de la provincia. | ubica en la colonia un cultivo que llegó después |
-| D | Dependía de cultivos sostenidos con mano de obra forzada. | **Correcta** |
+| B | Tenía cultivos que se sostenían con mano de obra forzada. | **Correcta** |
+| C | Usaba monedas de oro acuñadas en la ciudad de Cartago. | no ve que el texto dice que se usaban semillas como moneda |
+| D | Tenía al café como el producto más vendido de la provincia. | ubica en el siglo XVIII un cultivo que se volvió el principal hasta después de la independencia |
 
-**Resolución:** El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café llegó mucho después.
+**Resolución:** El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café se volvió el producto principal hasta después de la independencia.
 
 ### 35. soc-2-9-a · Conquista y colonia · intermedio
 
@@ -941,9 +941,9 @@ En la sociedad colonial, los cargos más importantes del gobierno local solo pod
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | todas las personas tenían los mismos derechos ante la ley. | contradice las diferencias entre grupos que describe el texto |
-| B | el trabajo de cada quien dependía solo de su propio esfuerzo. | no ve que el origen decidía qué podía hacer cada persona |
-| C | el origen de cada persona definía sus derechos. | **Correcta** |
-| D | los cargos de gobierno se escogían por votación de todos. | imagina en la colonia una forma de elegir que no existía |
+| B | el trabajo de cada quien dependía de su propio esfuerzo. | no ve que el origen decidía qué podía hacer cada persona |
+| C | los cargos de gobierno se escogían por votación de todos. | imagina en la colonia una forma de elegir que no existía |
+| D | el origen de cada persona definía sus derechos y su labor. | **Correcta** |
 
 **Resolución:** En la colonia, nacer español, mestizo, indígena o africano decidía qué podía hacer cada persona. A eso se le llama estratificación social: una sociedad dividida en grupos con derechos desiguales.
 
@@ -992,9 +992,9 @@ El 15 de setiembre de 1821 se firmó en Guatemala el acta de independencia de Ce
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La necesidad de crear sus propias formas de gobierno. | **Correcta** |
-| B | La llegada de las ideas de libertad desde otros países. | confunde una causa de la independencia con una consecuencia |
-| C | La firma del acta de independencia en Guatemala. | confunde el hecho mismo con lo que provocó después |
+| A | La llegada de las ideas de libertad desde otros países. | confunde una causa de la independencia con una consecuencia |
+| B | La firma del acta de independencia en Guatemala. | confunde el hecho mismo con lo que provocó después |
+| C | La necesidad de crear sus propias formas de gobierno. | **Correcta** |
 | D | El regreso del gobierno de España a la provincia. | contradice que la provincia quedó sin gobierno español |
 
 **Resolución:** Al independizarse, Costa Rica se quedó sin el gobierno español y tuvo que decidir cómo organizarse. Las ideas de libertad que venían de otros países fueron una causa, no una consecuencia.
@@ -1009,16 +1009,16 @@ El 15 de setiembre de 1821 se firmó en Guatemala el acta de independencia de Ce
 
 Lea el siguiente texto:
 
-Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.
+Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Más de doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.
 
 **A partir del texto anterior, ¿cuáles principios de la independencia siguen vigentes en la escuela de Josué?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La obediencia y la disciplina. | confunde el orden escolar con los principios democráticos |
-| B | La tradición y el respeto a los mayores. | confunde valores de convivencia con principios democráticos |
-| C | La libertad de comercio y la propiedad. | escoge ideas económicas que el texto no relaciona con la escuela |
-| D | La participación y la igualdad. | **Correcta** |
+| A | La participación y la igualdad. | **Correcta** |
+| B | La obediencia y la disciplina. | confunde el orden escolar con los principios democráticos |
+| C | La tradición y el respeto a los mayores. | confunde valores de convivencia con principios democráticos |
+| D | La libertad de comercio y la propiedad. | escoge ideas económicas que el texto no relaciona con la escuela |
 
 **Resolución:** Votar es participar en las decisiones, y que todas las candidaturas tengan las mismas reglas es igualdad. Esos principios democráticos nacieron con la independencia y siguen vivos hoy.
 
@@ -1027,21 +1027,21 @@ Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí m
 **Afirmación 2.11:** Reconoce el Pacto de Concordia como elemento fundamental en la organización del Estado Nación costarricense.  
 **Evidencia 2.11.1:** Reconoce la importancia del Pacto de Concordia, la negociación, el diálogo y el acuerdo como pilares del nuevo Estado Nación costarricense.  
 **Bloque:** Costa Rica: su construcción histórica, geográfica y ciudadana  
-**Verbo:** reconocer · **Tipo de contexto:** cívico-político  
+**Verbo:** inferir · **Tipo de contexto:** cívico-político  
 **Tema:** Independencia y Estado · **Subtema:** Pacto de Concordia
 
 Lea el siguiente texto:
 
 Después de la independencia, los pueblos de Costa Rica no estaban de acuerdo: unos querían unirse a México y otros preferían gobernarse solos. Para evitar un enfrentamiento, enviaron representantes a una junta en la que discutieron y, el 1 de diciembre de 1821, firmaron el Pacto de Concordia, que organizó un gobierno provisional.
 
-**Según el texto anterior, ¿por qué el Pacto de Concordia es importante en la organización del Estado costarricense?**
+**A partir del texto anterior, ¿qué enseñanza del Pacto de Concordia sigue siendo útil para la convivencia democrática?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Unió de forma definitiva a Costa Rica con el Imperio mexicano. | confunde una de las posturas en discusión con lo que se acordó |
-| B | Le devolvió a España el gobierno de la provincia de Costa Rica. | contradice que el pacto organizó un gobierno propio |
-| C | Creó un ejército para imponer una sola opinión en los pueblos. | confunde el acuerdo con el uso de la fuerza |
-| D | Mostró que las diferencias se podían resolver dialogando. | **Correcta** |
+| A | Aceptar lo que proponga el pueblo con más habitantes. | confunde el acuerdo con imponer lo que quiere la mayoría |
+| B | Esperar que una autoridad de afuera decida por todos. | confunde la autonomía con depender de México o de España |
+| C | Dejar que cada pueblo se gobierne aparte de los otros. | confunde gobernarse con dividirse |
+| D | Resolver las diferencias conversando y negociando. | **Correcta** |
 
 **Resolución:** Los pueblos pensaban distinto, pero en vez de pelear se sentaron a discutir y firmaron un pacto. Por eso el Pacto de Concordia es un ejemplo de diálogo y negociación en el nacimiento del Estado.
 
@@ -1055,18 +1055,18 @@ Después de la independencia, los pueblos de Costa Rica no estaban de acuerdo: u
 
 Lea el siguiente texto:
 
-El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con el golfo y la península de Nicoya, y también tradiciones como la marimba, los bailes de punto y las comidas de maíz.
+El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con la península de Nicoya, y también tradiciones como la música de marimba, los bailes y las comidas de maíz de esa región.
 
 **De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | La salida al océano Pacífico por el golfo de Nicoya. | confunde un aporte geográfico con uno cultural |
-| B | Las expresiones musicales y de danza de esa zona. | **Correcta** |
-| C | El aumento de las tierras para la ganadería del país. | confunde un aporte económico y territorial con uno cultural |
-| D | La firma de un acuerdo de límites con Nicaragua. | confunde la Anexión con un hecho político posterior |
+| B | El aumento de las tierras para la ganadería del país. | confunde un aporte económico y territorial con uno cultural |
+| C | La firma de un acuerdo de límites con Nicaragua. | confunde la Anexión con un hecho político posterior |
+| D | Las expresiones musicales y de danza de esa zona. | **Correcta** |
 
-**Resolución:** La marimba y los bailes de punto son tradiciones guanacastecas que hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.
+**Resolución:** La música de marimba y los bailes tradicionales guanacastecos hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.
 
 ### 41. soc-2-12-b · Independencia y Estado · alto
 
@@ -1084,10 +1084,10 @@ Cada 25 de julio, en escuelas de todo el país se celebra la Anexión del Partid
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Tiene importancia nada más para la identidad de Guanacaste. | no ve que la fecha se celebra en todo el país |
-| B | Separó a Guanacaste del resto del territorio nacional. | invierte el sentido de la Anexión |
-| C | Es una celebración que nació durante el periodo colonial. | ubica la Anexión en una época anterior a la independencia |
-| D | Une la identidad guanacasteca con la nacional. | **Correcta** |
+| A | Tiene importancia sobre todo para la identidad de Guanacaste. | no ve que la fecha se celebra en todo el país |
+| B | Hace que lo guanacasteco sea parte de lo costarricense. | **Correcta** |
+| C | Separó a Guanacaste del resto del territorio nacional. | invierte el sentido de la Anexión |
+| D | Es una celebración que nació durante el periodo colonial. | ubica la Anexión en una época anterior a la independencia |
 
 **Resolución:** La Anexión se celebra en todo el país y en Guanacaste es una fiesta propia. Eso muestra que unió territorios y también identidades: lo guanacasteco es parte de lo costarricense.
 
@@ -1096,7 +1096,7 @@ Cada 25 de julio, en escuelas de todo el país se celebra la Anexión del Partid
 **Afirmación 2.13:** Comprende el papel de los símbolos nacionales en la consolidación del Estado Nación costarricense: Escudo, Bandera e Himno Nacional.  
 **Evidencia 2.13.1:** Reconoce los símbolos nacionales de Costa Rica: Escudo, Bandera e Himno Nacional, y su significado.  
 **Bloque:** Costa Rica: su construcción histórica, geográfica y ciudadana  
-**Verbo:** relacionar · **Tipo de contexto:** cívico-político  
+**Verbo:** reconocer · **Tipo de contexto:** cívico-político  
 **Tema:** Independencia y Estado · **Subtema:** Símbolos nacionales
 
 Lea la siguiente información:
@@ -1107,9 +1107,9 @@ El Escudo Nacional muestra tres volcanes entre dos mares, con un barco navegando
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Los dos mares | **Correcta** |
-| B | Las siete estrellas | confunde la posición del país con su división en provincias |
-| C | Los tres volcanes | confunde el relieve con la posición entre dos océanos |
+| A | Las siete estrellas | confunde la posición del país con su división en provincias |
+| B | Los tres volcanes | confunde el relieve con la posición entre dos océanos |
+| C | Los dos mares | **Correcta** |
 | D | El sol que sale | escoge un elemento que no representa la ubicación del país |
 
 **Resolución:** Los dos mares del escudo son el Pacífico y el Caribe, y muestran que Costa Rica está entre dos océanos. Las estrellas representan las provincias y los volcanes, el relieve del país.
@@ -1130,10 +1130,10 @@ En 1856, el presidente Juan Rafael Mora llamó a defender el país del ejército
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Porque Costa Rica ganó territorio nicaragüense al final de la guerra. | inventa un resultado territorial que el texto no menciona |
-| B | Porque el ejército pasó a gobernar el país después de 1857. | confunde la defensa del país con un gobierno militar |
-| C | Porque las provincias se dividieron entre quienes apoyaban a Walker. | contradice la unión de todas las provincias que describe el texto |
-| D | Porque la defensa común del país unió a su gente. | **Correcta** |
+| A | Porque enfrentar juntos al invasor unió a la población del país. | **Correcta** |
+| B | Porque Costa Rica ganó territorio nicaragüense al final de la guerra. | inventa un resultado territorial que el texto no menciona |
+| C | Porque el ejército pasó a gobernar el país después de 1857. | confunde la defensa del país con un gobierno militar |
+| D | Porque después de la guerra se abolió el ejército en el país. | confunde la Campaña Nacional con un hecho de 1948 |
 
 **Resolución:** Ante una amenaza externa, gente de todas las provincias luchó por el mismo país. Esa unión fortaleció el sentimiento de ser costarricenses y consolidó al Estado.
 
@@ -1147,16 +1147,16 @@ En 1856, el presidente Juan Rafael Mora llamó a defender el país del ejército
 
 Lea el siguiente texto:
 
-Después de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas, entre ellas soldados, mujeres, niñas y niños, lo que dejó muchas familias sin sostén.
+Después de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas en todo el país, lo que dejó a muchas familias sin sostén.
 
 **La información anterior describe una consecuencia de la Campaña Nacional que fue**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | política, porque provocó un cambio de gobierno. | confunde el efecto en la población con un cambio de gobierno |
-| B | social, porque cambió la vida de la población. | **Correcta** |
-| C | territorial, porque el país perdió parte de su tierra. | inventa una pérdida de territorio que el texto no menciona |
-| D | cultural, porque llegaron costumbres de otros lugares. | confunde el efecto de la epidemia con un cambio de costumbres |
+| B | territorial, porque el país perdió parte de su tierra. | inventa una pérdida de territorio que el texto no menciona |
+| C | cultural, porque llegaron costumbres de otros lugares. | confunde el efecto de la epidemia con un cambio de costumbres |
+| D | social, porque cambió la vida de la población. | **Correcta** |
 
 **Resolución:** El cólera mató a miles de personas y dejó a muchas familias sin quien las sostuviera. Eso cambió la vida de la población: fue una consecuencia social de la guerra.
 
@@ -1209,8 +1209,8 @@ Figura `soc-2-15-via-del-transito.svg`. Texto alternativo: Esquema sin escala de
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Porque así se cortaban los refuerzos para los filibusteros. | **Correcta** |
-| B | Porque era el único camino entre San José y la capital de Nicaragua. | confunde una ruta entre océanos con un camino entre capitales |
+| A | Porque era el único camino entre San José y la capital de Nicaragua. | confunde una ruta entre océanos con un camino entre capitales |
+| B | Porque así se cortaban los refuerzos para los filibusteros. | **Correcta** |
 | C | Porque por esa ruta salía el café que Costa Rica vendía a Europa. | cambia el sentido militar de la ruta por uno comercial |
 | D | Porque de esa forma el río San Juan pasó a ser costarricense. | confunde el control militar de la ruta con un cambio de fronteras |
 
@@ -1232,10 +1232,10 @@ Francisca Carrasco, conocida como Pancha Carrasco, marchó con el ejército dura
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Una deportista que gana una medalla en un torneo internacional. | confunde el servicio a los demás con el éxito personal |
-| B | Una empresaria que abre una tienda nueva en su comunidad. | confunde el servicio en un momento difícil con emprender un negocio |
-| C | Una cantante que compone canciones sobre la patria. | confunde el amor por el país expresado en arte con ayudar en una emergencia |
-| D | Una socorrista que da primeros auxilios en una emergencia. | **Correcta** |
+| A | Una socorrista que da primeros auxilios en una emergencia. | **Correcta** |
+| B | Una deportista que gana una medalla en un torneo internacional. | confunde el servicio a los demás con el éxito personal |
+| C | Una empresaria que abre una tienda nueva en su comunidad. | confunde el servicio en un momento difícil con emprender un negocio |
+| D | Una cantante que compone canciones sobre la patria. | confunde el amor por el país expresado en arte con ayudar en una emergencia |
 
 **Resolución:** Pancha Carrasco se arriesgó para cuidar a otras personas en un momento difícil. Hoy, quienes dan primeros auxilios en una emergencia muestran ese mismo valor de servicio y solidaridad.
 
@@ -1256,9 +1256,9 @@ En la batalla de Rivas, Juan Santamaría, un joven de Alajuela, se ofreció a in
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | La búsqueda de reconocimiento y fama. | confunde el motivo de la acción con un posible resultado |
-| B | La entrega para proteger a los demás. | **Correcta** |
-| C | La obediencia a cualquier orden recibida. | confunde la entrega voluntaria con solo obedecer |
-| D | El gusto por las situaciones de peligro. | confunde la valentía con buscar el riesgo por gusto |
+| B | La obediencia a las órdenes recibidas. | confunde la entrega voluntaria con solo obedecer |
+| C | El gusto por las situaciones de peligro. | confunde la valentía con buscar el riesgo por gusto |
+| D | La entrega para proteger a los demás. | **Correcta** |
 
 **Resolución:** Juan Santamaría arriesgó su vida por su país, y los bomberos se arriesgan para salvar a gente que ni conocen. Lo que los une es la entrega al servicio de los demás, no la fama ni el gusto por el peligro.
 
@@ -1272,16 +1272,16 @@ En la batalla de Rivas, Juan Santamaría, un joven de Alajuela, se ofreció a in
 
 Lea el siguiente texto:
 
-En 1886, el gobierno aprobó leyes para que la educación primaria quedara a cargo del Estado en todo el país. Se prepararon mejor los maestros, se abrieron nuevos colegios, como el Liceo de Costa Rica y el Colegio Superior de Señoritas, y se buscó que niñas y niños de todas las clases sociales pudieran estudiar.
+En 1886, el gobierno aprobó leyes para que las escuelas primarias de todo el país quedaran a cargo del Estado. Se prepararon mejor los maestros, se abrieron nuevos colegios, como el Liceo de Costa Rica y el Colegio Superior de Señoritas, y se buscó que niñas y niños de todas las clases sociales pudieran asistir a clases.
 
 **La información anterior se refiere a la parte de las Reformas Liberales conocida como**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | leyes anticlericales. | confunde los cambios en la educación con los cambios entre el Estado y la Iglesia |
-| B | Constitución de 1871. | confunde una ley sobre la educación con la constitución de la época |
-| C | garantías sociales. | ubica en el siglo XIX un logro de la década de 1940 |
-| D | Reforma Educativa. | **Correcta** |
+| B | Reforma Educativa. | **Correcta** |
+| C | Constitución de 1871. | confunde una ley sobre la educación con la constitución de la época |
+| D | garantías sociales. | ubica en el siglo XIX un logro de la década de 1940 |
 
 **Resolución:** Poner la educación en manos del Estado y abrir colegios fue la Reforma Educativa de 1886. Las garantías sociales son de la década de 1940, mucho después.
 
@@ -1295,18 +1295,18 @@ En 1886, el gobierno aprobó leyes para que la educación primaria quedara a car
 
 Lea el siguiente texto:
 
-A finales del siglo XIX, con las leyes anticlericales, el Estado costarricense asumió tareas que antes llevaba la Iglesia católica, como registrar los nacimientos, los matrimonios y las defunciones. Desde entonces, esos registros se hacen ante oficinas del Estado y valen para todas las personas, sin importar su religión.
+En la década de 1880, con las reformas liberales, el Estado costarricense asumió tareas que antes llevaba la Iglesia católica, como registrar los nacimientos, los matrimonios y las defunciones. Desde entonces, esos registros se hacen ante oficinas del Estado y valen para todas las personas, sin importar su religión.
 
 **Según el texto anterior, ¿qué buscaban los gobiernos liberales con esas leyes?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | Prohibir que las personas practicaran la religión católica. | exagera el cambio: las leyes no prohibían la religión |
-| B | Devolverle a la Iglesia el control del gobierno del país. | invierte el propósito de las leyes |
+| B | Cobrar un impuesto por cada nacimiento y matrimonio. | confunde un trámite civil con un cobro, que el texto no menciona |
 | C | Unir al Estado y a la Iglesia en una sola institución. | confunde la separación de tareas con una fusión |
-| D | Que el Estado fuera la autoridad en los asuntos civiles. | **Correcta** |
+| D | Poner en manos civiles lo que hacía la Iglesia. | **Correcta** |
 
-**Resolución:** Las leyes anticlericales pasaron al Estado tareas que antes hacía la Iglesia, como registrar a las personas. No prohibieron la religión: buscaban que el Estado fuera la autoridad en los asuntos civiles.
+**Resolución:** Las reformas liberales pasaron al Estado tareas que antes hacía la Iglesia, como registrar a las personas. No prohibieron la religión: buscaban que el Estado fuera la autoridad en los asuntos civiles.
 
 ### 51. soc-2-18-a · Reformas y logros sociales · intermedio
 
@@ -1324,12 +1324,12 @@ La mamá de Isaac trabaja en una empresa. Cada mes, una parte de su salario y un
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | la seguridad social. | **Correcta** |
-| B | la educación gratuita y obligatoria. | confunde la atención médica con un logro educativo anterior |
-| C | el derecho al voto de las mujeres. | escoge un logro político que no tiene relación con la situación |
-| D | la abolición del ejército. | escoge un hecho político que no tiene relación con la salud |
+| A | la educación gratuita y obligatoria. | confunde la atención médica con un logro educativo anterior |
+| B | el derecho al voto de las mujeres. | escoge un logro político que no tiene relación con la situación |
+| C | la abolición del ejército. | escoge un hecho político que no tiene relación con la salud |
+| D | la seguridad social. | **Correcta** |
 
-**Resolución:** La Caja, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.
+**Resolución:** La Caja Costarricense de Seguro Social, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.
 
 ### 52. soc-2-18-b · Reformas y logros sociales · alto
 
@@ -1341,18 +1341,18 @@ La mamá de Isaac trabaja en una empresa. Cada mes, una parte de su salario y un
 
 Lea la siguiente información:
 
-Don Rodrigo trabaja en una construcción. Su contrato dice que su jornada es de ocho horas diarias, que tiene un día de descanso a la semana y que su salario no puede ser menor que el mínimo que fija la ley. Si lo despiden sin una causa justa, tiene derecho a una indemnización.
+Don Rodrigo trabaja para una empresa constructora privada. Su contrato dice que su jornada es de ocho horas diarias, que tiene un día de descanso a la semana y que su salario no puede ser menor que el mínimo que fija la ley. Si lo despiden sin una causa justa, tiene derecho a una indemnización.
 
 **A partir de la información anterior, ¿qué impacto tienen hoy el Código de Trabajo y las garantías sociales de 1943?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Permiten que cada patrono fije la jornada que prefiera. | contradice el límite de ocho horas del contrato |
-| B | Ponen límites para que el empleo sea digno y justo. | **Correcta** |
-| C | Protegen nada más a quienes trabajan para el Estado. | no ve que don Rodrigo trabaja para una empresa privada |
-| D | Garantizan que a nadie se le pueda despedir nunca. | exagera: el despido existe, pero sin causa justa da derecho a indemnización |
+| A | Ponen límites para que el empleo sea digno y justo. | **Correcta** |
+| B | Permiten que cada patrono fije la jornada que prefiera. | contradice el límite de ocho horas del contrato |
+| C | Protegen sobre todo a quienes trabajan para el Estado. | no ve que don Rodrigo trabaja para una empresa privada |
+| D | Garantizan que a las personas no se les pueda despedir. | exagera: el despido existe, pero sin causa justa da derecho a indemnización |
 
-**Resolución:** La jornada de ocho horas, el descanso y el salario mínimo vienen de las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.
+**Resolución:** La jornada máxima de ocho horas, el descanso semanal y el salario mínimo quedaron protegidos por las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.
 
 ### 53. soc-2-19-a · Derechos y retos de hoy · intermedio
 
@@ -1370,10 +1370,10 @@ En un barrio, la asociación de vecinos organizó un programa para que personas 
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La protección especial a las personas adultas mayores. | **Correcta** |
-| B | La libertad de reunión de las personas de la comunidad. | se fija en que los vecinos se organizan, pero ese no es el derecho que se apoya |
-| C | La igualdad de todas las personas ante la ley. | escoge un derecho general que no describe la situación |
-| D | El derecho a la educación de niñas y niños. | escoge un derecho de otro grupo de la población |
+| A | La libertad de comercio de las personas de la comunidad. | se fija en que los voluntarios ayudan con las compras, pero ese no es el derecho que se apoya |
+| B | La igualdad de todas las personas ante la ley. | escoge un derecho general que no describe la situación |
+| C | El derecho a la educación de niñas y niños. | escoge un derecho de otro grupo de la población |
+| D | La protección especial a las personas adultas mayores. | **Correcta** |
 
 **Resolución:** La Constitución dice que el Estado debe proteger de forma especial a las personas adultas mayores. El programa de los vecinos ayuda a cumplir ese derecho, cuidando a quienes viven solos.
 
@@ -1393,10 +1393,10 @@ En una escuela, dos estudiantes tenían religiones distintas y otro compañero s
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | La libertad de pensamiento y la igualdad ante la ley. | **Correcta** |
-| B | El derecho a la vida y a recibir atención médica oportuna. | escoge derechos que no tienen relación con la situación |
-| C | La protección especial a la madre y a la niñez. | se fija en que son estudiantes y no en lo que se defendió |
-| D | El derecho a disfrutar del arte y de la cultura. | escoge un derecho que la directora no mencionó |
+| A | La libertad de reunión y el derecho a recibir educación gratuita. | se fija en que la directora reunió al grupo, no en lo que explicó |
+| B | La libertad de pensamiento y la igualdad ante la ley. | **Correcta** |
+| C | El derecho de petición y la protección especial a la niñez. | se fija en que son estudiantes y no en lo que se defendió |
+| D | La igualdad ante la ley y la libertad de reunión pacífica. | acierta en la igualdad, pero confunde la reunión del grupo con el derecho explicado |
 
 **Resolución:** Tener las propias creencias y opiniones es la libertad de pensamiento, y que nadie sea tratado distinto por eso es igualdad ante la ley. Los dos están en la Constitución de 1949.
 
@@ -1410,13 +1410,13 @@ En una escuela, dos estudiantes tenían religiones distintas y otro compañero s
 
 Lea el siguiente texto:
 
-Mariana publicó en una red social su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.
+Mariana publicó en el chat del grupo su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.
 
 **A partir del texto anterior, ¿qué se puede inferir sobre la libertad de expresión?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Permite publicar cualquier cosa cuando se hace en redes sociales. | cree que en las redes no hay límites |
+| A | Permite publicar lo que uno quiera cuando se hace en un chat. | cree que en los chats no hay límites |
 | B | Tiene límites y no permite dañar la dignidad de otra persona. | **Correcta** |
 | C | Es un derecho de las personas adultas, no de los estudiantes. | cree que la niñez no tiene derecho a opinar |
 | D | Prohíbe dar opiniones sobre las decisiones de la escuela. | confunde el límite del derecho con quitar el derecho |
@@ -1433,14 +1433,14 @@ Mariana publicó en una red social su opinión sobre el nuevo horario del comedo
 
 Lea la siguiente información:
 
-Los vecinos de una comunidad están preocupados porque el puente que usan los escolares está en mal estado. Algunos proponen escribir una carta a la municipalidad, firmada por todos, para pedir que lo reparen. Otros quieren organizar una reunión pacífica frente al edificio municipal para que los escuchen.
+Los vecinos de una comunidad están preocupados porque el puente que usan los escolares está en mal estado. Algunos proponen escribir una carta a la municipalidad, firmada por todos, para pedir que lo reparen. Otros quieren juntarse frente al edificio municipal, sin violencia, para que los escuchen.
 
 **¿Qué derechos constitucionales están ejerciendo los vecinos?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | El de votar y el de elegir alcalde. | confunde pedir algo a una institución con elegir autoridades |
-| B | El de petición y el de reunirse. | **Correcta** |
+| A | El de petición y el de reunión. | **Correcta** |
+| B | El de votar y el de elegir alcalde. | confunde pedir algo a una institución con elegir autoridades |
 | C | El de propiedad y el de comercio. | escoge derechos que no tienen relación con la situación |
 | D | El de salud y el de educación. | se fija en que el puente lo usan escolares y no en lo que hacen los vecinos |
 
@@ -1462,8 +1462,8 @@ En la escuela de Fabiola se hizo un simulacro de evacuación por terremoto. Cada
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Porque estar preparados ante una emergencia es tarea de todos. | **Correcta** |
-| B | Porque solo los bomberos deben saber qué hacer en un sismo. | deja la responsabilidad solo en los cuerpos de socorro |
+| A | Porque saber qué hacer en un sismo es tarea de los bomberos. | deja la responsabilidad solo en los cuerpos de socorro |
+| B | Porque estar preparados ante una emergencia es tarea de todos. | **Correcta** |
 | C | Porque los simulacros permiten saber cuándo habrá un terremoto. | confunde prepararse con predecir un sismo |
 | D | Porque así la escuela cumple un requisito y no hace falta más. | reduce la gestión del riesgo a un trámite |
 
@@ -1485,10 +1485,10 @@ Al comprar unos zapatos, el papá de Gabriel pidió la factura electrónica. El 
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Cuidar que los impuestos lleguen a servicios para todos. | **Correcta** |
-| B | Ahorrar dinero aunque los impuestos de la compra no se paguen. | se queda con el descuento y no ve lo que se pierde |
-| C | Pagar nada más los impuestos que le parezcan justos. | confunde cumplir con los impuestos con escoger cuáles pagar |
-| D | Pedir la factura únicamente en las compras muy grandes. | cree que las compras pequeñas no aportan |
+| A | Ahorrar dinero aunque los impuestos de la compra no se paguen. | se queda con el descuento y no ve lo que se pierde |
+| B | Cuidar que los impuestos lleguen a servicios para todos. | **Correcta** |
+| C | Pagar los impuestos que a cada quien le parezcan justos. | confunde cumplir con los impuestos con escoger cuáles pagar |
+| D | Pedir la factura cuando la compra es muy grande. | cree que las compras pequeñas no aportan |
 
 **Resolución:** Pedir factura asegura que el impuesto de la compra llegue al Estado. Con ese dinero se pagan escuelas, carreteras y hospitales que usamos todas las personas.
 
@@ -1514,8 +1514,8 @@ Un grupo de sexto anotó algunos desafíos que enfrenta hoy la sociedad costarri
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | 1 político, 2 económico y 3 ambiental | confunde el desempleo con un problema político |
-| B | 1 económico, 2 político y 3 ambiental | **Correcta** |
+| A | 1 económico, 2 político y 3 ambiental | **Correcta** |
+| B | 1 político, 2 económico y 3 ambiental | confunde el desempleo con un problema político |
 | C | 1 económico, 2 ambiental y 3 político | confunde la contaminación con un problema político |
 | D | 1 ambiental, 2 político y 3 económico | confunde el desempleo con un problema ambiental |
 
@@ -1537,9 +1537,9 @@ En un cantón, muchas personas mayores se sentían solas y no sabían usar el ce
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Solo el Estado puede resolverlos, con leyes nuevas. | no ve que la solución salió de la comunidad |
-| B | La comunidad organizada puede ayudar a resolverlos. | **Correcta** |
-| C | La gente joven no tiene ninguna responsabilidad en ellos. | contradice que fueron estudiantes quienes propusieron la solución |
-| D | Se resuelven solos con el paso del tiempo. | ignora que hizo falta una acción para resolverlo |
+| A | El Estado es el que debe resolverlos con leyes nuevas. | no ve que la solución salió de la comunidad |
+| B | La comunidad organizada ayuda a resolverlos. | **Correcta** |
+| C | Las personas mayores son las que deben buscar cómo resolverlos. | deja el problema en manos de quienes lo sufren |
+| D | La municipalidad los resuelve sin ayuda de los vecinos. | confunde el apoyo municipal con resolver sola el problema |
 
 **Resolución:** Los estudiantes vieron un problema, propusieron una solución y la municipalidad los apoyó. Así se ve que los desafíos sociales se pueden enfrentar con la participación de la comunidad.
