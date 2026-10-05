@@ -72,6 +72,16 @@ const REGLAS = {
     tipos: ['científico-escolar', 'personal-cotidiano', 'local-nacional', 'global-planetario'],
     palabrasContexto: [40, 90],
   },
+  // Espanol: un texto original por item. Como en el cuadernillo del MEP, las
+  // opciones van de la mas corta a la mas larga, asi que la clave puede ser
+  // la mas larga; lo que se cuida es que las cuatro midan parecido. Y como
+  // la respuesta sale del texto, no se mide el eco de palabras: se revisa
+  // que ninguna opcion copie una frase literal.
+  espanol: {
+    campos: ['bloque', 'verbo', 'tipo_texto', 'genero', 'contexto', 'texto', 'palabras_texto', 'evidencia_textual'],
+    verbos: ['distinguir', 'determinar', 'reconocer', 'inferir', 'identificar'],
+    opcionesPorLargo: true,
+  },
 };
 const reglas = REGLAS[materia] ?? {};
 
@@ -185,7 +195,13 @@ items.forEach((it, i) => {
   const largos = textos.map((t) => textoPlano(t).length);
   const iClave = LETRAS.indexOf(it.clave);
   const maximo = Math.max(...largos);
-  if (largos[iClave] === maximo && largos.filter((l) => l === maximo).length === 1 && maximo > 6) {
+  if (reglas.opcionesPorLargo) {
+    // Convencion del MEP: de la mas corta a la mas larga, y la mas larga no
+    // supera en mas de un tercio a la mas corta.
+    const crudos = textos.map((t) => t.length);
+    if (crudos.some((l, i) => i > 0 && l < crudos[i - 1])) error(donde, `opciones fuera de orden por largo (${crudos.join(' / ')})`);
+    if (Math.max(...crudos) > Math.min(...crudos) * 4 / 3) error(donde, `la opcion mas larga supera en mas de un tercio a la mas corta (${crudos.join(' / ')})`);
+  } else if (largos[iClave] === maximo && largos.filter((l) => l === maximo).length === 1 && maximo > 6) {
     const segundo = Math.max(...largos.filter((_, i) => i !== iClave));
     const mensaje = `la correcta es la opcion mas larga (${largos.join(' / ')} caracteres)`;
     if (maximo - segundo >= Math.max(3, Math.ceil(maximo * 0.15))) error(donde, mensaje);
@@ -205,7 +221,21 @@ items.forEach((it, i) => {
   const delEnunciado = new Set(palabras(textoCompleto(it) ?? ''));
   const eco = palabras(textos[iClave] ?? '').filter((p) => delEnunciado.has(p));
   const sonRotulos = textos.every((t) => palabras(t).length > 0 && palabras(t).every((p) => delEnunciado.has(p)));
-  if (eco.length && !sonRotulos) {
+  if (reglas.opcionesPorLargo && typeof it.texto === 'string') {
+    // Ninguna opcion copia una frase del texto: seis palabras seguidas iguales
+    // ya es copia. Se parafrasea, como en el cuadernillo del MEP.
+    const norm = (t) => textoPlano(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .split(/[^a-z0-9ñ]+/).filter(Boolean);
+    const delTexto = ` ${norm(it.texto).join(' ')} `;
+    for (const l of LETRAS) {
+      const w = norm(op[l] ?? '');
+      for (let i = 0; i + 6 <= w.length; i++) {
+        if (delTexto.includes(` ${w.slice(i, i + 6).join(' ')} `)) { error(donde, `la opcion ${l} copia una frase del texto`); break; }
+      }
+    }
+    if (it.contexto && !textoPlano(it.contexto).includes(textoPlano(it.texto))) error(donde, 'el contexto no trae el texto completo');
+  }
+  if (eco.length && !sonRotulos && !reglas.opcionesPorLargo) {
     const delata = eco.filter((p) => !textos.some((t, i) => i !== iClave && palabras(t).includes(p)));
     if (delata.length) error(donde, `la correcta repite del enunciado: ${delata.join(', ')}`);
   }

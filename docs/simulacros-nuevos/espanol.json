@@ -1,0 +1,2474 @@
+{
+  "simulacro": {
+    "slug": "nuevo-espanol-1",
+    "materia": "espanol",
+    "numero": 1,
+    "titulo": "Simulacro nuevo 1",
+    "preguntas": 60,
+    "segundos_por_item": 180,
+    "barajar_opciones": false,
+    "version": "2026-10-05"
+  },
+  "items": [
+    {
+      "id": "esp-1-a",
+      "orden": 1,
+      "numero": 1,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Artículo de divulgación",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.2",
+        "texto": "Reconoce el sentido global del texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "La jardinera del bosque",
+      "texto": "La danta es el mamífero terrestre más grande de Costa Rica. Vive en bosques húmedos y en zonas de montaña, cerca de ríos y pantanos. Pasa buena parte de la noche comiendo hojas, ramas tiernas y frutas.\n\nCuando come frutas, se traga las semillas enteras. Después camina largas distancias y deja esas semillas en su excremento, lejos del árbol de donde salieron. Así, nuevas plantas pueden nacer en otros sitios del bosque.\n\nPor esta razón, a la danta se le llama la jardinera del bosque. Sin ella, a muchos árboles les costaría más extenderse.",
+      "palabras_texto": 94,
+      "contexto": "Lea el siguiente texto:\n\n«La danta es el mamífero terrestre más grande de Costa Rica. Vive en bosques húmedos y en zonas de montaña, cerca de ríos y pantanos. Pasa buena parte de la noche comiendo hojas, ramas tiernas y frutas.\n\nCuando come frutas, se traga las semillas enteras. Después camina largas distancias y deja esas semillas en su excremento, lejos del árbol de donde salieron. Así, nuevas plantas pueden nacer en otros sitios del bosque.\n\nPor esta razón, a la danta se le llama la jardinera del bosque. Sin ella, a muchos árboles les costaría más extenderse.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la idea fundamental?",
+      "opciones": {
+        "A": "La danta come hojas, ramas y frutas durante la noche.",
+        "B": "La danta vive en la montaña porque allí hay más frutas.",
+        "C": "La danta ayuda a que nazcan árboles al esparcir semillas.",
+        "D": "Los animales grandes son los que más ayudan a los bosques."
+      },
+      "clave": "C",
+      "explicacion": "El texto menciona qué come la danta y dónde vive, pero casi todo gira alrededor de las semillas que se traga. Al dejarlas lejos, ayuda a que nazcan árboles nuevos, y por eso la llaman la jardinera del bosque.",
+      "por_que": {
+        "A": "Es un detalle verdadero del texto, pero no la idea que reúne a las demás.",
+        "B": "Es una afirmación que el texto no hace: no explica por qué vive en la montaña.",
+        "D": "Es una generalización más amplia que el texto, que habla solo de la danta."
+      },
+      "evidencia_textual": "Por esta razón, a la danta se le llama la jardinera del bosque.",
+      "imagen": null
+    },
+    {
+      "id": "esp-2-a",
+      "orden": 2,
+      "numero": 2,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas complementarias",
+      "subtema": "Artículo de divulgación",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2",
+        "texto": "Distingue las ideas complementarias en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "2.1",
+        "texto": "Conoce el concepto de idea complementaria al identificarla en un texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "Las alas de la morfo",
+      "texto": "Las alas de la mariposa morfo son su mejor defensa. Por encima, son de un azul brillante. Ese color no viene de un pigmento, es decir, de una sustancia que pinta. Se produce porque las alas tienen escamas diminutas que reflejan la luz de una forma especial.\n\nLa parte de abajo de las alas es café, con manchas redondas parecidas a ojos. Cuando la mariposa se posa y cierra las alas, casi desaparece entre las hojas secas. En vuelo, en cambio, el azul aparece y desaparece con cada aleteo. Esos destellos confunden a las aves que intentan atraparla.\n\nLas orugas de la morfo se alimentan de hojas de plantas de la familia del frijol.",
+      "palabras_texto": 114,
+      "contexto": "Lea el siguiente texto:\n\n«Las alas de la mariposa morfo son su mejor defensa. Por encima, son de un azul brillante. Ese color no viene de un pigmento, es decir, de una sustancia que pinta. Se produce porque las alas tienen escamas diminutas que reflejan la luz de una forma especial.\n\nLa parte de abajo de las alas es café, con manchas redondas parecidas a ojos. Cuando la mariposa se posa y cierra las alas, casi desaparece entre las hojas secas. En vuelo, en cambio, el azul aparece y desaparece con cada aleteo. Esos destellos confunden a las aves que intentan atraparla.\n\nLas orugas de la morfo se alimentan de hojas de plantas de la familia del frijol.»",
+      "enunciado": "En el texto anterior, ¿cuál es una idea complementaria?",
+      "opciones": {
+        "A": "Sus orugas comen hojas de plantas parientes del frijol.",
+        "B": "Sus alas le ayudan a protegerse de las aves que la cazan.",
+        "C": "El azul de sus alas proviene de una sustancia que las pinta.",
+        "D": "La morfo vive sobre todo en las zonas altas y frías del país."
+      },
+      "clave": "A",
+      "explicacion": "La mayor parte del texto explica cómo las alas protegen a la morfo, y esa es la idea fundamental. Al final aparece un dato que la acompaña: sus orugas comen hojas de plantas de la familia del frijol.",
+      "por_que": {
+        "B": "Es la idea fundamental del texto, no una idea que la complementa.",
+        "C": "Distorsiona el texto, que dice que el color no viene de un pigmento.",
+        "D": "Es un dato que no aparece en el texto."
+      },
+      "evidencia_textual": "Las orugas de la morfo se alimentan de hojas de plantas de la familia del frijol.",
+      "imagen": null
+    },
+    {
+      "id": "esp-3-a",
+      "orden": 3,
+      "numero": 3,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Causas",
+      "subtema": "Texto científico",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3",
+        "texto": "Determina relaciones de causa en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "3.1",
+        "texto": "Conoce el concepto de causa al identificarla en un texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "texto científico",
+      "titulo": "La herrumbre",
+      "texto": "¿Por qué un machete olvidado en el patio se pone rojizo? Esa capa áspera se llama herrumbre u óxido. Aparece cuando el hierro está en contacto con el agua y con el oxígeno del aire al mismo tiempo.\n\nEn los lugares húmedos, el hierro se oxida más rápido. Cerca del mar, la sal que lleva el viento acelera todavía más el proceso. Por eso las rejas de las casas de playa necesitan pintura con frecuencia.\n\nPara evitar la herrumbre, las herramientas se guardan secas y bajo techo. También se les puede poner una capa de aceite o de pintura, que impide que el agua toque el metal.",
+      "palabras_texto": 107,
+      "contexto": "Lea el siguiente texto:\n\n«¿Por qué un machete olvidado en el patio se pone rojizo? Esa capa áspera se llama herrumbre u óxido. Aparece cuando el hierro está en contacto con el agua y con el oxígeno del aire al mismo tiempo.\n\nEn los lugares húmedos, el hierro se oxida más rápido. Cerca del mar, la sal que lleva el viento acelera todavía más el proceso. Por eso las rejas de las casas de playa necesitan pintura con frecuencia.\n\nPara evitar la herrumbre, las herramientas se guardan secas y bajo techo. También se les puede poner una capa de aceite o de pintura, que impide que el agua toque el metal.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la causa de que se forme la herrumbre en el hierro?",
+      "opciones": {
+        "A": "La capa de aceite que se unta en el metal.",
+        "B": "El color rojizo y áspero que toma el metal.",
+        "C": "El calor fuerte del sol que cae sobre la herramienta.",
+        "D": "El contacto del hierro con el agua y el aire a la vez."
+      },
+      "clave": "D",
+      "explicacion": "El texto dice que la herrumbre aparece cuando el hierro toca el agua y el oxígeno del aire al mismo tiempo. Esa es la causa; el color rojizo es lo que resulta después, y el aceite sirve para evitarla.",
+      "por_que": {
+        "A": "El aceite aparece en el texto, pero como causa de otro hecho: proteger el metal.",
+        "B": "Presenta como causa lo que en realidad es el resultado: la herrumbre misma.",
+        "C": "Es una causa que parece razonable, pero el texto no la menciona."
+      },
+      "evidencia_textual": "Aparece cuando el hierro está en contacto con el agua y con el oxígeno del aire al mismo tiempo.",
+      "imagen": null
+    },
+    {
+      "id": "esp-4-a",
+      "orden": 4,
+      "numero": 4,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Efectos",
+      "subtema": "Noticia",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4",
+        "texto": "Determina relaciones de efecto en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "4.1",
+        "texto": "Conoce el concepto de efecto al identificarlo en un texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "noticia",
+      "titulo": "Escuela de Turrialba estrena rampas",
+      "texto": "Escuela de Turrialba estrena rampas\n\nLa semana pasada, una escuela de Turrialba terminó de construir rampas en sus entradas. También hizo una rampa en el camino hacia la biblioteca. El proyecto nació de una propuesta del gobierno estudiantil, y las familias organizaron ventas de comida para comprar los materiales.\n\nAntes, Valentina, estudiante de quinto grado que usa silla de ruedas, necesitaba que alguien la ayudara a subir cada grada. Ahora llega sin ayuda a su aula y a la biblioteca.\n\nLa directora contó que el siguiente paso será instalar pasamanos en los baños.",
+      "palabras_texto": 93,
+      "contexto": "Lea el siguiente texto:\n\n«Escuela de Turrialba estrena rampas\n\nLa semana pasada, una escuela de Turrialba terminó de construir rampas en sus entradas. También hizo una rampa en el camino hacia la biblioteca. El proyecto nació de una propuesta del gobierno estudiantil, y las familias organizaron ventas de comida para comprar los materiales.\n\nAntes, Valentina, estudiante de quinto grado que usa silla de ruedas, necesitaba que alguien la ayudara a subir cada grada. Ahora llega sin ayuda a su aula y a la biblioteca.\n\nLa directora contó que el siguiente paso será instalar pasamanos en los baños.»",
+      "enunciado": "Según el texto anterior, ¿cuál es un efecto de la construcción de las rampas?",
+      "opciones": {
+        "A": "Las familias hicieron ventas para comprar materiales.",
+        "B": "Valentina ya no necesita que la ayuden a ir a su aula.",
+        "C": "La escuela instalará pasamanos en los baños más adelante.",
+        "D": "Muchos más estudiantes visitan ahora la biblioteca escolar."
+      },
+      "clave": "B",
+      "explicacion": "La noticia cuenta que antes Valentina necesitaba ayuda para subir cada grada y que ahora llega sola a su aula. Ese cambio es un efecto de las rampas. Las ventas de comida, en cambio, ocurrieron antes, para poder construirlas.",
+      "por_que": {
+        "A": "Presenta como efecto algo que ocurrió antes, para poder construir las rampas.",
+        "C": "Es un plan para el futuro, no un efecto de las rampas.",
+        "D": "Es un efecto exagerado que el texto no sostiene."
+      },
+      "evidencia_textual": "Ahora llega sin ayuda a su aula y a la biblioteca.",
+      "imagen": null
+    },
+    {
+      "id": "esp-5-a",
+      "orden": 5,
+      "numero": 5,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Temas de textos literarios",
+      "subtema": "Fábula",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "5",
+        "texto": "Reconoce diversos temas tratados en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "5.1",
+        "texto": "Conoce el concepto de tema al identificarlo en un texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "fábula",
+      "titulo": "El sapo que quería cantar",
+      "texto": "Un sapo escuchaba cada mañana el canto del yigüirro y se llenaba de envidia. “Yo también quiero cantar así”, pensaba. Pasó días enteros ensayando, pero de su garganta solo salía un croar ronco. Los otros animales del potrero se reían al oírlo.\n\nUna noche empezó a llover. El sapo, sin pensarlo, croó con fuerza junto a sus hermanos, a la orilla del charco. Aquel coro llenó la oscuridad. Desde su ventana, una niña sonrió y dijo: “Ya los sapos están anunciando el invierno”.\n\nEsa noche el sapo comprendió que su voz también tenía un lugar en el mundo. Desde entonces dejó de imitar y cantó a su manera.",
+      "palabras_texto": 108,
+      "contexto": "Lea el siguiente texto:\n\n«Un sapo escuchaba cada mañana el canto del yigüirro y se llenaba de envidia. “Yo también quiero cantar así”, pensaba. Pasó días enteros ensayando, pero de su garganta solo salía un croar ronco. Los otros animales del potrero se reían al oírlo.\n\nUna noche empezó a llover. El sapo, sin pensarlo, croó con fuerza junto a sus hermanos, a la orilla del charco. Aquel coro llenó la oscuridad. Desde su ventana, una niña sonrió y dijo: “Ya los sapos están anunciando el invierno”.\n\nEsa noche el sapo comprendió que su voz también tenía un lugar en el mundo. Desde entonces dejó de imitar y cantó a su manera.»",
+      "enunciado": "En el texto anterior, ¿cuál es el tema tratado?",
+      "opciones": {
+        "A": "La lluvia de una noche en el potrero.",
+        "B": "La aceptación de las cualidades propias.",
+        "C": "La envidia que rompe las amistades verdaderas.",
+        "D": "La importancia de todos los animales del campo."
+      },
+      "clave": "B",
+      "explicacion": "Al principio el sapo quería cantar como el yigüirro, pero al final descubre que su propia voz también vale. La fábula trata de aceptar y valorar lo que cada uno es; la lluvia solo es el momento en que el sapo lo descubre.",
+      "por_que": {
+        "A": "Es un hecho puntual de la historia, no su tema.",
+        "C": "La envidia aparece, pero el texto no habla de amistades rotas; es otra lectura que no se sostiene.",
+        "D": "Es un tema demasiado amplio para lo que cuenta la fábula."
+      },
+      "evidencia_textual": "Esa noche el sapo comprendió que su voz también tenía un lugar en el mundo.",
+      "imagen": null
+    },
+    {
+      "id": "esp-6-a",
+      "orden": 6,
+      "numero": 6,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Pensamientos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "6",
+        "texto": "Infiere pensamientos de los personajes de un texto literario."
+      },
+      "evidencia": {
+        "codigo": "6.1",
+        "texto": "Infiere pensamientos de los personajes a partir de los indicios del texto literario."
+      },
+      "verbo": "inferir",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "La bicicleta heredada",
+      "texto": "Cuando su hermano mayor se fue a estudiar a San José, le dejó a Keilor su vieja bicicleta. Tenía la cadena floja, la pintura gastada y un timbre que no sonaba. Keilor la miró un buen rato y pensó en la bicicleta nueva de su vecino, roja y brillante.\n\nEsa tarde sacó la caja de herramientas de su mamá. Apretó la cadena, limpió el óxido con una lija, arregló el timbre y le puso cinta de colores al manubrio. Al día siguiente, el vecino le propuso cambiarla por un juego de video. Keilor acarició el asiento remendado y respondió que no, sin dudar. Luego salió a pedalear por la calle de lastre, tocando el timbre recién arreglado.",
+      "palabras_texto": 117,
+      "contexto": "Lea el siguiente texto:\n\n«Cuando su hermano mayor se fue a estudiar a San José, le dejó a Keilor su vieja bicicleta. Tenía la cadena floja, la pintura gastada y un timbre que no sonaba. Keilor la miró un buen rato y pensó en la bicicleta nueva de su vecino, roja y brillante.\n\nEsa tarde sacó la caja de herramientas de su mamá. Apretó la cadena, limpió el óxido con una lija, arregló el timbre y le puso cinta de colores al manubrio. Al día siguiente, el vecino le propuso cambiarla por un juego de video. Keilor acarició el asiento remendado y respondió que no, sin dudar. Luego salió a pedalear por la calle de lastre, tocando el timbre recién arreglado.»",
+      "enunciado": "Según el texto anterior, ¿cuál es el pensamiento evidenciado por Keilor?",
+      "opciones": {
+        "A": "Hay que apretar la cadena antes de pedalear.",
+        "B": "Los hermanos mayores deben heredar sus cosas.",
+        "C": "El juego de video vale más que su vieja bicicleta.",
+        "D": "Lo que se arregla con el esfuerzo propio vale mucho."
+      },
+      "clave": "D",
+      "explicacion": "Keilor arregla la bicicleta con sus propias manos y después no la cambia por un juego de video. Además, acaricia el asiento remendado con cariño. Esas pistas muestran que piensa que lo que arregló con esfuerzo tiene mucho valor.",
+      "por_que": {
+        "A": "Describe lo que Keilor hace, no lo que piensa.",
+        "B": "Es una opinión del lector; el texto no muestra que Keilor piense eso.",
+        "C": "Es contrario a los indicios: Keilor rechaza el cambio sin dudar."
+      },
+      "evidencia_textual": "Keilor acarició el asiento remendado y respondió que no, sin dudar.",
+      "imagen": null
+    },
+    {
+      "id": "esp-7-a",
+      "orden": 7,
+      "numero": 7,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Conflictos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "7",
+        "texto": "Reconoce los conflictos de los personajes en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "7.3",
+        "texto": "Distingue los elementos internos o externos que originan el conflicto de los personajes."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "El pichón",
+      "texto": "Gabriel encontró un pichón de pecho amarillo en el zacate, debajo del árbol de guayaba. Lo levantó con cuidado y lo llevó a la casa dentro de su gorra.\n\n—¡Me lo quiero quedar! —le dijo a su abuela—. Le voy a hacer una jaula.\n\nLa abuela le explicó que los papás del pichón andaban cerca, buscándolo. Si lo dejaba en una rama baja, volverían a alimentarlo.\n\nGabriel miró al pajarito, que abría el pico hacia la guayaba. Pensó en la jaula que ya imaginaba pintada de azul. Después pensó en los pechos amarillos que cantaban cada tarde en ese árbol. Al rato, subió el pichón a una rama baja y se escondió detrás de la pila a esperar.",
+      "palabras_texto": 118,
+      "contexto": "Lea el siguiente texto:\n\n«Gabriel encontró un pichón de pecho amarillo en el zacate, debajo del árbol de guayaba. Lo levantó con cuidado y lo llevó a la casa dentro de su gorra.\n\n—¡Me lo quiero quedar! —le dijo a su abuela—. Le voy a hacer una jaula.\n\nLa abuela le explicó que los papás del pichón andaban cerca, buscándolo. Si lo dejaba en una rama baja, volverían a alimentarlo.\n\nGabriel miró al pajarito, que abría el pico hacia la guayaba. Pensó en la jaula que ya imaginaba pintada de azul. Después pensó en los pechos amarillos que cantaban cada tarde en ese árbol. Al rato, subió el pichón a una rama baja y se escondió detrás de la pila a esperar.»",
+      "enunciado": "En el texto anterior, ¿cuál conflicto enfrenta Gabriel?",
+      "opciones": {
+        "A": "Subir el pichón a una rama y esperar escondido.",
+        "B": "Dudar entre quedarse con el pichón o devolverlo.",
+        "C": "Cargar al pichón hasta la casa metido en su gorra.",
+        "D": "Convencer a su nieto de devolver el pichón al árbol."
+      },
+      "clave": "B",
+      "explicacion": "Gabriel quiere hacerle una jaula al pichón, pero también piensa en los pájaros que cantan en la guayaba. Ese ir y venir entre quedárselo o devolverlo es su conflicto. Subirlo a la rama es la forma en que lo resuelve.",
+      "por_que": {
+        "A": "Es el desenlace, la forma en que Gabriel resuelve el problema.",
+        "C": "Es un hecho secundario de la historia, no el problema del personaje.",
+        "D": "Es el problema de la abuela, no el de Gabriel."
+      },
+      "evidencia_textual": "Pensó en la jaula que ya imaginaba pintada de azul. Después pensó en los pechos amarillos que cantaban cada tarde en ese árbol.",
+      "imagen": null
+    },
+    {
+      "id": "esp-8-a",
+      "orden": 8,
+      "numero": 8,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Comportamientos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "8",
+        "texto": "Identifica comportamientos de los personajes en un texto literario."
+      },
+      "evidencia": {
+        "codigo": "8.1",
+        "texto": "Identifica comportamientos de los personajes a partir de los indicios del texto literario."
+      },
+      "verbo": "identificar",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "Palabras con las manos",
+      "texto": "A inicios de año llegó a quinto grado un compañero nuevo, Fabián. Él es sordo y se comunica en LESCO, la lengua de señas costarricense. Los primeros días, casi nadie del grupo sabía cómo hablarle.\n\nMariela decidió hacer algo. Cada tarde veía videos con su mamá y practicaba frente al espejo las señas de los saludos, los números y los colores. En el recreo le preguntaba a Fabián cómo se decían otras palabras y las anotaba en una libreta.\n\nPocas semanas después, Mariela enseñaba al grupo una seña nueva cada mañana. Ahora el juego favorito del recreo es adivinar palabras con las manos.",
+      "palabras_texto": 103,
+      "contexto": "Lea el siguiente texto:\n\n«A inicios de año llegó a quinto grado un compañero nuevo, Fabián. Él es sordo y se comunica en LESCO, la lengua de señas costarricense. Los primeros días, casi nadie del grupo sabía cómo hablarle.\n\nMariela decidió hacer algo. Cada tarde veía videos con su mamá y practicaba frente al espejo las señas de los saludos, los números y los colores. En el recreo le preguntaba a Fabián cómo se decían otras palabras y las anotaba en una libreta.\n\nPocas semanas después, Mariela enseñaba al grupo una seña nueva cada mañana. Ahora el juego favorito del recreo es adivinar palabras con las manos.»",
+      "enunciado": "En el texto anterior, ¿cuál es el comportamiento evidenciado por Mariela?",
+      "opciones": {
+        "A": "Distante: evita hablarle a Fabián al inicio.",
+        "B": "Contenta: se siente feliz cuando llega el recreo.",
+        "C": "Perseverante: practica señas para hablar con Fabián.",
+        "D": "Cumplida: practica señas porque es una tarea escolar."
+      },
+      "clave": "C",
+      "explicacion": "Mariela practica cada tarde frente al espejo, pregunta palabras nuevas y las anota en una libreta. Esas acciones repetidas muestran una conducta perseverante: no se rinde hasta poder comunicarse con Fabián.",
+      "por_que": {
+        "A": "Toma una situación de otro momento, cuando casi nadie sabía hablarle, y se la atribuye a Mariela, que decidió actuar.",
+        "B": "Nombra una emoción, no una conducta, y el texto no la menciona.",
+        "D": "Es contrario a los indicios: Mariela decidió aprender por su cuenta, no por una tarea."
+      },
+      "evidencia_textual": "Cada tarde veía videos con su mamá y practicaba frente al espejo las señas de los saludos, los números y los colores.",
+      "imagen": null
+    },
+    {
+      "id": "esp-1-b",
+      "orden": 9,
+      "numero": 9,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Texto de opinión",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.3",
+        "texto": "Reconoce el propósito del texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "texto de opinión",
+      "titulo": "Los juegos de antes",
+      "texto": "En muchas escuelas, el recreo se ha llenado de celulares y de conversaciones sobre videos. Creo que vale la pena recuperar los juegos de antes: la rayuela, el trompo, las bolinchas y la cuerda.\n\nEstos juegos no necesitan batería ni internet. Se aprenden mirando a otros y se juegan en grupo, así que enseñan a esperar el turno y a ponerse de acuerdo con las reglas. Además, ponen a mover el cuerpo después de varias horas sentados.\n\nMuchos abuelos todavía recuerdan cómo se brinca la cuerda o cómo se enrolla un trompo. El recreo puede volver a ser un rato de juego compartido.",
+      "palabras_texto": 103,
+      "contexto": "Lea el siguiente texto:\n\n«En muchas escuelas, el recreo se ha llenado de celulares y de conversaciones sobre videos. Creo que vale la pena recuperar los juegos de antes: la rayuela, el trompo, las bolinchas y la cuerda.\n\nEstos juegos no necesitan batería ni internet. Se aprenden mirando a otros y se juegan en grupo, así que enseñan a esperar el turno y a ponerse de acuerdo con las reglas. Además, ponen a mover el cuerpo después de varias horas sentados.\n\nMuchos abuelos todavía recuerdan cómo se brinca la cuerda o cómo se enrolla un trompo. El recreo puede volver a ser un rato de juego compartido.»",
+      "enunciado": "La idea fundamental del texto anterior expone que",
+      "opciones": {
+        "A": "los abuelos saben cómo se enrolla un trompo.",
+        "B": "los juegos en grupo enseñan a esperar el turno.",
+        "C": "los juegos tradicionales merecen volver al recreo.",
+        "D": "los niños pasan demasiado tiempo frente a las pantallas."
+      },
+      "clave": "C",
+      "explicacion": "Quien escribe da varias razones: los juegos de antes no necesitan batería, se juegan en grupo y ponen a mover el cuerpo. Todas apoyan una misma idea: que esos juegos vuelvan a los recreos.",
+      "por_que": {
+        "A": "Es un detalle verdadero, pero sirve para apoyar la propuesta principal.",
+        "B": "Es una idea complementaria: una de las razones que da el autor.",
+        "D": "Es una afirmación que el texto no hace como idea central."
+      },
+      "evidencia_textual": "Creo que vale la pena recuperar los juegos de antes: la rayuela, el trompo, las bolinchas y la cuerda.",
+      "imagen": null
+    },
+    {
+      "id": "esp-2-b",
+      "orden": 10,
+      "numero": 10,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas complementarias",
+      "subtema": "Noticia",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2",
+        "texto": "Distingue las ideas complementarias en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "2.2",
+        "texto": "Distingue la información relevante de la irrelevante en el texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "noticia",
+      "titulo": "Marimba escolar gana festival",
+      "texto": "Grupo de marimba escolar gana festival regional\n\nEl grupo de marimba de una escuela de Nicoya ganó el primer lugar en un festival regional.\n\nLos ensayos se hacen dos tardes por semana, en el corredor de la escuela. La marimba fue construida hace años por un artesano del barrio, con madera de la zona. Los estudiantes la cuidan como un tesoro y la cubren con una manta después de cada ensayo.\n\nLa maestra de música contó que varios integrantes aprendieron las primeras piezas con sus abuelos. Para el próximo año, el grupo quiere grabar sus canciones y compartirlas con otras escuelas.",
+      "palabras_texto": 101,
+      "contexto": "Lea el siguiente texto:\n\n«Grupo de marimba escolar gana festival regional\n\nEl grupo de marimba de una escuela de Nicoya ganó el primer lugar en un festival regional.\n\nLos ensayos se hacen dos tardes por semana, en el corredor de la escuela. La marimba fue construida hace años por un artesano del barrio, con madera de la zona. Los estudiantes la cuidan como un tesoro y la cubren con una manta después de cada ensayo.\n\nLa maestra de música contó que varios integrantes aprendieron las primeras piezas con sus abuelos. Para el próximo año, el grupo quiere grabar sus canciones y compartirlas con otras escuelas.»",
+      "enunciado": "Según el texto anterior, una idea complementaria destaca que",
+      "opciones": {
+        "A": "la escuela compró una marimba nueva para los ensayos.",
+        "B": "los estudiantes practican tres tardes a la semana en el patio.",
+        "C": "el grupo de marimba de la escuela ganó un festival de la región.",
+        "D": "algunos integrantes aprendieron a tocar con ayuda de sus abuelos."
+      },
+      "clave": "D",
+      "explicacion": "Lo principal de la noticia es el premio que ganó el grupo de marimba. Un dato que acompaña esa idea es que varios integrantes aprendieron sus primeras piezas con sus abuelos. Los ensayos, según el texto, son dos tardes por semana y no todas.",
+      "por_que": {
+        "A": "Es un dato que no aparece: la marimba la hizo un artesano hace años.",
+        "B": "Es un dato del texto distorsionado: los ensayos son dos tardes por semana, en el corredor.",
+        "C": "Es la idea fundamental de la noticia, no una complementaria."
+      },
+      "evidencia_textual": "La maestra de música contó que varios integrantes aprendieron las primeras piezas con sus abuelos.",
+      "imagen": null
+    },
+    {
+      "id": "esp-3-b",
+      "orden": 11,
+      "numero": 11,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Causas",
+      "subtema": "Artículo de divulgación",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3",
+        "texto": "Determina relaciones de causa en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "3.3",
+        "texto": "Relaciona indicios del texto no literario para determinar una causa."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "Las ranas de vidrio",
+      "texto": "Las ranas de vidrio viven en los bosques húmedos de Costa Rica, cerca de ríos y quebradas. La piel de su espalda es verde claro, del mismo tono que las hojas. La piel del vientre, en cambio, es tan transparente que deja ver algunos órganos, como el corazón.\n\nDurante el día, estas ranas duermen pegadas a la parte de abajo de una hoja. Así, la luz atraviesa su cuerpo y su sombra casi no se nota. A las aves y a las serpientes les cuesta mucho descubrirlas.\n\nEn la noche despiertan para cazar insectos pequeños.",
+      "palabras_texto": 95,
+      "contexto": "Lea el siguiente texto:\n\n«Las ranas de vidrio viven en los bosques húmedos de Costa Rica, cerca de ríos y quebradas. La piel de su espalda es verde claro, del mismo tono que las hojas. La piel del vientre, en cambio, es tan transparente que deja ver algunos órganos, como el corazón.\n\nDurante el día, estas ranas duermen pegadas a la parte de abajo de una hoja. Así, la luz atraviesa su cuerpo y su sombra casi no se nota. A las aves y a las serpientes les cuesta mucho descubrirlas.\n\nEn la noche despiertan para cazar insectos pequeños.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la causa de que a las aves les cueste descubrir a las ranas de vidrio?",
+      "opciones": {
+        "A": "Su cuerpo verde y transparente se confunde con la hoja.",
+        "B": "Salen de noche a buscar los insectos pequeños que comen.",
+        "C": "Se esconden bajo el agua de las quebradas durante el día.",
+        "D": "Las aves y las serpientes que las buscan pasan sin notarlas."
+      },
+      "clave": "A",
+      "explicacion": "El texto da dos pistas: la espalda tiene el mismo verde de las hojas y el vientre es transparente, así que la luz las atraviesa. Por eso se confunden con la hoja donde duermen y a las aves les cuesta verlas.",
+      "por_que": {
+        "B": "Es la causa de otro hecho del texto: por qué están despiertas de noche.",
+        "C": "Es una causa que suena razonable, pero el texto no la menciona.",
+        "D": "Presenta como causa lo que en realidad es el efecto."
+      },
+      "evidencia_textual": "Así, la luz atraviesa su cuerpo y su sombra casi no se nota.",
+      "imagen": null
+    },
+    {
+      "id": "esp-4-b",
+      "orden": 12,
+      "numero": 12,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Efectos",
+      "subtema": "Artículo de divulgación",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4",
+        "texto": "Determina relaciones de efecto en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "4.3",
+        "texto": "Relaciona indicios del texto no literario para determinar un efecto."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "Los colibríes",
+      "texto": "Los colibríes están entre las aves más pequeñas del mundo, y en Costa Rica viven muchas especies. Para mantenerse quietos en el aire, mueven las alas tan rápido que el ojo humano casi no las ve. Ese esfuerzo gasta mucha energía; por eso toman néctar durante todo el día.\n\nCuando un colibrí mete el pico en una flor, se le pega en la cabeza polen, un polvito que producen las flores. Luego vuela a otra flor de la misma especie y deja allí parte de ese polen. Sin el polen que llega de otra flor, muchas plantas no podrían formar frutos ni semillas.",
+      "palabras_texto": 103,
+      "contexto": "Lea el siguiente texto:\n\n«Los colibríes están entre las aves más pequeñas del mundo, y en Costa Rica viven muchas especies. Para mantenerse quietos en el aire, mueven las alas tan rápido que el ojo humano casi no las ve. Ese esfuerzo gasta mucha energía; por eso toman néctar durante todo el día.\n\nCuando un colibrí mete el pico en una flor, se le pega en la cabeza polen, un polvito que producen las flores. Luego vuela a otra flor de la misma especie y deja allí parte de ese polen. Sin el polen que llega de otra flor, muchas plantas no podrían formar frutos ni semillas.»",
+      "enunciado": "Según el texto anterior, ¿cuál es un efecto de que el colibrí visite varias flores de la misma especie?",
+      "opciones": {
+        "A": "Las plantas logran dar frutos con semillas.",
+        "B": "El colibrí necesita néctar para tener energía.",
+        "C": "Sus alas se mueven tan rápido que casi no se ven.",
+        "D": "Las flores cambian de color para atraer a las aves."
+      },
+      "clave": "A",
+      "explicacion": "Cuando el colibrí pasa de flor en flor, lleva en su cabeza el polen de una a otra. El texto explica que sin ese polen las plantas no podrían formar frutos ni semillas. Al unir las dos ideas se encuentra el efecto de sus visitas.",
+      "por_que": {
+        "B": "Es una causa de que el colibrí visite flores, no un efecto de llevar el polen.",
+        "C": "Es el efecto de otro hecho: mantenerse quieto en el aire.",
+        "D": "Es un efecto que el texto no menciona ni sostiene."
+      },
+      "evidencia_textual": "Sin el polen que llega de otra flor, muchas plantas no podrían formar frutos ni semillas.",
+      "imagen": null
+    },
+    {
+      "id": "esp-5-b",
+      "orden": 13,
+      "numero": 13,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Temas de textos literarios",
+      "subtema": "Poema",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "5",
+        "texto": "Reconoce diversos temas tratados en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "5.2",
+        "texto": "Reconoce el sentido global del texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "poema",
+      "titulo": "Lluvia en el zinc",
+      "texto": "Cuando la lluvia toca el techo de zinc,\nla casa entera se pone a cantar.\nPapá enciende el fogón de leña,\nmamá remienda una red junto al portal.\nMi hermanita cuenta las goteras\ncon un tarro, una taza y un comal.\nAfuera el río crece y se enoja\ny el viento sacude el platanal;\nadentro hay café, hay pan casero\ny un cuento viejo que dice el abuelo.\nQue llueva todo lo que quiera:\naquí nadie tiene frío,\nporque estamos juntos los de siempre.",
+      "palabras_texto": 84,
+      "contexto": "Lea el siguiente texto:\n\n«Cuando la lluvia toca el techo de zinc,  \nla casa entera se pone a cantar.  \nPapá enciende el fogón de leña,  \nmamá remienda una red junto al portal.  \nMi hermanita cuenta las goteras  \ncon un tarro, una taza y un comal.  \nAfuera el río crece y se enoja  \ny el viento sacude el platanal;  \nadentro hay café, hay pan casero  \ny un cuento viejo que dice el abuelo.  \nQue llueva todo lo que quiera:  \naquí nadie tiene frío,  \nporque estamos juntos los de siempre.»",
+      "enunciado": "En el texto anterior, ¿cuál es el tema tratado?",
+      "opciones": {
+        "A": "La alegría de jugar en los días de lluvia.",
+        "B": "La vida diaria en las zonas rurales del país.",
+        "C": "Las goteras que aparecen en el techo de la casa.",
+        "D": "La unión familiar que da abrigo en días de lluvia."
+      },
+      "clave": "D",
+      "explicacion": "Afuera el río crece y el viento sacude el platanal, pero adentro la familia comparte café, pan y un cuento. Los últimos versos dicen que nadie tiene frío porque están juntos. Por eso el tema es la unión de la familia que protege en los días de lluvia.",
+      "por_que": {
+        "A": "Es un tema de otra lectura posible: en el poema nadie sale a jugar, la familia se reúne adentro.",
+        "B": "Es un tema demasiado amplio para lo que cuenta el poema.",
+        "C": "Es un hecho puntual del poema, no su tema."
+      },
+      "evidencia_textual": "aquí nadie tiene frío,\nporque estamos juntos los de siempre.",
+      "imagen": null
+    },
+    {
+      "id": "esp-6-b",
+      "orden": 14,
+      "numero": 14,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Pensamientos de los personajes",
+      "subtema": "Poema",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "6",
+        "texto": "Infiere pensamientos de los personajes de un texto literario."
+      },
+      "evidencia": {
+        "codigo": "6.1",
+        "texto": "Infiere pensamientos de los personajes a partir de los indicios del texto literario."
+      },
+      "verbo": "inferir",
+      "tipo_texto": "literario",
+      "genero": "poema",
+      "titulo": "El abuelo Tobías",
+      "texto": "El abuelo Tobías ya no sale al mar.\nSe sienta en la arena con su sombrero\ny mira la lancha que pintó de azul.\nHoy la lleva Jeremy, su nieto,\nque aprendió a leer el viento\nmirando las manos del viejo.\nEl abuelo sonríe cuando la lancha\ncruza la línea blanca de la ola.\nNo grita consejos, no levanta el brazo:\nsolo mueve los labios despacito,\ncomo quien repite una lección\nque su nieto ya se sabe de memoria.",
+      "palabras_texto": 79,
+      "contexto": "Lea el siguiente texto:\n\n«El abuelo Tobías ya no sale al mar.  \nSe sienta en la arena con su sombrero  \ny mira la lancha que pintó de azul.  \nHoy la lleva Jeremy, su nieto,  \nque aprendió a leer el viento  \nmirando las manos del viejo.  \nEl abuelo sonríe cuando la lancha  \ncruza la línea blanca de la ola.  \nNo grita consejos, no levanta el brazo:  \nsolo mueve los labios despacito,  \ncomo quien repite una lección  \nque su nieto ya se sabe de memoria.»",
+      "enunciado": "Según el texto anterior, ¿cuál es el pensamiento evidenciado por el abuelo Tobías?",
+      "opciones": {
+        "A": "Su nieto ya está listo para llevar la lancha.",
+        "B": "Debe sentarse en la arena a mirar la lancha azul.",
+        "C": "Las personas mayores merecen descansar del trabajo.",
+        "D": "Jeremy necesita escuchar más consejos antes de salir."
+      },
+      "clave": "A",
+      "explicacion": "El abuelo sonríe cuando la lancha cruza la ola y no grita consejos. Mueve los labios como quien repite una lección que el nieto ya se sabe. Esas pistas muestran que confía en que Jeremy está listo.",
+      "por_que": {
+        "B": "Describe lo que el abuelo hace, no lo que piensa.",
+        "C": "Es una opinión del lector que el poema no muestra.",
+        "D": "Es contrario a las pistas: el abuelo no grita consejos porque confía en él."
+      },
+      "evidencia_textual": "No grita consejos, no levanta el brazo:",
+      "imagen": null
+    },
+    {
+      "id": "esp-7-b",
+      "orden": 15,
+      "numero": 15,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Conflictos de los personajes",
+      "subtema": "Escena teatral",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "7",
+        "texto": "Reconoce los conflictos de los personajes en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "7.1",
+        "texto": "Conoce el concepto de conflicto al identificarlo en un texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "escena teatral",
+      "titulo": "Los grupos de la feria",
+      "texto": "MÓNICA: (Con su cuaderno en la mano) Hoy tenemos que formar los grupos para la feria científica.\nISAAC: Mónica, vení con nosotros. Vamos a hacer un volcán que echa humo de verdad.\nDANIELA: ¡Mónica! Desde la semana pasada quedamos en estudiar juntas las mariposas.\nISAAC: Pero con nosotros vas a ganar, ya vas a ver.\nMÓNICA: (Mira a uno y a otra, en silencio) Es que... los dos son mis amigos.\nDANIELA: (Bajando la voz) Yo ya había comprado la cartulina.\nMÓNICA: Denme un ratito, por favor. Necesito pensar qué es lo más justo.",
+      "palabras_texto": 94,
+      "contexto": "Lea el siguiente texto:\n\n«MÓNICA: (Con su cuaderno en la mano) Hoy tenemos que formar los grupos para la feria científica.  \nISAAC: Mónica, vení con nosotros. Vamos a hacer un volcán que echa humo de verdad.  \nDANIELA: ¡Mónica! Desde la semana pasada quedamos en estudiar juntas las mariposas.  \nISAAC: Pero con nosotros vas a ganar, ya vas a ver.  \nMÓNICA: (Mira a uno y a otra, en silencio) Es que... los dos son mis amigos.  \nDANIELA: (Bajando la voz) Yo ya había comprado la cartulina.  \nMÓNICA: Denme un ratito, por favor. Necesito pensar qué es lo más justo.»",
+      "enunciado": "En el texto anterior, ¿cuál conflicto enfrenta Mónica?",
+      "opciones": {
+        "A": "Pedir un rato para pensar qué es lo justo.",
+        "B": "Hacer un volcán que eche humo para la feria.",
+        "C": "Elegir entre dos amigos que la quieren en su grupo.",
+        "D": "Haber comprado la cartulina sin tener una compañera."
+      },
+      "clave": "C",
+      "explicacion": "Isaac y Daniela quieren a Mónica en su grupo, y ella dice que los dos son sus amigos. Por eso no sabe a quién escoger: ese es su conflicto. Pedir un ratito para pensar es lo que hace frente al problema.",
+      "por_que": {
+        "A": "Es lo que Mónica hace al final frente al problema, no el problema.",
+        "B": "Es un hecho secundario: el proyecto que propone Isaac.",
+        "D": "Es la preocupación de Daniela, no el conflicto de Mónica."
+      },
+      "evidencia_textual": "MÓNICA: (Mira a uno y a otra, en silencio) Es que... los dos son mis amigos.",
+      "imagen": null
+    },
+    {
+      "id": "esp-8-b",
+      "orden": 16,
+      "numero": 16,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Comportamientos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "8",
+        "texto": "Identifica comportamientos de los personajes en un texto literario."
+      },
+      "evidencia": {
+        "codigo": "8.2",
+        "texto": "Relaciona los comportamientos de los personajes con sus motivaciones."
+      },
+      "verbo": "identificar",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "El camino a la escuela",
+      "texto": "Uriel vive en una comunidad cabécar, en las montañas de Chirripó. Para llegar a la escuela, camina más de una hora por un sendero de barro y cruza dos quebradas. Este año, su hermanita Maribel empezó primer grado.\n\nLa primera semana, Uriel salió de la casa más temprano que antes. En las partes resbalosas, caminaba delante de Maribel y le mostraba dónde pisar. En las quebradas, le cargaba el bulto y la esperaba en cada piedra. Cuando ella se cansaba, le inventaba adivinanzas sobre los pájaros del camino.\n\nUn viernes, Maribel cruzó la primera quebrada sola. Uriel no dijo nada, pero esa tarde le regaló una pluma de oropéndola que había guardado.",
+      "palabras_texto": 112,
+      "contexto": "Lea el siguiente texto:\n\n«Uriel vive en una comunidad cabécar, en las montañas de Chirripó. Para llegar a la escuela, camina más de una hora por un sendero de barro y cruza dos quebradas. Este año, su hermanita Maribel empezó primer grado.\n\nLa primera semana, Uriel salió de la casa más temprano que antes. En las partes resbalosas, caminaba delante de Maribel y le mostraba dónde pisar. En las quebradas, le cargaba el bulto y la esperaba en cada piedra. Cuando ella se cansaba, le inventaba adivinanzas sobre los pájaros del camino.\n\nUn viernes, Maribel cruzó la primera quebrada sola. Uriel no dijo nada, pero esa tarde le regaló una pluma de oropéndola que había guardado.»",
+      "enunciado": "En el texto anterior, ¿cuál es el comportamiento evidenciado por Uriel con su hermana?",
+      "opciones": {
+        "A": "Contento: siente alegría de tener compañía.",
+        "B": "Protector: guía y acompaña a Maribel en el camino.",
+        "C": "Impaciente: apura a su hermana para no llegar tarde.",
+        "D": "Obediente: la acompaña porque sus papás se lo pidieron."
+      },
+      "clave": "B",
+      "explicacion": "Uriel sale más temprano, camina adelante en las partes resbalosas, le carga el bulto en las quebradas y la entretiene con adivinanzas. Todas esas acciones muestran que la protege y la cuida mientras ella aprende el camino.",
+      "por_que": {
+        "A": "Nombra una emoción, no una conducta.",
+        "C": "Es contrario a las pistas: Uriel la espera en cada piedra.",
+        "D": "Es contrario a los indicios: el texto no dice que se lo pidieran, y él lo hace con cariño."
+      },
+      "evidencia_textual": "En las partes resbalosas, caminaba delante de Maribel y le mostraba dónde pisar.",
+      "imagen": null
+    },
+    {
+      "id": "esp-1-c",
+      "orden": 17,
+      "numero": 17,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Noticia",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.5",
+        "texto": "Sintetiza la información del texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "noticia",
+      "titulo": "Huerta de plantas medicinales",
+      "texto": "Estudiantes de Upala siembran plantas medicinales\n\nLos estudiantes de sexto grado de una escuela de Upala sembraron una huerta de plantas medicinales. La idea surgió en la clase de Ciencias, cuando una estudiante llevó una bolsita de hojas que le dio su abuela.\n\nCada grupo investigó una planta, preguntó en su casa cómo se usaba y preparó un rótulo con su nombre y sus cuidados. Varias abuelas visitaron la escuela para enseñar a cortar las hojas sin dañar la mata.\n\nLa maestra recordó que estas plantas no sustituyen la visita al médico. Aun así, los estudiantes han aprendido a cuidar la huerta y a valorar lo que se sabe en sus familias.",
+      "palabras_texto": 112,
+      "contexto": "Lea el siguiente texto:\n\n«Estudiantes de Upala siembran plantas medicinales\n\nLos estudiantes de sexto grado de una escuela de Upala sembraron una huerta de plantas medicinales. La idea surgió en la clase de Ciencias, cuando una estudiante llevó una bolsita de hojas que le dio su abuela.\n\nCada grupo investigó una planta, preguntó en su casa cómo se usaba y preparó un rótulo con su nombre y sus cuidados. Varias abuelas visitaron la escuela para enseñar a cortar las hojas sin dañar la mata.\n\nLa maestra recordó que estas plantas no sustituyen la visita al médico. Aun así, los estudiantes han aprendido a cuidar la huerta y a valorar lo que se sabe en sus familias.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la idea fundamental?",
+      "opciones": {
+        "A": "La huerta unió lo aprendido en clase con el saber familiar.",
+        "B": "Varias abuelas enseñaron a cortar hojas sin dañar las matas.",
+        "C": "Las plantas medicinales reemplazan la consulta con el médico.",
+        "D": "Cada grupo hizo un rótulo con el nombre y los cuidados de su planta."
+      },
+      "clave": "A",
+      "explicacion": "La noticia cuenta varias cosas: la siembra, los rótulos y la visita de las abuelas. La idea que las reúne es que la huerta permitió aprender en la escuela con lo que saben las familias. El texto aclara que estas plantas no reemplazan al médico.",
+      "por_que": {
+        "B": "Es un detalle verdadero, pero solo una parte de la noticia.",
+        "C": "Es una afirmación que el texto no hace; incluso dice lo contrario.",
+        "D": "Es una idea complementaria presentada como si fuera la principal."
+      },
+      "evidencia_textual": "Aun así, los estudiantes han aprendido a cuidar la huerta y a valorar lo que se sabe en sus familias.",
+      "imagen": null
+    },
+    {
+      "id": "esp-2-c",
+      "orden": 18,
+      "numero": 18,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas complementarias",
+      "subtema": "Texto científico",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2",
+        "texto": "Distingue las ideas complementarias en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "2.3",
+        "texto": "Reconoce la organización de las ideas complementarias en relación con la idea fundamental."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "texto científico",
+      "titulo": "El arcoíris",
+      "texto": "El arcoíris aparece cuando el sol brilla y, al mismo tiempo, hay gotas de agua en el aire. La luz del sol parece blanca, pero en realidad está formada por varios colores mezclados.\n\nAl entrar en una gota, la luz se dobla y sus colores se separan, porque cada uno se desvía un poco distinto. Luego la luz rebota dentro de la gota y sale hacia nuestros ojos. Así vemos la franja de colores, del rojo al violeta.\n\nPara ver un arcoíris, hay que tener el sol a la espalda y la lluvia al frente. Por eso suelen verse en las tardes de lluvia ligera, cuando el sol ya está bajo.",
+      "palabras_texto": 111,
+      "contexto": "Lea el siguiente texto:\n\n«El arcoíris aparece cuando el sol brilla y, al mismo tiempo, hay gotas de agua en el aire. La luz del sol parece blanca, pero en realidad está formada por varios colores mezclados.\n\nAl entrar en una gota, la luz se dobla y sus colores se separan, porque cada uno se desvía un poco distinto. Luego la luz rebota dentro de la gota y sale hacia nuestros ojos. Así vemos la franja de colores, del rojo al violeta.\n\nPara ver un arcoíris, hay que tener el sol a la espalda y la lluvia al frente. Por eso suelen verse en las tardes de lluvia ligera, cuando el sol ya está bajo.»",
+      "enunciado": "En el texto anterior, ¿cuál es una idea complementaria?",
+      "opciones": {
+        "A": "Los arcoíris se ven más en los meses de verano.",
+        "B": "El arcoíris nace cuando las gotas separan la luz.",
+        "C": "Quien quiera verlo debe tener el sol a sus espaldas.",
+        "D": "Cada gota de lluvia produce un solo color del arcoíris."
+      },
+      "clave": "C",
+      "explicacion": "El texto explica sobre todo cómo se forma el arcoíris: la luz entra en las gotas y sus colores se separan. Que haya que tener el sol a la espalda para verlo es un dato que acompaña esa explicación, por eso es una idea complementaria.",
+      "por_que": {
+        "A": "Es un dato que no aparece en el texto.",
+        "B": "Es la idea fundamental, la que explican los dos primeros párrafos.",
+        "D": "Distorsiona el texto: en cada gota se separan todos los colores."
+      },
+      "evidencia_textual": "Para ver un arcoíris, hay que tener el sol a la espalda y la lluvia al frente.",
+      "imagen": null
+    },
+    {
+      "id": "esp-3-c",
+      "orden": 19,
+      "numero": 19,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Causas",
+      "subtema": "Noticia",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3",
+        "texto": "Determina relaciones de causa en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "3.2",
+        "texto": "Reconoce los motivos que originan un hecho en el texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "noticia",
+      "titulo": "Vecinos recuperan el parque",
+      "texto": "Vecinos de Desamparados recuperan el parque del barrio\n\nDurante varios sábados, vecinos de un barrio de Desamparados trabajaron juntos en el parque de la comunidad. Pintaron las bancas, repararon los columpios y sembraron árboles de sombra.\n\nHace un año, el parque tenía el zacate alto, los juegos quebrados y poca luz en las noches. Poco a poco, las familias dejaron de llevar a sus hijos. Los niños empezaron a jugar fútbol en la calle, entre los carros. Preocupada, una madre de familia propuso una reunión para buscar soluciones.\n\nAhora, las tardes vuelven a llenarse de risas y de bolas que ruedan por la cancha.",
+      "palabras_texto": 104,
+      "contexto": "Lea el siguiente texto:\n\n«Vecinos de Desamparados recuperan el parque del barrio\n\nDurante varios sábados, vecinos de un barrio de Desamparados trabajaron juntos en el parque de la comunidad. Pintaron las bancas, repararon los columpios y sembraron árboles de sombra.\n\nHace un año, el parque tenía el zacate alto, los juegos quebrados y poca luz en las noches. Poco a poco, las familias dejaron de llevar a sus hijos. Los niños empezaron a jugar fútbol en la calle, entre los carros. Preocupada, una madre de familia propuso una reunión para buscar soluciones.\n\nAhora, las tardes vuelven a llenarse de risas y de bolas que ruedan por la cancha.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la causa de que las familias dejaran de llevar a sus hijos al parque?",
+      "opciones": {
+        "A": "Los niños jugaban fútbol en plena calle.",
+        "B": "El mal estado en que se encontraba el parque.",
+        "C": "La propuesta de una madre de reunir a los vecinos.",
+        "D": "El cobro de una cuota para usar la cancha del parque."
+      },
+      "clave": "B",
+      "explicacion": "Antes de decir que las familias dejaron de ir, la noticia describe el parque: zacate alto, juegos quebrados y poca luz. Ese descuido fue la causa. Que los niños jugaran en la calle fue lo que pasó después.",
+      "por_que": {
+        "A": "Presenta como causa algo que ocurrió después, como efecto.",
+        "C": "Es la causa de otro hecho: la reunión para recuperar el parque.",
+        "D": "Es una causa que suena posible, pero el texto no la menciona."
+      },
+      "evidencia_textual": "Hace un año, el parque tenía el zacate alto, los juegos quebrados y poca luz en las noches.",
+      "imagen": null
+    },
+    {
+      "id": "esp-4-c",
+      "orden": 20,
+      "numero": 20,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Efectos",
+      "subtema": "Texto científico",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4",
+        "texto": "Determina relaciones de efecto en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "4.2",
+        "texto": "Reconoce las consecuencias de un hecho en el texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "texto científico",
+      "titulo": "La columna y la mochila",
+      "texto": "La columna vertebral es la fila de huesos que va desde el cuello hasta la cadera. Gracias a ella podemos estar de pie, doblarnos y girar. En la niñez, la columna todavía está creciendo.\n\nCuando una mochila pesa demasiado, el cuerpo se inclina hacia adelante para no irse de espaldas. Si eso pasa todos los días, los músculos de la espalda y de los hombros trabajan de más. Con el tiempo se cansan, y aparecen molestias y dolores.\n\nPara evitarlo, conviene llevar solo los cuadernos del día, usar las dos tiras de la mochila y acomodar lo más pesado cerca de la espalda.",
+      "palabras_texto": 103,
+      "contexto": "Lea el siguiente texto:\n\n«La columna vertebral es la fila de huesos que va desde el cuello hasta la cadera. Gracias a ella podemos estar de pie, doblarnos y girar. En la niñez, la columna todavía está creciendo.\n\nCuando una mochila pesa demasiado, el cuerpo se inclina hacia adelante para no irse de espaldas. Si eso pasa todos los días, los músculos de la espalda y de los hombros trabajan de más. Con el tiempo se cansan, y aparecen molestias y dolores.\n\nPara evitarlo, conviene llevar solo los cuadernos del día, usar las dos tiras de la mochila y acomodar lo más pesado cerca de la espalda.»",
+      "enunciado": "Según el texto anterior, ¿cuál es un efecto de cargar todos los días una mochila muy pesada?",
+      "opciones": {
+        "A": "Una columna que se detiene y ya no crece más.",
+        "B": "Músculos más fuertes en la espalda y los hombros.",
+        "C": "El peso de llevar cuadernos de todas las materias.",
+        "D": "Dolor de espalda y hombros por el cansancio muscular."
+      },
+      "clave": "D",
+      "explicacion": "El texto explica una cadena: la mochila pesada hace que el cuerpo se incline, los músculos trabajan de más y, con el tiempo, aparecen molestias. Por eso el efecto es el dolor en la espalda y los hombros.",
+      "por_que": {
+        "A": "Es un efecto exagerado que el texto no sostiene.",
+        "B": "Es un efecto que el texto no sostiene: dice que los músculos se cansan, no que se fortalecen.",
+        "C": "Presenta como efecto algo que en realidad es una causa del peso."
+      },
+      "evidencia_textual": "Con el tiempo se cansan, y aparecen molestias y dolores.",
+      "imagen": null
+    },
+    {
+      "id": "esp-5-c",
+      "orden": 21,
+      "numero": 21,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Temas de textos literarios",
+      "subtema": "Leyenda",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "5",
+        "texto": "Reconoce diversos temas tratados en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "5.3",
+        "texto": "Reconoce el propósito del texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "leyenda",
+      "titulo": "El cerro que lloró",
+      "texto": "Cuentan los mayores que, hace mucho tiempo, un cerro de la llanura guardaba toda el agua de la región en una laguna escondida. Abajo, los pueblos sufrían largas sequías y sus milpas se secaban.\n\nUna muchacha llamada Nayara subió al cerro a pedir un poco de agua para su gente. El cerro, que era gruñón, le dijo que solo la daría a cambio de algo valioso. Nayara no tenía joyas ni oro. Entonces le cantó las canciones de su pueblo durante tres noches seguidas.\n\nEl cerro se conmovió tanto que lloró. De sus lágrimas nacieron los ríos que todavía hoy bajan a la llanura.",
+      "palabras_texto": 104,
+      "contexto": "Lea el siguiente texto:\n\n«Cuentan los mayores que, hace mucho tiempo, un cerro de la llanura guardaba toda el agua de la región en una laguna escondida. Abajo, los pueblos sufrían largas sequías y sus milpas se secaban.\n\nUna muchacha llamada Nayara subió al cerro a pedir un poco de agua para su gente. El cerro, que era gruñón, le dijo que solo la daría a cambio de algo valioso. Nayara no tenía joyas ni oro. Entonces le cantó las canciones de su pueblo durante tres noches seguidas.\n\nEl cerro se conmovió tanto que lloró. De sus lágrimas nacieron los ríos que todavía hoy bajan a la llanura.»",
+      "enunciado": "En el texto anterior, ¿cuál es el tema tratado?",
+      "opciones": {
+        "A": "El viaje de una muchacha hasta la cima.",
+        "B": "La importancia del agua para todos los seres.",
+        "C": "El valor de los regalos que no son materiales.",
+        "D": "El castigo que reciben quienes actúan con egoísmo."
+      },
+      "clave": "C",
+      "explicacion": "El cerro pedía algo valioso, y Nayara no tenía joyas ni oro. Lo que ofreció fueron las canciones de su pueblo, y eso conmovió al cerro. La leyenda muestra que hay regalos muy valiosos que no se pueden comprar.",
+      "por_que": {
+        "A": "Es un hecho puntual de la leyenda, no su tema.",
+        "B": "Es un tema demasiado amplio para lo que cuenta el texto.",
+        "D": "Es otra lectura posible, pero el cerro no recibe ningún castigo."
+      },
+      "evidencia_textual": "Nayara no tenía joyas ni oro. Entonces le cantó las canciones de su pueblo durante tres noches seguidas.",
+      "imagen": null
+    },
+    {
+      "id": "esp-6-c",
+      "orden": 22,
+      "numero": 22,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Pensamientos de los personajes",
+      "subtema": "Fábula",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "6",
+        "texto": "Infiere pensamientos de los personajes de un texto literario."
+      },
+      "evidencia": {
+        "codigo": "6.2",
+        "texto": "Reconoce la intención de los personajes del texto literario."
+      },
+      "verbo": "inferir",
+      "tipo_texto": "literario",
+      "genero": "fábula",
+      "titulo": "El pizote y la guatusa",
+      "texto": "Un pizote encontró un palo de mango cargado de frutas maduras. Al pie del árbol estaba la guatusa, mirando hacia arriba con hambre.\n\n—Amiga —le dijo el pizote con voz dulce—, yo subo y escojo los mejores para los dos. Vos esperá abajo con la canasta.\n\nLa guatusa aceptó. Arriba, entre las hojas, el pizote se comía cada mango maduro y dejaba caer en la canasta solo las cáscaras y los verdes. De vez en cuando gritaba: “¡Ahí va otro regalito!”.\n\nCuando la guatusa revisó la canasta, encontró un montón de cáscaras. El pizote ya bajaba por el otro lado del tronco, con la panza redonda.",
+      "palabras_texto": 106,
+      "contexto": "Lea el siguiente texto:\n\n«Un pizote encontró un palo de mango cargado de frutas maduras. Al pie del árbol estaba la guatusa, mirando hacia arriba con hambre.\n\n—Amiga —le dijo el pizote con voz dulce—, yo subo y escojo los mejores para los dos. Vos esperá abajo con la canasta.\n\nLa guatusa aceptó. Arriba, entre las hojas, el pizote se comía cada mango maduro y dejaba caer en la canasta solo las cáscaras y los verdes. De vez en cuando gritaba: “¡Ahí va otro regalito!”.\n\nCuando la guatusa revisó la canasta, encontró un montón de cáscaras. El pizote ya bajaba por el otro lado del tronco, con la panza redonda.»",
+      "enunciado": "Según el texto anterior, ¿cuál es el pensamiento evidenciado por el pizote?",
+      "opciones": {
+        "A": "Debía subir al árbol y tirar los mangos.",
+        "B": "Los amigos deben repartir la comida por igual.",
+        "C": "La guatusa merecía comerse los mangos más dulces.",
+        "D": "Podía quedarse con lo mejor si la guatusa no lo veía."
+      },
+      "clave": "D",
+      "explicacion": "El pizote promete escoger los mejores mangos para los dos, pero, escondido entre las hojas, se come los maduros y le tira cáscaras. Esa trampa muestra lo que pensaba: que podía quedarse con lo mejor si la guatusa no lo veía.",
+      "por_que": {
+        "A": "Describe lo que el pizote dice que hará, no lo que realmente piensa.",
+        "B": "Es una opinión del lector, no lo que piensa el pizote.",
+        "C": "Es contrario a las pistas: el pizote se come los maduros."
+      },
+      "evidencia_textual": "Arriba, entre las hojas, el pizote se comía cada mango maduro y dejaba caer en la canasta solo las cáscaras y los verdes.",
+      "imagen": null
+    },
+    {
+      "id": "esp-7-c",
+      "orden": 23,
+      "numero": 23,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Conflictos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "7",
+        "texto": "Reconoce los conflictos de los personajes en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "7.2",
+        "texto": "Reconoce las motivaciones de los personajes ante el conflicto."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "Una sola tableta",
+      "texto": "En la casa de Ximena hay una sola tableta, y la usan ella y su hermano Andrey para las tareas. Esa noche, Ximena debía enviar a las ocho una presentación sobre los volcanes. Andrey, que está en sétimo, tenía un examen en línea a la misma hora.\n\n—Yo la pedí primero —dijo Ximena, abrazando la tableta.\n\nAndrey no discutió. Se sentó en la grada con los codos en las rodillas y repasó su cuaderno en voz baja. Ximena lo miró de reojo. Recordó la vez que él se desveló ayudándola a pegar fotos para su álbum de Ciencias.\n\nRespiró hondo y miró el reloj de la cocina: eran las siete y media.",
+      "palabras_texto": 112,
+      "contexto": "Lea el siguiente texto:\n\n«En la casa de Ximena hay una sola tableta, y la usan ella y su hermano Andrey para las tareas. Esa noche, Ximena debía enviar a las ocho una presentación sobre los volcanes. Andrey, que está en sétimo, tenía un examen en línea a la misma hora.\n\n—Yo la pedí primero —dijo Ximena, abrazando la tableta.\n\nAndrey no discutió. Se sentó en la grada con los codos en las rodillas y repasó su cuaderno en voz baja. Ximena lo miró de reojo. Recordó la vez que él se desveló ayudándola a pegar fotos para su álbum de Ciencias.\n\nRespiró hondo y miró el reloj de la cocina: eran las siete y media.»",
+      "enunciado": "En el texto anterior, ¿cuál conflicto enfrenta Ximena?",
+      "opciones": {
+        "A": "Hacer una presentación sobre los volcanes.",
+        "B": "Dudar entre usar la tableta o prestársela a Andrey.",
+        "C": "Mirar el reloj cuando faltaba media hora para enviar.",
+        "D": "Presentar un examen en línea sin contar con la tableta."
+      },
+      "clave": "B",
+      "explicacion": "Ximena necesita la tableta para su presentación, pero recuerda que Andrey la ayudó una vez y lo ve repasar en la grada. Por eso duda entre usarla o prestársela. El examen en línea es el problema de su hermano.",
+      "por_que": {
+        "A": "Es un hecho secundario: la tarea que debía enviar.",
+        "C": "Es el momento final del cuento, no el problema que enfrenta.",
+        "D": "Es el problema de Andrey, no el de Ximena."
+      },
+      "evidencia_textual": "Recordó la vez que él se desveló ayudándola a pegar fotos para su álbum de Ciencias.",
+      "imagen": null
+    },
+    {
+      "id": "esp-8-c",
+      "orden": 24,
+      "numero": 24,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Comportamientos de los personajes",
+      "subtema": "Escena teatral",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "8",
+        "texto": "Identifica comportamientos de los personajes en un texto literario."
+      },
+      "evidencia": {
+        "codigo": "8.3",
+        "texto": "Reconoce la intención de los personajes a partir de sus comportamientos."
+      },
+      "verbo": "identificar",
+      "tipo_texto": "literario",
+      "genero": "escena teatral",
+      "titulo": "El mural",
+      "texto": "ESTEBAN: (Con la brocha en alto) Yo pinto un sol grande en el centro. Ustedes pinten el zacate abajo.\nKEISHA: Pero quedamos en que cada quien pintaba algo de su comunidad. Yo quería pintar el tren de Limón.\nESTEBAN: Eso no cabe. El sol tiene que verse desde la calle.\nBRANDON: (En voz baja) Yo traje un dibujo de la lancha de mi tío...\nESTEBAN: (Sin voltear) Después vemos. Pasame el amarillo.\nKEISHA: (Se cruza de brazos) Así no es un mural de todos, Esteban.\nESTEBAN: (Sigue pintando) Cuando el sol esté listo, ustedes rellenan lo que falte.",
+      "palabras_texto": 98,
+      "contexto": "Lea el siguiente texto:\n\n«ESTEBAN: (Con la brocha en alto) Yo pinto un sol grande en el centro. Ustedes pinten el zacate abajo.  \nKEISHA: Pero quedamos en que cada quien pintaba algo de su comunidad. Yo quería pintar el tren de Limón.  \nESTEBAN: Eso no cabe. El sol tiene que verse desde la calle.  \nBRANDON: (En voz baja) Yo traje un dibujo de la lancha de mi tío...  \nESTEBAN: (Sin voltear) Después vemos. Pasame el amarillo.  \nKEISHA: (Se cruza de brazos) Así no es un mural de todos, Esteban.  \nESTEBAN: (Sigue pintando) Cuando el sol esté listo, ustedes rellenan lo que falte.»",
+      "enunciado": "En el texto anterior, ¿cuál es el comportamiento evidenciado por Esteban?",
+      "opciones": {
+        "A": "Mandón: impone sus ideas sin oír al grupo.",
+        "B": "Enojado: siente rabia contra sus compañeros.",
+        "C": "Flexible: cambia su plan al escuchar al grupo.",
+        "D": "Tímido: habla en voz baja sobre el dibujo que trajo."
+      },
+      "clave": "A",
+      "explicacion": "Esteban decide qué pinta cada uno, rechaza la idea de Keisha y deja para después el dibujo de Brandon. Aunque Keisha le reclama, sigue pintando su sol. Esas acciones muestran que impone sus ideas sin escuchar al grupo.",
+      "por_que": {
+        "B": "Nombra una emoción, no una conducta, y el texto no la muestra.",
+        "C": "Es contrario a las pistas: Esteban sigue con su plan aunque le reclaman.",
+        "D": "Es la conducta de Brandon, no la de Esteban."
+      },
+      "evidencia_textual": "ESTEBAN: (Sigue pintando) Cuando el sol esté listo, ustedes rellenan lo que falte.",
+      "imagen": null
+    },
+    {
+      "id": "esp-1-d",
+      "orden": 25,
+      "numero": 25,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Texto científico",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.1",
+        "texto": "Conoce el concepto de idea fundamental al identificarla en un texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "texto científico",
+      "titulo": "¿Para qué sudamos?",
+      "texto": "Cuando hacemos ejercicio o cuando hace mucho calor, la temperatura del cuerpo sube. Para que no suba demasiado, la piel produce sudor, un líquido formado sobre todo por agua y un poco de sal.\n\nEl sudor sale por poros diminutos de la piel. Al secarse con el aire, se lleva parte del calor del cuerpo y nos refresca. Por eso sentimos alivio cuando sopla una brisa después de correr.\n\nComo al sudar perdemos agua, conviene tomar líquidos durante el día, sobre todo en lugares calientes. El sudor casi no tiene olor; el olor aparece cuando algunas bacterias de la piel lo descomponen.",
+      "palabras_texto": 102,
+      "contexto": "Lea el siguiente texto:\n\n«Cuando hacemos ejercicio o cuando hace mucho calor, la temperatura del cuerpo sube. Para que no suba demasiado, la piel produce sudor, un líquido formado sobre todo por agua y un poco de sal.\n\nEl sudor sale por poros diminutos de la piel. Al secarse con el aire, se lleva parte del calor del cuerpo y nos refresca. Por eso sentimos alivio cuando sopla una brisa después de correr.\n\nComo al sudar perdemos agua, conviene tomar líquidos durante el día, sobre todo en lugares calientes. El sudor casi no tiene olor; el olor aparece cuando algunas bacterias de la piel lo descomponen.»",
+      "enunciado": "¿Cuál es la idea fundamental del texto anterior?",
+      "opciones": {
+        "A": "El sudor contiene sobre todo agua y algo de sal.",
+        "B": "El cuerpo tiene muchas formas de protegerse del calor.",
+        "C": "Al sudar se pierde agua y por eso hay que tomar líquidos.",
+        "D": "El sudor ayuda a enfriar el cuerpo cuando este se calienta."
+      },
+      "clave": "D",
+      "explicacion": "El texto explica para qué sirve el sudor: cuando la temperatura del cuerpo sube, el sudor se seca y se lleva parte del calor. Los datos sobre la sal, el agua que perdemos y el olor acompañan esa idea principal.",
+      "por_que": {
+        "A": "Es un detalle verdadero, no la idea principal.",
+        "B": "Es una generalización más amplia que el texto, que habla solo del sudor.",
+        "C": "Es una idea complementaria presentada como fundamental."
+      },
+      "evidencia_textual": "Al secarse con el aire, se lleva parte del calor del cuerpo y nos refresca.",
+      "imagen": null
+    },
+    {
+      "id": "esp-2-d",
+      "orden": 26,
+      "numero": 26,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas complementarias",
+      "subtema": "Texto de opinión",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2",
+        "texto": "Distingue las ideas complementarias en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "2.1",
+        "texto": "Conoce el concepto de idea complementaria al identificarla en un texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "texto de opinión",
+      "titulo": "Leer en familia",
+      "texto": "Pienso que en cada casa debería haber un rato para leer en familia, aunque sea quince minutos antes de dormir. No hace falta tener muchos libros: sirven una revista, un periódico o los cuentos que trae de la escuela el hermano menor.\n\nCuando una persona adulta lee en voz alta, los niños aprenden palabras nuevas casi sin darse cuenta. Además, escuchar historias juntos abre conversaciones que en otro momento no surgirían. En mi casa, un cuento sobre un pescador terminó en una larga plática sobre el pueblo donde creció mi abuela.\n\nLas bibliotecas públicas prestan libros sin costo. Solo hace falta decidirse y apagar la televisión un ratito.",
+      "palabras_texto": 108,
+      "contexto": "Lea el siguiente texto:\n\n«Pienso que en cada casa debería haber un rato para leer en familia, aunque sea quince minutos antes de dormir. No hace falta tener muchos libros: sirven una revista, un periódico o los cuentos que trae de la escuela el hermano menor.\n\nCuando una persona adulta lee en voz alta, los niños aprenden palabras nuevas casi sin darse cuenta. Además, escuchar historias juntos abre conversaciones que en otro momento no surgirían. En mi casa, un cuento sobre un pescador terminó en una larga plática sobre el pueblo donde creció mi abuela.\n\nLas bibliotecas públicas prestan libros sin costo. Solo hace falta decidirse y apagar la televisión un ratito.»",
+      "enunciado": "Según el texto anterior, una idea complementaria destaca que",
+      "opciones": {
+        "A": "se necesitan muchos libros en la casa para leer.",
+        "B": "oír leer a un adulto ayuda a aprender palabras nuevas.",
+        "C": "las familias deberían reservar un tiempo para leer juntas.",
+        "D": "los niños comprenden mejor cuando leen sin ninguna compañía."
+      },
+      "clave": "B",
+      "explicacion": "La idea principal es que las familias lean juntas un rato. Para apoyarla, el texto da datos como este: cuando un adulto lee en voz alta, los niños aprenden palabras nuevas. El texto también aclara que no hacen falta muchos libros.",
+      "por_que": {
+        "A": "Distorsiona el texto, que dice que no hacen falta muchos libros.",
+        "C": "Es la idea fundamental, no una complementaria.",
+        "D": "Es un dato que no aparece en el texto."
+      },
+      "evidencia_textual": "Cuando una persona adulta lee en voz alta, los niños aprenden palabras nuevas casi sin darse cuenta.",
+      "imagen": null
+    },
+    {
+      "id": "esp-3-d",
+      "orden": 27,
+      "numero": 27,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Causas",
+      "subtema": "Texto de opinión",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3",
+        "texto": "Determina relaciones de causa en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "3.2",
+        "texto": "Reconoce los motivos que originan un hecho en el texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "texto de opinión",
+      "titulo": "Árboles en el patio",
+      "texto": "Muchos patios escolares son de cemento de punta a punta. En los meses de verano, a media mañana, el piso arde bajo los zapatos. La poca sombra que hay junto a las paredes se llena enseguida, y muchos estudiantes prefieren quedarse en el aula durante el recreo.\n\nCreo que cada escuela debería sembrar árboles en su patio. Un árbol grande da sombra fresca, y bajo sus ramas se puede leer, conversar o jugar. Además, atrae pájaros y mariposas que pueden observarse en las clases de Ciencias.\n\nSembrar un árbol cuesta poco. Esperar a que crezca exige paciencia, pero los estudiantes de los próximos años lo agradecerán.",
+      "palabras_texto": 106,
+      "contexto": "Lea el siguiente texto:\n\n«Muchos patios escolares son de cemento de punta a punta. En los meses de verano, a media mañana, el piso arde bajo los zapatos. La poca sombra que hay junto a las paredes se llena enseguida, y muchos estudiantes prefieren quedarse en el aula durante el recreo.\n\nCreo que cada escuela debería sembrar árboles en su patio. Un árbol grande da sombra fresca, y bajo sus ramas se puede leer, conversar o jugar. Además, atrae pájaros y mariposas que pueden observarse en las clases de Ciencias.\n\nSembrar un árbol cuesta poco. Esperar a que crezca exige paciencia, pero los estudiantes de los próximos años lo agradecerán.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la causa de que muchos estudiantes prefieran quedarse en el aula durante el recreo?",
+      "opciones": {
+        "A": "El calor de un patio de cemento casi sin sombra.",
+        "B": "Las lluvias fuertes que caen durante las mañanas.",
+        "C": "El patio se queda casi vacío a la hora del recreo.",
+        "D": "La sombra fresca que dan los árboles grandes del patio."
+      },
+      "clave": "A",
+      "explicacion": "El texto dice que el patio es de cemento, que el piso arde en verano y que la poca sombra se llena rápido. Al unir esas pistas se entiende que el calor hace que muchos prefieran quedarse adentro.",
+      "por_que": {
+        "B": "Es una causa razonable, pero el texto no la menciona.",
+        "C": "Presenta como causa lo que en realidad es un efecto.",
+        "D": "Es la causa de otro hecho: poder leer y jugar bajo los árboles."
+      },
+      "evidencia_textual": "En los meses de verano, a media mañana, el piso arde bajo los zapatos.",
+      "imagen": null
+    },
+    {
+      "id": "esp-4-d",
+      "orden": 28,
+      "numero": 28,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Efectos",
+      "subtema": "Artículo de divulgación",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4",
+        "texto": "Determina relaciones de efecto en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "4.1",
+        "texto": "Conoce el concepto de efecto al identificarlo en un texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "Las iguanas al sol",
+      "texto": "Las iguanas verdes son reptiles que viven en las zonas cálidas del país, cerca de ríos y playas. Muchas personas las ven quietas sobre una rama o una piedra, con el cuerpo extendido al sol, y piensan que son perezosas.\n\nEn realidad, las iguanas no producen suficiente calor propio, como sí lo hacen las personas. Por eso, en las mañanas, se asolean para calentar su cuerpo. Cuando ya están calientes, pueden moverse con rapidez y digerir mejor las hojas y flores que comen.\n\nSi sienten peligro, se lanzan al agua desde las ramas. Son excelentes nadadoras y pueden quedarse un buen rato bajo el agua.",
+      "palabras_texto": 105,
+      "contexto": "Lea el siguiente texto:\n\n«Las iguanas verdes son reptiles que viven en las zonas cálidas del país, cerca de ríos y playas. Muchas personas las ven quietas sobre una rama o una piedra, con el cuerpo extendido al sol, y piensan que son perezosas.\n\nEn realidad, las iguanas no producen suficiente calor propio, como sí lo hacen las personas. Por eso, en las mañanas, se asolean para calentar su cuerpo. Cuando ya están calientes, pueden moverse con rapidez y digerir mejor las hojas y flores que comen.\n\nSi sienten peligro, se lanzan al agua desde las ramas. Son excelentes nadadoras y pueden quedarse un buen rato bajo el agua.»",
+      "enunciado": "Según el texto anterior, ¿cuál es un efecto de que las iguanas se asoleen en las mañanas?",
+      "opciones": {
+        "A": "Les falta calor propio dentro del cuerpo.",
+        "B": "Se tiran al agua cuando sienten algún peligro.",
+        "C": "Pueden moverse rápido y digerir mejor lo que comen.",
+        "D": "Pasan todo el resto del día sin necesitar comer nada."
+      },
+      "clave": "C",
+      "explicacion": "El texto explica que las iguanas se asolean para calentar su cuerpo. Después dice que, ya calientes, pueden moverse con rapidez y digerir mejor sus alimentos. Ese es el efecto de tomar el sol.",
+      "por_que": {
+        "A": "Presenta como efecto lo que en realidad es la causa de que se asoleen.",
+        "B": "Es el efecto de otro hecho: sentir peligro.",
+        "D": "Es un efecto que el texto no menciona ni sostiene."
+      },
+      "evidencia_textual": "Cuando ya están calientes, pueden moverse con rapidez y digerir mejor las hojas y flores que comen.",
+      "imagen": null
+    },
+    {
+      "id": "esp-5-d",
+      "orden": 29,
+      "numero": 29,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Temas de textos literarios",
+      "subtema": "Cuento",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "5",
+        "texto": "Reconoce diversos temas tratados en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "5.2",
+        "texto": "Reconoce el sentido global del texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "El cucharón de la abuela",
+      "texto": "Cada domingo, la abuela de Shanice cocina rice and beans en su casa de Limón. Este año, la abuela le dijo que ya era hora de aprender.\n\nShanice ralló el coco, exprimió la leche con un paño y midió el tomillo con los dedos, como hacía la abuela. Mientras cocinaban, la abuela le contó que esa receta la aprendió de su propia madre, en una cocina de leña frente al mar.\n\nAl mediodía, la familia probó el plato. El tío Wilbert dijo que sabía igualito al de siempre. La abuela le guiñó un ojo a Shanice y le regaló el cucharón de madera que había usado por cuarenta años.",
+      "palabras_texto": 109,
+      "contexto": "Lea el siguiente texto:\n\n«Cada domingo, la abuela de Shanice cocina rice and beans en su casa de Limón. Este año, la abuela le dijo que ya era hora de aprender.\n\nShanice ralló el coco, exprimió la leche con un paño y midió el tomillo con los dedos, como hacía la abuela. Mientras cocinaban, la abuela le contó que esa receta la aprendió de su propia madre, en una cocina de leña frente al mar.\n\nAl mediodía, la familia probó el plato. El tío Wilbert dijo que sabía igualito al de siempre. La abuela le guiñó un ojo a Shanice y le regaló el cucharón de madera que había usado por cuarenta años.»",
+      "enunciado": "En el texto anterior, ¿cuál es el tema tratado?",
+      "opciones": {
+        "A": "La herencia de una tradición familiar.",
+        "B": "El regalo de un cucharón viejo de madera.",
+        "C": "La alegría de cocinar con productos frescos.",
+        "D": "La gran variedad de comidas que hay en el país."
+      },
+      "clave": "A",
+      "explicacion": "La abuela aprendió la receta de su madre y ahora se la enseña a Shanice. Al final le regala el cucharón que usó tantos años, como quien entrega una herencia. El tema es cómo una tradición pasa de una generación a otra.",
+      "por_que": {
+        "B": "Es un hecho puntual del cuento, no su tema.",
+        "C": "Es otra lectura posible, pero el cuento no la desarrolla.",
+        "D": "Es un tema demasiado amplio para lo que cuenta el texto."
+      },
+      "evidencia_textual": "Mientras cocinaban, la abuela le contó que esa receta la aprendió de su propia madre, en una cocina de leña frente al mar.",
+      "imagen": null
+    },
+    {
+      "id": "esp-6-d",
+      "orden": 30,
+      "numero": 30,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Pensamientos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "6",
+        "texto": "Infiere pensamientos de los personajes de un texto literario."
+      },
+      "evidencia": {
+        "codigo": "6.2",
+        "texto": "Reconoce la intención de los personajes del texto literario."
+      },
+      "verbo": "inferir",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "Un balcón que huela a casa",
+      "texto": "Antes de mudarse a Heredia, Yorleny vivía en una finca de San Carlos. Allí montaba cada tarde a Canela, su yegua. En el apartamento nuevo no había potrero ni árboles, solo un balcón con dos macetas.\n\nEl primer fin de semana, Yorleny sacó sus crayolas y dibujó a Canela corriendo por un potrero lleno de flores. Pegó el dibujo en la pared, junto a la cama. Después escribió en su diario: “En diciembre vuelvo a la finca. Mientras tanto, voy a sembrar zacate en una maceta, para que el balcón huela a casa”.",
+      "palabras_texto": 93,
+      "contexto": "Lea el siguiente texto:\n\n«Antes de mudarse a Heredia, Yorleny vivía en una finca de San Carlos. Allí montaba cada tarde a Canela, su yegua. En el apartamento nuevo no había potrero ni árboles, solo un balcón con dos macetas.\n\nEl primer fin de semana, Yorleny sacó sus crayolas y dibujó a Canela corriendo por un potrero lleno de flores. Pegó el dibujo en la pared, junto a la cama. Después escribió en su diario: “En diciembre vuelvo a la finca. Mientras tanto, voy a sembrar zacate en una maceta, para que el balcón huela a casa”.»",
+      "enunciado": "Según el texto anterior, ¿cuál es el pensamiento evidenciado por Yorleny?",
+      "opciones": {
+        "A": "Debe pegar el dibujo de Canela junto a la cama.",
+        "B": "Puede conservar el recuerdo de la finca mientras vuelve.",
+        "C": "Ya olvidó la finca y prefiere su nueva vida en la ciudad.",
+        "D": "Los caballos necesitan potreros amplios donde poder correr."
+      },
+      "clave": "B",
+      "explicacion": "Yorleny dibuja a Canela, pega el dibujo junto a su cama y quiere sembrar zacate para que el balcón huela a casa. Además sabe que en diciembre volverá. Con esas acciones muestra que quiere mantener cerca el recuerdo de la finca.",
+      "por_que": {
+        "A": "Describe lo que Yorleny hace, no lo que piensa.",
+        "C": "Es contrario a las pistas: Yorleny extraña la finca.",
+        "D": "Es una opinión del lector que el cuento no muestra."
+      },
+      "evidencia_textual": "Mientras tanto, voy a sembrar zacate en una maceta, para que el balcón huela a casa",
+      "imagen": null
+    },
+    {
+      "id": "esp-7-d",
+      "orden": 31,
+      "numero": 31,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Conflictos de los personajes",
+      "subtema": "Fábula",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "7",
+        "texto": "Reconoce los conflictos de los personajes en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "7.3",
+        "texto": "Distingue los elementos internos o externos que originan el conflicto de los personajes."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "fábula",
+      "titulo": "La cueva del armadillo",
+      "texto": "Un armadillo juntaba todo lo que encontraba en el camino: semillas brillantes, tapitas, plumas y hojas de colores. Lo guardaba en su cueva, que cada semana estaba más llena.\n\nUna tarde se acercó una tormenta. Los animales corrieron a sus refugios, y el armadillo también. Pero al llegar no pudo entrar: su cueva estaba repleta de cosas hasta la entrada. Empujó con el hocico, escarbó con las patas, y nada. Las primeras gotas le golpeaban el caparazón.\n\nUn conejo que pasaba le ofreció su madriguera. Esa noche, mientras escuchaba la lluvia, el armadillo pensó que, de todo lo que guardaba, nada le había servido.",
+      "palabras_texto": 104,
+      "contexto": "Lea el siguiente texto:\n\n«Un armadillo juntaba todo lo que encontraba en el camino: semillas brillantes, tapitas, plumas y hojas de colores. Lo guardaba en su cueva, que cada semana estaba más llena.\n\nUna tarde se acercó una tormenta. Los animales corrieron a sus refugios, y el armadillo también. Pero al llegar no pudo entrar: su cueva estaba repleta de cosas hasta la entrada. Empujó con el hocico, escarbó con las patas, y nada. Las primeras gotas le golpeaban el caparazón.\n\nUn conejo que pasaba le ofreció su madriguera. Esa noche, mientras escuchaba la lluvia, el armadillo pensó que, de todo lo que guardaba, nada le había servido.»",
+      "enunciado": "En el texto anterior, ¿cuál conflicto enfrenta el armadillo?",
+      "opciones": {
+        "A": "Pasar la noche en la madriguera del conejo.",
+        "B": "Juntar semillas, plumas y tapitas del camino.",
+        "C": "Compartir la madriguera con un animal empapado.",
+        "D": "Quedarse sin refugio por llenar su cueva de cosas."
+      },
+      "clave": "D",
+      "explicacion": "Cuando llega la tormenta, el armadillo no puede entrar a su cueva porque la llenó con todo lo que juntaba. Ese es su conflicto: queda sin refugio por su propia costumbre. Dormir donde el conejo es como termina la historia.",
+      "por_que": {
+        "A": "Es el desenlace de la fábula, no el problema.",
+        "B": "Es un hecho secundario: lo que hacía antes de la tormenta.",
+        "C": "Es lo que hace el conejo, no el problema del armadillo."
+      },
+      "evidencia_textual": "Pero al llegar no pudo entrar: su cueva estaba repleta de cosas hasta la entrada.",
+      "imagen": null
+    },
+    {
+      "id": "esp-8-d",
+      "orden": 32,
+      "numero": 32,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Comportamientos de los personajes",
+      "subtema": "Fábula",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "8",
+        "texto": "Identifica comportamientos de los personajes en un texto literario."
+      },
+      "evidencia": {
+        "codigo": "8.1",
+        "texto": "Identifica comportamientos de los personajes a partir de los indicios del texto literario."
+      },
+      "verbo": "identificar",
+      "tipo_texto": "literario",
+      "genero": "fábula",
+      "titulo": "El gallo y el charco",
+      "texto": "En una finca de Zarcero vivía un gallo que se creía el más guapo del corral. Cada mañana, en lugar de cantar al amanecer, corría al charco del patio para mirarse las plumas.\n\n—¡Qué cresta tan roja! ¡Qué cola tan brillante! —se decía, girando de un lado a otro.\n\nLas gallinas le recordaban que su trabajo era despertar a todos. Él ni siquiera volteaba a verlas.\n\nUn día, el dueño de la finca se levantó tarde y no alcanzó a llevar la leche al pueblo. Esa misma tarde compró un despertador. Desde entonces, nadie en la finca espera el canto del gallo, que sigue admirándose solo en el charco.",
+      "palabras_texto": 109,
+      "contexto": "Lea el siguiente texto:\n\n«En una finca de Zarcero vivía un gallo que se creía el más guapo del corral. Cada mañana, en lugar de cantar al amanecer, corría al charco del patio para mirarse las plumas.\n\n—¡Qué cresta tan roja! ¡Qué cola tan brillante! —se decía, girando de un lado a otro.\n\nLas gallinas le recordaban que su trabajo era despertar a todos. Él ni siquiera volteaba a verlas.\n\nUn día, el dueño de la finca se levantó tarde y no alcanzó a llevar la leche al pueblo. Esa misma tarde compró un despertador. Desde entonces, nadie en la finca espera el canto del gallo, que sigue admirándose solo en el charco.»",
+      "enunciado": "En el texto anterior, ¿cuál es el comportamiento evidenciado por el gallo?",
+      "opciones": {
+        "A": "Alegre: se siente feliz al ver sus plumas.",
+        "B": "Responsable: despierta a todos al amanecer.",
+        "C": "Vanidoso: cuida su imagen y olvida su trabajo.",
+        "D": "Insistente: les recuerda a otros cuál es su trabajo."
+      },
+      "clave": "C",
+      "explicacion": "Cada mañana el gallo prefería mirarse en el charco en vez de cantar, y ni siquiera volteaba a ver a las gallinas. Por eso el dueño se levantó tarde. Su conducta es vanidosa: le importaba más su imagen que su trabajo.",
+      "por_que": {
+        "A": "Es una emoción, no una conducta.",
+        "B": "Es un comportamiento de otro momento del texto, antes de que el gallo cambiara.",
+        "D": "Es contrario a los indicios: es el gallo quien descuida su trabajo."
+      },
+      "evidencia_textual": "Cada mañana, en lugar de cantar al amanecer, corría al charco del patio para mirarse las plumas.",
+      "imagen": null
+    },
+    {
+      "id": "esp-1-e",
+      "orden": 33,
+      "numero": 33,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Artículo de divulgación",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.4",
+        "texto": "Reconoce la organización de las ideas en el texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "La carreta pintada",
+      "texto": "Durante muchos años, la carreta tirada por bueyes fue el medio para llevar el café desde las fincas hasta el puerto de Puntarenas. Los caminos eran de barro, y pocas cosas resistían el viaje como una carreta.\n\nCon el tiempo, los boyeros empezaron a decorar sus carretas. Pintaban las ruedas con estrellas y figuras de colores vivos. Cada familia tenía su propio estilo, y algunos pueblos se hicieron famosos por la habilidad de sus pintores.\n\nCon la llegada del tren y, más tarde, de los camiones, las carretas dejaron de usarse para el trabajo. Sin embargo, siguen presentes en desfiles y celebraciones dedicadas a los boyeros. La carreta pintada se convirtió en un símbolo de la identidad costarricense.",
+      "palabras_texto": 118,
+      "contexto": "Lea el siguiente texto:\n\n«Durante muchos años, la carreta tirada por bueyes fue el medio para llevar el café desde las fincas hasta el puerto de Puntarenas. Los caminos eran de barro, y pocas cosas resistían el viaje como una carreta.\n\nCon el tiempo, los boyeros empezaron a decorar sus carretas. Pintaban las ruedas con estrellas y figuras de colores vivos. Cada familia tenía su propio estilo, y algunos pueblos se hicieron famosos por la habilidad de sus pintores.\n\nCon la llegada del tren y, más tarde, de los camiones, las carretas dejaron de usarse para el trabajo. Sin embargo, siguen presentes en desfiles y celebraciones dedicadas a los boyeros. La carreta pintada se convirtió en un símbolo de la identidad costarricense.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la idea fundamental?",
+      "opciones": {
+        "A": "Las ruedas se decoraban con estrellas y dibujos coloridos.",
+        "B": "La carreta pasó de ser medio de trabajo a símbolo del país.",
+        "C": "Las carretas todavía llevan el café de las fincas a los puertos.",
+        "D": "Las carretas resistían los caminos de barro mejor que otros medios."
+      },
+      "clave": "B",
+      "explicacion": "El primer párrafo presenta la carreta como medio para llevar el café. El segundo cuenta cómo empezaron a pintarla y el último dice que hoy es un símbolo. Ese recorrido muestra la idea fundamental: la carreta pasó del trabajo a ser un símbolo nacional.",
+      "por_que": {
+        "A": "Es un detalle verdadero del segundo párrafo, no la idea que organiza el texto.",
+        "C": "Es una afirmación que el texto no hace; dice lo contrario.",
+        "D": "Es una idea complementaria del primer párrafo presentada como principal."
+      },
+      "evidencia_textual": "La carreta pintada se convirtió en un símbolo de la identidad costarricense.",
+      "imagen": null
+    },
+    {
+      "id": "esp-2-e",
+      "orden": 34,
+      "numero": 34,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas complementarias",
+      "subtema": "Artículo de divulgación",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2",
+        "texto": "Distingue las ideas complementarias en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "2.2",
+        "texto": "Distingue la información relevante de la irrelevante en el texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "Las zompopas agricultoras",
+      "texto": "Las zompopas son hormigas que cortan pedacitos de hojas y los llevan en fila hasta su nido. Muchas personas creen que se comen esas hojas, pero no es así.\n\nDentro del nido, bajo tierra, las zompopas mastican las hojas y forman con ellas una especie de colchón. Sobre ese colchón crece un hongo, y ese hongo es su verdadero alimento. Podría decirse que las zompopas son agricultoras.\n\nEn cada nido hay hormigas de distintos tamaños. Las más grandes cortan y cargan; las más pequeñas cuidan el hongo y limpian el nido. Algunas viajan encima de las hojas para defender a las cargadoras de unas moscas pequeñas.",
+      "palabras_texto": 106,
+      "contexto": "Lea el siguiente texto:\n\n«Las zompopas son hormigas que cortan pedacitos de hojas y los llevan en fila hasta su nido. Muchas personas creen que se comen esas hojas, pero no es así.\n\nDentro del nido, bajo tierra, las zompopas mastican las hojas y forman con ellas una especie de colchón. Sobre ese colchón crece un hongo, y ese hongo es su verdadero alimento. Podría decirse que las zompopas son agricultoras.\n\nEn cada nido hay hormigas de distintos tamaños. Las más grandes cortan y cargan; las más pequeñas cuidan el hongo y limpian el nido. Algunas viajan encima de las hojas para defender a las cargadoras de unas moscas pequeñas.»",
+      "enunciado": "En el texto anterior, ¿cuál es una idea complementaria?",
+      "opciones": {
+        "A": "Las zompopas dañan los cultivos de las fincas.",
+        "B": "Las zompopas se alimentan de las hojas que cortan.",
+        "C": "Las zompopas usan las hojas para cultivar su comida.",
+        "D": "Las zompopas más pequeñas se encargan de cuidar el hongo."
+      },
+      "clave": "D",
+      "explicacion": "Lo principal del texto es que las zompopas usan las hojas para cultivar un hongo, que es su alimento. Que las más pequeñas cuiden ese hongo es un dato que completa la explicación. El texto también aclara que no se comen las hojas.",
+      "por_que": {
+        "A": "Es un dato que no aparece en el texto, aunque alguien lo haya oído.",
+        "B": "Distorsiona el texto, que aclara que no se comen las hojas.",
+        "C": "Es la idea fundamental del texto, no una complementaria."
+      },
+      "evidencia_textual": "Las más grandes cortan y cargan; las más pequeñas cuidan el hongo y limpian el nido.",
+      "imagen": null
+    },
+    {
+      "id": "esp-3-e",
+      "orden": 35,
+      "numero": 35,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Causas",
+      "subtema": "Artículo de divulgación",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3",
+        "texto": "Determina relaciones de causa en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "3.3",
+        "texto": "Relaciona indicios del texto no literario para determinar una causa."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "El aullido del congo",
+      "texto": "Al amanecer, en muchos bosques de Costa Rica se escucha un rugido ronco que parece de un animal enorme. Es el mono congo, también llamado aullador. Su garganta tiene un hueso hueco que funciona como una caja que agranda el sonido.\n\nLos congos viven en grupos y pasan casi todo el día en las copas de los árboles, comiendo hojas. Las hojas dan poca energía; por eso se mueven despacio y descansan muchas horas.\n\nCon sus aullidos, cada grupo avisa a los grupos vecinos dónde se encuentra. Así, los demás saben qué parte del bosque está ocupada y evitan acercarse. De este modo se ahorran peleas y viajes inútiles.",
+      "palabras_texto": 109,
+      "contexto": "Lea el siguiente texto:\n\n«Al amanecer, en muchos bosques de Costa Rica se escucha un rugido ronco que parece de un animal enorme. Es el mono congo, también llamado aullador. Su garganta tiene un hueso hueco que funciona como una caja que agranda el sonido.\n\nLos congos viven en grupos y pasan casi todo el día en las copas de los árboles, comiendo hojas. Las hojas dan poca energía; por eso se mueven despacio y descansan muchas horas.\n\nCon sus aullidos, cada grupo avisa a los grupos vecinos dónde se encuentra. Así, los demás saben qué parte del bosque está ocupada y evitan acercarse. De este modo se ahorran peleas y viajes inútiles.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la causa de que los grupos de monos congo se eviten entre sí?",
+      "opciones": {
+        "A": "Las hojas les proporcionan muy poca energía.",
+        "B": "Se ahorran peleas y recorridos que no sirven.",
+        "C": "Cada grupo anuncia con aullidos el lugar donde está.",
+        "D": "Los grupos compiten por los árboles que tienen más frutas."
+      },
+      "clave": "C",
+      "explicacion": "El texto dice que con sus aullidos cada grupo avisa dónde se encuentra. Así los demás saben qué parte del bosque está ocupada y no se acercan. Ahorrarse peleas es lo que se consigue después, no la causa.",
+      "por_que": {
+        "A": "Es la causa de otro hecho: que se muevan despacio.",
+        "B": "Presenta como causa lo que en realidad es un efecto.",
+        "D": "Es una causa razonable, pero el texto no la menciona."
+      },
+      "evidencia_textual": "Con sus aullidos, cada grupo avisa a los grupos vecinos dónde se encuentra.",
+      "imagen": null
+    },
+    {
+      "id": "esp-4-e",
+      "orden": 36,
+      "numero": 36,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Efectos",
+      "subtema": "Noticia",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4",
+        "texto": "Determina relaciones de efecto en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "4.2",
+        "texto": "Reconoce las consecuencias de un hecho en el texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "noticia",
+      "titulo": "Banco de semillas criollas",
+      "texto": "Escuela de Pérez Zeledón crea un banco de semillas\n\nEn una escuela de Pérez Zeledón, estudiantes de quinto y sexto crearon un banco de semillas. Son semillas criollas, es decir, las que las familias del lugar han guardado y sembrado durante muchos años.\n\nLos estudiantes visitaron a vecinos agricultores y recogieron semillas de maíz, frijol, ayote y chile dulce. Las secaron al sol y las guardaron en frascos de vidrio con su nombre y el de la familia que las donó.\n\nEste año, varias familias perdieron su cosecha por las lluvias y se quedaron sin semillas. Llegaron a la escuela a pedir algunas, y con ellas volvieron a sembrar sus parcelas.",
+      "palabras_texto": 111,
+      "contexto": "Lea el siguiente texto:\n\n«Escuela de Pérez Zeledón crea un banco de semillas\n\nEn una escuela de Pérez Zeledón, estudiantes de quinto y sexto crearon un banco de semillas. Son semillas criollas, es decir, las que las familias del lugar han guardado y sembrado durante muchos años.\n\nLos estudiantes visitaron a vecinos agricultores y recogieron semillas de maíz, frijol, ayote y chile dulce. Las secaron al sol y las guardaron en frascos de vidrio con su nombre y el de la familia que las donó.\n\nEste año, varias familias perdieron su cosecha por las lluvias y se quedaron sin semillas. Llegaron a la escuela a pedir algunas, y con ellas volvieron a sembrar sus parcelas.»",
+      "enunciado": "Según el texto anterior, ¿cuál es un efecto de la creación del banco de semillas?",
+      "opciones": {
+        "A": "Algunas familias pudieron sembrar de nuevo sus parcelas.",
+        "B": "Los estudiantes visitaron a varios agricultores de la zona.",
+        "C": "Varias familias perdieron su cosecha a causa de las lluvias.",
+        "D": "La comunidad dejó de comprar semillas en las tiendas del lugar."
+      },
+      "clave": "A",
+      "explicacion": "Las familias que perdieron sus semillas fueron a la escuela a pedir algunas y así pudieron sembrar otra vez. Eso fue posible porque existía el banco de semillas. Perder la cosecha por las lluvias es efecto de otro hecho, no del banco.",
+      "por_que": {
+        "B": "Presenta como efecto algo que se hizo para crear el banco.",
+        "C": "Es el efecto de otro hecho: las lluvias.",
+        "D": "Es un efecto exagerado que el texto no sostiene."
+      },
+      "evidencia_textual": "Llegaron a la escuela a pedir algunas, y con ellas volvieron a sembrar sus parcelas.",
+      "imagen": null
+    },
+    {
+      "id": "esp-5-e",
+      "orden": 37,
+      "numero": 37,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Temas de textos literarios",
+      "subtema": "Fábula",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "5",
+        "texto": "Reconoce diversos temas tratados en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "5.3",
+        "texto": "Reconoce el propósito del texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "fábula",
+      "titulo": "Tres viajeros en la noche",
+      "texto": "Una noche sin luna, un grillo, un caracol y una luciérnaga querían llegar a la poza del otro lado del monte. Cada uno salió por su cuenta.\n\nEl grillo saltaba rápido, pero en la oscuridad chocaba con las piedras. La luciérnaga veía el camino cercano, pero no sabía hacia dónde quedaba la poza. El caracol conocía la ruta de memoria, aunque avanzaba tan despacio que el amanecer lo iba a alcanzar.\n\nAl encontrarse, decidieron viajar juntos. El caracol subió al lomo del grillo y le indicaba hacia dónde ir. La luciérnaga volaba adelante, alumbrando cada piedra. Antes de la medianoche, los tres bebían agua fresca en la poza.",
+      "palabras_texto": 108,
+      "contexto": "Lea el siguiente texto:\n\n«Una noche sin luna, un grillo, un caracol y una luciérnaga querían llegar a la poza del otro lado del monte. Cada uno salió por su cuenta.\n\nEl grillo saltaba rápido, pero en la oscuridad chocaba con las piedras. La luciérnaga veía el camino cercano, pero no sabía hacia dónde quedaba la poza. El caracol conocía la ruta de memoria, aunque avanzaba tan despacio que el amanecer lo iba a alcanzar.\n\nAl encontrarse, decidieron viajar juntos. El caracol subió al lomo del grillo y le indicaba hacia dónde ir. La luciérnaga volaba adelante, alumbrando cada piedra. Antes de la medianoche, los tres bebían agua fresca en la poza.»",
+      "enunciado": "¿Cuál es el tema tratado en el texto anterior?",
+      "opciones": {
+        "A": "Un viaje nocturno hacia una poza del monte.",
+        "B": "La vida de los animales pequeños del bosque.",
+        "C": "La rapidez como la cualidad más útil para triunfar.",
+        "D": "La unión de habilidades distintas para lograr una meta."
+      },
+      "clave": "D",
+      "explicacion": "Cada animal tenía algo que los otros necesitaban: el grillo era rápido, la luciérnaga alumbraba y el caracol conocía el camino. Solos no lo lograban; juntos llegaron antes de la medianoche. El tema es la unión de habilidades diferentes.",
+      "por_que": {
+        "A": "Es un hecho puntual de la fábula, no su tema.",
+        "B": "Es un tema demasiado amplio para lo que cuenta el texto.",
+        "C": "Es una lectura que el texto contradice: el grillo rápido no lo logró solo."
+      },
+      "evidencia_textual": "Al encontrarse, decidieron viajar juntos.",
+      "imagen": null
+    },
+    {
+      "id": "esp-6-e",
+      "orden": 38,
+      "numero": 38,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Pensamientos de los personajes",
+      "subtema": "Poema",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "6",
+        "texto": "Infiere pensamientos de los personajes de un texto literario."
+      },
+      "evidencia": {
+        "codigo": "6.1",
+        "texto": "Infiere pensamientos de los personajes a partir de los indicios del texto literario."
+      },
+      "verbo": "inferir",
+      "tipo_texto": "literario",
+      "genero": "poema",
+      "titulo": "Celeste en la poza",
+      "texto": "Celeste mira el agua de la poza\ncon los dedos apretados en la orilla.\nSu prima ya flota como una hoja,\nsu hermano salta, salpica y grita.\nElla mete un pie y lo saca,\nmete el otro y cuenta hasta tres.\n—Mañana —dice bajito—, mañana,\ncuando el agua esté menos fría.\nPero el agua está tibia, lo sabe,\ny la tarde se le está yendo.\nRespira hondo, toma la mano de su tía\ny suelta despacito la orilla.",
+      "palabras_texto": 78,
+      "contexto": "Lea el siguiente texto:\n\n«Celeste mira el agua de la poza  \ncon los dedos apretados en la orilla.  \nSu prima ya flota como una hoja,  \nsu hermano salta, salpica y grita.  \nElla mete un pie y lo saca,  \nmete el otro y cuenta hasta tres.  \n—Mañana —dice bajito—, mañana,  \ncuando el agua esté menos fría.  \nPero el agua está tibia, lo sabe,  \ny la tarde se le está yendo.  \nRespira hondo, toma la mano de su tía  \ny suelta despacito la orilla.»",
+      "enunciado": "Según el texto anterior, ¿cuál es el pensamiento evidenciado por Celeste?",
+      "opciones": {
+        "A": "Puede vencer su temor aunque le cueste.",
+        "B": "Los niños deberían aprender a nadar pronto.",
+        "C": "El agua de la poza está muy fría para nadar.",
+        "D": "Debe meter un pie en el agua y contar hasta tres."
+      },
+      "clave": "A",
+      "explicacion": "Celeste duda y busca una excusa: dice que mañana, cuando el agua esté menos fría. Pero ella sabe que el agua está tibia, respira hondo, toma la mano de su tía y suelta la orilla. Esas pistas muestran que piensa que puede vencer su miedo.",
+      "por_que": {
+        "B": "Es una opinión del lector que el poema no muestra.",
+        "C": "Es la excusa que Celeste se da al inicio, y el poema la desmiente después.",
+        "D": "Describe lo que Celeste hace, no lo que piensa."
+      },
+      "evidencia_textual": "Respira hondo, toma la mano de su tía\ny suelta despacito la orilla.",
+      "imagen": null
+    },
+    {
+      "id": "esp-7-e",
+      "orden": 39,
+      "numero": 39,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Conflictos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "7",
+        "texto": "Reconoce los conflictos de los personajes en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "7.1",
+        "texto": "Conoce el concepto de conflicto al identificarlo en un texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "Letra grande",
+      "texto": "A Natalia le encanta escribir. Por eso se emocionó cuando la escuela abrió inscripciones para el periódico estudiantil. Natalia tiene baja visión: con sus anteojos y una lupa puede leer, pero la letra pequeña se le vuelve una mancha gris.\n\nEn la primera reunión, el maestro repartió las hojas con las reglas del periódico. La letra era tan diminuta que Natalia no logró leer ni el título. Mientras los demás comentaban, ella doblaba la hoja en silencio.\n\nAl día siguiente, se armó de valor y le propuso al maestro imprimir el periódico con letra grande. “Así lo podrán leer también los abuelos del barrio”, le dijo. El maestro sonrió y aceptó la idea.",
+      "palabras_texto": 113,
+      "contexto": "Lea el siguiente texto:\n\n«A Natalia le encanta escribir. Por eso se emocionó cuando la escuela abrió inscripciones para el periódico estudiantil. Natalia tiene baja visión: con sus anteojos y una lupa puede leer, pero la letra pequeña se le vuelve una mancha gris.\n\nEn la primera reunión, el maestro repartió las hojas con las reglas del periódico. La letra era tan diminuta que Natalia no logró leer ni el título. Mientras los demás comentaban, ella doblaba la hoja en silencio.\n\nAl día siguiente, se armó de valor y le propuso al maestro imprimir el periódico con letra grande. “Así lo podrán leer también los abuelos del barrio”, le dijo. El maestro sonrió y aceptó la idea.»",
+      "enunciado": "En el texto anterior, ¿cuál conflicto enfrenta Natalia?",
+      "opciones": {
+        "A": "Tener dificultad para leer la letra pequeña.",
+        "B": "Explicar al grupo las reglas del periódico escolar.",
+        "C": "Lograr que el periódico se imprima con letra grande.",
+        "D": "Inscribirse en el periódico estudiantil de la escuela."
+      },
+      "clave": "A",
+      "explicacion": "Natalia quiere participar en el periódico, pero en la reunión no logra leer las hojas porque la letra es muy pequeña. Ese es su conflicto. Que el periódico se imprima con letra grande es la solución que ella misma propone.",
+      "por_que": {
+        "B": "Es la tarea del maestro, no el problema de Natalia.",
+        "C": "Es la solución que Natalia propone al final.",
+        "D": "Es un hecho secundario del cuento, no el problema."
+      },
+      "evidencia_textual": "La letra era tan diminuta que Natalia no logró leer ni el título.",
+      "imagen": null
+    },
+    {
+      "id": "esp-8-e",
+      "orden": 40,
+      "numero": 40,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Comportamientos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "8",
+        "texto": "Identifica comportamientos de los personajes en un texto literario."
+      },
+      "evidencia": {
+        "codigo": "8.2",
+        "texto": "Relaciona los comportamientos de los personajes con sus motivaciones."
+      },
+      "verbo": "identificar",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "Las matas de tomate",
+      "texto": "Antes de las vacaciones de medio año, la maestra preguntó quién podía regar las matas de tomate del huerto escolar. Nadie levantó la mano. Gerardo vivía a dos cuadras y dijo que él lo haría.\n\nLa primera semana fue todos los días. La segunda, se quedó jugando en la casa de un primo y olvidó ir. Cuando volvió, encontró varias matas caídas y con las hojas arrugadas.\n\nGerardo no le echó la culpa al sol. Ese mismo día llenó la regadera, amarró las matas a unas varas y le pidió a su abuelo un poco de abono. Al regresar a clases, le contó a la maestra lo sucedido antes de que ella preguntara.",
+      "palabras_texto": 113,
+      "contexto": "Lea el siguiente texto:\n\n«Antes de las vacaciones de medio año, la maestra preguntó quién podía regar las matas de tomate del huerto escolar. Nadie levantó la mano. Gerardo vivía a dos cuadras y dijo que él lo haría.\n\nLa primera semana fue todos los días. La segunda, se quedó jugando en la casa de un primo y olvidó ir. Cuando volvió, encontró varias matas caídas y con las hojas arrugadas.\n\nGerardo no le echó la culpa al sol. Ese mismo día llenó la regadera, amarró las matas a unas varas y le pidió a su abuelo un poco de abono. Al regresar a clases, le contó a la maestra lo sucedido antes de que ella preguntara.»",
+      "enunciado": "En el texto anterior, ¿cuál es el comportamiento evidenciado por Gerardo después de ver las matas dañadas?",
+      "opciones": {
+        "A": "Preocupado: siente angustia por las matas.",
+        "B": "Responsable: reconoce su descuido y repara el daño.",
+        "C": "Evasivo: le oculta a la maestra lo que había pasado.",
+        "D": "Distraído: olvida regar las matas por quedarse jugando."
+      },
+      "clave": "B",
+      "explicacion": "Después de ver las matas caídas, Gerardo no culpa al sol: las riega, las amarra y busca abono. Además le cuenta a la maestra lo que pasó antes de que ella pregunte. Esas acciones muestran responsabilidad.",
+      "por_que": {
+        "A": "Nombra una emoción, no una conducta.",
+        "C": "Es contrario a las pistas: le cuenta todo antes de que pregunte.",
+        "D": "Es su conducta en otro momento, antes de ver las matas dañadas."
+      },
+      "evidencia_textual": "Al regresar a clases, le contó a la maestra lo sucedido antes de que ella preguntara.",
+      "imagen": null
+    },
+    {
+      "id": "esp-1-f",
+      "orden": 41,
+      "numero": 41,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Texto científico",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.5",
+        "texto": "Sintetiza la información del texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "texto científico",
+      "titulo": "Los corales",
+      "texto": "Los corales parecen piedras de colores, pero son animales. Cada coral está formado por miles de animalitos diminutos que construyen un esqueleto duro a su alrededor. Con el paso de muchísimos años, esos esqueletos forman los arrecifes.\n\nDentro de los corales viven unas algas microscópicas, es decir, tan pequeñas que solo se ven con microscopio. Las algas les dan alimento y color a los corales. A cambio, los corales les ofrecen un lugar seguro.\n\nCuando el agua del mar se calienta demasiado, los corales expulsan a las algas. Entonces se ponen blancos y, si el calor dura mucho, pueden morir. Por eso, el aumento de la temperatura del mar pone en riesgo a los arrecifes.",
+      "palabras_texto": 115,
+      "contexto": "Lea el siguiente texto:\n\n«Los corales parecen piedras de colores, pero son animales. Cada coral está formado por miles de animalitos diminutos que construyen un esqueleto duro a su alrededor. Con el paso de muchísimos años, esos esqueletos forman los arrecifes.\n\nDentro de los corales viven unas algas microscópicas, es decir, tan pequeñas que solo se ven con microscopio. Las algas les dan alimento y color a los corales. A cambio, los corales les ofrecen un lugar seguro.\n\nCuando el agua del mar se calienta demasiado, los corales expulsan a las algas. Entonces se ponen blancos y, si el calor dura mucho, pueden morir. Por eso, el aumento de la temperatura del mar pone en riesgo a los arrecifes.»",
+      "enunciado": "¿Cuál es la idea fundamental del texto anterior?",
+      "opciones": {
+        "A": "Las algas microscópicas son las que dan su color a los corales.",
+        "B": "Con los años, los esqueletos de los corales forman los arrecifes.",
+        "C": "Los corales dependen de unas algas y el calor del mar los amenaza.",
+        "D": "El calentamiento del mar es el mayor peligro para los animales marinos."
+      },
+      "clave": "C",
+      "explicacion": "El texto explica qué son los corales, cómo viven unidos a unas algas y qué les pasa cuando el agua se calienta. Al juntar esas partes, la idea fundamental es que dependen de las algas y que el calor del mar los pone en peligro.",
+      "por_que": {
+        "A": "Es un detalle verdadero, pero solo una parte del texto.",
+        "B": "Es una idea complementaria presentada como fundamental.",
+        "D": "Es una generalización más amplia que el texto, que habla de los corales."
+      },
+      "evidencia_textual": "Por eso, el aumento de la temperatura del mar pone en riesgo a los arrecifes.",
+      "imagen": null
+    },
+    {
+      "id": "esp-2-f",
+      "orden": 42,
+      "numero": 42,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas complementarias",
+      "subtema": "Noticia",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2",
+        "texto": "Distingue las ideas complementarias en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "2.1",
+        "texto": "Conoce el concepto de idea complementaria al identificarla en un texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "noticia",
+      "titulo": "Agua de lluvia en la escuela",
+      "texto": "Escuela de Liberia aprovecha el agua de lluvia\n\nUna escuela de Liberia instaló un sistema para recoger la lluvia de sus techos. Las canoas del techo llevan el agua hasta dos tanques grandes, ubicados junto al comedor.\n\nEl agua recogida se usa para regar la huerta y para limpiar los pasillos. No se utiliza para tomar, porque no pasa por un proceso de limpieza. Los estudiantes de sexto grado revisan cada semana que las canoas estén libres de hojas.\n\nEn Guanacaste, los meses secos son largos. Con este sistema, la escuela gasta menos agua del tubo durante el verano, y la huerta se mantiene verde aunque no llueva.",
+      "palabras_texto": 108,
+      "contexto": "Lea el siguiente texto:\n\n«Escuela de Liberia aprovecha el agua de lluvia\n\nUna escuela de Liberia instaló un sistema para recoger la lluvia de sus techos. Las canoas del techo llevan el agua hasta dos tanques grandes, ubicados junto al comedor.\n\nEl agua recogida se usa para regar la huerta y para limpiar los pasillos. No se utiliza para tomar, porque no pasa por un proceso de limpieza. Los estudiantes de sexto grado revisan cada semana que las canoas estén libres de hojas.\n\nEn Guanacaste, los meses secos son largos. Con este sistema, la escuela gasta menos agua del tubo durante el verano, y la huerta se mantiene verde aunque no llueva.»",
+      "enunciado": "En el texto anterior, ¿cuál es una idea complementaria?",
+      "opciones": {
+        "A": "La escuela recoge agua de lluvia para varios usos.",
+        "B": "Estudiantes de sexto revisan cada semana las canoas del techo.",
+        "C": "Las familias construyeron los tanques durante un fin de semana.",
+        "D": "El agua de los tanques se usa para que los estudiantes la beban."
+      },
+      "clave": "B",
+      "explicacion": "La noticia trata sobre todo del sistema para recoger agua de lluvia. Un dato que acompaña esa idea es que estudiantes de sexto revisan cada semana las canoas. El texto aclara que esa agua no se usa para tomar.",
+      "por_que": {
+        "A": "Es la idea fundamental de la noticia, no una complementaria.",
+        "C": "Es un dato que no aparece en el texto.",
+        "D": "Distorsiona el texto, que dice que esa agua no se usa para tomar."
+      },
+      "evidencia_textual": "Los estudiantes de sexto grado revisan cada semana que las canoas estén libres de hojas.",
+      "imagen": null
+    },
+    {
+      "id": "esp-3-f",
+      "orden": 43,
+      "numero": 43,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Causas",
+      "subtema": "Texto científico",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3",
+        "texto": "Determina relaciones de causa en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "3.1",
+        "texto": "Conoce el concepto de causa al identificarla en un texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "texto científico",
+      "titulo": "Los huequitos del pan",
+      "texto": "Para hacer pan, se mezcla harina, agua, sal y levadura. La levadura está formada por seres vivos diminutos, unos hongos tan pequeños que no se ven a simple vista.\n\nCuando la masa reposa en un lugar tibio, la levadura se alimenta de los azúcares de la harina. Al hacerlo, produce un gas que forma burbujas dentro de la masa. Como la masa es elástica, atrapa esas burbujas y se va inflando.\n\nSi la masa se deja en un lugar muy frío, la levadura trabaja lentamente y el pan crece poco. Al hornearlo, las burbujas quedan fijas, y así el pan queda lleno de huequitos por dentro.",
+      "palabras_texto": 106,
+      "contexto": "Lea el siguiente texto:\n\n«Para hacer pan, se mezcla harina, agua, sal y levadura. La levadura está formada por seres vivos diminutos, unos hongos tan pequeños que no se ven a simple vista.\n\nCuando la masa reposa en un lugar tibio, la levadura se alimenta de los azúcares de la harina. Al hacerlo, produce un gas que forma burbujas dentro de la masa. Como la masa es elástica, atrapa esas burbujas y se va inflando.\n\nSi la masa se deja en un lugar muy frío, la levadura trabaja lentamente y el pan crece poco. Al hornearlo, las burbujas quedan fijas, y así el pan queda lleno de huequitos por dentro.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la causa de que el pan tenga huequitos por dentro?",
+      "opciones": {
+        "A": "La masa aumenta de tamaño mientras está en reposo.",
+        "B": "El frío hace que la levadura trabaje más lentamente.",
+        "C": "El horno seca toda el agua que había dentro de la masa.",
+        "D": "El gas de la levadura forma burbujas que la masa atrapa."
+      },
+      "clave": "D",
+      "explicacion": "La levadura produce un gas que forma burbujas, y la masa elástica las atrapa. Al hornear, esas burbujas quedan fijas. Por eso el pan tiene huequitos: hay que unir varias partes del texto para encontrar la causa.",
+      "por_que": {
+        "A": "Presenta como causa otro resultado de las burbujas: que la masa se infle.",
+        "B": "Es la causa de otro hecho: que el pan crezca poco.",
+        "C": "Es una causa razonable, pero el texto no la menciona."
+      },
+      "evidencia_textual": "Al hornearlo, las burbujas quedan fijas, y así el pan queda lleno de huequitos por dentro.",
+      "imagen": null
+    },
+    {
+      "id": "esp-4-f",
+      "orden": 44,
+      "numero": 44,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Efectos",
+      "subtema": "Texto científico",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "4",
+        "texto": "Determina relaciones de efecto en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "4.2",
+        "texto": "Reconoce las consecuencias de un hecho en el texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "texto científico",
+      "titulo": "El corazón y el ejercicio",
+      "texto": "El corazón es un músculo del tamaño de un puño. Su trabajo es bombear la sangre, que lleva oxígeno y alimento a todo el cuerpo.\n\nCuando corremos, saltamos o bailamos, los músculos de las piernas y los brazos necesitan más oxígeno. Por eso el corazón late más rápido y la respiración se acelera. Si ponemos la mano en el pecho después de jugar, sentimos los latidos con fuerza.\n\nAl igual que otros músculos, el corazón se fortalece con el ejercicio frecuente. Un corazón fuerte bombea más sangre en cada latido, así que no necesita latir tan rápido cuando estamos en reposo.",
+      "palabras_texto": 101,
+      "contexto": "Lea el siguiente texto:\n\n«El corazón es un músculo del tamaño de un puño. Su trabajo es bombear la sangre, que lleva oxígeno y alimento a todo el cuerpo.\n\nCuando corremos, saltamos o bailamos, los músculos de las piernas y los brazos necesitan más oxígeno. Por eso el corazón late más rápido y la respiración se acelera. Si ponemos la mano en el pecho después de jugar, sentimos los latidos con fuerza.\n\nAl igual que otros músculos, el corazón se fortalece con el ejercicio frecuente. Un corazón fuerte bombea más sangre en cada latido, así que no necesita latir tan rápido cuando estamos en reposo.»",
+      "enunciado": "Según el texto anterior, un efecto de hacer ejercicio con frecuencia consiste en que",
+      "opciones": {
+        "A": "la sangre lleva alimento a todo el cuerpo.",
+        "B": "los músculos usan menos oxígeno cuando corremos.",
+        "C": "el corazón se fortalece y late más lento en reposo.",
+        "D": "el corazón ya no se acelera aunque corramos o saltemos."
+      },
+      "clave": "C",
+      "explicacion": "El último párrafo dice que el ejercicio frecuente fortalece el corazón y que un corazón fuerte no necesita latir tan rápido en reposo. Que la sangre lleve alimento al cuerpo es el trabajo diario del corazón, no un efecto del ejercicio.",
+      "por_que": {
+        "A": "Es el efecto de otro hecho: el bombeo del corazón, que ocurre siempre.",
+        "B": "Invierte el texto: al correr, los músculos necesitan más oxígeno.",
+        "D": "Lee mal el texto: el corazón fuerte late más lento en reposo, pero al correr sí se acelera."
+      },
+      "evidencia_textual": "Al igual que otros músculos, el corazón se fortalece con el ejercicio frecuente.",
+      "imagen": null
+    },
+    {
+      "id": "esp-5-f",
+      "orden": 45,
+      "numero": 45,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Temas de textos literarios",
+      "subtema": "Poema",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "5",
+        "texto": "Reconoce diversos temas tratados en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "5.1",
+        "texto": "Conoce el concepto de tema al identificarlo en un texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "poema",
+      "titulo": "Un paraguas para dos",
+      "texto": "Salimos de la escuela, Abril y yo,\ncon un solo paraguas para las dos.\nLa lluvia de octubre caía de lado\ny el viento nos jalaba el corazón.\nElla se mojaba el hombro izquierdo,\nyo me mojaba el derecho,\ny nos reíamos de los charcos\ncomo si fueran espejos.\nLlegamos empapadas a la esquina\ndonde cada una dobla su camino.\nLo que la lluvia no pudo quitarnos\nfue la risa compartida.",
+      "palabras_texto": 71,
+      "contexto": "Lea el siguiente texto:\n\n«Salimos de la escuela, Abril y yo,  \ncon un solo paraguas para las dos.  \nLa lluvia de octubre caía de lado  \ny el viento nos jalaba el corazón.  \nElla se mojaba el hombro izquierdo,  \nyo me mojaba el derecho,  \ny nos reíamos de los charcos  \ncomo si fueran espejos.  \nLlegamos empapadas a la esquina  \ndonde cada una dobla su camino.  \nLo que la lluvia no pudo quitarnos  \nfue la risa compartida.»",
+      "enunciado": "En el texto anterior, ¿cuál es el tema tratado?",
+      "opciones": {
+        "A": "La amistad que crece al compartir.",
+        "B": "El clima lluvioso de todo nuestro país.",
+        "C": "La valentía para enfrentar el mal tiempo.",
+        "D": "El regreso a casa bajo la lluvia de octubre."
+      },
+      "clave": "A",
+      "explicacion": "Las dos amigas comparten un solo paraguas, se mojan cada una un poco y se ríen juntas. El poema termina diciendo que la lluvia no pudo quitarles la risa compartida. El tema es la amistad que se disfruta al compartir.",
+      "por_que": {
+        "B": "Es un tema demasiado amplio para lo que cuenta el poema.",
+        "C": "Es un tema de otra lectura posible: la lluvia es el escenario, no lo que el poema destaca.",
+        "D": "Es un hecho puntual del poema, no su tema."
+      },
+      "evidencia_textual": "Lo que la lluvia no pudo quitarnos\nfue la risa compartida.",
+      "imagen": null
+    },
+    {
+      "id": "esp-6-f",
+      "orden": 46,
+      "numero": 46,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Pensamientos de los personajes",
+      "subtema": "Leyenda",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "6",
+        "texto": "Infiere pensamientos de los personajes de un texto literario."
+      },
+      "evidencia": {
+        "codigo": "6.2",
+        "texto": "Reconoce la intención de los personajes del texto literario."
+      },
+      "verbo": "inferir",
+      "tipo_texto": "literario",
+      "genero": "leyenda",
+      "titulo": "La piedra que cantaba",
+      "texto": "Cuentan en un pueblo de pescadores del golfo que, hace mucho tiempo, un muchacho llamado Julián encontró en la playa una piedra que cantaba. Su canto se oía cuando la marea subía. Todos querían comprársela, pues decían que traía buena pesca.\n\nUn comerciante le ofreció un saco de monedas. Julián miró la piedra, miró el mar y no contestó.\n\n—La piedra es del mar —murmuró esa noche—, y el mar la está llamando.\n\nCuando el pueblo dormía, caminó hasta las rocas de la punta y dejó la piedra en una grieta, donde la alcanzaba la ola. Desde entonces, dicen, en las noches de marea alta se oye un canto suave sobre el agua.",
+      "palabras_texto": 113,
+      "contexto": "Lea el siguiente texto:\n\n«Cuentan en un pueblo de pescadores del golfo que, hace mucho tiempo, un muchacho llamado Julián encontró en la playa una piedra que cantaba. Su canto se oía cuando la marea subía. Todos querían comprársela, pues decían que traía buena pesca.\n\nUn comerciante le ofreció un saco de monedas. Julián miró la piedra, miró el mar y no contestó.\n\n—La piedra es del mar —murmuró esa noche—, y el mar la está llamando.\n\nCuando el pueblo dormía, caminó hasta las rocas de la punta y dejó la piedra en una grieta, donde la alcanzaba la ola. Desde entonces, dicen, en las noches de marea alta se oye un canto suave sobre el agua.»",
+      "enunciado": "Según el texto anterior, ¿cuál es el pensamiento evidenciado por Julián?",
+      "opciones": {
+        "A": "Debía caminar de noche hasta la punta.",
+        "B": "Le convenía vender la piedra al comerciante.",
+        "C": "Las leyendas de los pueblos merecen contarse.",
+        "D": "La piedra pertenecía al mar y debía volver a él."
+      },
+      "clave": "D",
+      "explicacion": "Julián no acepta el saco de monedas y murmura que la piedra es del mar. Luego la deja donde la alcanza la ola. Su pensamiento es que la piedra pertenece al mar y debía regresar a él.",
+      "por_que": {
+        "A": "Describe lo que Julián hace, no lo que piensa.",
+        "B": "Es contrario a las pistas: Julián rechaza las monedas.",
+        "C": "Es una opinión del lector, no lo que piensa Julián."
+      },
+      "evidencia_textual": "—La piedra es del mar —murmuró esa noche—, y el mar la está llamando.",
+      "imagen": null
+    },
+    {
+      "id": "esp-7-f",
+      "orden": 47,
+      "numero": 47,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Conflictos de los personajes",
+      "subtema": "Leyenda",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "7",
+        "texto": "Reconoce los conflictos de los personajes en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "7.2",
+        "texto": "Reconoce las motivaciones de los personajes ante el conflicto."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "leyenda",
+      "titulo": "La flor de itabo",
+      "texto": "Dicen los abuelos de las faldas del volcán que, en tiempos antiguos, el río de la comunidad se volvió turbio y amargo. Los animales dejaron de beber en él y las siembras empezaron a secarse.\n\nUna niña llamada Damaris soñó que el agua volvería a ser clara si alguien llevaba al nacimiento del río la primera flor de la mañana. Pero el nacimiento quedaba en lo alto de la montaña, entre neblinas espesas, y nadie del pueblo había subido tan lejos.\n\nDamaris tenía miedo de perderse. Sin embargo, pensó en su abuela, que cada tarde caminaba lejos para traer agua de otro pueblo. Antes del amanecer, le avisó a su abuela, cortó una flor de itabo y empezó a subir.",
+      "palabras_texto": 120,
+      "contexto": "Lea el siguiente texto:\n\n«Dicen los abuelos de las faldas del volcán que, en tiempos antiguos, el río de la comunidad se volvió turbio y amargo. Los animales dejaron de beber en él y las siembras empezaron a secarse.\n\nUna niña llamada Damaris soñó que el agua volvería a ser clara si alguien llevaba al nacimiento del río la primera flor de la mañana. Pero el nacimiento quedaba en lo alto de la montaña, entre neblinas espesas, y nadie del pueblo había subido tan lejos.\n\nDamaris tenía miedo de perderse. Sin embargo, pensó en su abuela, que cada tarde caminaba lejos para traer agua de otro pueblo. Antes del amanecer, le avisó a su abuela, cortó una flor de itabo y empezó a subir.»",
+      "enunciado": "En el texto anterior, ¿cuál conflicto enfrenta Damaris?",
+      "opciones": {
+        "A": "Cortar la primera flor de itabo de la mañana.",
+        "B": "Vencer su miedo de perderse para ayudar a su pueblo.",
+        "C": "Caminar largas distancias para traer agua hasta la casa.",
+        "D": "Emprender el camino de subida hacia el nacimiento del río."
+      },
+      "clave": "B",
+      "explicacion": "Damaris sabe que alguien debe subir la montaña, pero tiene miedo de perderse entre la neblina. Al pensar en su abuela, que camina lejos para traer agua, decide subir. Su conflicto es enfrentar ese miedo para ayudar a su gente.",
+      "por_que": {
+        "A": "Es un hecho secundario de la leyenda.",
+        "C": "Es la situación de la abuela, no el conflicto de Damaris.",
+        "D": "Es lo que Damaris decide al final, no el problema que enfrenta."
+      },
+      "evidencia_textual": "Damaris tenía miedo de perderse. Sin embargo, pensó en su abuela, que cada tarde caminaba lejos para traer agua de otro pueblo.",
+      "imagen": null
+    },
+    {
+      "id": "esp-8-f",
+      "orden": 48,
+      "numero": 48,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Comportamientos de los personajes",
+      "subtema": "Escena teatral",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "8",
+        "texto": "Identifica comportamientos de los personajes en un texto literario."
+      },
+      "evidencia": {
+        "codigo": "8.1",
+        "texto": "Identifica comportamientos de los personajes a partir de los indicios del texto literario."
+      },
+      "verbo": "identificar",
+      "tipo_texto": "literario",
+      "genero": "escena teatral",
+      "titulo": "El vuelto",
+      "texto": "DOÑA OFELIA: (Desde su tramo de verduras) ¿Qué ocupás, mi amor?\nALONSO: Un kilo de tomates y dos chayotes, por favor. Mi mamá me dio este billete.\nDOÑA OFELIA: (Le entrega la bolsa y unas monedas) Aquí tenés el vuelto. ¡Saludos a tu mamá!\nALONSO: (Camina unos pasos, cuenta las monedas y se detiene) Doña Ofelia, espere. Usted me dio quinientos colones de más.\nDOÑA OFELIA: (Se acerca y revisa) ¡Ay, es cierto! Con tanta gente, me enredé con las cuentas.\nALONSO: (Le devuelve la moneda) Tenga, para que no le falte al final del día.\nDOÑA OFELIA: (Le regala una mandarina) ¡Muchas gracias, Alonso! Que te vaya bien.",
+      "palabras_texto": 109,
+      "contexto": "Lea el siguiente texto:\n\n«DOÑA OFELIA: (Desde su tramo de verduras) ¿Qué ocupás, mi amor?  \nALONSO: Un kilo de tomates y dos chayotes, por favor. Mi mamá me dio este billete.  \nDOÑA OFELIA: (Le entrega la bolsa y unas monedas) Aquí tenés el vuelto. ¡Saludos a tu mamá!  \nALONSO: (Camina unos pasos, cuenta las monedas y se detiene) Doña Ofelia, espere. Usted me dio quinientos colones de más.  \nDOÑA OFELIA: (Se acerca y revisa) ¡Ay, es cierto! Con tanta gente, me enredé con las cuentas.  \nALONSO: (Le devuelve la moneda) Tenga, para que no le falte al final del día.  \nDOÑA OFELIA: (Le regala una mandarina) ¡Muchas gracias, Alonso! Que te vaya bien.»",
+      "enunciado": "En el texto anterior, ¿cuál es el comportamiento evidenciado por Alonso?",
+      "opciones": {
+        "A": "Asustado: teme que la señora lo regañe.",
+        "B": "Aprovechado: se queda con lo que le sobra.",
+        "C": "Honesto: devuelve el dinero que recibió de más.",
+        "D": "Generoso: le regala una mandarina a doña Ofelia."
+      },
+      "clave": "C",
+      "explicacion": "Alonso cuenta el vuelto, se da cuenta de que le dieron quinientos colones de más y regresa a devolverlos. Esa acción muestra honestidad. Quien se enredó con las cuentas fue doña Ofelia, no él.",
+      "por_que": {
+        "A": "Nombra una emoción que el texto no muestra, no una conducta.",
+        "B": "Es contrario a las pistas: Alonso devuelve la moneda.",
+        "D": "Invierte quién regala: la mandarina se la da doña Ofelia a Alonso."
+      },
+      "evidencia_textual": "ALONSO: (Le devuelve la moneda) Tenga, para que no le falte al final del día.",
+      "imagen": null
+    },
+    {
+      "id": "esp-1-g",
+      "orden": 49,
+      "numero": 49,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Noticia",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.1",
+        "texto": "Conoce el concepto de idea fundamental al identificarla en un texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "noticia",
+      "titulo": "Biblioteca sobre ruedas",
+      "texto": "Una biblioteca sobre ruedas llega a Talamanca\n\nDesde hace unos meses, un camión convertido en biblioteca visita varias comunidades de Talamanca. Lleva libros de cuentos, de ciencias y de historia, además de mesas plegables y sombrillas para leer al aire libre.\n\nLa idea nació en un grupo de docentes de la zona, que notaron que muchos estudiantes vivían lejos de una biblioteca. Los niños pueden llevar dos libros a su casa y devolverlos en la siguiente visita.\n\nLas personas mayores de las comunidades también participan. Algunas cuentan historias de su pueblo en bribri y en español, mientras los niños escuchan sentados en la sombra.",
+      "palabras_texto": 104,
+      "contexto": "Lea el siguiente texto:\n\n«Una biblioteca sobre ruedas llega a Talamanca\n\nDesde hace unos meses, un camión convertido en biblioteca visita varias comunidades de Talamanca. Lleva libros de cuentos, de ciencias y de historia, además de mesas plegables y sombrillas para leer al aire libre.\n\nLa idea nació en un grupo de docentes de la zona, que notaron que muchos estudiantes vivían lejos de una biblioteca. Los niños pueden llevar dos libros a su casa y devolverlos en la siguiente visita.\n\nLas personas mayores de las comunidades también participan. Algunas cuentan historias de su pueblo en bribri y en español, mientras los niños escuchan sentados en la sombra.»",
+      "enunciado": "¿Cuál es la idea fundamental del texto anterior?",
+      "opciones": {
+        "A": "Personas mayores cuentan historias en bribri y español.",
+        "B": "Cada niño puede llevarse dos libros a su casa por visita.",
+        "C": "Las comunidades construyeron una biblioteca en su escuela.",
+        "D": "Una biblioteca móvil acerca los libros a comunidades alejadas."
+      },
+      "clave": "D",
+      "explicacion": "La noticia explica que un camión lleva libros a comunidades de Talamanca donde muchos estudiantes viven lejos de una biblioteca. Esa es la idea fundamental. Que los niños se lleven dos libros o que los mayores cuenten historias son detalles que la acompañan.",
+      "por_que": {
+        "A": "Es una idea complementaria presentada como fundamental.",
+        "B": "Es un detalle verdadero, no la idea principal.",
+        "C": "Es una afirmación que el texto no hace."
+      },
+      "evidencia_textual": "Desde hace unos meses, un camión convertido en biblioteca visita varias comunidades de Talamanca.",
+      "imagen": null
+    },
+    {
+      "id": "esp-2-g",
+      "orden": 50,
+      "numero": 50,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas complementarias",
+      "subtema": "Texto científico",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "2",
+        "texto": "Distingue las ideas complementarias en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "2.3",
+        "texto": "Reconoce la organización de las ideas complementarias en relación con la idea fundamental."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "texto científico",
+      "titulo": "El moho del pan",
+      "texto": "¿Alguna vez ha visto manchas verdes o grises en un pan viejo? Esas manchas son moho, un tipo de hongo. El moho crece a partir de esporas, unas partículas tan pequeñas que flotan en el aire sin que las veamos.\n\nCuando una espora cae sobre un alimento húmedo y tibio, empieza a crecer. Forma hilos finísimos que se meten dentro del pan, aunque por fuera solo se vea una mancha. Por eso no basta con quitar la parte manchada: es mejor no comer ese pan.\n\nEl frío de la refrigeradora hace que el moho crezca más despacio. Por esta razón, el pan guardado en frío dura más días.",
+      "palabras_texto": 108,
+      "contexto": "Lea el siguiente texto:\n\n«¿Alguna vez ha visto manchas verdes o grises en un pan viejo? Esas manchas son moho, un tipo de hongo. El moho crece a partir de esporas, unas partículas tan pequeñas que flotan en el aire sin que las veamos.\n\nCuando una espora cae sobre un alimento húmedo y tibio, empieza a crecer. Forma hilos finísimos que se meten dentro del pan, aunque por fuera solo se vea una mancha. Por eso no basta con quitar la parte manchada: es mejor no comer ese pan.\n\nEl frío de la refrigeradora hace que el moho crezca más despacio. Por esta razón, el pan guardado en frío dura más días.»",
+      "enunciado": "Según el texto anterior, una idea complementaria destaca que",
+      "opciones": {
+        "A": "el frío retrasa el crecimiento del moho.",
+        "B": "los hilos del moho quedan en la parte de afuera.",
+        "C": "el moho se elimina al calentar el pan en el horno.",
+        "D": "el moho es un hongo que crece en alimentos húmedos."
+      },
+      "clave": "A",
+      "explicacion": "Lo principal del texto es qué es el moho y cómo crece en los alimentos húmedos y tibios. Al final se agrega un dato que completa esa idea: el frío de la refrigeradora hace que crezca más despacio.",
+      "por_que": {
+        "B": "Distorsiona el texto: los hilos se meten dentro del pan.",
+        "C": "Es un dato que no aparece en el texto.",
+        "D": "Es la idea fundamental del texto, no una complementaria."
+      },
+      "evidencia_textual": "El frío de la refrigeradora hace que el moho crezca más despacio.",
+      "imagen": null
+    },
+    {
+      "id": "esp-3-g",
+      "orden": 51,
+      "numero": 51,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Causas",
+      "subtema": "Noticia",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "3",
+        "texto": "Determina relaciones de causa en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "3.2",
+        "texto": "Reconoce los motivos que originan un hecho en el texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "noticia",
+      "titulo": "Nuevo horario en Coto Brus",
+      "texto": "Escuela de Coto Brus cambia su horario por las lluvias\n\nA partir de setiembre, una escuela de Coto Brus empezará las clases media hora antes. También terminará a la una y media de la tarde.\n\nEn esta zona, durante los meses más lluviosos, los aguaceros suelen empezar después de las dos de la tarde. Muchos estudiantes viven en fincas alejadas y regresan caminando por caminos de lastre que se llenan de barro. Algunos deben cruzar quebradas que crecen con rapidez.\n\nLa directora explicó que el horario normal volverá en diciembre, cuando las lluvias disminuyan. Las familias se organizaron para que los más pequeños caminen acompañados.",
+      "palabras_texto": 105,
+      "contexto": "Lea el siguiente texto:\n\n«Escuela de Coto Brus cambia su horario por las lluvias\n\nA partir de setiembre, una escuela de Coto Brus empezará las clases media hora antes. También terminará a la una y media de la tarde.\n\nEn esta zona, durante los meses más lluviosos, los aguaceros suelen empezar después de las dos de la tarde. Muchos estudiantes viven en fincas alejadas y regresan caminando por caminos de lastre que se llenan de barro. Algunos deben cruzar quebradas que crecen con rapidez.\n\nLa directora explicó que el horario normal volverá en diciembre, cuando las lluvias disminuyan. Las familias se organizaron para que los más pequeños caminen acompañados.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la causa de que la escuela adelante su hora de salida?",
+      "opciones": {
+        "A": "Las lluvias disminuyen cuando llega diciembre.",
+        "B": "La escuela quiere ahorrar electricidad en la tarde.",
+        "C": "Los aguaceros de la tarde complican el regreso a casa.",
+        "D": "Las familias se organizaron para acompañar a los pequeños."
+      },
+      "clave": "C",
+      "explicacion": "La noticia dice que los aguaceros empiezan después de las dos y que muchos estudiantes caminan por caminos de barro y cruzan quebradas. Al unir esos datos se entiende que la escuela sale más temprano para que lleguen a casa antes de la lluvia.",
+      "por_que": {
+        "A": "Es la causa de otro hecho: que el horario normal vuelva.",
+        "B": "Es una causa razonable, pero el texto no la menciona.",
+        "D": "Presenta como causa algo que ocurrió a raíz del cambio."
+      },
+      "evidencia_textual": "En esta zona, durante los meses más lluviosos, los aguaceros suelen empezar después de las dos de la tarde.",
+      "imagen": null
+    },
+    {
+      "id": "esp-4-g",
+      "orden": 52,
+      "numero": 52,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Efectos",
+      "subtema": "Artículo de divulgación",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "4",
+        "texto": "Determina relaciones de efecto en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "4.3",
+        "texto": "Relaciona indicios del texto no literario para determinar un efecto."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "Las mascaradas",
+      "texto": "En muchas fiestas de pueblo de Costa Rica aparecen las mascaradas. Son personajes con enormes cabezas de colores que bailan al ritmo de la cimarrona, una pequeña banda de música popular. Hay gigantes, animales y figuras inspiradas en personas del lugar.\n\nLas máscaras se hacen con barro, papel y engrudo, y luego se pintan a mano. Fabricar una puede tomar varias semanas. Muchos artesanos aprendieron el oficio de sus padres o abuelos. Hoy algunos de ellos dan talleres para jóvenes de su comunidad.\n\nCuando una mascarada sale a la calle, los niños corren detrás de ella entre risas. De esta forma, el arte de las máscaras sigue vivo en los barrios y pueblos.",
+      "palabras_texto": 113,
+      "contexto": "Lea el siguiente texto:\n\n«En muchas fiestas de pueblo de Costa Rica aparecen las mascaradas. Son personajes con enormes cabezas de colores que bailan al ritmo de la cimarrona, una pequeña banda de música popular. Hay gigantes, animales y figuras inspiradas en personas del lugar.\n\nLas máscaras se hacen con barro, papel y engrudo, y luego se pintan a mano. Fabricar una puede tomar varias semanas. Muchos artesanos aprendieron el oficio de sus padres o abuelos. Hoy algunos de ellos dan talleres para jóvenes de su comunidad.\n\nCuando una mascarada sale a la calle, los niños corren detrás de ella entre risas. De esta forma, el arte de las máscaras sigue vivo en los barrios y pueblos.»",
+      "enunciado": "Según el texto anterior, ¿cuál es un efecto de que los artesanos den talleres a los jóvenes?",
+      "opciones": {
+        "A": "Los artesanos aprendieron de sus padres y abuelos.",
+        "B": "El oficio de hacer máscaras llega a nuevas generaciones.",
+        "C": "Cada comunidad del país fabrica hoy sus propias máscaras.",
+        "D": "Los niños corren detrás de las figuras por la calle entre risas."
+      },
+      "clave": "B",
+      "explicacion": "El texto cuenta que los artesanos aprendieron de sus familias y que ahora enseñan en talleres a los jóvenes. Así, el oficio pasa a personas nuevas y el arte de las máscaras sigue vivo.",
+      "por_que": {
+        "A": "Presenta como efecto algo que ocurrió antes: cómo aprendieron los artesanos.",
+        "C": "Es un efecto exagerado que el texto no sostiene.",
+        "D": "Es el efecto de otro hecho: que la mascarada salga a la calle."
+      },
+      "evidencia_textual": "Hoy algunos de ellos dan talleres para jóvenes de su comunidad.",
+      "imagen": null
+    },
+    {
+      "id": "esp-5-g",
+      "orden": 53,
+      "numero": 53,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Temas de textos literarios",
+      "subtema": "Leyenda",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "5",
+        "texto": "Reconoce diversos temas tratados en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "5.2",
+        "texto": "Reconoce el sentido global del texto literario."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "leyenda",
+      "titulo": "El jícaro del pozo",
+      "texto": "Cuentan los viejos de la llanura que, en tiempos lejanos, un jícaro solitario daba sombra al único pozo del camino. Los viajeros descansaban bajo sus ramas y le agradecían con una canción antes de seguir.\n\nUn año llegó una viajera que no quería perder tiempo. Para ver mejor el camino, cortó las ramas más bajas del árbol y siguió su marcha sin decir nada. Esa misma tarde, el pozo se secó.\n\nDurante meses, nadie encontró agua. Hasta que una niña regó el jícaro con lo poco que traía en su cántaro y le cantó como antes. A la mañana siguiente, el pozo amaneció lleno. Desde entonces, dicen, nadie pasa junto a un jícaro sin saludarlo.",
+      "palabras_texto": 115,
+      "contexto": "Lea el siguiente texto:\n\n«Cuentan los viejos de la llanura que, en tiempos lejanos, un jícaro solitario daba sombra al único pozo del camino. Los viajeros descansaban bajo sus ramas y le agradecían con una canción antes de seguir.\n\nUn año llegó una viajera que no quería perder tiempo. Para ver mejor el camino, cortó las ramas más bajas del árbol y siguió su marcha sin decir nada. Esa misma tarde, el pozo se secó.\n\nDurante meses, nadie encontró agua. Hasta que una niña regó el jícaro con lo poco que traía en su cántaro y le cantó como antes. A la mañana siguiente, el pozo amaneció lleno. Desde entonces, dicen, nadie pasa junto a un jícaro sin saludarlo.»",
+      "enunciado": "En el texto anterior, ¿cuál es el tema tratado?",
+      "opciones": {
+        "A": "El corte de las ramas bajas de un árbol.",
+        "B": "Las costumbres de los pueblos de la llanura.",
+        "C": "El respeto y la gratitud hacia la naturaleza.",
+        "D": "La valentía de una niña durante una larga sequía."
+      },
+      "clave": "C",
+      "explicacion": "Cuando una viajera corta las ramas sin agradecer, el pozo se seca; cuando la niña riega el jícaro y le canta, el agua vuelve. Por eso la leyenda trata del respeto y el agradecimiento que se le debe a la naturaleza.",
+      "por_que": {
+        "A": "Es un hecho puntual de la leyenda, no su tema.",
+        "B": "Es un tema demasiado amplio para lo que cuenta el texto.",
+        "D": "Es otra lectura posible, pero la niña muestra gratitud, no valentía."
+      },
+      "evidencia_textual": "Hasta que una niña regó el jícaro con lo poco que traía en su cántaro y le cantó como antes.",
+      "imagen": null
+    },
+    {
+      "id": "esp-6-g",
+      "orden": 54,
+      "numero": 54,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Pensamientos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "6",
+        "texto": "Infiere pensamientos de los personajes de un texto literario."
+      },
+      "evidencia": {
+        "codigo": "6.1",
+        "texto": "Infiere pensamientos de los personajes a partir de los indicios del texto literario."
+      },
+      "verbo": "inferir",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "El pargo pequeño",
+      "texto": "Por primera vez, el tío Ronald dejó que Dylan sostuviera la cuerda mientras pescaban desde el muelle de Golfito. De pronto, algo jaló con fuerza. Dylan enrolló la cuerda con el corazón saltando y sacó un pargo pequeño, plateado y brillante.\n\n—¡Es mío! —gritó—. Lo voy a llevar para que lo vea mi mamá.\n\nEl pez abría y cerraba la boca sobre las tablas. Dylan lo miró un rato. Se acordó de que el tío siempre decía que los peces pequeños son los grandes del próximo año. Se agachó, lo tomó con las dos manos mojadas y lo soltó en el agua verde.\n\nEl tío Ronald no dijo nada. Solo le revolvió el pelo y le pasó otra carnada.",
+      "palabras_texto": 119,
+      "contexto": "Lea el siguiente texto:\n\n«Por primera vez, el tío Ronald dejó que Dylan sostuviera la cuerda mientras pescaban desde el muelle de Golfito. De pronto, algo jaló con fuerza. Dylan enrolló la cuerda con el corazón saltando y sacó un pargo pequeño, plateado y brillante.\n\n—¡Es mío! —gritó—. Lo voy a llevar para que lo vea mi mamá.\n\nEl pez abría y cerraba la boca sobre las tablas. Dylan lo miró un rato. Se acordó de que el tío siempre decía que los peces pequeños son los grandes del próximo año. Se agachó, lo tomó con las dos manos mojadas y lo soltó en el agua verde.\n\nEl tío Ronald no dijo nada. Solo le revolvió el pelo y le pasó otra carnada.»",
+      "enunciado": "Según el texto anterior, ¿cuál es el pensamiento evidenciado por Dylan?",
+      "opciones": {
+        "A": "Su mamá debía ver el pez para creerle.",
+        "B": "Pescar en el muelle es un buen pasatiempo.",
+        "C": "Tenía que soltar el pez usando ambas manos.",
+        "D": "Dejar crecer al pez valía más que presumirlo."
+      },
+      "clave": "D",
+      "explicacion": "Dylan quería llevarle el pez a su mamá, pero recordó que los peces pequeños son los grandes del próximo año. Por eso lo devolvió al agua. Su pensamiento es que era mejor dejarlo crecer que presumirlo.",
+      "por_que": {
+        "A": "Es contrario a las pistas: al final decide soltar el pez.",
+        "B": "Es una opinión del lector que el cuento no muestra.",
+        "C": "Describe lo que Dylan hace, no lo que piensa."
+      },
+      "evidencia_textual": "Se acordó de que el tío siempre decía que los peces pequeños son los grandes del próximo año.",
+      "imagen": null
+    },
+    {
+      "id": "esp-7-g",
+      "orden": 55,
+      "numero": 55,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Conflictos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "7",
+        "texto": "Reconoce los conflictos de los personajes en textos literarios."
+      },
+      "evidencia": {
+        "codigo": "7.3",
+        "texto": "Distingue los elementos internos o externos que originan el conflicto de los personajes."
+      },
+      "verbo": "reconocer",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "La Pinta",
+      "texto": "Esa tarde, el cielo de Santa Cruz se puso morado. Marisol fue al corral a guardar las cabras antes del aguacero. Contó una por una: faltaba la Pinta, la más pequeña.\n\nMarisol miró hacia el potrero. El viento ya doblaba los árboles y se oían truenos lejanos. Si salía a buscarla, la lluvia podía alcanzarla en medio del campo. Si se quedaba, la cabrita pasaría la noche sola y mojada.\n\nCerró el portón del corral, se puso la capa amarilla de su papá y tomó una linterna. Antes de salir, le avisó a su hermano mayor por dónde iba a buscar. A los pocos minutos, escuchó un balido detrás de las piñuelas.",
+      "palabras_texto": 112,
+      "contexto": "Lea el siguiente texto:\n\n«Esa tarde, el cielo de Santa Cruz se puso morado. Marisol fue al corral a guardar las cabras antes del aguacero. Contó una por una: faltaba la Pinta, la más pequeña.\n\nMarisol miró hacia el potrero. El viento ya doblaba los árboles y se oían truenos lejanos. Si salía a buscarla, la lluvia podía alcanzarla en medio del campo. Si se quedaba, la cabrita pasaría la noche sola y mojada.\n\nCerró el portón del corral, se puso la capa amarilla de su papá y tomó una linterna. Antes de salir, le avisó a su hermano mayor por dónde iba a buscar. A los pocos minutos, escuchó un balido detrás de las piñuelas.»",
+      "enunciado": "En el texto anterior, ¿cuál conflicto enfrenta Marisol?",
+      "opciones": {
+        "A": "Oír balar a la Pinta detrás de las piñuelas.",
+        "B": "Decidir si busca a la cabrita o se resguarda.",
+        "C": "Pasar la noche sola y mojada lejos del corral.",
+        "D": "Contar todas las cabras una por una dentro del corral."
+      },
+      "clave": "B",
+      "explicacion": "Falta una cabrita y se acerca un aguacero. Si Marisol sale, la lluvia puede alcanzarla; si se queda, la Pinta pasará la noche sola. Ese dilema entre la tormenta y la cabrita es su conflicto.",
+      "por_que": {
+        "A": "Es el final del cuento, no el problema.",
+        "C": "Es el problema de otro personaje: el de la cabrita, no el de Marisol.",
+        "D": "Es un hecho secundario del cuento."
+      },
+      "evidencia_textual": "Si salía a buscarla, la lluvia podía alcanzarla en medio del campo. Si se quedaba, la cabrita pasaría la noche sola y mojada.",
+      "imagen": null
+    },
+    {
+      "id": "esp-8-g",
+      "orden": 56,
+      "numero": 56,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Comportamientos de los personajes",
+      "subtema": "Cuento",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "8",
+        "texto": "Identifica comportamientos de los personajes en un texto literario."
+      },
+      "evidencia": {
+        "codigo": "8.3",
+        "texto": "Reconoce la intención de los personajes a partir de sus comportamientos."
+      },
+      "verbo": "identificar",
+      "tipo_texto": "literario",
+      "genero": "cuento",
+      "titulo": "Papelotes de diciembre",
+      "texto": "En el barrio de Abigail, en Alajuela, nadie hacía papelotes como su abuelo, y ella había aprendido mirándolo. Sabía cortar las varillas de caña, amarrarlas en cruz y pegar el papel de china con engrudo.\n\nUn domingo de diciembre, cuando soplaba el viento, Abigail elevó un papelote rojo y amarillo que subió más alto que todos. Varios niños se acercaron a preguntarle cómo lo había hecho.\n\nAbigail enrolló el hilo, bajó su papelote y se sentó en el zacate con los demás. Sacó de la mochila varillas y papel que había llevado de más. Esa tarde, el cielo del barrio se llenó de papelotes.",
+      "palabras_texto": 104,
+      "contexto": "Lea el siguiente texto:\n\n«En el barrio de Abigail, en Alajuela, nadie hacía papelotes como su abuelo, y ella había aprendido mirándolo. Sabía cortar las varillas de caña, amarrarlas en cruz y pegar el papel de china con engrudo.\n\nUn domingo de diciembre, cuando soplaba el viento, Abigail elevó un papelote rojo y amarillo que subió más alto que todos. Varios niños se acercaron a preguntarle cómo lo había hecho.\n\nAbigail enrolló el hilo, bajó su papelote y se sentó en el zacate con los demás. Sacó de la mochila varillas y papel que había llevado de más. Esa tarde, el cielo del barrio se llenó de papelotes.»",
+      "enunciado": "En el texto anterior, ¿cuál es el comportamiento evidenciado por Abigail?",
+      "opciones": {
+        "A": "Generosa: enseña a otros lo que aprendió.",
+        "B": "Orgullosa: se siente feliz por su papelote.",
+        "C": "Presumida: muestra que su papelote es el mejor.",
+        "D": "Concentrada: amarra las varillas con mucho cuidado."
+      },
+      "clave": "A",
+      "explicacion": "Cuando los otros niños le preguntan, Abigail baja su papelote y se sienta con ellos. Además, llevaba varillas y papel de más, como si ya pensara compartir. Esas pistas muestran que es generosa con lo que sabe.",
+      "por_que": {
+        "B": "Nombra una emoción, no una conducta.",
+        "C": "Es contrario a las pistas: baja su papelote para ayudar a los demás.",
+        "D": "Describe lo que sabía hacer antes, no su conducta en esa tarde."
+      },
+      "evidencia_textual": "Sacó de la mochila varillas y papel que había llevado de más.",
+      "imagen": null
+    },
+    {
+      "id": "esp-1-h",
+      "orden": 57,
+      "numero": 57,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Texto de opinión",
+      "nivel": "alto",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.3",
+        "texto": "Reconoce el propósito del texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "texto de opinión",
+      "titulo": "El casco",
+      "texto": "Cada tarde veo a muchos niños y jóvenes andar en bicicleta por las calles de mi pueblo. Me alegra, porque pedalear es divertido, no contamina y fortalece las piernas. Lo que me preocupa es que muy pocos usan casco.\n\nAlgunos dicen que el casco da calor o que se ve feo. Otros piensan que no lo necesitan si solo van a la pulpería. Pero una caída puede ocurrir en cualquier lugar, incluso a pocos metros de la casa. La cabeza es la parte del cuerpo que más debemos proteger.\n\nUn casco cuesta menos que unas tenis de marca. Ponérselo toma apenas unos segundos. Ojalá pronto sea tan normal como amarrarse los zapatos.",
+      "palabras_texto": 112,
+      "contexto": "Lea el siguiente texto:\n\n«Cada tarde veo a muchos niños y jóvenes andar en bicicleta por las calles de mi pueblo. Me alegra, porque pedalear es divertido, no contamina y fortalece las piernas. Lo que me preocupa es que muy pocos usan casco.\n\nAlgunos dicen que el casco da calor o que se ve feo. Otros piensan que no lo necesitan si solo van a la pulpería. Pero una caída puede ocurrir en cualquier lugar, incluso a pocos metros de la casa. La cabeza es la parte del cuerpo que más debemos proteger.\n\nUn casco cuesta menos que unas tenis de marca. Ponérselo toma apenas unos segundos. Ojalá pronto sea tan normal como amarrarse los zapatos.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la idea fundamental?",
+      "opciones": {
+        "A": "Pedalear es divertido y ayuda a fortalecer las piernas.",
+        "B": "Usar casco al andar en bicicleta debería ser una costumbre.",
+        "C": "Una caída puede pasar en cualquier lugar, aun cerca de la casa.",
+        "D": "La bicicleta es el medio de transporte más seguro para los niños."
+      },
+      "clave": "B",
+      "explicacion": "Quien escribe se alegra de que muchos anden en bicicleta, pero le preocupa que pocos usen casco. Todo lo demás, como lo de las caídas cerca de la casa, sirve para convencer al lector. La idea fundamental es que usar casco debería volverse una costumbre.",
+      "por_que": {
+        "A": "Es un detalle verdadero, pero no es lo que el autor quiere defender.",
+        "C": "Es una idea complementaria: una razón para usar casco.",
+        "D": "Es una afirmación que el texto no hace."
+      },
+      "evidencia_textual": "Lo que me preocupa es que muy pocos usan casco.",
+      "imagen": null
+    },
+    {
+      "id": "esp-2-h",
+      "orden": 58,
+      "numero": 58,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas complementarias",
+      "subtema": "Artículo de divulgación",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "2",
+        "texto": "Distingue las ideas complementarias en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "2.2",
+        "texto": "Distingue la información relevante de la irrelevante en el texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "La ceiba",
+      "texto": "La ceiba es uno de los árboles más altos de los bosques tropicales de Costa Rica. Su tronco es grueso y recto, y en la base tiene raíces anchas que parecen paredes. Estas raíces, llamadas gambas, ayudan a sostener al árbol en suelos húmedos.\n\nEn la época seca, la ceiba pierde sus hojas y se llena de flores. De sus frutos sale una fibra blanca, suave como el algodón, que el viento lleva lejos junto con las semillas.\n\nMuchos animales dependen de ella. En sus ramas altas anidan aves, y entre sus raíces se refugian ranas, insectos y pequeños mamíferos.",
+      "palabras_texto": 100,
+      "contexto": "Lea el siguiente texto:\n\n«La ceiba es uno de los árboles más altos de los bosques tropicales de Costa Rica. Su tronco es grueso y recto, y en la base tiene raíces anchas que parecen paredes. Estas raíces, llamadas gambas, ayudan a sostener al árbol en suelos húmedos.\n\nEn la época seca, la ceiba pierde sus hojas y se llena de flores. De sus frutos sale una fibra blanca, suave como el algodón, que el viento lleva lejos junto con las semillas.\n\nMuchos animales dependen de ella. En sus ramas altas anidan aves, y entre sus raíces se refugian ranas, insectos y pequeños mamíferos.»",
+      "enunciado": "En el texto anterior, ¿cuál es una idea complementaria?",
+      "opciones": {
+        "A": "La ceiba se queda sin hojas en la época lluviosa.",
+        "B": "La madera de la ceiba se usa para construir casas.",
+        "C": "La fibra de sus frutos viaja con el viento llevando semillas.",
+        "D": "La ceiba es un árbol enorme del que dependen muchos seres vivos."
+      },
+      "clave": "C",
+      "explicacion": "El texto presenta a la ceiba como un árbol enorme, importante para muchos animales. Un dato que completa esa idea es que la fibra de sus frutos viaja con el viento y lleva las semillas. La ceiba pierde las hojas en la época seca, no en la lluviosa.",
+      "por_que": {
+        "A": "Distorsiona el texto: pierde las hojas en la época seca.",
+        "B": "Es un dato que no aparece en el texto.",
+        "D": "Es la idea fundamental, no una complementaria."
+      },
+      "evidencia_textual": "De sus frutos sale una fibra blanca, suave como el algodón, que el viento lleva lejos junto con las semillas.",
+      "imagen": null
+    },
+    {
+      "id": "esp-3-h",
+      "orden": 59,
+      "numero": 59,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Causas",
+      "subtema": "Artículo de divulgación",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "3",
+        "texto": "Determina relaciones de causa en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "3.1",
+        "texto": "Conoce el concepto de causa al identificarla en un texto no literario."
+      },
+      "verbo": "determinar",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "Los nidos de la oropéndola",
+      "texto": "La oropéndola de Moctezuma es un ave grande, de plumas color café y cola amarilla. Vive en las zonas bajas y cálidas del país, sobre todo en el Caribe. Es famosa por sus nidos, que cuelgan como bolsas largas de las ramas más altas.\n\nLas hembras tejen esos nidos con fibras de plantas y tardan varios días en terminarlos. Muchas veces construyen decenas de nidos en un mismo árbol, que suele estar separado de los demás. De esta forma, a los monos y a las serpientes se les hace muy difícil llegar hasta los huevos.\n\nEl canto del macho es muy curioso: suena como gotas de agua que caen dentro de una botella.",
+      "palabras_texto": 113,
+      "contexto": "Lea el siguiente texto:\n\n«La oropéndola de Moctezuma es un ave grande, de plumas color café y cola amarilla. Vive en las zonas bajas y cálidas del país, sobre todo en el Caribe. Es famosa por sus nidos, que cuelgan como bolsas largas de las ramas más altas.\n\nLas hembras tejen esos nidos con fibras de plantas y tardan varios días en terminarlos. Muchas veces construyen decenas de nidos en un mismo árbol, que suele estar separado de los demás. De esta forma, a los monos y a las serpientes se les hace muy difícil llegar hasta los huevos.\n\nEl canto del macho es muy curioso: suena como gotas de agua que caen dentro de una botella.»",
+      "enunciado": "Según el texto anterior, ¿cuál es la causa de que los huevos de la oropéndola estén fuera del alcance de monos y serpientes?",
+      "opciones": {
+        "A": "Los nidos cuelgan altos en árboles aislados.",
+        "B": "Los huevos quedan protegidos de sus enemigos.",
+        "C": "Los machos vigilan el árbol con cantos de alerta.",
+        "D": "Las hembras tejen los nidos con fibras de plantas."
+      },
+      "clave": "A",
+      "explicacion": "El texto dice que los nidos cuelgan de las ramas más altas y que el árbol suele estar separado de los demás. Por eso a los monos y a las serpientes se les hace difícil llegar hasta los huevos.",
+      "por_que": {
+        "B": "Presenta como causa lo que en realidad es el efecto.",
+        "C": "Es una causa razonable, pero el texto no la menciona.",
+        "D": "Explica cómo se hacen los nidos, no por qué protegen los huevos."
+      },
+      "evidencia_textual": "Muchas veces construyen decenas de nidos en un mismo árbol, que suele estar separado de los demás.",
+      "imagen": null
+    },
+    {
+      "id": "esp-1-i",
+      "orden": 60,
+      "numero": 60,
+      "materia": "espanol",
+      "bloque": "Comprensión lectora",
+      "tema": "Ideas fundamentales",
+      "subtema": "Artículo de divulgación",
+      "nivel": "intermedio",
+      "afirmacion": {
+        "codigo": "1",
+        "texto": "Distingue las ideas fundamentales en textos no literarios."
+      },
+      "evidencia": {
+        "codigo": "1.2",
+        "texto": "Reconoce el sentido global del texto no literario."
+      },
+      "verbo": "distinguir",
+      "tipo_texto": "no literario",
+      "genero": "artículo de divulgación",
+      "titulo": "El yigüirro",
+      "texto": "El yigüirro es el ave nacional de Costa Rica. No llama la atención por sus colores, pues sus plumas son de tonos café y crema. Sin embargo, es muy querido por su canto.\n\nSu canto se escucha con más fuerza al final del verano, cuando empieza su época de reproducción. Esa época coincide con la llegada de las primeras lluvias. Por eso, muchas personas dicen que el yigüirro llama a la lluvia con su canto.\n\nEsta ave se ha acostumbrado a vivir cerca de las personas. Se le ve en patios, parques y potreros, buscando lombrices e insectos en el suelo.",
+      "palabras_texto": 101,
+      "contexto": "Lea el siguiente texto:\n\n«El yigüirro es el ave nacional de Costa Rica. No llama la atención por sus colores, pues sus plumas son de tonos café y crema. Sin embargo, es muy querido por su canto.\n\nSu canto se escucha con más fuerza al final del verano, cuando empieza su época de reproducción. Esa época coincide con la llegada de las primeras lluvias. Por eso, muchas personas dicen que el yigüirro llama a la lluvia con su canto.\n\nEsta ave se ha acostumbrado a vivir cerca de las personas. Se le ve en patios, parques y potreros, buscando lombrices e insectos en el suelo.»",
+      "enunciado": "La idea fundamental del texto anterior expone que",
+      "opciones": {
+        "A": "las plumas del yigüirro tienen colores café y crema.",
+        "B": "el yigüirro fue escogido ave nacional por sus colores.",
+        "C": "esta ave vive cerca de las personas, en patios y parques.",
+        "D": "el yigüirro es querido por su canto, asociado a la lluvia."
+      },
+      "clave": "D",
+      "explicacion": "El texto aclara que el yigüirro no destaca por sus colores, sino por su canto. Ese canto se oye más cuando empiezan las lluvias, y por eso la gente dice que las llama. Lo de los patios y las plumas son detalles que acompañan la idea.",
+      "por_que": {
+        "A": "Es un detalle verdadero, no la idea principal.",
+        "B": "Es una afirmación que el texto no hace; incluso dice lo contrario.",
+        "C": "Es una idea complementaria presentada como fundamental."
+      },
+      "evidencia_textual": "Sin embargo, es muy querido por su canto.",
+      "imagen": null
+    }
+  ]
+}

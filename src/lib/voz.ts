@@ -85,9 +85,12 @@ export function useLectura(enunciado: string, opciones: Opcion[]): Lectura {
 
     const voz = vozEnEspanol();
     // Primero el enunciado y despues cada opcion con su letra por delante:
-    // sin la letra, quien escucha no sabe cual boton tocar.
+    // sin la letra, quien escucha no sabe cual boton tocar. El enunciado va
+    // por parrafos: en las lecturas de Espanol trae el texto completo antes
+    // de la pregunta, y algunos navegadores cortan una frase muy larga a
+    // medio camino. Partido, se lee entero y en orden.
     const partes = [
-      aVoz(enunciado),
+      ...enunciado.split(/\n\s*\n/).map(aVoz),
       ...opciones.map((op, i) => `${LETRAS[i] ?? i + 1}. ${aVoz(op.texto)}`),
     ].filter((t) => t.length > 0);
     if (partes.length === 0) return;

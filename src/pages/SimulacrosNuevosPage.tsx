@@ -348,6 +348,8 @@ const CONSEJOS: Partial<Record<SlugMateria, string>> = {
     "Hacelo en un lugar tranquilo y con agua a mano. Si tu familia lo permite, hacé una pausa corta a la mitad: el reloj sigue corriendo mientras tanto.",
   ciencias:
     "Es un simulacro de práctica más largo que la prueba oficial, para entrenar resistencia y ritmo. Hacelo en un lugar tranquilo, con agua a mano y, si tu familia lo permite, con una pausa corta a la mitad.",
+  espanol:
+    "Leé cada texto con calma y volvé a él cuantas veces haga falta: las pistas están en el texto. Hacelo en un lugar tranquilo y con agua a mano.",
 };
 
 function Consejo({ materia }: { materia: SlugMateria }) {
