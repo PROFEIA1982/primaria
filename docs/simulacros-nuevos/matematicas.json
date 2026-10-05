@@ -1581,19 +1581,19 @@
         "codigo": "R3.2",
         "texto": "Determina el valor desconocido (letra) en una ecuación matemática dada."
       },
-      "enunciado": "Melissa tenía ahorrada cierta cantidad de dinero. Gastó ₡850 en un cuaderno y luego su abuela le regaló ₡1200. Ahora tiene ₡3000. En la siguiente ecuación, «d» representa el dinero que Melissa tenía ahorrado al inicio:\n\n$d - 850 + 1200 = 3000$\n\nDe acuerdo con la información anterior, ¿cuánto dinero tenía ahorrado Melissa al inicio?",
+      "enunciado": "En una campaña de reforestación, los árboles que donó un vivero se repartieron en partes iguales entre 4 comunidades. Además, la municipalidad le entregó 15 árboles más a cada comunidad. Al final, cada comunidad recibió 40 árboles en total. En la siguiente ecuación, «a» representa la cantidad de árboles que donó el vivero:\n\n$a \\div 4 + 15 = 40$\n\nDe acuerdo con la información anterior, ¿cuántos árboles donó el vivero?",
       "opciones": {
-        "A": "₡2650",
-        "B": "₡3350",
-        "C": "₡3850",
-        "D": "₡5050"
+        "A": "100",
+        "B": "145",
+        "C": "160",
+        "D": "220"
       },
       "clave": "A",
-      "explicacion": "Se deshacen los pasos al revés: antes del regalo tenía 3000 − 1200 = ₡1800, y antes de gastar tenía 1800 + 850 = ₡2650. Se comprueba: 2650 − 850 + 1200 = 3000.",
+      "explicacion": "Primero se quitan los 15 árboles que dio la municipalidad: 40 − 15 = 25. Esos 25 árboles son lo que le tocó a cada comunidad cuando se repartió entre 4 lo del vivero, así que el vivero donó 25 × 4 = 100 árboles. Se comprueba: 100 ÷ 4 + 15 = 25 + 15 = 40.",
       "por_que": {
-        "B": "deshace con los signos cambiados: 3000 + 1200 − 850",
-        "C": "solo deshace el gasto y se olvida del regalo",
-        "D": "suma todas las cantidades"
+        "B": "multiplica primero y resta después: 40 × 4 − 15",
+        "C": "multiplica 40 × 4 y se olvida de los 15 árboles de la municipalidad",
+        "D": "suma los 15 en vez de quitarlos: (40 + 15) × 4"
       },
       "imagen": null
     },
