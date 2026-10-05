@@ -1677,7 +1677,7 @@
         "codigo": "E1.3",
         "texto": "Reconoce el recorrido de un grupo de datos como la diferencia entre el máximo y el mínimo."
       },
-      "enunciado": "La siguiente tabla muestra la cantidad de lluvia, en milímetros, que registró el pluviómetro de una escuela durante cinco días:\n\n| Día | Lluvia (en milímetros) |\n| --- | --- |\n| Lunes | 12 |\n| Martes | 15 |\n| Miércoles | 9 |\n| Jueves | 15 |\n| Viernes | 14 |\n\nDe acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?",
+      "enunciado": "Durante un aguacero, cinco estaciones meteorológicas de una misma región midieron la lluvia que cayó. Los datos se muestran en la siguiente tabla:\n\n| Estación | Lluvia (en milímetros) |\n| --- | --- |\n| Estación 1 | 12 |\n| Estación 2 | 15 |\n| Estación 3 | 9 |\n| Estación 4 | 15 |\n| Estación 5 | 14 |\n\nDe acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?",
       "opciones": {
         "A": "La moda es 15 y el recorrido es 15.",
         "B": "La moda es 2 y el recorrido es 6.",
