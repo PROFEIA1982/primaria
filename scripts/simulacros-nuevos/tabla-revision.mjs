@@ -60,7 +60,9 @@ if (items.some((i) => i.contexto)) {
   }
   L.push('');
 }
-L.push('Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa que recalcula el resultado y comprueba que coincide con una sola opción.\n');
+L.push(items.some((i) => i.contexto)
+  ? 'Cada clave se revisó a mano contra el contexto y el programa de estudio, y pasó por dos auditorías independientes: una de contenido y otra psicométrica.\n'
+  : 'Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa que recalcula el resultado y comprueba que coincide con una sola opción.\n');
 
 L.push('## Resumen\n');
 if (items.some((i) => i.contexto)) {

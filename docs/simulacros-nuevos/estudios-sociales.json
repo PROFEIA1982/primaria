@@ -238,7 +238,7 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "espacial",
-      "contexto": "Considere la siguiente información:\n\nEn una clase de Estudios Sociales, el grupo de Daniel comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:\n\n| Característica | Costa 1 | Costa 2 |\n| --- | --- | --- |\n| Forma del litoral | Muy recortada, con golfos y penínsulas | Casi recta, con pocas entradas del mar |\n| Extensión | Más larga | Más corta |",
+      "contexto": "Considere la siguiente información:\n\nEn una clase de Estudios Sociales, el grupo de Randall comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:\n\n| Característica | Costa 1 | Costa 2 |\n| --- | --- | --- |\n| Forma del litoral | Muy recortada, con golfos y penínsulas | Casi recta, con pocas entradas del mar |\n| Extensión | Más larga | Más corta |",
       "enunciado": "De acuerdo con la información anterior, ¿cuál opción distingue correctamente las dos costas de Costa Rica?",
       "opciones": {
         "A": "La costa 1 es la del Pacífico y la costa 2 es la del Caribe.",
@@ -413,7 +413,7 @@
       },
       "verbo": "reconocer",
       "tipo_contexto": "cívico-político",
-      "contexto": "Lea la siguiente información:\n\nLa maestra de Sebastián notó señales de que él estaba siendo maltratado y que tenía miedo de volver a su casa. Siguiendo el protocolo de la escuela, la directora reportó de inmediato la situación a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en peligro.",
+      "contexto": "Lea la siguiente información:\n\nLa maestra de Sebastián notó que él llegaba triste, con miedo de volver a su casa, y que sus derechos podían estar en peligro. Siguiendo el protocolo de la escuela, la directora informó de inmediato a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en riesgo.",
       "enunciado": "¿A cuál institución se refiere la información anterior?",
       "opciones": {
         "A": "Instituto Mixto de Ayuda Social",
@@ -664,7 +664,7 @@
         "A": "Porque así cada grupo limpiaba solo el frente de su negocio.",
         "B": "Porque la Bandera Azul obliga a cerrar la playa a los turistas.",
         "C": "Porque los pescadores eran los únicos que ensuciaban la playa.",
-        "D": "Porque cuidarlo juntos benefició a la naturaleza y al pueblo."
+        "D": "Porque cuidarla juntos benefició a la naturaleza y al pueblo."
       },
       "clave": "D",
       "explicacion": "El acuerdo funcionó porque todos se comprometieron a lo mismo. La playa quedó limpia, se protegió la vida del mar y la comunidad ganó con más visitantes.",
@@ -1055,7 +1055,7 @@
       "explicacion": "La llegada de Colón y la fundación de las primeras poblaciones españolas marcan el tiempo de la conquista: los españoles exploraron el territorio y lo tomaron por la fuerza. La colonia vino después, cuando ya estaban asentados.",
       "por_que": {
         "A": "confunde la llegada y la toma del territorio con el periodo que vino después",
-        "B": "confunde la llegada de los españoles con el tiempo anterior a ella",
+        "B": "confunde la llegada de los españoles con un hecho que ocurrió casi tres siglos después",
         "D": "confunde la llegada de los españoles con el tiempo anterior a ella"
       },
       "imagen": null
@@ -1113,7 +1113,7 @@
       },
       "verbo": "ubicar",
       "tipo_contexto": "espacial",
-      "contexto": "Analice la siguiente información:\n\n| Tramo | Fechas aproximadas |\n| --- | --- |\n| 1 | Antes de 1502 |\n| 2 | De 1502 a la década de 1570 |\n| 3 | De la década de 1570 a 1821 |\n| 4 | De 1821 en adelante |\n\nEn una época de la historia de Costa Rica, el territorio era una provincia de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.",
+      "contexto": "Analice la siguiente información:\n\n| Tramo | Fechas aproximadas |\n| --- | --- |\n| 1 | Antes de 1502 |\n| 2 | De 1502 a la década de 1570 |\n| 3 | De la década de 1570 a 1821 |\n| 4 | De 1821 en adelante |\n\nEn una época de la historia de Costa Rica, el territorio era una provincia de la Capitanía General de Guatemala, bajo el dominio de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.",
       "enunciado": "¿En cuál tramo se ubica la época descrita?",
       "opciones": {
         "A": "Tramo 1",
@@ -1122,7 +1122,7 @@
         "D": "Tramo 4"
       },
       "clave": "C",
-      "explicacion": "Esa época es la colonia: Costa Rica era una provincia de España y Cartago, su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.",
+      "explicacion": "Esa época es la colonia: Costa Rica era una provincia de la Capitanía General de Guatemala, bajo el dominio español, y Cartago era su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.",
       "por_que": {
         "A": "ubica la época antes de la llegada de los españoles",
         "B": "confunde la colonia con el tiempo de la conquista",
@@ -1157,7 +1157,7 @@
         "D": "La costumbre de hacer ferias en la plaza cada domingo."
       },
       "clave": "C",
-      "explicacion": "Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias y el café llegaron después, en la vida republicana.",
+      "explicacion": "Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias son de la vida republicana, y el café, aunque llegó al final de la colonia, se extendió después de la independencia.",
       "por_que": {
         "A": "confunde un aporte colonial con una organización de la vida republicana",
         "B": "ubica en la colonia un cultivo que se extendió después de la independencia",
@@ -1189,14 +1189,14 @@
         "A": "Se basaba en fábricas que exportaban chocolate a Europa.",
         "B": "Usaba monedas de oro acuñadas en la ciudad de Cartago.",
         "C": "Tenía al café como el producto más vendido de la provincia.",
-        "D": "Dependía de cultivos sostenidos con mano de obra forzada."
+        "D": "Tenía cultivos que se sostenían con mano de obra forzada."
       },
       "clave": "D",
-      "explicacion": "El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café llegó mucho después.",
+      "explicacion": "El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café se volvió el producto principal hasta después de la independencia.",
       "por_que": {
         "A": "imagina una industria que no existía en la provincia",
         "B": "no ve que el texto dice que se usaban semillas como moneda",
-        "C": "ubica en la colonia un cultivo que llegó después"
+        "C": "ubica en el siglo XVIII un cultivo que se volvió el principal hasta después de la independencia"
       },
       "imagen": null
     },
@@ -1323,7 +1323,7 @@
       },
       "verbo": "inferir",
       "tipo_contexto": "cívico-político",
-      "contexto": "Lea el siguiente texto:\n\nCon la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.",
+      "contexto": "Lea el siguiente texto:\n\nCon la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Más de doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.",
       "enunciado": "A partir del texto anterior, ¿cuáles principios de la independencia siguen vigentes en la escuela de Josué?",
       "opciones": {
         "A": "La obediencia y la disciplina.",
@@ -1393,7 +1393,7 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "espacial",
-      "contexto": "Lea el siguiente texto:\n\nEl 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con el golfo y la península de Nicoya, y también tradiciones como la marimba, los bailes de punto y las comidas de maíz.",
+      "contexto": "Lea el siguiente texto:\n\nEl 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con la península de Nicoya, y también tradiciones como la música de marimba, los bailes y las comidas de maíz de esa región.",
       "enunciado": "De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?",
       "opciones": {
         "A": "La salida al océano Pacífico por el golfo de Nicoya.",
@@ -1402,7 +1402,7 @@
         "D": "La firma de un acuerdo de límites con Nicaragua."
       },
       "clave": "B",
-      "explicacion": "La marimba y los bailes de punto son tradiciones guanacastecas que hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.",
+      "explicacion": "La música de marimba y los bailes tradicionales guanacastecos hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.",
       "por_que": {
         "A": "confunde un aporte geográfico con uno cultural",
         "C": "confunde un aporte económico y territorial con uno cultural",
@@ -1461,7 +1461,7 @@
         "codigo": "2.13.1",
         "texto": "Reconoce los símbolos nacionales de Costa Rica: Escudo, Bandera e Himno Nacional, y su significado."
       },
-      "verbo": "relacionar",
+      "verbo": "reconocer",
       "tipo_contexto": "cívico-político",
       "contexto": "Lea la siguiente información:\n\nEl Escudo Nacional muestra tres volcanes entre dos mares, con un barco navegando en cada uno. Al fondo sale el sol y arriba hay siete estrellas. Cuando Pablo lo dibujó para un trabajo, su maestra le pidió explicar qué parte del escudo representa la posición geográfica del país.",
       "enunciado": "¿Cuál parte del escudo debería señalar Pablo?",
@@ -1533,7 +1533,7 @@
       },
       "verbo": "distinguir",
       "tipo_contexto": "temporal",
-      "contexto": "Lea el siguiente texto:\n\nDespués de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas, entre ellas soldados, mujeres, niñas y niños, lo que dejó muchas familias sin sostén.",
+      "contexto": "Lea el siguiente texto:\n\nDespués de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas en todo el país, lo que dejó a muchas familias sin sostén.",
       "enunciado": "La información anterior describe una consecuencia de la Campaña Nacional que fue",
       "opciones": {
         "A": "política, porque provocó un cambio de gobierno.",
@@ -1790,7 +1790,7 @@
         "D": "la abolición del ejército."
       },
       "clave": "A",
-      "explicacion": "La Caja, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.",
+      "explicacion": "La Caja Costarricense de Seguro Social, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.",
       "por_que": {
         "B": "confunde la atención médica con un logro educativo anterior",
         "C": "escoge un logro político que no tiene relación con la situación",
@@ -1825,7 +1825,7 @@
         "D": "Garantizan que a nadie se le pueda despedir nunca."
       },
       "clave": "B",
-      "explicacion": "La jornada de ocho horas, el descanso y el salario mínimo vienen de las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.",
+      "explicacion": "La jornada máxima de ocho horas, el descanso semanal y el salario mínimo quedaron protegidos por las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.",
       "por_que": {
         "A": "contradice el límite de ocho horas del contrato",
         "C": "no ve que don Rodrigo trabaja para una empresa privada",
@@ -1855,14 +1855,14 @@
       "enunciado": "Según el texto anterior, ¿cuál derecho de la Constitución Política se está apoyando?",
       "opciones": {
         "A": "La protección especial a las personas adultas mayores.",
-        "B": "La libertad de reunión de las personas de la comunidad.",
+        "B": "La libertad de comercio de las personas de la comunidad.",
         "C": "La igualdad de todas las personas ante la ley.",
         "D": "El derecho a la educación de niñas y niños."
       },
       "clave": "A",
       "explicacion": "La Constitución dice que el Estado debe proteger de forma especial a las personas adultas mayores. El programa de los vecinos ayuda a cumplir ese derecho, cuidando a quienes viven solos.",
       "por_que": {
-        "B": "se fija en que los vecinos se organizan, pero ese no es el derecho que se apoya",
+        "B": "se fija en que los voluntarios ayudan con las compras, pero ese no es el derecho que se apoya",
         "C": "escoge un derecho general que no describe la situación",
         "D": "escoge un derecho de otro grupo de la población"
       },
@@ -1921,10 +1921,10 @@
       },
       "verbo": "inferir",
       "tipo_contexto": "cívico-político",
-      "contexto": "Lea el siguiente texto:\n\nMariana publicó en una red social su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.",
+      "contexto": "Lea el siguiente texto:\n\nMariana publicó en el chat del grupo su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.",
       "enunciado": "A partir del texto anterior, ¿qué se puede inferir sobre la libertad de expresión?",
       "opciones": {
-        "A": "Permite publicar cualquier cosa cuando se hace en redes sociales.",
+        "A": "Permite publicar cualquier cosa cuando se hace en un chat.",
         "B": "Tiene límites y no permite dañar la dignidad de otra persona.",
         "C": "Es un derecho de las personas adultas, no de los estudiantes.",
         "D": "Prohíbe dar opiniones sobre las decisiones de la escuela."
@@ -1932,7 +1932,7 @@
       "clave": "B",
       "explicacion": "Mariana usó su derecho a opinar con respeto. La libertad de expresión no da permiso para insultar ni burlarse de nadie: termina donde empieza la dignidad de los demás.",
       "por_que": {
-        "A": "cree que en las redes no hay límites",
+        "A": "cree que en los chats no hay límites",
         "C": "cree que la niñez no tiene derecho a opinar",
         "D": "confunde el límite del derecho con quitar el derecho"
       },

@@ -100,7 +100,7 @@ Durante una gira al volcán Irazú, Keylor observó desde lo alto una larga cade
 La forma de relieve que observó Keylor corresponde a una', 'Una cadena larga de montañas y volcanes unidos es una cordillera. La del Irazú es la Cordillera Volcánica Central, que reparte las aguas entre las dos vertientes del país.', false),
     ('soc-1-3-b', 7, 'Estudios Sociales y geografía', 'Formas de relieve', 'alto', 'Considere la siguiente información:
 
-En una clase de Estudios Sociales, el grupo de Daniel comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:
+En una clase de Estudios Sociales, el grupo de Randall comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:
 
 | Característica | Costa 1 | Costa 2 |
 | --- | --- | --- |
@@ -130,7 +130,7 @@ Costa Rica se organiza en seis regiones socioeconómicas, como la Chorotega, la 
 A partir del texto anterior, ¿cómo favorece la regionalización el desarrollo del país?', 'Al dividir el país en regiones, se puede estudiar qué necesita cada una y tomar decisiones a su medida, como abrir estudios técnicos donde hacen falta. Las regiones no hacen leyes: sirven para planificar.', false),
     ('soc-1-5-a', 12, 'Derechos y ambiente', 'Instituciones que promueven los derechos de las personas estudiantes', 'intermedio', 'Lea la siguiente información:
 
-La maestra de Sebastián notó señales de que él estaba siendo maltratado y que tenía miedo de volver a su casa. Siguiendo el protocolo de la escuela, la directora reportó de inmediato la situación a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en peligro.
+La maestra de Sebastián notó que él llegaba triste, con miedo de volver a su casa, y que sus derechos podían estar en peligro. Siguiendo el protocolo de la escuela, la directora informó de inmediato a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en riesgo.
 
 ¿A cuál institución se refiere la información anterior?', 'El PANI es la institución que protege a niñas, niños y adolescentes cuando sus derechos están en riesgo, y la escuela tiene el deber de avisarle. La Defensoría vigila a las instituciones públicas y el IMAS da ayudas económicas.', false),
     ('soc-1-5-b', 13, 'Derechos y ambiente', 'Instituciones que promueven los derechos de las personas estudiantes', 'alto', 'Lea el siguiente texto:
@@ -255,19 +255,19 @@ La información anterior describe una consecuencia de la conquista de tipo', 'Lo
 | 3 | De la década de 1570 a 1821 |
 | 4 | De 1821 en adelante |
 
-En una época de la historia de Costa Rica, el territorio era una provincia de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.
+En una época de la historia de Costa Rica, el territorio era una provincia de la Capitanía General de Guatemala, bajo el dominio de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.
 
-¿En cuál tramo se ubica la época descrita?', 'Esa época es la colonia: Costa Rica era una provincia de España y Cartago, su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.', false),
+¿En cuál tramo se ubica la época descrita?', 'Esa época es la colonia: Costa Rica era una provincia de la Capitanía General de Guatemala, bajo el dominio español, y Cartago era su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.', false),
     ('soc-2-8-a', 33, 'Conquista y colonia', 'Características y aportes de la colonia', 'intermedio', 'Lea el siguiente texto:
 
 Valentina dibujó el centro de su pueblo: una plaza en el medio, la iglesia frente a ella y las calles cruzándose en ángulo recto, formando cuadras. Su abuelo le contó que muchos pueblos de Costa Rica se trazaron así desde hace siglos, siguiendo las normas que España usaba en sus colonias.
 
-Según el texto anterior, ¿qué aporte del periodo colonial se mantiene en la actualidad?', 'Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias y el café llegaron después, en la vida republicana.', false),
+Según el texto anterior, ¿qué aporte del periodo colonial se mantiene en la actualidad?', 'Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias son de la vida republicana, y el café, aunque llegó al final de la colonia, se extendió después de la independencia.', false),
     ('soc-2-8-b', 34, 'Conquista y colonia', 'Características y aportes de la colonia', 'alto', 'Lea el siguiente texto:
 
 En el siglo XVIII, algunos vecinos de Cartago tenían plantaciones de cacao en el valle de Matina, en el Caribe. Para trabajarlas usaban a personas africanas esclavizadas. El cacao era tan importante que, en la provincia, sus semillas se usaban como moneda para comprar y vender.
 
-De acuerdo con el texto anterior, ¿qué característica de la economía colonial se puede reconocer?', 'El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café llegó mucho después.', false),
+De acuerdo con el texto anterior, ¿qué característica de la economía colonial se puede reconocer?', 'El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café se volvió el producto principal hasta después de la independencia.', false),
     ('soc-2-9-a', 35, 'Conquista y colonia', 'Sociedad colonial y discriminación', 'intermedio', 'Lea la siguiente información:
 
 En la sociedad colonial, los cargos más importantes del gobierno local solo podían ocuparlos españoles y sus descendientes. Los mestizos se dedicaban a oficios y a la agricultura; los indígenas debían pagar tributo, y las personas africanas esclavizadas no tenían libertad.
@@ -291,7 +291,7 @@ El 15 de setiembre de 1821 se firmó en Guatemala el acta de independencia de Ce
 Según el texto anterior, ¿cuál fue una consecuencia de la independencia para Costa Rica?', 'Al independizarse, Costa Rica se quedó sin el gobierno español y tuvo que decidir cómo organizarse. Las ideas de libertad que venían de otros países fueron una causa, no una consecuencia.', false),
     ('soc-2-10-b', 38, 'Independencia y Estado', 'Independencia y principios democráticos', 'intermedio', 'Lea el siguiente texto:
 
-Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.
+Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Más de doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.
 
 A partir del texto anterior, ¿cuáles principios de la independencia siguen vigentes en la escuela de Josué?', 'Votar es participar en las decisiones, y que todas las candidaturas tengan las mismas reglas es igualdad. Esos principios democráticos nacieron con la independencia y siguen vivos hoy.', false),
     ('soc-2-11-a', 39, 'Independencia y Estado', 'Pacto de Concordia', 'alto', 'Lea el siguiente texto:
@@ -301,9 +301,9 @@ Después de la independencia, los pueblos de Costa Rica no estaban de acuerdo: u
 Según el texto anterior, ¿por qué el Pacto de Concordia es importante en la organización del Estado costarricense?', 'Los pueblos pensaban distinto, pero en vez de pelear se sentaron a discutir y firmaron un pacto. Por eso el Pacto de Concordia es un ejemplo de diálogo y negociación en el nacimiento del Estado.', false),
     ('soc-2-12-a', 40, 'Independencia y Estado', 'Anexión del Partido de Nicoya', 'alto', 'Lea el siguiente texto:
 
-El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con el golfo y la península de Nicoya, y también tradiciones como la marimba, los bailes de punto y las comidas de maíz.
+El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con la península de Nicoya, y también tradiciones como la música de marimba, los bailes y las comidas de maíz de esa región.
 
-De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?', 'La marimba y los bailes de punto son tradiciones guanacastecas que hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.', false),
+De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?', 'La música de marimba y los bailes tradicionales guanacastecos hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.', false),
     ('soc-2-12-b', 41, 'Independencia y Estado', 'Anexión del Partido de Nicoya', 'alto', 'Lea la siguiente información:
 
 Cada 25 de julio, en escuelas de todo el país se celebra la Anexión del Partido de Nicoya con bailes, comidas típicas y desfiles. En Guanacaste, la fecha se vive como una fiesta de su identidad regional, y en el resto del país se recuerda como el día en que el territorio nacional quedó más completo.
@@ -321,7 +321,7 @@ En 1856, el presidente Juan Rafael Mora llamó a defender el país del ejército
 Según el texto anterior, ¿por qué la Campaña Nacional fue determinante en la consolidación del Estado costarricense?', 'Ante una amenaza externa, gente de todas las provincias luchó por el mismo país. Esa unión fortaleció el sentimiento de ser costarricenses y consolidó al Estado.', false),
     ('soc-2-14-b', 44, 'Campaña Nacional', 'Campaña Nacional y consolidación del Estado', 'alto', 'Lea el siguiente texto:
 
-Después de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas, entre ellas soldados, mujeres, niñas y niños, lo que dejó muchas familias sin sostén.
+Después de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas en todo el país, lo que dejó a muchas familias sin sostén.
 
 La información anterior describe una consecuencia de la Campaña Nacional que fue', 'El cólera mató a miles de personas y dejó a muchas familias sin quien las sostuviera. Eso cambió la vida de la población: fue una consecuencia social de la guerra.', false),
     ('soc-2-15-a', 45, 'Campaña Nacional', 'Escenarios y rutas de la Campaña Nacional', 'intermedio', 'Analice la siguiente tabla:
@@ -366,12 +366,12 @@ Según el texto anterior, ¿qué buscaban los gobiernos liberales con esas leyes
 
 La mamá de Isaac trabaja en una empresa. Cada mes, una parte de su salario y un aporte de la empresa se pagan a la Caja. Gracias a eso, cuando Isaac se enfermó, lo atendieron en el Ebais y en el hospital sin que la familia tuviera que pagar la consulta.
 
-La situación anterior se relaciona con uno de los logros de la década de 1940, conocido como', 'La Caja, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.', false),
+La situación anterior se relaciona con uno de los logros de la década de 1940, conocido como', 'La Caja Costarricense de Seguro Social, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.', false),
     ('soc-2-18-b', 52, 'Reformas y logros sociales', 'Logros sociales de la década de 1940', 'alto', 'Lea la siguiente información:
 
 Don Rodrigo trabaja en una construcción. Su contrato dice que su jornada es de ocho horas diarias, que tiene un día de descanso a la semana y que su salario no puede ser menor que el mínimo que fija la ley. Si lo despiden sin una causa justa, tiene derecho a una indemnización.
 
-A partir de la información anterior, ¿qué impacto tienen hoy el Código de Trabajo y las garantías sociales de 1943?', 'La jornada de ocho horas, el descanso y el salario mínimo vienen de las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.', false),
+A partir de la información anterior, ¿qué impacto tienen hoy el Código de Trabajo y las garantías sociales de 1943?', 'La jornada máxima de ocho horas, el descanso semanal y el salario mínimo quedaron protegidos por las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.', false),
     ('soc-2-19-a', 53, 'Derechos y retos de hoy', 'Derechos fundamentales de la Constitución de 1949', 'intermedio', 'Lea el siguiente texto:
 
 En un barrio, la asociación de vecinos organizó un programa para que personas voluntarias visiten cada semana a señores y señoras de más de setenta años que viven solos. Les ayudan con las compras, conversan con ellos y avisan al Ebais si notan que alguno está enfermo.
@@ -384,7 +384,7 @@ En una escuela, dos estudiantes tenían religiones distintas y otro compañero s
 ¿Cuáles derechos fundamentales explicó la directora?', 'Tener las propias creencias y opiniones es la libertad de pensamiento, y que nadie sea tratado distinto por eso es igualdad ante la ley. Los dos están en la Constitución de 1949.', false),
     ('soc-2-20-a', 55, 'Derechos y retos de hoy', 'Derechos constitucionales en la vida cotidiana', 'alto', 'Lea el siguiente texto:
 
-Mariana publicó en una red social su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.
+Mariana publicó en el chat del grupo su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.
 
 A partir del texto anterior, ¿qué se puede inferir sobre la libertad de expresión?', 'Mariana usó su derecho a opinar con respeto. La libertad de expresión no da permiso para insultar ni burlarse de nadie: termina donde empieza la dignidad de los demás.', false),
     ('soc-2-20-b', 56, 'Derechos y retos de hoy', 'Derechos constitucionales en la vida cotidiana', 'intermedio', 'Lea la siguiente información:
@@ -517,7 +517,7 @@ from (values
     ('soc-1-7-b', 'A', 'Porque así cada grupo limpiaba solo el frente de su negocio.', false),
     ('soc-1-7-b', 'B', 'Porque la Bandera Azul obliga a cerrar la playa a los turistas.', false),
     ('soc-1-7-b', 'C', 'Porque los pescadores eran los únicos que ensuciaban la playa.', false),
-    ('soc-1-7-b', 'D', 'Porque cuidarlo juntos benefició a la naturaleza y al pueblo.', true),
+    ('soc-1-7-b', 'D', 'Porque cuidarla juntos benefició a la naturaleza y al pueblo.', true),
     ('soc-1-7-c', 'A', 'Quemar las cáscaras y las hojas para no atraer moscas.', false),
     ('soc-1-7-c', 'B', 'Enterrar las latas para que no se vean en el patio.', false),
     ('soc-1-7-c', 'C', 'Juntar todo en una sola bolsa para el camión.', false),
@@ -577,7 +577,7 @@ from (values
     ('soc-2-8-b', 'A', 'Se basaba en fábricas que exportaban chocolate a Europa.', false),
     ('soc-2-8-b', 'B', 'Usaba monedas de oro acuñadas en la ciudad de Cartago.', false),
     ('soc-2-8-b', 'C', 'Tenía al café como el producto más vendido de la provincia.', false),
-    ('soc-2-8-b', 'D', 'Dependía de cultivos sostenidos con mano de obra forzada.', true),
+    ('soc-2-8-b', 'D', 'Tenía cultivos que se sostenían con mano de obra forzada.', true),
     ('soc-2-9-a', 'A', 'todas las personas tenían los mismos derechos ante la ley.', false),
     ('soc-2-9-a', 'B', 'el trabajo de cada quien dependía solo de su propio esfuerzo.', false),
     ('soc-2-9-a', 'C', 'el origen de cada persona definía sus derechos.', true),
@@ -651,14 +651,14 @@ from (values
     ('soc-2-18-b', 'C', 'Protegen nada más a quienes trabajan para el Estado.', false),
     ('soc-2-18-b', 'D', 'Garantizan que a nadie se le pueda despedir nunca.', false),
     ('soc-2-19-a', 'A', 'La protección especial a las personas adultas mayores.', true),
-    ('soc-2-19-a', 'B', 'La libertad de reunión de las personas de la comunidad.', false),
+    ('soc-2-19-a', 'B', 'La libertad de comercio de las personas de la comunidad.', false),
     ('soc-2-19-a', 'C', 'La igualdad de todas las personas ante la ley.', false),
     ('soc-2-19-a', 'D', 'El derecho a la educación de niñas y niños.', false),
     ('soc-2-19-b', 'A', 'La libertad de pensamiento y la igualdad ante la ley.', true),
     ('soc-2-19-b', 'B', 'El derecho a la vida y a recibir atención médica oportuna.', false),
     ('soc-2-19-b', 'C', 'La protección especial a la madre y a la niñez.', false),
     ('soc-2-19-b', 'D', 'El derecho a disfrutar del arte y de la cultura.', false),
-    ('soc-2-20-a', 'A', 'Permite publicar cualquier cosa cuando se hace en redes sociales.', false),
+    ('soc-2-20-a', 'A', 'Permite publicar cualquier cosa cuando se hace en un chat.', false),
     ('soc-2-20-a', 'B', 'Tiene límites y no permite dañar la dignidad de otra persona.', true),
     ('soc-2-20-a', 'C', 'Es un derecho de las personas adultas, no de los estudiantes.', false),
     ('soc-2-20-a', 'D', 'Prohíbe dar opiniones sobre las decisiones de la escuela.', false),

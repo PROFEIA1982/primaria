@@ -6,7 +6,7 @@ Generada desde `estudios-sociales.json`, que es la fuente. No se edita a mano: s
 - **Claves:** CAABBAACCBADCBCACCDDCCDDABDDCCBCCDCCADDBDADBBADBDDABAABBAABB (A 15, B 15, C 15, D 15).
 - **Bloques:** Estudios Sociales y geografía 11 · Derechos y ambiente 9 · Costa Rica antigua y pueblos originarios 9 · Conquista y colonia 7 · Independencia y Estado 6 · Campaña Nacional 6 · Reformas y logros sociales 4 · Derechos y retos de hoy 8.
 - **Niveles:** intermedio 28 · alto 32.
-- **Verbos:** distinguir 22 · inferir 17 · identificar 2 · reconocer 10 · comprender 1 · ubicar 2 · relacionar 6.
+- **Verbos:** distinguir 22 · inferir 17 · identificar 2 · reconocer 11 · comprender 1 · ubicar 2 · relacionar 5.
 - **Tipos de contexto:** sociocultural 13 · cívico-político 21 · espacial 15 · temporal 11.
 
 ## Conteo por afirmación
@@ -43,7 +43,7 @@ Generada desde `estudios-sociales.json`, que es la fuente. No se edita a mano: s
 | 2.21 | 2 | Comprende los retos actuales como espacios de participación ciudadana: seguridad vial, gestión del riesgo, convivencia en redes sociales y cultura fiscal. |
 | 2.22 | 2 | Analiza desafíos contemporáneos de la sociedad costarricense y las responsabilidades y soluciones ciudadanas. |
 
-Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa que recalcula el resultado y comprueba que coincide con una sola opción.
+Cada clave se revisó a mano contra el contexto y el programa de estudio, y pasó por dos auditorías independientes: una de contenido y otra psicométrica.
 
 ## Resumen
 
@@ -90,7 +90,7 @@ Cada clave se confirmó dos veces: resolviendo el ítem a mano y con un programa
 | 39 | soc-2-11-a | Independencia y Estado | 2.11.1 | reconocer | cívico-político | alto | D |
 | 40 | soc-2-12-a | Independencia y Estado | 2.12.2 | distinguir | espacial | alto | B |
 | 41 | soc-2-12-b | Independencia y Estado | 2.12.3 | inferir | cívico-político | alto | D |
-| 42 | soc-2-13-a | Independencia y Estado | 2.13.1 | relacionar | cívico-político | intermedio | A |
+| 42 | soc-2-13-a | Independencia y Estado | 2.13.1 | reconocer | cívico-político | intermedio | A |
 | 43 | soc-2-14-a | Campaña Nacional | 2.14.1 | inferir | temporal | alto | D |
 | 44 | soc-2-14-b | Campaña Nacional | 2.14.2 | distinguir | temporal | alto | B |
 | 45 | soc-2-15-a | Campaña Nacional | 2.15.1 | ubicar | temporal | intermedio | B |
@@ -260,7 +260,7 @@ Durante una gira al volcán Irazú, Keylor observó desde lo alto una larga cade
 
 Considere la siguiente información:
 
-En una clase de Estudios Sociales, el grupo de Daniel comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:
+En una clase de Estudios Sociales, el grupo de Randall comparó las dos costas del país con ayuda de un mapa físico y anotó lo que observó en esta tabla:
 
 | Característica | Costa 1 | Costa 2 |
 | --- | --- | --- |
@@ -380,7 +380,7 @@ Costa Rica se organiza en seis regiones socioeconómicas, como la Chorotega, la 
 
 Lea la siguiente información:
 
-La maestra de Sebastián notó señales de que él estaba siendo maltratado y que tenía miedo de volver a su casa. Siguiendo el protocolo de la escuela, la directora reportó de inmediato la situación a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en peligro.
+La maestra de Sebastián notó que él llegaba triste, con miedo de volver a su casa, y que sus derechos podían estar en peligro. Siguiendo el protocolo de la escuela, la directora informó de inmediato a la institución encargada de proteger a las personas menores de edad cuando sus derechos están en riesgo.
 
 **¿A cuál institución se refiere la información anterior?**
 
@@ -554,7 +554,7 @@ En una playa del Pacífico, los vecinos, los dueños de restaurantes y los pesca
 | A | Porque así cada grupo limpiaba solo el frente de su negocio. | cambia un compromiso común por esfuerzos aislados |
 | B | Porque la Bandera Azul obliga a cerrar la playa a los turistas. | contradice el texto, que habla de más visitantes |
 | C | Porque los pescadores eran los únicos que ensuciaban la playa. | busca un culpable en vez de ver la responsabilidad compartida |
-| D | Porque cuidarlo juntos benefició a la naturaleza y al pueblo. | **Correcta** |
+| D | Porque cuidarla juntos benefició a la naturaleza y al pueblo. | **Correcta** |
 
 **Resolución:** El acuerdo funcionó porque todos se comprometieron a lo mismo. La playa quedó limpia, se protegió la vida del mar y la comunidad ganó con más visitantes.
 
@@ -819,7 +819,7 @@ Estos hechos muestran cómo los españoles fueron recorriendo y ocupando el terr
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | El periodo colonial | confunde la llegada y la toma del territorio con el periodo que vino después |
-| B | La época de la independencia | confunde la llegada de los españoles con el tiempo anterior a ella |
+| B | La época de la independencia | confunde la llegada de los españoles con un hecho que ocurrió casi tres siglos después |
 | C | La conquista española | **Correcta** |
 | D | La historia antigua | confunde la llegada de los españoles con el tiempo anterior a ella |
 
@@ -865,7 +865,7 @@ Analice la siguiente información:
 | 3 | De la década de 1570 a 1821 |
 | 4 | De 1821 en adelante |
 
-En una época de la historia de Costa Rica, el territorio era una provincia de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.
+En una época de la historia de Costa Rica, el territorio era una provincia de la Capitanía General de Guatemala, bajo el dominio de España, Cartago era la capital y la mayor parte de la población española vivía en el Valle Central.
 
 **¿En cuál tramo se ubica la época descrita?**
 
@@ -876,7 +876,7 @@ En una época de la historia de Costa Rica, el territorio era una provincia de E
 | C | Tramo 3 | **Correcta** |
 | D | Tramo 4 | ubica la época después de la independencia |
 
-**Resolución:** Esa época es la colonia: Costa Rica era una provincia de España y Cartago, su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.
+**Resolución:** Esa época es la colonia: Costa Rica era una provincia de la Capitanía General de Guatemala, bajo el dominio español, y Cartago era su capital. Empezó cuando terminó la conquista, en la década de 1570, y duró hasta la independencia, en 1821.
 
 ### 33. soc-2-8-a · Conquista y colonia · intermedio
 
@@ -899,7 +899,7 @@ Valentina dibujó el centro de su pueblo: una plaza en el medio, la iglesia fren
 | C | La organización de los poblados en torno a una plaza. | **Correcta** |
 | D | La costumbre de hacer ferias en la plaza cada domingo. | confunde un uso actual de la plaza con la forma colonial de trazar el pueblo |
 
-**Resolución:** Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias y el café llegaron después, en la vida republicana.
+**Resolución:** Los pueblos con plaza al centro, iglesia al frente y calles en cuadras siguen el modelo que España usó en la colonia. Las siete provincias son de la vida republicana, y el café, aunque llegó al final de la colonia, se extendió después de la independencia.
 
 ### 34. soc-2-8-b · Conquista y colonia · alto
 
@@ -919,10 +919,10 @@ En el siglo XVIII, algunos vecinos de Cartago tenían plantaciones de cacao en e
 | :---: | --- | --- |
 | A | Se basaba en fábricas que exportaban chocolate a Europa. | imagina una industria que no existía en la provincia |
 | B | Usaba monedas de oro acuñadas en la ciudad de Cartago. | no ve que el texto dice que se usaban semillas como moneda |
-| C | Tenía al café como el producto más vendido de la provincia. | ubica en la colonia un cultivo que llegó después |
-| D | Dependía de cultivos sostenidos con mano de obra forzada. | **Correcta** |
+| C | Tenía al café como el producto más vendido de la provincia. | ubica en el siglo XVIII un cultivo que se volvió el principal hasta después de la independencia |
+| D | Tenía cultivos que se sostenían con mano de obra forzada. | **Correcta** |
 
-**Resolución:** El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café llegó mucho después.
+**Resolución:** El cacao se cultivaba con el trabajo de personas esclavizadas y hasta sirvió como moneda. Eso muestra una economía agrícola, con poco dinero y basada en mano de obra forzada; el café se volvió el producto principal hasta después de la independencia.
 
 ### 35. soc-2-9-a · Conquista y colonia · intermedio
 
@@ -1009,7 +1009,7 @@ El 15 de setiembre de 1821 se firmó en Guatemala el acta de independencia de Ce
 
 Lea el siguiente texto:
 
-Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.
+Con la independencia, los habitantes de Costa Rica empezaron a decidir por sí mismos su forma de gobierno. Más de doscientos años después, en la escuela de Josué, cada grupo elige a sus representantes y todos los estudiantes votan por el gobierno estudiantil, con las mismas reglas para cada candidatura.
 
 **A partir del texto anterior, ¿cuáles principios de la independencia siguen vigentes en la escuela de Josué?**
 
@@ -1055,7 +1055,7 @@ Después de la independencia, los pueblos de Costa Rica no estaban de acuerdo: u
 
 Lea el siguiente texto:
 
-El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con el golfo y la península de Nicoya, y también tradiciones como la marimba, los bailes de punto y las comidas de maíz.
+El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a Costa Rica. Con esa decisión, el país sumó llanuras y montañas, una larga costa en el Pacífico norte con la península de Nicoya, y también tradiciones como la música de marimba, los bailes y las comidas de maíz de esa región.
 
 **De acuerdo con el texto anterior, ¿cuál fue un aporte cultural de la Anexión del Partido de Nicoya?**
 
@@ -1066,7 +1066,7 @@ El 25 de julio de 1824, los habitantes del Partido de Nicoya decidieron unirse a
 | C | El aumento de las tierras para la ganadería del país. | confunde un aporte económico y territorial con uno cultural |
 | D | La firma de un acuerdo de límites con Nicaragua. | confunde la Anexión con un hecho político posterior |
 
-**Resolución:** La marimba y los bailes de punto son tradiciones guanacastecas que hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.
+**Resolución:** La música de marimba y los bailes tradicionales guanacastecos hoy son parte de la cultura de todo el país. La costa y las tierras son aportes geográficos, no culturales.
 
 ### 41. soc-2-12-b · Independencia y Estado · alto
 
@@ -1096,7 +1096,7 @@ Cada 25 de julio, en escuelas de todo el país se celebra la Anexión del Partid
 **Afirmación 2.13:** Comprende el papel de los símbolos nacionales en la consolidación del Estado Nación costarricense: Escudo, Bandera e Himno Nacional.  
 **Evidencia 2.13.1:** Reconoce los símbolos nacionales de Costa Rica: Escudo, Bandera e Himno Nacional, y su significado.  
 **Bloque:** Costa Rica: su construcción histórica, geográfica y ciudadana  
-**Verbo:** relacionar · **Tipo de contexto:** cívico-político  
+**Verbo:** reconocer · **Tipo de contexto:** cívico-político  
 **Tema:** Independencia y Estado · **Subtema:** Símbolos nacionales
 
 Lea la siguiente información:
@@ -1147,7 +1147,7 @@ En 1856, el presidente Juan Rafael Mora llamó a defender el país del ejército
 
 Lea el siguiente texto:
 
-Después de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas, entre ellas soldados, mujeres, niñas y niños, lo que dejó muchas familias sin sostén.
+Después de la batalla de Rivas, en abril de 1856, las tropas costarricenses regresaron al país enfermas de cólera. La enfermedad se extendió rápidamente por los pueblos y causó la muerte de miles de personas en todo el país, lo que dejó a muchas familias sin sostén.
 
 **La información anterior describe una consecuencia de la Campaña Nacional que fue**
 
@@ -1329,7 +1329,7 @@ La mamá de Isaac trabaja en una empresa. Cada mes, una parte de su salario y un
 | C | el derecho al voto de las mujeres. | escoge un logro político que no tiene relación con la situación |
 | D | la abolición del ejército. | escoge un hecho político que no tiene relación con la salud |
 
-**Resolución:** La Caja, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.
+**Resolución:** La Caja Costarricense de Seguro Social, creada en 1941, permite que trabajadores y empresas aporten para que todas las personas reciban atención médica. Eso es la seguridad social, uno de los grandes logros de la década de 1940.
 
 ### 52. soc-2-18-b · Reformas y logros sociales · alto
 
@@ -1352,7 +1352,7 @@ Don Rodrigo trabaja en una construcción. Su contrato dice que su jornada es de 
 | C | Protegen nada más a quienes trabajan para el Estado. | no ve que don Rodrigo trabaja para una empresa privada |
 | D | Garantizan que a nadie se le pueda despedir nunca. | exagera: el despido existe, pero sin causa justa da derecho a indemnización |
 
-**Resolución:** La jornada de ocho horas, el descanso y el salario mínimo vienen de las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.
+**Resolución:** La jornada máxima de ocho horas, el descanso semanal y el salario mínimo quedaron protegidos por las garantías sociales y el Código de Trabajo de 1943. Hoy siguen protegiendo a quienes trabajan, para que el trabajo sea justo.
 
 ### 53. soc-2-19-a · Derechos y retos de hoy · intermedio
 
@@ -1371,7 +1371,7 @@ En un barrio, la asociación de vecinos organizó un programa para que personas 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
 | A | La protección especial a las personas adultas mayores. | **Correcta** |
-| B | La libertad de reunión de las personas de la comunidad. | se fija en que los vecinos se organizan, pero ese no es el derecho que se apoya |
+| B | La libertad de comercio de las personas de la comunidad. | se fija en que los voluntarios ayudan con las compras, pero ese no es el derecho que se apoya |
 | C | La igualdad de todas las personas ante la ley. | escoge un derecho general que no describe la situación |
 | D | El derecho a la educación de niñas y niños. | escoge un derecho de otro grupo de la población |
 
@@ -1410,13 +1410,13 @@ En una escuela, dos estudiantes tenían religiones distintas y otro compañero s
 
 Lea el siguiente texto:
 
-Mariana publicó en una red social su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.
+Mariana publicó en el chat del grupo su opinión sobre el nuevo horario del comedor escolar. Un compañero le respondió con insultos y con una foto de ella cambiada para burlarse. Cuando lo llamaron a la dirección, dijo que solo estaba usando su libertad de expresión.
 
 **A partir del texto anterior, ¿qué se puede inferir sobre la libertad de expresión?**
 
 | Opción | Texto | Qué revela |
 | :---: | --- | --- |
-| A | Permite publicar cualquier cosa cuando se hace en redes sociales. | cree que en las redes no hay límites |
+| A | Permite publicar cualquier cosa cuando se hace en un chat. | cree que en los chats no hay límites |
 | B | Tiene límites y no permite dañar la dignidad de otra persona. | **Correcta** |
 | C | Es un derecho de las personas adultas, no de los estudiantes. | cree que la niñez no tiene derecho a opinar |
 | D | Prohíbe dar opiniones sobre las decisiones de la escuela. | confunde el límite del derecho con quitar el derecho |
