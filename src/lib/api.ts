@@ -200,10 +200,17 @@ function nombreMateria(slug: string): string {
   return MATERIAS.find((m) => m.slug === slug)?.nombre ?? slug;
 }
 
+// Codigo con que responde la API cuando la funcion no existe en la base.
+// Pasa mientras la migracion de los simulacros nuevos no se ha aplicado.
+const FUNCION_NO_EXISTE = "PGRST202";
+
 export async function listarSimulacrosNuevos(): Promise<SimulacroResumen[]> {
   const { data, error } = await supabase
     .rpc("listar_simulacros_nuevos")
     .abortSignal(AbortSignal.timeout(15000));
+  // Sin la migracion no hay simulacros nuevos, y eso no es un error de
+  // conexion: la pagina muestra las tarjetas en «Próximamente».
+  if (error?.code === FUNCION_NO_EXISTE) return [];
   if (error) throw error;
   const filas = (data ?? []) as Omit<SimulacroResumen, "materia_nombre">[];
   return filas.map((f) => ({ ...f, materia_nombre: nombreMateria(f.materia_slug) }));
