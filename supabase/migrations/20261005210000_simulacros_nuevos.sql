@@ -435,15 +435,15 @@ De acuerdo con la información anterior, ¿cuántos árboles donó el vivero?', 
 
 De acuerdo con la información anterior, ¿cuánto pesa cada caja?', 'Si se quitan 2 kg de cada lado, la balanza sigue en equilibrio: las 3 cajas pesan 14 − 2 = 12 kg. Entonces cada caja pesa 12 ÷ 3 = 4 kg.', false),
     ('mat-r11', 53, 'Relaciones y Álgebra', 'Expresiones matemáticas con dos cantidades', 'intermedio', 'Un taxi cobra ₡700 por subirse y ₡650 por cada kilómetro recorrido. El cobro total, en colones, se calcula con la expresión 700 + 650 × k, donde k es la cantidad de kilómetros. ¿Cuánto se paga por un viaje de 6 km?', 'Primero se multiplica: 650 × 6 = ₡3900 por los kilómetros. Después se suman los ₡700 de subirse: 700 + 3900 = ₡4600.', false),
-    ('mat-e07', 54, 'Estadística y Probabilidad', 'Moda y recorrido', 'intermedio', 'La siguiente tabla muestra la cantidad de lluvia, en milímetros, que registró el pluviómetro de una escuela durante cinco días:
+    ('mat-e07', 54, 'Estadística y Probabilidad', 'Moda y recorrido', 'intermedio', 'Durante un aguacero, cinco estaciones meteorológicas de una misma región midieron la lluvia que cayó. Los datos se muestran en la siguiente tabla:
 
-| Día | Lluvia (en milímetros) |
+| Estación | Lluvia (en milímetros) |
 | --- | --- |
-| Lunes | 12 |
-| Martes | 15 |
-| Miércoles | 9 |
-| Jueves | 15 |
-| Viernes | 14 |
+| Estación 1 | 12 |
+| Estación 2 | 15 |
+| Estación 3 | 9 |
+| Estación 4 | 15 |
+| Estación 5 | 14 |
 
 De acuerdo con la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?', 'La moda es el dato que más se repite: el 15 aparece dos veces. El recorrido es la diferencia entre el dato mayor y el menor: 15 − 9 = 6.', false),
     ('mat-e11', 55, 'Estadística y Probabilidad', 'Población y muestra', 'intermedio', 'Una municipalidad quiere saber cuántos kilogramos de basura produce por semana cada una de las 1200 casas de un distrito. Para eso, escogió al azar 150 de esas casas y pesó su basura durante una semana. En ese estudio, ¿cuál es la población?', 'La población es el grupo completo que se quiere estudiar: las 1200 casas del distrito. Las 150 casas escogidas al azar son solo una parte, y esa parte se llama muestra.', false),
