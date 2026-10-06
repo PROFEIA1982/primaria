@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, GraduationCap } from "lucide-react";
 import { MATERIAS, type SlugMateria } from "../config";
 import { traerConteos, type ConteoMateria } from "../lib/api";
 import { Cargando, ErrorCarga } from "../components/Estados";
@@ -118,7 +118,41 @@ export default function InicioPage() {
         <HeroArte />
       </section>
 
-      {/* 2 · Materias: bloques de color, la tarjeta entera es el enlace. */}
+      {/* 2 · Simulacros Nuevos: destacado, antes de las materias. */}
+      <section id="inicio-nuevos" className="inicio-seccion inicio-nuevos" aria-labelledby="t-nuevos">
+        <div className="nuevos-caja">
+          <span className="nuevos-icono" aria-hidden="true">
+            <GraduationCap size={32} strokeWidth={2} />
+          </span>
+          <div className="nuevos-texto">
+            <h2 id="t-nuevos">
+              <span className="nuevos-chip" aria-hidden="true">¡Nuevo!</span>
+              Simulacros Nuevos
+            </h2>
+            <p>
+              Exámenes con preguntas nuevas, reloj y todo, como el día de la prueba.
+              Cuando terminés ves tu nota y qué fallaste.
+            </p>
+          </div>
+        </div>
+        <ul className="nuevos-materias">
+          {MATERIAS.map((m) => (
+            <li key={m.slug}>
+              <Link
+                to={`/examenes/${m.slug}`}
+                className="nuevos-enlace"
+                style={{ ["--c" as string]: VIVA[m.slug] }}
+              >
+                <i aria-hidden="true" />
+                {m.corto}
+                <ArrowRight size={16} strokeWidth={2.5} aria-hidden="true" className="nuevos-flecha" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* 3 · Materias: bloques de color, la tarjeta entera es el enlace. */}
       <section id="inicio-materias" className="inicio-seccion" aria-labelledby="t-materias">
         <h2 id="t-materias">¿Qué practicamos hoy?</h2>
         {conteos === null && !fallo && <Cargando texto="Buscando las preguntas…" />}
@@ -152,14 +186,14 @@ export default function InicioPage() {
         )}
       </section>
 
-      {/* 3 · Su compañero y lo de toda la comunidad. */}
+      {/* 4 · Su compañero y lo de toda la comunidad. */}
       <section className="inicio-seccion" aria-labelledby="t-companero">
         <h2 id="t-companero">Tu compañero de estudio</h2>
         <Companero />
         <Comunidad />
       </section>
 
-      {/* 4 · Simulacros. */}
+      {/* 5 · Simulacros. */}
       <section id="inicio-simulacros" className="inicio-seccion" aria-labelledby="t-simulacros">
         <h2 id="t-simulacros">¿Ya te sentís listo?</h2>
         <p className="inicio-lede">
@@ -177,7 +211,7 @@ export default function InicioPage() {
         </ul>
       </section>
 
-      {/* 5 · Créditos: quién hace esto y para quién. */}
+      {/* 6 · Créditos: quién hace esto y para quién. */}
       <section className="creditos" aria-label="Quién hace esta práctica">
         <div>
           <h2>Este desafío lo crearon ProfeSeguro.com y EVI</h2>

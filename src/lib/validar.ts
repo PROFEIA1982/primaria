@@ -13,7 +13,7 @@
 // enterarse aca y decirle que no se pudo abrir.
 // ============================================================
 
-import type { Item, Simulacro } from "./tipos";
+import type { Item, Simulacro, SimulacroNuevo } from "./tipos";
 
 // Una pregunta sirve si tiene enunciado y al menos dos opciones, con
 // UNA sola correcta. Con cero correctas no se puede calificar; con dos,
@@ -41,5 +41,14 @@ export function esCuadernilloSano(x: unknown): x is Simulacro {
   if (typeof x !== "object" || x === null) return false;
   const c = x as Record<string, unknown>;
   if (typeof c.slug !== "string") return false;
+  return sonItemsSanos(c.items);
+}
+
+// Lo mismo pero para los simulacros nuevos, que traen segundos_por_item.
+export function esCuadernilloNuevoSano(x: unknown): x is SimulacroNuevo {
+  if (typeof x !== "object" || x === null) return false;
+  const c = x as Record<string, unknown>;
+  if (typeof c.slug !== "string") return false;
+  if (typeof c.segundos_por_item !== "number") return false;
   return sonItemsSanos(c.items);
 }

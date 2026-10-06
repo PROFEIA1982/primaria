@@ -1,6 +1,9 @@
 import { supabase } from "./supabase";
-import { esCuadernilloSano } from "./validar";
-import type { Item, Materia, Simulacro, SimulacroResumen, Tema } from "./tipos";
+import { esCuadernilloSano, esCuadernilloNuevoSano } from "./validar";
+import type {
+  Item, Materia, Simulacro, SimulacroResumen,
+  SimulacroNuevo, SimulacroNuevoResumen, Tema,
+} from "./tipos";
 
 // Trae las cuatro materias con su conteo de items publicados.
 export async function traerMaterias(): Promise<Materia[]> {
@@ -185,4 +188,39 @@ export async function traerSimulacro(slug: string): Promise<Simulacro | null> {
   if (error) throw error;
   if (!esCuadernilloSano(data)) return null;
   return data;
+}
+
+// --- Simulacros nuevos ---
+// Examenes completos con tablas aparte. Los items NO se mezclan con
+// la practica: cada examen trae su propio tiempo por pregunta.
+
+export async function listarSimulacrosNuevos(): Promise<SimulacroNuevoResumen[]> {
+  const { data, error } = await supabase
+    .rpc("listar_simulacros_nuevos")
+    .abortSignal(AbortSignal.timeout(15000));
+  if (error) throw error;
+  return (data ?? []) as SimulacroNuevoResumen[];
+}
+
+export async function traerSimulacroNuevo(slug: string): Promise<SimulacroNuevo | null> {
+  const { data, error } = await supabase
+    .rpc("traer_simulacro_nuevo", { p_slug: slug })
+    .abortSignal(AbortSignal.timeout(15000));
+  if (error) throw error;
+  if (!esCuadernilloNuevoSano(data)) return null;
+  return data;
+}
+
+// Guarda el agregado anonimo al terminar un examen nuevo. Silencioso
+// si falla: no es dato critico y no se le muestra error al estudiante.
+export async function registrarResultadosSimulacroNuevo(
+  resultados: { item_id: string; acerto: boolean }[],
+): Promise<void> {
+  try {
+    await supabase.rpc("registrar_resultados_simulacro_nuevo", {
+      p_resultados: resultados,
+    });
+  } catch {
+    // silencio a proposito
+  }
 }

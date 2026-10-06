@@ -57,3 +57,28 @@ export type Simulacro = {
   materia_nombre: string;
   items: Item[];
 };
+
+// --- Simulacros nuevos ---
+// Examenes completos con tablas aparte. Los items NO se mezclan con
+// la practica y cada examen trae su propio tiempo por pregunta.
+
+export type SimulacroNuevoResumen = {
+  slug: string;
+  numero: number;
+  titulo: string;
+  materia_slug: string;
+  cantidad: number;
+  segundos_por_item: number;
+  temas: string[];
+};
+
+// El examen completo: misma forma que Simulacro + segundos_por_item.
+export type SimulacroNuevo = {
+  slug: string;
+  numero: number;
+  titulo: string;
+  materia_slug: string;
+  materia_nombre: string | null;
+  segundos_por_item: number;
+  items: Item[];
+};

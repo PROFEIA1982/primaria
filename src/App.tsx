@@ -14,6 +14,7 @@ import { NuevoAmigo } from "./components/Rincon";
 // formulas ni la practica completa solo para ver la portada.
 const PracticaPage = lazy(() => import("./pages/PracticaPage"));
 const SimulacrosPage = lazy(() => import("./pages/SimulacrosPage"));
+const ExamenesNuevosPage = lazy(() => import("./pages/ExamenesNuevosPage"));
 const ContactoPage = lazy(() => import("./pages/ContactoPage"));
 const NoEncontradaPage = lazy(() => import("./pages/NoEncontradaPage"));
 const RinconPage = lazy(() => import("./pages/RinconPage"));
@@ -86,6 +87,12 @@ function Armazon() {
             <Route path="/simulacros/estudios-sociales" element={<SimulacrosPage materia="estudios-sociales" />} />
             <Route path="/simulacros/ciencias" element={<SimulacrosPage materia="ciencias" />} />
             <Route path="/simulacros/matematicas" element={<SimulacrosPage materia="matematicas" />} />
+            {/* Simulacros nuevos: examenes con preguntas distintas, reloj y todo. */}
+            <Route path="/examenes" element={<Navigate to="/examenes/espanol" replace />} />
+            <Route path="/examenes/espanol" element={<ExamenesNuevosPage materia="espanol" />} />
+            <Route path="/examenes/estudios-sociales" element={<ExamenesNuevosPage materia="estudios-sociales" />} />
+            <Route path="/examenes/ciencias" element={<ExamenesNuevosPage materia="ciencias" />} />
+            <Route path="/examenes/matematicas" element={<ExamenesNuevosPage materia="matematicas" />} />
             <Route path="/contacto" element={<ContactoPage />} />
             <Route path="/rincon" element={<RinconPage />} />
             <Route path="/maestras" element={<MaestrasPage />} />
